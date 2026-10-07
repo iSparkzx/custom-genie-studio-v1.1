@@ -1,0 +1,20 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# Render asks for the two secret values (sync: false) when you create the service. They never go in GitHub.
+services:
+  - type: web
+    name: custom-genie-studio
+    runtime: node
+    plan: free
+    buildCommand: echo "no build step"
+    startCommand: node server.mjs
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: OPENROUTER_API_KEY        # your OpenRouter key (sk-or-...)
+        sync: false
+      - key: GENIE_TEAM_PASSWORD       # password your team types to open the test link
+        sync: false
+      - key: GENIE_DAILY_IMAGE_LIMIT   # cost cap for the test link: 100 images is about $13 a day at most
+        value: "100"
+      - key: GENIE_RATE_PER_10MIN
+        value: "8"

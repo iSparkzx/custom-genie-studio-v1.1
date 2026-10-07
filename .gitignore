@@ -1,0 +1,11 @@
+# secrets: never commit
+.env
+.env.*
+!.env.example
+
+node_modules/
+*.log
+studio-src/out.html
+__pycache__/
+.DS_Store
+Thumbs.db
