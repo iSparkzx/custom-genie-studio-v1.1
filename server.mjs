@@ -77,21 +77,32 @@ function allow(ip, c, n) {
 
 /* ---------- prompts ---------- */
 const SHAPE_WORDS = { circle: 'circle', oval: 'oval', rect: 'rectangle', square: 'square', stadium: 'rounded pill shape', custom: 'die-cut shape that follows the outline of the artwork' };
-const VARIANTS = ['a bold emblem or badge', 'a clean, modern mark', 'a vintage, hand-crafted look', 'a playful illustrated mascot'];
+/* Each option gets its own creative direction (used only when the customer didn't ask for a specific style). */
+const VARIANTS = [
+  'a premium illustrated emblem: rich detail, dimensional shading and highlights, refined custom lettering',
+  'a modern, confident brand mark: strong silhouette, clean geometry, polished gradients and depth',
+  'a vintage hand-crafted badge: hand-lettered type, classic ornament, warm print-inspired texture',
+  'a vibrant character or mascot illustration with personality, bold confident linework and glossy shading',
+];
 const s = (v, n) => String(v ?? '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
 function genPrompt(o, i, n) {
-  const L = ['Design an original logo artwork for a custom printed domed vinyl sticker.', `Customer request: "${s(o.prompt, 600)}"`];
-  if (o.name) L.push(`Include this text, spelled exactly: "${s(o.name, 40)}"${o.tagline ? ` and the tagline "${s(o.tagline, 60)}"` : ''}. Make the lettering large, bold and easy to read on a small sticker.`);
-  if (Array.isArray(o.colors) && o.colors.length) L.push(`Colors to use: ${o.colors.slice(0, 5).map(c => s(c, 20)).join(', ')}.`);
-  if (SHAPE_WORDS[o.shape]) L.push(`The sticker is cut as a ${SHAPE_WORDS[o.shape]}; compose the artwork to fill that shape nicely.`);
-  L.push('Print requirements: flat, vector-style graphic with clean crisp edges and solid colors; no photographic textures, no tiny details, no hairline strokes. Center the artwork with a comfortable margin on a plain, solid, pure white (#FFFFFF) background. Draw only the artwork itself: no sticker mockup, no product photo, no scene, no frame around the canvas, no drop shadow, no watermark.');
-  if (n > 1) L.push(`For variety, lean toward ${VARIANTS[i % VARIANTS.length]} if it suits the request.`);
+  const L = [
+    'You are a senior brand designer at a top design agency. Create an original, professional, high-end logo for a custom domed vinyl sticker. The sticker is printed in full color at high resolution and covered with a clear, glossy resin dome, so rich color, gradients, shading and fine detail all print beautifully.',
+    `Customer brief: "${s(o.prompt, 600)}"`,
+    'Follow the brief closely, including any subject, style or mood the customer asks for.',
+  ];
+  if (o.name) L.push(`Text: feature "${s(o.name, 40)}"${o.tagline ? ` and the tagline "${s(o.tagline, 60)}"` : ''}, spelled exactly, with beautiful, well-crafted typography that stays readable when the sticker is about 2 inches wide.`);
+  if (Array.isArray(o.colors) && o.colors.length) L.push(`Color palette: ${o.colors.slice(0, 5).map(c => s(c, 20)).join(', ')}. Use rich tones, shading and highlights within this palette.`);
+  if (SHAPE_WORDS[o.shape]) L.push(`The finished sticker is cut as a ${SHAPE_WORDS[o.shape]}: compose the logo so it suits that shape.`);
+  L.push('Quality bar: polished, award-winning, agency-level craftsmanship with depth and dimension: the kind of logo a business would proudly put on its storefront.');
+  L.push('Output: only the logo artwork itself, centered with a small even margin, on a plain pure white (#FFFFFF) background. No sticker mockup, no product photo, no scene or table, no extra words beyond the requested text, no tiny unreadable text, no watermark.');
+  if (n > 1) L.push(`Creative direction for this option: ${VARIANTS[i % VARIANTS.length]} (unless the brief asks for a specific style, in which case follow the brief).`);
   return L.join('\n');
 }
 function editPrompt(o) {
-  return [`Edit this sticker logo: ${s(o.prompt, 600)}`,
-    'Change only what is asked. Keep the same layout, style and exact spelling of any text unless the request says otherwise.',
-    'Keep it print-ready: flat vector-style artwork, solid colors, crisp edges, on a plain solid pure white (#FFFFFF) background, with no mockup, frame, shadow or watermark.'].join('\n');
+  return [`Edit this logo: ${s(o.prompt, 600)}`,
+    'Change only what is asked. Keep the same design, style, level of detail and the exact spelling of any text unless the request says otherwise.',
+    'Keep the same high-end, professional quality. Output only the logo artwork on a plain pure white (#FFFFFF) background, with no mockup, scene or watermark.'].join('\n');
 }
 const RATIOS = ['1:1', '3:2', '2:3', '4:3', '3:4', '5:4', '4:5', '16:9', '9:16', '21:9', '4:1', '1:4'];
 const OR_RATIOS = ['1:1', '2:3', '3:2', '3:4', '4:3', '4:5', '5:4', '9:16', '16:9', '21:9'];   // what OpenRouter accepts for Nano Banana Pro
