@@ -1,0 +1,187 @@
+  <section class="builder" id="builder" aria-label="Sticker studio">
+   <div class="studio" id="studio">
+
+    <!-- ===== toolbar ===== -->
+    <div class="tbar" role="toolbar" aria-label="Design tools">
+     <div class="tgrp" role="group" aria-label="Select">
+      <button type="button" class="tool" data-tool="move" aria-pressed="true" aria-label="Move" data-tip="Move" data-key="V"><svg class="ico"><use href="#t-move"/></svg></button>
+      <button type="button" class="tool t-desk" data-tool="hand" aria-pressed="false" aria-label="Hand" data-tip="Hand (or hold Space)" data-key="H"><svg class="ico"><use href="#t-hand"/></svg></button>
+     </div>
+     <span class="tsep"></span>
+     <div class="tgrp" role="group" aria-label="Create">
+      <button type="button" class="tool" data-tool="text" aria-pressed="false" aria-label="Text" data-tip="Text" data-key="T"><svg class="ico"><use href="#t-text"/></svg></button>
+      <button type="button" class="tool" data-tool="rect" aria-pressed="false" aria-label="Rectangle" data-tip="Rectangle" data-key="R"><svg class="ico"><use href="#t-rect"/></svg></button>
+      <button type="button" class="tool" data-tool="ellipse" aria-pressed="false" aria-label="Ellipse" data-tip="Ellipse" data-key="O"><svg class="ico"><use href="#t-ellipse"/></svg></button>
+      <button type="button" class="tool t-opt" data-tool="line" aria-pressed="false" aria-label="Line" data-tip="Line" data-key="L"><svg class="ico"><use href="#t-line"/></svg></button>
+      <button type="button" class="tool" data-tool="pencil" aria-pressed="false" aria-label="Pencil" data-tip="Pencil" data-key="P"><svg class="ico"><use href="#t-pencil"/></svg></button>
+      <button type="button" class="tool" id="shapesBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Shapes library" data-tip="Shapes library"><svg class="ico"><use href="#t-shapes"/></svg><svg class="ico dd"><use href="#i-caret"/></svg></button>
+      <button type="button" class="tool" id="imgBtn" aria-label="Place image" data-tip="Place image" data-key="Ctrl ⇧ K"><svg class="ico"><use href="#t-image"/></svg></button>
+     </div>
+     <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
+     <div class="tgrp tright">
+      <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
+      <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
+      <span class="tsep"></span>
+      <div class="views" role="group" aria-label="Preview mode">
+       <button type="button" data-view="edit" aria-pressed="true">Design</button>
+       <button type="button" data-view="proof" aria-pressed="false"><span class="vlong">Print </span>proof</button>
+       <button type="button" data-view="dome" aria-pressed="false">3D</button>
+       <button type="button" data-view="sheet" class="t-opt" aria-pressed="false">On sheet</button>
+      </div>
+      <span class="tsep t-desk"></span>
+      <button type="button" class="tool t-desk" id="toggleL" aria-pressed="true" aria-label="Show layers panel" data-tip="Layers panel" data-key="Ctrl \"><svg class="ico"><use href="#i-pleft"/></svg></button>
+      <button type="button" class="tool t-desk" id="toggleR" aria-pressed="true" aria-label="Show properties panel" data-tip="Properties panel"><svg class="ico"><use href="#i-pright"/></svg></button>
+      <button type="button" class="tool t-desk" id="keysBtn" aria-label="Keyboard shortcuts" data-tip="Keyboard shortcuts" data-key="?"><svg class="ico"><use href="#i-keys"/></svg></button>
+     </div>
+    </div>
+
+    <!-- ===== left: layers / assets / genie ===== -->
+    <aside class="lp" id="lp" aria-label="Layers, assets and Genie">
+     <div class="sheet-h"><b id="lpTitle">Layers</b><button type="button" class="iconbtn" data-close-sheet aria-label="Close panel"><svg class="ico"><use href="#i-x"/></svg></button></div>
+     <div class="ptabs" role="tablist" aria-label="Left panel">
+      <button type="button" role="tab" id="lt-layers" aria-controls="lp-layers" aria-selected="true" data-ltab="layers">Layers</button>
+      <button type="button" role="tab" id="lt-assets" aria-controls="lp-assets" aria-selected="false" data-ltab="assets" tabindex="-1">Assets</button>
+      <button type="button" role="tab" id="lt-genie" aria-controls="lp-genie" aria-selected="false" data-ltab="genie" tabindex="-1"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>Genie</button>
+     </div>
+     <div class="pbody" id="lp-layers" data-pane="layers" role="tabpanel" aria-labelledby="lt-layers">
+      <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b>Sticker</b> · <span id="layerArtTxt"></span></span></button>
+      <ul class="layers" id="layers" role="tree" aria-label="Layers" aria-multiselectable="true"></ul>
+      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the sticker shows up here. Drag to reorder, click the eye to hide.</p>
+       <div class="qadd"><button type="button" data-quick="text"><svg class="ico"><use href="#t-text"/></svg>Text</button><button type="button" data-quick="image"><svg class="ico"><use href="#t-image"/></svg>Image</button><button type="button" data-quick="genie"><svg class="gmark" style="width:10px;height:18px"><use href="#g-mark"/></svg>Genie</button></div></div>
+     </div>
+     <div class="pbody" id="lp-assets" data-pane="assets" role="tabpanel" aria-labelledby="lt-assets" hidden>
+      <section class="psec"><h3 class="psec-h">Templates <small>Replaces your design</small></h3><div class="a-grid" id="tplGrid"></div></section>
+      <section class="psec"><h3 class="psec-h">Text styles</h3><div class="tstyles" id="tStyles"></div></section>
+      <section class="psec"><h3 class="psec-h">Shapes &amp; icons</h3><div class="gfx" id="gfxGrid"></div></section>
+      <section class="psec"><h3 class="psec-h">Uploads</h3>
+       <input type="file" id="upFile" class="sr-only" accept="image/*" multiple>
+       <label for="upFile" class="drop" id="upDrop"><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg>Upload an image<small>PNG, JPG, SVG or WebP · or drag it onto the canvas</small></label>
+       <div class="ups" id="upGrid" aria-label="Your uploads"></div>
+       <p class="hint">A PNG with a transparent background works best. Logos print sharpest at <b>300 dpi</b> or more.</p>
+      </section>
+     </div>
+     <div class="pbody" id="lp-genie" data-pane="genie" role="tabpanel" aria-labelledby="lt-genie" hidden>
+      <div class="gfeed" id="gfeed" aria-live="polite"></div>
+      <div class="gcomp">
+       <div class="gsugg" id="gquick" aria-label="Quick edits" hidden></div>
+       <div class="gattach" id="gatt" hidden><img id="gattImg" alt=""><span id="gattName"></span><button type="button" class="iconbtn" id="gattRm" aria-label="Remove attached image" style="width:26px;height:26px"><svg class="ico"><use href="#i-x"/></svg></button></div>
+       <form class="gbox" id="gcomp">
+        <label class="sr-only" for="gtext">Message Genie</label>
+        <textarea id="gtext" rows="3" placeholder="Describe the logo or sticker you want, or ask Genie for a change…"></textarea>
+        <button type="button" class="iconbtn" id="gattach" aria-label="Attach your logo or artwork" data-tip="Attach your logo or artwork"><svg class="ico"><use href="#i-clip"/></svg></button>
+        <span class="ghint" aria-hidden="true"><kbd>Enter</kbd> to send · <kbd>Shift</kbd>+<kbd>Enter</kbd> new line</span>
+        <button type="submit" class="gsend" id="gsend" aria-label="Send to Genie"><svg class="ico"><use href="#i-send"/></svg><span class="gsend-t">Send</span></button>
+       </form>
+       <input type="file" id="gfile" class="sr-only" accept="image/*" tabindex="-1">
+      </div>
+     </div>
+    </aside>
+
+    <!-- ===== canvas ===== -->
+    <div class="cv-wrap" id="cvWrap">
+     <div class="rul-c rul" aria-hidden="true"></div>
+     <canvas class="rul" id="rulX" aria-hidden="true"></canvas>
+     <canvas class="rul" id="rulY" aria-hidden="true"></canvas>
+     <div class="vp" id="vp" data-tool="move">
+      <svg id="cv" tabindex="0" role="application" aria-roledescription="sticker editor" aria-label="Sticker design canvas" aria-describedby="kbdHelp" data-view="edit" viewBox="0 0 300 200">
+       <defs>
+        <mask id="cutMask" maskUnits="userSpaceOnUse" x="-20000" y="-20000" width="40000" height="40000"><path id="maskPath" fill="#fff"/><image id="maskImg" preserveAspectRatio="none" style="display:none"/></mask>
+        <linearGradient id="gSilver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF0F2"/><stop offset=".42" stop-color="#B7BDC4"/><stop offset=".58" stop-color="#D3D7DC"/><stop offset="1" stop-color="#9AA1A9"/></linearGradient>
+        <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3A8"/><stop offset=".42" stop-color="#C79C49"/><stop offset=".58" stop-color="#DEBC6E"/><stop offset="1" stop-color="#A47B2C"/></linearGradient>
+        <filter id="fBrush"><feTurbulence type="fractalNoise" baseFrequency="0.004 0.45" numOctaves="2" seed="7"/><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .6 0"/></filter>
+        <filter id="fClear" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -10 -10 -10 0 28" result="k"/><feComposite in="SourceGraphic" in2="k" operator="in"/></filter>
+        <filter id="fSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur id="shBlur" stdDeviation="3"/></filter>
+        <filter id="fShImg" x="-20%" y="-20%" width="140%" height="140%"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/><feGaussianBlur id="shBlur2" stdDeviation="3"/></filter>
+        <filter id="fEdge" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feMorphology id="edgeR" in="SourceAlpha" operator="dilate" radius="1" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out" result="ring"/><feFlood flood-color="#5A3BD6"/><feComposite in2="ring" operator="in"/></filter>
+        <filter id="fRim" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="rimBlur" stdDeviation="2"/></filter>
+        <linearGradient id="gGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".32" stop-color="#fff" stop-opacity=".07"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".09"/></linearGradient>
+        <radialGradient id="gSpec" cx=".3" cy=".16" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+       </defs>
+       <g class="v-sheet"><rect id="sheetRect" class="sheet" rx="6"/><rect id="paRect" class="pa" rx="4"/><text id="sheetCap" class="svg-t"></text></g>
+       <g id="shadowG"><path id="shadowP" fill="#000" filter="url(#fSoft)"/><image id="shadowImg" preserveAspectRatio="none" filter="url(#fShImg)" style="display:none"/></g>
+       <use id="ghost" class="v-edit" href="#elsG" opacity=".22"/>
+       <g mask="url(#cutMask)">
+        <g><rect id="subRect"/><rect id="brushRect" fill="#000" filter="url(#fBrush)" opacity=".45"/></g>
+        <g id="printG"><rect id="bgRect"/><image id="bgImg" preserveAspectRatio="xMidYMid slice"/><g id="elsG"></g></g>
+        <g class="v-dome"><rect id="glossR" fill="url(#gGloss)"/><rect id="specR" fill="url(#gSpec)"/><path id="rimP" fill="none" stroke="#000" filter="url(#fRim)"/></g>
+       </g>
+       <g class="v-edit"><path id="safeP" class="safe"/><path id="cutP" class="cut"/><image id="cutImg" preserveAspectRatio="none" filter="url(#fEdge)" style="display:none"/></g>
+       <g id="dimsG" class="v-edit"></g>
+       <g id="proofG" class="v-proof"></g>
+       <g id="draftG"></g>
+       <g id="guideG"></g>
+       <g id="selG"></g>
+      </svg>
+      <p id="kbdHelp" class="sr-only">Click an item to select it, or use the Layers panel. Arrow keys move the selection, Enter edits text, Delete removes it. Press question mark for all shortcuts.</p>
+      <div class="sizepill" id="sizePill" hidden></div>
+      <div class="ft" id="ft" role="toolbar" aria-label="Selected item" hidden></div>
+      <textarea id="inl" class="inl" hidden aria-label="Edit text" spellcheck="true"></textarea>
+
+      <div class="start" id="start" hidden>
+       <div class="start-card" role="region" aria-labelledby="startH">
+        <h2 id="startH"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>What should we make?</h2>
+        <p id="startSub">Describe your sticker and Genie designs four options. Everything stays editable, layer by layer.</p>
+        <div class="prompt">
+         <label class="sr-only" for="startText">Describe your sticker</label>
+         <textarea id="startText" placeholder='e.g. A round gold sticker for my coffee shop "Bean There" with a coffee cup, about 3 inches'></textarea>
+         <div class="prompt-bar">
+          <input type="file" id="startFile" class="sr-only" accept="image/*" tabindex="-1">
+          <button type="button" class="attach" id="startAttach"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span>Add your logo</span></button>
+          <button type="button" class="btn btn-primary" id="startGo"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Generate</button>
+         </div>
+        </div>
+        <div class="ex" aria-label="Example prompts">
+         <button type="button" data-ex='Round sticker for my coffee shop "Bean There" with a coffee cup, brown and cream'>Coffee shop logo</button>
+         <button type="button" data-ex='Silver equipment nameplate that says "Apex Machining" with the tagline "Precision Parts", 3 x 1 inches'>Equipment nameplate</button>
+         <button type="button" data-ex='Fun gold label for "Sunny Days" lemonade with a sun, 500 stickers'>Product label</button>
+        </div>
+        <div class="or">or start another way</div>
+        <div class="start-alt">
+         <button type="button" data-start="upload"><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg><span><b>Upload artwork</b><small>We check it for print</small></span></button>
+         <button type="button" data-start="templates"><svg class="ico" aria-hidden="true"><use href="#i-tpl"/></svg><span><b>Templates</b><small>Edit words &amp; colors</small></span></button>
+         <button type="button" data-start="blank"><svg class="ico" aria-hidden="true"><use href="#i-blank"/></svg><span><b>Blank canvas</b><small>Design it yourself</small></span></button>
+        </div>
+        <p class="start-foot">Drop a file anywhere on the canvas · <button type="button" class="linkbtn" id="laterBtn">Order now, email artwork later</button></p>
+       </div>
+      </div>
+      <div class="vp-msg" id="vpMsg" hidden></div>
+      <div class="vp-legend" id="legend"></div>
+      <div class="zoomfab" role="group" aria-label="Zoom">
+       <button type="button" class="tool" id="zOut" aria-label="Zoom out" data-tip="Zoom out" data-key="Ctrl −"><svg class="ico"><use href="#i-minus"/></svg></button>
+       <button type="button" class="tbtxt" id="zLbl" aria-haspopup="menu" aria-label="Zoom options">100%</button>
+       <button type="button" class="tool" id="zIn" aria-label="Zoom in" data-tip="Zoom in" data-key="Ctrl +"><svg class="ico"><use href="#i-plus"/></svg></button>
+      </div>
+      <div class="dropzone" id="dropzone" hidden>Drop your image to add it</div>
+     </div>
+    </div>
+
+    <!-- ===== right: inspector ===== -->
+    <aside class="rp" id="rp" aria-label="Properties">
+     <div class="sheet-h"><b id="rpTitle">Properties</b><button type="button" class="iconbtn" data-close-sheet aria-label="Close panel"><svg class="ico"><use href="#i-x"/></svg></button></div>
+     <div class="ins-ctx" id="insCtx"></div>
+     <div class="pbody" id="ins"></div>
+    </aside>
+
+    <nav class="mtabs" aria-label="Studio panels">
+     <button type="button" data-mtab="genie" aria-pressed="false"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>Genie</button>
+     <button type="button" data-mtab="assets" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>Add</button>
+     <button type="button" data-mtab="layers" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg>Layers</button>
+     <button type="button" data-mtab="props" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg><span id="mPropsLbl">Sticker</span></button>
+    </nav>
+
+    <!-- ===== quote / checkout bar ===== -->
+    <div class="cbar" id="cbar">
+     <button type="button" class="pill" id="chkPill" aria-haspopup="dialog"><span class="dot" aria-hidden="true"></span><span class="pl" id="chkTxt">Print check</span></button>
+     <div class="cb-sum" id="cbSum"></div>
+     <button type="button" class="qtybtn" id="qtyBtn" aria-haspopup="menu"><span id="qtyTxt">100 stickers</span> <small id="qtyEach"></small><svg class="ico" aria-hidden="true"><use href="#i-caret"/></svg></button>
+     <div class="cb-tot"><span class="amt" id="totAmt">$0.00</span><small id="totSub"></small></div>
+     <button type="button" class="btn btn-primary" id="reviewBtn">Review &amp; order<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
+    </div>
+   </div>
+   <div class="notes-wrap">
+    <p class="note"><b>Review note · layout:</b> One studio instead of three cards. Left: Layers / Assets / Genie. Center: canvas with rulers, smart guides and zoom. Right: a context inspector: when nothing is selected it shows the sticker itself (shape, size, finish, background), when something is selected it shows that item (position, size, rotation, fill, stroke, text). The bottom bar is the quote: print check, quantity with price breaks, total and one primary action.</p>
+    <p class="note"><b>Review note · Figma-style tools:</b> Move (V), Hand (H or hold Space), Text (T), Rectangle (R), Ellipse (O), Line (L), Pencil (P), shapes library, image (Ctrl+Shift+K). Marquee and Shift-click multi-select, Alt-drag duplicates, groups (Ctrl+G), lock/hide, drag-to-reorder layers, align and distribute, flip, copy/paste properties (Ctrl+Alt+C/V), numeric fields you can drag to scrub or type math into (e.g. <code>1.5*2</code>), right-click menu, Shift+1 zoom to fit, Shift+2 zoom to selection. "?" opens the shortcut sheet.</p>
+    <p class="note"><b>Review note · order flow (from the Print MCP spec):</b> quote before commit, production-aware feedback, proof, then checkout. The print check uses the spec's codes (TEXT_TOO_SMALL, RESOLUTION_TOO_LOW, OUTSIDE_SAFE_AREA, LOW_CONTRAST, THIN_LINE…) with a message, a suggestion and a one-click Fix. "Review &amp; order" opens the proof and quote; Add to cart creates a draft order through <code>window.CustomGeniePrint</code>, an adapter shaped like <code>get_quote</code> / <code>create_proof</code> / <code>create_checkout</code> so the backend can be swapped in. No card data is ever collected in the builder.</p>
+    <p class="note"><b>Review note · Genie AI:</b> Genie lives in the left panel as a conversation: describe a sticker (or attach artwork) and it asks only for what's missing, then shows four editable designs. With a design on the canvas it also takes edits ("navy and gold", "make it a circle", "change the text to …", "bigger text", "add a star"). In this prototype it runs on browser rules. For production, define <code>window.CustomGenieAI.generate({mode, prompt, answers, logo})</code> and optionally <code>window.CustomGenieAI.edit({prompt, doc})</code>; both return the same document format.</p>
+   </div>
+  </section>

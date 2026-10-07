@@ -1,0 +1,768 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Emblem Print MCP · Draft v0.2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--navy:#0F1B3D;--accent:#5A3BD6;--ink:#111827;--ink2:#3F4854;--line:#E3E7EC;--sunk:#F5F6F8}
+*{box-sizing:border-box}body{margin:0;background:#F4F5F7;color:var(--ink);font:400 15px/1.65 Poppins,system-ui,sans-serif}
+.bar{height:6px;background:linear-gradient(90deg,#1A5FD6 0%,#6B3FD8 55%,#D12A62 100%)}
+main{max-width:920px;margin:32px auto 80px;padding:40px 48px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 40px rgba(30,27,75,.08)}
+h1{margin:0 0 10px;font-size:32px;letter-spacing:-.02em;color:var(--navy)}
+h2{margin:40px 0 12px;padding-top:24px;border-top:1px solid var(--line);font-size:22px;color:var(--navy)}
+h3{margin:28px 0 8px;font-size:17px}
+a{color:var(--accent)}hr{display:none}
+code{font:500 13px/1.5 ui-monospace,Consolas,monospace;background:#F0ECFF;color:#4B2FC0;padding:1px 5px;border-radius:5px}
+pre{background:#0F1B3D;color:#E6E9F2;padding:16px 18px;border-radius:12px;overflow:auto}pre code{background:none;color:inherit;padding:0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{background:var(--sunk);font-weight:700}blockquote{margin:10px 0;padding:10px 16px;border-left:4px solid var(--accent);background:#F0ECFF;border-radius:0 10px 10px 0;color:var(--ink2)}
+blockquote p{margin:0}ul,ol{padding-left:22px}li{margin:4px 0}
+@media (max-width:700px){main{margin:0;border-radius:0;padding:24px 18px}}
+</style></head><body><div class="bar"></div><main><h1>World Emblem Print MCP: Draft Spec</h1>
+<p><strong>Status:</strong> Draft v0.2 · 2026-10-07 (supersedes v0.1 of 2026-10-06)
+<strong>Goal:</strong> Let anyone using Claude (or any MCP client) turn an idea or a logo into a real product (patches, emblems, stickers, labels) without leaving the chat: <strong>design → quote → proof → checkout → track</strong>. It should feel as easy as the Custom Genie studio, and hand off to it at any point.</p>
+<p><strong>What changed in v0.2</strong></p>
+<ul>
+<li><strong>Design in chat.</strong> New <code>generate_design</code> (Genie) and <code>edit_design</code> tools. Users without artwork can get four designs from a description and refine them by asking ("make it navy and gold").</li>
+<li><strong>Checks come with fixes.</strong> Every production check has a stable code, a plain-language message, a suggestion and, where possible, a one-step fix (<code>apply_fix</code>). The codes match the website's print check.</li>
+<li><strong>Mockups at every step.</strong> Any tool that changes a design returns a rendered preview. Mockups are part of the MVP, and no checkout happens without one.</li>
+<li><strong>Hand-off to the studio.</strong> New <code>open_in_studio</code> opens any chat design in the Custom Genie web studio with every layer still editable. Designs made on the site can be quoted in chat.</li>
+<li><strong>Conversation rules (§2).</strong> These set how the assistant asks, shows prices and confirms orders, so the experience is the same in every MCP client.</li>
+</ul>
+<hr />
+<h2>1. Design principles</h2>
+<ol>
+<li><strong>Quote before commit.</strong> Nothing is ordered from a single tool call. The user always sees the price, the specs and a proof first.</li>
+<li><strong>No payment data through the AI.</strong> The MCP never accepts card numbers. Checkout happens on a World Emblem–hosted page through a link (<code>create_checkout</code>).</li>
+<li><strong>Fixes, not just warnings.</strong> Tools return production checks (text too small, low resolution, too many thread colors) with a suggested fix that Claude can offer as a yes/no question.</li>
+<li><strong>Show, don't describe.</strong> Every step that changes a design returns a mockup as MCP image content, so the user judges the design by sight, not from a list of specs.</li>
+<li><strong>One question at a time, smart defaults.</strong> The assistant never asks more than one question per turn. Gaps are filled with sensible defaults and stated plainly ("I went with 2 in, Gloss White. Want to change anything?").</li>
+<li><strong>Discoverable but not pushy.</strong> Tool descriptions say <em>when</em> to use each tool. Claude offers printing when the user shows intent, and doesn't bring it up otherwise.</li>
+<li><strong>Works anonymously, better when signed in.</strong> Designs, quotes and proofs need no account. OAuth unlocks saved designs, reorders and order history.</li>
+<li><strong>No dead ends.</strong> Any design can continue in the web studio (<code>open_in_studio</code>), and any studio design can come back to chat by <code>design_id</code>.</li>
+</ol>
+<hr />
+<h2>2. Conversation design</h2>
+<p>The tools give the assistant what it needs. These rules make the experience feel the same in every client. They are also sent as server instructions (§6).</p>
+<h3>2.1 Happy path (4 turns from idea to proof)</h3>
+<pre><code>User:   I need stickers for my coffee shop, Bean There.
+Claude: [generate_design] Here are four designs: round, 2 in, Gloss White.
+        (4 mockups inline) Pick one, or tell me what to change.
+User:   The second one, but navy and gold.
+Claude: [edit_design] Done. I recolored it navy with gold lettering. (mockup)
+        100 stickers are $123.00 ($1.23 each). At 300 they're $1.08 each.
+        How many would you like?
+User:   300.
+Claude: [get_quote → create_proof] Here's exactly what prints, and how it
+        looks with the dome. (2 images) 300 × 2 in round, Gloss White:
+        $324.00, ships free, estimated ship date Oct 14. One thing to check:
+        &quot;Fresh roasted daily&quot; is 7 pt, which is hard to read under the dome.
+        Should I make it 8 pt?
+User:   Yes, then order.
+Claude: [apply_fix → create_checkout] Fixed. Here's your secure checkout
+        link. You'll confirm shipping and payment there.
+</code></pre>
+<h3>2.2 Rules for the assistant</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Do</th>
+<th>Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing details</td>
+<td>Use defaults from <code>assumptions[]</code> and say what they were. Ask only for what can't be defaulted (usually the text on the design).</td>
+<td>Ask for shape, size, finish, colors and quantity one after another.</td>
+</tr>
+<tr>
+<td>Showing designs</td>
+<td>Show 2–4 options as images, with names. Offer up to three short refinements ("other colors", "rectangle", "gold").</td>
+<td>Describe a design without showing it.</td>
+</tr>
+<tr>
+<td>Prices</td>
+<td>Give the total, quantity and unit price, then the next price break ("At 500 they drop to $1.00 each"). Mention free shipping if it's close.</td>
+<td>List all five price tiers unless asked.</td>
+</tr>
+<tr>
+<td>Production checks</td>
+<td>Lead with warnings, at most three, each with its fix offered as a yes/no. Skip <code>ok</code>/<code>info</code> unless asked.</td>
+<td>Paste codes or raw JSON.</td>
+</tr>
+<tr>
+<td>Before checkout</td>
+<td>Show the proof, restate the order in one line, and get an explicit yes.</td>
+<td>Call <code>create_checkout</code> on "looks good" alone, without a confirmed order summary.</td>
+</tr>
+<tr>
+<td>User declines</td>
+<td>Stop offering printing for the rest of the conversation.</td>
+<td>Re-offer after every logo edit.</td>
+</tr>
+<tr>
+<td>Complex edits</td>
+<td>Offer <code>open_in_studio</code> ("Want to fine-tune it yourself? Here's your design in the studio.").</td>
+<td>Try more than two rounds of edits that aren't understood.</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 Copy patterns</h3>
+<ul>
+<li><strong>Quote:</strong> "300 × 2 in round stickers, Gloss White: <strong>$324.00</strong> ($1.08 each). Ships free. Estimated ship date Oct 14."</li>
+<li><strong>Check:</strong> "Heads up: your logo is 140 dpi at 3 in, so it may print a little soft. I can make it 2 in, where it prints sharp. Want that?"</li>
+<li><strong>Assumptions:</strong> "I went with a 2 in circle in Gloss White, the most popular choice for logos. Tell me if you'd like something else."</li>
+</ul>
+<hr />
+<h2>3. User flow</h2>
+<pre><code>User: &quot;Can I get this printed as stickers?&quot;  /  &quot;Design me a sticker for…&quot;
+   │
+   ├─ list_products              → what's possible (sticker, embroidered patch, PVC…)
+   ├─ upload_artwork             → artwork_id + analysis + checks        (has a logo)
+   │    or generate_design       → design options + mockups + checks     (has an idea)
+   ├─ edit_design / apply_fix    → new version + mockup + checks         (loops)
+   ├─ get_quote                  → price, next price break, ship date, quote_id
+   ├─ create_proof               → flat proof + finished mockup + spec sheet
+   │      (tweaks loop back to edit_design → get_quote)
+   ├─ create_checkout            → secure checkout_url (user pays on the hosted page)
+   └─ get_order_status           → production / shipping updates
+
+   open_in_studio works at any step → the same design, editable in the web studio
+</code></pre>
+<hr />
+<h2>4. Shared objects</h2>
+<h3>4.1 Design document</h3>
+<p><code>generate_design</code>, <code>edit_design</code>, <code>get_design</code> and <code>save_design</code> share one JSON format, the same one the Custom Genie studio saves. This means a design can move between chat, the studio and production without being converted.</p>
+<pre><code class="language-json">{
+  &quot;design_id&quot;: &quot;dsn_8f2k&quot;, &quot;version&quot;: 3, &quot;product_id&quot;: &quot;domed_vinyl_sticker&quot;,
+  &quot;shape&quot;: &quot;circle&quot;, &quot;size_in&quot;: { &quot;w&quot;: 2, &quot;h&quot;: 2 }, &quot;corners&quot;: &quot;standard&quot;,
+  &quot;finish&quot;: &quot;white&quot;, &quot;background&quot;: { &quot;type&quot;: &quot;color&quot;, &quot;color&quot;: &quot;#0F1B3D&quot; },
+  &quot;cut_border_in&quot;: 0.12,
+  &quot;layers&quot;: [
+    { &quot;id&quot;: &quot;l1&quot;, &quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Bean There&quot;, &quot;font&quot;: &quot;Libre Baskerville&quot;,
+      &quot;size_pt&quot;: 15, &quot;fill&quot;: &quot;#FFD569&quot;, &quot;curve&quot;: 58, &quot;x_in&quot;: 1, &quot;y_in&quot;: 0.54 },
+    { &quot;id&quot;: &quot;l2&quot;, &quot;type&quot;: &quot;shape&quot;, &quot;kind&quot;: &quot;cup&quot;, &quot;w_in&quot;: 0.6, &quot;h_in&quot;: 0.6,
+      &quot;fill&quot;: &quot;#FFD569&quot;, &quot;x_in&quot;: 1, &quot;y_in&quot;: 1.06 },
+    { &quot;id&quot;: &quot;l3&quot;, &quot;type&quot;: &quot;image&quot;, &quot;artwork_id&quot;: &quot;art_91x&quot;, &quot;remove_white&quot;: true,
+      &quot;w_in&quot;: 0.9, &quot;h_in&quot;: 0.6, &quot;x_in&quot;: 1, &quot;y_in&quot;: 1.4 }
+  ]
+}
+</code></pre>
+<ul>
+<li>Layer types are <code>text</code>, <code>image</code>, <code>shape</code> (icon library), <code>rect</code>, <code>ellipse</code>, <code>line</code> and <code>path</code>. Each layer can also have <code>rotation</code>, <code>opacity</code>, <code>stroke</code>, <code>stroke_pt</code>, <code>hidden</code>, <code>locked</code> and <code>group_id</code>.</li>
+<li>Positions are measured from the top-left of the sticker in inches, using the center of the layer.</li>
+<li><code>cut_border_in</code> only applies to <code>shape: "custom"</code> (cut to design). The studio offers four widths: 0.06, 0.12, 0.20 and 0.30 in.</li>
+</ul>
+<h3>4.2 Check</h3>
+<pre><code class="language-json">{ &quot;level&quot;: &quot;warning&quot;, &quot;code&quot;: &quot;TEXT_TOO_SMALL&quot;, &quot;layer_id&quot;: &quot;l1&quot;,
+  &quot;message&quot;: &quot;\&quot;Fresh roasted daily\&quot; is 7 pt.&quot;,
+  &quot;suggestion&quot;: &quot;Text under 8 pt is hard to read under the dome.&quot;,
+  &quot;fix&quot;: { &quot;fix_id&quot;: &quot;fx_21&quot;, &quot;label&quot;: &quot;Make it 8 pt&quot; } }
+</code></pre>
+<p><code>level</code> is one of <code>ok</code>, <code>info</code>, <code>warning</code> or <code>error</code>. An <code>error</code> blocks <code>create_checkout</code>. A <code>warning</code> needs the user's acknowledgement in chat, or on the hosted checkout page.</p>
+<h3>4.3 Check codes</h3>
+<p>These are the same codes, levels and thresholds as the website's print check. Thresholds are set per product, so the domed-sticker values are shown here.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Level</th>
+<th>When (domed vinyl stickers)</th>
+<th>Fix offered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EMPTY_DESIGN</code></td>
+<td>error</td>
+<td>No printable layers</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>OUTSIDE_SAFE_AREA</code></td>
+<td>warning</td>
+<td>Layer crosses the 0.08 in safe line</td>
+<td>Move inside</td>
+</tr>
+<tr>
+<td><code>TEXT_TOO_SMALL</code></td>
+<td>warning</td>
+<td>Text under 8 pt (embroidery: under 5 mm)</td>
+<td>Set to minimum</td>
+</tr>
+<tr>
+<td><code>RESOLUTION_TOO_LOW</code></td>
+<td>warning</td>
+<td>Raster under 150 dpi at print size (300 dpi or more prints sharp)</td>
+<td>Resize to sharp size</td>
+</tr>
+<tr>
+<td><code>THIN_LINE</code></td>
+<td>warning</td>
+<td>Line or stroke under 0.5 pt</td>
+<td>Set to 1 pt</td>
+</tr>
+<tr>
+<td><code>LOW_CONTRAST</code></td>
+<td>warning</td>
+<td>Text nearly invisible against its background</td>
+<td>Use light / dark text</td>
+</tr>
+<tr>
+<td><code>TOO_MANY_THREAD_COLORS</code></td>
+<td>warning</td>
+<td>Embroidery: over the product's thread limit</td>
+<td>Reduce palette</td>
+</tr>
+<tr>
+<td><code>HIDDEN_LAYERS</code></td>
+<td>info</td>
+<td>Hidden layers won't print</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>ROUND_ART</code></td>
+<td>info</td>
+<td>Round art on a square/rectangle prints white corners</td>
+<td>Make it round</td>
+</tr>
+<tr>
+<td><code>WHITE_BORDER</code></td>
+<td>info</td>
+<td>White margin around artwork</td>
+<td>Fill edge to edge</td>
+</tr>
+<tr>
+<td><code>EDGE_TO_EDGE</code></td>
+<td>info</td>
+<td>Art runs to the cut; keep key details inside the safe line</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>CUT_FOLLOWS_BOX</code></td>
+<td>info</td>
+<td>Cut-to-design follows an image's white box</td>
+<td>Remove white background</td>
+</tr>
+<tr>
+<td><code>METALLIC_WHITE</code></td>
+<td>info</td>
+<td>Silver/Gold: white areas print clear</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>SPELLING</code></td>
+<td>info</td>
+<td>Lists all text so the user can proofread</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. Tools</h2>
+<h3>5.1 <code>list_products</code></h3>
+<blockquote>
+<p>Use when the user asks what products a logo can be made into, or before quoting so you can pick valid sizes and options.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>category?</code> (<code>patch</code> | <code>sticker</code> | <code>label</code> | <code>emblem</code> | <code>transfer</code>)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Array of products: <code>product_id</code>, <code>name</code>, <code>description</code>, <code>sizes</code> (min/max inches), <code>shapes[]</code>, <code>options</code> (backing, border, finish, thread count limit), <code>min_quantity</code>, <code>quantity_tiers[]</code>, <code>typical_turnaround_days</code>, <code>check_thresholds</code>, <code>thumbnail_url</code>, <code>studio_supported</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example products: <code>domed_vinyl_sticker</code> (Custom Genie; finishes <code>white</code> | <code>silver</code> | <code>gold</code>; 0.5–8.5 in; supplied on 9.25 × 10 in sheets), <code>die_cut_sticker</code>, <code>embroidered_patch</code>, <code>woven_patch</code>, <code>pvc_patch</code>, <code>leather_patch</code>, <code>heat_transfer</code>, <code>woven_label</code>.</p>
+<hr />
+<h3>5.2 <code>upload_artwork</code></h3>
+<blockquote>
+<p>Use when the user has a logo or artwork they want made into a product. Accepts SVG, PNG, JPG, WebP or PDF. Returns an analysis and production checks you should explain in plain language.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: true</code> (hash-based)</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>One of: <code>file_base64</code> + <code>filename</code>, or <code>file_url</code>, or <code>design_id</code> (from the logo designer or studio); <code>product_id?</code> (tunes the analysis)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>artwork_id</code>, <code>format</code>, <code>pixels {w,h}</code>, <code>vector</code>, <code>detected_colors[]</code>, <code>preview_url</code>, <code>analysis</code>, <code>checks[]</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>analysis</code> matches what the studio shows after an upload:</p>
+<pre><code class="language-json">{ &quot;background&quot;: &quot;white&quot;, &quot;is_round&quot;: true, &quot;suggested_shape&quot;: &quot;circle&quot;,
+  &quot;max_sharp_width_in&quot;: 3.4,
+  &quot;suggested_sizes&quot;: [ { &quot;size_in&quot;: {&quot;w&quot;:2,&quot;h&quot;:2}, &quot;sharpness&quot;: &quot;sharp&quot; },
+                       { &quot;size_in&quot;: {&quot;w&quot;:4,&quot;h&quot;:4}, &quot;sharpness&quot;: &quot;may_blur&quot; } ],
+  &quot;can_remove_background&quot;: true }
+</code></pre>
+<hr />
+<h3>5.3 <code>generate_design</code> (Genie) · new</h3>
+<blockquote>
+<p>Use when the user wants a design created from a description, or wants ready-made layouts around their logo. Show the returned mockups as images and let the user pick. Tell the user which details were assumed.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: false</code> (pass <code>seed</code> for repeatable results)</td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>prompt</code>, <code>product_id</code>, <code>artwork_id?</code>, <code>constraints?</code> (<code>shape</code>, <code>size_in</code>, <code>finish</code>, <code>colors[]</code>, <code>text {main, tagline}</code>, <code>style</code>), <code>count?</code> (default 4, max 6), <code>seed?</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>designs[]</code>: <code>design_id</code>, <code>name</code>, <code>preview_url</code> + image content, <code>doc</code> (§4.1), <code>checks[]</code>; <code>assumptions[]</code> (e.g. <code>{"field":"size_in","value":{"w":2,"h":2},"reason":"most popular for logos"}</code>); <code>refinements[]</code> (short suggested follow-ups)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Details in the prompt are read before any defaults. "Gold" means the finish unless it's paired with another color ("navy and gold"), where it means a color. Quantities, sizes ("3 x 1 in") and shapes are read the same way.</li>
+<li>With an <code>artwork_id</code>, Genie places the artwork rather than redrawing it. Typical options are as is, cut around the design, on a tinted background, and with the user's text.</li>
+</ul>
+<hr />
+<h3>5.4 <code>edit_design</code> · new</h3>
+<blockquote>
+<p>Use when the user asks to change a design ("make it navy and gold", "curve the name", "add a star", "bigger text"). Show the new mockup and list the changes in plain words.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: true</code> (via <code>base_version</code>)</td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>design_id</code>, <code>base_version</code>, and either <code>instruction</code> (natural language) or <code>operations[]</code>: <code>set_text</code>, <code>recolor</code>, <code>set_shape</code>, <code>set_size</code>, <code>set_finish</code>, <code>add_icon</code>, <code>add_text</code>, <code>tidy_layout</code>, <code>remove_background</code>, <code>fill_edge_to_edge</code>, <code>revert_to {version}</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>design_id</code>, <code>version</code>, <code>preview_url</code> + image content, <code>changes[]</code> (e.g. "recolored it navy with gold lettering"), <code>checks[]</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Designs are versioned. Edits never overwrite earlier versions, so "undo" is just <code>revert_to</code>.</li>
+<li>If an instruction isn't understood, the tool returns <code>EDIT_NOT_UNDERSTOOD</code> with <code>supported_edits[]</code>. After two misses, offer <code>open_in_studio</code>.</li>
+</ul>
+<h3>5.5 <code>apply_fix</code> · new</h3>
+<blockquote>
+<p>Use when the user accepts a fix offered for a production check.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>design_id</code>, <code>fix_id</code> (or <code>fix_ids[]</code>)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Same as <code>edit_design</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>5.6 <code>get_quote</code></h3>
+<blockquote>
+<p>Use when the user wants pricing. Always show the user the price, quantity and turnaround before creating a checkout.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>design_id</code> <strong>or</strong> <code>artwork_id</code> + <code>product_id</code> + <code>size_in</code> (number or <code>{w,h}</code>) + <code>shape</code>; <code>quantity</code>, <code>options?</code> (backing, border, finish), <code>ship_to_postal_code?</code>, <code>rush?</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>quote_id</code>, <code>expires_at</code>, <code>unit_price</code>, <code>subtotal</code>, <code>setup_fee</code>, <code>shipping_estimate</code>, <code>free_shipping_threshold</code>, <code>amount_to_free_shipping</code>, <code>total</code>, <code>currency</code>, <code>price_breaks[]</code>, <code>next_price_break</code> (<code>quantity</code>, <code>unit_price</code>, <code>saves_pct</code>), <code>turnaround_days</code>, <code>estimated_ship_date</code>, <code>warnings[]</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>next_price_break</code> lets Claude say <em>"At 500 they drop from $1.08 to $1.00 each."</em> without listing every tier.</p>
+<hr />
+<h3>5.7 <code>create_proof</code></h3>
+<blockquote>
+<p>Use after a quote, so the user can see exactly what will be made before ordering.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>quote_id</code>, <code>notes?</code> (customer instructions, max 250 characters)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>proof_id</code>, <code>proof_flat_url</code>, <code>mockup_image_url</code>, <code>sheet_layout_url?</code>, <code>spec_sheet_url</code> (PDF), <code>spec</code> (shape, cut size, finish, quantity, product code), <code>ink_or_thread_colors[]</code>, <code>production_notes[]</code>, <code>checks[]</code>, <code>status</code></td>
+</tr>
+</tbody>
+</table>
+<p>The three images match the studio's views, so customers see the same thing in chat and on the web:</p>
+<ul>
+<li><strong><code>proof_flat_url</code> ("What prints"):</strong> the flat cut-out with size labels, trimmed areas faded out and a US quarter for scale.</li>
+<li><strong><code>mockup_image_url</code> (finished look):</strong> the domed sticker, stitched patch, and so on.</li>
+<li><strong><code>sheet_layout_url</code>:</strong> for sheet products, the sticker at actual scale on the sheet.</li>
+</ul>
+<p>Phase 1 returns an instant auto-proof (<code>status: "auto"</code>). Phase 3 adds <code>request_artist_review: true</code>, which returns <code>status: "pending"</code> until a World Emblem artist signs off.</p>
+<hr />
+<h3>5.8 <code>create_checkout</code></h3>
+<blockquote>
+<p>Use only after the user has seen the proof and explicitly confirmed the order summary. Returns a secure link where the user enters shipping and payment themselves. Never ask for card details in chat.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: true</code> (via <code>idempotency_key</code>), <code>openWorldHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>quote_id</code>, <code>proof_id</code>, <code>idempotency_key</code>, <code>customer_email?</code>, <code>acknowledged_check_codes[]?</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>checkout_url</code>, <code>draft_order_id</code>, <code>expires_at</code>, <code>summary</code> (line items and total, repeated for confirmation)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Creates a <strong>draft order</strong>. Nothing is charged or produced until the user pays on the hosted page.</li>
+<li>The hosted page shows the proof again and asks for the same approval as the website ("I've checked my design and spelling and approve it for printing").</li>
+<li><code>error</code>-level checks block checkout. <code>warning</code>s that aren't in <code>acknowledged_check_codes</code> are shown again on the hosted page.</li>
+</ul>
+<hr />
+<h3>5.9 <code>get_order_status</code></h3>
+<blockquote>
+<p>Use when the user asks about an existing order.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>order_id</code> (or omit for recent orders when authenticated)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>status</code> (<code>awaiting_payment</code> | <code>in_proof_review</code> | <code>in_production</code> | <code>shipped</code> | <code>delivered</code>), <code>tracking_url?</code>, <code>estimated_delivery?</code>, <code>line_items[]</code>, <code>proof_url</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>5.10 <code>open_in_studio</code> · new</h3>
+<blockquote>
+<p>Use when the user wants to fine-tune a design themselves, or when chat edits aren't getting there.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annotations</td>
+<td><code>readOnlyHint: false</code>, <code>destructiveHint: false</code>, <code>idempotentHint: true</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>design_id</code> or <code>quote_id</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>studio_url</code> (signed deep link, opens the design in the Custom Genie / World Emblem studio with all layers editable), <code>expires_at</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Works without an account. Anonymous designs are kept for 30 days.</li>
+<li>When the user returns to chat, a studio-saved design can be quoted by its <code>design_id</code>.</li>
+</ul>
+<hr />
+<h3>5.11 Logo-designer bridge (optional, authenticated)</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list_designs</code></td>
+<td>The user's saved designs from the logo designer and studio (<code>design_id</code>, name, thumbnail, updated_at).</td>
+</tr>
+<tr>
+<td><code>get_design</code></td>
+<td>Fetch a design as a design document (§4.1), or as SVG/PNG for display.</td>
+</tr>
+<tr>
+<td><code>save_design</code></td>
+<td>Save a generated or edited design to the user's account.</td>
+</tr>
+<tr>
+<td><code>reorder</code></td>
+<td><code>order_id</code> → new <code>quote_id</code> with the same specs (still goes through proof and checkout).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Server instructions (sent to the model on connect)</h2>
+<pre><code>World Emblem makes custom embroidered, woven, PVC and leather patches,
+stickers (including Custom Genie domed stickers), labels and heat transfers.
+
+- Use these tools when a user wants a logo or design made into a physical
+  product, printed or ordered, or wants a sticker/patch designed for them.
+- After helping a user finish a logo, you may offer once to quote it as a
+  patch or sticker. Don't repeat the offer if they decline.
+- No artwork? Use generate_design and show the mockups. Have artwork? Use
+  upload_artwork. Say which details you assumed; ask at most one question
+  per turn.
+- Show a mockup after every change (generate_design, edit_design, apply_fix).
+- Always: get_quote → create_proof → show price + proof → get an explicit
+  yes to a one-line order summary → create_checkout.
+- When quoting, give the total, quantity and unit price, plus the next
+  price break.
+- Explain at most three production warnings in plain language, each with
+  its fix offered as a yes/no question. Never show raw codes.
+- If edits aren't working after two tries, offer open_in_studio.
+- Never request or accept payment card details in chat; checkout happens
+  on the link returned by create_checkout.
+</code></pre>
+<hr />
+<h2>7. Errors</h2>
+<p>Return MCP tool errors with a stable <code>code</code> and a human-readable <code>message</code>, plus a <code>suggestion</code> where possible:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UNSUPPORTED_FORMAT</code></td>
+<td>File isn't SVG/PNG/JPG/WebP/PDF</td>
+</tr>
+<tr>
+<td><code>FILE_TOO_LARGE</code></td>
+<td>Over 25 MB (include the limit)</td>
+</tr>
+<tr>
+<td><code>RESOLUTION_TOO_LOW</code></td>
+<td>Raster can't print acceptably at any offered size</td>
+</tr>
+<tr>
+<td><code>SIZE_OUT_OF_RANGE</code></td>
+<td>Size outside the product range (include min/max)</td>
+</tr>
+<tr>
+<td><code>BELOW_MIN_QUANTITY</code></td>
+<td>Quantity below the product minimum (include the minimum)</td>
+</tr>
+<tr>
+<td><code>INVALID_OPTION</code></td>
+<td>Option not valid for this product/size</td>
+</tr>
+<tr>
+<td><code>DESIGN_NOT_FOUND</code></td>
+<td>Unknown or expired <code>design_id</code> / version</td>
+</tr>
+<tr>
+<td><code>EDIT_NOT_UNDERSTOOD</code></td>
+<td>Instruction couldn't be mapped to an edit (include <code>supported_edits[]</code>)</td>
+</tr>
+<tr>
+<td><code>CONTENT_NOT_ALLOWED</code></td>
+<td>Prompt or artwork breaks the content/IP policy (include the policy URL)</td>
+</tr>
+<tr>
+<td><code>CHECKS_BLOCKING</code></td>
+<td><code>create_checkout</code> called while an <code>error</code>-level check is open</td>
+</tr>
+<tr>
+<td><code>QUOTE_EXPIRED</code></td>
+<td>Re-run <code>get_quote</code></td>
+</tr>
+<tr>
+<td><code>AUTH_REQUIRED</code></td>
+<td>Tool needs a signed-in account</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Website parity (Custom Genie studio)</h2>
+<p>The v3 Custom Genie page (<code>Domed Vinyl Stickers _ Custom Genie (copy) Version 3.html</code>) already uses this spec's vocabulary, so web and chat behave the same:</p>
+<table>
+<thead>
+<tr>
+<th>MCP</th>
+<th>Website today</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list_products</code>, <code>get_quote</code>, <code>create_proof</code>, <code>create_checkout</code></td>
+<td><code>window.CustomGeniePrint.listProducts / getQuote / createProof / createCheckout</code>, with the same payload shapes. "Review &amp; order" calls getQuote → createProof → createCheckout. A local stub is used until the backend is connected.</td>
+</tr>
+<tr>
+<td><code>generate_design</code> / <code>edit_design</code></td>
+<td>Genie panel in the studio, with <code>window.CustomGenieAI.generate({mode, prompt, answers, logo})</code> and an optional <code>.edit({prompt, doc})</code> hook. Rule-based in the prototype.</td>
+</tr>
+<tr>
+<td><code>upload_artwork</code> analysis</td>
+<td>Genie's artwork check: pixel size, sharp-size limit, background type, round detection, suggested shape, main colors.</td>
+</tr>
+<tr>
+<td>Check codes (§4.3)</td>
+<td>Print check pill in the quote bar, with one-click fixes and Undo</td>
+</tr>
+<tr>
+<td><code>create_proof</code> images</td>
+<td>Studio views: Print proof · 3D · On sheet</td>
+</tr>
+<tr>
+<td>Design document (§4.1)</td>
+<td>Studio autosave format (layers, groups, lock/hide, opacity, strokes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shared analytics funnel:</strong> <code>builder_ai_prompt</code> → <code>builder_ai_generate</code> → <code>builder_ai_apply</code> → <code>builder_ai_edit</code> → <code>print_check_fix</code> → <code>review_open</code> → <code>add_to_cart</code> (web), with the same steps logged per tool call over MCP.</p>
+<hr />
+<h2>9. Technical notes</h2>
+<ul>
+<li><strong>Transport:</strong> remote MCP server over Streamable HTTP (e.g. <code>https://mcp.worldemblem.com/mcp</code>).</li>
+<li><strong>Auth:</strong> OAuth 2.1 for account features. Design, quote, proof and checkout tools work without an account and are rate-limited by IP; <code>generate_design</code> has a tighter per-IP limit.</li>
+<li><strong>Backend:</strong> wraps the existing pricing engine, artwork pipeline, renderer and e-commerce checkout. The MCP layer should stay thin. The same renderer produces the studio previews and the MCP mockups, so they always match.</li>
+<li><strong>Images:</strong> return mockups as hosted URLs <em>and</em> as MCP image content so clients can render them inline. Keep previews at 1024 px or smaller so they display quickly.</li>
+<li><strong>Versioning:</strong> every <code>edit_design</code> / <code>apply_fix</code> creates a new immutable version. Quotes and proofs pin a version.</li>
+<li><strong>Idempotency:</strong> <code>create_checkout</code> must dedupe on <code>idempotency_key</code> so a retried call can't create duplicate draft orders.</li>
+<li><strong>Content safety:</strong> screen prompts and artwork for trademarks, hate symbols and the like before generating or quoting, and return <code>CONTENT_NOT_ALLOWED</code>.</li>
+<li><strong>Privacy:</strong> store uploaded artwork and designs under the user's account, or delete them after 30 days if anonymous. Publish a privacy policy (required for directory listing).</li>
+</ul>
+<hr />
+<h2>10. Rollout</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 – MVP</strong></td>
+<td><code>list_products</code>, <code>upload_artwork</code>, <code>generate_design</code>, <code>get_quote</code>, <code>create_proof</code> (auto-proof), <code>create_checkout</code>, <code>open_in_studio</code>. Domed stickers and die-cut stickers only.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><code>edit_design</code>, <code>apply_fix</code>, <code>get_order_status</code>; embroidered and woven patches (thread-color checks)</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>OAuth + logo-designer bridge (<code>list_designs</code>, <code>get_design</code>, <code>save_design</code>, <code>reorder</code>), artist proof review</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Submit to Anthropic's connector directory; co-marketing</td>
+</tr>
+</tbody>
+</table>
+<p><code>create_proof</code> moved into Phase 1 because principle 4 (show, don't describe) and the website both require a proof before checkout.</p>
+<p><strong>Success measures:</strong> median time from first message to a quote under 60 seconds; four turns or fewer from intent to proof; share of accepted fixes; proof-to-checkout and checkout-to-paid conversion compared with the website.</p>
+<hr />
+<h2>11. Open questions</h2>
+<ul>
+<li>Which product lines launch first? Stickers have the fewest production constraints; patches are the core business.</li>
+<li>Instant pricing for every product, or "request a quote" for complex items?</li>
+<li>Minimum quantities: offer a low-MOQ sticker or patch option for consumers? Domed stickers currently start at 100.</li>
+<li>Who approves proofs: automated only, or artist sign-off before production? What is the turnaround target for artist review?</li>
+<li>Silver and Gold domed stickers: confirm the real SKUs (the site uses placeholder codes SIL/GLD) and whether they share White's price list.</li>
+<li>The pricing matrix: the site estimates some size buckets by area. Load the full SKU price list before launch.</li>
+<li>Production turnaround for the estimated ship date (the site uses a 5-business-day placeholder).</li>
+<li>Content/IP policy for AI-generated designs, and whether previews should be watermarked before purchase.</li>
+<li>B2B accounts (net terms, reseller pricing): through the same server or a separate one?</li>
+</ul></main></body></html>

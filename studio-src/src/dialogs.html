@@ -1,0 +1,46 @@
+<!-- ================= REVIEW: proof + quote + checkout ================= -->
+<dialog class="dlg" id="reviewDlg" aria-labelledby="rvTitle">
+ <div class="dlg-h"><h2 id="rvTitle">Review your proof</h2><span class="pill ok" id="rvQuote" style="height:28px;cursor:default"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span id="rvQuoteTxt">Quote</span></span><button type="button" class="iconbtn" id="rvClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-b">
+  <div class="rv">
+   <div>
+    <div class="rv-proof" id="rvProof">
+     <div class="rv-tabs" role="group" aria-label="Proof view"><button type="button" data-rv="flat" aria-pressed="true">What prints</button><button type="button" data-rv="dome" aria-pressed="false">With dome</button></div>
+     <div id="rvArt" style="width:100%;height:100%;display:grid;place-items:center"></div>
+    </div>
+    <p class="rv-cap" id="rvCap"></p>
+   </div>
+   <div>
+    <h3 class="rv-h">Quote</h3>
+    <dl class="spec" id="rvSpec"></dl>
+    <p class="rv-break" id="rvBreak" hidden></p>
+    <h3 class="rv-h">Print check</h3>
+    <ul class="checks" id="rvChecks"></ul>
+    <details class="instr" id="instrWrap"><summary>Add special instructions</summary>
+     <label class="sr-only" for="instr">Special instructions</label>
+     <textarea id="instr" maxlength="250" rows="3" aria-describedby="instrCount" placeholder="For example: match PMS 185 red"></textarea>
+     <span class="count" id="instrCount">0 / 250</span>
+    </details>
+    <label class="confirm" id="confirmBox" for="confirm"><input type="checkbox" id="confirm" aria-describedby="confirmErr"><span>I've checked the proof and spelling, and I approve it for printing.</span></label>
+    <p class="err" id="confirmErr" hidden><svg class="ico"><use href="#i-alert"/></svg><span>Please approve the proof to continue.</span></p>
+    <button type="button" class="btn btn-primary full lg" id="addCart">Add to cart</button>
+    <div class="express"><button type="button" class="btn-pay" id="gpay">G Pay</button><button type="button" class="btn-pay" id="apay">Apple Pay</button></div>
+    <div class="rv-foot"><button type="button" class="linkbtn" id="saveBtn">Save design</button><span aria-hidden="true">·</span><a href="#" data-proto="Live chat isn't connected."><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat with a specialist</a></div>
+   </div>
+  </div>
+ </div>
+</dialog>
+
+<!-- ================= SHORTCUTS ================= -->
+<dialog class="dlg" id="keysDlg" aria-labelledby="keysTitle">
+ <div class="dlg-h"><h2 id="keysTitle">Keyboard shortcuts</h2><button type="button" class="iconbtn" data-close-dlg aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-b"><div class="kcols" id="kcols"></div></div>
+</dialog>
+
+<div class="pop" id="pop" role="menu" hidden></div>
+<div class="tip" id="tip" role="tooltip"></div>
+<input type="file" id="replFile" class="sr-only" accept="image/*" tabindex="-1" aria-hidden="true">
+<div class="scrim" id="scrim" hidden></div>
+<button type="button" class="notes-btn" id="notesBtn" aria-pressed="false"></button>
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastTxt"></span><button type="button" id="toastAct" hidden></button></div>
+<div id="live" class="sr-only" aria-live="polite"></div>
