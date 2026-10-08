@@ -982,6 +982,27 @@ body.hide-notes .note{display:none}
 /* review notes pill: bottom-right, so it never covers the Genie composer */
 .notes-btn{left:auto;right:16px}
 
+/* ---------- Genie chat: entry modes, questions, plan card ---------- */
+.gmodes{display:grid;gap:8px;margin:12px 0 4px}
+.gmode{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background .15s}
+.gmode:hover{border-color:var(--accent);background:var(--accent-soft)}
+.gmode:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.gmode .ico{flex:0 0 auto;width:22px;height:22px;color:var(--accent)}
+.gmode b{display:block;font-size:14px;line-height:1.25}
+.gmode small{display:block;margin-top:2px;font-size:12.5px;color:var(--ink-3)}
+.gask .gchip{min-height:36px}
+.gchip:disabled{opacity:.55;cursor:default}
+.gchip[aria-pressed="true"]:disabled{opacity:1}
+.gplan{margin-top:8px;padding:12px 14px;border:1.5px solid var(--accent);border-radius:12px;background:var(--accent-soft)}
+.gplan-h{display:flex;align-items:center;gap:6px;margin:0 0 4px;font-weight:700;color:var(--accent-ink)}
+.gplan-h .ico{width:16px;height:16px}
+.gplan-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px;font-size:13px}
+.gplan-list li{display:grid;grid-template-columns:92px 1fr;gap:8px}
+.gplan-list span{color:var(--ink-3)}
+.gplan-list b{font-weight:600;color:var(--ink);overflow-wrap:anywhere}
+.gplan-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.gplan-act .btn{min-height:40px}
+
 </style>
 </head>
 <body>
@@ -2919,7 +2940,7 @@ function v3dPointers(){const cv=V3.cv;
 const NB={api:(typeof window.CUSTOM_GENIE_API==='string'&&window.CUSTOM_GENIE_API)||'/api/genie',on:false,checking:null,model:'',n:2,ctl:null,cache:{},R:[]};
 function nbCheck(){if(NB.on)return Promise.resolve(true);if(NB.checking)return NB.checking;
  if(!/^https?:$/.test(location.protocol)&&!window.CUSTOM_GENIE_API)return Promise.resolve(false);
- NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2}if(NB.on)nbBadge();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
+ NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2;GC.on=!!(j.chat&&j.chat.enabled)&&!window.CUSTOM_GENIE_NO_CHAT;GC.model=(j.chat&&j.chat.model)||''}if(NB.on)nbBadge();if(GC.on)gcIntro();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
  return NB.checking}
 function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent='Describe your logo or sticker and Genie draws options with Nano Banana Pro. Click one to add it to your canvas.';
  const first=feed.querySelector('.gm.bot .bd');if(!first||first.querySelector('.gai-badge'))return;const p0=first.querySelector('p');if(p0)p0.innerHTML=p0.innerHTML.replace("I'll design four options to start from.","I'll draw logo options for you.");
@@ -2974,7 +2995,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  const info=k2===key?info0:analyzeArt(m.img,m),clear=!!info0.whiteBg;if(clear)await makeClear(k2);
  const ar=(m.natW||1)/(m.natH||1);
  if(R.meta.replace){const e=get(R.meta.replace);if(e){e.key=k2;e.h=e.w/ar;e.clear=clear||e.clear;sel=[e.id];CT.sig='';commit();syncPanels();req();
-   toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'nano-banana-pro',edit:true});if(NARROW.matches)closeSheets();return}}
+   gcNote('The shopper swapped in the edited AI logo.');toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'nano-banana-pro',edit:true});if(NARROW.matches)closeSheets();return}}
  const blank=isBlank();
  if(blank){const a=R.meta.a||{},shape=a.shape||(info0.round?(info0.suggest==='oval'?'oval':'circle'):(info0.suggest||'custom'));D.shape=shape;
   if(a.size){const z=resolveSize(Object.assign({},a,{shape,mode:'prompt'}));D.w=z.w;D.h=z.h}
@@ -2989,7 +3010,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  else fit((W()-2*SAFE)*.94,(H()-2*SAFE)*.94);
  const inside=at&&at.x>0&&at.y>0&&at.x<W()&&at.y<H();
  if(!started){started=true;track('builder_start',{method:'ai'})}startDismissed=true;
- addEl(base('image',{key:k2,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear,name:'Genie logo'}),'ai');
+ addEl(base('image',{key:k2,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear,name:'Genie logo'}),'ai');gcNote(`The shopper added AI design option ${i+1} to the sticker.`);
  track('builder_ai_apply',{engine:'nano-banana-pro'});quickUI();if(NARROW.matches)closeSheets();
  toast(blank?'Logo added. Drag it to place it, or ask Genie for changes.':'Logo added to your sticker.','Undo',undo)}
 
@@ -3007,6 +3028,193 @@ function nbInit(){
  vp.addEventListener('dragleave',ev=>{if(!vp.contains(ev.relatedTarget))vp.classList.remove('nb-drop')});
  vp.addEventListener('drop',ev=>{vp.classList.remove('nb-drop');if(!isLogo(ev))return;ev.preventDefault();ev.stopPropagation();const [r,i]=ev.dataTransfer.getData('application/x-genie-logo').split(':').map(Number);nbPick(r,i,editable()?toW(ev):null)});
  nbCheck()}
+
+/* =====================================================================
+   Genie chat: a chat model (server.mjs /api/genie/chat) talks with the shopper,
+   gathers the brief, and decides when Nano Banana Pro should draw.
+   The model never touches the canvas directly. It returns actions, and this file
+   carries each one out with the studio's own functions (setShape, setSize, genieEdit,
+   nbEdit, generate, commit), so every change is a normal, undoable studio edit and
+   all manual tools keep working. Without the server, Genie falls back to its
+   built-in rules (js4_genie.js), so shoppers never hit a dead end.
+   ===================================================================== */
+const GC = { on: false, model: '', mode: 'open', hist: [], brief: {}, refs: [], notes: [], plans: [], busy: false };
+const gcFmt = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n+/g, '<br>');
+
+/* what Genie knows about the sticker and the product (sent each turn, never invented by the model) */
+function gcFacts() { return { shapes: Object.values(SN), minIn: MIN, maxIn: MAX, finishes: Object.values(VN), quantities: QTY } }
+function gcDesign() {
+  return { blank: isBlank(), shape: D.shape, width_in: D.w, height_in: D.h, finish: VN[D.vinyl] || D.vinyl, quantity: QTY[tier],
+    background: D.bg.t === 'color' ? D.bg.c : D.bg.t === 'img' ? 'image' : 'none',
+    elements: D.els.filter(e => !e.hidden).slice(0, 12).map(e => e.type === 'text'
+      ? { type: 'text', text: String(e.text || '').slice(0, 40), font: (FONTS[e.font] || {}).n, color: e.fill }
+      : { type: e.type, ai_logo: nbIsAI(e) || undefined, uploaded: e.type === 'image' && !nbIsAI(e) ? true : undefined }) };
+}
+function gcNote(t) { if (GC.on) GC.notes.push(t) }
+
+/* reference images: shrink in the browser before upload (JPEG on white keeps requests small) */
+function gcThumb(key, max) {
+  const m = IM[key]; if (!m || !m.img) return Promise.resolve(null);
+  return new Promise(res => {
+    try {
+      const im = m.img, s = Math.min(1, max / Math.max(im.naturalWidth || 1, im.naturalHeight || 1));
+      const c = document.createElement('canvas'); c.width = Math.max(1, Math.round((im.naturalWidth || max) * s)); c.height = Math.max(1, Math.round((im.naturalHeight || max) * s));
+      const x = c.getContext('2d'); x.fillStyle = '#FFFFFF'; x.fillRect(0, 0, c.width, c.height); x.drawImage(im, 0, 0, c.width, c.height);
+      res(c.toDataURL('image/jpeg', .9));
+    } catch (e) { res(null) }
+  });
+}
+function gcAddRef(key) { if (!key || GC.refs.includes(key)) return; GC.refs.push(key); if (GC.refs.length > 3) GC.refs.shift(); GC.brief.use_references = true }
+
+/* ---------- entry: the two ways in ---------- */
+function gcIntro() {
+  const first = feed.querySelector('.gm.bot .bd'); if (!first || first.querySelector('.gmodes')) return;
+  const p0 = first.querySelector('p'); (p0 || first).insertAdjacentHTML(p0 ? 'afterend' : 'beforeend', `<div class="gmodes" role="group" aria-label="How should Genie help?">
+   <button type="button" class="gmode" data-gcmode="guide"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span><b>Walk me through it</b><small>A few quick questions, then I draw it</small></span></button>
+   <button type="button" class="gmode" data-gcmode="auto"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg><span><b>Just make it for me</b><small>Tell me one thing, I'll do the rest</small></span></button></div>`);
+}
+function gcStart(mode) {
+  if (AI.busy || GC.busy) return; GC.mode = mode; openGenie(false); startDismissed = true; req();
+  track('builder_ai_chat_mode', { mode });
+  if (mode === 'guide') { gUser('Walk me through it'); gcTurn('Walk me through designing my sticker, one question at a time.') }
+  else {
+    gUser('Just make it for me');
+    GC.hist.push({ role: 'user', content: 'Just make it for me.' });
+    const say = 'Happy to. Tell me the name to put on it or what it\'s for, or attach a logo or photo. I\'ll take care of the rest.';
+    GC.hist.push({ role: 'assistant', content: say });
+    gSay(`<p>${esc(say)}</p><div class="gchips"><button type="button" class="gchip" data-gcref>Attach a logo or photo</button><button type="button" class="gchip" data-gcask="Surprise me">Surprise me</button></div>`);
+    setTimeout(() => $('#gtext').focus(), 60);
+  }
+}
+
+/* ---------- one chat turn ---------- */
+async function gcTurn(text, key) {
+  if (GC.busy) return true; GC.busy = true; AI.busy = true;
+  if (key) gcAddRef(key);
+  const content = (GC.notes.length ? `(Studio update: ${GC.notes.join(' ')})\n` : '') + (text || (key ? 'Here is my logo or reference image.' : ''));
+  GC.notes = []; GC.hist.push({ role: 'user', content });
+  const th = gThinking('Genie is thinking…');
+  let j = null, err = null;
+  try {
+    const image = key ? await gcThumb(key, 768) : null;
+    const r = await fetch(NB.api + '/chat', { method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ messages: GC.hist.slice(-24), mode: GC.mode, brief: GC.brief, design: gcDesign(), facts: gcFacts(),
+        refs: GC.refs.length, refNames: GC.refs.map(k => (IM[k] || {}).name || 'image'), image }) });
+    j = await r.json().catch(() => ({}));
+    if (!r.ok) { err = (j && j.error) || { code: 'HTTP_' + r.status }; j = null }
+  } catch (e) { err = { code: 'NETWORK', message: e.message } }
+  th.remove(); GC.busy = false; AI.busy = false;
+
+  if (!j) {
+    GC.hist.pop();
+    if (['UNAVAILABLE', 'NOT_CONFIGURED', 'HTTP_404', 'NETWORK'].includes(err.code)) { GC.on = false; track('builder_ai_chat_off', { code: err.code }); return false }   // built-in Genie takes over
+    gSay(`<p>${esc(err.message || 'Genie couldn\'t answer just now.')}</p><div class="gchips"><button type="button" class="gchip" data-gcask="${esc(text || 'Try again')}">Try again</button></div>`);
+    return true;
+  }
+  track('builder_ai_chat', { actions: (j.actions || []).map(a => a.type).join(',') || 'none' });
+  await gcApply(j);
+  return true;
+}
+
+/* ---------- carry out the model's actions with the studio's own functions ---------- */
+async function gcApply(j) {
+  const acts = Array.isArray(j.actions) ? j.actions : [], ask = acts.find(a => a.type === 'ask_user');
+  let reply = String(j.reply || '').trim();
+  if (ask && ask.message && !reply.toLowerCase().includes(ask.message.toLowerCase().slice(0, 30))) reply = reply ? reply + ' ' + ask.message : ask.message;
+  if (/^(done\.?|here is my plan\.?)$/i.test(reply) && acts.some(a => a.type === 'set_sticker')) reply = '';
+  let memo = reply, undoable = false;
+  for (const a of acts) if (a.type === 'update_brief') { const { type, ...f } = a; Object.assign(GC.brief, f) }
+
+  /* 1) do the work first, with the studio's own functions */
+  for (const a of acts) {
+    if (a.type === 'set_sticker') { const d = gcSetSticker(a, !!reply); if (d) { memo += `\n[Changed the sticker: ${d}]`; undoable = !!reply } }
+    else if (a.type === 'edit_design' && a.instruction) { const ok = await genieEdit(a.instruction); if (!ok) gSay('<p>I couldn\'t make that change automatically. You can do it with the tools on the canvas, or tell me another way to put it.</p>'); memo += `\n[Edited the layout: ${a.instruction}${ok ? '' : ' (could not apply)'}]` }
+    else if (a.type === 'edit_logo' && a.change) { const tg = nbTarget(); if (tg) { await nbEdit(a.change, tg); memo += `\n[Redrew the AI logo: ${a.change}]` } else { gSay('<p>There isn\'t an AI logo on the sticker to change yet. Want me to draw one?</p>'); memo += '\n[No AI logo to edit]' } }
+    else if (a.type === 'show_layouts') { gcLayouts(); memo += '\n[Showed free text layouts]' }
+  }
+
+  /* 2) then Genie's reply, and the next question as tap-able answers */
+  const plan = acts.find(a => a.type === 'create_designs' && a.image_prompt);
+  if (ask) {
+    const q = ask.question || '';
+    const chips = (ask.choices || []).map(c => `<button type="button" class="gchip" data-gcask="${esc(c)}">${esc(c)}</button>`).join('')
+      + (ask.allow_upload ? '<button type="button" class="gchip" data-gcref><svg class="ico" style="width:14px;height:14px" aria-hidden="true"><use href="#i-clip"/></svg>Attach a logo or photo</button>' : '');
+    gSay(`${reply ? `<p>${gcFmt(reply)}</p>` : ''}${q ? `<p><b>${esc(q)}</b></p>` : ''}${chips ? `<div class="gchips gask">${chips}</div>` : ''}${undoable ? '<div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button></div>' : ''}`);
+    memo += `${memo ? '\n' : ''}[Asked: ${q}${ask.choices && ask.choices.length ? ' Choices: ' + ask.choices.join(' / ') : ''}]`;
+  } else if (reply && !plan) gSay(`<p>${gcFmt(reply)}</p>${undoable ? '<div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button></div>' : ''}`);
+
+  /* 3) drawing: confirmed with one tap, or right away in "do it for me" mode */
+  if (plan) {
+    const pid = GC.plans.push(plan) - 1;
+    memo += `\n[Proposed designs: ${plan.summary}]`;
+    if (GC.mode === 'auto') { if (reply && !ask) gSay(`<p>${gcFmt(reply)}</p>`); GC.hist.push({ role: 'assistant', content: memo }); memo = ''; await gcCreate(pid) }
+    else gcPlanCard(pid, ask ? '' : reply);
+  }
+  if (memo) GC.hist.push({ role: 'assistant', content: memo });
+}
+
+function gcSetSticker(a, quiet) {
+  const done = [];
+  if (a.shape && a.shape !== D.shape) { setShape(a.shape); done.push(`shape ${SN[a.shape]}`) }
+  if (a.width_in || a.height_in) {
+    let w = a.width_in || D.w, h = a.height_in || D.h; if (D.shape === 'circle' || D.shape === 'square') w = h = Math.max(a.width_in || 0, a.height_in || 0) || Math.max(w, h);
+    setSize(w, h); done.push(`size ${fmt(D.w)} x ${fmt(D.h)} in`);
+  }
+  if (a.vinyl && a.vinyl !== D.vinyl) { D.vinyl = a.vinyl; done.push(VN[a.vinyl]) }
+  if (a.quantity) { let t = 0; QTY.forEach((q, i) => { if (a.quantity >= q) t = i }); if (t !== tier) { tier = t; done.push(`quantity ${QTY[t].toLocaleString()}`) } }
+  if (!done.length) return '';
+  CT.sig = ''; commit(); syncPanels(); req(); quickUI();
+  if (!quiet) gSay(`<p>Done: ${esc(done.join(', '))}.</p><div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button></div>`);
+  return done.join(', ');
+}
+
+function gcLayouts() {
+  const b = GC.brief, words = [b.business_name ? `"${b.business_name}"` : '', b.tagline ? `tagline "${b.tagline}"` : '', (b.colors || []).join(' '), b.shape ? SN[b.shape] : '', b.subject || '', b.style || '', b.vinyl || ''].filter(Boolean).join(' ');
+  AI.mode = 'prompt'; AI.logo = null; AI.logoInfo = null; AI.a = parsePrompt(words || 'sticker'); AI.a.mode = 'prompt';
+  if (b.width_in) AI.a.size = { w: b.width_in, h: b.height_in || b.width_in };
+  AI.seed = 0; generate();
+}
+
+/* plan card: what Genie gathered, confirmed with one tap before anything is drawn */
+function gcPlanCard(pid, reply) {
+  const p = GC.plans[pid], b = GC.brief, row = (k, v) => v ? `<li><span>${k}</span><b>${esc(v)}</b></li>` : '';
+  const size = b.width_in ? `${fmt(b.width_in)} x ${fmt(b.height_in || b.width_in)} in` : '';
+  gSay(`${reply ? `<p>${gcFmt(reply)}</p>` : ''}<div class="gplan"><p class="gplan-h"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Here's my plan</p><p>${esc(p.summary)}</p>
+   <ul class="gplan-list">${row('Text', b.business_name === '' ? 'No text' : [b.business_name, b.tagline].filter(Boolean).join(', '))}${row('Picture', b.subject)}${row('Look', b.style)}${row('Colors', (b.colors || []).join(', '))}${row('Shape', [b.shape ? SN[b.shape] : '', size].filter(Boolean).join(', '))}${row('Finish', b.vinyl ? VN[b.vinyl] : '')}${row('Working from', GC.refs.length && b.use_references !== false ? `${GC.refs.length} attached image${GC.refs.length > 1 ? 's' : ''}` : '')}</ul>
+   <div class="gplan-act"><button type="button" class="btn btn-primary sm" data-gcgo="${pid}"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Create my designs</button><button type="button" class="btn btn-ghost sm" data-gcchange>Change something</button></div></div>`);
+}
+
+async function gcCreate(pid) {
+  const p = GC.plans[pid]; if (!p || AI.busy) return;
+  if (!(await nbCheck())) { gSay('<p>The AI drawing tool isn\'t available right now, so here are free text layouts instead.</p>'); gcLayouts(); return }
+  const b = GC.brief, blank = isBlank(), shape = b.shape || (blank ? null : D.shape);
+  const size = b.width_in ? { w: b.width_in, h: b.height_in || b.width_in } : (blank ? null : { w: D.w, h: D.h });
+  const n = NB.n; AI.busy = true;
+  const w = nbWait(n, `Nano Banana Pro is drawing ${n > 1 ? n + ' designs' : 'your design'}…`);
+  track('builder_ai_prompt', { length: p.image_prompt.length, engine: 'nano-banana-pro', via: 'chat', refs: GC.refs.length });
+  try {
+    const refs = b.use_references === false ? [] : (await Promise.all(GC.refs.map(k => gcThumb(k, 1024)))).filter(Boolean);
+    const j = await nbCall({ mode: 'generate', prompt: p.image_prompt, name: b.business_name || null, tagline: b.tagline || null, colors: b.colors || [], shape, size, n, refs });
+    w._stop();
+    const a = {}; if (shape) a.shape = shape; if (size) a.size = size; if (b.vinyl) a.vinyl = b.vinyl;
+    nbShow(j, { prompt: p.image_prompt, a });
+    gcNote(`Showed ${j.images.length} new design${j.images.length > 1 ? 's' : ''} for: ${p.summary}`);
+  } catch (e) { w._stop(); nbFail(e); gcNote('The drawing failed.') }
+  finally { AI.busy = false; NB.ctl = null }
+}
+
+/* ---------- wiring (called from Genie init) ---------- */
+function gcInit() {
+  feed.addEventListener('click', ev => {
+    const md = ev.target.closest('[data-gcmode]'), as = ev.target.closest('[data-gcask]'), go = ev.target.closest('[data-gcgo]'), ch = ev.target.closest('[data-gcchange]'), rf = ev.target.closest('[data-gcref]');
+    if (md) { gcStart(md.dataset.gcmode); return }
+    if (rf) { $('#gfile').dataset.mode = 'gcref'; $('#gfile').click(); return }
+    if (AI.busy || GC.busy) return;
+    if (as) { const box = as.closest('.gchips'); if (box) box.querySelectorAll('button').forEach(b => { b.disabled = true; if (b === as) b.setAttribute('aria-pressed', 'true') }); genieSubmit(as.dataset.gcask, null); return }
+    if (go) { go.disabled = true; go.textContent = 'Drawing…'; gcCreate(+go.dataset.gcgo); return }
+    if (ch) { const t = $('#gtext'); t.placeholder = 'What should I change? e.g. "use navy and gold" or "make it a rectangle"'; t.focus(); return }
+  });
+}
 
 /* =====================================================================
    Genie: AI design assistant
@@ -3213,29 +3421,31 @@ function gPush(who,html){const d=document.createElement('div');d.className='gm '
 function gUser(text,key){gPush('me',(text?esc(text):(key?'Here\'s my artwork.':''))+(key&&IM[key]?`<br><img src="${IM[key].url}" alt="">`:''))}
 function gSay(html){return gPush('genie',html)}
 function gThinking(t){return gPush('genie',`<p style="display:flex;align-items:center;gap:8px"><span class="gtyping" aria-hidden="true"><i></i><i></i><i></i></span>${esc(t)}</p>`)}
-function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge()}
+function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge();if(GC.on)gcIntro()}
 function quickUI(){const q=$('#gquick'),blank=isBlank();const list=blank?[]:['New colors','Bolder text','Add an outline','Tidy the layout',D.vinyl==='gold'?'Make it silver':'Make it gold','Curve the name'];const s=list.join('|');if(q.dataset.sig===s)return;q.dataset.sig=s;q.innerHTML=list.map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x)}</button>`).join('');q.hidden=!list.length}
 function openGenie(focus){if(NARROW.matches)openSheet('genie');else{studio.classList.remove('no-left');if(MID.matches)studio.classList.add('show-left');setLTab('genie');panelBtns()}quickUI();if(focus)setTimeout(()=>$('#gtext').focus(),60)}
 function genieOpened(){quickUI()}
 feed.addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]'),pk=ev.target.closest('[data-pick]'),rf=ev.target.closest('[data-refine]'),up=ev.target.closest('[data-gupload]'),un=ev.target.closest('[data-gundo]'),mo=ev.target.closest('[data-gmore]');
- if(s){genieSubmit(s.dataset.gsend,null);return}
+ if(s){genieSubmit(s.dataset.gsend,null,!!s.dataset.gdirect);return}
  if(up){$('#gfile').click();return}
  if(un){undo();un.disabled=true;un.textContent='Undone';return}
  if(pk){const [r,i]=pk.dataset.pick.split(':').map(Number);const res=RES[r]&&RES[r].list[i];if(res)applyAI(res,RES[r]);return}
  if(mo){const r=RES[+mo.dataset.gmore];if(!r)return;AI.a=JSON.parse(JSON.stringify(r.a));AI.mode=r.mode;AI.logo=r.logo;AI.logoInfo=r.logoInfo;AI.seed=(r.seed||0)+1;generate();return}
  if(rf){const r=RES[+rf.dataset.res];if(!r)return;const o=JSON.parse(rf.dataset.refine);AI.a=Object.assign(JSON.parse(JSON.stringify(r.a)),o);if(o.colors)AI.a.surprise=false;if(o.shape)delete AI.a.shapeHint;AI.mode=r.mode;AI.logo=r.logo;AI.logoInfo=r.logoInfo;AI.seed=r.seed||0;gUser(rf.dataset.say||rf.textContent.trim());generate()}});
-$('#gquick').addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]');if(s)genieSubmit(s.dataset.gsend,null)});
+$('#gquick').addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]');if(s)genieSubmit(s.dataset.gsend,null,true)});
 $('#gcomp').addEventListener('submit',ev=>{ev.preventDefault();const t=$('#gtext'),p=t.value.trim(),k=AI.attach;if(!p&&!k){t.focus();return}t.value='';t.style.height='';AI.attach=null;$('#gatt').hidden=true;genieSubmit(p,k)});
 $('#gtext').addEventListener('keydown',ev=>{if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();$('#gcomp').requestSubmit()}});
 $('#gtext').addEventListener('input',ev=>{ev.target.style.height='auto';ev.target.style.height=Math.min(280,ev.target.scrollHeight)+'px'});
 $('#gattach').addEventListener('click',()=>{$('#gfile').dataset.mode='attach';$('#gfile').click()});
 $('#gattRm').addEventListener('click',()=>{AI.attach=null;$('#gatt').hidden=true});
 $('#gfile').addEventListener('change',ev=>{const f=ev.target.files[0],mode=ev.target.dataset.mode;ev.target.value='';ev.target.dataset.mode='';if(!f)return;
+ if(mode==='gcref'){openGenie(false);loadFile(f,k=>{gUser('',k);if(GC.on)gcTurn('Here is my logo or a reference image to work from.',k).then(ok=>{if(!ok)genieAnalyze(k)});else genieAnalyze(k)});return}
  if(mode==='attach'){loadFile(f,k=>{AI.attach=k;$('#gattName').textContent=IM[k].name;$('#gattImg').src=IM[k].url;$('#gatt').hidden=false;$('#gtext').focus()});return}
  genieUpload(f)});
-function genieUpload(file){openGenie(false);startDismissed=true;req();loadFile(file,k=>{gUser('',k);genieAnalyze(k)})}
+function genieUpload(file){openGenie(false);startDismissed=true;req();loadFile(file,k=>{gUser('',k);gcAddRef(k);gcNote(`The shopper uploaded artwork "${IM[k].name}"; Genie checked it for print and showed layouts with it.`);genieAnalyze(k)})}
 
-async function genieSubmit(p,key){if(AI.busy)return;openGenie(false);startDismissed=true;req();gUser(p,key);
+async function genieSubmit(p,key,direct){if(AI.busy||GC.busy)return;openGenie(false);startDismissed=true;req();gUser(p,key);
+ if(GC.on&&!direct){if(await gcTurn(p,key))return}          /* Genie chat (server model) leads; built-in rules below are the fallback */
  if(!p&&key){genieAnalyze(key);return}
  const isNew=/\b(sticker|label|badge|logo|design|nameplate|plate|tag) (for|that|with|of)\b|\bfor my\b|\bnew (design|sticker)\b|\bcreate\b|\bdesign (a|an|me)\b|\bmake (a|an|me) /i.test(p);
  if(!key&&!isNew&&NB.on){const t=nbTarget();if(t){await nbEdit(p,t);return}}          /* change the selected Nano Banana logo */
@@ -3273,7 +3483,7 @@ async function generate(){AI.busy=true;const a=AI.a,th=gThinking(UP()?'Placing y
  AI.busy=false;track('builder_ai_generate',{n:out.length,seed:AI.seed,mode:AI.mode})}
 function applyAI(r,meta){const c=JSON.parse(JSON.stringify(r.doc)),had=!isBlank();c.els.forEach(e=>{e.id=nid();e.gid=null});D=Object.assign(newDoc(),c);D.groups={};if(meta&&meta.a&&meta.a.tier!=null)tier=meta.a.tier;
  sel=[];gfocus=null;startDismissed=true;CT.sig='';CT.url=null;cam=null;zoom=1;if(!editable())setView('edit');if(!started){started=true;track('builder_start',{method:'ai'})}
- track('builder_ai_apply',{design:r.name});commit();syncPanels();req();quickUI();if(NARROW.matches)closeSheets();
+ track('builder_ai_apply',{design:r.name});gcNote(`The shopper applied the layout "${r.name}".`);commit();syncPanels();req();quickUI();if(NARROW.matches)closeSheets();
  toast(had?`Replaced your design with "${r.name}".`:COARSE.matches?'Design added. Tap anything to change it.':'Design added. Click anything to change it, or double-click text to type.',had?'Undo':null,had?undo:null)}
 
 /* natural-language edits on the current design */
@@ -3312,10 +3522,10 @@ async function genieEdit(p){const l=p.toLowerCase(),done=[];
  if(/\b(fill|edge to edge|remove (?:the )?(?:white )?border)\b/.test(l)&&D.els.some(e=>e.type==='image')){removeBorder('fill');done.push('filled the sticker edge to edge')}
  if(!done.length)return false;
  texts.forEach(e=>{measureNow(e);if(outsideSafe(e))fitInside(e)});invalidateText();CT.sig='';commit();syncPanels();req();quickUI();track('builder_ai_edit',{n:done.length});
- gSay(`<p>Done: I ${listJoin(done)}.</p><div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button><button type="button" class="gchip" data-gsend="New colors">Try other colors</button></div>`);return true}
+ gSay(`<p>Done: I ${listJoin(done)}.</p><div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button><button type="button" class="gchip" data-gsend="New colors" data-gdirect="1">Try other colors</button></div>`);return true}
 
 /* ---------- init ---------- */
-nbInit();
+nbInit();gcInit();
 const restored=loadDraft();
 D.groups=D.groups||{};
 last=snapshot();upThumbs();setTool('move');setLTab(restored?'layers':'assets');

@@ -10,7 +10,7 @@
 const NB={api:(typeof window.CUSTOM_GENIE_API==='string'&&window.CUSTOM_GENIE_API)||'/api/genie',on:false,checking:null,model:'',n:2,ctl:null,cache:{},R:[]};
 function nbCheck(){if(NB.on)return Promise.resolve(true);if(NB.checking)return NB.checking;
  if(!/^https?:$/.test(location.protocol)&&!window.CUSTOM_GENIE_API)return Promise.resolve(false);
- NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2}if(NB.on)nbBadge();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
+ NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2;GC.on=!!(j.chat&&j.chat.enabled)&&!window.CUSTOM_GENIE_NO_CHAT;GC.model=(j.chat&&j.chat.model)||''}if(NB.on)nbBadge();if(GC.on)gcIntro();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
  return NB.checking}
 function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent='Describe your logo or sticker and Genie draws options with Nano Banana Pro. Click one to add it to your canvas.';
  const first=feed.querySelector('.gm.bot .bd');if(!first||first.querySelector('.gai-badge'))return;const p0=first.querySelector('p');if(p0)p0.innerHTML=p0.innerHTML.replace("I'll design four options to start from.","I'll draw logo options for you.");
@@ -65,7 +65,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  const info=k2===key?info0:analyzeArt(m.img,m),clear=!!info0.whiteBg;if(clear)await makeClear(k2);
  const ar=(m.natW||1)/(m.natH||1);
  if(R.meta.replace){const e=get(R.meta.replace);if(e){e.key=k2;e.h=e.w/ar;e.clear=clear||e.clear;sel=[e.id];CT.sig='';commit();syncPanels();req();
-   toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'nano-banana-pro',edit:true});if(NARROW.matches)closeSheets();return}}
+   gcNote('The shopper swapped in the edited AI logo.');toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'nano-banana-pro',edit:true});if(NARROW.matches)closeSheets();return}}
  const blank=isBlank();
  if(blank){const a=R.meta.a||{},shape=a.shape||(info0.round?(info0.suggest==='oval'?'oval':'circle'):(info0.suggest||'custom'));D.shape=shape;
   if(a.size){const z=resolveSize(Object.assign({},a,{shape,mode:'prompt'}));D.w=z.w;D.h=z.h}
@@ -80,7 +80,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  else fit((W()-2*SAFE)*.94,(H()-2*SAFE)*.94);
  const inside=at&&at.x>0&&at.y>0&&at.x<W()&&at.y<H();
  if(!started){started=true;track('builder_start',{method:'ai'})}startDismissed=true;
- addEl(base('image',{key:k2,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear,name:'Genie logo'}),'ai');
+ addEl(base('image',{key:k2,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear,name:'Genie logo'}),'ai');gcNote(`The shopper added AI design option ${i+1} to the sticker.`);
  track('builder_ai_apply',{engine:'nano-banana-pro'});quickUI();if(NARROW.matches)closeSheets();
  toast(blank?'Logo added. Drag it to place it, or ask Genie for changes.':'Logo added to your sticker.','Undo',undo)}
 
