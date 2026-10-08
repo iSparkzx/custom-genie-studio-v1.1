@@ -159,8 +159,8 @@ async function gcCreate(pid) {
   const b = GC.brief, blank = isBlank(), shape = b.shape || (blank ? null : D.shape);
   const size = b.width_in ? { w: b.width_in, h: b.height_in || b.width_in } : (blank ? null : { w: D.w, h: D.h });
   const n = NB.n; AI.busy = true;
-  const w = nbWait(n, `Nano Banana Pro is drawing ${n > 1 ? n + ' designs' : 'your design'}…`);
-  track('builder_ai_prompt', { length: p.image_prompt.length, engine: 'nano-banana-pro', via: 'chat', refs: GC.refs.length });
+  const w = nbWait(n, `Genie is drawing ${n > 1 ? n + ' designs' : 'your design'}…`);
+  track('builder_ai_prompt', { length: p.image_prompt.length, engine: 'genie-ai', via: 'chat', refs: GC.refs.length });
   try {
     const refs = b.use_references === false ? [] : (await Promise.all(GC.refs.map(k => gcThumb(k, 1024)))).filter(Boolean);
     const j = await nbCall({ mode: 'generate', prompt: p.image_prompt, name: b.business_name || null, tagline: b.tagline || null, colors: b.colors || [], shape, size, n, refs });

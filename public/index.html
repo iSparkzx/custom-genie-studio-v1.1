@@ -2942,9 +2942,9 @@ function nbCheck(){if(NB.on)return Promise.resolve(true);if(NB.checking)return N
  if(!/^https?:$/.test(location.protocol)&&!window.CUSTOM_GENIE_API)return Promise.resolve(false);
  NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2;GC.on=!!(j.chat&&j.chat.enabled)&&!window.CUSTOM_GENIE_NO_CHAT;GC.model=(j.chat&&j.chat.model)||''}if(NB.on)nbBadge();if(GC.on)gcIntro();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
  return NB.checking}
-function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent='Describe your logo or sticker and Genie draws options with Nano Banana Pro. Click one to add it to your canvas.';
+function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent='Describe your logo or sticker and Genie draws options for you. Click one to add it to your canvas.';
  const first=feed.querySelector('.gm.bot .bd');if(!first||first.querySelector('.gai-badge'))return;const p0=first.querySelector('p');if(p0)p0.innerHTML=p0.innerHTML.replace("I'll design four options to start from.","I'll draw logo options for you.");
- first.insertAdjacentHTML('beforeend','<p class="gai-badge"><span class="gai-dot" aria-hidden="true"></span><span>Logos drawn by <b>Nano Banana Pro</b>. Click one to add it to your canvas.</span></p>')}
+ first.insertAdjacentHTML('beforeend','<p class="gai-badge"><span class="gai-dot" aria-hidden="true"></span><span><b>Genie AI Generated Artwork</b>. Click a design to add it to your canvas.</span></p>')}
 const nbIsAI=e=>!!(e&&e.type==='image'&&IM[e.key]&&(IM[e.key].ai||e.name==='Genie logo'));
 function nbTarget(){const e=one();if(nbIsAI(e))return e;if(sel.length)return null;const ai=D.els.filter(nbIsAI);return ai.length===1?ai[0]:null}
 
@@ -2952,7 +2952,7 @@ function nbTarget(){const e=one();if(nbIsAI(e))return e;if(sel.length)return nul
 async function nbCall(body){NB.ctl=new AbortController();
  const r=await fetch(NB.api+'/image',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body),signal:NB.ctl.signal});
  let j={};try{j=await r.json()}catch(e){}
- if(!r.ok||!j||!Array.isArray(j.images)||!j.images.length){const er=(j&&j.error)||{};const e=new Error(er.message||'Nano Banana Pro couldn\'t draw that just now.');e.code=er.code||'HTTP_'+r.status;throw e}
+ if(!r.ok||!j||!Array.isArray(j.images)||!j.images.length){const er=(j&&j.error)||{};const e=new Error(er.message||'Genie couldn\'t draw that just now.');e.code=er.code||'HTTP_'+r.status;throw e}
  return j}
 function nbWait(n,label){const m=gSay(`<p class="gai-wait"><span class="gtyping" aria-hidden="true"><i></i><i></i><i></i></span><span>${esc(label)} <span class="gai-t">Usually 10 to 30 seconds.</span></span></p>
  <div class="ggrid gai-grid" aria-hidden="true">${'<div class="gcard gai sk"><i></i></div>'.repeat(n)}</div><button type="button" class="linkbtn gai-stop" data-nbstop>Cancel</button>`);
@@ -2960,18 +2960,18 @@ function nbWait(n,label){const m=gSay(`<p class="gai-wait"><span class="gtyping"
 function nbFail(e){if(e&&e.name==='AbortError'){gSay('<p>Stopped. Ask again whenever you\'re ready.</p>');return true}
  const code=e&&e.code||'';if(code==='NOT_CONFIGURED'||code==='HTTP_404'||!code)NB.on=false;
  const blocked=code==='CONTENT_BLOCKED';
- gSay(`<p>${esc((e&&e.message)||'Nano Banana Pro couldn\'t draw that just now.')}${blocked?'':' Here are layout options instead.'}</p>`);
- track('builder_ai_error',{engine:'nano-banana-pro',code});return blocked}
+ gSay(`<p>${esc((e&&e.message)||'Genie couldn\'t draw that just now.')}${blocked?'':' Here are layout options instead.'}</p>`);
+ track('builder_ai_error',{engine:'genie-ai',code});return blocked}
 async function nbGenerate(p,opt){if(!(await nbCheck()))return false;opt=opt||{};
  const a=parsePrompt(p),blank=isBlank(),shape=a.shape||(blank?null:D.shape),size=a.size?resolveSize(Object.assign({},a,{shape:shape||'circle',mode:'prompt'})):(blank?null:{w:D.w,h:D.h});
- const n=NB.n;AI.busy=true;const w=nbWait(n,opt.more?'Drawing more logos with Nano Banana Pro…':`Nano Banana Pro is drawing ${n>1?n+' logos':'your logo'}…`);
- track('builder_ai_prompt',{length:p.length,engine:'nano-banana-pro'});
+ const n=NB.n;AI.busy=true;const w=nbWait(n,opt.more?'Genie is drawing more designs…':`Genie is drawing ${n>1?n+' designs':'your design'}…`);
+ track('builder_ai_prompt',{length:p.length,engine:'genie-ai'});
  try{const j=await nbCall({mode:'generate',prompt:p,name:a.name||null,tagline:a.tagline||null,colors:a.colorWords||a.colors||[],shape,size,n});w._stop();
   nbShow(j,{prompt:p,a});return true}
  catch(e){w._stop();return nbFail(e)}
  finally{AI.busy=false;NB.ctl=null}}
-async function nbEdit(p,el){AI.busy=true;const m=IM[el.key],w=nbWait(1,'Nano Banana Pro is updating your logo…');
- try{const j=await nbCall({mode:'edit',prompt:p,image:m.src0||m.url});w._stop();nbShow(j,{prompt:p,replace:el.id,edit:true});track('builder_ai_edit',{engine:'nano-banana-pro'});return true}
+async function nbEdit(p,el){AI.busy=true;const m=IM[el.key],w=nbWait(1,'Genie is updating your design…');
+ try{const j=await nbCall({mode:'edit',prompt:p,image:m.src0||m.url});w._stop();nbShow(j,{prompt:p,replace:el.id,edit:true});track('builder_ai_edit',{engine:'genie-ai'});return true}
  catch(e){w._stop();nbFail(e);return true}
  finally{AI.busy=false;NB.ctl=null}}
 
@@ -2981,8 +2981,8 @@ function nbShow(j,meta){const rid=NB.R.push({images:j.images,meta})-1,n=j.images
  gSay(`<p><b>${ed?'Here\'s the updated logo.':n>1?`Here are ${n} logos.`:'Here\'s your logo.'}</b> ${ed?'Click it to swap it into your sticker.':COARSE.matches?'Tap one to add it to your sticker.':'Click one to add it to your sticker, or drag it onto the canvas.'}</p>
  <div class="ggrid gai-grid${n===1?' one':''}">${cards}</div>
  <div class="gchips" style="margin-top:8px">${ed?'':`<button type="button" class="gchip" data-nbmore="${rid}"><svg class="ico" style="width:14px;height:14px"><use href="#i-spark"/></svg>More like these</button><button type="button" class="gchip" data-nblayouts="${rid}">Text layouts instead</button>`}</div>
- <p class="gai-note">${j.partial?'One option didn\'t finish, so you have fewer to pick from. ':''}Made with Nano Banana Pro. Ask for changes, like "make it navy and gold".</p>`);
- track('builder_ai_generate',{engine:'nano-banana-pro',n,edit:!!ed})}
+ <p class="gai-note">${j.partial?'One option didn\'t finish, so you have fewer to pick from. ':''}<b>Genie AI Generated Artwork.</b> Check spelling and details before you order. Ask for changes, like "make it navy and gold".</p>`);
+ track('builder_ai_generate',{engine:'genie-ai',n,edit:!!ed})}
 function nbRegister(src,label,ck){if(NB.cache[ck]&&IM[NB.cache[ck]])return Promise.resolve(NB.cache[ck]);
  return new Promise((res,rej)=>{const a=new Image();a.onload=()=>{let url=src;
    /* keep drafts small enough for browser storage: high-quality WebP instead of a multi-MB PNG */
@@ -2995,7 +2995,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  const info=k2===key?info0:analyzeArt(m.img,m),clear=!!info0.whiteBg;if(clear)await makeClear(k2);
  const ar=(m.natW||1)/(m.natH||1);
  if(R.meta.replace){const e=get(R.meta.replace);if(e){e.key=k2;e.h=e.w/ar;e.clear=clear||e.clear;sel=[e.id];CT.sig='';commit();syncPanels();req();
-   gcNote('The shopper swapped in the edited AI logo.');toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'nano-banana-pro',edit:true});if(NARROW.matches)closeSheets();return}}
+   gcNote('The shopper swapped in the edited AI logo.');toast('Logo updated.','Undo',undo);track('builder_ai_apply',{engine:'genie-ai',edit:true});if(NARROW.matches)closeSheets();return}}
  const blank=isBlank();
  if(blank){const a=R.meta.a||{},shape=a.shape||(info0.round?(info0.suggest==='oval'?'oval':'circle'):(info0.suggest||'custom'));D.shape=shape;
   if(a.size){const z=resolveSize(Object.assign({},a,{shape,mode:'prompt'}));D.w=z.w;D.h=z.h}
@@ -3011,7 +3011,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
  const inside=at&&at.x>0&&at.y>0&&at.x<W()&&at.y<H();
  if(!started){started=true;track('builder_start',{method:'ai'})}startDismissed=true;
  addEl(base('image',{key:k2,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear,name:'Genie logo'}),'ai');gcNote(`The shopper added AI design option ${i+1} to the sticker.`);
- track('builder_ai_apply',{engine:'nano-banana-pro'});quickUI();if(NARROW.matches)closeSheets();
+ track('builder_ai_apply',{engine:'genie-ai'});quickUI();if(NARROW.matches)closeSheets();
  toast(blank?'Logo added. Drag it to place it, or ask Genie for changes.':'Logo added to your sticker.','Undo',undo)}
 
 /* ---------- wiring (called from Genie init) ---------- */
@@ -3190,8 +3190,8 @@ async function gcCreate(pid) {
   const b = GC.brief, blank = isBlank(), shape = b.shape || (blank ? null : D.shape);
   const size = b.width_in ? { w: b.width_in, h: b.height_in || b.width_in } : (blank ? null : { w: D.w, h: D.h });
   const n = NB.n; AI.busy = true;
-  const w = nbWait(n, `Nano Banana Pro is drawing ${n > 1 ? n + ' designs' : 'your design'}…`);
-  track('builder_ai_prompt', { length: p.image_prompt.length, engine: 'nano-banana-pro', via: 'chat', refs: GC.refs.length });
+  const w = nbWait(n, `Genie is drawing ${n > 1 ? n + ' designs' : 'your design'}…`);
+  track('builder_ai_prompt', { length: p.image_prompt.length, engine: 'genie-ai', via: 'chat', refs: GC.refs.length });
   try {
     const refs = b.use_references === false ? [] : (await Promise.all(GC.refs.map(k => gcThumb(k, 1024)))).filter(Boolean);
     const j = await nbCall({ mode: 'generate', prompt: p.image_prompt, name: b.business_name || null, tagline: b.tagline || null, colors: b.colors || [], shape, size, n, refs });
