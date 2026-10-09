@@ -97,3 +97,18 @@ Then commit and push. Render redeploys by itself.
 * Silver and gold finish codes (SIL, GLD), estimated prices and the 5-day turnaround.
 * The local checkout stand-in, which should be replaced by the real cart.
 * three.js for the 3D preview loads from jsDelivr; self-host it for production.
+
+## Genie chat (v1.2)
+
+Genie now holds a real conversation. A chat model gathers the brief, then sends a written art brief to Nano Banana Pro.
+
+- **Two ways in** (on Genie's first message): **Walk me through it** asks one question at a time with tap-able answers. **Just make it for me** takes one line or one image and draws right away. Shoppers can also just type.
+- **Flow:** the server (`/api/genie/chat`) sends the conversation, the brief so far, the current sticker state and the product facts to the chat model (`GENIE_CHAT_MODEL`). The model answers with text plus *actions*. It never touches the page directly.
+- **Actions** (`server.mjs` `CHAT_TOOLS`, each validated on the server): `ask_user`, `update_brief`, `create_designs`, `edit_logo`, `edit_design`, `set_sticker`, `show_layouts`. `studio-src/src/js7_chat.js` carries them out with the studio's own functions (`setShape`, `setSize`, `genieEdit`, `nbEdit`, `generate`, `commit`). Every change is a normal edit with Undo, and all manual tools keep working.
+- **Spending:** in guided mode a plan card ("Here's my plan" → **Create my designs**) is confirmed before anything is drawn. "Just make it for me" draws straight away; picking that mode is the consent.
+- **Reference images:** files attached in the chat are now sent to Nano Banana Pro for *new* designs too (up to 3). Before this, only edits sent an image.
+- **Facts:** shapes, sizes, finishes and quantities come from the page (`gcFacts()`). Genie is told never to quote prices or turnaround, and points to the price panel instead.
+- **Fallback:** if the chat is off or the server can't be reached, Genie uses its built-in rules exactly as before.
+- **Mock:** with `GENIE_MOCK=1`, a scripted chat runs with no API calls, for testing the UI.
+
+Build after editing `studio-src/`: `python studio-src/build.py public/index.html`.

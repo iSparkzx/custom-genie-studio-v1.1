@@ -203,29 +203,31 @@ function gPush(who,html){const d=document.createElement('div');d.className='gm '
 function gUser(text,key){gPush('me',(text?esc(text):(key?'Here\'s my artwork.':''))+(key&&IM[key]?`<br><img src="${IM[key].url}" alt="">`:''))}
 function gSay(html){return gPush('genie',html)}
 function gThinking(t){return gPush('genie',`<p style="display:flex;align-items:center;gap:8px"><span class="gtyping" aria-hidden="true"><i></i><i></i><i></i></span>${esc(t)}</p>`)}
-function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge()}
+function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge();if(GC.on)gcIntro()}
 function quickUI(){const q=$('#gquick'),blank=isBlank();const list=blank?[]:['New colors','Bolder text','Add an outline','Tidy the layout',D.vinyl==='gold'?'Make it silver':'Make it gold','Curve the name'];const s=list.join('|');if(q.dataset.sig===s)return;q.dataset.sig=s;q.innerHTML=list.map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x)}</button>`).join('');q.hidden=!list.length}
 function openGenie(focus){if(NARROW.matches)openSheet('genie');else{studio.classList.remove('no-left');if(MID.matches)studio.classList.add('show-left');setLTab('genie');panelBtns()}quickUI();if(focus)setTimeout(()=>$('#gtext').focus(),60)}
 function genieOpened(){quickUI()}
 feed.addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]'),pk=ev.target.closest('[data-pick]'),rf=ev.target.closest('[data-refine]'),up=ev.target.closest('[data-gupload]'),un=ev.target.closest('[data-gundo]'),mo=ev.target.closest('[data-gmore]');
- if(s){genieSubmit(s.dataset.gsend,null);return}
+ if(s){genieSubmit(s.dataset.gsend,null,!!s.dataset.gdirect);return}
  if(up){$('#gfile').click();return}
  if(un){undo();un.disabled=true;un.textContent='Undone';return}
  if(pk){const [r,i]=pk.dataset.pick.split(':').map(Number);const res=RES[r]&&RES[r].list[i];if(res)applyAI(res,RES[r]);return}
  if(mo){const r=RES[+mo.dataset.gmore];if(!r)return;AI.a=JSON.parse(JSON.stringify(r.a));AI.mode=r.mode;AI.logo=r.logo;AI.logoInfo=r.logoInfo;AI.seed=(r.seed||0)+1;generate();return}
  if(rf){const r=RES[+rf.dataset.res];if(!r)return;const o=JSON.parse(rf.dataset.refine);AI.a=Object.assign(JSON.parse(JSON.stringify(r.a)),o);if(o.colors)AI.a.surprise=false;if(o.shape)delete AI.a.shapeHint;AI.mode=r.mode;AI.logo=r.logo;AI.logoInfo=r.logoInfo;AI.seed=r.seed||0;gUser(rf.dataset.say||rf.textContent.trim());generate()}});
-$('#gquick').addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]');if(s)genieSubmit(s.dataset.gsend,null)});
+$('#gquick').addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]');if(s)genieSubmit(s.dataset.gsend,null,true)});
 $('#gcomp').addEventListener('submit',ev=>{ev.preventDefault();const t=$('#gtext'),p=t.value.trim(),k=AI.attach;if(!p&&!k){t.focus();return}t.value='';t.style.height='';AI.attach=null;$('#gatt').hidden=true;genieSubmit(p,k)});
 $('#gtext').addEventListener('keydown',ev=>{if(ev.key==='Enter'&&!ev.shiftKey){ev.preventDefault();$('#gcomp').requestSubmit()}});
 $('#gtext').addEventListener('input',ev=>{ev.target.style.height='auto';ev.target.style.height=Math.min(280,ev.target.scrollHeight)+'px'});
 $('#gattach').addEventListener('click',()=>{$('#gfile').dataset.mode='attach';$('#gfile').click()});
 $('#gattRm').addEventListener('click',()=>{AI.attach=null;$('#gatt').hidden=true});
 $('#gfile').addEventListener('change',ev=>{const f=ev.target.files[0],mode=ev.target.dataset.mode;ev.target.value='';ev.target.dataset.mode='';if(!f)return;
+ if(mode==='gcref'){openGenie(false);loadFile(f,k=>{gUser('',k);if(GC.on)gcTurn('Here is my logo or a reference image to work from.',k).then(ok=>{if(!ok)genieAnalyze(k)});else genieAnalyze(k)});return}
  if(mode==='attach'){loadFile(f,k=>{AI.attach=k;$('#gattName').textContent=IM[k].name;$('#gattImg').src=IM[k].url;$('#gatt').hidden=false;$('#gtext').focus()});return}
  genieUpload(f)});
-function genieUpload(file){openGenie(false);startDismissed=true;req();loadFile(file,k=>{gUser('',k);genieAnalyze(k)})}
+function genieUpload(file){openGenie(false);startDismissed=true;req();loadFile(file,k=>{gUser('',k);gcAddRef(k);gcNote(`The shopper uploaded artwork "${IM[k].name}"; Genie checked it for print and showed layouts with it.`);genieAnalyze(k)})}
 
-async function genieSubmit(p,key){if(AI.busy)return;openGenie(false);startDismissed=true;req();gUser(p,key);
+async function genieSubmit(p,key,direct){if(AI.busy||GC.busy)return;openGenie(false);startDismissed=true;req();gUser(p,key);
+ if(GC.on&&!direct){if(await gcTurn(p,key))return}          /* Genie chat (server model) leads; built-in rules below are the fallback */
  if(!p&&key){genieAnalyze(key);return}
  const isNew=/\b(sticker|label|badge|logo|design|nameplate|plate|tag) (for|that|with|of)\b|\bfor my\b|\bnew (design|sticker)\b|\bcreate\b|\bdesign (a|an|me)\b|\bmake (a|an|me) /i.test(p);
  if(!key&&!isNew&&NB.on){const t=nbTarget();if(t){await nbEdit(p,t);return}}          /* change the selected Nano Banana logo */
@@ -263,7 +265,7 @@ async function generate(){AI.busy=true;const a=AI.a,th=gThinking(UP()?'Placing y
  AI.busy=false;track('builder_ai_generate',{n:out.length,seed:AI.seed,mode:AI.mode})}
 function applyAI(r,meta){const c=JSON.parse(JSON.stringify(r.doc)),had=!isBlank();c.els.forEach(e=>{e.id=nid();e.gid=null});D=Object.assign(newDoc(),c);D.groups={};if(meta&&meta.a&&meta.a.tier!=null)tier=meta.a.tier;
  sel=[];gfocus=null;startDismissed=true;CT.sig='';CT.url=null;cam=null;zoom=1;if(!editable())setView('edit');if(!started){started=true;track('builder_start',{method:'ai'})}
- track('builder_ai_apply',{design:r.name});commit();syncPanels();req();quickUI();if(NARROW.matches)closeSheets();
+ track('builder_ai_apply',{design:r.name});gcNote(`The shopper applied the layout "${r.name}".`);commit();syncPanels();req();quickUI();if(NARROW.matches)closeSheets();
  toast(had?`Replaced your design with "${r.name}".`:COARSE.matches?'Design added. Tap anything to change it.':'Design added. Click anything to change it, or double-click text to type.',had?'Undo':null,had?undo:null)}
 
 /* natural-language edits on the current design */
@@ -302,10 +304,10 @@ async function genieEdit(p){const l=p.toLowerCase(),done=[];
  if(/\b(fill|edge to edge|remove (?:the )?(?:white )?border)\b/.test(l)&&D.els.some(e=>e.type==='image')){removeBorder('fill');done.push('filled the sticker edge to edge')}
  if(!done.length)return false;
  texts.forEach(e=>{measureNow(e);if(outsideSafe(e))fitInside(e)});invalidateText();CT.sig='';commit();syncPanels();req();quickUI();track('builder_ai_edit',{n:done.length});
- gSay(`<p>Done: I ${listJoin(done)}.</p><div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button><button type="button" class="gchip" data-gsend="New colors">Try other colors</button></div>`);return true}
+ gSay(`<p>Done: I ${listJoin(done)}.</p><div class="gchips"><button type="button" class="gchip" data-gundo>Undo</button><button type="button" class="gchip" data-gsend="New colors" data-gdirect="1">Try other colors</button></div>`);return true}
 
 /* ---------- init ---------- */
-nbInit();
+nbInit();gcInit();
 const restored=loadDraft();
 D.groups=D.groups||{};
 last=snapshot();upThumbs();setTool('move');setLTab(restored?'layers':'assets');

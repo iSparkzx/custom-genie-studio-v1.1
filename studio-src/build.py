@@ -22,7 +22,7 @@ html+=rd(os.path.join(S,'header.html'))
 html+='\n<main id="main">\n <div class="wrap">\n  '+rd(os.path.join(S,'hero.html'))+'\n'+rd(os.path.join(S,'studio.html'))+'\n  '
 html+=rd(os.path.join(S,'upsell.html'))+rd(os.path.join(S,'gallery.html'))+rd(os.path.join(S,'details.html'))+rd(os.path.join(S,'news.html'))
 html+=' </div>\n</main>\n\n'+rd(os.path.join(S,'footer.html'))+'\n'+rd(os.path.join(S,'dialogs.html'))
-js='\n'.join(rd(os.path.join(S,f)) for f in ['js1_core.js','js2_interact.js','js3_panels.js','js5_3d.js','js6_banana.js','js4_genie.js'])
+js='\n'.join(rd(os.path.join(S,f)) for f in ['js1_core.js','js2_interact.js','js3_panels.js','js5_3d.js','js6_banana.js','js7_chat.js','js4_genie.js'])
 html+="\n<script>\n(()=>{'use strict';\n"+js+"\n})();\n</script>\n</body>\n</html>\n"
 def asset(name):
     for ext in ('.txt','.svg'):
