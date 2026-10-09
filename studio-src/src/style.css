@@ -990,3 +990,13 @@ body.hide-notes .note{display:none}
 .gplan-list b{font-weight:600;color:var(--ink);overflow-wrap:anywhere}
 .gplan-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .gplan-act .btn{min-height:40px}
+
+/* the Genie start card sits inside the canvas, which blocks touch scrolling (touch-action:none); let swipes on it scroll the page */
+.start{touch-action:pan-x pan-y;overscroll-behavior:auto}
+@media (max-width:820px){
+  /* while the start card shows, the canvas area grows to fit it, so the card never scrolls inside and every swipe moves the page */
+  .studio:has(#start:not([hidden])){grid-template-rows:var(--tb) minmax(clamp(360px,62vh,560px),auto) auto}
+  .studio:has(#start:not([hidden])) .start{position:relative;inset:auto;min-height:100%;overflow:visible}
+}
+/* the canvas is fully covered by the start card while it shows, so swipes there should scroll the page */
+.vp:has(> #start:not([hidden])){touch-action:pan-x pan-y}
