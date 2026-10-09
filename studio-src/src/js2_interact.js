@@ -181,7 +181,8 @@ svg.addEventListener('dblclick',ev=>{if(tool!=='move'||!editable())return;const 
  if(h.gid&&gfocus!==h.gid){gfocus=h.gid;setSel([h.id]);if(h.type==='text')startEdit(h.id);return}
  if(h.type==='text')startEdit(h.id);else if(h.type==='image'){replTarget=h.id;$('#replFile').click()}});
 svg.addEventListener('contextmenu',ev=>{ev.preventDefault();if(!editable())return;const h=hitTest(toW(ev));if(h&&!sel.includes(h.id))setSel(expand(h.id));if(!h&&!ev.shiftKey)setSel([]);openCtxMenu(ev.clientX,ev.clientY)});
-vp.addEventListener('wheel',ev=>{ev.preventDefault();const r=vp.getBoundingClientRect();if(ev.ctrlKey||ev.metaKey){zoomTo(zoom*Math.exp(-ev.deltaY*.0022),ev.clientX-r.left,ev.clientY-r.top)}else{const c=curCam(),dx=ev.shiftKey&&!ev.deltaX?ev.deltaY:ev.deltaX,dy=ev.shiftKey&&!ev.deltaX?0:ev.deltaY;cam={x:c.x+dx*K,y:c.y+dy*K};req()}},{passive:false});
+vp.addEventListener('wheel',ev=>{if(ev.target.closest&&ev.target.closest('#start'))return;   /* over the Genie start card: let the page scroll, don't pan the canvas */
+ ev.preventDefault();const r=vp.getBoundingClientRect();if(ev.ctrlKey||ev.metaKey){zoomTo(zoom*Math.exp(-ev.deltaY*.0022),ev.clientX-r.left,ev.clientY-r.top)}else{const c=curCam(),dx=ev.shiftKey&&!ev.deltaX?ev.deltaY:ev.deltaX,dy=ev.shiftKey&&!ev.deltaX?0:ev.deltaY;cam={x:c.x+dx*K,y:c.y+dy*K};req()}},{passive:false});
 
 /* ---------- commands ---------- */
 function units(){const out=[],seen=new Set();for(const e of D.els){if(e.gid&&gfocus!==e.gid){if(seen.has(e.gid))continue;seen.add(e.gid);out.push(groupOf(e.gid))}else out.push([e])}return out}
