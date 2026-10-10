@@ -1000,3 +1000,6 @@ body.hide-notes .note{display:none}
 }
 /* the canvas is fully covered by the start card while it shows, so swipes there should scroll the page */
 .vp:has(> #start:not([hidden])){touch-action:pan-x pan-y}
+/* designer bar holds only the print check, the sticker summary and Review & Print */
+.cbar #reviewBtn{margin-left:auto}
+@media (max-width:820px){.cbar #reviewBtn{flex:1 1 auto}}

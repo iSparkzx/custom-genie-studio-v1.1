@@ -259,13 +259,12 @@ document.addEventListener('pointerdown',hideTip,true);document.addEventListener(
 function cbarUI(){const t=curTier(),all=tiers(),ps=pricedSize(),blank=isBlank(),ck=blank?null:checks(),nw=ck?ck.filter(c=>c.level==='warning'||c.level==='error').length:0;
  const pill=$('#chkPill');pill.className='pill '+(blank?'':nw?'warn':'ok');$('#chkTxt').textContent=blank?'Print check':nw?`${nw} thing${nw===1?'':'s'} to check`:'Print-ready';pill.setAttribute('aria-label',blank?'Print check runs once you add a design':nw?`${nw} print issues to check`:'Print check passed');
  const sm=`<b>${esc(SN[D.shape])}</b><span class="sep">·</span>${fmt(ps.w)} × ${fmt(ps.h)} in<span class="sep">·</span>${esc(VN[D.vinyl])}`;if($('#cbSum').dataset.h!==sm){$('#cbSum').dataset.h=sm;$('#cbSum').innerHTML=sm}
- $('#qtyTxt').textContent=`${t.q.toLocaleString()} stickers`;$('#qtyEach').textContent=`${money(t.p)} ea`;
- $('#totAmt').textContent=money(t.t);const rem=FREE-t.t;$('#totSub').innerHTML=`<span class="save">Save ${t.s}%</span> · ${rem>0?`Free shipping at ${money(FREE)}`:'Ships free'}`;
- const rb=$('#reviewBtn');const nar=NARROW.matches;rb.innerHTML=blank?'<svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>'+(nar?'Design it':'Add your design'):(nar?'Order':'Review &amp; order')+'<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';
+ const rem=FREE-t.t;   /* price and quantity live in the Review & Print step, not in the designer bar */
+ const rb=$('#reviewBtn'),rbh='Review &amp; Print<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';if(rb.dataset.h!==rbh){rb.dataset.h=rbh;rb.innerHTML=rbh}
  const tp=$('#tpShipTxt');if(tp)tp.textContent=rem>0?`Orders of $75 or more ship free. Add ${money(rem)} more to this order to qualify.`:'Good news: this order ships free.';
  $('#skuCode')&&($('#skuCode').textContent=skuFor());upsellUI(t)}
 function priceBreak(){const all=tiers(),t=all[tier],n=all[tier+1];if(!n)return '';return `At ${n.q.toLocaleString()} the price drops from ${money(t.p)} to ${money(n.p)} each.`}
-$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
+$('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
  openPop(b,`<div class="mh">Quantity · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in</div>${all.map((x,i)=>`<button type="button" class="qrow" role="menuitemradio" data-tier="${i}" aria-checked="${i===tier}"><span class="rd" aria-hidden="true"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join('')}${priceBreak()?`<p class="qnote">${priceBreak()}</p>`:''}`,{btn:b,cls:'qpop',above:true,align:'right'});
  pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();track('builder_qty',{qty:QTY[tier]})}});
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}

@@ -1012,6 +1012,9 @@ body.hide-notes .note{display:none}
 }
 /* the canvas is fully covered by the start card while it shows, so swipes there should scroll the page */
 .vp:has(> #start:not([hidden])){touch-action:pan-x pan-y}
+/* designer bar holds only the print check, the sticker summary and Review & Print */
+.cbar #reviewBtn{margin-left:auto}
+@media (max-width:820px){.cbar #reviewBtn{flex:1 1 auto}}
 
 </style>
 </head>
@@ -1453,9 +1456,7 @@ body.hide-notes .note{display:none}
     <div class="cbar" id="cbar">
      <button type="button" class="pill" id="chkPill" aria-haspopup="dialog"><span class="dot" aria-hidden="true"></span><span class="pl" id="chkTxt">Print check</span></button>
      <div class="cb-sum" id="cbSum"></div>
-     <button type="button" class="qtybtn" id="qtyBtn" aria-haspopup="menu"><span id="qtyTxt">100 stickers</span> <small id="qtyEach"></small><svg class="ico" aria-hidden="true"><use href="#i-caret"/></svg></button>
-     <div class="cb-tot"><span class="amt" id="totAmt">$0.00</span><small id="totSub"></small></div>
-     <button type="button" class="btn btn-primary" id="reviewBtn">Review &amp; order<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
+     <button type="button" class="btn btn-primary" id="reviewBtn">Review &amp; Print<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></button>
     </div>
    </div>
    <div class="notes-wrap">
@@ -1951,7 +1952,12 @@ svg.addEventListener('pointermove',ev=>{
   if(!op.moved){op.moved=true;if(op.alt){dupSel(0);}op.start=selEls().map(e=>({id:e.id,x:e.x,y:e.y}));op.box=unionBox(selEls())}
   if(ev.shiftKey){if(Math.abs(dx)>Math.abs(dy))dy=0;else dx=0}
   const b=op.box,s=ev.ctrlKey||ev.metaKey?{dx:0,dy:0,g:[]}:snapBox({x0:b.x0+dx,y0:b.y0+dy,x1:b.x1+dx,y1:b.y1+dy},sel);
-  for(const st of op.start){const e=get(st.id);if(e){e.x=st.x+dx+s.dx;e.y=st.y+dy+s.dy}}guides=s.g;ft.hidden=true;req();return}
+  let tx=dx+s.dx,ty=dy+s.dy;
+  if(D.shape==='custom'){const g=(D.gap||0)+2,all=unionBox(D.els.filter(e=>!e.hidden&&!sel.includes(e.id))),nb={x0:b.x0+tx,y0:b.y0+ty,x1:b.x1+tx,y1:b.y1+ty};
+   const x0=Math.min(nb.x0,isFinite(all.x0)?all.x0:nb.x0),x1=Math.max(nb.x1,isFinite(all.x1)?all.x1:nb.x1),y0=Math.min(nb.y0,isFinite(all.y0)?all.y0:nb.y0),y1=Math.max(nb.y1,isFinite(all.y1)?all.y1:nb.y1);
+   if(x1-x0+2*g<=W()){if(nb.x0<g)tx+=g-nb.x0;if(nb.x1>W()-g)tx-=nb.x1-(W()-g)}
+   if(y1-y0+2*g<=H()){if(nb.y0<g)ty+=g-nb.y0;if(nb.y1>H()-g)ty-=nb.y1-(H()-g)}}
+  for(const st of op.start){const e=get(st.id);if(e){e.x=st.x+tx;e.y=st.y+ty}}guides=s.g;ft.hidden=true;req();return}
  if(op.t==='rot'){const e=get(op.id);let r=op.r0+(Math.atan2(p.y-e.y,p.x-e.x)-op.a0)*180/Math.PI;if(ev.shiftKey)r=Math.round(r/15)*15;else{const n=Math.round(r/90)*90;if(Math.abs(r-n)<3)r=n}e.rot=Math.round((((r+180)%360+360)%360-180)*10)/10;op.moved=true;req();return}
  if(op.t==='mrot'){let da=(Math.atan2(p.y-op.c.y,p.x-op.c.x)-op.a0)*180/Math.PI;if(ev.shiftKey)da=Math.round(da/15)*15;const a=da*Math.PI/180,c=Math.cos(a),s=Math.sin(a);
   for(const st of op.start){const e=get(st.id),dx=st.x-op.c.x,dy=st.y-op.c.y;e.x=op.c.x+dx*c-dy*s;e.y=op.c.y+dx*s+dy*c;e.rot=Math.round((((st.rot+da+180)%360+360)%360-180)*10)/10}op.moved=true;req();return}
@@ -1988,8 +1994,10 @@ svg.addEventListener('dblclick',ev=>{if(tool!=='move'||!editable())return;const 
  if(h.gid&&gfocus!==h.gid){gfocus=h.gid;setSel([h.id]);if(h.type==='text')startEdit(h.id);return}
  if(h.type==='text')startEdit(h.id);else if(h.type==='image'){replTarget=h.id;$('#replFile').click()}});
 svg.addEventListener('contextmenu',ev=>{ev.preventDefault();if(!editable())return;const h=hitTest(toW(ev));if(h&&!sel.includes(h.id))setSel(expand(h.id));if(!h&&!ev.shiftKey)setSel([]);openCtxMenu(ev.clientX,ev.clientY)});
-vp.addEventListener('wheel',ev=>{if(ev.target.closest&&ev.target.closest('#start'))return;   /* over the Genie start card: let the page scroll, don't pan the canvas */
- ev.preventDefault();const r=vp.getBoundingClientRect();if(ev.ctrlKey||ev.metaKey){zoomTo(zoom*Math.exp(-ev.deltaY*.0022),ev.clientX-r.left,ev.clientY-r.top)}else{const c=curCam(),dx=ev.shiftKey&&!ev.deltaX?ev.deltaY:ev.deltaX,dy=ev.shiftKey&&!ev.deltaX?0:ev.deltaY;cam={x:c.x+dx*K,y:c.y+dy*K};req()}},{passive:false});
+/* One design per sticker, so the canvas never scrolls: the mouse wheel scrolls the page.
+   Ctrl/Cmd + wheel (and trackpad pinch, which sends Ctrl + wheel) still zoom. */
+vp.addEventListener('wheel',ev=>{if(!(ev.ctrlKey||ev.metaKey))return;if(ev.target.closest&&ev.target.closest('#start'))return;
+ ev.preventDefault();const r=vp.getBoundingClientRect();zoomTo(zoom*Math.exp(-ev.deltaY*.0022),ev.clientX-r.left,ev.clientY-r.top)},{passive:false});
 
 /* ---------- commands ---------- */
 function units(){const out=[],seen=new Set();for(const e of D.els){if(e.gid&&gfocus!==e.gid){if(seen.has(e.gid))continue;seen.add(e.gid);out.push(groupOf(e.gid))}else out.push([e])}return out}
@@ -2104,7 +2112,18 @@ document.addEventListener('paste',ev=>{const t=ev.target;if(typing(t))return;if(
 
 /* ---------- history + autosave ---------- */
 const snapshot=()=>JSON.stringify({D,tier});
-function commit(){const s=snapshot();if(s===last)return;hist.push(last);if(hist.length>100)hist.shift();last=s;fut=[];saveSoon();req();refreshUndo()}
+/* Cut to design traces the cut line inside the sticker area only, so art dragged past the edge got a flat,
+   clipped cut line. Keep the whole design on the sticker: grow the area if the art is bigger, then nudge it back in. */
+function cutRange(lo,hi){return lo>hi?(lo+hi)/2:Math.min(Math.max(0,lo),hi)}
+function keepInCut(){if(D.shape!=='custom')return false;const vis=D.els.filter(e=>!e.hidden);if(!vis.length)return false;
+ const g=(D.gap||0)+2;let b=unionBox(vis),grew=false;
+ if(b.w+2*g>W()+.5){D.w=Math.min(MAX,Math.ceil(b.w+2*g)/100);grew=true}
+ if(b.h+2*g>H()+.5){D.h=Math.min(MAX,Math.ceil(b.h+2*g)/100);grew=true}
+ if(grew&&typeof szBase!=='undefined')szBase=null;
+ const dx=cutRange(g-b.x0,W()-g-b.x1),dy=cutRange(g-b.y0,H()-g-b.y1);
+ if(Math.abs(dx)<.01&&Math.abs(dy)<.01&&!grew)return false;
+ D.els.forEach(e=>{e.x+=dx;e.y+=dy});CT.sig='';return true}
+function commit(){if(!op&&keepInCut()&&typeof syncPanels==='function')syncPanels();const s=snapshot();if(s===last)return;hist.push(last);if(hist.length>100)hist.shift();last=s;fut=[];saveSoon();req();refreshUndo()}
 let cT;function commitSoon(){clearTimeout(cT);cT=setTimeout(commit,350)}
 function restore(s){const o=JSON.parse(s);D=o.D;tier=o.tier;D.groups=D.groups||{};sel=sel.filter(id=>get(id));if(editing){editing=null;inl.hidden=true}CT.sig='';if(D.shape!=='custom')CT.url=null;syncPanels();req();saveSoon();refreshUndo()}
 function undo(){if(!hist.length)return;fut.push(last);last=hist.pop();restore(last);say('Undone')}
@@ -2407,13 +2426,12 @@ document.addEventListener('pointerdown',hideTip,true);document.addEventListener(
 function cbarUI(){const t=curTier(),all=tiers(),ps=pricedSize(),blank=isBlank(),ck=blank?null:checks(),nw=ck?ck.filter(c=>c.level==='warning'||c.level==='error').length:0;
  const pill=$('#chkPill');pill.className='pill '+(blank?'':nw?'warn':'ok');$('#chkTxt').textContent=blank?'Print check':nw?`${nw} thing${nw===1?'':'s'} to check`:'Print-ready';pill.setAttribute('aria-label',blank?'Print check runs once you add a design':nw?`${nw} print issues to check`:'Print check passed');
  const sm=`<b>${esc(SN[D.shape])}</b><span class="sep">·</span>${fmt(ps.w)} × ${fmt(ps.h)} in<span class="sep">·</span>${esc(VN[D.vinyl])}`;if($('#cbSum').dataset.h!==sm){$('#cbSum').dataset.h=sm;$('#cbSum').innerHTML=sm}
- $('#qtyTxt').textContent=`${t.q.toLocaleString()} stickers`;$('#qtyEach').textContent=`${money(t.p)} ea`;
- $('#totAmt').textContent=money(t.t);const rem=FREE-t.t;$('#totSub').innerHTML=`<span class="save">Save ${t.s}%</span> · ${rem>0?`Free shipping at ${money(FREE)}`:'Ships free'}`;
- const rb=$('#reviewBtn');const nar=NARROW.matches;rb.innerHTML=blank?'<svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>'+(nar?'Design it':'Add your design'):(nar?'Order':'Review &amp; order')+'<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';
+ const rem=FREE-t.t;   /* price and quantity live in the Review & Print step, not in the designer bar */
+ const rb=$('#reviewBtn'),rbh='Review &amp; Print<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';if(rb.dataset.h!==rbh){rb.dataset.h=rbh;rb.innerHTML=rbh}
  const tp=$('#tpShipTxt');if(tp)tp.textContent=rem>0?`Orders of $75 or more ship free. Add ${money(rem)} more to this order to qualify.`:'Good news: this order ships free.';
  $('#skuCode')&&($('#skuCode').textContent=skuFor());upsellUI(t)}
 function priceBreak(){const all=tiers(),t=all[tier],n=all[tier+1];if(!n)return '';return `At ${n.q.toLocaleString()} the price drops from ${money(t.p)} to ${money(n.p)} each.`}
-$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
+$('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
  openPop(b,`<div class="mh">Quantity · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in</div>${all.map((x,i)=>`<button type="button" class="qrow" role="menuitemradio" data-tier="${i}" aria-checked="${i===tier}"><span class="rd" aria-hidden="true"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join('')}${priceBreak()?`<p class="qnote">${priceBreak()}</p>`:''}`,{btn:b,cls:'qpop',above:true,align:'right'});
  pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();track('builder_qty',{qty:QTY[tier]})}});
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
