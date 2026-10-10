@@ -1886,7 +1886,7 @@ function contourAt(gap,P,xf){const w=W(),h=H(),cw=Math.max(1,Math.ceil(w*P)),ch=
 function computeContour(){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);
  if(!c){CT.url=null;CT.bbox=null;req();return}
  const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(1px)';sx.drawImage(c.canvas,0,0);
- CT.url=sm.toDataURL();CT.bbox=c.bbox;req()}
+ CT.url=sm.toDataURL();CT.bbox=c.bbox;req();if(typeof cutSettle==='function')cutSettle()}
 
 /* ---------- camera ---------- */
 function fitBox(){const w=W(),h=H();if(view==='sheet')return[w/2-505,h/2-545,1010,1135];const m=Math.max(w,h)*.22;if(view==='proof'){const q=Math.max(150,Math.max(w,h)*.08+150),nar=vp.clientWidth<700;return[-m,-m*1.2,w+2*m+q,h+(nar?4.2:2.8)*m]}return[-m,-m,w+2*m,h+2*m]}
@@ -2225,6 +2225,8 @@ function restore(s){const o=JSON.parse(s);D=o.D;tier=o.tier;D.groups=D.groups||{
 function undo(){if(!hist.length)return;fut.push(last);last=hist.pop();restore(last);say('Undone')}
 function redo(){if(!fut.length)return;hist.push(last);last=fut.pop();restore(last);say('Redone')}
 function refreshUndo(){$('#undoBtn').disabled=!hist.length;$('#redoBtn').disabled=!fut.length}
+/* the toolbar buttons only had keyboard shortcuts (Ctrl Z / Ctrl Shift Z); wire the clicks too */
+$('#undoBtn').addEventListener('click',()=>undo());$('#redoBtn').addEventListener('click',()=>redo());
 let svT;function saveSoon(){clearTimeout(svT);svT=setTimeout(save,700)}
 let storeWarned=false;function save(){try{const keys=new Set(D.els.filter(e=>e.type==='image').map(e=>e.key));if(D.bg.t==='img'&&D.bg.img)keys.add(D.bg.img);const imgs={};keys.forEach(k=>{if(IM[k])imgs[k]={url:IM[k].url,name:IM[k].name,vector:!!IM[k].vector}});
  const b={v:3,D,tier};try{localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs},b)))}catch(e){localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs:{}},b)));if(keys.size&&!storeWarned){storeWarned=true;toast("Your image is too large to keep after you leave this page. It stays while this tab is open.")}}}catch(e){}}
@@ -2368,11 +2370,11 @@ function selHTML(){const els=selEls(),e=els.length===1?els[0]:null,types=new Set
  s+=`<section class="psec"><h3 class="psec-h">Arrange</h3><div class="f-row" style="justify-content:space-between">${A('front','i-front','Bring to front','Ctrl ⇧ ]')}${A('fwd','i-up','Bring forward','Ctrl ]')}${A('back','i-down','Send backward','Ctrl [')}${A('bottom','i-back','Send to back','Ctrl ⇧ [')}${els.length>1?(els.every(x=>x.gid&&x.gid===els[0].gid)?A('ungroup','t-group','Ungroup','Ctrl ⇧ G'):A('group','t-group','Group','Ctrl G')):A('center','i-center','Center on sticker')}${A('dup','i-copy','Duplicate','Ctrl D')}${A('del','i-trash','Delete','Del')}</div></section>`;
  return s}
 /* values that live in the inspector */
-function gp(p){if(p==='dw')return fmt(D.w);if(p==='dh')return fmt(D.h);if(p==='pensw')return f2(penStyle.sw*.72);const els=selEls(),e=els[0];if(!e)return '';const b=els.length===1?bbox(e):unionBox(els),s=els.length===1?sz(e):b;
+function gp(p){if(p==='dw')return fmt(D.shape==='custom'?pricedSize().w:D.w);if(p==='dh')return fmt(D.shape==='custom'?pricedSize().h:D.h);if(p==='pensw')return f2(penStyle.sw*.72);const els=selEls(),e=els[0];if(!e)return '';const b=els.length===1?bbox(e):unionBox(els),s=els.length===1?sz(e):b;
  switch(p){case 'x':return f2(b.x0/100);case 'y':return f2(b.y0/100);case 'w':return f2(s.w/100);case 'h':return e.type==='line'&&els.length===1?'—':f2(s.h/100);case 'rot':return f2(e.rot||0);case 'op':return String(Math.round((e.opacity??1)*100));
   case 'rad':return f2((e.radius||0)/100);case 'pt':{const v=els.map(ptSize);return v.every(x=>x===v[0])?String(v[0]):''}case 'sp':return String(e.spacing||0);case 'lh':return f2(e.lineH||1.15);case 'curve':return String(e.curve||0);case 'sw':return f2((e.sw||0)*.72);
-  case 'dw':return fmt(D.w);case 'dh':return fmt(D.h);case 'pensw':return f2(penStyle.sw*.72)}return ''}
-function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!(v>=MIN&&v<=MAX)){toast('Enter a size between 0.5 and 8.5 inches.');return false}const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
+  case 'dw':return fmt(D.shape==='custom'?pricedSize().w:D.w);case 'dh':return fmt(D.shape==='custom'?pricedSize().h:D.h);case 'pensw':return f2(penStyle.sw*.72)}return ''}
+function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!(v>=MIN&&v<=MAX)){toast('Enter a size between 0.5 and 8.5 inches.');return false}if(D.shape==='custom'&&setCutSize(p==='dw'?v:null,p==='dh'?v:null))return true;const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
  if(p==='pensw'){penStyle.sw=clamp(v/.72,.5,200);return true}
  if(!els.length)return false;const b=els.length===1?bbox(els[0]):unionBox(els);
  switch(p){
@@ -2397,9 +2399,9 @@ function fillIns(){const ins=$('#ins'),els=selEls(),e=els.length===1?els[0]:null
  if(!els.length){$$('.shp',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.shape===D.shape)));$$('.fin',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.vinyl===D.vinyl)));
   const cr=$('#cornersRow');if(cr){cr.hidden=!(D.shape==='rect'||D.shape==='square');$$('#cornersSeg button').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.corner==='yes')===!!D.rounded)))}
   const bb=$('#borderBox');if(bb){bb.hidden=D.shape!=='custom';const g=$('#gapIn');if(document.activeElement!==g)g.value=D.gap;$('#gapOut').textContent=fmt(D.gap/100)+' in';tilesUI()}
-  const sh=$('#shapeHelp');if(sh){const t={custom:'The cut follows your artwork with a smooth outline. Size sets the design area.',circle:'Round art fits best. Square artwork will have its corners trimmed.'}[D.shape]||'';sh.textContent=t;sh.hidden=!t}
+  const sh=$('#shapeHelp');if(sh){const t={custom:'The cut follows your artwork with a smooth outline. Size is the finished sticker, measured around the cut line.',circle:'Round art fits best. Square artwork will have its corners trimmed.'}[D.shape]||'';sh.textContent=t;sh.hidden=!t}
   const sq=D.shape==='square'||D.shape==='circle',dh=$('#in-dh');if(dh){dh.disabled=sq;$('#docLockBtn').disabled=sq;$('#docLockBtn').setAttribute('aria-pressed',String(sq||docLock))}
-  const pr=$('#presets');if(pr){const list=PRESETS[D.shape]||PRESETS.rect,sig=JSON.stringify([D.shape,tier,D.w,D.h]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const p=r2(basePrice(w,h).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${D.w===w&&D.h===h}" data-tip="${money(p)} each at ${QTY[tier].toLocaleString()}">${sq?w:w+' × '+h}${sq?' in':''}</button>`}).join('')}}
+  const pr=$('#presets');if(pr){const cut=D.shape==='custom',ps=pricedSize(),ar=ps.h/ps.w,list=PRESETS[D.shape]||PRESETS.rect,sig=JSON.stringify([D.shape,tier,D.w,D.h,cut&&[r2(ps.w),r2(ps.h)]]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const ew=cut?(ar<=1?w:w/ar):w,eh=cut?(ar<=1?w*ar:w):h,on=cut?Math.abs(Math.max(ps.w,ps.h)-w)<.03:D.w===w&&D.h===h,p=r2(basePrice(ew,eh).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${on}" data-tip="${cut?`${fmt(r2(ew))} × ${fmt(r2(eh))} in, `:''}${money(p)} each at ${QTY[tier].toLocaleString()}">${sq||cut?w+' in':w+' × '+h}</button>`}).join('')}}
   const vh=$('#vinylHelp');if(vh)vh.textContent=D.vinyl==='white'?'Bright white base for bold, full color.':'White areas of your design print clear, so the metal shows through.';
   const bh=$('#bgHelp');if(bh)bh.textContent=D.bg.t==='img'?'Using an image. Pick a color to replace it.':D.vinyl==='white'?'"None" leaves the gloss white vinyl.':'Choose "None" to let the metal show.';return}
  const rb=$('#ratioBtn');if(rb)rb.setAttribute('aria-pressed',String(keepRatio||(e&&(e.type==='image'||e.type==='text'))));
@@ -2454,7 +2456,30 @@ insEl.addEventListener('pointerdown',ev=>{const l=ev.target.closest('[data-scrub
 
 /* ---------- sticker shape / size / finish ---------- */
 let szBase=null;
-function setSize(nw,nh){nw=clamp(nw,MIN,MAX);nh=clamp(nh,MIN,MAX);
+/* Cut to design: the size a shopper picks is the finished sticker, measured around the cut line (what we print,
+   cut and price). Scale the artwork so the cut line lands on that size; the border width stays the same.
+   Pass only nw or only nh to size by that side (the other follows the art's proportions). */
+let cutGoal=null;
+function cutPass(nw,nh,noMeasure){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);if(!c)return null;
+ const b=c.bbox,g=D.gap,aw=Math.max(1,b.w-2*g),ah=Math.max(1,b.h-2*g);
+ const kw=nw!=null?(nw*100-2*g)/aw:Infinity,kh=nh!=null?(nh*100-2*g)/ah:Infinity;let k=Math.min(kw,kh);if(!isFinite(k)||k<=0)return null;
+ const hiK=(MAX*100-2*g)/Math.max(aw,ah),loK=(MIN*100-2*g)/Math.min(aw,ah);k=clamp(k,Math.min(loK,hiK),hiK);
+ const cx=b.x+b.w/2,cy=b.y+b.h/2,vis=D.els.filter(e=>!e.hidden);
+ D.els.forEach(e=>{e.x=(e.x-cx)*k;e.y=(e.y-cy)*k;if(e.type==='text')e.size*=k;else{e.w*=k;if(e.type!=='line')e.h*=k}});invalidateText();
+ if(!noMeasure)D.els.forEach(e=>{if(e.type==='text')measureNow(e)});   /* text boxes are measured from the rendered glyphs; refresh them before the next measurement */
+ const fw=aw*k+2*g,fh=ah*k+2*g,u=unionBox(vis),m=2*(g+2),A=(span,fin)=>Math.min(MAX*100,Math.max(fin,span+m));
+ D.w=Math.ceil(A(u.x1-u.x0,fw))/100;D.h=Math.ceil(A(u.y1-u.y0,fh))/100;D.els.forEach(e=>{e.x+=W()/2;e.y+=H()/2});return k}
+function setCutSize(nw,nh){if(!D.els.some(e=>!e.hidden))return false;let k=cutPass(nw,nh);if(k==null)return false;
+ /* the cut line is measured from pixels: re-measure and correct until it lands on the size picked */
+ for(let i=0;i<3&&k!=null&&Math.abs(k-1)>.0015;i++)k=cutPass(nw,nh);
+ szBase=null;D.bfit=1;CT.sig=contourSig();computeContour();cutGoal={nw,nh,n:0,t:performance.now(),sig:JSON.stringify(D.els)};if(zoom===1)cam=null;req();return true}
+/* Text renders a hair narrower on the canvas than in the off-screen measure, so once the real cut line is traced
+   after the redraw, nudge the size onto the target (at most twice). Runs from computeContour. */
+function cutSettle(){const g=cutGoal;if(!g||D.shape!=='custom'||!CT.bbox)return;if(JSON.stringify(D.els)!==g.sig){cutGoal=null;return}   /* the design changed since (undo, edit): leave it alone */
+ if(g.n>=2||performance.now()-g.t>4000){cutGoal=null;return}
+ const w=CT.bbox.w/100,h=CT.bbox.h/100,err=Math.min(g.nw!=null?Math.abs(w-g.nw):9,g.nh!=null?Math.abs(h-g.nh):9);if(err<.004){cutGoal=null;return}
+ g.n++;if(cutPass(g.nw,g.nh,true)==null){cutGoal=null;return}g.sig=JSON.stringify(D.els);CT.sig='';last=snapshot();saveSoon();syncPanels();req()}
+function setSize(nw,nh,raw){if(!raw&&D.shape==='custom'&&setCutSize(nw,nh))return;nw=clamp(nw,MIN,MAX);nh=clamp(nh,MIN,MAX);
  if(!szBase||szBase.sig!==JSON.stringify(D.els))szBase={w:D.w,h:D.h,els:JSON.stringify(D.els)};
  const sx=nw/szBase.w,sy=nh/szBase.h,s=Math.min(sx,sy);D.els=JSON.parse(szBase.els);
  D.els.forEach(e=>{e.x*=sx;e.y*=sy;if(e.type==='text')e.size*=s;else{e.w*=s;if(e.type!=='line')e.h*=s}});D.w=Math.round(nw*100)/100;D.h=Math.round(nh*100)/100;szBase.sig=JSON.stringify(D.els);CT.sig='';if(zoom===1)cam=null;req()}

@@ -256,7 +256,7 @@ function contourAt(gap,P,xf){const w=W(),h=H(),cw=Math.max(1,Math.ceil(w*P)),ch=
 function computeContour(){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);
  if(!c){CT.url=null;CT.bbox=null;req();return}
  const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(1px)';sx.drawImage(c.canvas,0,0);
- CT.url=sm.toDataURL();CT.bbox=c.bbox;req()}
+ CT.url=sm.toDataURL();CT.bbox=c.bbox;req();if(typeof cutSettle==='function')cutSettle()}
 
 /* ---------- camera ---------- */
 function fitBox(){const w=W(),h=H();if(view==='sheet')return[w/2-505,h/2-545,1010,1135];const m=Math.max(w,h)*.22;if(view==='proof'){const q=Math.max(150,Math.max(w,h)*.08+150),nar=vp.clientWidth<700;return[-m,-m*1.2,w+2*m+q,h+(nar?4.2:2.8)*m]}return[-m,-m,w+2*m,h+2*m]}

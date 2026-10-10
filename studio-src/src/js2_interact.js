@@ -321,6 +321,8 @@ function restore(s){const o=JSON.parse(s);D=o.D;tier=o.tier;D.groups=D.groups||{
 function undo(){if(!hist.length)return;fut.push(last);last=hist.pop();restore(last);say('Undone')}
 function redo(){if(!fut.length)return;hist.push(last);last=fut.pop();restore(last);say('Redone')}
 function refreshUndo(){$('#undoBtn').disabled=!hist.length;$('#redoBtn').disabled=!fut.length}
+/* the toolbar buttons only had keyboard shortcuts (Ctrl Z / Ctrl Shift Z); wire the clicks too */
+$('#undoBtn').addEventListener('click',()=>undo());$('#redoBtn').addEventListener('click',()=>redo());
 let svT;function saveSoon(){clearTimeout(svT);svT=setTimeout(save,700)}
 let storeWarned=false;function save(){try{const keys=new Set(D.els.filter(e=>e.type==='image').map(e=>e.key));if(D.bg.t==='img'&&D.bg.img)keys.add(D.bg.img);const imgs={};keys.forEach(k=>{if(IM[k])imgs[k]={url:IM[k].url,name:IM[k].name,vector:!!IM[k].vector}});
  const b={v:3,D,tier};try{localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs},b)))}catch(e){localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs:{}},b)));if(keys.size&&!storeWarned){storeWarned=true;toast("Your image is too large to keep after you leave this page. It stays while this tab is open.")}}}catch(e){}}
