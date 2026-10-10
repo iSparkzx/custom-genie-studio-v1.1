@@ -1,31 +1,54 @@
-<!-- ================= REVIEW: proof + quote + checkout ================= -->
+<!-- ================= REVIEW & PRINT: 1 check proof, 2 choose quantity, 3 price and add to cart ================= -->
 <dialog class="dlg" id="reviewDlg" aria-labelledby="rvTitle">
- <div class="dlg-h"><h2 id="rvTitle">Review your proof</h2><span class="pill ok" id="rvQuote" style="height:28px;cursor:default"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span id="rvQuoteTxt">Quote</span></span><button type="button" class="iconbtn" id="rvClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-h"><h2 id="rvTitle">Review &amp; Print</h2><span class="pill ok" id="rvQuote" style="height:28px;cursor:default"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span id="rvQuoteTxt">Quote</span></span><button type="button" class="iconbtn" id="rvClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
  <div class="dlg-b">
+  <ol class="rv-stepper" id="rvStepper" aria-label="Order steps">
+   <li><button type="button" data-go="1"><span class="n" aria-hidden="true"><span>1</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Proof</span></button></li>
+   <li><button type="button" data-go="2"><span class="n" aria-hidden="true"><span>2</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Quantity</span></button></li>
+   <li><button type="button" data-go="3"><span class="n" aria-hidden="true"><span>3</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Add to cart</span></button></li>
+  </ol>
   <div class="rv">
-   <div>
-    <div class="rv-proof" id="rvProof">
+   <div class="rv-left">
+    <div class="rv-views">
      <div class="rv-tabs" role="group" aria-label="Proof view"><button type="button" data-rv="flat" aria-pressed="true">What prints</button><button type="button" data-rv="dome" aria-pressed="false">With dome</button></div>
-     <div id="rvArt" style="width:100%;height:100%;display:grid;place-items:center"></div>
+     <div class="rv-tabs" role="group" aria-label="See it on"><span class="lbl" aria-hidden="true">See it on</span><button type="button" data-rv="laptop" aria-pressed="false">Laptop</button><button type="button" data-rv="notebook" aria-pressed="false">Notebook</button><button type="button" data-rv="bottle" aria-pressed="false">Bottle</button><button type="button" data-rv="flask" aria-pressed="false">Flask</button></div>
     </div>
+    <div class="rv-proof" id="rvProof"><div id="rvArt"></div></div>
     <p class="rv-cap" id="rvCap"></p>
    </div>
-   <div>
-    <h3 class="rv-h">Quote</h3>
-    <dl class="spec" id="rvSpec"></dl>
-    <p class="rv-break" id="rvBreak" hidden></p>
-    <h3 class="rv-h">Print check</h3>
-    <ul class="checks" id="rvChecks"></ul>
-    <details class="instr" id="instrWrap"><summary>Add special instructions</summary>
-     <label class="sr-only" for="instr">Special instructions</label>
-     <textarea id="instr" maxlength="250" rows="3" aria-describedby="instrCount" placeholder="For example: match PMS 185 red"></textarea>
-     <span class="count" id="instrCount">0 / 250</span>
-    </details>
-    <label class="confirm" id="confirmBox" for="confirm"><input type="checkbox" id="confirm" aria-describedby="confirmErr"><span>I've checked the proof and spelling, and I approve it for printing.</span></label>
-    <p class="err" id="confirmErr" hidden><svg class="ico"><use href="#i-alert"/></svg><span>Please approve the proof to continue.</span></p>
-    <button type="button" class="btn btn-primary full lg" id="addCart">Add to cart</button>
-    <div class="express"><button type="button" class="btn-pay" id="gpay">G Pay</button><button type="button" class="btn-pay" id="apay">Apple Pay</button></div>
-    <div class="rv-foot"><button type="button" class="linkbtn" id="saveBtn">Save design</button><span aria-hidden="true">·</span><a href="#" data-proto="Live chat isn't connected."><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat with a specialist</a></div>
+   <div class="rv-right">
+    <!-- step 1 -->
+    <section class="rv-pane" data-pane="1" aria-labelledby="rvS1">
+     <h3 class="rv-st" id="rvS1" tabindex="-1">Check your proof</h3>
+     <p class="rv-lead">The preview shows exactly what we print and cut. Check the spelling and the details below.</p>
+     <dl class="spec" id="rvSpec1"></dl>
+     <h4 class="rv-h">Print check</h4>
+     <ul class="checks" id="rvChecks"></ul>
+     <details class="instr" id="instrWrap"><summary>Add special instructions</summary>
+      <label class="sr-only" for="instr">Special instructions</label>
+      <textarea id="instr" maxlength="250" rows="3" aria-describedby="instrCount" placeholder="For example: match PMS 185 red"></textarea>
+      <span class="count" id="instrCount">0 / 250</span>
+     </details>
+     <label class="confirm" id="confirmBox" for="confirm"><input type="checkbox" id="confirm" aria-describedby="confirmErr"><span>I've checked the proof and spelling, and I approve it for printing.</span></label>
+     <p class="err" id="confirmErr" hidden><svg class="ico"><use href="#i-alert"/></svg><span>Please approve the proof to continue.</span></p>
+     <div class="rv-act"><button type="button" class="btn btn-ghost lg" id="rvEdit">Edit design</button><button type="button" class="btn btn-primary lg" id="rvNext1">Approve proof<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button></div>
+    </section>
+    <!-- step 2 -->
+    <section class="rv-pane" data-pane="2" aria-labelledby="rvS2" hidden>
+     <h3 class="rv-st" id="rvS2" tabindex="-1">How many stickers?</h3>
+     <p class="rv-lead">Every quantity is printed on the same proof. The more you order, the less each sticker costs.</p>
+     <fieldset class="qopts"><legend class="sr-only">Quantity</legend><div id="rvQtys"></div></fieldset>
+     <div class="rv-price" id="rvPrice" aria-live="polite"></div>
+     <div class="rv-act"><button type="button" class="btn btn-ghost lg" data-go="1">Back</button><button type="button" class="btn btn-primary lg" id="rvNext2">Continue</button></div>
+    </section>
+    <!-- step 3 -->
+    <section class="rv-pane" data-pane="3" aria-labelledby="rvS3" hidden>
+     <h3 class="rv-st" id="rvS3" tabindex="-1">Your price</h3>
+     <dl class="spec" id="rvSpec"></dl>
+     <div class="rv-act"><button type="button" class="btn btn-primary full lg" id="addCart">Add to cart</button></div>
+     <div class="express"><button type="button" class="btn-pay" id="gpay">G Pay</button><button type="button" class="btn-pay" id="apay">Apple Pay</button></div>
+     <div class="rv-foot"><button type="button" class="linkbtn" data-go="2">Back to quantity</button><span aria-hidden="true">·</span><button type="button" class="linkbtn" id="saveBtn">Save design</button><span aria-hidden="true">·</span><a href="#" data-proto="Live chat isn't connected."><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat with a specialist</a></div>
+    </section>
    </div>
   </div>
  </div>

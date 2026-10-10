@@ -1016,6 +1016,79 @@ body.hide-notes .note{display:none}
 .cbar #reviewBtn{margin-left:auto}
 @media (max-width:820px){.cbar #reviewBtn{flex:1 1 auto}}
 
+/* ---------- Review & Print steps ---------- */
+:root{--scene-a:#EEE8E0;--scene-b:#DCD3C7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--scene-a:#37322E;--scene-b:#221F1C}}
+:root[data-theme="dark"]{--scene-a:#37322E;--scene-b:#221F1C}
+.rv-stepper{display:flex;align-items:center;gap:10px;list-style:none;margin:0 0 16px;padding:0}
+.rv-stepper li{display:flex;align-items:center;gap:10px;flex:1 1 0;min-width:0}
+.rv-stepper li:last-child{flex:0 0 auto}
+.rv-stepper li:not(:last-child)::after{content:"";flex:1;min-width:14px;height:2px;border-radius:2px;background:var(--line-strong)}
+.rv-stepper li[data-state="done"]::after{background:var(--accent)}
+.rv-stepper button{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 4px;border:0;border-radius:8px;background:none;font-size:13px;font-weight:700;color:var(--ink-3);white-space:nowrap}
+.rv-stepper button:disabled{cursor:default}
+.rv-stepper button:not(:disabled):hover .t{text-decoration:underline}
+.rv-stepper .n{display:grid;place-items:center;flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line-strong);font-size:12.5px;font-weight:800}
+.rv-stepper .n .ico{display:none;width:14px;height:14px}
+.rv-stepper [data-state="now"] button{color:var(--ink)}
+.rv-stepper [data-state="now"] .n{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.rv-stepper [data-state="done"] button{color:var(--ink-2)}
+.rv-stepper [data-state="done"] .n{border-color:var(--accent);color:var(--accent)}
+.rv-stepper [data-state="done"] .n>span{display:none}
+.rv-stepper [data-state="done"] .n .ico{display:block}
+.rv-views{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.rv-views .rv-tabs{position:static;flex:none}
+.rv-tabs .lbl{align-self:center;padding:0 4px 0 8px;font-size:12px;font-weight:600;color:var(--ink-4)}
+.rv-proof{aspect-ratio:4/3;min-height:0;padding:16px;overflow:hidden}
+#rvProof{display:block}
+#rvArt{position:absolute;inset:16px}
+.rv-proof svg{display:block;width:100%;height:100%;max-height:none}
+.rv-proof[data-scene]:not([data-scene=""]){padding:0;background:var(--scene-b)}
+.rv-proof[data-scene]:not([data-scene=""]) #rvArt{inset:0}
+.rv-proof[data-scene]:not([data-scene=""]) svg{display:block}
+.rv-st{margin:0 0 4px;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.rv-st:focus{outline:none}
+.rv-lead{margin:0 0 14px;font-size:13px;line-height:1.45;color:var(--ink-3)}
+.rv-right .rv-h{margin-top:4px}
+.rv-act{display:flex;gap:10px;margin-top:16px}
+.rv-act .btn-primary{flex:1}
+.rv-pane[data-pane="3"] .rv-act{margin-top:6px}
+.qopts{margin:0 0 14px;padding:0;border:0;min-width:0}
+#rvQtys{display:grid;gap:8px}
+.qopt{display:grid;grid-template-columns:20px minmax(0,1fr) auto;grid-template-areas:"rd q tt" "rd ea sv";align-items:center;column-gap:12px;row-gap:1px;padding:11px 14px;border:1px solid var(--line-strong);border-radius:12px;background:var(--surface);cursor:pointer}
+.qopt:hover{border-color:var(--accent)}
+.qopt input{grid-area:rd;width:18px;height:18px;margin:0;accent-color:var(--accent)}
+.qopt .q{grid-area:q;font-size:15px}
+.qopt .q b{font-weight:800}
+.qopt .tt{grid-area:tt;font-size:15px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
+.qopt .ea{grid-area:ea;font-size:12.5px;color:var(--ink-3)}
+.qopt .sv{grid-area:sv;font-size:12px;font-weight:700;color:var(--ok);text-align:right}
+.qopt:has(input:checked){border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
+.qopt:has(input:checked) .ea{color:var(--ink-2)}
+.qopt:has(input:focus-visible){outline:2px solid var(--focus);outline-offset:2px}
+.rv-price{padding:14px 16px;border-radius:12px;background:var(--sunk)}
+.rv-price .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--ink-2)}
+.rv-price .tot{font-size:26px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.rv-price small{display:block;margin-top:6px;font-size:12.5px;line-height:1.45;color:var(--ink-3)}
+@media (max-width:820px){
+  #reviewDlg{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border-radius:0}
+  #reviewDlg .dlg-h{padding:12px 12px 10px 16px}
+  #reviewDlg .dlg-h h2{font-size:17px;white-space:nowrap}
+  #rvQuote{min-width:0;overflow:hidden;font-size:11.5px}
+  #rvQuoteTxt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #reviewDlg .dlg-b{padding:14px 16px 0}
+  .rv{grid-template-columns:minmax(0,1fr);gap:14px}
+  .rv-views{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px 8px;padding:0 16px 2px;scrollbar-width:none}
+  .rv-views::-webkit-scrollbar{display:none}
+  #rvArt{inset:10px}
+  .rv-act{position:sticky;bottom:0;z-index:2;margin:16px -16px 0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line)}
+  .rv-pane[data-pane="3"] .rv-act{margin-top:6px}
+  .rv-pane[data-pane="3"] .rv-foot{padding-bottom:16px}
+  .rv-stepper{gap:8px}
+  .rv-stepper li{gap:8px}
+  .rv-stepper button{font-size:12.5px;gap:6px}
+}
+
 </style>
 </head>
 <body>
@@ -1483,34 +1556,57 @@ body.hide-notes .note{display:none}
 </footer>
 
 
-<!-- ================= REVIEW: proof + quote + checkout ================= -->
+<!-- ================= REVIEW & PRINT: 1 check proof, 2 choose quantity, 3 price and add to cart ================= -->
 <dialog class="dlg" id="reviewDlg" aria-labelledby="rvTitle">
- <div class="dlg-h"><h2 id="rvTitle">Review your proof</h2><span class="pill ok" id="rvQuote" style="height:28px;cursor:default"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span id="rvQuoteTxt">Quote</span></span><button type="button" class="iconbtn" id="rvClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-h"><h2 id="rvTitle">Review &amp; Print</h2><span class="pill ok" id="rvQuote" style="height:28px;cursor:default"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span id="rvQuoteTxt">Quote</span></span><button type="button" class="iconbtn" id="rvClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
  <div class="dlg-b">
+  <ol class="rv-stepper" id="rvStepper" aria-label="Order steps">
+   <li><button type="button" data-go="1"><span class="n" aria-hidden="true"><span>1</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Proof</span></button></li>
+   <li><button type="button" data-go="2"><span class="n" aria-hidden="true"><span>2</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Quantity</span></button></li>
+   <li><button type="button" data-go="3"><span class="n" aria-hidden="true"><span>3</span><svg class="ico"><use href="#i-check"/></svg></span><span class="t">Add to cart</span></button></li>
+  </ol>
   <div class="rv">
-   <div>
-    <div class="rv-proof" id="rvProof">
+   <div class="rv-left">
+    <div class="rv-views">
      <div class="rv-tabs" role="group" aria-label="Proof view"><button type="button" data-rv="flat" aria-pressed="true">What prints</button><button type="button" data-rv="dome" aria-pressed="false">With dome</button></div>
-     <div id="rvArt" style="width:100%;height:100%;display:grid;place-items:center"></div>
+     <div class="rv-tabs" role="group" aria-label="See it on"><span class="lbl" aria-hidden="true">See it on</span><button type="button" data-rv="laptop" aria-pressed="false">Laptop</button><button type="button" data-rv="notebook" aria-pressed="false">Notebook</button><button type="button" data-rv="bottle" aria-pressed="false">Bottle</button><button type="button" data-rv="flask" aria-pressed="false">Flask</button></div>
     </div>
+    <div class="rv-proof" id="rvProof"><div id="rvArt"></div></div>
     <p class="rv-cap" id="rvCap"></p>
    </div>
-   <div>
-    <h3 class="rv-h">Quote</h3>
-    <dl class="spec" id="rvSpec"></dl>
-    <p class="rv-break" id="rvBreak" hidden></p>
-    <h3 class="rv-h">Print check</h3>
-    <ul class="checks" id="rvChecks"></ul>
-    <details class="instr" id="instrWrap"><summary>Add special instructions</summary>
-     <label class="sr-only" for="instr">Special instructions</label>
-     <textarea id="instr" maxlength="250" rows="3" aria-describedby="instrCount" placeholder="For example: match PMS 185 red"></textarea>
-     <span class="count" id="instrCount">0 / 250</span>
-    </details>
-    <label class="confirm" id="confirmBox" for="confirm"><input type="checkbox" id="confirm" aria-describedby="confirmErr"><span>I've checked the proof and spelling, and I approve it for printing.</span></label>
-    <p class="err" id="confirmErr" hidden><svg class="ico"><use href="#i-alert"/></svg><span>Please approve the proof to continue.</span></p>
-    <button type="button" class="btn btn-primary full lg" id="addCart">Add to cart</button>
-    <div class="express"><button type="button" class="btn-pay" id="gpay">G Pay</button><button type="button" class="btn-pay" id="apay">Apple Pay</button></div>
-    <div class="rv-foot"><button type="button" class="linkbtn" id="saveBtn">Save design</button><span aria-hidden="true">·</span><a href="#" data-proto="Live chat isn't connected."><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat with a specialist</a></div>
+   <div class="rv-right">
+    <!-- step 1 -->
+    <section class="rv-pane" data-pane="1" aria-labelledby="rvS1">
+     <h3 class="rv-st" id="rvS1" tabindex="-1">Check your proof</h3>
+     <p class="rv-lead">The preview shows exactly what we print and cut. Check the spelling and the details below.</p>
+     <dl class="spec" id="rvSpec1"></dl>
+     <h4 class="rv-h">Print check</h4>
+     <ul class="checks" id="rvChecks"></ul>
+     <details class="instr" id="instrWrap"><summary>Add special instructions</summary>
+      <label class="sr-only" for="instr">Special instructions</label>
+      <textarea id="instr" maxlength="250" rows="3" aria-describedby="instrCount" placeholder="For example: match PMS 185 red"></textarea>
+      <span class="count" id="instrCount">0 / 250</span>
+     </details>
+     <label class="confirm" id="confirmBox" for="confirm"><input type="checkbox" id="confirm" aria-describedby="confirmErr"><span>I've checked the proof and spelling, and I approve it for printing.</span></label>
+     <p class="err" id="confirmErr" hidden><svg class="ico"><use href="#i-alert"/></svg><span>Please approve the proof to continue.</span></p>
+     <div class="rv-act"><button type="button" class="btn btn-ghost lg" id="rvEdit">Edit design</button><button type="button" class="btn btn-primary lg" id="rvNext1">Approve proof<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button></div>
+    </section>
+    <!-- step 2 -->
+    <section class="rv-pane" data-pane="2" aria-labelledby="rvS2" hidden>
+     <h3 class="rv-st" id="rvS2" tabindex="-1">How many stickers?</h3>
+     <p class="rv-lead">Every quantity is printed on the same proof. The more you order, the less each sticker costs.</p>
+     <fieldset class="qopts"><legend class="sr-only">Quantity</legend><div id="rvQtys"></div></fieldset>
+     <div class="rv-price" id="rvPrice" aria-live="polite"></div>
+     <div class="rv-act"><button type="button" class="btn btn-ghost lg" data-go="1">Back</button><button type="button" class="btn btn-primary lg" id="rvNext2">Continue</button></div>
+    </section>
+    <!-- step 3 -->
+    <section class="rv-pane" data-pane="3" aria-labelledby="rvS3" hidden>
+     <h3 class="rv-st" id="rvS3" tabindex="-1">Your price</h3>
+     <dl class="spec" id="rvSpec"></dl>
+     <div class="rv-act"><button type="button" class="btn btn-primary full lg" id="addCart">Add to cart</button></div>
+     <div class="express"><button type="button" class="btn-pay" id="gpay">G Pay</button><button type="button" class="btn-pay" id="apay">Apple Pay</button></div>
+     <div class="rv-foot"><button type="button" class="linkbtn" data-go="2">Back to quantity</button><span aria-hidden="true">·</span><button type="button" class="linkbtn" id="saveBtn">Save design</button><span aria-hidden="true">·</span><a href="#" data-proto="Live chat isn't connected."><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Chat with a specialist</a></div>
+    </section>
    </div>
   </div>
  </div>
@@ -2537,21 +2633,96 @@ const PrintAPI=window.CustomGeniePrint=window.CustomGeniePrint||(()=>{const draf
   createCheckout:async({quote_id,proof_id,idempotency_key})=>{if(drafts[idempotency_key])return drafts[idempotency_key];const id='do_'+nid();return drafts[idempotency_key]={checkout_url:'#checkout/'+id,draft_order_id:id,expires_at:new Date(Date.now()+36e5).toISOString(),summary:{quote_id,proof_id}}}}})();
 
 /* ---------- review: proof + quote + approve ---------- */
-let rvMode='flat',QUOTE=null;
-async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';renderReview();if(!d.open)d.showModal();track('review_open');
- const ps=pricedSize();QUOTE=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:{finish:D.vinyl}});renderReview()}
-function renderReview(){const t=curTier(),ps=pricedSize(),rem=FREE-t.t,q=QUOTE;
- $$('.rv-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rv===rvMode)));
- $('#rvArt').innerHTML=thumbSVG(D,'Proof of your sticker',{proof:rvMode==='flat'});
- $('#rvCap').textContent=`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${D.vinyl!=='white'?` · white areas print clear on ${D.vinyl}`:''}${D.shape==='custom'?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`;
- const ship=q&&q.estimated_ship_date?new Date(q.estimated_ship_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):'';
- $('#rvSpec').innerHTML=[['Product',PNAME[D.vinyl]],['Product code',skuFor()],['Shape',SN[D.shape]+(D.shape==='rect'||D.shape==='square'?(D.rounded?', standard corners':', minimal corners'):'')],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]],['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" id="rvQty">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
- const pb=priceBreak(),rb=$('#rvBreak');rb.hidden=!pb;rb.textContent=pb;
- $('#rvChecks').innerHTML=checksHTML(checks());$('#rvQuoteTxt').textContent=q?`Quote ${q.quote_id.slice(0,10)} · valid 24 h`:'Pricing…';
+/* ---------- Review & Print: 1 check the proof, 2 choose a quantity, 3 see the price and add to cart ----------
+   The preview stays on the left through every step. "See it on" draws the finished (domed) sticker on everyday
+   objects at true scale (100 units = 1 in, same as the studio), so shoppers can judge the size before they buy. */
+let rvMode='flat',rvStep=1,rvMax=1,QUOTE=null,rvQSeq=0;
+const RV_ON={   /* typical object sizes, used for scale; w/h = the flat area a sticker can sit on */
+ laptop:{noun:'laptop lid',cap:'a 13 in laptop lid (12 × 8.4 in)',w:11,h:7.6},
+ notebook:{noun:'notebook cover',cap:'an A5 notebook (5.8 × 8.3 in)',w:4.8,h:8},
+ bottle:{noun:'bottle',cap:'a 24 oz water bottle (2.9 in across)',w:2.9*Math.PI/2,h:6.8,r:1.45},
+ flask:{noun:'flask',cap:'an 8 oz flask (3.8 × 5.5 in)',w:3.6,h:4.4}};
+function rvShapeTxt(){return SN[D.shape]+(D.shape==='rect'||D.shape==='square'?(D.rounded?', standard corners':', minimal corners'):'')}
+/* the finished sticker as a nested svg centred on (cx,cy) in scene units; sx squeezes it to fake a curved surface */
+function rvSticker(cx,cy,sx){let s=thumbSVG(D,'',{proof:false});const v=(s.match(/viewBox="([^"]+)"/)||[])[1];if(!v)return'';const [,,vw,vh]=v.split(/\s+/).map(Number);
+ s=s.replace(/ role="img" aria-label="[^"]*"/,' aria-hidden="true"').replace('<svg ',`<svg x="${cx-vw/2}" y="${cy-vh/2}" width="${vw}" height="${vh}" overflow="visible" `);
+ return `<g id="rvStk" transform="translate(${cx} 0) scale(${sx||1} 1) translate(${-cx} 0)">${s}</g>`}
+function rvScene(k){const o=RV_ON[k],ps=pricedSize(),lab=esc(`Your ${fmt(ps.w)} × ${fmt(ps.h)} in sticker shown to scale on ${o.cap}`);
+ const grad=(id,stops,x2=1,y2=0)=>`<linearGradient id="${id}" x1="0" y1="0" x2="${x2}" y2="${y2}">${stops.map(([o2,c,a])=>`<stop offset="${o2}" stop-color="${c}"${a!=null?` stop-opacity="${a}"`:''}/>`).join('')}</linearGradient>`;
+ const defs=`<linearGradient id="rvsDesk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--scene-a)"/><stop offset="1" style="stop-color:var(--scene-b)"/></linearGradient><filter id="rvsBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>`;
+ /* curved surface: shade the sticker with the same light as the object (mask = the sticker's own shape) */
+ const shade=(x,y,w,h,id)=>`<mask id="rvsM" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000"><use href="#rvStk"/></mask><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#${id})" mask="url(#rvsM)"/>`;
+ if(k==='laptop'){const X=100,Y=105,W=1200,H=840;
+  return `<svg viewBox="0 0 1400 1050" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsLid',[[0,'#6A707A'],[.55,'#4E545D'],[1,'#3C4148']],1,1)}<clipPath id="rvsC"><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="48"/></clipPath></defs>
+   <rect width="1400" height="1050" fill="url(#rvsDesk)"/><rect x="${X+16}" y="${Y+30}" width="${W-32}" height="${H}" rx="48" fill="#000" opacity=".32" filter="url(#rvsBlur)"/>
+   <rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="48" fill="url(#rvsLid)"/><rect x="${X+5}" y="${Y+5}" width="${W-10}" height="${H-10}" rx="44" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>
+   <rect x="${X+70}" y="${Y+H-18}" width="${W-140}" height="10" rx="5" fill="#000" opacity=".25"/>
+   <g clip-path="url(#rvsC)">${rvSticker(X+W*.62,Y+H*.42)}</g></svg>`}
+ if(k==='notebook'){const X=313,Y=38,W=574,H=824,cx=X+(44+W*.86)/2;
+  return `<svg viewBox="0 0 1200 900" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsKr',[[0,'#CFA676'],[.6,'#BE925F'],[1,'#AD8050']],1,1)}<clipPath id="rvsC"><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="14"/></clipPath></defs>
+   <rect width="1200" height="900" fill="url(#rvsDesk)"/><rect x="${X+18}" y="${Y+30}" width="${W}" height="${H}" rx="16" fill="#000" opacity=".3" filter="url(#rvsBlur)"/>
+   <rect x="${X+7}" y="${Y+6}" width="${W}" height="${H}" rx="14" fill="#F4EFE4" stroke="#D6CCB9" stroke-width="2"/><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="14" fill="url(#rvsKr)"/>
+   <path d="M${X+14} ${Y}H${X+44}V${Y+H}H${X+14}A14 14 0 0 1 ${X} ${Y+H-14}V${Y+14}A14 14 0 0 1 ${X+14} ${Y}Z" fill="#000" opacity=".1"/><line x1="${X+44}" y1="${Y+4}" x2="${X+44}" y2="${Y+H-4}" stroke="#000" stroke-opacity=".16" stroke-width="2"/>
+   <g clip-path="url(#rvsC)">${rvSticker(cx,Y+H*.4)}</g>
+   <rect x="${X+W*.86}" y="${Y-4}" width="18" height="${H+8}" rx="4" fill="#1E2023"/><rect x="${X+W*.86+4}" y="${Y-4}" width="3" height="${H+8}" fill="#fff" opacity=".14"/></svg>`}
+ if(k==='bottle'){const r=o.r*100,sw=ps.w*100,a=sw/(2*r),sx=Math.min(1,(a<Math.PI/2?Math.sin(a):1)*2*r/sw);
+  const body='M605 212L795 212C835 220 845 250 845 300L845 990Q845 1030 805 1030L595 1030Q555 1030 555 990L555 300C555 250 565 220 605 212Z';
+  return `<svg viewBox="0 0 1400 1050" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsPaint',[[0,'#55705F'],[.2,'#83A291'],[.34,'#A8C5B6'],[.5,'#8DAC9C'],[.8,'#6C8A7B'],[1,'#4A6355']])}
+   ${grad('rvsCyl',[[0,'#000',.5],[.14,'#000',.16],[.3,'#fff',.2],[.4,'#fff',0],[.62,'#000',0],[.86,'#000',.2],[1,'#000',.55]])}${grad('rvsCap',[[0,'#15181B'],[.35,'#3A4047'],[.6,'#262A2F'],[1,'#121417']])}<clipPath id="rvsC"><path d="${body}"/></clipPath></defs>
+   <rect width="1400" height="1050" fill="url(#rvsDesk)"/><ellipse cx="700" cy="1030" rx="215" ry="16" fill="#000" opacity=".4" filter="url(#rvsBlur)"/>
+   <path d="M652 104C652 26 748 26 748 104" fill="none" stroke="#1D2024" stroke-width="22" stroke-linecap="round"/><rect x="585" y="88" width="230" height="112" rx="24" fill="url(#rvsCap)"/>
+   <rect x="598" y="198" width="204" height="16" rx="4" fill="#2C3136"/><path d="${body}" fill="url(#rvsPaint)"/><rect x="603" y="330" width="12" height="640" rx="6" fill="#fff" opacity=".16"/>
+   <g clip-path="url(#rvsC)">${rvSticker(700,640,sx)}${shade(555,212,290,820,'rvsCyl')}</g></svg>`}
+ /* flask */
+ const body='M548 214L652 214C664 258 790 262 790 336L790 758Q790 800 748 800L452 800Q410 800 410 758L410 336C410 262 536 258 548 214Z';
+ return `<svg viewBox="0 0 1200 900" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsSt',[[0,'#878E95'],[.12,'#C7CCD1'],[.28,'#F3F5F7'],[.4,'#D2D7DB'],[.62,'#B3BAC0'],[.85,'#E1E5E8'],[1,'#7F868D']])}
+  ${grad('rvsFl',[[0,'#000',.3],[.18,'#000',0],[.28,'#fff',.22],[.38,'#fff',0],[.85,'#000',0],[1,'#000',.32]])}${grad('rvsCapS',[[0,'#7D848B'],[.3,'#DDE1E4'],[.55,'#A7AEB4'],[1,'#6E757C']])}<clipPath id="rvsC"><path d="${body}"/></clipPath></defs>
+  <rect width="1200" height="900" fill="url(#rvsDesk)"/><ellipse cx="600" cy="802" rx="210" ry="15" fill="#000" opacity=".38" filter="url(#rvsBlur)"/>
+  <rect x="541" y="128" width="118" height="90" rx="12" fill="url(#rvsCapS)"/>${Array.from({length:10},(_,i)=>`<rect x="${549+i*11}" y="134" width="3" height="78" fill="#000" opacity=".12"/>`).join('')}
+  <rect x="556" y="206" width="88" height="14" fill="#8F969D"/><path d="${body}" fill="url(#rvsSt)"/><path d="${body}" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="2"/>
+  <g clip-path="url(#rvsC)">${rvSticker(600,545,.98)}${shade(410,214,380,586,'rvsFl')}</g></svg>`}
+function rvPreview(){const ps=pricedSize(),o=RV_ON[rvMode];
+ $$('#reviewDlg [data-rv]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rv===rvMode)));
+ $('#rvProof').dataset.scene=o?rvMode:'';
+ $('#rvArt').innerHTML=o?rvScene(rvMode):thumbSVG(D,'Proof of your sticker',{proof:rvMode==='flat'});
+ const big=o&&(ps.w>o.w||ps.h>o.h)?` At this size it's bigger than the flat part of the ${o.noun}, so it would ${rvMode==='bottle'?'wrap around the sides':'hang over the edge'}.`:'';
+ const curve=rvMode==='bottle'&&!big&&ps.w>2.2?' It curves around the bottle, so the sides turn away from view.':'';
+ $('#rvCap').textContent=o?`Shown to scale: your ${fmt(ps.w)} × ${fmt(ps.h)} in sticker on ${o.cap}.${big||curve}`
+  :`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${D.vinyl!=='white'?` · white areas print clear on ${D.vinyl}`:''}${D.shape==='custom'?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`}
+function rvShip(){const q=QUOTE;return q&&q.estimated_ship_date?new Date(q.estimated_ship_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):''}
+function rvQuotePill(){$('#rvQuoteTxt').textContent=QUOTE?`Quote ${QUOTE.quote_id.slice(0,10)} · valid 24 h`:'Pricing…'}
+function rvSpec1(){const ps=pricedSize();$('#rvSpec1').innerHTML=[['Product',PNAME[D.vinyl]],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]]].map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}
+function rvQtys(){const all=tiers();
+ $('#rvQtys').innerHTML=all.map((x,i)=>`<label class="qopt"><input type="radio" name="rvq" value="${i}"${i===tier?' checked':''}><span class="q"><b>${x.q.toLocaleString()}</b> stickers</span><span class="tt">${money(x.t)}</span><span class="ea">${money(x.p)} each</span><span class="sv">Save ${x.s}%</span></label>`).join('');rvPrice()}
+function rvPrice(){const t=curTier(),rem=FREE-t.t,ship=rvShip();
+ $('#rvPrice').innerHTML=`<div class="row"><span>${t.q.toLocaleString()} stickers × ${money(t.p)}</span><b class="tot">${money(t.t)}</b></div><small>Setup and design help are free. ${rem>0?`Shipping is calculated at checkout, free on orders over ${money(FREE)}.`:'Shipping is free.'}${ship?` Estimated to ship ${ship}.`:''}</small>`;
+ $('#rvNext2').innerHTML=`Continue · ${money(t.t)}<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg>`}
+function rvSpec3(){const t=curTier(),ps=pricedSize(),rem=FREE-t.t,ship=rvShip();
+ $('#rvSpec').innerHTML=[['Product',PNAME[D.vinyl]],['Product code',skuFor()],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]],['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" data-go="2">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
  $('#addCart').textContent=`Add to cart · ${money(t.t)}`}
-$('#reviewDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){ev.currentTarget.close();return}const b=ev.target.closest('[data-rv]');if(b){rvMode=b.dataset.rv;renderReview();return}
- if(ev.target.id==='rvQty'){const all=tiers();openPop(ev.target,all.map((x,i)=>`<button type="button" class="qrow" data-tier="${i}" aria-checked="${i===tier}"><span class="rd"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join(''),{btn:ev.target,cls:'qpop'});pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();openReview()};return}
+function renderReview(){rvPreview();rvSpec1();$('#rvChecks').innerHTML=checksHTML(checks());rvQuotePill();if(rvStep===2)rvQtys();if(rvStep===3)rvSpec3()}
+const RV_STEP=['proof','quantity','cart'],RV_LBL=['Proof','Quantity','Add to cart'];
+function rvGo(n,quiet){if(n>1&&!$('#confirm').checked){confirmOk();n=1}
+ rvStep=n;rvMax=Math.max(rvMax,n);
+ $$('#reviewDlg .rv-pane').forEach(p=>{p.hidden=+p.dataset.pane!==n});
+ $$('#rvStepper [data-go]').forEach(b=>{const k=+b.dataset.go,st=k<n?'done':k===n?'now':'todo';b.closest('li').dataset.state=st;
+  if(k===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');b.disabled=k>rvMax;b.setAttribute('aria-label',`Step ${k}, ${RV_LBL[k-1]}${st==='done'?', done':''}`)});
+ if(n===2)rvQtys();if(n===3)rvSpec3();
+ if(quiet)return;track('review_step',{step:RV_STEP[n-1]});
+ const h=$('#rvS'+n);requestAnimationFrame(()=>{h.focus({preventScroll:true});if(NARROW.matches)h.scrollIntoView({block:'start',behavior:reduce.matches?'auto':'smooth'})})}
+async function rvRequote(){const seq=++rvQSeq,ps=pricedSize();let q=null;try{q=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:{finish:D.vinyl}})}catch(e){}
+ if(seq!==rvQSeq||!q)return;QUOTE=q;rvQuotePill();if(rvStep===2)rvPrice();if(rvStep===3)rvSpec3()}
+async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';rvStep=1;rvMax=1;QUOTE=null;renderReview();rvGo(1,true);if(!d.open)d.showModal();
+ requestAnimationFrame(()=>$('#rvS1').focus({preventScroll:true}));track('review_open');await rvRequote()}
+$('#reviewDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){ev.currentTarget.close();return}
+ const v=ev.target.closest('[data-rv]');if(v){rvMode=v.dataset.rv;rvPreview();if(RV_ON[rvMode])track('mockup_view',{surface:rvMode});return}
+ const g=ev.target.closest('[data-go]');if(g){if(!g.disabled)rvGo(+g.dataset.go);return}
  onCheckClick(ev,true)});
+$('#reviewDlg').addEventListener('change',ev=>{if(ev.target.name!=='rvq')return;tier=+ev.target.value;commit();rvPrice();const t=curTier();
+ track('select_quantity',{quantity:t.q,value:t.t});rvRequote()});
+$('#rvNext1').addEventListener('click',()=>{if(confirmOk())rvGo(2)});
+$('#rvNext2').addEventListener('click',()=>rvGo(3));
+$('#rvEdit').addEventListener('click',()=>$('#reviewDlg').close());
 $('#rvClose').addEventListener('click',()=>$('#reviewDlg').close());
 $('#instr').addEventListener('input',ev=>{$('#instrCount').textContent=`${ev.target.value.length} / 250`});
 $('#confirm').addEventListener('change',ev=>{if(ev.target.checked){$('#confirmBox').dataset.invalid='false';$('#confirmErr').hidden=true}});
