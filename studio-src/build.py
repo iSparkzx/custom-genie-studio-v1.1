@@ -20,7 +20,8 @@ html+=rd(os.path.join(S,'sprite.html'))
 html+='\n<a class="skip" href="#builder">Skip to the sticker studio</a>\n'
 html+=rd(os.path.join(S,'header.html'))
 html+='\n<main id="main">\n <div class="wrap">\n  '+rd(os.path.join(S,'hero.html'))+'\n'+rd(os.path.join(S,'studio.html'))+'\n  '
-html+=rd(os.path.join(S,'upsell.html'))+rd(os.path.join(S,'gallery.html'))+rd(os.path.join(S,'details.html'))+rd(os.path.join(S,'news.html'))
+# Below the builder: nothing until the footer (upsell, gallery, details and newsletter sections removed).
+# upsell.html, gallery.html, details.html and news.html stay in src/ in case any are wanted back.
 html+=' </div>\n</main>\n\n'+rd(os.path.join(S,'footer.html'))+'\n'+rd(os.path.join(S,'dialogs.html'))
 js='\n'.join(rd(os.path.join(S,f)) for f in ['js1_core.js','js2_interact.js','js3_panels.js','js5_3d.js','js6_banana.js','js7_chat.js','js4_genie.js'])
 html+="\n<script>\n(()=>{'use strict';\n"+js+"\n})();\n</script>\n</body>\n</html>\n"

@@ -220,7 +220,7 @@ function artboard(){
  setA($('#glossR'),{x:0,y:0,width:w,height:h});setA($('#specR'),{x:0,y:0,width:w,height:h});
  const rim=$('#rimP');if(con)show(rim,0);else{show(rim,1);setA(rim,{d,'stroke-width':m*.07,'stroke-opacity':.3});$('#rimBlur').setAttribute('stdDeviation',m*.02)}
  const off=dome?m*.035:m*.012,blur=dome?m*.04:m*.022,opa=dome?.3:.14,sp=$('#shadowP'),si=$('#shadowImg');
- if(con){show(sp,0);setA(si,{href:CT.url,x:0,y:off,width:w,height:h,opacity:opa});show(si,1)}else{show(si,0);show(sp,1);setA(sp,{d,transform:`translate(0 ${off})`,opacity:opa})}
+ show(sp,0);show(si,0);   /* no soft shadow or halo: the sticker is always a clean die-cut edge */
  $('#shBlur').setAttribute('stdDeviation',blur);$('#shBlur2').setAttribute('stdDeviation',blur);
  const cut=$('#cutP'),ci=$('#cutImg'),safe=$('#safeP');
  if(con){show(cut,0);show(safe,0);setA(ci,{href:CT.url,x:0,y:0,width:w,height:h});$('#edgeR').setAttribute('radius',1.4*K);show(ci,1)}
@@ -255,8 +255,11 @@ function contourAt(gap,P,xf){const w=W(),h=H(),cw=Math.max(1,Math.ceil(w*P)),ch=
  y.putImageData(id,0,0);if(x1<0)return null;return{canvas:b,url:b.toDataURL(),bbox:{x:x0/P,y:y0/P,w:(x1-x0+1)/P,h:(y1-y0+1)/P}}}
 function computeContour(){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);
  if(!c){CT.url=null;CT.bbox=null;req();return}
- const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(1px)';sx.drawImage(c.canvas,0,0);
- CT.url=sm.toDataURL();CT.bbox=c.bbox;req()}
+ /* clean die-cut edge: a 2px blur rounds off the pixel steps, then the alpha is snapped back to a hard edge at the
+    halfway line (under a pixel of anti-aliasing, no soft fade, and the outline stays where it was traced) */
+ const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(2px)';sx.drawImage(c.canvas,0,0);sx.filter='none';
+ const id=sx.getImageData(0,0,sm.width,sm.height),px=id.data;for(let i=3;i<px.length;i+=4){const a=px[i];px[i]=a<=112?0:a>=144?255:Math.round((a-112)*255/32)}sx.putImageData(id,0,0);
+ CT.url=sm.toDataURL();CT.bbox=c.bbox;req();if(typeof cutSettle==='function')cutSettle()}
 
 /* ---------- camera ---------- */
 function fitBox(){const w=W(),h=H();if(view==='sheet')return[w/2-505,h/2-545,1010,1135];const m=Math.max(w,h)*.22;if(view==='proof'){const q=Math.max(150,Math.max(w,h)*.08+150),nar=vp.clientWidth<700;return[-m,-m*1.2,w+2*m+q,h+(nar?4.2:2.8)*m]}return[-m,-m,w+2*m,h+2*m]}

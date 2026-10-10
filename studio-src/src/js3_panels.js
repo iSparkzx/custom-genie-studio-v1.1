@@ -105,11 +105,11 @@ function selHTML(){const els=selEls(),e=els.length===1?els[0]:null,types=new Set
  s+=`<section class="psec"><h3 class="psec-h">Arrange</h3><div class="f-row" style="justify-content:space-between">${A('front','i-front','Bring to front','Ctrl ⇧ ]')}${A('fwd','i-up','Bring forward','Ctrl ]')}${A('back','i-down','Send backward','Ctrl [')}${A('bottom','i-back','Send to back','Ctrl ⇧ [')}${els.length>1?(els.every(x=>x.gid&&x.gid===els[0].gid)?A('ungroup','t-group','Ungroup','Ctrl ⇧ G'):A('group','t-group','Group','Ctrl G')):A('center','i-center','Center on sticker')}${A('dup','i-copy','Duplicate','Ctrl D')}${A('del','i-trash','Delete','Del')}</div></section>`;
  return s}
 /* values that live in the inspector */
-function gp(p){if(p==='dw')return fmt(D.w);if(p==='dh')return fmt(D.h);if(p==='pensw')return f2(penStyle.sw*.72);const els=selEls(),e=els[0];if(!e)return '';const b=els.length===1?bbox(e):unionBox(els),s=els.length===1?sz(e):b;
+function gp(p){if(p==='dw')return fmt(D.shape==='custom'?pricedSize().w:D.w);if(p==='dh')return fmt(D.shape==='custom'?pricedSize().h:D.h);if(p==='pensw')return f2(penStyle.sw*.72);const els=selEls(),e=els[0];if(!e)return '';const b=els.length===1?bbox(e):unionBox(els),s=els.length===1?sz(e):b;
  switch(p){case 'x':return f2(b.x0/100);case 'y':return f2(b.y0/100);case 'w':return f2(s.w/100);case 'h':return e.type==='line'&&els.length===1?'—':f2(s.h/100);case 'rot':return f2(e.rot||0);case 'op':return String(Math.round((e.opacity??1)*100));
   case 'rad':return f2((e.radius||0)/100);case 'pt':{const v=els.map(ptSize);return v.every(x=>x===v[0])?String(v[0]):''}case 'sp':return String(e.spacing||0);case 'lh':return f2(e.lineH||1.15);case 'curve':return String(e.curve||0);case 'sw':return f2((e.sw||0)*.72);
-  case 'dw':return fmt(D.w);case 'dh':return fmt(D.h);case 'pensw':return f2(penStyle.sw*.72)}return ''}
-function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!(v>=MIN&&v<=MAX)){toast('Enter a size between 0.5 and 8.5 inches.');return false}const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
+  case 'dw':return fmt(D.shape==='custom'?pricedSize().w:D.w);case 'dh':return fmt(D.shape==='custom'?pricedSize().h:D.h);case 'pensw':return f2(penStyle.sw*.72)}return ''}
+function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!(v>=MIN&&v<=MAX)){toast('Enter a size between 0.5 and 8.5 inches.');return false}if(D.shape==='custom'&&setCutSize(p==='dw'?v:null,p==='dh'?v:null))return true;const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
  if(p==='pensw'){penStyle.sw=clamp(v/.72,.5,200);return true}
  if(!els.length)return false;const b=els.length===1?bbox(els[0]):unionBox(els);
  switch(p){
@@ -134,9 +134,9 @@ function fillIns(){const ins=$('#ins'),els=selEls(),e=els.length===1?els[0]:null
  if(!els.length){$$('.shp',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.shape===D.shape)));$$('.fin',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.vinyl===D.vinyl)));
   const cr=$('#cornersRow');if(cr){cr.hidden=!(D.shape==='rect'||D.shape==='square');$$('#cornersSeg button').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.corner==='yes')===!!D.rounded)))}
   const bb=$('#borderBox');if(bb){bb.hidden=D.shape!=='custom';const g=$('#gapIn');if(document.activeElement!==g)g.value=D.gap;$('#gapOut').textContent=fmt(D.gap/100)+' in';tilesUI()}
-  const sh=$('#shapeHelp');if(sh){const t={custom:'The cut follows your artwork with a smooth outline. Size sets the design area.',circle:'Round art fits best. Square artwork will have its corners trimmed.'}[D.shape]||'';sh.textContent=t;sh.hidden=!t}
+  const sh=$('#shapeHelp');if(sh){const t={custom:'The cut follows your artwork with a smooth outline. Size is the finished sticker, measured around the cut line.',circle:'Round art fits best. Square artwork will have its corners trimmed.'}[D.shape]||'';sh.textContent=t;sh.hidden=!t}
   const sq=D.shape==='square'||D.shape==='circle',dh=$('#in-dh');if(dh){dh.disabled=sq;$('#docLockBtn').disabled=sq;$('#docLockBtn').setAttribute('aria-pressed',String(sq||docLock))}
-  const pr=$('#presets');if(pr){const list=PRESETS[D.shape]||PRESETS.rect,sig=JSON.stringify([D.shape,tier,D.w,D.h]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const p=r2(basePrice(w,h).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${D.w===w&&D.h===h}" data-tip="${money(p)} each at ${QTY[tier].toLocaleString()}">${sq?w:w+' × '+h}${sq?' in':''}</button>`}).join('')}}
+  const pr=$('#presets');if(pr){const cut=D.shape==='custom',ps=pricedSize(),ar=ps.h/ps.w,list=PRESETS[D.shape]||PRESETS.rect,sig=JSON.stringify([D.shape,tier,D.w,D.h,cut&&[r2(ps.w),r2(ps.h)]]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const ew=cut?(ar<=1?w:w/ar):w,eh=cut?(ar<=1?w*ar:w):h,on=cut?Math.abs(Math.max(ps.w,ps.h)-w)<.03:D.w===w&&D.h===h,p=r2(basePrice(ew,eh).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${on}" data-tip="${cut?`${fmt(r2(ew))} × ${fmt(r2(eh))} in, `:''}${money(p)} each at ${QTY[tier].toLocaleString()}">${sq||cut?w+' in':w+' × '+h}</button>`}).join('')}}
   const vh=$('#vinylHelp');if(vh)vh.textContent=D.vinyl==='white'?'Bright white base for bold, full color.':'White areas of your design print clear, so the metal shows through.';
   const bh=$('#bgHelp');if(bh)bh.textContent=D.bg.t==='img'?'Using an image. Pick a color to replace it.':D.vinyl==='white'?'"None" leaves the gloss white vinyl.':'Choose "None" to let the metal show.';return}
  const rb=$('#ratioBtn');if(rb)rb.setAttribute('aria-pressed',String(keepRatio||(e&&(e.type==='image'||e.type==='text'))));
@@ -191,7 +191,30 @@ insEl.addEventListener('pointerdown',ev=>{const l=ev.target.closest('[data-scrub
 
 /* ---------- sticker shape / size / finish ---------- */
 let szBase=null;
-function setSize(nw,nh){nw=clamp(nw,MIN,MAX);nh=clamp(nh,MIN,MAX);
+/* Cut to design: the size a shopper picks is the finished sticker, measured around the cut line (what we print,
+   cut and price). Scale the artwork so the cut line lands on that size; the border width stays the same.
+   Pass only nw or only nh to size by that side (the other follows the art's proportions). */
+let cutGoal=null;
+function cutPass(nw,nh,noMeasure){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);if(!c)return null;
+ const b=c.bbox,g=D.gap,aw=Math.max(1,b.w-2*g),ah=Math.max(1,b.h-2*g);
+ const kw=nw!=null?(nw*100-2*g)/aw:Infinity,kh=nh!=null?(nh*100-2*g)/ah:Infinity;let k=Math.min(kw,kh);if(!isFinite(k)||k<=0)return null;
+ const hiK=(MAX*100-2*g)/Math.max(aw,ah),loK=(MIN*100-2*g)/Math.min(aw,ah);k=clamp(k,Math.min(loK,hiK),hiK);
+ const cx=b.x+b.w/2,cy=b.y+b.h/2,vis=D.els.filter(e=>!e.hidden);
+ D.els.forEach(e=>{e.x=(e.x-cx)*k;e.y=(e.y-cy)*k;if(e.type==='text')e.size*=k;else{e.w*=k;if(e.type!=='line')e.h*=k}});invalidateText();
+ if(!noMeasure)D.els.forEach(e=>{if(e.type==='text')measureNow(e)});   /* text boxes are measured from the rendered glyphs; refresh them before the next measurement */
+ const fw=aw*k+2*g,fh=ah*k+2*g,u=unionBox(vis),m=2*(g+2),A=(span,fin)=>Math.min(MAX*100,Math.max(fin,span+m));
+ D.w=Math.ceil(A(u.x1-u.x0,fw))/100;D.h=Math.ceil(A(u.y1-u.y0,fh))/100;D.els.forEach(e=>{e.x+=W()/2;e.y+=H()/2});return k}
+function setCutSize(nw,nh){if(!D.els.some(e=>!e.hidden))return false;let k=cutPass(nw,nh);if(k==null)return false;
+ /* the cut line is measured from pixels: re-measure and correct until it lands on the size picked */
+ for(let i=0;i<3&&k!=null&&Math.abs(k-1)>.0015;i++)k=cutPass(nw,nh);
+ szBase=null;D.bfit=1;CT.sig=contourSig();computeContour();cutGoal={nw,nh,n:0,t:performance.now(),sig:JSON.stringify(D.els)};if(zoom===1)cam=null;req();return true}
+/* Text renders a hair narrower on the canvas than in the off-screen measure, so once the real cut line is traced
+   after the redraw, nudge the size onto the target (at most twice). Runs from computeContour. */
+function cutSettle(){const g=cutGoal;if(!g||D.shape!=='custom'||!CT.bbox)return;if(JSON.stringify(D.els)!==g.sig){cutGoal=null;return}   /* the design changed since (undo, edit): leave it alone */
+ if(g.n>=2||performance.now()-g.t>4000){cutGoal=null;return}
+ const w=CT.bbox.w/100,h=CT.bbox.h/100,err=Math.min(g.nw!=null?Math.abs(w-g.nw):9,g.nh!=null?Math.abs(h-g.nh):9);if(err<.004){cutGoal=null;return}
+ g.n++;if(cutPass(g.nw,g.nh,true)==null){cutGoal=null;return}g.sig=JSON.stringify(D.els);CT.sig='';last=snapshot();saveSoon();syncPanels();req()}
+function setSize(nw,nh,raw){if(!raw&&D.shape==='custom'&&setCutSize(nw,nh))return;nw=clamp(nw,MIN,MAX);nh=clamp(nh,MIN,MAX);
  if(!szBase||szBase.sig!==JSON.stringify(D.els))szBase={w:D.w,h:D.h,els:JSON.stringify(D.els)};
  const sx=nw/szBase.w,sy=nh/szBase.h,s=Math.min(sx,sy);D.els=JSON.parse(szBase.els);
  D.els.forEach(e=>{e.x*=sx;e.y*=sy;if(e.type==='text')e.size*=s;else{e.w*=s;if(e.type!=='line')e.h*=s}});D.w=Math.round(nw*100)/100;D.h=Math.round(nh*100)/100;szBase.sig=JSON.stringify(D.els);CT.sig='';if(zoom===1)cam=null;req()}
@@ -259,13 +282,12 @@ document.addEventListener('pointerdown',hideTip,true);document.addEventListener(
 function cbarUI(){const t=curTier(),all=tiers(),ps=pricedSize(),blank=isBlank(),ck=blank?null:checks(),nw=ck?ck.filter(c=>c.level==='warning'||c.level==='error').length:0;
  const pill=$('#chkPill');pill.className='pill '+(blank?'':nw?'warn':'ok');$('#chkTxt').textContent=blank?'Print check':nw?`${nw} thing${nw===1?'':'s'} to check`:'Print-ready';pill.setAttribute('aria-label',blank?'Print check runs once you add a design':nw?`${nw} print issues to check`:'Print check passed');
  const sm=`<b>${esc(SN[D.shape])}</b><span class="sep">·</span>${fmt(ps.w)} × ${fmt(ps.h)} in<span class="sep">·</span>${esc(VN[D.vinyl])}`;if($('#cbSum').dataset.h!==sm){$('#cbSum').dataset.h=sm;$('#cbSum').innerHTML=sm}
- $('#qtyTxt').textContent=`${t.q.toLocaleString()} stickers`;$('#qtyEach').textContent=`${money(t.p)} ea`;
- $('#totAmt').textContent=money(t.t);const rem=FREE-t.t;$('#totSub').innerHTML=`<span class="save">Save ${t.s}%</span> · ${rem>0?`Free shipping at ${money(FREE)}`:'Ships free'}`;
- const rb=$('#reviewBtn');const nar=NARROW.matches;rb.innerHTML=blank?'<svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>'+(nar?'Design it':'Add your design'):(nar?'Order':'Review &amp; order')+'<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';
+ const rem=FREE-t.t;   /* price and quantity live in the Review & Print step, not in the designer bar */
+ const rb=$('#reviewBtn'),rbh='Review &amp; Print<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';if(rb.dataset.h!==rbh){rb.dataset.h=rbh;rb.innerHTML=rbh}
  const tp=$('#tpShipTxt');if(tp)tp.textContent=rem>0?`Orders of $75 or more ship free. Add ${money(rem)} more to this order to qualify.`:'Good news: this order ships free.';
  $('#skuCode')&&($('#skuCode').textContent=skuFor());upsellUI(t)}
 function priceBreak(){const all=tiers(),t=all[tier],n=all[tier+1];if(!n)return '';return `At ${n.q.toLocaleString()} the price drops from ${money(t.p)} to ${money(n.p)} each.`}
-$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
+$('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
  openPop(b,`<div class="mh">Quantity · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in</div>${all.map((x,i)=>`<button type="button" class="qrow" role="menuitemradio" data-tier="${i}" aria-checked="${i===tier}"><span class="rd" aria-hidden="true"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join('')}${priceBreak()?`<p class="qnote">${priceBreak()}</p>`:''}`,{btn:b,cls:'qpop',above:true,align:'right'});
  pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();track('builder_qty',{qty:QTY[tier]})}});
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
@@ -371,21 +393,96 @@ const PrintAPI=window.CustomGeniePrint=window.CustomGeniePrint||(()=>{const draf
   createCheckout:async({quote_id,proof_id,idempotency_key})=>{if(drafts[idempotency_key])return drafts[idempotency_key];const id='do_'+nid();return drafts[idempotency_key]={checkout_url:'#checkout/'+id,draft_order_id:id,expires_at:new Date(Date.now()+36e5).toISOString(),summary:{quote_id,proof_id}}}}})();
 
 /* ---------- review: proof + quote + approve ---------- */
-let rvMode='flat',QUOTE=null;
-async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';renderReview();if(!d.open)d.showModal();track('review_open');
- const ps=pricedSize();QUOTE=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:{finish:D.vinyl}});renderReview()}
-function renderReview(){const t=curTier(),ps=pricedSize(),rem=FREE-t.t,q=QUOTE;
- $$('.rv-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rv===rvMode)));
- $('#rvArt').innerHTML=thumbSVG(D,'Proof of your sticker',{proof:rvMode==='flat'});
- $('#rvCap').textContent=`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${D.vinyl!=='white'?` · white areas print clear on ${D.vinyl}`:''}${D.shape==='custom'?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`;
- const ship=q&&q.estimated_ship_date?new Date(q.estimated_ship_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):'';
- $('#rvSpec').innerHTML=[['Product',PNAME[D.vinyl]],['Product code',skuFor()],['Shape',SN[D.shape]+(D.shape==='rect'||D.shape==='square'?(D.rounded?', standard corners':', minimal corners'):'')],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]],['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" id="rvQty">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
- const pb=priceBreak(),rb=$('#rvBreak');rb.hidden=!pb;rb.textContent=pb;
- $('#rvChecks').innerHTML=checksHTML(checks());$('#rvQuoteTxt').textContent=q?`Quote ${q.quote_id.slice(0,10)} · valid 24 h`:'Pricing…';
+/* ---------- Review & Print: 1 check the proof, 2 choose a quantity, 3 see the price and add to cart ----------
+   The preview stays on the left through every step. "See it on" draws the finished (domed) sticker on everyday
+   objects at true scale (100 units = 1 in, same as the studio), so shoppers can judge the size before they buy. */
+let rvMode='flat',rvStep=1,rvMax=1,QUOTE=null,rvQSeq=0;
+const RV_ON={   /* typical object sizes, used for scale; w/h = the flat area a sticker can sit on */
+ laptop:{noun:'laptop lid',cap:'a 13 in laptop lid (12 × 8.4 in)',w:11,h:7.6},
+ notebook:{noun:'notebook cover',cap:'an A5 notebook (5.8 × 8.3 in)',w:4.8,h:8},
+ bottle:{noun:'bottle',cap:'a 24 oz water bottle (2.9 in across)',w:2.9*Math.PI/2,h:6.8,r:1.45},
+ flask:{noun:'flask',cap:'an 8 oz flask (3.8 × 5.5 in)',w:3.6,h:4.4}};
+function rvShapeTxt(){return SN[D.shape]+(D.shape==='rect'||D.shape==='square'?(D.rounded?', standard corners':', minimal corners'):'')}
+/* the finished sticker as a nested svg centred on (cx,cy) in scene units; sx squeezes it to fake a curved surface */
+function rvSticker(cx,cy,sx){let s=thumbSVG(D,'',{proof:false});const v=(s.match(/viewBox="([^"]+)"/)||[])[1];if(!v)return'';const [,,vw,vh]=v.split(/\s+/).map(Number);
+ s=s.replace(/ role="img" aria-label="[^"]*"/,' aria-hidden="true"').replace('<svg ',`<svg x="${cx-vw/2}" y="${cy-vh/2}" width="${vw}" height="${vh}" overflow="visible" `);
+ return `<g id="rvStk" transform="translate(${cx} 0) scale(${sx||1} 1) translate(${-cx} 0)">${s}</g>`}
+function rvScene(k){const o=RV_ON[k],ps=pricedSize(),lab=esc(`Your ${fmt(ps.w)} × ${fmt(ps.h)} in sticker shown to scale on ${o.cap}`);
+ const grad=(id,stops,x2=1,y2=0)=>`<linearGradient id="${id}" x1="0" y1="0" x2="${x2}" y2="${y2}">${stops.map(([o2,c,a])=>`<stop offset="${o2}" stop-color="${c}"${a!=null?` stop-opacity="${a}"`:''}/>`).join('')}</linearGradient>`;
+ const defs=`<linearGradient id="rvsDesk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--scene-a)"/><stop offset="1" style="stop-color:var(--scene-b)"/></linearGradient><filter id="rvsBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>`;
+ /* curved surface: shade the sticker with the same light as the object (mask = the sticker's own shape) */
+ const shade=(x,y,w,h,id)=>`<mask id="rvsM" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="2000" height="2000"><use href="#rvStk"/></mask><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#${id})" mask="url(#rvsM)"/>`;
+ if(k==='laptop'){const X=100,Y=105,W=1200,H=840;
+  return `<svg viewBox="0 0 1400 1050" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsLid',[[0,'#6A707A'],[.55,'#4E545D'],[1,'#3C4148']],1,1)}<clipPath id="rvsC"><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="48"/></clipPath></defs>
+   <rect width="1400" height="1050" fill="url(#rvsDesk)"/><rect x="${X+16}" y="${Y+30}" width="${W-32}" height="${H}" rx="48" fill="#000" opacity=".32" filter="url(#rvsBlur)"/>
+   <rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="48" fill="url(#rvsLid)"/><rect x="${X+5}" y="${Y+5}" width="${W-10}" height="${H-10}" rx="44" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>
+   <rect x="${X+70}" y="${Y+H-18}" width="${W-140}" height="10" rx="5" fill="#000" opacity=".25"/>
+   <g clip-path="url(#rvsC)">${rvSticker(X+W*.62,Y+H*.42)}</g></svg>`}
+ if(k==='notebook'){const X=313,Y=38,W=574,H=824,cx=X+(44+W*.86)/2;
+  return `<svg viewBox="0 0 1200 900" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsKr',[[0,'#CFA676'],[.6,'#BE925F'],[1,'#AD8050']],1,1)}<clipPath id="rvsC"><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="14"/></clipPath></defs>
+   <rect width="1200" height="900" fill="url(#rvsDesk)"/><rect x="${X+18}" y="${Y+30}" width="${W}" height="${H}" rx="16" fill="#000" opacity=".3" filter="url(#rvsBlur)"/>
+   <rect x="${X+7}" y="${Y+6}" width="${W}" height="${H}" rx="14" fill="#F4EFE4" stroke="#D6CCB9" stroke-width="2"/><rect x="${X}" y="${Y}" width="${W}" height="${H}" rx="14" fill="url(#rvsKr)"/>
+   <path d="M${X+14} ${Y}H${X+44}V${Y+H}H${X+14}A14 14 0 0 1 ${X} ${Y+H-14}V${Y+14}A14 14 0 0 1 ${X+14} ${Y}Z" fill="#000" opacity=".1"/><line x1="${X+44}" y1="${Y+4}" x2="${X+44}" y2="${Y+H-4}" stroke="#000" stroke-opacity=".16" stroke-width="2"/>
+   <g clip-path="url(#rvsC)">${rvSticker(cx,Y+H*.4)}</g>
+   <rect x="${X+W*.86}" y="${Y-4}" width="18" height="${H+8}" rx="4" fill="#1E2023"/><rect x="${X+W*.86+4}" y="${Y-4}" width="3" height="${H+8}" fill="#fff" opacity=".14"/></svg>`}
+ if(k==='bottle'){const r=o.r*100,sw=ps.w*100,a=sw/(2*r),sx=Math.min(1,(a<Math.PI/2?Math.sin(a):1)*2*r/sw);
+  const body='M605 212L795 212C835 220 845 250 845 300L845 990Q845 1030 805 1030L595 1030Q555 1030 555 990L555 300C555 250 565 220 605 212Z';
+  return `<svg viewBox="0 0 1400 1050" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsPaint',[[0,'#55705F'],[.2,'#83A291'],[.34,'#A8C5B6'],[.5,'#8DAC9C'],[.8,'#6C8A7B'],[1,'#4A6355']])}
+   ${grad('rvsCyl',[[0,'#000',.5],[.14,'#000',.16],[.3,'#fff',.2],[.4,'#fff',0],[.62,'#000',0],[.86,'#000',.2],[1,'#000',.55]])}${grad('rvsCap',[[0,'#15181B'],[.35,'#3A4047'],[.6,'#262A2F'],[1,'#121417']])}<clipPath id="rvsC"><path d="${body}"/></clipPath></defs>
+   <rect width="1400" height="1050" fill="url(#rvsDesk)"/><ellipse cx="700" cy="1030" rx="215" ry="16" fill="#000" opacity=".4" filter="url(#rvsBlur)"/>
+   <path d="M652 104C652 26 748 26 748 104" fill="none" stroke="#1D2024" stroke-width="22" stroke-linecap="round"/><rect x="585" y="88" width="230" height="112" rx="24" fill="url(#rvsCap)"/>
+   <rect x="598" y="198" width="204" height="16" rx="4" fill="#2C3136"/><path d="${body}" fill="url(#rvsPaint)"/><rect x="603" y="330" width="12" height="640" rx="6" fill="#fff" opacity=".16"/>
+   <g clip-path="url(#rvsC)">${rvSticker(700,640,sx)}${shade(555,212,290,820,'rvsCyl')}</g></svg>`}
+ /* flask */
+ const body='M548 214L652 214C664 258 790 262 790 336L790 758Q790 800 748 800L452 800Q410 800 410 758L410 336C410 262 536 258 548 214Z';
+ return `<svg viewBox="0 0 1200 900" role="img" aria-label="${lab}"><defs>${defs}${grad('rvsSt',[[0,'#878E95'],[.12,'#C7CCD1'],[.28,'#F3F5F7'],[.4,'#D2D7DB'],[.62,'#B3BAC0'],[.85,'#E1E5E8'],[1,'#7F868D']])}
+  ${grad('rvsFl',[[0,'#000',.3],[.18,'#000',0],[.28,'#fff',.22],[.38,'#fff',0],[.85,'#000',0],[1,'#000',.32]])}${grad('rvsCapS',[[0,'#7D848B'],[.3,'#DDE1E4'],[.55,'#A7AEB4'],[1,'#6E757C']])}<clipPath id="rvsC"><path d="${body}"/></clipPath></defs>
+  <rect width="1200" height="900" fill="url(#rvsDesk)"/><ellipse cx="600" cy="802" rx="210" ry="15" fill="#000" opacity=".38" filter="url(#rvsBlur)"/>
+  <rect x="541" y="128" width="118" height="90" rx="12" fill="url(#rvsCapS)"/>${Array.from({length:10},(_,i)=>`<rect x="${549+i*11}" y="134" width="3" height="78" fill="#000" opacity=".12"/>`).join('')}
+  <rect x="556" y="206" width="88" height="14" fill="#8F969D"/><path d="${body}" fill="url(#rvsSt)"/><path d="${body}" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="2"/>
+  <g clip-path="url(#rvsC)">${rvSticker(600,545,.98)}${shade(410,214,380,586,'rvsFl')}</g></svg>`}
+function rvPreview(){const ps=pricedSize(),o=RV_ON[rvMode];
+ $$('#reviewDlg [data-rv]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rv===rvMode)));
+ $('#rvProof').dataset.scene=o?rvMode:'';
+ $('#rvArt').innerHTML=o?rvScene(rvMode):thumbSVG(D,'Proof of your sticker',{proof:rvMode==='flat'});
+ const big=o&&(ps.w>o.w||ps.h>o.h)?` At this size it's bigger than the flat part of the ${o.noun}, so it would ${rvMode==='bottle'?'wrap around the sides':'hang over the edge'}.`:'';
+ const curve=rvMode==='bottle'&&!big&&ps.w>2.2?' It curves around the bottle, so the sides turn away from view.':'';
+ $('#rvCap').textContent=o?`Shown to scale: your ${fmt(ps.w)} × ${fmt(ps.h)} in sticker on ${o.cap}.${big||curve}`
+  :`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${D.vinyl!=='white'?` · white areas print clear on ${D.vinyl}`:''}${D.shape==='custom'?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`}
+function rvShip(){const q=QUOTE;return q&&q.estimated_ship_date?new Date(q.estimated_ship_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):''}
+function rvQuotePill(){$('#rvQuoteTxt').textContent=QUOTE?`Quote ${QUOTE.quote_id.slice(0,10)} · valid 24 h`:'Pricing…'}
+function rvSpec1(){const ps=pricedSize();$('#rvSpec1').innerHTML=[['Product',PNAME[D.vinyl]],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]]].map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}
+function rvQtys(){const all=tiers();
+ $('#rvQtys').innerHTML=all.map((x,i)=>`<label class="qopt"><input type="radio" name="rvq" value="${i}"${i===tier?' checked':''}><span class="q"><b>${x.q.toLocaleString()}</b> stickers</span><span class="tt">${money(x.t)}</span><span class="ea">${money(x.p)} each</span><span class="sv">Save ${x.s}%</span></label>`).join('');rvPrice()}
+function rvPrice(){const t=curTier(),rem=FREE-t.t,ship=rvShip();
+ $('#rvPrice').innerHTML=`<div class="row"><span>${t.q.toLocaleString()} stickers × ${money(t.p)}</span><b class="tot">${money(t.t)}</b></div><small>Setup and design help are free. ${rem>0?`Shipping is calculated at checkout, free on orders over ${money(FREE)}.`:'Shipping is free.'}${ship?` Estimated to ship ${ship}.`:''}</small>`;
+ $('#rvNext2').innerHTML=`Continue · ${money(t.t)}<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg>`}
+function rvSpec3(){const t=curTier(),ps=pricedSize(),rem=FREE-t.t,ship=rvShip();
+ $('#rvSpec').innerHTML=[['Product',PNAME[D.vinyl]],['Product code',skuFor()],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]],['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" data-go="2">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
  $('#addCart').textContent=`Add to cart · ${money(t.t)}`}
-$('#reviewDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){ev.currentTarget.close();return}const b=ev.target.closest('[data-rv]');if(b){rvMode=b.dataset.rv;renderReview();return}
- if(ev.target.id==='rvQty'){const all=tiers();openPop(ev.target,all.map((x,i)=>`<button type="button" class="qrow" data-tier="${i}" aria-checked="${i===tier}"><span class="rd"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join(''),{btn:ev.target,cls:'qpop'});pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();openReview()};return}
+function renderReview(){rvPreview();rvSpec1();$('#rvChecks').innerHTML=checksHTML(checks());rvQuotePill();if(rvStep===2)rvQtys();if(rvStep===3)rvSpec3()}
+const RV_STEP=['proof','quantity','cart'],RV_LBL=['Proof','Quantity','Add to cart'];
+function rvGo(n,quiet){if(n>1&&!$('#confirm').checked){confirmOk();n=1}
+ rvStep=n;rvMax=Math.max(rvMax,n);
+ $$('#reviewDlg .rv-pane').forEach(p=>{p.hidden=+p.dataset.pane!==n});
+ $$('#rvStepper [data-go]').forEach(b=>{const k=+b.dataset.go,st=k<n?'done':k===n?'now':'todo';b.closest('li').dataset.state=st;
+  if(k===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');b.disabled=k>rvMax;b.setAttribute('aria-label',`Step ${k}, ${RV_LBL[k-1]}${st==='done'?', done':''}`)});
+ if(n===2)rvQtys();if(n===3)rvSpec3();
+ if(quiet)return;track('review_step',{step:RV_STEP[n-1]});
+ const h=$('#rvS'+n);requestAnimationFrame(()=>{h.focus({preventScroll:true});if(NARROW.matches)h.scrollIntoView({block:'start',behavior:reduce.matches?'auto':'smooth'})})}
+async function rvRequote(){const seq=++rvQSeq,ps=pricedSize();let q=null;try{q=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:{finish:D.vinyl}})}catch(e){}
+ if(seq!==rvQSeq||!q)return;QUOTE=q;rvQuotePill();if(rvStep===2)rvPrice();if(rvStep===3)rvSpec3()}
+async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';rvStep=1;rvMax=1;QUOTE=null;renderReview();rvGo(1,true);if(!d.open)d.showModal();
+ requestAnimationFrame(()=>$('#rvS1').focus({preventScroll:true}));track('review_open');await rvRequote()}
+$('#reviewDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){ev.currentTarget.close();return}
+ const v=ev.target.closest('[data-rv]');if(v){rvMode=v.dataset.rv;rvPreview();if(RV_ON[rvMode])track('mockup_view',{surface:rvMode});return}
+ const g=ev.target.closest('[data-go]');if(g){if(!g.disabled)rvGo(+g.dataset.go);return}
  onCheckClick(ev,true)});
+$('#reviewDlg').addEventListener('change',ev=>{if(ev.target.name!=='rvq')return;tier=+ev.target.value;commit();rvPrice();const t=curTier();
+ track('select_quantity',{quantity:t.q,value:t.t});rvRequote()});
+$('#rvNext1').addEventListener('click',()=>{if(confirmOk())rvGo(2)});
+$('#rvNext2').addEventListener('click',()=>rvGo(3));
+$('#rvEdit').addEventListener('click',()=>$('#reviewDlg').close());
 $('#rvClose').addEventListener('click',()=>$('#reviewDlg').close());
 $('#instr').addEventListener('input',ev=>{$('#instrCount').textContent=`${ev.target.value.length} / 250`});
 $('#confirm').addEventListener('change',ev=>{if(ev.target.checked){$('#confirmBox').dataset.invalid='false';$('#confirmErr').hidden=true}});
@@ -493,7 +590,7 @@ $$('[data-tryfinish]').forEach(b=>b.addEventListener('click',()=>{const v=b.data
  row.addEventListener('scroll',()=>requestAnimationFrame(cur),{passive:true});bs.forEach((b,i)=>b.addEventListener('click',()=>row.scrollTo({left:cards[i].offsetLeft-16,behavior:reduce.matches?'auto':'smooth'})));cur()}}
 /* mega menu */
 {const megaBtn=$('#megaBtn'),mega=$('#mega'),megaHov=matchMedia('(hover:hover) and (min-width:1180px)');let megaT=0,megaAt=0;
- const megaOpen=(on,back)=>{if(on===!mega.hidden)return;megaBtn.setAttribute('aria-expanded',String(on));mega.hidden=!on;if(on){megaAt=Date.now();$$('#mega .pop img').forEach((im,i)=>{const g=$$('.gallery img')[i];if(g&&!im.src)im.src=g.src})}else if(back)megaBtn.focus()};
+ const megaOpen=(on,back)=>{if(on===!mega.hidden)return;megaBtn.setAttribute('aria-expanded',String(on));mega.hidden=!on;if(on){megaAt=Date.now();$$('#mega .pop img').forEach(im=>{if(!im.getAttribute('src')&&im.dataset.src)im.src=im.dataset.src})}else if(back)megaBtn.focus()};
  megaBtn.addEventListener('click',()=>{if(!mega.hidden&&Date.now()-megaAt<450)return;megaOpen(mega.hidden)});
  megaBtn.parentElement.addEventListener('mouseenter',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(true),140)});
  megaBtn.parentElement.addEventListener('mouseleave',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(false),220)});

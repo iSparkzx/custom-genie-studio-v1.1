@@ -303,7 +303,7 @@ function chatSystem(ctx) {
     `- Sizes: ${f.minIn || 0.5} to ${f.maxIn || 8.5} inches on each side.`,
     `- Finishes: ${(f.finishes || []).join(', ') || 'Gloss White, Brushed Silver, Brushed Gold'}.`,
     `- Quantities with price breaks: ${(f.quantities || []).join(', ')}.`,
-    '- Prices, discounts, shipping and turnaround: do not quote numbers. Say the price panel next to the sticker shows the exact price for their size and quantity.',
+    '- Prices, quantities, discounts, shipping and turnaround: do not quote numbers. Say the Review & Print step shows the exact price, where they also pick the quantity.',
     '- Designs are Genie AI Generated Artwork and can contain mistakes, so remind the shopper to check spelling before ordering when text is involved.',
     '',
     'LIMITS',
