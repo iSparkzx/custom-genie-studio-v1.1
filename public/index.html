@@ -1455,7 +1455,6 @@ body.hide-notes .note{display:none}
        </defs>
        <g class="v-sheet"><rect id="sheetRect" class="sheet" rx="6"/><rect id="paRect" class="pa" rx="4"/><text id="sheetCap" class="svg-t"></text></g>
        <g id="shadowG"><path id="shadowP" fill="#000" filter="url(#fSoft)"/><image id="shadowImg" preserveAspectRatio="none" filter="url(#fShImg)" style="display:none"/></g>
-       <use id="ghost" class="v-edit" href="#elsG" opacity=".22"/>
        <g mask="url(#cutMask)">
         <g><rect id="subRect"/><rect id="brushRect" fill="#000" filter="url(#fBrush)" opacity=".45"/></g>
         <g id="printG"><rect id="bgRect"/><image id="bgImg" preserveAspectRatio="xMidYMid slice"/><g id="elsG"></g></g>
@@ -1850,7 +1849,7 @@ function artboard(){
  setA($('#glossR'),{x:0,y:0,width:w,height:h});setA($('#specR'),{x:0,y:0,width:w,height:h});
  const rim=$('#rimP');if(con)show(rim,0);else{show(rim,1);setA(rim,{d,'stroke-width':m*.07,'stroke-opacity':.3});$('#rimBlur').setAttribute('stdDeviation',m*.02)}
  const off=dome?m*.035:m*.012,blur=dome?m*.04:m*.022,opa=dome?.3:.14,sp=$('#shadowP'),si=$('#shadowImg');
- if(con){show(sp,0);setA(si,{href:CT.url,x:0,y:off,width:w,height:h,opacity:opa});show(si,1)}else{show(si,0);show(sp,1);setA(sp,{d,transform:`translate(0 ${off})`,opacity:opa})}
+ show(sp,0);show(si,0);   /* no soft shadow or halo: the sticker is always a clean die-cut edge */
  $('#shBlur').setAttribute('stdDeviation',blur);$('#shBlur2').setAttribute('stdDeviation',blur);
  const cut=$('#cutP'),ci=$('#cutImg'),safe=$('#safeP');
  if(con){show(cut,0);show(safe,0);setA(ci,{href:CT.url,x:0,y:0,width:w,height:h});$('#edgeR').setAttribute('radius',1.4*K);show(ci,1)}
@@ -1885,7 +1884,10 @@ function contourAt(gap,P,xf){const w=W(),h=H(),cw=Math.max(1,Math.ceil(w*P)),ch=
  y.putImageData(id,0,0);if(x1<0)return null;return{canvas:b,url:b.toDataURL(),bbox:{x:x0/P,y:y0/P,w:(x1-x0+1)/P,h:(y1-y0+1)/P}}}
 function computeContour(){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(D.gap,P);
  if(!c){CT.url=null;CT.bbox=null;req();return}
- const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(1px)';sx.drawImage(c.canvas,0,0);
+ /* clean die-cut edge: a 2px blur rounds off the pixel steps, then the alpha is snapped back to a hard edge at the
+    halfway line (under a pixel of anti-aliasing, no soft fade, and the outline stays where it was traced) */
+ const sm=document.createElement('canvas');sm.width=c.canvas.width;sm.height=c.canvas.height;const sx=sm.getContext('2d');sx.filter='blur(2px)';sx.drawImage(c.canvas,0,0);sx.filter='none';
+ const id=sx.getImageData(0,0,sm.width,sm.height),px=id.data;for(let i=3;i<px.length;i+=4){const a=px[i];px[i]=a<=112?0:a>=144?255:Math.round((a-112)*255/32)}sx.putImageData(id,0,0);
  CT.url=sm.toDataURL();CT.bbox=c.bbox;req();if(typeof cutSettle==='function')cutSettle()}
 
 /* ---------- camera ---------- */
@@ -3000,7 +3002,7 @@ async function v3dBuild(px){const R=await v3dRaster(px);if(!V3.on)return;if(!R){
   const stex=new T.CanvasTexture(sc);
   if(V3.shadow){V3.shadow.geometry.dispose();V3.shadow.material.map.dispose();V3.shadow.geometry=new T.PlaneGeometry(w*(1+2*pad),h*(1+2*pad));V3.shadow.material.map=stex;V3.shadow.material.needsUpdate=true}
   else{V3.shadow=new T.Mesh(new T.PlaneGeometry(w*(1+2*pad),h*(1+2*pad)),new T.MeshBasicMaterial({map:stex,color:0x0b1020,transparent:true,depthWrite:false,opacity:.75}));V3.shadow.renderOrder=0;grp.add(V3.shadow)}
-  V3.shadow.position.set(w*.012,-h*.03,-1.2)}
+  V3.shadow.position.set(w*.012,-h*.03,-1.2);V3.shadow.visible=false}   /* no soft shadow halo: the sticker is always a clean die-cut edge */
  const mat=V3.mesh.material;if(V3.tex)V3.tex.dispose();if(V3.mr)V3.mr.dispose();V3.tex=tex;V3.mr=mrTex;
  mat.map=tex;mat.metalnessMap=mrTex;mat.roughnessMap=mrTex;mat.metalness=mrTex?1:0;mat.roughness=mrTex?1:.48;mat.envMapIntensity=mrTex?.9:.62;mat.needsUpdate=true;v3dShow()}
 function v3dShow(){if(!V3.el||V3.el.classList.contains('ready'))return;V3.el.classList.add('ready');$('.v3d-load',V3.el).hidden=true;if(V3.intro){V3.intro=false;v3dIntro()}}
@@ -3520,9 +3522,9 @@ function thumbSVG(doc,lab,opt){opt=opt||{};const save=D;D=doc;const w=doc.w*100,
  const bg=doc.bg.t==='color'?`<rect width="${w}" height="${h}" fill="${metal&&doc.bg.c.toUpperCase()==='#FFFFFF'?basef:doc.bg.c}"/>`:doc.bg.t==='img'&&IM[doc.bg.img]?`<image href="${IM[doc.bg.img].url}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>`:'';
  const lbl=`role="img" aria-label="${esc(lab||'Design option')}"`;
  if(doc.shape==='custom'){const back=doc.vinyl==='white'?'#FFFFFF':doc.vinyl==='silver'?'#CDD2D8':'#D9B865';
-  return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><filter id="ct${u}" x="-20%" y="-20%" width="140%" height="140%"><feMorphology in="SourceAlpha" operator="dilate" radius="${doc.gap}" result="d"/><feFlood flood-color="${back}"/><feComposite in2="d" operator="in" result="bk"/><feDropShadow in="bk" dx="0" dy="${w*.012}" stdDeviation="${w*.012}" flood-opacity=".25" result="sh"/><feMerge><feMergeNode in="sh"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#ct${u})">${els}</g></svg>`}
+  return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><filter id="ct${u}" x="-20%" y="-20%" width="140%" height="140%"><feComponentTransfer in="SourceAlpha" result="a"><feFuncA type="discrete" tableValues="0 1 1 1 1 1 1 1 1 1"/></feComponentTransfer><feMorphology in="a" operator="dilate" radius="${doc.gap}" result="d"/><feFlood flood-color="${back}"/><feComposite in2="d" operator="in" result="bk"/><feComposite in="SourceGraphic" in2="d" operator="in" result="art"/><feMerge><feMergeNode in="bk"/><feMergeNode in="art"/></feMerge></filter></defs><g filter="url(#ct${u})">${els}</g></svg>`}
  const sd=shapeD(doc,0);
- return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><clipPath id="cp${u}"><path d="${sd}"/></clipPath><filter id="sh${u}" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="${Math.max(w,h)*.012}" stdDeviation="${Math.max(w,h)*.014}" flood-opacity=".22"/></filter></defs><path d="${sd}" fill="${basef}" filter="url(#sh${u})"/><g clip-path="url(#cp${u})">${bg}${els}${opt.proof?'':`<path d="${sd}" fill="url(#gGloss)"/>`}</g><path d="${sd}" fill="none" stroke="rgba(0,0,0,${opt.proof?.45:.12})" stroke-width="${Math.max(w,h)*(opt.proof?.004:.006)}"/></svg>`}
+ return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><clipPath id="cp${u}"><path d="${sd}"/></clipPath></defs><path d="${sd}" fill="${basef}"/><g clip-path="url(#cp${u})">${bg}${els}${opt.proof?'':`<path d="${sd}" fill="url(#gGloss)"/>`}</g><path d="${sd}" fill="none" stroke="rgba(0,0,0,${opt.proof?.45:.12})" stroke-width="${Math.max(w,h)*(opt.proof?.004:.006)}"/></svg>`}
 
 /* ---------- Genie conversation UI ---------- */
 const feed=$('#gfeed');

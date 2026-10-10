@@ -113,7 +113,7 @@ async function v3dBuild(px){const R=await v3dRaster(px);if(!V3.on)return;if(!R){
   const stex=new T.CanvasTexture(sc);
   if(V3.shadow){V3.shadow.geometry.dispose();V3.shadow.material.map.dispose();V3.shadow.geometry=new T.PlaneGeometry(w*(1+2*pad),h*(1+2*pad));V3.shadow.material.map=stex;V3.shadow.material.needsUpdate=true}
   else{V3.shadow=new T.Mesh(new T.PlaneGeometry(w*(1+2*pad),h*(1+2*pad)),new T.MeshBasicMaterial({map:stex,color:0x0b1020,transparent:true,depthWrite:false,opacity:.75}));V3.shadow.renderOrder=0;grp.add(V3.shadow)}
-  V3.shadow.position.set(w*.012,-h*.03,-1.2)}
+  V3.shadow.position.set(w*.012,-h*.03,-1.2);V3.shadow.visible=false}   /* no soft shadow halo: the sticker is always a clean die-cut edge */
  const mat=V3.mesh.material;if(V3.tex)V3.tex.dispose();if(V3.mr)V3.mr.dispose();V3.tex=tex;V3.mr=mrTex;
  mat.map=tex;mat.metalnessMap=mrTex;mat.roughnessMap=mrTex;mat.metalness=mrTex?1:0;mat.roughness=mrTex?1:.48;mat.envMapIntensity=mrTex?.9:.62;mat.needsUpdate=true;v3dShow()}
 function v3dShow(){if(!V3.el||V3.el.classList.contains('ready'))return;V3.el.classList.add('ready');$('.v3d-load',V3.el).hidden=true;if(V3.intro){V3.intro=false;v3dIntro()}}
