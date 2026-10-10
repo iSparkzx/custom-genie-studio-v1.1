@@ -493,7 +493,7 @@ $$('[data-tryfinish]').forEach(b=>b.addEventListener('click',()=>{const v=b.data
  row.addEventListener('scroll',()=>requestAnimationFrame(cur),{passive:true});bs.forEach((b,i)=>b.addEventListener('click',()=>row.scrollTo({left:cards[i].offsetLeft-16,behavior:reduce.matches?'auto':'smooth'})));cur()}}
 /* mega menu */
 {const megaBtn=$('#megaBtn'),mega=$('#mega'),megaHov=matchMedia('(hover:hover) and (min-width:1180px)');let megaT=0,megaAt=0;
- const megaOpen=(on,back)=>{if(on===!mega.hidden)return;megaBtn.setAttribute('aria-expanded',String(on));mega.hidden=!on;if(on){megaAt=Date.now();$$('#mega .pop img').forEach((im,i)=>{const g=$$('.gallery img')[i];if(g&&!im.src)im.src=g.src})}else if(back)megaBtn.focus()};
+ const megaOpen=(on,back)=>{if(on===!mega.hidden)return;megaBtn.setAttribute('aria-expanded',String(on));mega.hidden=!on;if(on){megaAt=Date.now();$$('#mega .pop img').forEach(im=>{if(!im.getAttribute('src')&&im.dataset.src)im.src=im.dataset.src})}else if(back)megaBtn.focus()};
  megaBtn.addEventListener('click',()=>{if(!mega.hidden&&Date.now()-megaAt<450)return;megaOpen(mega.hidden)});
  megaBtn.parentElement.addEventListener('mouseenter',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(true),140)});
  megaBtn.parentElement.addEventListener('mouseleave',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(false),220)});
