@@ -141,8 +141,10 @@ function build(p) {
     assumptions: fam.assumptions || [],
     todo,
   };
-  if (shapes && family === "sticker" && id === "domed_white_vinyl_sticker_sheet") {
-    def.todo.push("The studio also offers Square and Oval, which are not values of this product's BigCommerce 'Shape' modifier (Rectangle, Circle, Stadium, Custom Shape). Decide the mapping before the cart is connected.");
+  // The studio's shapes (decision, Carlos 2026-10-10: keep Square and Oval) vs this product's BigCommerce Shape values
+  if (shapes && def.studio_status === "built") {
+    const missing = ["square", "oval"].filter(s => !shapes.some(x => x.id === s));
+    if (missing.length) def.todo.push(`Keep ${missing.join(" and ")} in the studio (Carlos, 2026-10-10). This product's BigCommerce 'Shape' modifier has no matching value (${shapes.map(s => s.bigcommerce_label).join(", ")}), so the cart mapping for ${missing.join(" and ")} is still to be decided.`);
   }
   return def;
 }

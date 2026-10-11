@@ -103,12 +103,22 @@ tests/                 browser tests (the scripted checks used during developmen
 
 Every phase is its own PR. Nothing is deployed and the live store isn't touched without Carlos's explicit approval.
 
+## Decisions
+
+| Date | Question | Decision (Carlos) |
+|---|---|---|
+| 2026-10-10 | BigCommerce's size grid has 19 places where a bigger sticker costs less | **Intended.** Keep the prices as they are; the studio uses BigCommerce's prices exactly. |
+| 2026-10-10 | The studio offers Square and Oval; the domed sheets' BigCommerce Shape modifier doesn't | **Keep both shapes.** The cart mapping is still to be decided. |
+
 ## Open questions
 
-1. **Prices:** BigCommerce's own size grid has 19 places where a bigger sticker costs less (see findings). Intended?
-2. **Shapes:** the studio offers Square and Oval; BigCommerce's Shape modifier doesn't. Keep and map, or remove?
-3. **Production files:** what does production need from "Saved Print Output" for each product type?
-4. **Badges:** real dimensions for size1 to size4, and what each layout1 to layout9 looks like.
-5. **Pens:** imprint area, colors and method per model.
-6. **Scope and order:** do vinyl lettering and window clings come later? Prioritize by sales volume?
-7. **Hidden drafts:** should FlexStyle emblems, the acrylic ornament, can cooler, mouse pad or journal become customizable?
+1. **Square and Oval in the cart:** which BigCommerce Shape value each one sends. Options:
+   - **A.** Carlos adds "Square" and "Oval" as values of the Shape modifier on the four domed products in BigCommerce, so orders say exactly what was ordered. Needs a store change, which only Carlos makes.
+   - **B.** No store change: Square sends "Rectangle" (width = height, so it's exact) and Oval sends "Custom Shape" (the oval cut line travels in the print file).
+2. **Production files:** what "Saved Print Output" must contain for each product type. *Not available yet.*
+3. **Badges:** real dimensions for size1 to size4, and what each layout1 to layout9 looks like. *Not available yet.*
+4. **Pens:** imprint area, colors and method per model. *Not available yet.*
+5. **Scope and order:** do vinyl lettering and window clings come later? Prioritize by sales volume?
+6. **Hidden drafts:** should FlexStyle emblems, the acrylic ornament, can cooler, mouse pad or journal become customizable?
+
+Phases that depend on items 2 to 4 (add to cart, badges, pens) wait for that information. Nothing is built on guesses.

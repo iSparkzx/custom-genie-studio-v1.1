@@ -1466,6 +1466,6 @@
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
     "Roll labels: core size and unwind direction options, if production needs them.",
-    "The studio also offers Square and Oval, which are not values of this product's BigCommerce 'Shape' modifier (Rectangle, Circle, Stadium, Custom Shape). Decide the mapping before the cart is connected."
+    "Keep square and oval in the studio (Carlos, 2026-10-10). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, Stadium, Custom Shape), so the cart mapping for square and oval is still to be decided."
   ]
 }

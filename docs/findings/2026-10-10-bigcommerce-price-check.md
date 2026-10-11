@@ -29,9 +29,9 @@ Largest differences, per sticker before the quantity discount:
 
 **Fix (planned, step 3):** the studio reads prices from the product definition (`pricing.price_grid` and `pricing.quantity_tiers`, pulled from BigCommerce) instead of its own table, so the studio always equals the cart.
 
-## 2. BigCommerce's own size grid is irregular (for Carlos to review)
+## 2. BigCommerce's own size grid is irregular (confirmed intended)
 
-In BigCommerce, a larger sticker costs less than a smaller one of the same height in **19 places**. This may be intended (for example, squares priced lower) or data-entry slips. Nothing was changed.
+In BigCommerce, a larger sticker costs less than a smaller one of the same height in **19 places**. **Carlos confirmed on 2026-10-10 that these prices are intended.** The studio will use them exactly as they are. Nothing was changed.
 
 Price per sticker, Domed White (same grid on Domed Color, Silver and Gold). Rows are height, columns are width, in inches:
 
@@ -93,7 +93,7 @@ Prices and discounts therefore have to be read per product. One shared table can
 
 ## 4. Other things found
 
-- **Shapes:** Domed White's BigCommerce `Shape` modifier offers Rectangle, Circle, Stadium and Custom Shape. The studio also offers Square and Oval, which have no matching BigCommerce value. Decide the mapping before the cart is connected.
+- **Shapes:** the four domed sheets' BigCommerce `Shape` modifier offers Rectangle, Circle, Stadium and Custom Shape. The studio also offers Square and Oval. **Carlos: keep both (2026-10-10).** Which BigCommerce value each one sends is still to be decided before the cart is connected.
 - **Required modifiers** on Domed White: Review, Shape, Saved Print Output, Background Color, Rounded Corners, Sticker Height, Sticker Width. The studio must fill these when it adds to cart.
 - **Product codes:** the studio builds `57NOMWHIDOM--{H}-{W}`, the same format as the BigCommerce variant SKUs.
 - **Badge sizes:** BigCommerce stores only the labels size1 to size4; the real dimensions live in Doogma.
