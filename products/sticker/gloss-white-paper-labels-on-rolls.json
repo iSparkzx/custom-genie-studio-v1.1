@@ -1,0 +1,1099 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "gloss_white_paper_labels_on_rolls",
+  "name": "Gloss White Paper Labels on Rolls",
+  "family": "sticker",
+  "type": "Labels - Clear",
+  "group": "labels_clear",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 163,
+    "url": "/stickers/gloss-white-paper-labels-on-rolls/",
+    "sku": "57GPAWHIROL",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 1,
+      "max": 7.48
+    },
+    "height": {
+      "min": 1,
+      "max": 7.48
+    },
+    "price_steps": {
+      "width": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7.48
+      ],
+      "height": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7.48
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "roll",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.4,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 40
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 45
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 50
+      }
+    ],
+    "variants": [
+      {
+        "id": 25170,
+        "sku": "57GPAWHIROL-10-10",
+        "price": 0.4,
+        "options": {
+          "width": "1.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25180,
+        "sku": "57GPAWHIROL-20-10",
+        "price": 0.8,
+        "options": {
+          "width": "1.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25184,
+        "sku": "57GPAWHIROL-30-10",
+        "price": 1.2,
+        "options": {
+          "width": "1.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25186,
+        "sku": "57GPAWHIROL-40-10",
+        "price": 0.4,
+        "options": {
+          "width": "1.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25188,
+        "sku": "57GPAWHIROL-50-10",
+        "price": 0.5,
+        "options": {
+          "width": "1.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25190,
+        "sku": "57GPAWHIROL-60-10",
+        "price": 0.6,
+        "options": {
+          "width": "1.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25192,
+        "sku": "57GPAWHIROL-70-10",
+        "price": 0.7,
+        "options": {
+          "width": "1.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25193,
+        "sku": "57GPAWHIROL-74-10",
+        "price": 0.74,
+        "options": {
+          "width": "1.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25410,
+        "sku": "57GPAWHIROL-10-20",
+        "price": 0.8,
+        "options": {
+          "width": "2.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25420,
+        "sku": "57GPAWHIROL-20-20",
+        "price": 0.4,
+        "options": {
+          "width": "2.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25424,
+        "sku": "57GPAWHIROL-30-20",
+        "price": 0.6,
+        "options": {
+          "width": "2.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25426,
+        "sku": "57GPAWHIROL-40-20",
+        "price": 0.8,
+        "options": {
+          "width": "2.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25428,
+        "sku": "57GPAWHIROL-50-20",
+        "price": 0.7,
+        "options": {
+          "width": "2.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25430,
+        "sku": "57GPAWHIROL-60-20",
+        "price": 0.84,
+        "options": {
+          "width": "2.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25432,
+        "sku": "57GPAWHIROL-70-20",
+        "price": 0.98,
+        "options": {
+          "width": "2.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25433,
+        "sku": "57GPAWHIROL-74-20",
+        "price": 1.04,
+        "options": {
+          "width": "2.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25506,
+        "sku": "57GPAWHIROL-10-30",
+        "price": 1.2,
+        "options": {
+          "width": "3.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25516,
+        "sku": "57GPAWHIROL-20-30",
+        "price": 0.6,
+        "options": {
+          "width": "3.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25520,
+        "sku": "57GPAWHIROL-30-30",
+        "price": 0.63,
+        "options": {
+          "width": "3.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25522,
+        "sku": "57GPAWHIROL-40-30",
+        "price": 0.84,
+        "options": {
+          "width": "3.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25524,
+        "sku": "57GPAWHIROL-50-30",
+        "price": 1.05,
+        "options": {
+          "width": "3.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25526,
+        "sku": "57GPAWHIROL-60-30",
+        "price": 1.6,
+        "options": {
+          "width": "3.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25528,
+        "sku": "57GPAWHIROL-70-30",
+        "price": 1.86,
+        "options": {
+          "width": "3.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25529,
+        "sku": "57GPAWHIROL-74-30",
+        "price": 1.97,
+        "options": {
+          "width": "3.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25554,
+        "sku": "57GPAWHIROL-10-40",
+        "price": 0.4,
+        "options": {
+          "width": "4.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25564,
+        "sku": "57GPAWHIROL-20-40",
+        "price": 0.8,
+        "options": {
+          "width": "4.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25568,
+        "sku": "57GPAWHIROL-30-40",
+        "price": 0.84,
+        "options": {
+          "width": "4.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25570,
+        "sku": "57GPAWHIROL-40-40",
+        "price": 1.42,
+        "options": {
+          "width": "4.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25572,
+        "sku": "57GPAWHIROL-50-40",
+        "price": 1.77,
+        "options": {
+          "width": "4.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25574,
+        "sku": "57GPAWHIROL-60-40",
+        "price": 2.13,
+        "options": {
+          "width": "4.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25576,
+        "sku": "57GPAWHIROL-70-40",
+        "price": 1.89,
+        "options": {
+          "width": "4.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25577,
+        "sku": "57GPAWHIROL-74-40",
+        "price": 1.99,
+        "options": {
+          "width": "4.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25602,
+        "sku": "57GPAWHIROL-10-50",
+        "price": 0.5,
+        "options": {
+          "width": "5.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25612,
+        "sku": "57GPAWHIROL-20-50",
+        "price": 0.7,
+        "options": {
+          "width": "5.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25616,
+        "sku": "57GPAWHIROL-30-50",
+        "price": 1.05,
+        "options": {
+          "width": "5.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25618,
+        "sku": "57GPAWHIROL-40-50",
+        "price": 1.77,
+        "options": {
+          "width": "5.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25620,
+        "sku": "57GPAWHIROL-50-50",
+        "price": 1.68,
+        "options": {
+          "width": "5.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25622,
+        "sku": "57GPAWHIROL-60-50",
+        "price": 2.02,
+        "options": {
+          "width": "5.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25624,
+        "sku": "57GPAWHIROL-70-50",
+        "price": 2.36,
+        "options": {
+          "width": "5.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25625,
+        "sku": "57GPAWHIROL-74-50",
+        "price": 2.02,
+        "options": {
+          "width": "5.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25650,
+        "sku": "57GPAWHIROL-10-60",
+        "price": 0.6,
+        "options": {
+          "width": "6.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25660,
+        "sku": "57GPAWHIROL-20-60",
+        "price": 0.84,
+        "options": {
+          "width": "6.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25664,
+        "sku": "57GPAWHIROL-30-60",
+        "price": 1.6,
+        "options": {
+          "width": "6.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25666,
+        "sku": "57GPAWHIROL-40-60",
+        "price": 2.13,
+        "options": {
+          "width": "6.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25668,
+        "sku": "57GPAWHIROL-50-60",
+        "price": 2.02,
+        "options": {
+          "width": "6.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25670,
+        "sku": "57GPAWHIROL-60-60",
+        "price": 1.96,
+        "options": {
+          "width": "6.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25672,
+        "sku": "57GPAWHIROL-70-60",
+        "price": 2.29,
+        "options": {
+          "width": "6.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25673,
+        "sku": "57GPAWHIROL-74-60",
+        "price": 2.42,
+        "options": {
+          "width": "6.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25698,
+        "sku": "57GPAWHIROL-10-70",
+        "price": 0.7,
+        "options": {
+          "width": "7.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25708,
+        "sku": "57GPAWHIROL-20-70",
+        "price": 0.98,
+        "options": {
+          "width": "7.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25712,
+        "sku": "57GPAWHIROL-30-70",
+        "price": 1.86,
+        "options": {
+          "width": "7.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25714,
+        "sku": "57GPAWHIROL-40-70",
+        "price": 1.89,
+        "options": {
+          "width": "7.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25716,
+        "sku": "57GPAWHIROL-50-70",
+        "price": 2.36,
+        "options": {
+          "width": "7.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25718,
+        "sku": "57GPAWHIROL-60-70",
+        "price": 2.29,
+        "options": {
+          "width": "7.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25720,
+        "sku": "57GPAWHIROL-70-70",
+        "price": 2.21,
+        "options": {
+          "width": "7.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25721,
+        "sku": "57GPAWHIROL-74-70",
+        "price": 2.34,
+        "options": {
+          "width": "7.0",
+          "height": "7.48"
+        }
+      },
+      {
+        "id": 25722,
+        "sku": "57GPAWHIROL-10-74",
+        "price": 0.74,
+        "options": {
+          "width": "7.48",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 25732,
+        "sku": "57GPAWHIROL-20-74",
+        "price": 1.04,
+        "options": {
+          "width": "7.48",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 25736,
+        "sku": "57GPAWHIROL-30-74",
+        "price": 1.97,
+        "options": {
+          "width": "7.48",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 25738,
+        "sku": "57GPAWHIROL-40-74",
+        "price": 1.99,
+        "options": {
+          "width": "7.48",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 25740,
+        "sku": "57GPAWHIROL-50-74",
+        "price": 2.02,
+        "options": {
+          "width": "7.48",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 25742,
+        "sku": "57GPAWHIROL-60-74",
+        "price": 2.42,
+        "options": {
+          "width": "7.48",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 25744,
+        "sku": "57GPAWHIROL-70-74",
+        "price": 2.34,
+        "options": {
+          "width": "7.48",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 25745,
+        "sku": "57GPAWHIROL-74-74",
+        "price": 2.47,
+        "options": {
+          "width": "7.48",
+          "height": "7.48"
+        }
+      }
+    ],
+    "price_grid": {
+      "1x1": 0.4,
+      "2x1": 0.8,
+      "3x1": 1.2,
+      "4x1": 0.4,
+      "5x1": 0.5,
+      "6x1": 0.6,
+      "7x1": 0.7,
+      "7.48x1": 0.74,
+      "1x2": 0.8,
+      "2x2": 0.4,
+      "3x2": 0.6,
+      "4x2": 0.8,
+      "5x2": 0.7,
+      "6x2": 0.84,
+      "7x2": 0.98,
+      "7.48x2": 1.04,
+      "1x3": 1.2,
+      "2x3": 0.6,
+      "3x3": 0.63,
+      "4x3": 0.84,
+      "5x3": 1.05,
+      "6x3": 1.6,
+      "7x3": 1.86,
+      "7.48x3": 1.97,
+      "1x4": 0.4,
+      "2x4": 0.8,
+      "3x4": 0.84,
+      "4x4": 1.42,
+      "5x4": 1.77,
+      "6x4": 2.13,
+      "7x4": 1.89,
+      "7.48x4": 1.99,
+      "1x5": 0.5,
+      "2x5": 0.7,
+      "3x5": 1.05,
+      "4x5": 1.77,
+      "5x5": 1.68,
+      "6x5": 2.02,
+      "7x5": 2.36,
+      "7.48x5": 2.02,
+      "1x6": 0.6,
+      "2x6": 0.84,
+      "3x6": 1.6,
+      "4x6": 2.13,
+      "5x6": 2.02,
+      "6x6": 1.96,
+      "7x6": 2.29,
+      "7.48x6": 2.42,
+      "1x7": 0.7,
+      "2x7": 0.98,
+      "3x7": 1.86,
+      "4x7": 1.89,
+      "5x7": 2.36,
+      "6x7": 2.29,
+      "7x7": 2.21,
+      "7.48x7": 2.34,
+      "1x7.48": 0.74,
+      "2x7.48": 1.04,
+      "3x7.48": 1.97,
+      "4x7.48": 1.99,
+      "5x7.48": 2.02,
+      "6x7.48": 2.42,
+      "7x7.48": 2.34,
+      "7.48x7.48": 2.47
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1888,
+        "name": "SW Range (1.0-7.48)",
+        "role": "width"
+      },
+      {
+        "id": 1889,
+        "name": "SH Range (1.0-7.48)",
+        "role": "height"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 990,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 991,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 992,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 993,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 995,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 996,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 997,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 998,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 999,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1000,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1001,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1002,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1003,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1004,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1005,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1006,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2119,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2123,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 2124,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 2125,
+        "name": "Background Color",
+        "type": "swatch",
+        "required": true,
+        "role": "background_mode",
+        "values": [
+          {
+            "id": 1622,
+            "label": "Upload Background"
+          },
+          {
+            "id": 1621,
+            "label": "Custom Color"
+          }
+        ]
+      },
+      {
+        "id": 2220,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2221,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Background Color",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "gloss_white_paper_labels_on_rolls",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

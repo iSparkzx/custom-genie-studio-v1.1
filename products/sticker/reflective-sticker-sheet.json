@@ -1,0 +1,1456 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "reflective_sticker_sheet",
+  "name": "Reflective Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Reflective",
+  "group": "sheets_reflective",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 161,
+    "url": "/stickers/reflective-sticker-sheet/",
+    "sku": "57REFSIRNOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.1,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 32579,
+        "sku": "57REFSIRNOD-05-05",
+        "price": 0.1,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32590,
+        "sku": "57REFSIRNOD-05-10",
+        "price": 0.19,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32597,
+        "sku": "57REFSIRNOD-05-20",
+        "price": 0.38,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32600,
+        "sku": "57REFSIRNOD-05-30",
+        "price": 0.57,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32603,
+        "sku": "57REFSIRNOD-05-40",
+        "price": 0.77,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32607,
+        "sku": "57REFSIRNOD-05-50",
+        "price": 0.96,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32610,
+        "sku": "57REFSIRNOD-05-60",
+        "price": 1.15,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32613,
+        "sku": "57REFSIRNOD-05-70",
+        "price": 1.34,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32616,
+        "sku": "57REFSIRNOD-05-80",
+        "price": 0.77,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32618,
+        "sku": "57REFSIRNOD-05-85",
+        "price": 0.81,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32858,
+        "sku": "57REFSIRNOD-10-05",
+        "price": 0.19,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32869,
+        "sku": "57REFSIRNOD-10-10",
+        "price": 0.38,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32875,
+        "sku": "57REFSIRNOD-10-20",
+        "price": 0.77,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32879,
+        "sku": "57REFSIRNOD-10-30",
+        "price": 1.15,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32882,
+        "sku": "57REFSIRNOD-10-40",
+        "price": 0.77,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32885,
+        "sku": "57REFSIRNOD-10-50",
+        "price": 0.96,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32888,
+        "sku": "57REFSIRNOD-10-60",
+        "price": 1.15,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32891,
+        "sku": "57REFSIRNOD-10-70",
+        "price": 1.34,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32895,
+        "sku": "57REFSIRNOD-10-80",
+        "price": 1.53,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32896,
+        "sku": "57REFSIRNOD-10-85",
+        "price": 1.63,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33018,
+        "sku": "57REFSIRNOD-20-05",
+        "price": 0.38,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33028,
+        "sku": "57REFSIRNOD-20-10",
+        "price": 0.77,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33035,
+        "sku": "57REFSIRNOD-20-20",
+        "price": 0.77,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33038,
+        "sku": "57REFSIRNOD-20-30",
+        "price": 1.15,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33041,
+        "sku": "57REFSIRNOD-20-40",
+        "price": 1.53,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33044,
+        "sku": "57REFSIRNOD-20-50",
+        "price": 1.92,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33047,
+        "sku": "57REFSIRNOD-20-60",
+        "price": 2.3,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33051,
+        "sku": "57REFSIRNOD-20-70",
+        "price": 2.69,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33054,
+        "sku": "57REFSIRNOD-20-80",
+        "price": 1.73,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33055,
+        "sku": "57REFSIRNOD-20-85",
+        "price": 1.83,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33097,
+        "sku": "57REFSIRNOD-30-05",
+        "price": 0.57,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33108,
+        "sku": "57REFSIRNOD-30-10",
+        "price": 1.15,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33114,
+        "sku": "57REFSIRNOD-30-20",
+        "price": 1.15,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33117,
+        "sku": "57REFSIRNOD-30-30",
+        "price": 1.73,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33120,
+        "sku": "57REFSIRNOD-30-40",
+        "price": 2.3,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33124,
+        "sku": "57REFSIRNOD-30-50",
+        "price": 2.88,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33127,
+        "sku": "57REFSIRNOD-30-60",
+        "price": 1.94,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33130,
+        "sku": "57REFSIRNOD-30-70",
+        "price": 2.27,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33133,
+        "sku": "57REFSIRNOD-30-80",
+        "price": 2.59,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33135,
+        "sku": "57REFSIRNOD-30-85",
+        "price": 6,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33176,
+        "sku": "57REFSIRNOD-40-05",
+        "price": 0.77,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33188,
+        "sku": "57REFSIRNOD-40-10",
+        "price": 0.77,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33194,
+        "sku": "57REFSIRNOD-40-20",
+        "price": 1.53,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33197,
+        "sku": "57REFSIRNOD-40-30",
+        "price": 2.3,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33200,
+        "sku": "57REFSIRNOD-40-40",
+        "price": 1.73,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33203,
+        "sku": "57REFSIRNOD-40-50",
+        "price": 2.16,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33207,
+        "sku": "57REFSIRNOD-40-60",
+        "price": 2.59,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33210,
+        "sku": "57REFSIRNOD-40-70",
+        "price": 6.59,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33213,
+        "sku": "57REFSIRNOD-40-80",
+        "price": 7.53,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33214,
+        "sku": "57REFSIRNOD-40-85",
+        "price": 8,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33256,
+        "sku": "57REFSIRNOD-50-05",
+        "price": 0.96,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33268,
+        "sku": "57REFSIRNOD-50-10",
+        "price": 0.96,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33275,
+        "sku": "57REFSIRNOD-50-20",
+        "price": 1.92,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33278,
+        "sku": "57REFSIRNOD-50-30",
+        "price": 2.88,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33281,
+        "sku": "57REFSIRNOD-50-40",
+        "price": 2.16,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33284,
+        "sku": "57REFSIRNOD-50-50",
+        "price": 5.88,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33287,
+        "sku": "57REFSIRNOD-50-60",
+        "price": 7.06,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33291,
+        "sku": "57REFSIRNOD-50-70",
+        "price": 8.23,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33294,
+        "sku": "57REFSIRNOD-50-80",
+        "price": 6.53,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33296,
+        "sku": "57REFSIRNOD-50-85",
+        "price": 6.94,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33337,
+        "sku": "57REFSIRNOD-60-05",
+        "price": 1.15,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33348,
+        "sku": "57REFSIRNOD-60-10",
+        "price": 1.15,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33354,
+        "sku": "57REFSIRNOD-60-20",
+        "price": 2.3,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33357,
+        "sku": "57REFSIRNOD-60-30",
+        "price": 1.94,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33360,
+        "sku": "57REFSIRNOD-60-40",
+        "price": 2.59,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33363,
+        "sku": "57REFSIRNOD-60-50",
+        "price": 7.06,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33367,
+        "sku": "57REFSIRNOD-60-60",
+        "price": 5.88,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33370,
+        "sku": "57REFSIRNOD-60-70",
+        "price": 6.86,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33373,
+        "sku": "57REFSIRNOD-60-80",
+        "price": 7.84,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33375,
+        "sku": "57REFSIRNOD-60-85",
+        "price": 6.12,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33417,
+        "sku": "57REFSIRNOD-70-05",
+        "price": 1.34,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33435,
+        "sku": "57REFSIRNOD-70-10",
+        "price": 1.34,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33446,
+        "sku": "57REFSIRNOD-70-20",
+        "price": 2.69,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33450,
+        "sku": "57REFSIRNOD-70-30",
+        "price": 2.27,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33456,
+        "sku": "57REFSIRNOD-70-40",
+        "price": 6.59,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33461,
+        "sku": "57REFSIRNOD-70-50",
+        "price": 8.23,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33466,
+        "sku": "57REFSIRNOD-70-60",
+        "price": 6.86,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33471,
+        "sku": "57REFSIRNOD-70-70",
+        "price": 5.88,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33477,
+        "sku": "57REFSIRNOD-70-80",
+        "price": 6.72,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33480,
+        "sku": "57REFSIRNOD-70-85",
+        "price": 7.14,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33482,
+        "sku": "57REFSIRNOD-80-05",
+        "price": 0.77,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33500,
+        "sku": "57REFSIRNOD-80-10",
+        "price": 1.53,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33510,
+        "sku": "57REFSIRNOD-80-20",
+        "price": 1.73,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33516,
+        "sku": "57REFSIRNOD-80-30",
+        "price": 2.59,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33522,
+        "sku": "57REFSIRNOD-80-40",
+        "price": 7.53,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33527,
+        "sku": "57REFSIRNOD-80-50",
+        "price": 6.53,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33532,
+        "sku": "57REFSIRNOD-80-60",
+        "price": 7.84,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33537,
+        "sku": "57REFSIRNOD-80-70",
+        "price": 6.72,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33542,
+        "sku": "57REFSIRNOD-80-80",
+        "price": 5.88,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33545,
+        "sku": "57REFSIRNOD-80-85",
+        "price": 6.25,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33548,
+        "sku": "57REFSIRNOD-85-05",
+        "price": 0.81,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33567,
+        "sku": "57REFSIRNOD-85-10",
+        "price": 1.63,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33578,
+        "sku": "57REFSIRNOD-85-20",
+        "price": 1.83,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33584,
+        "sku": "57REFSIRNOD-85-30",
+        "price": 6,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33589,
+        "sku": "57REFSIRNOD-85-40",
+        "price": 8,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33594,
+        "sku": "57REFSIRNOD-85-50",
+        "price": 6.94,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33599,
+        "sku": "57REFSIRNOD-85-60",
+        "price": 6.12,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33604,
+        "sku": "57REFSIRNOD-85-70",
+        "price": 7.14,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33609,
+        "sku": "57REFSIRNOD-85-80",
+        "price": 6.25,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33612,
+        "sku": "57REFSIRNOD-85-85",
+        "price": 6.64,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.1,
+      "0.5x1": 0.19,
+      "0.5x2": 0.38,
+      "0.5x3": 0.57,
+      "0.5x4": 0.77,
+      "0.5x5": 0.96,
+      "0.5x6": 1.15,
+      "0.5x7": 1.34,
+      "0.5x8": 0.77,
+      "0.5x8.5": 0.81,
+      "1x0.5": 0.19,
+      "1x1": 0.38,
+      "1x2": 0.77,
+      "1x3": 1.15,
+      "1x4": 0.77,
+      "1x5": 0.96,
+      "1x6": 1.15,
+      "1x7": 1.34,
+      "1x8": 1.53,
+      "1x8.5": 1.63,
+      "2x0.5": 0.38,
+      "2x1": 0.77,
+      "2x2": 0.77,
+      "2x3": 1.15,
+      "2x4": 1.53,
+      "2x5": 1.92,
+      "2x6": 2.3,
+      "2x7": 2.69,
+      "2x8": 1.73,
+      "2x8.5": 1.83,
+      "3x0.5": 0.57,
+      "3x1": 1.15,
+      "3x2": 1.15,
+      "3x3": 1.73,
+      "3x4": 2.3,
+      "3x5": 2.88,
+      "3x6": 1.94,
+      "3x7": 2.27,
+      "3x8": 2.59,
+      "3x8.5": 6,
+      "4x0.5": 0.77,
+      "4x1": 0.77,
+      "4x2": 1.53,
+      "4x3": 2.3,
+      "4x4": 1.73,
+      "4x5": 2.16,
+      "4x6": 2.59,
+      "4x7": 6.59,
+      "4x8": 7.53,
+      "4x8.5": 8,
+      "5x0.5": 0.96,
+      "5x1": 0.96,
+      "5x2": 1.92,
+      "5x3": 2.88,
+      "5x4": 2.16,
+      "5x5": 5.88,
+      "5x6": 7.06,
+      "5x7": 8.23,
+      "5x8": 6.53,
+      "5x8.5": 6.94,
+      "6x0.5": 1.15,
+      "6x1": 1.15,
+      "6x2": 2.3,
+      "6x3": 1.94,
+      "6x4": 2.59,
+      "6x5": 7.06,
+      "6x6": 5.88,
+      "6x7": 6.86,
+      "6x8": 7.84,
+      "6x8.5": 6.12,
+      "7x0.5": 1.34,
+      "7x1": 1.34,
+      "7x2": 2.69,
+      "7x3": 2.27,
+      "7x4": 6.59,
+      "7x5": 8.23,
+      "7x6": 6.86,
+      "7x7": 5.88,
+      "7x8": 6.72,
+      "7x8.5": 7.14,
+      "8x0.5": 0.77,
+      "8x1": 1.53,
+      "8x2": 1.73,
+      "8x3": 2.59,
+      "8x4": 7.53,
+      "8x5": 6.53,
+      "8x6": 7.84,
+      "8x7": 6.72,
+      "8x8": 5.88,
+      "8x8.5": 6.25,
+      "8.5x0.5": 0.81,
+      "8.5x1": 1.63,
+      "8.5x2": 1.83,
+      "8.5x3": 6,
+      "8.5x4": 8,
+      "8.5x5": 6.94,
+      "8.5x6": 6.12,
+      "8.5x7": 7.14,
+      "8.5x8": 6.25,
+      "8.5x8.5": 6.64
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1932,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1933,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1366,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1367,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1369,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1371,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1372,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1374,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1375,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1376,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1377,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1378,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1379,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1380,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1381,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1382,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1385,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2083,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 2084,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 2085,
+        "name": "Background Color",
+        "type": "swatch",
+        "required": true,
+        "role": "background_mode",
+        "values": [
+          {
+            "id": 1622,
+            "label": "Upload Background"
+          },
+          {
+            "id": 1621,
+            "label": "Custom Color"
+          }
+        ]
+      },
+      {
+        "id": 2086,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2196,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2197,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Background Color",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "reflective_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

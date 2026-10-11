@@ -1,0 +1,27 @@
+{
+  "family": "badge",
+  "label": "Name badges",
+  "bigcommerce_template": "badgeprod",
+  "editor": {
+    "mode": "template_layout",
+    "fields": ["name", "title", "badge_text", "logo", "background"],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout9)",
+    "genie": true
+  },
+  "personalization": {
+    "bulk_names": "BigCommerce 'Additional Names - File Upload' modifier (a names file, up to 5 MB)",
+    "preview_every_name": true
+  },
+  "previews": ["flat", "scene:lapel"],
+  "types": {},
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:lapel' is a new preview (badge worn on a shirt) that still has to be built."
+  ],
+  "todo": [
+    "Real dimensions for size1 to size4 on each badge product. BigCommerce stores only the labels; the sizes live in Doogma.",
+    "What each layout1 to layout9 looks like (positions of name, title, badge text and logo).",
+    "Print checks for badges (minimum text size, engraving limits).",
+    "Production file format: engraving file vs print file."
+  ]
+}

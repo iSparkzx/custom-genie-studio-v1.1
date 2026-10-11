@@ -1,0 +1,1450 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "clear_sticker_sheet_with_white_ink_non_met_standard_sizes",
+  "name": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes",
+  "family": "sticker",
+  "type": "Sheets - Clear",
+  "group": "sheets_clear",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 186,
+    "url": "/stickers/clear-sticker-sheet-with-white-ink-non-met-standard-sizes/",
+    "sku": "57NOMCLRNODW-S",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.81
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.64
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.81
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.64
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "white_ink": true,
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.01,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 46858,
+        "sku": "57NOMCLRNODW-S-05-05",
+        "price": 0.64,
+        "options": {
+          "width": "0.5",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46859,
+        "sku": "57NOMCLRNODW-S-05-10",
+        "price": 0.72,
+        "options": {
+          "width": "0.5",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46860,
+        "sku": "57NOMCLRNODW-S-05-20",
+        "price": 0.88,
+        "options": {
+          "width": "0.5",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46861,
+        "sku": "57NOMCLRNODW-S-05-30",
+        "price": 1.04,
+        "options": {
+          "width": "0.5",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46862,
+        "sku": "57NOMCLRNODW-S-05-40",
+        "price": 1.2,
+        "options": {
+          "width": "0.5",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46863,
+        "sku": "57NOMCLRNODW-S-05-50",
+        "price": 1.36,
+        "options": {
+          "width": "0.5",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46864,
+        "sku": "57NOMCLRNODW-S-05-60",
+        "price": 1.52,
+        "options": {
+          "width": "0.5",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46865,
+        "sku": "57NOMCLRNODW-S-05-70",
+        "price": 1.68,
+        "options": {
+          "width": "0.5",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46866,
+        "sku": "57NOMCLRNODW-S-05-80",
+        "price": 1.84,
+        "options": {
+          "width": "0.5",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46867,
+        "sku": "57NOMCLRNODW-S-05-86",
+        "price": 1.92,
+        "options": {
+          "width": "0.5",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46868,
+        "sku": "57NOMCLRNODW-S-10-05",
+        "price": 0.72,
+        "options": {
+          "width": "1.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46869,
+        "sku": "57NOMCLRNODW-S-10-10",
+        "price": 0.8,
+        "options": {
+          "width": "1.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46870,
+        "sku": "57NOMCLRNODW-S-10-20",
+        "price": 0.96,
+        "options": {
+          "width": "1.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46871,
+        "sku": "57NOMCLRNODW-S-10-30",
+        "price": 1.12,
+        "options": {
+          "width": "1.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46872,
+        "sku": "57NOMCLRNODW-S-10-40",
+        "price": 1.28,
+        "options": {
+          "width": "1.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46873,
+        "sku": "57NOMCLRNODW-S-10-50",
+        "price": 1.44,
+        "options": {
+          "width": "1.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46874,
+        "sku": "57NOMCLRNODW-S-10-60",
+        "price": 1.6,
+        "options": {
+          "width": "1.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46875,
+        "sku": "57NOMCLRNODW-S-10-70",
+        "price": 1.76,
+        "options": {
+          "width": "1.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46876,
+        "sku": "57NOMCLRNODW-S-10-80",
+        "price": 1.92,
+        "options": {
+          "width": "1.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46877,
+        "sku": "57NOMCLRNODW-S-10-86",
+        "price": 2,
+        "options": {
+          "width": "1.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46878,
+        "sku": "57NOMCLRNODW-S-20-05",
+        "price": 0.88,
+        "options": {
+          "width": "2.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46879,
+        "sku": "57NOMCLRNODW-S-20-10",
+        "price": 0.96,
+        "options": {
+          "width": "2.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46880,
+        "sku": "57NOMCLRNODW-S-20-20",
+        "price": 1.12,
+        "options": {
+          "width": "2.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46881,
+        "sku": "57NOMCLRNODW-S-20-30",
+        "price": 1.28,
+        "options": {
+          "width": "2.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46882,
+        "sku": "57NOMCLRNODW-S-20-40",
+        "price": 1.44,
+        "options": {
+          "width": "2.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46883,
+        "sku": "57NOMCLRNODW-S-20-50",
+        "price": 1.6,
+        "options": {
+          "width": "2.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46884,
+        "sku": "57NOMCLRNODW-S-20-60",
+        "price": 1.76,
+        "options": {
+          "width": "2.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46885,
+        "sku": "57NOMCLRNODW-S-20-70",
+        "price": 1.92,
+        "options": {
+          "width": "2.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46886,
+        "sku": "57NOMCLRNODW-S-20-80",
+        "price": 2.08,
+        "options": {
+          "width": "2.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46887,
+        "sku": "57NOMCLRNODW-S-20-86",
+        "price": 2.16,
+        "options": {
+          "width": "2.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46888,
+        "sku": "57NOMCLRNODW-S-30-05",
+        "price": 1.04,
+        "options": {
+          "width": "3.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46889,
+        "sku": "57NOMCLRNODW-S-30-10",
+        "price": 1.12,
+        "options": {
+          "width": "3.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46890,
+        "sku": "57NOMCLRNODW-S-30-20",
+        "price": 1.28,
+        "options": {
+          "width": "3.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46891,
+        "sku": "57NOMCLRNODW-S-30-30",
+        "price": 1.44,
+        "options": {
+          "width": "3.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46892,
+        "sku": "57NOMCLRNODW-S-30-40",
+        "price": 1.6,
+        "options": {
+          "width": "3.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46893,
+        "sku": "57NOMCLRNODW-S-30-50",
+        "price": 1.76,
+        "options": {
+          "width": "3.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46894,
+        "sku": "57NOMCLRNODW-S-30-60",
+        "price": 1.92,
+        "options": {
+          "width": "3.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46895,
+        "sku": "57NOMCLRNODW-S-30-70",
+        "price": 2.08,
+        "options": {
+          "width": "3.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46896,
+        "sku": "57NOMCLRNODW-S-30-80",
+        "price": 2.24,
+        "options": {
+          "width": "3.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46897,
+        "sku": "57NOMCLRNODW-S-30-86",
+        "price": 2.32,
+        "options": {
+          "width": "3.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46898,
+        "sku": "57NOMCLRNODW-S-40-05",
+        "price": 1.2,
+        "options": {
+          "width": "4.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46899,
+        "sku": "57NOMCLRNODW-S-40-10",
+        "price": 1.28,
+        "options": {
+          "width": "4.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46900,
+        "sku": "57NOMCLRNODW-S-40-20",
+        "price": 1.44,
+        "options": {
+          "width": "4.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46901,
+        "sku": "57NOMCLRNODW-S-40-30",
+        "price": 1.6,
+        "options": {
+          "width": "4.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46902,
+        "sku": "57NOMCLRNODW-S-40-40",
+        "price": 1.76,
+        "options": {
+          "width": "4.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46903,
+        "sku": "57NOMCLRNODW-S-40-50",
+        "price": 1.92,
+        "options": {
+          "width": "4.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46904,
+        "sku": "57NOMCLRNODW-S-40-60",
+        "price": 2.08,
+        "options": {
+          "width": "4.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46905,
+        "sku": "57NOMCLRNODW-S-40-70",
+        "price": 2.24,
+        "options": {
+          "width": "4.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46906,
+        "sku": "57NOMCLRNODW-S-40-80",
+        "price": 2.4,
+        "options": {
+          "width": "4.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46907,
+        "sku": "57NOMCLRNODW-S-40-86",
+        "price": 2.48,
+        "options": {
+          "width": "4.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46908,
+        "sku": "57NOMCLRNODW-S-50-05",
+        "price": 1.36,
+        "options": {
+          "width": "5.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46909,
+        "sku": "57NOMCLRNODW-S-50-10",
+        "price": 1.44,
+        "options": {
+          "width": "5.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46910,
+        "sku": "57NOMCLRNODW-S-50-20",
+        "price": 1.6,
+        "options": {
+          "width": "5.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46911,
+        "sku": "57NOMCLRNODW-S-50-30",
+        "price": 1.76,
+        "options": {
+          "width": "5.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46912,
+        "sku": "57NOMCLRNODW-S-50-40",
+        "price": 1.92,
+        "options": {
+          "width": "5.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46913,
+        "sku": "57NOMCLRNODW-S-50-50",
+        "price": 2.08,
+        "options": {
+          "width": "5.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46914,
+        "sku": "57NOMCLRNODW-S-50-60",
+        "price": 2.24,
+        "options": {
+          "width": "5.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46915,
+        "sku": "57NOMCLRNODW-S-50-70",
+        "price": 2.4,
+        "options": {
+          "width": "5.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46916,
+        "sku": "57NOMCLRNODW-S-50-80",
+        "price": 2.56,
+        "options": {
+          "width": "5.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46917,
+        "sku": "57NOMCLRNODW-S-50-86",
+        "price": 2.64,
+        "options": {
+          "width": "5.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46918,
+        "sku": "57NOMCLRNODW-S-60-05",
+        "price": 1.52,
+        "options": {
+          "width": "6.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46919,
+        "sku": "57NOMCLRNODW-S-60-10",
+        "price": 1.6,
+        "options": {
+          "width": "6.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46920,
+        "sku": "57NOMCLRNODW-S-60-20",
+        "price": 1.76,
+        "options": {
+          "width": "6.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46921,
+        "sku": "57NOMCLRNODW-S-60-30",
+        "price": 1.92,
+        "options": {
+          "width": "6.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46922,
+        "sku": "57NOMCLRNODW-S-60-40",
+        "price": 2.08,
+        "options": {
+          "width": "6.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46923,
+        "sku": "57NOMCLRNODW-S-60-50",
+        "price": 2.24,
+        "options": {
+          "width": "6.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46924,
+        "sku": "57NOMCLRNODW-S-60-60",
+        "price": 2.4,
+        "options": {
+          "width": "6.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46925,
+        "sku": "57NOMCLRNODW-S-60-70",
+        "price": 2.56,
+        "options": {
+          "width": "6.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46926,
+        "sku": "57NOMCLRNODW-S-60-80",
+        "price": 2.72,
+        "options": {
+          "width": "6.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46927,
+        "sku": "57NOMCLRNODW-S-60-86",
+        "price": 2.8,
+        "options": {
+          "width": "6.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46928,
+        "sku": "57NOMCLRNODW-S-70-05",
+        "price": 1.68,
+        "options": {
+          "width": "7.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46929,
+        "sku": "57NOMCLRNODW-S-70-10",
+        "price": 1.76,
+        "options": {
+          "width": "7.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46930,
+        "sku": "57NOMCLRNODW-S-70-20",
+        "price": 1.92,
+        "options": {
+          "width": "7.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46931,
+        "sku": "57NOMCLRNODW-S-70-30",
+        "price": 2.08,
+        "options": {
+          "width": "7.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46932,
+        "sku": "57NOMCLRNODW-S-70-40",
+        "price": 2.24,
+        "options": {
+          "width": "7.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46933,
+        "sku": "57NOMCLRNODW-S-70-50",
+        "price": 2.4,
+        "options": {
+          "width": "7.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46934,
+        "sku": "57NOMCLRNODW-S-70-60",
+        "price": 2.56,
+        "options": {
+          "width": "7.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46935,
+        "sku": "57NOMCLRNODW-S-70-70",
+        "price": 2.72,
+        "options": {
+          "width": "7.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46936,
+        "sku": "57NOMCLRNODW-S-70-80",
+        "price": 2.88,
+        "options": {
+          "width": "7.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46937,
+        "sku": "57NOMCLRNODW-S-70-86",
+        "price": 2.96,
+        "options": {
+          "width": "7.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46938,
+        "sku": "57NOMCLRNODW-S-80-05",
+        "price": 1.84,
+        "options": {
+          "width": "8.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46939,
+        "sku": "57NOMCLRNODW-S-80-10",
+        "price": 1.92,
+        "options": {
+          "width": "8.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46940,
+        "sku": "57NOMCLRNODW-S-80-20",
+        "price": 2.08,
+        "options": {
+          "width": "8.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46941,
+        "sku": "57NOMCLRNODW-S-80-30",
+        "price": 2.24,
+        "options": {
+          "width": "8.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46942,
+        "sku": "57NOMCLRNODW-S-80-40",
+        "price": 2.4,
+        "options": {
+          "width": "8.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46943,
+        "sku": "57NOMCLRNODW-S-80-50",
+        "price": 2.56,
+        "options": {
+          "width": "8.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46944,
+        "sku": "57NOMCLRNODW-S-80-60",
+        "price": 2.72,
+        "options": {
+          "width": "8.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46945,
+        "sku": "57NOMCLRNODW-S-80-70",
+        "price": 2.88,
+        "options": {
+          "width": "8.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46946,
+        "sku": "57NOMCLRNODW-S-80-80",
+        "price": 3.04,
+        "options": {
+          "width": "8.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46947,
+        "sku": "57NOMCLRNODW-S-80-86",
+        "price": 3.12,
+        "options": {
+          "width": "8.0",
+          "height": "8.64"
+        }
+      },
+      {
+        "id": 46948,
+        "sku": "57NOMCLRNODW-S-88-05",
+        "price": 1.92,
+        "options": {
+          "width": "8.81",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 46949,
+        "sku": "57NOMCLRNODW-S-88-10",
+        "price": 2,
+        "options": {
+          "width": "8.81",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 46950,
+        "sku": "57NOMCLRNODW-S-88-20",
+        "price": 2.16,
+        "options": {
+          "width": "8.81",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 46951,
+        "sku": "57NOMCLRNODW-S-88-30",
+        "price": 2.32,
+        "options": {
+          "width": "8.81",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 46952,
+        "sku": "57NOMCLRNODW-S-88-40",
+        "price": 2.48,
+        "options": {
+          "width": "8.81",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 46953,
+        "sku": "57NOMCLRNODW-S-88-50",
+        "price": 2.64,
+        "options": {
+          "width": "8.81",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 46954,
+        "sku": "57NOMCLRNODW-S-88-60",
+        "price": 2.8,
+        "options": {
+          "width": "8.81",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 46955,
+        "sku": "57NOMCLRNODW-S-88-70",
+        "price": 2.96,
+        "options": {
+          "width": "8.81",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 46956,
+        "sku": "57NOMCLRNODW-S-88-80",
+        "price": 3.12,
+        "options": {
+          "width": "8.81",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 46957,
+        "sku": "57NOMCLRNODW-S-88-86",
+        "price": 3.2,
+        "options": {
+          "width": "8.81",
+          "height": "8.64"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.64,
+      "1x0.5": 0.72,
+      "2x0.5": 0.88,
+      "3x0.5": 1.04,
+      "4x0.5": 1.2,
+      "5x0.5": 1.36,
+      "6x0.5": 1.52,
+      "7x0.5": 1.68,
+      "8x0.5": 1.84,
+      "8.64x0.5": 1.92,
+      "0.5x1": 0.72,
+      "1x1": 0.8,
+      "2x1": 0.96,
+      "3x1": 1.12,
+      "4x1": 1.28,
+      "5x1": 1.44,
+      "6x1": 1.6,
+      "7x1": 1.76,
+      "8x1": 1.92,
+      "8.64x1": 2,
+      "0.5x2": 0.88,
+      "1x2": 0.96,
+      "2x2": 1.12,
+      "3x2": 1.28,
+      "4x2": 1.44,
+      "5x2": 1.6,
+      "6x2": 1.76,
+      "7x2": 1.92,
+      "8x2": 2.08,
+      "8.64x2": 2.16,
+      "0.5x3": 1.04,
+      "1x3": 1.12,
+      "2x3": 1.28,
+      "3x3": 1.44,
+      "4x3": 1.6,
+      "5x3": 1.76,
+      "6x3": 1.92,
+      "7x3": 2.08,
+      "8x3": 2.24,
+      "8.64x3": 2.32,
+      "0.5x4": 1.2,
+      "1x4": 1.28,
+      "2x4": 1.44,
+      "3x4": 1.6,
+      "4x4": 1.76,
+      "5x4": 1.92,
+      "6x4": 2.08,
+      "7x4": 2.24,
+      "8x4": 2.4,
+      "8.64x4": 2.48,
+      "0.5x5": 1.36,
+      "1x5": 1.44,
+      "2x5": 1.6,
+      "3x5": 1.76,
+      "4x5": 1.92,
+      "5x5": 2.08,
+      "6x5": 2.24,
+      "7x5": 2.4,
+      "8x5": 2.56,
+      "8.64x5": 2.64,
+      "0.5x6": 1.52,
+      "1x6": 1.6,
+      "2x6": 1.76,
+      "3x6": 1.92,
+      "4x6": 2.08,
+      "5x6": 2.24,
+      "6x6": 2.4,
+      "7x6": 2.56,
+      "8x6": 2.72,
+      "8.64x6": 2.8,
+      "0.5x7": 1.68,
+      "1x7": 1.76,
+      "2x7": 1.92,
+      "3x7": 2.08,
+      "4x7": 2.24,
+      "5x7": 2.4,
+      "6x7": 2.56,
+      "7x7": 2.72,
+      "8x7": 2.88,
+      "8.64x7": 2.96,
+      "0.5x8": 1.84,
+      "1x8": 1.92,
+      "2x8": 2.08,
+      "3x8": 2.24,
+      "4x8": 2.4,
+      "5x8": 2.56,
+      "6x8": 2.72,
+      "7x8": 2.88,
+      "8x8": 3.04,
+      "8.64x8": 3.12,
+      "0.5x8.81": 1.92,
+      "1x8.81": 2,
+      "2x8.81": 2.16,
+      "3x8.81": 2.32,
+      "4x8.81": 2.48,
+      "5x8.81": 2.64,
+      "6x8.81": 2.8,
+      "7x8.81": 2.96,
+      "8x8.81": 3.12,
+      "8.64x8.81": 3.2
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 2872,
+        "name": "SW Range (0.5-8.81)",
+        "role": "width"
+      },
+      {
+        "id": 2873,
+        "name": "SH Range (0.5-8.64)",
+        "role": "height"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1982,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1983,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1984,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1985,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1986,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1987,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1988,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1989,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1990,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1991,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1992,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1993,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1994,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1995,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1996,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1997,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2056,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2224,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2225,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      },
+      {
+        "id": 2577,
+        "name": "Fit mode",
+        "type": "radio_buttons",
+        "required": true,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1795,
+            "label": "\"Logo Mode\""
+          },
+          {
+            "id": 1796,
+            "label": "\"Full Sticker Mode\""
+          }
+        ]
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width",
+      "Fit mode"
+    ]
+  },
+  "mcp": {
+    "product_id": "clear_sticker_sheet_with_white_ink_non_met_standard_sizes",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

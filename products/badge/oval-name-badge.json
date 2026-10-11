@@ -1,0 +1,751 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "oval_name_badge",
+  "name": "Oval Name Badge (2 3/4\"  x 1 9/16\")",
+  "family": "badge",
+  "type": "Badges - Oval",
+  "group": "badges_oval",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 151,
+    "url": "/name-badges/oval-name-badge/",
+    "sku": "52HOAVL",
+    "base_variant_id": null,
+    "template": "badgeprod"
+  },
+  "size": {
+    "mode": "fixed",
+    "unit": "in",
+    "w_in": 2.75,
+    "h_in": 1.5625,
+    "source": "product name"
+  },
+  "background_colors": [
+    "Gold",
+    "Silver",
+    "Custom Color",
+    "Upload Background"
+  ],
+  "attachments": [
+    "magnet",
+    "pin"
+  ],
+  "decoration": "printed",
+  "text_fields": [
+    "name",
+    "title",
+    "badge_text"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": {
+    "bulk_names_file": true
+  },
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 9.99,
+    "quantity_tiers": [
+      {
+        "min_qty": 5,
+        "max_qty": 9,
+        "type": "percent",
+        "amount": 10
+      },
+      {
+        "min_qty": 10,
+        "max_qty": 14,
+        "type": "percent",
+        "amount": 15
+      },
+      {
+        "min_qty": 15,
+        "max_qty": 19,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 20,
+        "max_qty": 49,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 50,
+        "max_qty": 99,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 100,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 18704,
+        "sku": "52SHAOVLBLKMG",
+        "price": 9.99,
+        "options": {
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18705,
+        "sku": "52SHAOVLBLKPG",
+        "price": 9.99,
+        "options": {
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18706,
+        "sku": "52SHAOVLBLKMS",
+        "price": 9.99,
+        "options": {
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18707,
+        "sku": "52SHAOVLBLKPS",
+        "price": 9.99,
+        "options": {
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18708,
+        "sku": "52SHAOVLBLKMW",
+        "price": 9.99,
+        "options": {
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18709,
+        "sku": "52SHAOVLBLKPW",
+        "price": 9.99,
+        "options": {
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18710,
+        "sku": "52SHAOVLBLKMW-Background",
+        "price": 9.99,
+        "options": {
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18711,
+        "sku": "52SHAOVLBLKPW-Background",
+        "price": 9.99,
+        "options": {
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      }
+    ]
+  },
+  "editor": {
+    "mode": "template_layout",
+    "fields": [
+      "name",
+      "title",
+      "badge_text",
+      "logo",
+      "background"
+    ],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout9)",
+    "genie": true
+  },
+  "checks": null,
+  "previews": [
+    "flat",
+    "scene:lapel"
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1155,
+        "name": "Background Color",
+        "role": "background_color"
+      },
+      {
+        "id": 1302,
+        "name": "Back Attachment",
+        "role": "attachment"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1637,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1638,
+        "name": "Alignment",
+        "type": "swatch",
+        "required": false,
+        "role": "alignment",
+        "values": [
+          {
+            "id": 903,
+            "label": "left"
+          },
+          {
+            "id": 904,
+            "label": "center"
+          },
+          {
+            "id": 905,
+            "label": "right"
+          }
+        ]
+      },
+      {
+        "id": 1639,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1640,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1641,
+        "name": "Name",
+        "type": "text",
+        "required": false,
+        "role": "name"
+      },
+      {
+        "id": 1642,
+        "name": "Title",
+        "type": "text",
+        "required": false,
+        "role": "title"
+      },
+      {
+        "id": 1643,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 1644,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 1645,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1646,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1647,
+        "name": "Select Layout",
+        "type": "swatch",
+        "required": true,
+        "role": "layout",
+        "values": [
+          {
+            "id": 1307,
+            "label": "layout1"
+          },
+          {
+            "id": 1308,
+            "label": "layout2"
+          },
+          {
+            "id": 1309,
+            "label": "layout3"
+          },
+          {
+            "id": 1310,
+            "label": "layout4"
+          },
+          {
+            "id": 1311,
+            "label": "layout5"
+          },
+          {
+            "id": 1312,
+            "label": "layout6"
+          },
+          {
+            "id": 1313,
+            "label": "layout7"
+          },
+          {
+            "id": 1644,
+            "label": "layout8"
+          },
+          {
+            "id": 1797,
+            "label": "layout9"
+          }
+        ]
+      },
+      {
+        "id": 1648,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1649,
+        "name": "Font2",
+        "type": "swatch",
+        "required": false,
+        "role": "font_2",
+        "values": [
+          {
+            "id": 1326,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1327,
+            "label": "Anton"
+          },
+          {
+            "id": 1328,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1329,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1330,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1331,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1332,
+            "label": "Lato"
+          },
+          {
+            "id": 1333,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1334,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1335,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1650,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1651,
+        "name": "Font2size",
+        "type": "text",
+        "required": false,
+        "role": "font_2_size"
+      },
+      {
+        "id": 1652,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1653,
+        "name": "Customcolor2",
+        "type": "text",
+        "required": false,
+        "role": "color_2"
+      },
+      {
+        "id": 1654,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1655,
+        "name": "Additional Names - File Upload",
+        "type": "file",
+        "required": false,
+        "role": "bulk_names_file"
+      },
+      {
+        "id": 1656,
+        "name": "Size",
+        "type": "text",
+        "required": false,
+        "role": "size_field"
+      },
+      {
+        "id": 1657,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2372,
+        "name": "text 1 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1678,
+            "label": "top"
+          },
+          {
+            "id": 1679,
+            "label": "center"
+          },
+          {
+            "id": 1680,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2373,
+        "name": "text 2 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1681,
+            "label": "top"
+          },
+          {
+            "id": 1682,
+            "label": "center"
+          },
+          {
+            "id": 1683,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2676,
+        "name": "Logo Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2677,
+        "name": "Logo Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2678,
+        "name": "Title Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2679,
+        "name": "Title Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2680,
+        "name": "Name Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2681,
+        "name": "Name Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2809,
+        "name": "Badge Text",
+        "type": "text",
+        "required": false,
+        "role": "badge_text"
+      },
+      {
+        "id": 2810,
+        "name": "Font3size",
+        "type": "text",
+        "required": false,
+        "role": "font_3_size"
+      },
+      {
+        "id": 2811,
+        "name": "Font3",
+        "type": "swatch",
+        "required": false,
+        "role": "font_3",
+        "values": [
+          {
+            "id": 1798,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1799,
+            "label": "Anton"
+          },
+          {
+            "id": 1800,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1801,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1802,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1803,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1804,
+            "label": "Lato"
+          },
+          {
+            "id": 1805,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1806,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1807,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 2812,
+        "name": "Customcolor3",
+        "type": "text",
+        "required": false,
+        "role": "color_3"
+      },
+      {
+        "id": 2813,
+        "name": "text 3 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1808,
+            "label": "top"
+          },
+          {
+            "id": 1809,
+            "label": "center"
+          },
+          {
+            "id": 1810,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2814,
+        "name": "Badge Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2815,
+        "name": "Badge Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2925,
+        "name": "Order File Disclaimer",
+        "type": "checkbox",
+        "required": true,
+        "role": "order_file_disclaimer",
+        "values": [
+          {
+            "id": 1854,
+            "label": "Yes"
+          },
+          {
+            "id": 1855,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 2984,
+        "name": "Background Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2985,
+        "name": "Background Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2986,
+        "name": "Background Size",
+        "type": "text",
+        "required": true,
+        "role": "background_size"
+      }
+    ],
+    "required_modifiers": [
+      "Select Layout",
+      "Review",
+      "Saved Print Output",
+      "Order File Disclaimer",
+      "Background Size"
+    ]
+  },
+  "mcp": {
+    "product_id": "oval_name_badge",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:lapel' is a new preview (badge worn on a shirt) that still has to be built."
+  ],
+  "todo": [
+    "Real dimensions for size1 to size4 on each badge product. BigCommerce stores only the labels; the sizes live in Doogma.",
+    "What each layout1 to layout9 looks like (positions of name, title, badge text and logo).",
+    "Print checks for badges (minimum text size, engraving limits).",
+    "Production file format: engraving file vs print file."
+  ]
+}

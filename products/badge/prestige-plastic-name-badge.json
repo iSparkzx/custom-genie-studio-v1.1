@@ -1,0 +1,2826 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "prestige_plastic_name_badge",
+  "name": "Custom Prestige Plastic Name Badges",
+  "family": "badge",
+  "type": "Badges - Prestige",
+  "group": "badges_prestige",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 148,
+    "url": "/name-badges/prestige-plastic-name-badge/",
+    "sku": "52PRE",
+    "base_variant_id": null,
+    "template": "badgeprod"
+  },
+  "size": {
+    "mode": "preset",
+    "unit": "in",
+    "presets": [
+      {
+        "id": "size1",
+        "label": "size1",
+        "w_in": null,
+        "h_in": null
+      },
+      {
+        "id": "size2",
+        "label": "size2",
+        "w_in": null,
+        "h_in": null
+      },
+      {
+        "id": "size3",
+        "label": "size3",
+        "w_in": null,
+        "h_in": null
+      },
+      {
+        "id": "size4",
+        "label": "size4",
+        "w_in": null,
+        "h_in": null
+      }
+    ]
+  },
+  "background_colors": [
+    "Gold",
+    "Silver",
+    "Custom Color",
+    "Upload Background"
+  ],
+  "border_colors": [
+    "Black",
+    "Blue",
+    "Green",
+    "Maroon",
+    "Red",
+    "White"
+  ],
+  "attachments": [
+    "magnet",
+    "pin"
+  ],
+  "decoration": "printed",
+  "text_fields": [
+    "name",
+    "title",
+    "badge_text"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": {
+    "bulk_names_file": true
+  },
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 11.46,
+    "quantity_tiers": [
+      {
+        "min_qty": 5,
+        "max_qty": 9,
+        "type": "percent",
+        "amount": 5
+      },
+      {
+        "min_qty": 10,
+        "max_qty": 14,
+        "type": "percent",
+        "amount": 10
+      },
+      {
+        "min_qty": 15,
+        "max_qty": 19,
+        "type": "percent",
+        "amount": 15
+      },
+      {
+        "min_qty": 20,
+        "max_qty": 49,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 50,
+        "max_qty": 99,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 100,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 30
+      }
+    ],
+    "variants": [
+      {
+        "id": 18488,
+        "sku": "52PREP20BLKMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18489,
+        "sku": "52PREP20BLKPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18490,
+        "sku": "52PREP20BLKMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18491,
+        "sku": "52PREP20BLKPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18492,
+        "sku": "52PREP20BLKMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18493,
+        "sku": "52PREP20BLKPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18494,
+        "sku": "52PREP20BLKMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18495,
+        "sku": "52PREP20BLKPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18496,
+        "sku": "52PREP20BLUMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18497,
+        "sku": "52PREP20BLUPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18498,
+        "sku": "52PREP20BLUMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18499,
+        "sku": "52PREP20BLUPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18500,
+        "sku": "52PREP20BLUMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18501,
+        "sku": "52PREP20BLUPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18502,
+        "sku": "52PREP20BLUMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18503,
+        "sku": "52PREP20BLUPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18504,
+        "sku": "52PREP20GRNMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18505,
+        "sku": "52PREP20GRNPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18506,
+        "sku": "52PREP20GRNMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18507,
+        "sku": "52PREP20GRNPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18508,
+        "sku": "52PREP20GRNMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18509,
+        "sku": "52PREP20GRNPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18510,
+        "sku": "52PREP20GRNMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18511,
+        "sku": "52PREP20GRNPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18512,
+        "sku": "52PREP20MARMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18513,
+        "sku": "52PREP20MARPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18514,
+        "sku": "52PREP20MARMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18515,
+        "sku": "52PREP20MARPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18516,
+        "sku": "52PREP20MARMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18517,
+        "sku": "52PREP20MARPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18518,
+        "sku": "52PREP20MARMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18519,
+        "sku": "52PREP20MARPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18520,
+        "sku": "52PREP20REDMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18521,
+        "sku": "52PREP20REDPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18522,
+        "sku": "52PREP20REDMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18523,
+        "sku": "52PREP20REDPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18524,
+        "sku": "52PREP20REDMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18525,
+        "sku": "52PREP20REDPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18526,
+        "sku": "52PREP20REDMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18527,
+        "sku": "52PREP20REDPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18528,
+        "sku": "52PREP20WHTMG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18529,
+        "sku": "52PREP20WHTPG",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18530,
+        "sku": "52PREP20WHTMS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18531,
+        "sku": "52PREP20WHTPS",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18532,
+        "sku": "52PREP20WHTMW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18533,
+        "sku": "52PREP20WHTPW",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18534,
+        "sku": "52PREP20WHTMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18535,
+        "sku": "52PREP20WHTPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size1",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18536,
+        "sku": "52PREP25BLKMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18537,
+        "sku": "52PREP25BLKPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18538,
+        "sku": "52PREP25BLKMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18539,
+        "sku": "52PREP25BLKPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18540,
+        "sku": "52PREP25BLKMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18541,
+        "sku": "52PREP25BLKPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18542,
+        "sku": "52PREP25BLKMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18543,
+        "sku": "52PREP25BLKPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18544,
+        "sku": "52PREP25BLUMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18545,
+        "sku": "52PREP25BLUPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18546,
+        "sku": "52PREP25BLUMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18547,
+        "sku": "52PREP25BLUPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18548,
+        "sku": "52PREP25BLUMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18549,
+        "sku": "52PREP25BLUPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18550,
+        "sku": "52PREP25BLUMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18551,
+        "sku": "52PREP25BLUPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18552,
+        "sku": "52PREP25GRNMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18553,
+        "sku": "52PREP25GRNPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18554,
+        "sku": "52PREP25GRNMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18555,
+        "sku": "52PREP25GRNPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18556,
+        "sku": "52PREP25GRNMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18557,
+        "sku": "52PREP25GRNPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18558,
+        "sku": "52PREP25GRNMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18559,
+        "sku": "52PREP25GRNPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18560,
+        "sku": "52PREP25MARMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18561,
+        "sku": "52PREP25MARPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18562,
+        "sku": "52PREP25MARMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18563,
+        "sku": "52PREP25MARPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18564,
+        "sku": "52PREP25MARMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18565,
+        "sku": "52PREP25MARPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18566,
+        "sku": "52PREP25MARMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18567,
+        "sku": "52PREP25MARPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18568,
+        "sku": "52PREP25REDMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18569,
+        "sku": "52PREP25REDPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18570,
+        "sku": "52PREP25REDMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18571,
+        "sku": "52PREP25REDPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18572,
+        "sku": "52PREP25REDMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18573,
+        "sku": "52PREP25REDPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18574,
+        "sku": "52PREP25REDMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18575,
+        "sku": "52PREP25REDPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18576,
+        "sku": "52PREP25WHTMG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18577,
+        "sku": "52PREP25WHTPG",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18578,
+        "sku": "52PREP25WHTMS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18579,
+        "sku": "52PREP25WHTPS",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18580,
+        "sku": "52PREP25WHTMW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18581,
+        "sku": "52PREP25WHTPW",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18582,
+        "sku": "52PREP25WHTMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18583,
+        "sku": "52PREP25WHTPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size2",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18584,
+        "sku": "52PREP30BLKMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18585,
+        "sku": "52PREP30BLKPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18586,
+        "sku": "52PREP30BLKMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18587,
+        "sku": "52PREP30BLKPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18588,
+        "sku": "52PREP30BLKMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18589,
+        "sku": "52PREP30BLKPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18590,
+        "sku": "52PREP30BLKMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18591,
+        "sku": "52PREP30BLKPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18592,
+        "sku": "52PREP30BLUMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18593,
+        "sku": "52PREP30BLUPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18594,
+        "sku": "52PREP30BLUMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18595,
+        "sku": "52PREP30BLUPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18596,
+        "sku": "52PREP30BLUMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18597,
+        "sku": "52PREP30BLUPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18598,
+        "sku": "52PREP30BLUMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18599,
+        "sku": "52PREP30BLUPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18600,
+        "sku": "52PREP30GRNMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18601,
+        "sku": "52PREP30GRNPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18602,
+        "sku": "52PREP30GRNMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18603,
+        "sku": "52PREP30GRNPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18604,
+        "sku": "52PREP30GRNMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18605,
+        "sku": "52PREP30GRNPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18606,
+        "sku": "52PREP30GRNMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18607,
+        "sku": "52PREP30GRNPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18608,
+        "sku": "52PREP30MARMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18609,
+        "sku": "52PREP30MARPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18610,
+        "sku": "52PREP30MARMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18611,
+        "sku": "52PREP30MARPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18612,
+        "sku": "52PREP30MARMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18613,
+        "sku": "52PREP30MARPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18614,
+        "sku": "52PREP30MARMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18615,
+        "sku": "52PREP30MARPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18616,
+        "sku": "52PREP30REDMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18617,
+        "sku": "52PREP30REDPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18618,
+        "sku": "52PREP30REDMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18619,
+        "sku": "52PREP30REDPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18620,
+        "sku": "52PREP30REDMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18621,
+        "sku": "52PREP30REDPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18622,
+        "sku": "52PREP30REDMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18623,
+        "sku": "52PREP30REDPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18624,
+        "sku": "52PREP30WHTMG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18625,
+        "sku": "52PREP30WHTPG",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18626,
+        "sku": "52PREP30WHTMS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18627,
+        "sku": "52PREP30WHTPS",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18628,
+        "sku": "52PREP30WHTMW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18629,
+        "sku": "52PREP30WHTPW",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18630,
+        "sku": "52PREP30WHTMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18631,
+        "sku": "52PREP30WHTPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size3",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18632,
+        "sku": "52PREP35BLKMG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18633,
+        "sku": "52PREP35BLKPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18634,
+        "sku": "52PREP35BLKMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18635,
+        "sku": "52PREP35BLKPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18636,
+        "sku": "52PREP35BLKMW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18637,
+        "sku": "52PREP35BLKPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18638,
+        "sku": "52PREP35BLKMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18639,
+        "sku": "52PREP35BLKPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Black",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18640,
+        "sku": "52PREP35BLUMG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18641,
+        "sku": "52PREP35BLUPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18642,
+        "sku": "52PREP35BLUMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18643,
+        "sku": "52PREP35BLUPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18644,
+        "sku": "52PREP35BLUMW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18645,
+        "sku": "52PREP35BLUPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18646,
+        "sku": "52PREP35BLUMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18647,
+        "sku": "52PREP35BLUPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Blue",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18648,
+        "sku": "52PREP35GRNMG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18649,
+        "sku": "52PREP35GRNPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18650,
+        "sku": "52PREP35GRNMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18651,
+        "sku": "52PREP35GRNPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18652,
+        "sku": "52PREP35GRNMW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18653,
+        "sku": "52PREP35GRNPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18654,
+        "sku": "52PREP35GRNMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18655,
+        "sku": "52PREP35GRNPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Green",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18656,
+        "sku": "52PREP35MARMG-",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18657,
+        "sku": "52PREP35MARPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18658,
+        "sku": "52PREP35MARMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18659,
+        "sku": "52PREP35MARPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18660,
+        "sku": "52PREP35MARMW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18661,
+        "sku": "52PREP35MARPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18662,
+        "sku": "52PREP35MARMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18663,
+        "sku": "52PREP35MARPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Maroon",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18664,
+        "sku": "52PREP35REDMG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18665,
+        "sku": "52PREP35REDPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18666,
+        "sku": "52PREP35REDMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18667,
+        "sku": "52PREP35REDPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18668,
+        "sku": "52PREP35REDMW-",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18669,
+        "sku": "52PREP35REDPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18670,
+        "sku": "52PREP35REDMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18671,
+        "sku": "52PREP35REDPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "Red",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18672,
+        "sku": "52PREP35WHTMG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18673,
+        "sku": "52PREP35WHTPG",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Gold",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18674,
+        "sku": "52PREP35WHTMS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18675,
+        "sku": "52PREP35WHTPS",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Silver",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18676,
+        "sku": "52PREP35WHTMW-",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18677,
+        "sku": "52PREP35WHTPW",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Custom Color",
+          "attachment": "Pin"
+        }
+      },
+      {
+        "id": 18678,
+        "sku": "52PREP35WHTMW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Magnet"
+        }
+      },
+      {
+        "id": 18679,
+        "sku": "52PREP35WHTPW-Background",
+        "price": 11.46,
+        "options": {
+          "size": "size4",
+          "border_color": "White",
+          "background_color": "Upload Background",
+          "attachment": "Pin"
+        }
+      }
+    ]
+  },
+  "editor": {
+    "mode": "template_layout",
+    "fields": [
+      "name",
+      "title",
+      "badge_text",
+      "logo",
+      "background"
+    ],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout9)",
+    "genie": true
+  },
+  "checks": null,
+  "previews": [
+    "flat",
+    "scene:lapel"
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 161,
+        "name": "Size",
+        "role": "size"
+      },
+      {
+        "id": 162,
+        "name": "Border Color",
+        "role": "border_color"
+      },
+      {
+        "id": 1282,
+        "name": "Background Color",
+        "role": "background_color"
+      },
+      {
+        "id": 1283,
+        "name": "Back Attachment",
+        "role": "attachment"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1679,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1680,
+        "name": "Alignment",
+        "type": "swatch",
+        "required": false,
+        "role": "alignment",
+        "values": [
+          {
+            "id": 903,
+            "label": "left"
+          },
+          {
+            "id": 904,
+            "label": "center"
+          },
+          {
+            "id": 905,
+            "label": "right"
+          }
+        ]
+      },
+      {
+        "id": 1681,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1682,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1683,
+        "name": "Name",
+        "type": "text",
+        "required": false,
+        "role": "name"
+      },
+      {
+        "id": 1684,
+        "name": "Title",
+        "type": "text",
+        "required": false,
+        "role": "title"
+      },
+      {
+        "id": 1685,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 1686,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 1687,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1688,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1689,
+        "name": "Select Layout",
+        "type": "swatch",
+        "required": true,
+        "role": "layout",
+        "values": [
+          {
+            "id": 1307,
+            "label": "layout1"
+          },
+          {
+            "id": 1308,
+            "label": "layout2"
+          },
+          {
+            "id": 1309,
+            "label": "layout3"
+          },
+          {
+            "id": 1310,
+            "label": "layout4"
+          },
+          {
+            "id": 1311,
+            "label": "layout5"
+          },
+          {
+            "id": 1312,
+            "label": "layout6"
+          },
+          {
+            "id": 1313,
+            "label": "layout7"
+          },
+          {
+            "id": 1644,
+            "label": "layout8"
+          },
+          {
+            "id": 1797,
+            "label": "layout9"
+          }
+        ]
+      },
+      {
+        "id": 1690,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1691,
+        "name": "Font2",
+        "type": "swatch",
+        "required": false,
+        "role": "font_2",
+        "values": [
+          {
+            "id": 1326,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1327,
+            "label": "Anton"
+          },
+          {
+            "id": 1328,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1329,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1330,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1331,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1332,
+            "label": "Lato"
+          },
+          {
+            "id": 1333,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1334,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1335,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1692,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1693,
+        "name": "Font2size",
+        "type": "text",
+        "required": false,
+        "role": "font_2_size"
+      },
+      {
+        "id": 1694,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1695,
+        "name": "Customcolor2",
+        "type": "text",
+        "required": false,
+        "role": "color_2"
+      },
+      {
+        "id": 1696,
+        "name": "Additional Names - File Upload",
+        "type": "file",
+        "required": false,
+        "role": "bulk_names_file"
+      },
+      {
+        "id": 1698,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1704,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2378,
+        "name": "text 1 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1678,
+            "label": "top"
+          },
+          {
+            "id": 1679,
+            "label": "center"
+          },
+          {
+            "id": 1680,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2379,
+        "name": "text 2 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1681,
+            "label": "top"
+          },
+          {
+            "id": 1682,
+            "label": "center"
+          },
+          {
+            "id": 1683,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2694,
+        "name": "Logo Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2695,
+        "name": "Logo Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2696,
+        "name": "Title Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2697,
+        "name": "Title Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2698,
+        "name": "Name Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2699,
+        "name": "Name Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2830,
+        "name": "Badge Text",
+        "type": "text",
+        "required": false,
+        "role": "badge_text"
+      },
+      {
+        "id": 2831,
+        "name": "Font3size",
+        "type": "text",
+        "required": false,
+        "role": "font_3_size"
+      },
+      {
+        "id": 2832,
+        "name": "Font3",
+        "type": "swatch",
+        "required": false,
+        "role": "font_3",
+        "values": [
+          {
+            "id": 1798,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1799,
+            "label": "Anton"
+          },
+          {
+            "id": 1800,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1801,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1802,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1803,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1804,
+            "label": "Lato"
+          },
+          {
+            "id": 1805,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1806,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1807,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 2833,
+        "name": "Customcolor3",
+        "type": "text",
+        "required": false,
+        "role": "color_3"
+      },
+      {
+        "id": 2834,
+        "name": "text 3 vertical align",
+        "type": "swatch",
+        "required": false,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1808,
+            "label": "top"
+          },
+          {
+            "id": 1809,
+            "label": "center"
+          },
+          {
+            "id": 1810,
+            "label": "bottom"
+          }
+        ]
+      },
+      {
+        "id": 2835,
+        "name": "Badge Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2836,
+        "name": "Badge Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2927,
+        "name": "Order File Disclaimer",
+        "type": "checkbox",
+        "required": true,
+        "role": "order_file_disclaimer",
+        "values": [
+          {
+            "id": 1854,
+            "label": "Yes"
+          },
+          {
+            "id": 1855,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 2993,
+        "name": "Background Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2994,
+        "name": "Background Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2995,
+        "name": "Background Size",
+        "type": "text",
+        "required": true,
+        "role": "background_size"
+      }
+    ],
+    "required_modifiers": [
+      "Select Layout",
+      "Review",
+      "Saved Print Output",
+      "Order File Disclaimer",
+      "Background Size"
+    ]
+  },
+  "mcp": {
+    "product_id": "prestige_plastic_name_badge",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:lapel' is a new preview (badge worn on a shirt) that still has to be built."
+  ],
+  "todo": [
+    "Real dimensions for size1 to size4 on each badge product. BigCommerce stores only the labels; the sizes live in Doogma.",
+    "What each layout1 to layout9 looks like (positions of name, title, badge text and logo).",
+    "Print checks for badges (minimum text size, engraving limits).",
+    "Production file format: engraving file vs print file.",
+    "Dimensions for size1, size2, size3, size4 (BigCommerce stores only these labels)."
+  ]
+}

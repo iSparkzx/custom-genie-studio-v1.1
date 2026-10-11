@@ -1,0 +1,6557 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "kiss_cut_sticker",
+  "name": "Kiss Cut Sticker",
+  "family": "sticker",
+  "type": "Custom Cut - Die Cut and Kiss Cut",
+  "group": "custom_cut_die_cut_and_kiss_cut",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 174,
+    "url": "/stickers/kiss-cut-sticker/",
+    "sku": "57000",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 3,
+      "max": 10
+    },
+    "height": {
+      "min": 3,
+      "max": 10
+    },
+    "price_steps": {
+      "width": [
+        3,
+        3.5,
+        4,
+        4.5,
+        5,
+        5.5,
+        6,
+        6.5,
+        7,
+        7.5,
+        8,
+        8.5,
+        9,
+        9.5,
+        10
+      ],
+      "height": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "custom",
+      "bigcommerce_label": "CustomShape"
+    },
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "materials": [
+    "Glossy",
+    "Matte",
+    "Clear",
+    "Removable",
+    "Reflective"
+  ],
+  "decoration": "printed",
+  "format": "single",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 1.44,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 40
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 45
+      }
+    ],
+    "variants": [
+      {
+        "id": 39944,
+        "sku": "57000GLS99KC-30-30",
+        "price": 1.65,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 39945,
+        "sku": "57000GLS99KC-30-35",
+        "price": 1.93,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 39946,
+        "sku": "57000GLS99KC-30-40",
+        "price": 2.2,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 39947,
+        "sku": "57000GLS99KC-30-45",
+        "price": 2.48,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 39948,
+        "sku": "57000GLS99KC-30-50",
+        "price": 2.75,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 39949,
+        "sku": "57000GLS99KC-30-55",
+        "price": 2.05,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 39950,
+        "sku": "57000GLS99KC-30-60",
+        "price": 2.24,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 39951,
+        "sku": "57000GLS99KC-30-65",
+        "price": 2.43,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 39952,
+        "sku": "57000GLS99KC-30-70",
+        "price": 2.61,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 39953,
+        "sku": "57000GLS99KC-30-75",
+        "price": 2.8,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 39954,
+        "sku": "57000GLS99KC-30-80",
+        "price": 2.99,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 39955,
+        "sku": "57000GLS99KC-30-85",
+        "price": 2.45,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 39956,
+        "sku": "57000GLS99KC-30-90",
+        "price": 2.59,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 39957,
+        "sku": "57000GLS99KC-30-95",
+        "price": 2.74,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 39958,
+        "sku": "57000GLS99KC-30-10",
+        "price": 2.88,
+        "options": {
+          "material": "Glossy",
+          "height": "3.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 39959,
+        "sku": "57000GLS99KC-40-30",
+        "price": 2.2,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 39960,
+        "sku": "57000GLS99KC-40-35",
+        "price": 2.57,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 39961,
+        "sku": "57000GLS99KC-40-40",
+        "price": 1.99,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 39962,
+        "sku": "57000GLS99KC-40-45",
+        "price": 2.24,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 39963,
+        "sku": "57000GLS99KC-40-50",
+        "price": 2.49,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 39964,
+        "sku": "57000GLS99KC-40-55",
+        "price": 2.74,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 39965,
+        "sku": "57000GLS99KC-40-60",
+        "price": 2.99,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 39966,
+        "sku": "57000GLS99KC-40-65",
+        "price": 2.5,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 39967,
+        "sku": "57000GLS99KC-40-70",
+        "price": 2.69,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 39968,
+        "sku": "57000GLS99KC-40-75",
+        "price": 2.88,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 39969,
+        "sku": "57000GLS99KC-40-80",
+        "price": 3.07,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 39970,
+        "sku": "57000GLS99KC-40-85",
+        "price": 3.26,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 39971,
+        "sku": "57000GLS99KC-40-90",
+        "price": 3.25,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 39972,
+        "sku": "57000GLS99KC-40-95",
+        "price": 3.43,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 39973,
+        "sku": "57000GLS99KC-40-10",
+        "price": 3.61,
+        "options": {
+          "material": "Glossy",
+          "height": "4.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 39974,
+        "sku": "57000GLS99KC-50-30",
+        "price": 2.75,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 39975,
+        "sku": "57000GLS99KC-50-35",
+        "price": 2.18,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 39976,
+        "sku": "57000GLS99KC-50-40",
+        "price": 2.49,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 39977,
+        "sku": "57000GLS99KC-50-45",
+        "price": 2.8,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 39978,
+        "sku": "57000GLS99KC-50-50",
+        "price": 2.4,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 39979,
+        "sku": "57000GLS99KC-50-55",
+        "price": 2.64,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 39980,
+        "sku": "57000GLS99KC-50-60",
+        "price": 2.88,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 39981,
+        "sku": "57000GLS99KC-50-65",
+        "price": 3.12,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 39982,
+        "sku": "57000GLS99KC-50-70",
+        "price": 3.36,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 39983,
+        "sku": "57000GLS99KC-50-75",
+        "price": 3.39,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 39984,
+        "sku": "57000GLS99KC-50-80",
+        "price": 3.61,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 39985,
+        "sku": "57000GLS99KC-50-85",
+        "price": 3.84,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 39986,
+        "sku": "57000GLS99KC-50-90",
+        "price": 4.06,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 39987,
+        "sku": "57000GLS99KC-50-95",
+        "price": 4.29,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 39988,
+        "sku": "57000GLS99KC-50-10",
+        "price": 4.29,
+        "options": {
+          "material": "Glossy",
+          "height": "5.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 39989,
+        "sku": "57000GLS99KC-60-30",
+        "price": 2.24,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 39990,
+        "sku": "57000GLS99KC-60-35",
+        "price": 2.61,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 39991,
+        "sku": "57000GLS99KC-60-40",
+        "price": 2.99,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 39992,
+        "sku": "57000GLS99KC-60-45",
+        "price": 2.59,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 39993,
+        "sku": "57000GLS99KC-60-50",
+        "price": 2.88,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 39994,
+        "sku": "57000GLS99KC-60-55",
+        "price": 3.17,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 39995,
+        "sku": "57000GLS99KC-60-60",
+        "price": 3.25,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 39996,
+        "sku": "57000GLS99KC-60-65",
+        "price": 3.52,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 39997,
+        "sku": "57000GLS99KC-60-70",
+        "price": 3.79,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 39998,
+        "sku": "57000GLS99KC-60-75",
+        "price": 4.06,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 39999,
+        "sku": "57000GLS99KC-60-80",
+        "price": 4.33,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40000,
+        "sku": "57000GLS99KC-60-85",
+        "price": 4.37,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40001,
+        "sku": "57000GLS99KC-60-90",
+        "price": 4.63,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40002,
+        "sku": "57000GLS99KC-60-95",
+        "price": 4.89,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40003,
+        "sku": "57000GLS99KC-60-10",
+        "price": 5.14,
+        "options": {
+          "material": "Glossy",
+          "height": "6.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40004,
+        "sku": "57000GLS99KC-70-30",
+        "price": 2.61,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40005,
+        "sku": "57000GLS99KC-70-35",
+        "price": 3.05,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40006,
+        "sku": "57000GLS99KC-70-40",
+        "price": 2.69,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40007,
+        "sku": "57000GLS99KC-70-45",
+        "price": 3.02,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40008,
+        "sku": "57000GLS99KC-70-50",
+        "price": 3.36,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40009,
+        "sku": "57000GLS99KC-70-55",
+        "price": 3.48,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40010,
+        "sku": "57000GLS99KC-70-60",
+        "price": 3.79,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40011,
+        "sku": "57000GLS99KC-70-65",
+        "price": 4.11,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40012,
+        "sku": "57000GLS99KC-70-70",
+        "price": 4.2,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40013,
+        "sku": "57000GLS99KC-70-75",
+        "price": 4.5,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40014,
+        "sku": "57000GLS99KC-70-80",
+        "price": 4.8,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40015,
+        "sku": "57000GLS99KC-70-85",
+        "price": 5.1,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40016,
+        "sku": "57000GLS99KC-70-90",
+        "price": 5.4,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40017,
+        "sku": "57000GLS99KC-70-95",
+        "price": 5.7,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40018,
+        "sku": "57000GLS99KC-70-10",
+        "price": 6,
+        "options": {
+          "material": "Glossy",
+          "height": "7.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40019,
+        "sku": "57000GLS99KC-80-30",
+        "price": 2.99,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40020,
+        "sku": "57000GLS99KC-80-35",
+        "price": 2.69,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40021,
+        "sku": "57000GLS99KC-80-40",
+        "price": 3.07,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40022,
+        "sku": "57000GLS99KC-80-45",
+        "price": 3.25,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40023,
+        "sku": "57000GLS99KC-80-50",
+        "price": 3.61,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40024,
+        "sku": "57000GLS99KC-80-55",
+        "price": 3.97,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40025,
+        "sku": "57000GLS99KC-80-60",
+        "price": 4.33,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40026,
+        "sku": "57000GLS99KC-80-65",
+        "price": 4.46,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40027,
+        "sku": "57000GLS99KC-80-70",
+        "price": 4.8,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40028,
+        "sku": "57000GLS99KC-80-75",
+        "price": 5.14,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40029,
+        "sku": "57000GLS99KC-80-80",
+        "price": 5.49,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40030,
+        "sku": "57000GLS99KC-80-85",
+        "price": 5.83,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40031,
+        "sku": "57000GLS99KC-80-90",
+        "price": 6.17,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40032,
+        "sku": "57000GLS99KC-80-95",
+        "price": 6.51,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40033,
+        "sku": "57000GLS99KC-80-10",
+        "price": 6.86,
+        "options": {
+          "material": "Glossy",
+          "height": "8.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40034,
+        "sku": "57000GLS99KC-90-30",
+        "price": 2.59,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40035,
+        "sku": "57000GLS99KC-90-35",
+        "price": 3.02,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40036,
+        "sku": "57000GLS99KC-90-40",
+        "price": 3.25,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40037,
+        "sku": "57000GLS99KC-90-45",
+        "price": 3.66,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40038,
+        "sku": "57000GLS99KC-90-50",
+        "price": 4.06,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40039,
+        "sku": "57000GLS99KC-90-55",
+        "price": 4.24,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40040,
+        "sku": "57000GLS99KC-90-60",
+        "price": 4.63,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40041,
+        "sku": "57000GLS99KC-90-65",
+        "price": 5.01,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40042,
+        "sku": "57000GLS99KC-90-70",
+        "price": 5.4,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40043,
+        "sku": "57000GLS99KC-90-75",
+        "price": 5.79,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40044,
+        "sku": "57000GLS99KC-90-80",
+        "price": 6.17,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40045,
+        "sku": "57000GLS99KC-90-85",
+        "price": 6.56,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40046,
+        "sku": "57000GLS99KC-90-90",
+        "price": 6.94,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40047,
+        "sku": "57000GLS99KC-90-95",
+        "price": 7.33,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40048,
+        "sku": "57000GLS99KC-90-10",
+        "price": 7.71,
+        "options": {
+          "material": "Glossy",
+          "height": "9.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40049,
+        "sku": "57000GLS99KC-10-30",
+        "price": 3.6,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40050,
+        "sku": "57000GLS99KC-10-35",
+        "price": 4.2,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40051,
+        "sku": "57000GLS99KC-10-40",
+        "price": 1.44,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40052,
+        "sku": "57000GLS99KC-10-45",
+        "price": 1.62,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40053,
+        "sku": "57000GLS99KC-10-50",
+        "price": 1.8,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40054,
+        "sku": "57000GLS99KC-10-55",
+        "price": 1.98,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40055,
+        "sku": "57000GLS99KC-10-60",
+        "price": 2.16,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40056,
+        "sku": "57000GLS99KC-10-65",
+        "price": 2.34,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40057,
+        "sku": "57000GLS99KC-10-70",
+        "price": 2.52,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40058,
+        "sku": "57000GLS99KC-10-75",
+        "price": 2.7,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40059,
+        "sku": "57000GLS99KC-10-80",
+        "price": 2.88,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40060,
+        "sku": "57000GLS99KC-10-85",
+        "price": 3.06,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40061,
+        "sku": "57000GLS99KC-10-90",
+        "price": 1.65,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40062,
+        "sku": "57000GLS99KC-10-95",
+        "price": 1.74,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40063,
+        "sku": "57000GLS99KC-10-10",
+        "price": 1.83,
+        "options": {
+          "material": "Glossy",
+          "height": "10.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40064,
+        "sku": "57000MAT99KC-30-30",
+        "price": 1.65,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40065,
+        "sku": "57000MAT99KC-30-35",
+        "price": 1.93,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40066,
+        "sku": "57000MAT99KC-30-40",
+        "price": 2.2,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40067,
+        "sku": "57000MAT99KC-30-45",
+        "price": 2.48,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40068,
+        "sku": "57000MAT99KC-30-50",
+        "price": 2.75,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40069,
+        "sku": "57000MAT99KC-30-55",
+        "price": 2.05,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40070,
+        "sku": "57000MAT99KC-30-60",
+        "price": 2.24,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40071,
+        "sku": "57000MAT99KC-30-65",
+        "price": 2.43,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40072,
+        "sku": "57000MAT99KC-30-70",
+        "price": 2.61,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40073,
+        "sku": "57000MAT99KC-30-75",
+        "price": 2.8,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40074,
+        "sku": "57000MAT99KC-30-80",
+        "price": 2.99,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40075,
+        "sku": "57000MAT99KC-30-85",
+        "price": 2.45,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40076,
+        "sku": "57000MAT99KC-30-90",
+        "price": 2.59,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40077,
+        "sku": "57000MAT99KC-30-95",
+        "price": 2.74,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40078,
+        "sku": "57000MAT99KC-30-10",
+        "price": 2.88,
+        "options": {
+          "material": "Matte",
+          "height": "3.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40079,
+        "sku": "57000MAT99KC-40-30",
+        "price": 2.2,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40080,
+        "sku": "57000MAT99KC-40-35",
+        "price": 2.57,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40081,
+        "sku": "57000MAT99KC-40-40",
+        "price": 1.99,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40082,
+        "sku": "57000MAT99KC-40-45",
+        "price": 2.24,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40083,
+        "sku": "57000MAT99KC-40-50",
+        "price": 2.49,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40084,
+        "sku": "57000MAT99KC-40-55",
+        "price": 2.74,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40085,
+        "sku": "57000MAT99KC-40-60",
+        "price": 2.99,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40086,
+        "sku": "57000MAT99KC-40-65",
+        "price": 2.5,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40087,
+        "sku": "57000MAT99KC-40-70",
+        "price": 2.69,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40088,
+        "sku": "57000MAT99KC-40-75",
+        "price": 2.88,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40089,
+        "sku": "57000MAT99KC-40-80",
+        "price": 3.07,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40090,
+        "sku": "57000MAT99KC-40-85",
+        "price": 3.26,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40091,
+        "sku": "57000MAT99KC-40-90",
+        "price": 3.25,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40092,
+        "sku": "57000MAT99KC-40-95",
+        "price": 3.43,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40093,
+        "sku": "57000MAT99KC-40-10",
+        "price": 3.61,
+        "options": {
+          "material": "Matte",
+          "height": "4.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40094,
+        "sku": "57000MAT99KC-50-30",
+        "price": 2.75,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40095,
+        "sku": "57000MAT99KC-50-35",
+        "price": 2.18,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40096,
+        "sku": "57000MAT99KC-50-40",
+        "price": 2.49,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40097,
+        "sku": "57000MAT99KC-50-45",
+        "price": 2.8,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40098,
+        "sku": "57000MAT99KC-50-50",
+        "price": 2.4,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40099,
+        "sku": "57000MAT99KC-50-55",
+        "price": 2.64,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40100,
+        "sku": "57000MAT99KC-50-60",
+        "price": 2.88,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40101,
+        "sku": "57000MAT99KC-50-65",
+        "price": 3.12,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40102,
+        "sku": "57000MAT99KC-50-70",
+        "price": 3.36,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40103,
+        "sku": "57000MAT99KC-50-75",
+        "price": 3.39,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40104,
+        "sku": "57000MAT99KC-50-80",
+        "price": 3.61,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40105,
+        "sku": "57000MAT99KC-50-85",
+        "price": 3.84,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40106,
+        "sku": "57000MAT99KC-50-90",
+        "price": 4.06,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40107,
+        "sku": "57000MAT99KC-50-95",
+        "price": 4.29,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40108,
+        "sku": "57000MAT99KC-50-10",
+        "price": 4.29,
+        "options": {
+          "material": "Matte",
+          "height": "5.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40109,
+        "sku": "57000MAT99KC-60-30",
+        "price": 2.24,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40110,
+        "sku": "57000MAT99KC-60-35",
+        "price": 2.61,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40111,
+        "sku": "57000MAT99KC-60-40",
+        "price": 2.99,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40112,
+        "sku": "57000MAT99KC-60-45",
+        "price": 2.59,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40113,
+        "sku": "57000MAT99KC-60-50",
+        "price": 2.88,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40114,
+        "sku": "57000MAT99KC-60-55",
+        "price": 3.17,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40115,
+        "sku": "57000MAT99KC-60-60",
+        "price": 3.25,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40116,
+        "sku": "57000MAT99KC-60-65",
+        "price": 3.52,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40117,
+        "sku": "57000MAT99KC-60-70",
+        "price": 3.79,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40118,
+        "sku": "57000MAT99KC-60-75",
+        "price": 4.06,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40119,
+        "sku": "57000MAT99KC-60-80",
+        "price": 4.33,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40120,
+        "sku": "57000MAT99KC-60-85",
+        "price": 4.37,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40121,
+        "sku": "57000MAT99KC-60-90",
+        "price": 4.63,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40122,
+        "sku": "57000MAT99KC-60-95",
+        "price": 4.89,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40123,
+        "sku": "57000MAT99KC-60-10",
+        "price": 5.14,
+        "options": {
+          "material": "Matte",
+          "height": "6.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40124,
+        "sku": "57000MAT99KC-70-30",
+        "price": 2.61,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40125,
+        "sku": "57000MAT99KC-70-35",
+        "price": 3.05,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40126,
+        "sku": "57000MAT99KC-70-40",
+        "price": 2.69,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40127,
+        "sku": "57000MAT99KC-70-45",
+        "price": 3.02,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40128,
+        "sku": "57000MAT99KC-70-50",
+        "price": 3.36,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40129,
+        "sku": "57000MAT99KC-70-55",
+        "price": 3.48,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40130,
+        "sku": "57000MAT99KC-70-60",
+        "price": 3.79,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40131,
+        "sku": "57000MAT99KC-70-65",
+        "price": 4.11,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40132,
+        "sku": "57000MAT99KC-70-70",
+        "price": 4.2,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40133,
+        "sku": "57000MAT99KC-70-75",
+        "price": 4.5,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40134,
+        "sku": "57000MAT99KC-70-80",
+        "price": 4.8,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40135,
+        "sku": "57000MAT99KC-70-85",
+        "price": 5.1,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40136,
+        "sku": "57000MAT99KC-70-90",
+        "price": 5.4,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40137,
+        "sku": "57000MAT99KC-70-95",
+        "price": 5.7,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40138,
+        "sku": "57000MAT99KC-70-10",
+        "price": 6,
+        "options": {
+          "material": "Matte",
+          "height": "7.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40139,
+        "sku": "57000MAT99KC-80-30",
+        "price": 2.99,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40140,
+        "sku": "57000MAT99KC-80-35",
+        "price": 2.69,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40141,
+        "sku": "57000MAT99KC-80-40",
+        "price": 3.07,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40142,
+        "sku": "57000MAT99KC-80-45",
+        "price": 3.25,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40143,
+        "sku": "57000MAT99KC-80-50",
+        "price": 3.61,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40144,
+        "sku": "57000MAT99KC-80-55",
+        "price": 3.97,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40145,
+        "sku": "57000MAT99KC-80-60",
+        "price": 4.33,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40146,
+        "sku": "57000MAT99KC-80-65",
+        "price": 4.46,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40147,
+        "sku": "57000MAT99KC-80-70",
+        "price": 4.8,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40148,
+        "sku": "57000MAT99KC-80-75",
+        "price": 5.14,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40149,
+        "sku": "57000MAT99KC-80-80",
+        "price": 5.49,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40150,
+        "sku": "57000MAT99KC-80-85",
+        "price": 5.83,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40151,
+        "sku": "57000MAT99KC-80-90",
+        "price": 6.17,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40152,
+        "sku": "57000MAT99KC-80-95",
+        "price": 6.51,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40153,
+        "sku": "57000MAT99KC-80-10",
+        "price": 6.86,
+        "options": {
+          "material": "Matte",
+          "height": "8.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40154,
+        "sku": "57000MAT99KC-90-30",
+        "price": 2.59,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40155,
+        "sku": "57000MAT99KC-90-35",
+        "price": 3.02,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40156,
+        "sku": "57000MAT99KC-90-40",
+        "price": 3.25,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40157,
+        "sku": "57000MAT99KC-90-45",
+        "price": 3.66,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40158,
+        "sku": "57000MAT99KC-90-50",
+        "price": 4.06,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40159,
+        "sku": "57000MAT99KC-90-55",
+        "price": 4.24,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40160,
+        "sku": "57000MAT99KC-90-60",
+        "price": 4.63,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40161,
+        "sku": "57000MAT99KC-90-65",
+        "price": 5.01,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40162,
+        "sku": "57000MAT99KC-90-70",
+        "price": 5.4,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40163,
+        "sku": "57000MAT99KC-90-75",
+        "price": 5.79,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40164,
+        "sku": "57000MAT99KC-90-80",
+        "price": 6.17,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40165,
+        "sku": "57000MAT99KC-90-85",
+        "price": 6.56,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40166,
+        "sku": "57000MAT99KC-90-90",
+        "price": 6.94,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40167,
+        "sku": "57000MAT99KC-90-95",
+        "price": 7.33,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40168,
+        "sku": "57000MAT99KC-90-10",
+        "price": 7.71,
+        "options": {
+          "material": "Matte",
+          "height": "9.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40169,
+        "sku": "57000MAT99KC-10-30",
+        "price": 3.6,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40170,
+        "sku": "57000MAT99KC-10-35",
+        "price": 4.2,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40171,
+        "sku": "57000MAT99KC-10-40",
+        "price": 1.44,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40172,
+        "sku": "57000MAT99KC-10-45",
+        "price": 1.62,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40173,
+        "sku": "57000MAT99KC-10-50",
+        "price": 1.8,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40174,
+        "sku": "57000MAT99KC-10-55",
+        "price": 1.98,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40175,
+        "sku": "57000MAT99KC-10-60",
+        "price": 2.16,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40176,
+        "sku": "57000MAT99KC-10-65",
+        "price": 2.34,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40177,
+        "sku": "57000MAT99KC-10-70",
+        "price": 2.52,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40178,
+        "sku": "57000MAT99KC-10-75",
+        "price": 2.7,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40179,
+        "sku": "57000MAT99KC-10-80",
+        "price": 2.88,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40180,
+        "sku": "57000MAT99KC-10-85",
+        "price": 3.06,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40181,
+        "sku": "57000MAT99KC-10-90",
+        "price": 1.65,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40182,
+        "sku": "57000MAT99KC-10-95",
+        "price": 1.74,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40183,
+        "sku": "57000MAT99KC-10-10",
+        "price": 1.83,
+        "options": {
+          "material": "Matte",
+          "height": "10.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40184,
+        "sku": "57000CLR99KC-30-301",
+        "price": 1.65,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40185,
+        "sku": "57000CLR99KC-30-35",
+        "price": 1.93,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40186,
+        "sku": "57000CLR99KC-30-40",
+        "price": 2.2,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40187,
+        "sku": "57000CLR99KC-30-45",
+        "price": 2.48,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40188,
+        "sku": "57000CLR99KC-30-50",
+        "price": 2.75,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40189,
+        "sku": "57000CLR99KC-30-55",
+        "price": 2.05,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40190,
+        "sku": "57000CLR99KC-30-60",
+        "price": 2.24,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40191,
+        "sku": "57000CLR99KC-30-65",
+        "price": 2.43,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40192,
+        "sku": "57000CLR99KC-30-70",
+        "price": 2.61,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40193,
+        "sku": "57000CLR99KC-30-75",
+        "price": 2.8,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40194,
+        "sku": "57000CLR99KC-30-80",
+        "price": 2.99,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40195,
+        "sku": "57000CLR99KC-30-85",
+        "price": 2.45,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40196,
+        "sku": "57000CLR99KC-30-90",
+        "price": 2.59,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40197,
+        "sku": "57000CLR99KC-30-95",
+        "price": 2.74,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40198,
+        "sku": "57000CLR99KC-30-10",
+        "price": 2.88,
+        "options": {
+          "material": "Clear",
+          "height": "3.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40199,
+        "sku": "57000CLR99KC-40-30",
+        "price": 2.2,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40200,
+        "sku": "57000CLR99KC-40-35",
+        "price": 2.57,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40201,
+        "sku": "57000CLR99KC-40-40",
+        "price": 1.99,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40202,
+        "sku": "57000CLR99KC-40-45",
+        "price": 2.24,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40203,
+        "sku": "57000CLR99KC-40-50",
+        "price": 2.49,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40204,
+        "sku": "57000CLR99KC-40-55",
+        "price": 2.74,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40205,
+        "sku": "57000CLR99KC-40-60",
+        "price": 2.99,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40206,
+        "sku": "57000CLR99KC-40-65",
+        "price": 2.5,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40207,
+        "sku": "57000CLR99KC-40-70",
+        "price": 2.69,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40208,
+        "sku": "57000CLR99KC-40-75",
+        "price": 2.88,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40209,
+        "sku": "57000CLR99KC-40-80",
+        "price": 3.07,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40210,
+        "sku": "57000CLR99KC-40-85",
+        "price": 3.26,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40211,
+        "sku": "57000CLR99KC-40-90",
+        "price": 3.25,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40212,
+        "sku": "57000CLR99KC-40-95",
+        "price": 3.43,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40213,
+        "sku": "57000CLR99KC-40-10",
+        "price": 3.61,
+        "options": {
+          "material": "Clear",
+          "height": "4.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40214,
+        "sku": "57000CLR99KC-50-30",
+        "price": 2.75,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40215,
+        "sku": "57000CLR99KC-50-35",
+        "price": 2.18,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40216,
+        "sku": "57000CLR99KC-50-40",
+        "price": 2.49,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40217,
+        "sku": "57000CLR99KC-50-45",
+        "price": 2.8,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40218,
+        "sku": "57000CLR99KC-50-50",
+        "price": 2.4,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40219,
+        "sku": "57000CLR99KC-50-55",
+        "price": 2.64,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40220,
+        "sku": "57000CLR99KC-50-60",
+        "price": 2.88,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40221,
+        "sku": "57000CLR99KC-50-65",
+        "price": 3.12,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40222,
+        "sku": "57000CLR99KC-50-70",
+        "price": 3.36,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40223,
+        "sku": "57000CLR99KC-50-75",
+        "price": 3.39,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40224,
+        "sku": "57000CLR99KC-50-80",
+        "price": 3.61,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40225,
+        "sku": "57000CLR99KC-50-85",
+        "price": 3.84,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40226,
+        "sku": "57000CLR99KC-50-90",
+        "price": 4.06,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40227,
+        "sku": "57000CLR99KC-50-95",
+        "price": 4.29,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40228,
+        "sku": "57000CLR99KC-50-10",
+        "price": 4.29,
+        "options": {
+          "material": "Clear",
+          "height": "5.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40229,
+        "sku": "57000CLR99KC-60-30",
+        "price": 2.24,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40230,
+        "sku": "57000CLR99KC-60-35",
+        "price": 2.61,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40231,
+        "sku": "57000CLR99KC-60-40",
+        "price": 2.99,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40232,
+        "sku": "57000CLR99KC-60-45",
+        "price": 2.59,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40233,
+        "sku": "57000CLR99KC-60-50",
+        "price": 2.88,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40234,
+        "sku": "57000CLR99KC-60-55",
+        "price": 3.17,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40235,
+        "sku": "57000CLR99KC-60-60",
+        "price": 3.25,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40236,
+        "sku": "57000CLR99KC-60-65",
+        "price": 3.52,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40237,
+        "sku": "57000CLR99KC-60-70",
+        "price": 3.79,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40238,
+        "sku": "57000CLR99KC-60-75",
+        "price": 4.06,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40239,
+        "sku": "57000CLR99KC-60-80",
+        "price": 4.33,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40240,
+        "sku": "57000CLR99KC-60-85",
+        "price": 4.37,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40241,
+        "sku": "57000CLR99KC-60-90",
+        "price": 4.63,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40242,
+        "sku": "57000CLR99KC-60-95",
+        "price": 4.89,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40243,
+        "sku": "57000CLR99KC-60-10",
+        "price": 5.14,
+        "options": {
+          "material": "Clear",
+          "height": "6.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40244,
+        "sku": "57000CLR99KC-70-30",
+        "price": 2.61,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40245,
+        "sku": "57000CLR99KC-70-35",
+        "price": 3.05,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40246,
+        "sku": "57000CLR99KC-70-40",
+        "price": 2.69,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40247,
+        "sku": "57000CLR99KC-70-45",
+        "price": 3.02,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40248,
+        "sku": "57000CLR99KC-70-50",
+        "price": 3.36,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40249,
+        "sku": "57000CLR99KC-70-55",
+        "price": 3.48,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40250,
+        "sku": "57000CLR99KC-70-60",
+        "price": 3.79,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40251,
+        "sku": "57000CLR99KC-70-65",
+        "price": 4.11,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40252,
+        "sku": "57000CLR99KC-70-70",
+        "price": 4.2,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40253,
+        "sku": "57000CLR99KC-70-75",
+        "price": 4.5,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40254,
+        "sku": "57000CLR99KC-70-80",
+        "price": 4.8,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40255,
+        "sku": "57000CLR99KC-70-85",
+        "price": 5.1,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40256,
+        "sku": "57000CLR99KC-70-90",
+        "price": 5.4,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40257,
+        "sku": "57000CLR99KC-70-95",
+        "price": 5.7,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40258,
+        "sku": "57000CLR99KC-70-10",
+        "price": 6,
+        "options": {
+          "material": "Clear",
+          "height": "7.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40259,
+        "sku": "57000CLR99KC-80-30",
+        "price": 2.99,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40260,
+        "sku": "57000CLR99KC-80-35",
+        "price": 2.69,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40261,
+        "sku": "57000CLR99KC-80-40",
+        "price": 3.07,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40262,
+        "sku": "57000CLR99KC-80-45",
+        "price": 3.25,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40263,
+        "sku": "57000CLR99KC-80-50",
+        "price": 3.61,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40264,
+        "sku": "57000CLR99KC-80-55",
+        "price": 3.97,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40265,
+        "sku": "57000CLR99KC-80-60",
+        "price": 4.33,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40266,
+        "sku": "57000CLR99KC-80-65",
+        "price": 4.46,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40267,
+        "sku": "57000CLR99KC-80-70",
+        "price": 4.8,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40268,
+        "sku": "57000CLR99KC-80-75",
+        "price": 5.14,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40269,
+        "sku": "57000CLR99KC-80-80",
+        "price": 5.49,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40270,
+        "sku": "57000CLR99KC-80-85",
+        "price": 5.83,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40271,
+        "sku": "57000CLR99KC-80-90",
+        "price": 6.17,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40272,
+        "sku": "57000CLR99KC-80-95",
+        "price": 6.51,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40273,
+        "sku": "57000CLR99KC-80-10",
+        "price": 6.86,
+        "options": {
+          "material": "Clear",
+          "height": "8.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40274,
+        "sku": "57000CLR99KC-90-30",
+        "price": 2.59,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40275,
+        "sku": "57000CLR99KC-90-35",
+        "price": 3.02,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40276,
+        "sku": "57000CLR99KC-90-40",
+        "price": 3.25,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40277,
+        "sku": "57000CLR99KC-90-45",
+        "price": 3.66,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40278,
+        "sku": "57000CLR99KC-90-50",
+        "price": 4.06,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40279,
+        "sku": "57000CLR99KC-90-55",
+        "price": 4.24,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40280,
+        "sku": "57000CLR99KC-90-60",
+        "price": 4.63,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40281,
+        "sku": "57000CLR99KC-90-65",
+        "price": 5.01,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40282,
+        "sku": "57000CLR99KC-90-70",
+        "price": 5.4,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40283,
+        "sku": "57000CLR99KC-90-75",
+        "price": 5.79,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40284,
+        "sku": "57000CLR99KC-90-80",
+        "price": 6.17,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40285,
+        "sku": "57000CLR99KC-90-85",
+        "price": 6.56,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40286,
+        "sku": "57000CLR99KC-90-90",
+        "price": 6.94,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40287,
+        "sku": "57000CLR99KC-90-95",
+        "price": 7.33,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40288,
+        "sku": "57000CLR99KC-90-10",
+        "price": 7.71,
+        "options": {
+          "material": "Clear",
+          "height": "9.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40289,
+        "sku": "57000CLR99KC-10-30",
+        "price": 3.6,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40290,
+        "sku": "57000CLR99KC-10-35",
+        "price": 4.2,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40291,
+        "sku": "57000CLR99KC-10-40",
+        "price": 1.44,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40292,
+        "sku": "57000CLR99KC-10-45",
+        "price": 1.62,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40293,
+        "sku": "57000CLR99KC-10-50",
+        "price": 1.8,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40294,
+        "sku": "57000CLR99KC-10-55",
+        "price": 1.98,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40295,
+        "sku": "57000CLR99KC-10-60",
+        "price": 2.16,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40296,
+        "sku": "57000CLR99KC-10-65",
+        "price": 2.34,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40297,
+        "sku": "57000CLR99KC-10-70",
+        "price": 2.52,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40298,
+        "sku": "57000CLR99KC-10-75",
+        "price": 2.7,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40299,
+        "sku": "57000CLR99KC-10-80",
+        "price": 2.88,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40300,
+        "sku": "57000CLR99KC-10-85",
+        "price": 3.06,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40301,
+        "sku": "57000CLR99KC-10-90",
+        "price": 1.65,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40302,
+        "sku": "57000CLR99KC-10-95",
+        "price": 1.74,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40303,
+        "sku": "57000CLR99KC-10-10",
+        "price": 1.83,
+        "options": {
+          "material": "Clear",
+          "height": "10.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40304,
+        "sku": "57000REM99KC-30-30",
+        "price": 1.65,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40305,
+        "sku": "57000REM99KC-30-35",
+        "price": 1.93,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40306,
+        "sku": "57000REM99KC-30-40",
+        "price": 2.2,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40307,
+        "sku": "57000REM99KC-30-45",
+        "price": 2.48,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40308,
+        "sku": "57000REM99KC-30-50",
+        "price": 2.75,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40309,
+        "sku": "57000REM99KC-30-55",
+        "price": 2.05,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40310,
+        "sku": "57000REM99KC-30-60",
+        "price": 2.24,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40311,
+        "sku": "57000REM99KC-30-65",
+        "price": 2.43,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40312,
+        "sku": "57000REM99KC-30-70",
+        "price": 2.61,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40313,
+        "sku": "57000REM99KC-30-75",
+        "price": 2.8,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40314,
+        "sku": "57000REM99KC-30-80",
+        "price": 2.99,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40315,
+        "sku": "57000REM99KC-30-85",
+        "price": 2.45,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40316,
+        "sku": "57000REM99KC-30-90",
+        "price": 2.59,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40317,
+        "sku": "57000REM99KC-30-95",
+        "price": 2.74,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40318,
+        "sku": "57000REM99KC-30-10",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "3.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40319,
+        "sku": "57000REM99KC-40-30",
+        "price": 2.2,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40320,
+        "sku": "57000REM99KC-40-35",
+        "price": 2.57,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40321,
+        "sku": "57000REM99KC-40-40",
+        "price": 1.99,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40322,
+        "sku": "57000REM99KC-40-45",
+        "price": 2.24,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40323,
+        "sku": "57000REM99KC-40-50",
+        "price": 2.49,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40324,
+        "sku": "57000REM99KC-40-55",
+        "price": 2.74,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40325,
+        "sku": "57000REM99KC-40-60",
+        "price": 2.99,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40326,
+        "sku": "57000REM99KC-40-65",
+        "price": 2.5,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40327,
+        "sku": "57000REM99KC-40-70",
+        "price": 2.69,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40328,
+        "sku": "57000REM99KC-40-75",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40329,
+        "sku": "57000REM99KC-40-80",
+        "price": 3.07,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40330,
+        "sku": "57000REM99KC-40-85",
+        "price": 3.26,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40331,
+        "sku": "57000REM99KC-40-90",
+        "price": 3.25,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40332,
+        "sku": "57000REM99KC-40-95",
+        "price": 3.43,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40333,
+        "sku": "57000REM99KC-40-10",
+        "price": 3.61,
+        "options": {
+          "material": "Removable",
+          "height": "4.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40334,
+        "sku": "57000REM99KC-50-30",
+        "price": 2.75,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40335,
+        "sku": "57000REM99KC-50-35",
+        "price": 2.18,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40336,
+        "sku": "57000REM99KC-50-40",
+        "price": 2.49,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40337,
+        "sku": "57000REM99KC-50-45",
+        "price": 2.8,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40338,
+        "sku": "57000REM99KC-50-50",
+        "price": 2.4,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40339,
+        "sku": "57000REM99KC-50-55",
+        "price": 2.64,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40340,
+        "sku": "57000REM99KC-50-60",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40341,
+        "sku": "57000REM99KC-50-65",
+        "price": 3.12,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40342,
+        "sku": "57000REM99KC-50-70",
+        "price": 3.36,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40343,
+        "sku": "57000REM99KC-50-75",
+        "price": 3.39,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40344,
+        "sku": "57000REM99KC-50-80",
+        "price": 3.61,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40345,
+        "sku": "57000REM99KC-50-85",
+        "price": 3.84,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40346,
+        "sku": "57000REM99KC-50-90",
+        "price": 4.06,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40347,
+        "sku": "57000REM99KC-50-95",
+        "price": 4.29,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40348,
+        "sku": "57000REM99KC-50-10",
+        "price": 4.29,
+        "options": {
+          "material": "Removable",
+          "height": "5.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40349,
+        "sku": "57000REM99KC-60-30",
+        "price": 2.24,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40350,
+        "sku": "57000REM99KC-60-35",
+        "price": 2.61,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40351,
+        "sku": "57000REM99KC-60-40",
+        "price": 2.99,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40352,
+        "sku": "57000REM99KC-60-45",
+        "price": 2.59,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40353,
+        "sku": "57000REM99KC-60-50",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40354,
+        "sku": "57000REM99KC-60-55",
+        "price": 3.17,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40355,
+        "sku": "57000REM99KC-60-60",
+        "price": 3.25,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40356,
+        "sku": "57000REM99KC-60-65",
+        "price": 3.52,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40357,
+        "sku": "57000REM99KC-60-70",
+        "price": 3.79,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40358,
+        "sku": "57000REM99KC-60-75",
+        "price": 4.06,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40359,
+        "sku": "57000REM99KC-60-80",
+        "price": 4.33,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40360,
+        "sku": "57000REM99KC-60-85",
+        "price": 4.37,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40361,
+        "sku": "57000REM99KC-60-90",
+        "price": 4.63,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40362,
+        "sku": "57000REM99KC-60-95",
+        "price": 4.89,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40363,
+        "sku": "57000REM99KC-60-10",
+        "price": 5.14,
+        "options": {
+          "material": "Removable",
+          "height": "6.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40364,
+        "sku": "57000REM99KC-70-30",
+        "price": 2.61,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40365,
+        "sku": "57000REM99KC-70-35",
+        "price": 3.05,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40366,
+        "sku": "57000REM99KC-70-40",
+        "price": 2.69,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40367,
+        "sku": "57000REM99KC-70-45",
+        "price": 3.02,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40368,
+        "sku": "57000REM99KC-70-50",
+        "price": 3.36,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40369,
+        "sku": "57000REM99KC-70-55",
+        "price": 3.48,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40370,
+        "sku": "57000REM99KC-70-60",
+        "price": 3.79,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40371,
+        "sku": "57000REM99KC-70-65",
+        "price": 4.11,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40372,
+        "sku": "57000REM99KC-70-70",
+        "price": 4.2,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40373,
+        "sku": "57000REM99KC-70-75",
+        "price": 4.5,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40374,
+        "sku": "57000REM99KC-70-80",
+        "price": 4.8,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40375,
+        "sku": "57000REM99KC-70-85",
+        "price": 5.1,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40376,
+        "sku": "57000REM99KC-70-90",
+        "price": 5.4,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40377,
+        "sku": "57000REM99KC-70-95",
+        "price": 5.7,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40378,
+        "sku": "57000REM99KC-70-10",
+        "price": 6,
+        "options": {
+          "material": "Removable",
+          "height": "7.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40379,
+        "sku": "57000REM99KC-80-30",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40380,
+        "sku": "57000REM99KC-80-35",
+        "price": 3.36,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40381,
+        "sku": "57000REM99KC-80-40",
+        "price": 3.61,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40382,
+        "sku": "57000REM99KC-80-45",
+        "price": 4.06,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40383,
+        "sku": "57000REM99KC-80-50",
+        "price": 4.29,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40384,
+        "sku": "57000REM99KC-80-55",
+        "price": 4.71,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40385,
+        "sku": "57000REM99KC-80-60",
+        "price": 5.14,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40386,
+        "sku": "57000REM99KC-80-65",
+        "price": 5.57,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40387,
+        "sku": "57000REM99KC-80-70",
+        "price": 6,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40388,
+        "sku": "57000REM99KC-80-75",
+        "price": 6.43,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40389,
+        "sku": "57000REM99KC-80-80",
+        "price": 6.86,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40390,
+        "sku": "57000REM99KC-80-85",
+        "price": 7.29,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40391,
+        "sku": "57000REM99KC-80-90",
+        "price": 7.71,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40392,
+        "sku": "57000REM99KC-80-95",
+        "price": 8.14,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40393,
+        "sku": "57000REM99KC-80-10",
+        "price": 8.57,
+        "options": {
+          "material": "Removable",
+          "height": "8.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40394,
+        "sku": "57000REM99KC-90-30",
+        "price": 2.59,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40395,
+        "sku": "57000REM99KC-90-35",
+        "price": 3.02,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40396,
+        "sku": "57000REM99KC-90-40",
+        "price": 3.25,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40397,
+        "sku": "57000REM99KC-90-45",
+        "price": 3.66,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40398,
+        "sku": "57000REM99KC-90-50",
+        "price": 4.06,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40399,
+        "sku": "57000REM99KC-90-55",
+        "price": 4.24,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40400,
+        "sku": "57000REM99KC-90-60",
+        "price": 4.63,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40401,
+        "sku": "57000REM99KC-90-65",
+        "price": 5.01,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40402,
+        "sku": "57000REM99KC-90-70",
+        "price": 5.4,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40403,
+        "sku": "57000REM99KC-90-75",
+        "price": 5.79,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40404,
+        "sku": "57000REM99KC-90-80",
+        "price": 6.17,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40405,
+        "sku": "57000REM99KC-90-85",
+        "price": 6.56,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40406,
+        "sku": "57000REM99KC-90-90",
+        "price": 6.94,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40407,
+        "sku": "57000REM99KC-90-95",
+        "price": 7.33,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40408,
+        "sku": "57000REM99KC-90-10",
+        "price": 7.71,
+        "options": {
+          "material": "Removable",
+          "height": "9.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40409,
+        "sku": "57000REM99KC-10-30",
+        "price": 3.6,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40410,
+        "sku": "57000REM99KC-10-35",
+        "price": 4.2,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40411,
+        "sku": "57000REM99KC-10-40",
+        "price": 1.44,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40412,
+        "sku": "57000REM99KC-10-45",
+        "price": 1.62,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40413,
+        "sku": "57000REM99KC-10-50",
+        "price": 1.8,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40414,
+        "sku": "57000REM99KC-10-55",
+        "price": 1.98,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40415,
+        "sku": "57000REM99KC-10-60",
+        "price": 2.16,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40416,
+        "sku": "57000REM99KC-10-65",
+        "price": 2.34,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40417,
+        "sku": "57000REM99KC-10-70",
+        "price": 2.52,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40418,
+        "sku": "57000REM99KC-10-75",
+        "price": 2.7,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40419,
+        "sku": "57000REM99KC-10-80",
+        "price": 2.88,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40420,
+        "sku": "57000REM99KC-10-85",
+        "price": 3.06,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40421,
+        "sku": "57000REM99KC-10-90",
+        "price": 1.65,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40422,
+        "sku": "57000REM99KC-10-95",
+        "price": 1.74,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40423,
+        "sku": "57000REM99KC-10-10",
+        "price": 1.83,
+        "options": {
+          "material": "Removable",
+          "height": "10.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40424,
+        "sku": "57000REF99KC-30-30",
+        "price": 1.65,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40425,
+        "sku": "57000REF99KC-30-35",
+        "price": 1.93,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40426,
+        "sku": "57000REF99KC-30-40",
+        "price": 2.2,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40427,
+        "sku": "57000REF99KC-30-45",
+        "price": 2.48,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40428,
+        "sku": "57000REF99KC-30-50",
+        "price": 2.75,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40429,
+        "sku": "57000REF99KC-30-55",
+        "price": 2.05,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40430,
+        "sku": "57000REF99KC-30-60",
+        "price": 2.24,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40431,
+        "sku": "57000REF99KC-30-65",
+        "price": 2.43,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40432,
+        "sku": "57000REF99KC-30-70",
+        "price": 2.61,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40433,
+        "sku": "57000REF99KC-30-75",
+        "price": 2.8,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40434,
+        "sku": "57000REF99KC-30-80",
+        "price": 2.99,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40435,
+        "sku": "57000REF99KC-30-85",
+        "price": 2.45,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40436,
+        "sku": "57000REF99KC-30-90",
+        "price": 2.59,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40437,
+        "sku": "57000REF99KC-30-95",
+        "price": 2.74,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40438,
+        "sku": "57000REF99KC-30-10",
+        "price": 2.88,
+        "options": {
+          "material": "Reflective",
+          "height": "3.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40439,
+        "sku": "57000REF99KC-40-30",
+        "price": 2.2,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40440,
+        "sku": "57000REF99KC-40-35",
+        "price": 2.57,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40441,
+        "sku": "57000REF99KC-40-40",
+        "price": 1.99,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40442,
+        "sku": "57000REF99KC-40-45",
+        "price": 2.24,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40443,
+        "sku": "57000REF99KC-40-50",
+        "price": 2.49,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40444,
+        "sku": "57000REF99KC-40-55",
+        "price": 2.74,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40445,
+        "sku": "57000REF99KC-40-60",
+        "price": 2.99,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40446,
+        "sku": "57000REF99KC-40-65",
+        "price": 2.5,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40447,
+        "sku": "57000REF99KC-40-70",
+        "price": 2.69,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40448,
+        "sku": "57000REF99KC-40-75",
+        "price": 2.88,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40449,
+        "sku": "57000REF99KC-40-80",
+        "price": 3.07,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40450,
+        "sku": "57000REF99KC-40-85",
+        "price": 3.26,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40451,
+        "sku": "57000REF99KC-40-90",
+        "price": 3.25,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40452,
+        "sku": "57000REF99KC-40-95",
+        "price": 3.43,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40453,
+        "sku": "57000REF99KC-40-10",
+        "price": 3.61,
+        "options": {
+          "material": "Reflective",
+          "height": "4.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40454,
+        "sku": "57000REF99KC-50-30",
+        "price": 2.75,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40455,
+        "sku": "57000REF99KC-50-35",
+        "price": 2.18,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40456,
+        "sku": "57000REF99KC-50-40",
+        "price": 2.49,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40457,
+        "sku": "57000REF99KC-50-45",
+        "price": 2.8,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40458,
+        "sku": "57000REF99KC-50-50",
+        "price": 2.4,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40459,
+        "sku": "57000REF99KC-50-55",
+        "price": 2.64,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40460,
+        "sku": "57000REF99KC-50-60",
+        "price": 2.88,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40461,
+        "sku": "57000REF99KC-50-65",
+        "price": 3.12,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40462,
+        "sku": "57000REF99KC-50-70",
+        "price": 3.36,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40463,
+        "sku": "57000REF99KC-50-75",
+        "price": 3.39,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40464,
+        "sku": "57000REF99KC-50-80",
+        "price": 3.61,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40465,
+        "sku": "57000REF99KC-50-85",
+        "price": 3.84,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40466,
+        "sku": "57000REF99KC-50-90",
+        "price": 4.06,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40467,
+        "sku": "57000REF99KC-50-95",
+        "price": 4.29,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40468,
+        "sku": "57000REF99KC-50-10",
+        "price": 4.29,
+        "options": {
+          "material": "Reflective",
+          "height": "5.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40469,
+        "sku": "57000REF99KC-60-30",
+        "price": 2.24,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40470,
+        "sku": "57000REF99KC-60-35",
+        "price": 2.61,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40471,
+        "sku": "57000REF99KC-60-40",
+        "price": 2.99,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40472,
+        "sku": "57000REF99KC-60-45",
+        "price": 2.59,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40473,
+        "sku": "57000REF99KC-60-50",
+        "price": 2.88,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40474,
+        "sku": "57000REF99KC-60-55",
+        "price": 3.17,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40475,
+        "sku": "57000REF99KC-60-60",
+        "price": 3.25,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40476,
+        "sku": "57000REF99KC-60-65",
+        "price": 3.52,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40477,
+        "sku": "57000REF99KC-60-70",
+        "price": 3.79,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40478,
+        "sku": "57000REF99KC-60-75",
+        "price": 4.06,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40479,
+        "sku": "57000REF99KC-60-80",
+        "price": 4.33,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40480,
+        "sku": "57000REF99KC-60-85",
+        "price": 4.37,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40481,
+        "sku": "57000REF99KC-60-90",
+        "price": 4.63,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40482,
+        "sku": "57000REF99KC-60-95",
+        "price": 4.89,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40483,
+        "sku": "57000REF99KC-60-10",
+        "price": 5.14,
+        "options": {
+          "material": "Reflective",
+          "height": "6.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40484,
+        "sku": "57000REF99KC-70-30",
+        "price": 2.61,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40485,
+        "sku": "57000REF99KC-70-35",
+        "price": 3.05,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40486,
+        "sku": "57000REF99KC-70-40",
+        "price": 2.69,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40487,
+        "sku": "57000REF99KC-70-45",
+        "price": 3.02,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40488,
+        "sku": "57000REF99KC-70-50",
+        "price": 3.36,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40489,
+        "sku": "57000REF99KC-70-55",
+        "price": 3.48,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40490,
+        "sku": "57000REF99KC-70-60",
+        "price": 3.79,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40491,
+        "sku": "57000REF99KC-70-65",
+        "price": 4.11,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40492,
+        "sku": "57000REF99KC-70-70",
+        "price": 4.2,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40493,
+        "sku": "57000REF99KC-70-75",
+        "price": 4.5,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40494,
+        "sku": "57000REF99KC-70-80",
+        "price": 4.8,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40495,
+        "sku": "57000REF99KC-70-85",
+        "price": 5.1,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40496,
+        "sku": "57000REF99KC-70-90",
+        "price": 5.4,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40497,
+        "sku": "57000REF99KC-70-95",
+        "price": 5.7,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40498,
+        "sku": "57000REF99KC-70-10",
+        "price": 6,
+        "options": {
+          "material": "Reflective",
+          "height": "7.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40499,
+        "sku": "57000REF99KC-80-30",
+        "price": 2.99,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40500,
+        "sku": "57000REF99KC-80-35",
+        "price": 2.69,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40501,
+        "sku": "57000REF99KC-80-40",
+        "price": 3.07,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40502,
+        "sku": "57000REF99KC-80-45",
+        "price": 3.25,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40503,
+        "sku": "57000REF99KC-80-50",
+        "price": 3.61,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40504,
+        "sku": "57000REF99KC-80-55",
+        "price": 3.97,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40505,
+        "sku": "57000REF99KC-80-60",
+        "price": 4.33,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40506,
+        "sku": "57000REF99KC-80-65",
+        "price": 4.46,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40507,
+        "sku": "57000REF99KC-80-70",
+        "price": 4.8,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40508,
+        "sku": "57000REF99KC-80-75",
+        "price": 5.14,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40509,
+        "sku": "57000REF99KC-80-80",
+        "price": 5.49,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40510,
+        "sku": "57000REF99KC-80-85",
+        "price": 5.83,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40511,
+        "sku": "57000REF99KC-80-90",
+        "price": 6.17,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40512,
+        "sku": "57000REF99KC-80-95",
+        "price": 6.51,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40513,
+        "sku": "57000REF99KC-80-10",
+        "price": 6.86,
+        "options": {
+          "material": "Reflective",
+          "height": "8.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40514,
+        "sku": "57000REF99KC-90-30",
+        "price": 2.59,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40515,
+        "sku": "57000REF99KC-90-35",
+        "price": 3.02,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40516,
+        "sku": "57000REF99KC-90-40",
+        "price": 3.25,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40517,
+        "sku": "57000REF99KC-90-45",
+        "price": 3.66,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40518,
+        "sku": "57000REF99KC-90-50",
+        "price": 4.06,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40519,
+        "sku": "57000REF99KC-90-55",
+        "price": 4.24,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40520,
+        "sku": "57000REF99KC-90-60",
+        "price": 4.63,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40521,
+        "sku": "57000REF99KC-90-65",
+        "price": 5.01,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40522,
+        "sku": "57000REF99KC-90-70",
+        "price": 5.4,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40523,
+        "sku": "57000REF99KC-90-75",
+        "price": 5.79,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40524,
+        "sku": "57000REF99KC-90-80",
+        "price": 6.17,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40525,
+        "sku": "57000REF99KC-90-85",
+        "price": 6.56,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40526,
+        "sku": "57000REF99KC-90-90",
+        "price": 6.94,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40527,
+        "sku": "57000REF99KC-90-95",
+        "price": 7.33,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40528,
+        "sku": "57000REF99KC-90-10",
+        "price": 7.71,
+        "options": {
+          "material": "Reflective",
+          "height": "9.0",
+          "width": "10.0"
+        }
+      },
+      {
+        "id": 40529,
+        "sku": "57000REF99KC-10-30",
+        "price": 3.6,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 40530,
+        "sku": "57000REF99KC-10-35",
+        "price": 4.2,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "3.5"
+        }
+      },
+      {
+        "id": 40531,
+        "sku": "57000REF99KC-10-40",
+        "price": 1.44,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 40532,
+        "sku": "57000REF99KC-10-45",
+        "price": 1.62,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "4.5"
+        }
+      },
+      {
+        "id": 40533,
+        "sku": "57000REF99KC-10-50",
+        "price": 1.8,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 40534,
+        "sku": "57000REF99KC-10-55",
+        "price": 1.98,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "5.5"
+        }
+      },
+      {
+        "id": 40535,
+        "sku": "57000REF99KC-10-60",
+        "price": 2.16,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 40536,
+        "sku": "57000REF99KC-10-65",
+        "price": 2.34,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "6.5"
+        }
+      },
+      {
+        "id": 40537,
+        "sku": "57000REF99KC-10-70",
+        "price": 2.52,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 40538,
+        "sku": "57000REF99KC-10-75",
+        "price": 2.7,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "7.5"
+        }
+      },
+      {
+        "id": 40539,
+        "sku": "57000REF99KC-10-80",
+        "price": 2.88,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 40540,
+        "sku": "57000REF99KC-10-85",
+        "price": 3.06,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 40541,
+        "sku": "57000REF99KC-10-90",
+        "price": 1.65,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "9.0"
+        }
+      },
+      {
+        "id": 40542,
+        "sku": "57000REF99KC-10-95",
+        "price": 1.74,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "9.5"
+        }
+      },
+      {
+        "id": 40543,
+        "sku": "57000REF99KC-10-10",
+        "price": 1.83,
+        "options": {
+          "material": "Reflective",
+          "height": "10.0",
+          "width": "10.0"
+        }
+      }
+    ],
+    "price_grid": {
+      "3x3": 1.65,
+      "3x3.5": 1.93,
+      "3x4": 2.2,
+      "3x4.5": 2.48,
+      "3x5": 2.75,
+      "3x5.5": 2.05,
+      "3x6": 2.24,
+      "3x6.5": 2.43,
+      "3x7": 2.61,
+      "3x7.5": 2.8,
+      "3x8": 2.99,
+      "3x8.5": 2.45,
+      "3x9": 2.59,
+      "3x9.5": 2.74,
+      "3x10": 2.88,
+      "4x3": 2.2,
+      "4x3.5": 2.57,
+      "4x4": 1.99,
+      "4x4.5": 2.24,
+      "4x5": 2.49,
+      "4x5.5": 2.74,
+      "4x6": 2.99,
+      "4x6.5": 2.5,
+      "4x7": 2.69,
+      "4x7.5": 2.88,
+      "4x8": 3.07,
+      "4x8.5": 3.26,
+      "4x9": 3.25,
+      "4x9.5": 3.43,
+      "4x10": 3.61,
+      "5x3": 2.75,
+      "5x3.5": 2.18,
+      "5x4": 2.49,
+      "5x4.5": 2.8,
+      "5x5": 2.4,
+      "5x5.5": 2.64,
+      "5x6": 2.88,
+      "5x6.5": 3.12,
+      "5x7": 3.36,
+      "5x7.5": 3.39,
+      "5x8": 3.61,
+      "5x8.5": 3.84,
+      "5x9": 4.06,
+      "5x9.5": 4.29,
+      "5x10": 4.29,
+      "6x3": 2.24,
+      "6x3.5": 2.61,
+      "6x4": 2.99,
+      "6x4.5": 2.59,
+      "6x5": 2.88,
+      "6x5.5": 3.17,
+      "6x6": 3.25,
+      "6x6.5": 3.52,
+      "6x7": 3.79,
+      "6x7.5": 4.06,
+      "6x8": 4.33,
+      "6x8.5": 4.37,
+      "6x9": 4.63,
+      "6x9.5": 4.89,
+      "6x10": 5.14,
+      "7x3": 2.61,
+      "7x3.5": 3.05,
+      "7x4": 2.69,
+      "7x4.5": 3.02,
+      "7x5": 3.36,
+      "7x5.5": 3.48,
+      "7x6": 3.79,
+      "7x6.5": 4.11,
+      "7x7": 4.2,
+      "7x7.5": 4.5,
+      "7x8": 4.8,
+      "7x8.5": 5.1,
+      "7x9": 5.4,
+      "7x9.5": 5.7,
+      "7x10": 6,
+      "8x3": 2.99,
+      "8x3.5": 2.69,
+      "8x4": 3.07,
+      "8x4.5": 3.25,
+      "8x5": 3.61,
+      "8x5.5": 3.97,
+      "8x6": 4.33,
+      "8x6.5": 4.46,
+      "8x7": 4.8,
+      "8x7.5": 5.14,
+      "8x8": 5.49,
+      "8x8.5": 5.83,
+      "8x9": 6.17,
+      "8x9.5": 6.51,
+      "8x10": 6.86,
+      "9x3": 2.59,
+      "9x3.5": 3.02,
+      "9x4": 3.25,
+      "9x4.5": 3.66,
+      "9x5": 4.06,
+      "9x5.5": 4.24,
+      "9x6": 4.63,
+      "9x6.5": 5.01,
+      "9x7": 5.4,
+      "9x7.5": 5.79,
+      "9x8": 6.17,
+      "9x8.5": 6.56,
+      "9x9": 6.94,
+      "9x9.5": 7.33,
+      "9x10": 7.71,
+      "10x3": 3.6,
+      "10x3.5": 4.2,
+      "10x4": 1.44,
+      "10x4.5": 1.62,
+      "10x5": 1.8,
+      "10x5.5": 1.98,
+      "10x6": 2.16,
+      "10x6.5": 2.34,
+      "10x7": 2.52,
+      "10x7.5": 2.7,
+      "10x8": 2.88,
+      "10x8.5": 3.06,
+      "10x9": 1.65,
+      "10x9.5": 1.74,
+      "10x10": 1.83
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 441,
+        "name": "SH Range (3.0-10.0)",
+        "role": "height"
+      },
+      {
+        "id": 442,
+        "name": "SW Range (3.0-10.0)",
+        "role": "width"
+      },
+      {
+        "id": 2357,
+        "name": "Material",
+        "role": "material"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1998,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1999,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 2000,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 2001,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 2002,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2003,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 2004,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 2005,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 2006,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 2007,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 2008,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 2010,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2011,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2012,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2013,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2109,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2113,
+        "name": "Shape",
+        "type": "swatch",
+        "required": false,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1623,
+            "label": "CustomShape"
+          },
+          {
+            "id": 1624,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1625,
+            "label": "Circle"
+          }
+        ]
+      },
+      {
+        "id": 2202,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2203,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "kiss_cut_sticker",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

@@ -1,0 +1,729 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "kraft_paper_labels_on_rolls",
+  "name": "Kraft Paper Labels on Rolls",
+  "family": "sticker",
+  "type": "Labels - Kraft Paper",
+  "group": "labels_kraft_paper",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 165,
+    "url": "/stickers/kraft-paper-labels-on-rolls/",
+    "sku": "570BKPBKPROL",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 1,
+      "max": 5.1
+    },
+    "height": {
+      "min": 1,
+      "max": 4.9
+    },
+    "price_steps": {
+      "width": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        5.12
+      ],
+      "height": [
+        1,
+        2,
+        3,
+        4,
+        4.9
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "roll",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 1.4,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 40
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 45
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 50
+      }
+    ],
+    "variants": [
+      {
+        "id": 23490,
+        "sku": "570BKPBKPROL-10-10",
+        "price": 1.4,
+        "options": {
+          "width": "1.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 23500,
+        "sku": "570BKPBKPROL-10-20",
+        "price": 2.8,
+        "options": {
+          "width": "1.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 23509,
+        "sku": "570BKPBKPROL-10-30",
+        "price": 4.2,
+        "options": {
+          "width": "1.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 23511,
+        "sku": "570BKPBKPROL-10-40",
+        "price": 1.4,
+        "options": {
+          "width": "1.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 23513,
+        "sku": "570BKPBKPROL-10-49",
+        "price": 1.72,
+        "options": {
+          "width": "1.0",
+          "height": "4.9"
+        }
+      },
+      {
+        "id": 23730,
+        "sku": "570BKPBKPROL-20-10",
+        "price": 2.8,
+        "options": {
+          "width": "2.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 23740,
+        "sku": "570BKPBKPROL-20-20",
+        "price": 1.4,
+        "options": {
+          "width": "2.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 23749,
+        "sku": "570BKPBKPROL-20-30",
+        "price": 2.1,
+        "options": {
+          "width": "2.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 23751,
+        "sku": "570BKPBKPROL-20-40",
+        "price": 2.8,
+        "options": {
+          "width": "2.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 23753,
+        "sku": "570BKPBKPROL-20-49",
+        "price": 1.92,
+        "options": {
+          "width": "2.0",
+          "height": "4.9"
+        }
+      },
+      {
+        "id": 23922,
+        "sku": "570BKPBKPROL-30-10",
+        "price": 4.2,
+        "options": {
+          "width": "3.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 23932,
+        "sku": "570BKPBKPROL-30-20",
+        "price": 2.1,
+        "options": {
+          "width": "3.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 23941,
+        "sku": "570BKPBKPROL-30-30",
+        "price": 1.76,
+        "options": {
+          "width": "3.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 23943,
+        "sku": "570BKPBKPROL-30-40",
+        "price": 2.35,
+        "options": {
+          "width": "3.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 23945,
+        "sku": "570BKPBKPROL-30-49",
+        "price": 2.88,
+        "options": {
+          "width": "3.0",
+          "height": "4.9"
+        }
+      },
+      {
+        "id": 23970,
+        "sku": "570BKPBKPROL-40-10",
+        "price": 1.4,
+        "options": {
+          "width": "4.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 23980,
+        "sku": "570BKPBKPROL-40-20",
+        "price": 2.8,
+        "options": {
+          "width": "4.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 23989,
+        "sku": "570BKPBKPROL-40-30",
+        "price": 2.35,
+        "options": {
+          "width": "4.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 23991,
+        "sku": "570BKPBKPROL-40-40",
+        "price": 3.42,
+        "options": {
+          "width": "4.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 23993,
+        "sku": "570BKPBKPROL-40-49",
+        "price": 4.19,
+        "options": {
+          "width": "4.0",
+          "height": "4.9"
+        }
+      },
+      {
+        "id": 24018,
+        "sku": "570BKPBKPROL-50-10",
+        "price": 1.75,
+        "options": {
+          "width": "5.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 24028,
+        "sku": "570BKPBKPROL-50-20",
+        "price": 1.96,
+        "options": {
+          "width": "5.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 24037,
+        "sku": "570BKPBKPROL-50-30",
+        "price": 2.94,
+        "options": {
+          "width": "5.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 24039,
+        "sku": "570BKPBKPROL-50-40",
+        "price": 4.27,
+        "options": {
+          "width": "5.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 24041,
+        "sku": "570BKPBKPROL-50-49",
+        "price": 5.24,
+        "options": {
+          "width": "5.0",
+          "height": "4.9"
+        }
+      },
+      {
+        "id": 24042,
+        "sku": "570BKPBKPROL-51-10",
+        "price": 1.79,
+        "options": {
+          "width": "5.12",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 24052,
+        "sku": "570BKPBKPROL-51-20",
+        "price": 2,
+        "options": {
+          "width": "5.12",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 24061,
+        "sku": "570BKPBKPROL-51-30",
+        "price": 3,
+        "options": {
+          "width": "5.12",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 24063,
+        "sku": "570BKPBKPROL-51-40",
+        "price": 4.36,
+        "options": {
+          "width": "5.12",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 24065,
+        "sku": "570BKPBKPROL-51-49",
+        "price": 5.34,
+        "options": {
+          "width": "5.12",
+          "height": "4.9"
+        }
+      }
+    ],
+    "price_grid": {
+      "1x1": 1.4,
+      "2x1": 2.8,
+      "3x1": 4.2,
+      "4x1": 1.4,
+      "4.9x1": 1.72,
+      "1x2": 2.8,
+      "2x2": 1.4,
+      "3x2": 2.1,
+      "4x2": 2.8,
+      "4.9x2": 1.92,
+      "1x3": 4.2,
+      "2x3": 2.1,
+      "3x3": 1.76,
+      "4x3": 2.35,
+      "4.9x3": 2.88,
+      "1x4": 1.4,
+      "2x4": 2.8,
+      "3x4": 2.35,
+      "4x4": 3.42,
+      "4.9x4": 4.19,
+      "1x5": 1.75,
+      "2x5": 1.96,
+      "3x5": 2.94,
+      "4x5": 4.27,
+      "4.9x5": 5.24,
+      "1x5.12": 1.79,
+      "2x5.12": 2,
+      "3x5.12": 3,
+      "4x5.12": 4.36,
+      "4.9x5.12": 5.34
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1881,
+        "name": "SW Range (1.0-5.1)",
+        "role": "width"
+      },
+      {
+        "id": 1882,
+        "name": "SH Range (1.0-4.9)",
+        "role": "height"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 915,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 916,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 917,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 918,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 919,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 920,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 921,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 922,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 923,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 924,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 925,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 926,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 928,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 930,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 931,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 932,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 934,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2117,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2206,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2207,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "kraft_paper_labels_on_rolls",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

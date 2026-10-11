@@ -1,0 +1,1456 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "removable_sticker_sheet",
+  "name": "Removable Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Removable",
+  "group": "sheets_removable",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 162,
+    "url": "/stickers/removable-sticker-sheet/",
+    "sku": "57REMWHINOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.06,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 33416,
+        "sku": "57REMWHINOD-05-05",
+        "price": 0.06,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33434,
+        "sku": "57REMWHINOD-05-10",
+        "price": 0.12,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33443,
+        "sku": "57REMWHINOD-05-20",
+        "price": 0.24,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33448,
+        "sku": "57REMWHINOD-05-30",
+        "price": 0.36,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33454,
+        "sku": "57REMWHINOD-05-40",
+        "price": 0.48,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33459,
+        "sku": "57REMWHINOD-05-50",
+        "price": 0.6,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33464,
+        "sku": "57REMWHINOD-05-60",
+        "price": 0.72,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33469,
+        "sku": "57REMWHINOD-05-70",
+        "price": 0.84,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33475,
+        "sku": "57REMWHINOD-05-80",
+        "price": 0.48,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33476,
+        "sku": "57REMWHINOD-05-85",
+        "price": 0.51,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33723,
+        "sku": "57REMWHINOD-10-05",
+        "price": 0.12,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33730,
+        "sku": "57REMWHINOD-10-10",
+        "price": 0.24,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33734,
+        "sku": "57REMWHINOD-10-20",
+        "price": 0.48,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33736,
+        "sku": "57REMWHINOD-10-30",
+        "price": 0.72,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33738,
+        "sku": "57REMWHINOD-10-40",
+        "price": 0.48,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33740,
+        "sku": "57REMWHINOD-10-50",
+        "price": 0.6,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33742,
+        "sku": "57REMWHINOD-10-60",
+        "price": 0.72,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33744,
+        "sku": "57REMWHINOD-10-70",
+        "price": 0.84,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33746,
+        "sku": "57REMWHINOD-10-80",
+        "price": 0.96,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33747,
+        "sku": "57REMWHINOD-10-85",
+        "price": 1.02,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33823,
+        "sku": "57REMWHINOD-20-05",
+        "price": 0.24,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33830,
+        "sku": "57REMWHINOD-20-10",
+        "price": 0.48,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33834,
+        "sku": "57REMWHINOD-20-20",
+        "price": 0.48,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33836,
+        "sku": "57REMWHINOD-20-30",
+        "price": 0.72,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33838,
+        "sku": "57REMWHINOD-20-40",
+        "price": 0.96,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33840,
+        "sku": "57REMWHINOD-20-50",
+        "price": 1.64,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33842,
+        "sku": "57REMWHINOD-20-60",
+        "price": 1.97,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33844,
+        "sku": "57REMWHINOD-20-70",
+        "price": 2.29,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33846,
+        "sku": "57REMWHINOD-20-80",
+        "price": 1.47,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33847,
+        "sku": "57REMWHINOD-20-85",
+        "price": 1.57,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33873,
+        "sku": "57REMWHINOD-30-05",
+        "price": 0.36,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33880,
+        "sku": "57REMWHINOD-30-10",
+        "price": 0.72,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33884,
+        "sku": "57REMWHINOD-30-20",
+        "price": 0.72,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33886,
+        "sku": "57REMWHINOD-30-30",
+        "price": 1.47,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33888,
+        "sku": "57REMWHINOD-30-40",
+        "price": 1.97,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33890,
+        "sku": "57REMWHINOD-30-50",
+        "price": 2.46,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33892,
+        "sku": "57REMWHINOD-30-60",
+        "price": 1.66,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33894,
+        "sku": "57REMWHINOD-30-70",
+        "price": 1.93,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33896,
+        "sku": "57REMWHINOD-30-80",
+        "price": 2.21,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33897,
+        "sku": "57REMWHINOD-30-85",
+        "price": 5.45,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33923,
+        "sku": "57REMWHINOD-40-05",
+        "price": 0.48,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33930,
+        "sku": "57REMWHINOD-40-10",
+        "price": 0.48,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33934,
+        "sku": "57REMWHINOD-40-20",
+        "price": 0.96,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33936,
+        "sku": "57REMWHINOD-40-30",
+        "price": 1.97,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33938,
+        "sku": "57REMWHINOD-40-40",
+        "price": 1.47,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33940,
+        "sku": "57REMWHINOD-40-50",
+        "price": 1.84,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33942,
+        "sku": "57REMWHINOD-40-60",
+        "price": 2.21,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33944,
+        "sku": "57REMWHINOD-40-70",
+        "price": 5.98,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33946,
+        "sku": "57REMWHINOD-40-80",
+        "price": 6.84,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33947,
+        "sku": "57REMWHINOD-40-85",
+        "price": 7.26,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 33973,
+        "sku": "57REMWHINOD-50-05",
+        "price": 0.6,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 33980,
+        "sku": "57REMWHINOD-50-10",
+        "price": 0.6,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 33984,
+        "sku": "57REMWHINOD-50-20",
+        "price": 1.64,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 33986,
+        "sku": "57REMWHINOD-50-30",
+        "price": 2.46,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 33988,
+        "sku": "57REMWHINOD-50-40",
+        "price": 1.84,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 33990,
+        "sku": "57REMWHINOD-50-50",
+        "price": 5.34,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 33992,
+        "sku": "57REMWHINOD-50-60",
+        "price": 6.41,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 33994,
+        "sku": "57REMWHINOD-50-70",
+        "price": 7.48,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 33996,
+        "sku": "57REMWHINOD-50-80",
+        "price": 5.93,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 33997,
+        "sku": "57REMWHINOD-50-85",
+        "price": 6.3,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 34023,
+        "sku": "57REMWHINOD-60-05",
+        "price": 0.72,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 34030,
+        "sku": "57REMWHINOD-60-10",
+        "price": 0.72,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 34034,
+        "sku": "57REMWHINOD-60-20",
+        "price": 1.97,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 34036,
+        "sku": "57REMWHINOD-60-30",
+        "price": 1.66,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 34038,
+        "sku": "57REMWHINOD-60-40",
+        "price": 2.21,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 34040,
+        "sku": "57REMWHINOD-60-50",
+        "price": 6.41,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 34042,
+        "sku": "57REMWHINOD-60-60",
+        "price": 5.34,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 34044,
+        "sku": "57REMWHINOD-60-70",
+        "price": 6.23,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 34046,
+        "sku": "57REMWHINOD-60-80",
+        "price": 7.12,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 34047,
+        "sku": "57REMWHINOD-60-85",
+        "price": 5.56,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 34073,
+        "sku": "57REMWHINOD-70-05",
+        "price": 0.84,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 34080,
+        "sku": "57REMWHINOD-70-10",
+        "price": 0.84,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 34084,
+        "sku": "57REMWHINOD-70-20",
+        "price": 2.29,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 34086,
+        "sku": "57REMWHINOD-70-30",
+        "price": 1.93,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 34088,
+        "sku": "57REMWHINOD-70-40",
+        "price": 5.98,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 34090,
+        "sku": "57REMWHINOD-70-50",
+        "price": 7.48,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 34092,
+        "sku": "57REMWHINOD-70-60",
+        "price": 6.23,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 34094,
+        "sku": "57REMWHINOD-70-70",
+        "price": 5.34,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 34096,
+        "sku": "57REMWHINOD-70-80",
+        "price": 6.1,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 34097,
+        "sku": "57REMWHINOD-70-85",
+        "price": 6.48,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 34098,
+        "sku": "57REMWHINOD-80-05",
+        "price": 0.48,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 34105,
+        "sku": "57REMWHINOD-80-10",
+        "price": 0.96,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 34109,
+        "sku": "57REMWHINOD-80-20",
+        "price": 1.47,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 34111,
+        "sku": "57REMWHINOD-80-30",
+        "price": 2.21,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 34113,
+        "sku": "57REMWHINOD-80-40",
+        "price": 6.84,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 34115,
+        "sku": "57REMWHINOD-80-50",
+        "price": 5.93,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 34117,
+        "sku": "57REMWHINOD-80-60",
+        "price": 7.12,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 34119,
+        "sku": "57REMWHINOD-80-70",
+        "price": 6.1,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 34121,
+        "sku": "57REMWHINOD-80-80",
+        "price": 5.34,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 34122,
+        "sku": "57REMWHINOD-80-85",
+        "price": 5.67,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 34123,
+        "sku": "57REMWHINOD-85-05",
+        "price": 0.51,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 34130,
+        "sku": "57REMWHINOD-85-10",
+        "price": 1.02,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 34134,
+        "sku": "57REMWHINOD-85-20",
+        "price": 1.57,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 34136,
+        "sku": "57REMWHINOD-85-30",
+        "price": 5.45,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 34138,
+        "sku": "57REMWHINOD-85-40",
+        "price": 7.26,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 34140,
+        "sku": "57REMWHINOD-85-50",
+        "price": 6.3,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 34142,
+        "sku": "57REMWHINOD-85-60",
+        "price": 5.56,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 34144,
+        "sku": "57REMWHINOD-85-70",
+        "price": 6.48,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 34146,
+        "sku": "57REMWHINOD-85-80",
+        "price": 5.67,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 34147,
+        "sku": "57REMWHINOD-85-85",
+        "price": 6.03,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.06,
+      "0.5x1": 0.12,
+      "0.5x2": 0.24,
+      "0.5x3": 0.36,
+      "0.5x4": 0.48,
+      "0.5x5": 0.6,
+      "0.5x6": 0.72,
+      "0.5x7": 0.84,
+      "0.5x8": 0.48,
+      "0.5x8.5": 0.51,
+      "1x0.5": 0.12,
+      "1x1": 0.24,
+      "1x2": 0.48,
+      "1x3": 0.72,
+      "1x4": 0.48,
+      "1x5": 0.6,
+      "1x6": 0.72,
+      "1x7": 0.84,
+      "1x8": 0.96,
+      "1x8.5": 1.02,
+      "2x0.5": 0.24,
+      "2x1": 0.48,
+      "2x2": 0.48,
+      "2x3": 0.72,
+      "2x4": 0.96,
+      "2x5": 1.64,
+      "2x6": 1.97,
+      "2x7": 2.29,
+      "2x8": 1.47,
+      "2x8.5": 1.57,
+      "3x0.5": 0.36,
+      "3x1": 0.72,
+      "3x2": 0.72,
+      "3x3": 1.47,
+      "3x4": 1.97,
+      "3x5": 2.46,
+      "3x6": 1.66,
+      "3x7": 1.93,
+      "3x8": 2.21,
+      "3x8.5": 5.45,
+      "4x0.5": 0.48,
+      "4x1": 0.48,
+      "4x2": 0.96,
+      "4x3": 1.97,
+      "4x4": 1.47,
+      "4x5": 1.84,
+      "4x6": 2.21,
+      "4x7": 5.98,
+      "4x8": 6.84,
+      "4x8.5": 7.26,
+      "5x0.5": 0.6,
+      "5x1": 0.6,
+      "5x2": 1.64,
+      "5x3": 2.46,
+      "5x4": 1.84,
+      "5x5": 5.34,
+      "5x6": 6.41,
+      "5x7": 7.48,
+      "5x8": 5.93,
+      "5x8.5": 6.3,
+      "6x0.5": 0.72,
+      "6x1": 0.72,
+      "6x2": 1.97,
+      "6x3": 1.66,
+      "6x4": 2.21,
+      "6x5": 6.41,
+      "6x6": 5.34,
+      "6x7": 6.23,
+      "6x8": 7.12,
+      "6x8.5": 5.56,
+      "7x0.5": 0.84,
+      "7x1": 0.84,
+      "7x2": 2.29,
+      "7x3": 1.93,
+      "7x4": 5.98,
+      "7x5": 7.48,
+      "7x6": 6.23,
+      "7x7": 5.34,
+      "7x8": 6.1,
+      "7x8.5": 6.48,
+      "8x0.5": 0.48,
+      "8x1": 0.96,
+      "8x2": 1.47,
+      "8x3": 2.21,
+      "8x4": 6.84,
+      "8x5": 5.93,
+      "8x6": 7.12,
+      "8x7": 6.1,
+      "8x8": 5.34,
+      "8x8.5": 5.67,
+      "8.5x0.5": 0.51,
+      "8.5x1": 1.02,
+      "8.5x2": 1.57,
+      "8.5x3": 5.45,
+      "8.5x4": 7.26,
+      "8.5x5": 6.3,
+      "8.5x6": 5.56,
+      "8.5x7": 6.48,
+      "8.5x8": 5.67,
+      "8.5x8.5": 6.03
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1934,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1935,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1383,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1384,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1386,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1387,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1389,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1390,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1391,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1392,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1393,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1394,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1395,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1396,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1397,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1398,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1399,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2079,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 2080,
+        "name": "Background Color",
+        "type": "swatch",
+        "required": true,
+        "role": "background_mode",
+        "values": [
+          {
+            "id": 1622,
+            "label": "Upload Background"
+          },
+          {
+            "id": 1621,
+            "label": "Custom Color"
+          }
+        ]
+      },
+      {
+        "id": 2081,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 2082,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2198,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2199,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Background Color",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "removable_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

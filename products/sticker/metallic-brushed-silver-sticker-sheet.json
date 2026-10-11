@@ -1,0 +1,1432 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "metallic_brushed_silver_sticker_sheet",
+  "name": "Metallic Brushed Silver Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Metallic",
+  "group": "sheets_metallic",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 168,
+    "url": "/stickers/metallic-brushed-silver-sticker-sheet/",
+    "sku": "57METSILNOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "white_prints_clear": true,
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.11,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 37149,
+        "sku": "57METSILNOD-05-05",
+        "price": 0.11,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37156,
+        "sku": "57METSILNOD-05-10",
+        "price": 0.23,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37160,
+        "sku": "57METSILNOD-05-20",
+        "price": 0.46,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37162,
+        "sku": "57METSILNOD-05-30",
+        "price": 0.69,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37164,
+        "sku": "57METSILNOD-05-40",
+        "price": 0.92,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37166,
+        "sku": "57METSILNOD-05-50",
+        "price": 1.15,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37168,
+        "sku": "57METSILNOD-05-60",
+        "price": 1.38,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37170,
+        "sku": "57METSILNOD-05-70",
+        "price": 1.61,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37172,
+        "sku": "57METSILNOD-05-80",
+        "price": 0.92,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37173,
+        "sku": "57METSILNOD-05-85",
+        "price": 0.98,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37324,
+        "sku": "57METSILNOD-10-05",
+        "price": 0.23,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37331,
+        "sku": "57METSILNOD-10-10",
+        "price": 0.46,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37335,
+        "sku": "57METSILNOD-10-20",
+        "price": 0.92,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37337,
+        "sku": "57METSILNOD-10-30",
+        "price": 1.38,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37339,
+        "sku": "57METSILNOD-10-40",
+        "price": 0.92,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37341,
+        "sku": "57METSILNOD-10-50",
+        "price": 1.15,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37343,
+        "sku": "57METSILNOD-10-60",
+        "price": 1.38,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37345,
+        "sku": "57METSILNOD-10-70",
+        "price": 1.61,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37347,
+        "sku": "57METSILNOD-10-80",
+        "price": 1.84,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37348,
+        "sku": "57METSILNOD-10-85",
+        "price": 1.95,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37424,
+        "sku": "57METSILNOD-20-05",
+        "price": 0.46,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37431,
+        "sku": "57METSILNOD-20-10",
+        "price": 0.92,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37435,
+        "sku": "57METSILNOD-20-20",
+        "price": 0.92,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37437,
+        "sku": "57METSILNOD-20-30",
+        "price": 1.38,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37439,
+        "sku": "57METSILNOD-20-40",
+        "price": 1.84,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37441,
+        "sku": "57METSILNOD-20-50",
+        "price": 2.3,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37443,
+        "sku": "57METSILNOD-20-60",
+        "price": 2.76,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37445,
+        "sku": "57METSILNOD-20-70",
+        "price": 3.22,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37447,
+        "sku": "57METSILNOD-20-80",
+        "price": 2.07,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37448,
+        "sku": "57METSILNOD-20-85",
+        "price": 2.2,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37474,
+        "sku": "57METSILNOD-30-05",
+        "price": 0.69,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37481,
+        "sku": "57METSILNOD-30-10",
+        "price": 1.38,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37485,
+        "sku": "57METSILNOD-30-20",
+        "price": 1.38,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37487,
+        "sku": "57METSILNOD-30-30",
+        "price": 2.07,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37489,
+        "sku": "57METSILNOD-30-40",
+        "price": 2.76,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37491,
+        "sku": "57METSILNOD-30-50",
+        "price": 3.45,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37493,
+        "sku": "57METSILNOD-30-60",
+        "price": 2.33,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37495,
+        "sku": "57METSILNOD-30-70",
+        "price": 2.72,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37497,
+        "sku": "57METSILNOD-30-80",
+        "price": 3.11,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37498,
+        "sku": "57METSILNOD-30-85",
+        "price": 7.2,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37524,
+        "sku": "57METSILNOD-40-05",
+        "price": 0.92,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37531,
+        "sku": "57METSILNOD-40-10",
+        "price": 0.92,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37535,
+        "sku": "57METSILNOD-40-20",
+        "price": 1.84,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37537,
+        "sku": "57METSILNOD-40-30",
+        "price": 2.76,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37539,
+        "sku": "57METSILNOD-40-40",
+        "price": 2.07,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37541,
+        "sku": "57METSILNOD-40-50",
+        "price": 2.59,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37543,
+        "sku": "57METSILNOD-40-60",
+        "price": 3.11,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37545,
+        "sku": "57METSILNOD-40-70",
+        "price": 7.91,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37547,
+        "sku": "57METSILNOD-40-80",
+        "price": 9.04,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37548,
+        "sku": "57METSILNOD-40-85",
+        "price": 9.6,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37574,
+        "sku": "57METSILNOD-50-05",
+        "price": 1.15,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37581,
+        "sku": "57METSILNOD-50-10",
+        "price": 1.15,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37585,
+        "sku": "57METSILNOD-50-20",
+        "price": 2.3,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37587,
+        "sku": "57METSILNOD-50-30",
+        "price": 3.45,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37589,
+        "sku": "57METSILNOD-50-40",
+        "price": 2.59,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37591,
+        "sku": "57METSILNOD-50-50",
+        "price": 7.06,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37593,
+        "sku": "57METSILNOD-50-60",
+        "price": 8.47,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37595,
+        "sku": "57METSILNOD-50-70",
+        "price": 9.88,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37597,
+        "sku": "57METSILNOD-50-80",
+        "price": 7.84,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37598,
+        "sku": "57METSILNOD-50-85",
+        "price": 8.33,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37624,
+        "sku": "57METSILNOD-60-05",
+        "price": 1.38,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37631,
+        "sku": "57METSILNOD-60-10",
+        "price": 1.38,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37635,
+        "sku": "57METSILNOD-60-20",
+        "price": 2.76,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37637,
+        "sku": "57METSILNOD-60-30",
+        "price": 2.33,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37639,
+        "sku": "57METSILNOD-60-40",
+        "price": 3.11,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37641,
+        "sku": "57METSILNOD-60-50",
+        "price": 8.47,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37643,
+        "sku": "57METSILNOD-60-60",
+        "price": 7.06,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37645,
+        "sku": "57METSILNOD-60-70",
+        "price": 8.24,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37647,
+        "sku": "57METSILNOD-60-80",
+        "price": 9.41,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37648,
+        "sku": "57METSILNOD-60-85",
+        "price": 7.35,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37674,
+        "sku": "57METSILNOD-70-05",
+        "price": 1.61,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37681,
+        "sku": "57METSILNOD-70-10",
+        "price": 1.61,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37685,
+        "sku": "57METSILNOD-70-20",
+        "price": 3.22,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37687,
+        "sku": "57METSILNOD-70-30",
+        "price": 2.72,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37689,
+        "sku": "57METSILNOD-70-40",
+        "price": 7.91,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37691,
+        "sku": "57METSILNOD-70-50",
+        "price": 9.88,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37693,
+        "sku": "57METSILNOD-70-60",
+        "price": 8.24,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37695,
+        "sku": "57METSILNOD-70-70",
+        "price": 7.06,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37697,
+        "sku": "57METSILNOD-70-80",
+        "price": 8.07,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37698,
+        "sku": "57METSILNOD-70-85",
+        "price": 8.57,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37699,
+        "sku": "57METSILNOD-80-05",
+        "price": 0.92,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37706,
+        "sku": "57METSILNOD-80-10",
+        "price": 1.84,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37710,
+        "sku": "57METSILNOD-80-20",
+        "price": 2.07,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37712,
+        "sku": "57METSILNOD-80-30",
+        "price": 3.11,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37714,
+        "sku": "57METSILNOD-80-40",
+        "price": 9.04,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37716,
+        "sku": "57METSILNOD-80-50",
+        "price": 7.84,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37718,
+        "sku": "57METSILNOD-80-60",
+        "price": 9.41,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37720,
+        "sku": "57METSILNOD-80-70",
+        "price": 8.07,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37722,
+        "sku": "57METSILNOD-80-80",
+        "price": 7.06,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37723,
+        "sku": "57METSILNOD-80-85",
+        "price": 7.5,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37724,
+        "sku": "57METSILNOD-85-05",
+        "price": 0.98,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37731,
+        "sku": "57METSILNOD-85-10",
+        "price": 1.95,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37735,
+        "sku": "57METSILNOD-85-20",
+        "price": 2.2,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37737,
+        "sku": "57METSILNOD-85-30",
+        "price": 7.2,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37739,
+        "sku": "57METSILNOD-85-40",
+        "price": 9.6,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37741,
+        "sku": "57METSILNOD-85-50",
+        "price": 8.33,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37743,
+        "sku": "57METSILNOD-85-60",
+        "price": 7.35,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37745,
+        "sku": "57METSILNOD-85-70",
+        "price": 8.57,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37747,
+        "sku": "57METSILNOD-85-80",
+        "price": 7.5,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37748,
+        "sku": "57METSILNOD-85-85",
+        "price": 7.97,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.11,
+      "0.5x1": 0.23,
+      "0.5x2": 0.46,
+      "0.5x3": 0.69,
+      "0.5x4": 0.92,
+      "0.5x5": 1.15,
+      "0.5x6": 1.38,
+      "0.5x7": 1.61,
+      "0.5x8": 0.92,
+      "0.5x8.5": 0.98,
+      "1x0.5": 0.23,
+      "1x1": 0.46,
+      "1x2": 0.92,
+      "1x3": 1.38,
+      "1x4": 0.92,
+      "1x5": 1.15,
+      "1x6": 1.38,
+      "1x7": 1.61,
+      "1x8": 1.84,
+      "1x8.5": 1.95,
+      "2x0.5": 0.46,
+      "2x1": 0.92,
+      "2x2": 0.92,
+      "2x3": 1.38,
+      "2x4": 1.84,
+      "2x5": 2.3,
+      "2x6": 2.76,
+      "2x7": 3.22,
+      "2x8": 2.07,
+      "2x8.5": 2.2,
+      "3x0.5": 0.69,
+      "3x1": 1.38,
+      "3x2": 1.38,
+      "3x3": 2.07,
+      "3x4": 2.76,
+      "3x5": 3.45,
+      "3x6": 2.33,
+      "3x7": 2.72,
+      "3x8": 3.11,
+      "3x8.5": 7.2,
+      "4x0.5": 0.92,
+      "4x1": 0.92,
+      "4x2": 1.84,
+      "4x3": 2.76,
+      "4x4": 2.07,
+      "4x5": 2.59,
+      "4x6": 3.11,
+      "4x7": 7.91,
+      "4x8": 9.04,
+      "4x8.5": 9.6,
+      "5x0.5": 1.15,
+      "5x1": 1.15,
+      "5x2": 2.3,
+      "5x3": 3.45,
+      "5x4": 2.59,
+      "5x5": 7.06,
+      "5x6": 8.47,
+      "5x7": 9.88,
+      "5x8": 7.84,
+      "5x8.5": 8.33,
+      "6x0.5": 1.38,
+      "6x1": 1.38,
+      "6x2": 2.76,
+      "6x3": 2.33,
+      "6x4": 3.11,
+      "6x5": 8.47,
+      "6x6": 7.06,
+      "6x7": 8.24,
+      "6x8": 9.41,
+      "6x8.5": 7.35,
+      "7x0.5": 1.61,
+      "7x1": 1.61,
+      "7x2": 3.22,
+      "7x3": 2.72,
+      "7x4": 7.91,
+      "7x5": 9.88,
+      "7x6": 8.24,
+      "7x7": 7.06,
+      "7x8": 8.07,
+      "7x8.5": 8.57,
+      "8x0.5": 0.92,
+      "8x1": 1.84,
+      "8x2": 2.07,
+      "8x3": 3.11,
+      "8x4": 9.04,
+      "8x5": 7.84,
+      "8x6": 9.41,
+      "8x7": 8.07,
+      "8x8": 7.06,
+      "8x8.5": 7.5,
+      "8.5x0.5": 0.98,
+      "8.5x1": 1.95,
+      "8.5x2": 2.2,
+      "8.5x3": 7.2,
+      "8.5x4": 9.6,
+      "8.5x5": 8.33,
+      "8.5x6": 7.35,
+      "8.5x7": 8.57,
+      "8.5x8": 7.5,
+      "8.5x8.5": 7.97
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1964,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1965,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1407,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1409,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1410,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1412,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1414,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1415,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1417,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1419,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1421,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1423,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1425,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1427,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1430,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1431,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1433,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1435,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2047,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2180,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      },
+      {
+        "id": 2181,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Width",
+      "Sticker Height"
+    ]
+  },
+  "mcp": {
+    "product_id": "metallic_brushed_silver_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}
