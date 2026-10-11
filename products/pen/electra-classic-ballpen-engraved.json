@@ -197,7 +197,45 @@
       {
         "id": 137,
         "name": "Pen Color",
-        "role": "pen_color"
+        "role": "pen_color",
+        "values": [
+          {
+            "id": 159,
+            "label": "Blue"
+          },
+          {
+            "id": 160,
+            "label": "Bronze"
+          },
+          {
+            "id": 161,
+            "label": "Black"
+          },
+          {
+            "id": 162,
+            "label": "Purple"
+          },
+          {
+            "id": 163,
+            "label": "Pink"
+          },
+          {
+            "id": 164,
+            "label": "Dark Red"
+          },
+          {
+            "id": 165,
+            "label": "Dark Green"
+          },
+          {
+            "id": 166,
+            "label": "Slate"
+          },
+          {
+            "id": 1785,
+            "label": "Dark Blue"
+          }
+        ]
       }
     ],
     "modifiers": [

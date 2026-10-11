@@ -100,7 +100,7 @@ tests/                 browser tests (tests/price-check.mjs: studio prices vs Bi
 | 2 | Studio reads the White, Silver and Gold definitions instead of hard-coded settings; prices and product codes from BigCommerce | PR #5 |
 | 3 | Domed Color, Silver, Gold, then the other sticker sheets | |
 | 4 | Add to cart fills the same modifiers as Doogma | needs production input |
-| 5 | Name badges family | needs badge dimensions and layouts |
+| 5 | Name badge studio (`/badges.html`): all 14 badges, Doogma layouts 1 to 7, team names, Genie logo | PR #6; real badge sizes still needed |
 | 6 | Pens family | needs imprint areas |
 
 Every phase is its own PR. Nothing is deployed and the live store isn't touched without Carlos's explicit approval.

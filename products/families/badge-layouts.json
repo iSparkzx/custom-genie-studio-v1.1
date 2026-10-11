@@ -1,0 +1,39 @@
+{
+  "source": "Doogma layout masters, sheet 'layout masters' in 'Custom Genie: Custom Fields.xlsx' (from Carlos, 2026-10-11)",
+  "canvas_px": { "w": 960, "h": 960, "dpi": 72 },
+  "coordinates": "x and y are the center of each box, width and height its size, all in canvas px. A value of -500 means the element is hidden in that layout.",
+  "content_box_px": { "x": 140.5, "y": 315.5, "w": 679, "h": 329, "note": "Bounding box of every element across badge layouts 1 to 7. The studio maps this box onto the badge's printable area." },
+  "badge": {
+    "size": "size1 (the only size in the sheet; size2 to size4 are N/A)",
+    "layouts": {
+      "1": { "text1": [612, 480, 416, 90], "text2": null, "image": [265, 480, 248, 248], "label": "Logo, then name" },
+      "2": { "text1": [349, 480, 416, 90], "text2": null, "image": [696, 480, 248, 248], "label": "Name, then logo" },
+      "3": { "text1": [480, 517, 679, 90], "text2": [480, 608, 679, 73], "image": [480, 388, 679, 144], "label": "Logo above name and title" },
+      "4": { "text1": [480, 593, 679, 90], "text2": null, "image": [480, 419, 679, 205], "label": "Logo above name" },
+      "5": { "text1": null, "text2": null, "image": [480, 480, 679, 329], "label": "Logo only" },
+      "6": { "text1": [612, 439, 416, 90], "text2": [612, 532, 416, 69], "image": [265, 480, 248, 248], "label": "Logo, then name and title" },
+      "7": { "text1": [349, 439, 416, 90], "text2": [349, 532, 416, 69], "image": [696, 480, 248, 248], "label": "Name and title, then logo" }
+    },
+    "notes": [
+      "Layout 8 in the sheet is an exact copy of layout 7, so it is left out.",
+      "BigCommerce's 'Select Layout' modifier has layout1 to layout9; layout 9 is not in the sheet."
+    ]
+  },
+  "pen": {
+    "size": "size1",
+    "layouts": {
+      "1": { "text1": [706, 480, 320, 38], "text2": null, "image": [498, 480, 121, 38] },
+      "2": { "text1": [575, 480, 320, 38], "text2": null, "image": [783, 480, 121, 38] },
+      "3": { "text1": [640, 480, 406, 38], "text2": null, "image": null },
+      "4": { "text1": [640, 496, 406, 19], "text2": null, "image": [640, 469, 406, 27] },
+      "5": { "text1": null, "text2": null, "image": [640, 480, 406, 38] },
+      "6": { "text1": [706, 470, 320, 17], "text2": [706, 491, 320, 17], "image": [498, 480, 121, 38] },
+      "7": { "text1": [575, 470, 320, 17], "text2": [575, 491, 320, 17], "image": [783, 480, 121, 38] },
+      "8": { "text1": [640, 470, 406, 17], "text2": [640, 491, 406, 17], "image": null }
+    },
+    "notes": ["Not used yet. The inch size of the imprint area is still needed."]
+  },
+  "text_size_px": { "text1": { "min": 60, "max": 100, "step": 2, "default": 60 }, "text2": { "min": 40, "max": 60, "step": 2, "default": 40 } },
+  "logo_scale": { "min": 0.5, "max": 4, "step": 0.1, "default": 1 },
+  "background_scale": { "min": 0.5, "max": 4, "step": 0.1, "default": 1 }
+}

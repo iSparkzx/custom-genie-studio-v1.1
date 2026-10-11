@@ -473,12 +473,60 @@
       {
         "id": 1881,
         "name": "SW Range (1.0-5.1)",
-        "role": "width"
+        "role": "width",
+        "values": [
+          {
+            "id": 955,
+            "label": "1.0"
+          },
+          {
+            "id": 957,
+            "label": "2.0"
+          },
+          {
+            "id": 959,
+            "label": "3.0"
+          },
+          {
+            "id": 961,
+            "label": "4.0"
+          },
+          {
+            "id": 963,
+            "label": "5.0"
+          },
+          {
+            "id": 1516,
+            "label": "5.12"
+          }
+        ]
       },
       {
         "id": 1882,
         "name": "SH Range (1.0-4.9)",
-        "role": "height"
+        "role": "height",
+        "values": [
+          {
+            "id": 1092,
+            "label": "1.0"
+          },
+          {
+            "id": 1434,
+            "label": "2.0"
+          },
+          {
+            "id": 1444,
+            "label": "3.0"
+          },
+          {
+            "id": 1446,
+            "label": "4.0"
+          },
+          {
+            "id": 1448,
+            "label": "4.9"
+          }
+        ]
       }
     ],
     "modifiers": [

@@ -31,7 +31,7 @@ VINYL_PRODUCTS={'white':'domed_white_vinyl_sticker_sheet','silver':'domed_silver
 def studio_products():
     P=os.path.join(B,'..','products');idx=json.loads(rd(os.path.join(P,'index.json')));g=lambda v:'%g'%float(v);out={}
     for r in idx['products']:
-        if r['studio_status']!='built':continue
+        if r['studio_status']!='built' or r['family']!='sticker':continue
         d=json.loads(rd(os.path.join(P,r['file'])));z=d['size'];pr=d['pricing']
         if z['mode']!='free':raise SystemExit(d['id']+': the studio only supports free sizes')
         tiers=[{'min_qty':t['min_qty'],'pct':t['amount']} for t in pr['quantity_tiers']]

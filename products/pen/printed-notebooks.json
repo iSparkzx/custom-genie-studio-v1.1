@@ -158,7 +158,21 @@
       {
         "id": 136,
         "name": "Notebook Color",
-        "role": "notebook_color"
+        "role": "notebook_color",
+        "values": [
+          {
+            "id": 156,
+            "label": "Grey"
+          },
+          {
+            "id": 157,
+            "label": "Blue"
+          },
+          {
+            "id": 158,
+            "label": "Black"
+          }
+        ]
       }
     ],
     "modifiers": [

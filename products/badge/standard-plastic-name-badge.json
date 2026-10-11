@@ -6,7 +6,7 @@
   "type": "Badges - Standard",
   "group": "badges_standard",
   "status": "live",
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 156,
     "url": "/name-badges/standard-plastic-name-badge/",
@@ -178,14 +178,18 @@
     "fields": [
       "name",
       "title",
-      "badge_text",
       "logo",
       "background"
     ],
-    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout9)",
+    "layouts": "products/families/badge-layouts.json (Doogma layout masters, layouts 1 to 7)",
     "genie": true
   },
-  "checks": null,
+  "checks": {
+    "safe_margin_in": 0.08,
+    "min_text_pt": 6,
+    "min_contrast": 3,
+    "source": "Studio judgment until production confirms: 6 pt is a common minimum for printed and engraved text; contrast 3:1 is the WCAG minimum for large text."
+  },
   "previews": [
     "flat",
     "scene:lapel"
@@ -196,12 +200,40 @@
       {
         "id": 1222,
         "name": "Background Color",
-        "role": "background_color"
+        "role": "background_color",
+        "values": [
+          {
+            "id": 1340,
+            "label": "Gold"
+          },
+          {
+            "id": 1341,
+            "label": "Silver"
+          },
+          {
+            "id": 1344,
+            "label": "Custom Color"
+          },
+          {
+            "id": 1345,
+            "label": "Upload Background"
+          }
+        ]
       },
       {
         "id": 1223,
         "name": "Back Attachment",
-        "role": "attachment"
+        "role": "attachment",
+        "values": [
+          {
+            "id": 932,
+            "label": "Magnet"
+          },
+          {
+            "id": 933,
+            "label": "Pin"
+          }
+        ]
       }
     ],
     "modifiers": [
@@ -736,16 +768,20 @@
   },
   "mcp": {
     "product_id": "standard_plastic_name_badge",
-    "studio_supported": false
+    "studio_supported": true
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "Engraved plastic colors like 'Black-Tan' are read as plate color first, engraving color second.",
+    "Layout coordinates are read as box centers; with that reading layouts 1 to 7 match the 7 layout thumbnails in the live builder screenshot.",
+    "The layouts' content box (679 x 329 canvas px) is mapped onto each badge's printable area (badge minus frame and a 0.08 in margin).",
     "'scene:lapel' is a new preview (badge worn on a shirt) that still has to be built."
   ],
   "todo": [
-    "Real dimensions for size1 to size4 on each badge product. BigCommerce stores only the labels; the sizes live in Doogma.",
-    "What each layout1 to layout9 looks like (positions of name, title, badge text and logo).",
-    "Print checks for badges (minimum text size, engraving limits).",
-    "Production file format: engraving file vs print file."
+    "Real dimensions for size1 to size4 on each badge product (placeholders are marked in studio.products.*.sizes).",
+    "Badge layout 9 (not in the Doogma sheet) and whether layout 8 is meant to differ from layout 7.",
+    "Print checks for badges (minimum text size, engraving limits) from production.",
+    "Production file format: engraving file vs print file (Doogma 'Print output feature' is still to do).",
+    "Badge Text (third text line) is a BigCommerce modifier but no layout positions it."
   ]
 }
