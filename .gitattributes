@@ -1,0 +1,3 @@
+# Generated product definitions: always LF so regenerating on Windows does not show every file as changed
+products/**/*.json text eol=lf
+products/*.json text eol=lf

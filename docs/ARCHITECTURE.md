@@ -47,8 +47,10 @@ products/<family>/<product>.json, products/index.json   (committed, reviewed in 
    └──▶ cart        definition.cart lists the BigCommerce option and modifier ids to fill
 ```
 
-Prices in the definitions are a snapshot (`pricing.pulled_at`). On the live store the studio should read current prices
-from the storefront itself; the snapshot covers development and anything that runs without the store.
+Prices in the definitions are a snapshot (`pricing.pulled_at`). Today `studio-src/build.py` embeds the definitions of
+the products the studio supports (`studio_status: built`), so a price change in BigCommerce reaches the studio after
+the pull, the generator and the build are re-run. On the live store the studio should read current prices from the
+storefront itself; the snapshot covers development and anything that runs without the store.
 
 ## Product definition
 
@@ -86,7 +88,7 @@ studio-src/            (today)            →  packages/core          editor, Ge
 products/              definitions (this PR)
 scripts/bigcommerce/   read-only pull + generator (this PR)
 server.mjs             Genie AI + later proofs and print files
-tests/                 browser tests (the scripted checks used during development)
+tests/                 browser tests (tests/price-check.mjs: studio prices vs BigCommerce)
 ```
 
 ## Phases
@@ -94,8 +96,8 @@ tests/                 browser tests (the scripted checks used during developmen
 | # | Work | Status |
 |---|---|---|
 | 0 | Builder fixes (PR #3) | open for review |
-| 1 | Price check and product definitions from BigCommerce | **this PR** |
-| 2 | Studio reads the Domed White definition instead of hard-coded settings; prices from BigCommerce | next |
+| 1 | Price check and product definitions from BigCommerce | PR #4 |
+| 2 | Studio reads the White, Silver and Gold definitions instead of hard-coded settings; prices and product codes from BigCommerce | PR #5 |
 | 3 | Domed Color, Silver, Gold, then the other sticker sheets | |
 | 4 | Add to cart fills the same modifiers as Doogma | needs production input |
 | 5 | Name badges family | needs badge dimensions and layouts |

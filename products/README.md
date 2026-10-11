@@ -1,7 +1,10 @@
 # Product definitions
 
 One JSON file per customizable Custom Genie product. The studio (and later the Print MCP `list_products` tool) reads
-these instead of hard-coding product settings.
+these instead of hard-coding product settings: `studio-src/build.py` embeds every definition marked
+`studio_status: "built"` (today Domed White, Silver and Gold), and the studio takes its sizes, prices, quantity
+discounts and product codes from them. After a new pull, re-run the generator and the build, then
+`node tests/price-check.mjs`.
 
 | Path | What it is | Edited by |
 |---|---|---|

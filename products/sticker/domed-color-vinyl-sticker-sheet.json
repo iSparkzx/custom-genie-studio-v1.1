@@ -6,7 +6,7 @@
   "type": "Sheets - Domed",
   "group": "sheets_domed",
   "status": "live",
-  "studio_status": "built",
+  "studio_status": "planned",
   "bigcommerce": {
     "product_id": 181,
     "url": "/stickers/domed-color-vinyl-sticker-sheet/",
@@ -1456,7 +1456,7 @@
   },
   "mcp": {
     "product_id": "domed_color_vinyl_sticker_sheet",
-    "studio_supported": true
+    "studio_supported": false
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
@@ -1466,7 +1466,6 @@
   ],
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
-    "Roll labels: core size and unwind direction options, if production needs them.",
-    "Keep square and oval in the studio (Carlos, 2026-10-10). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, Stadium, Custom Shape), so the cart mapping for square and oval is still to be decided."
+    "Roll labels: core size and unwind direction options, if production needs them."
   ]
 }
