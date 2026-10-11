@@ -1,9 +1,10 @@
 import os,sys,re,json
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)));import sitechrome
 B=os.path.dirname(os.path.abspath(__file__));S=os.path.join(B,'src');A=os.path.join(B,'assets')
 rd=lambda p:open(p,encoding='utf-8').read()
 out=sys.argv[1] if len(sys.argv)>1 else os.path.join(B,'out.html')
 HEAD="""<!doctype html>
-<html lang="en">
+<html lang="en" data-root="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,16 +16,17 @@ HEAD="""<!doctype html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@600&family=Libre+Baskerville&family=Lobster&family=Oswald:wght@500&family=Righteous&family=Roboto+Slab:wght@500&display=swap">
 <style>
 """
-html=HEAD+rd(os.path.join(S,'style.css'))+"\n</style>\n</head>\n<body>\n"
+html=HEAD+rd(os.path.join(S,'style.css'))+'\n'+rd(os.path.join(B,'site','site.css'))+"\n</style>\n</head>\n<body>\n"
 html+=rd(os.path.join(S,'sprite.html'))
 html+='\n<a class="skip" href="#builder">Skip to the sticker studio</a>\n'
-html+=rd(os.path.join(S,'header.html'))
+SITE_HEADER,SITE_FOOTER=sitechrome.chrome('','sticker')   # shared site header/footer (studio-src/site/)
+html+=SITE_HEADER
 html+='\n<main id="main">\n <div class="wrap">\n  '+rd(os.path.join(S,'hero.html'))+'\n{{HERO_NAMES}}\n'+rd(os.path.join(S,'studio.html'))+'\n  '
 # Below the builder: nothing until the footer (upsell, gallery, details and newsletter sections removed).
 # upsell.html, gallery.html, details.html and news.html stay in src/ in case any are wanted back.
-html+=' </div>\n</main>\n\n'+rd(os.path.join(S,'footer.html'))+'\n'+rd(os.path.join(S,'dialogs.html'))
+html+=' </div>\n</main>\n\n'+SITE_FOOTER+'\n'+rd(os.path.join(S,'dialogs.html'))
 js='\n'.join(rd(os.path.join(S,f)) for f in ['js1_core.js','js2_interact.js','js3_panels.js','js5_3d.js','js6_banana.js','js7_chat.js','js4_genie.js'])
-html+="\n<script>\n(()=>{'use strict';\n"+js+"\n})();\n</script>\n</body>\n</html>\n"
+html+="\n<script>\n"+sitechrome.js()+"\n</script>\n<script>\n(()=>{'use strict';\n"+js+"\n})();\n</script>\n</body>\n</html>\n"
 # Every product Genie Studio Advanced designs (studios.advanced in products/index.json), embedded so the page needs no
 # BigCommerce access at runtime. Prices, sizes, options, quantity discounts and product codes are BigCommerce's own;
 # how each product looks on screen (material, frame, imprint area) comes from products/families/<family>.json "studio".
@@ -92,11 +94,12 @@ def sub(m):
     if m.group(1)=='PRODUCTS_JSON':return json.dumps(PRODUCTS,separators=(',',':'))
     if m.group(1)=='HERO_NAMES':
         # set the heading, breadcrumb and title before the first paint (no layout shift when the product isn't the default)
-        names={k:[p['name'],PRODUCTS['families'][p['family']]['label'],p.get('category') or p['name']] for k,p in PRODUCTS['products'].items()}
-        return "<script>(()=>{const N="+json.dumps(names,separators=(',',':'))+",q=new URLSearchParams(location.search).get('product'),n=N[q]||N["+json.dumps(PRODUCTS['default'])+"];const t=document.getElementById('pTitle');t.textContent=n[0];t.classList.toggle('long',n[0].length>34);document.getElementById('crumbFam').textContent=n[1];document.getElementById('crumbProd').textContent=n[2];document.title=n[0]+' | Genie Studio Advanced | Custom Genie'})()</script>"
+        names={k:[p['name'],PRODUCTS['families'][p['family']]['label'],p.get('category') or p['name'],p['family']] for k,p in PRODUCTS['products'].items()}
+        return "<script>(()=>{const N="+json.dumps(names,separators=(',',':'))+",q=new URLSearchParams(location.search).get('product'),n=N[q]||N["+json.dumps(PRODUCTS['default'])+"];const t=document.getElementById('pTitle');t.textContent=n[0];t.classList.toggle('long',n[0].length>34);document.getElementById('crumbFam').textContent=n[1];document.getElementById('crumbProd').textContent=n[2];document.title=n[0]+' | Genie Studio Advanced | Custom Genie';const f=n[3];document.getElementById('megaBtn').classList.toggle('on',f==='sticker');document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===f)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})})()</script>"
     v=asset(m.group(1))
     return v.replace('url(#mg-gn)','url(#gm-grad)') if m.group(1)=='GENIE_MARK' else v
 html=re.sub(r'\{\{([A-Z_]+)\}\}',sub,html)
 left=re.findall(r'\{\{[A-Z_]+\}\}',html)
+sitechrome.write_assets(os.path.dirname(os.path.abspath(out)))
 open(out,'w',encoding='utf-8').write(html)
 print('wrote',out,len(html),'bytes; leftover placeholders:',left,'| products:',len(PRODUCTS['products']),{f:sum(1 for p in PRODUCTS['products'].values() if p['family']==f) for f in FAMILIES})

@@ -81,6 +81,13 @@ The page is built from the files in `studio-src/src/`:
 * `js5_3d.js`: 3D preview
 * `js6_banana.js`: Nano Banana Pro client
 
+The site header, footer and cart are shared by every page (Genie Studio Advanced, Genie Studio Basic and the product pages), so they're edited once in `studio-src/site/`:
+
+* `header.html`, `footer.html`: the Genie Studio Advanced header and footer, with `{{ROOT}}` for the path to the site root
+* `site.js`: theme, mega menu, search (opens All products, filtered) and one cart for the whole site, kept in the browser
+* `site.css`: the mini cart; the rest of the header and footer styles come from `style.css`
+* `../sitechrome.py`: what the three builds call to add all of the above, plus the logo and menu pictures as files in `public/assets/`
+
 After editing, rebuild the page (Python 3):
 
 ```
@@ -98,6 +105,10 @@ node tests/advanced-check.mjs http://127.0.0.1:8766/ 390 844
 node tests/badge-check.mjs
 node tests/badge-check.mjs http://127.0.0.1:8766/badges.html?debug 390 844
 node tests/pdp-check.mjs
+node tests/site-check.mjs           # one website: same header and footer everywhere, links, search, theme, one cart
+node tests/site-check.mjs http://127.0.0.1:8766/ 390 844
+node tests/edit-check.mjs           # real mouse and keyboard: edit a pen, pencil, notebook, badge and sticker
+node tests/edit-check.mjs http://127.0.0.1:8766/ 390 844
 ```
 
 Then commit and push. Render redeploys by itself.

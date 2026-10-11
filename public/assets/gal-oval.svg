@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3D7F"/><stop offset=".55" stop-color="#FF6A3D"/><stop offset="1" stop-color="#FFB627"/></linearGradient>
+<linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".45" stop-color="#fff" stop-opacity=".08"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="rim" cx=".5" cy=".42" r=".62"><stop offset=".72" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></radialGradient>
+<linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF3D00"/><stop offset=".6" stop-color="#FF8A00"/><stop offset="1" stop-color="#FFD000"/></linearGradient>
+<filter id="sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="28" stdDeviation="26" flood-color="#5A0A1E" flood-opacity=".45"/></filter>
+<filter id="sh2" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#5A0A1E" flood-opacity=".4"/></filter>
+</defs>
+<rect width="1000" height="750" fill="url(#bg)"/>
+<circle cx="880" cy="140" r="260" fill="#fff" opacity=".10"/>
+<circle cx="90" cy="760" r="280" fill="#fff" opacity=".08"/>
+<g fill="#fff" opacity=".9"><path d="M870 360l9 26 26 9-26 9-9 26-9-26-26-9 26-9z"/><path d="M90 330l6 17 17 6-17 6-6 17-6-17-17-6 17-6z"/><path d="M930 640l7 20 20 7-20 7-7 20-7-20-20-7 20-7z"/></g>
+<text x="70" y="120" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="78" fill="#fff" letter-spacing="-2">Your logo,</text>
+<text x="70" y="200" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="78" fill="#fff" letter-spacing="-2">in glossy 3D.</text>
+<text x="74" y="250" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="28" fill="#fff" opacity=".9">Domed stickers that catch the light.</text>
+<!-- main oval sticker -->
+<g transform="translate(560 480) rotate(-7) scale(.88)">
+<g filter="url(#sh)"><ellipse rx="330" ry="225" fill="#fff"/></g>
+<ellipse rx="300" ry="196" fill="none" stroke="#1F1A3D" stroke-width="10"/>
+<ellipse rx="282" ry="178" fill="none" stroke="#FF4D2E" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+<path d="M0 -150c34 40 70 64 62 118-6 40-34 62-62 62s-56-22-62-62c-6-38 18-62 30-80 6 24 18 34 28 36-6-30-2-50 4-74z" fill="url(#flame)"/>
+<path d="M0 -40c14 16 24 26 22 46-2 16-12 24-22 24s-20-8-22-24c-2-16 8-28 22-46z" fill="#FFE27A"/>
+<text y="78" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="74" fill="#1F1A3D" letter-spacing="2">LA BRASA</text>
+<text y="122" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="24" fill="#FF4D2E" letter-spacing="7">TAQUERIA · EST. 2019</text>
+<ellipse rx="330" ry="225" fill="url(#rim)"/>
+<ellipse rx="330" ry="225" fill="url(#gloss)"/>
+<ellipse cx="-150" cy="-140" rx="90" ry="26" fill="#fff" opacity=".75" transform="rotate(-14 -150 -140)"/>
+</g>
+<!-- small floating stickers -->
+<g transform="translate(880 140) rotate(12) scale(.85)" filter="url(#sh2)"><circle r="78" fill="#2BD9C5"/></g>
+<g transform="translate(880 140) rotate(12) scale(.85)"><path d="M0-44l13 27 30 4-22 21 5 30-26-14-26 14 5-30-22-21 30-4z" fill="#fff"/><circle r="78" fill="url(#rim)"/><circle r="78" fill="url(#gloss)"/><ellipse cx="-30" cy="-46" rx="24" ry="9" fill="#fff" opacity=".8" transform="rotate(-25 -30 -46)"/></g>
+<g transform="translate(165 590) rotate(-14)" filter="url(#sh2)"><rect x="-92" y="-46" width="184" height="92" rx="46" fill="#1F1A3D"/></g>
+<g transform="translate(165 590) rotate(-14)"><text y="13" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="38" fill="#FFB627">HOLA!</text><rect x="-92" y="-46" width="184" height="92" rx="46" fill="url(#rim)"/><rect x="-92" y="-46" width="184" height="92" rx="46" fill="url(#gloss)"/><ellipse cx="-40" cy="-28" rx="30" ry="7" fill="#fff" opacity=".7"/></g>
+</svg>

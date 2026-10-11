@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00D4B4"/><stop offset="1" stop-color="#0068C9"/></linearGradient>
+<linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".8"/><stop offset=".45" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="rim" cx=".5" cy=".42" r=".62"><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="sheet" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#00284D" flood-opacity=".45"/></filter>
+<filter id="st" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#00284D" flood-opacity=".3"/></filter>
+<filter id="lift" x="-50%" y="-50%" width="200%" height="210%"><feDropShadow dx="0" dy="22" stdDeviation="16" flood-color="#00284D" flood-opacity=".5"/></filter>
+<g id="daisy"><g filter="url(#st)"><g fill="#fff"><ellipse cx="0" cy="-30" rx="15" ry="26"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(45)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(90)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(135)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(180)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(225)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(270)"/><ellipse cx="0" cy="-30" rx="15" ry="26" transform="rotate(315)"/></g></g><circle r="20" fill="#FFC21A"/><circle r="56" fill="url(#gloss)"/><ellipse cx="-14" cy="-40" rx="9" ry="5" fill="#fff" opacity=".9"/></g>
+<g id="smile"><g filter="url(#st)"><circle r="50" fill="#FFD21F"/></g><circle cx="-17" cy="-12" r="7" fill="#2A1A00"/><circle cx="17" cy="-12" r="7" fill="#2A1A00"/><path d="M-26 10q26 28 52 0" fill="none" stroke="#2A1A00" stroke-width="7" stroke-linecap="round"/><circle r="50" fill="url(#rim)"/><circle r="50" fill="url(#gloss)"/><ellipse cx="-20" cy="-32" rx="15" ry="6" fill="#fff" opacity=".85" transform="rotate(-25 -20 -32)"/></g>
+</defs>
+<rect width="800" height="600" fill="url(#bg)"/>
+<circle cx="720" cy="80" r="180" fill="#fff" opacity=".1"/>
+<text x="44" y="78" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="46" fill="#fff" letter-spacing="-1">Ready to peel.</text>
+<g transform="translate(360 340) rotate(-5)">
+<rect x="-250" y="-190" width="500" height="380" rx="22" fill="#fff" filter="url(#sheet)"/>
+<rect x="-250" y="-190" width="500" height="380" rx="22" fill="#F3F7FA"/>
+<use href="#daisy" x="-160" y="-90"/><use href="#smile" x="0" y="-90"/><use href="#daisy" x="160" y="-90"/>
+<use href="#smile" x="-160" y="90"/><use href="#daisy" x="0" y="90"/>
+<circle cx="160" cy="90" r="50" fill="none" stroke="#C9D6E0" stroke-width="3" stroke-dasharray="7 7"/>
+</g>
+<g transform="translate(650 470) rotate(18) scale(1.35)"><g filter="url(#lift)"><circle r="50" fill="#FFD21F"/></g><circle cx="-17" cy="-12" r="7" fill="#2A1A00"/><circle cx="17" cy="-12" r="7" fill="#2A1A00"/><path d="M-26 10q26 28 52 0" fill="none" stroke="#2A1A00" stroke-width="7" stroke-linecap="round"/><circle r="50" fill="url(#rim)"/><circle r="50" fill="url(#gloss)"/><ellipse cx="-20" cy="-32" rx="15" ry="6" fill="#fff" opacity=".85" transform="rotate(-25 -20 -32)"/></g>
+</svg>

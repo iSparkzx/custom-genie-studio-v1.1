@@ -129,7 +129,7 @@
         <h2 id="startH"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>What should we make?</h2>
         <p id="startSub">Describe your sticker and Genie designs four options. Everything stays editable, layer by layer.</p>
         <div class="prompt">
-         <label class="sr-only" for="startText">Describe your sticker</label>
+         <label class="sr-only" for="startText" id="startLbl">Describe your sticker</label>
          <textarea id="startText" placeholder='e.g. A round gold sticker for my coffee shop "Bean There" with a coffee cup, about 3 inches'></textarea>
          <div class="prompt-bar">
           <input type="file" id="startFile" class="sr-only" accept="image/*" tabindex="-1">
@@ -137,7 +137,7 @@
           <button type="button" class="btn btn-primary" id="startGo"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Generate</button>
          </div>
         </div>
-        <div class="ex" aria-label="Example prompts">
+        <div class="ex" id="startEx" aria-label="Example prompts">
          <button type="button" data-ex='Round sticker for my coffee shop "Bean There" with a coffee cup, brown and cream'>Coffee shop logo</button>
          <button type="button" data-ex='Silver equipment nameplate that says "Apex Machining" with the tagline "Precision Parts", 3 x 1 inches'>Equipment nameplate</button>
          <button type="button" data-ex='Fun gold label for "Sunny Days" lemonade with a sun, 500 stickers'>Product label</button>
@@ -152,6 +152,7 @@
        </div>
       </div>
       <div class="vp-msg" id="vpMsg" hidden></div>
+      <figure class="item-mini" id="itemMini" hidden><div id="itemMiniArt"></div><figcaption id="itemMiniCap">On the pen</figcaption></figure>
       <div class="vp-legend" id="legend"></div>
       <div class="zoomfab" role="group" aria-label="Zoom">
        <button type="button" class="tool" id="zOut" aria-label="Zoom out" data-tip="Zoom out" data-key="Ctrl −"><svg class="ico"><use href="#i-minus"/></svg></button>
