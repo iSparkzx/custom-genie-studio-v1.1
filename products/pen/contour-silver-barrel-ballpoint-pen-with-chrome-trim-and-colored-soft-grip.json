@@ -7,10 +7,10 @@
   "group": "pens_contour_silver",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 138,
     "url": "/pens/contour-silver-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
@@ -477,7 +477,7 @@
   },
   "mcp": {
     "product_id": "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip",

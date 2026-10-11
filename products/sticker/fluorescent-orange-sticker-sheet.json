@@ -7,10 +7,10 @@
   "group": "sheets_fluorescent",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 177,
     "url": "/stickers/fluorescent-orange-sticker-sheet/",
@@ -1604,7 +1604,7 @@
   },
   "mcp": {
     "product_id": "fluorescent_orange_sticker_sheet",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Fluorescent Orange Stickers | Neon Orange Vinyl, No Minimum",
@@ -1634,6 +1634,7 @@
   ],
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
-    "Roll labels: core size and unwind direction options, if production needs them."
+    "Roll labels: core size and unwind direction options, if production needs them.",
+    "Studio offers square (Carlos, 2026-10-10: keep them). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, Stadium, Custom Shape), so the cart mapping for square is still to be decided."
   ]
 }

@@ -7,10 +7,10 @@
   "group": "notebook",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 132,
     "url": "/notebooks/printed-notebooks/",
@@ -401,7 +401,7 @@
   },
   "mcp": {
     "product_id": "printed_notebooks",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Notebook",

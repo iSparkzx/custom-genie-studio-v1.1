@@ -13,7 +13,7 @@ rd = lambda p: open(p, encoding='utf-8').read()
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'public', 'p')
 LIVE = 'https://customgenie.com'
 FAMILY = {'sticker': ('Stickers & labels', 'stickers'), 'badge': ('Name badges', 'badges'), 'pen': ('Pens, pencils & notebooks', 'pens')}
-ADVANCED = {'sticker': '../index.html'}                       # family -> Genie Studio Advanced page
+ADVANCED = {'sticker': '../index.html', 'badge': '../index.html', 'pen': '../index.html'}   # family -> Genie Studio Advanced page (one studio for every family)
 BASIC = {'badge': '../badges.html'}                           # family -> Genie Studio Basic page
 STUDIO_COPY = {
     'advanced': 'The full design studio: place text, art and shapes anywhere, work in layers, chat with Genie AI, and check your print before you order.',

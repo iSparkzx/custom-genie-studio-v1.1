@@ -4,9 +4,36 @@
   "bigcommerce_template": "stickerprod",
   "studios": {
     "advanced": [
-      "domed_white_vinyl_sticker_sheet",
+      "clear_gloss_labels_on_rolls",
+      "clear_sticker_sheet_with_white_ink_non_met_large_sizes",
+      "clear_sticker_sheet_with_white_ink_non_met_standard_sizes",
+      "die_cut_sticker",
+      "domed_color_vinyl_sticker_sheet",
+      "domed_gold_vinyl_sticker_sheet",
       "domed_silver_vinyl_sticker_sheet",
-      "domed_gold_vinyl_sticker_sheet"
+      "domed_white_vinyl_sticker_sheet",
+      "fluorescent_green_sticker_sheet",
+      "fluorescent_orange_sticker_sheet",
+      "fluorescent_pink_sticker_sheet",
+      "fluorescent_yellow_sticker_sheet",
+      "gloss_white_paper_labels_on_rolls",
+      "glossy_white_vinyl_sticker_sheet",
+      "glow_in_the_dark_sticker_sheet",
+      "grass_paper_labels_on_rolls",
+      "kiss_cut_sticker",
+      "kraft_paper_labels_on_rolls",
+      "matte_sticker_sheet",
+      "metallic_brushed_gold_sticker_sheet",
+      "metallic_brushed_silver_sticker_sheet",
+      "reflective_sticker_sheet",
+      "removable_sticker_sheet",
+      "vinyl_lettering_cut_vinyl_logos_gloss_black",
+      "vinyl_lettering_cut_vinyl_logos_gloss_white",
+      "vinyl_lettering_cut_vinyl_logos_gold",
+      "vinyl_lettering_cut_vinyl_logos_holographic",
+      "vinyl_lettering_cut_vinyl_logos_silver",
+      "window_clings_see_through_clear",
+      "window_clings_standard_white"
     ],
     "basic": []
   },
@@ -125,5 +152,299 @@
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
     "Roll labels: core size and unwind direction options, if production needs them."
-  ]
+  ],
+  "studio": {
+    "default_product": "domed_white_vinyl_sticker_sheet",
+    "groups": {
+      "domed": {
+        "label": "Finish",
+        "category": "Domed sticker sheets"
+      },
+      "vinyl": {
+        "label": "Material",
+        "category": "Sticker sheets"
+      },
+      "metallic": {
+        "label": "Finish",
+        "category": "Sticker sheets"
+      },
+      "fluorescent": {
+        "label": "Color",
+        "category": "Sticker sheets"
+      },
+      "clear": {
+        "label": "Sheet size",
+        "category": "Sticker sheets"
+      },
+      "cut": {
+        "label": "Cut",
+        "category": "Custom cut stickers"
+      },
+      "labels": {
+        "label": "Material",
+        "category": "Labels on rolls"
+      },
+      "lettering": {
+        "label": "Vinyl color",
+        "category": "Vinyl lettering"
+      },
+      "clings": {
+        "label": "Type",
+        "category": "Window clings"
+      }
+    },
+    "material_looks": {
+      "Glossy": {
+        "face": "white"
+      },
+      "Matte": {
+        "face": "matte"
+      },
+      "Clear": {
+        "face": "clear"
+      },
+      "Removable": {
+        "face": "white"
+      },
+      "Reflective": {
+        "face": "reflective"
+      }
+    },
+    "products": {
+      "domed_white_vinyl_sticker_sheet": {
+        "group": "domed",
+        "finish": "Gloss White",
+        "look": {
+          "face": "white",
+          "dome": true
+        }
+      },
+      "domed_color_vinyl_sticker_sheet": {
+        "group": "domed",
+        "finish": "Color",
+        "look": {
+          "face": "white",
+          "dome": true
+        }
+      },
+      "domed_silver_vinyl_sticker_sheet": {
+        "group": "domed",
+        "finish": "Brushed Silver",
+        "look": {
+          "face": "silver",
+          "dome": true,
+          "metal_clear": true
+        }
+      },
+      "domed_gold_vinyl_sticker_sheet": {
+        "group": "domed",
+        "finish": "Brushed Gold",
+        "look": {
+          "face": "gold",
+          "dome": true,
+          "metal_clear": true
+        }
+      },
+      "glossy_white_vinyl_sticker_sheet": {
+        "group": "vinyl",
+        "finish": "Gloss White",
+        "look": {
+          "face": "white"
+        }
+      },
+      "matte_sticker_sheet": {
+        "group": "vinyl",
+        "finish": "Matte White",
+        "look": {
+          "face": "matte"
+        }
+      },
+      "removable_sticker_sheet": {
+        "group": "vinyl",
+        "finish": "Removable",
+        "look": {
+          "face": "white"
+        }
+      },
+      "reflective_sticker_sheet": {
+        "group": "vinyl",
+        "finish": "Reflective",
+        "look": {
+          "face": "reflective"
+        }
+      },
+      "glow_in_the_dark_sticker_sheet": {
+        "group": "vinyl",
+        "finish": "Glow in the Dark",
+        "look": {
+          "face": "glow"
+        }
+      },
+      "metallic_brushed_silver_sticker_sheet": {
+        "group": "metallic",
+        "finish": "Brushed Silver",
+        "look": {
+          "face": "silver",
+          "metal_clear": true
+        }
+      },
+      "metallic_brushed_gold_sticker_sheet": {
+        "group": "metallic",
+        "finish": "Brushed Gold",
+        "look": {
+          "face": "gold",
+          "metal_clear": true
+        }
+      },
+      "fluorescent_green_sticker_sheet": {
+        "group": "fluorescent",
+        "finish": "Green",
+        "look": {
+          "face": "color",
+          "color": "#7CFF4F"
+        }
+      },
+      "fluorescent_orange_sticker_sheet": {
+        "group": "fluorescent",
+        "finish": "Orange",
+        "look": {
+          "face": "color",
+          "color": "#FF8A3D"
+        }
+      },
+      "fluorescent_pink_sticker_sheet": {
+        "group": "fluorescent",
+        "finish": "Pink",
+        "look": {
+          "face": "color",
+          "color": "#FF5FB8"
+        }
+      },
+      "fluorescent_yellow_sticker_sheet": {
+        "group": "fluorescent",
+        "finish": "Yellow",
+        "look": {
+          "face": "color",
+          "color": "#F4FF52"
+        }
+      },
+      "clear_sticker_sheet_with_white_ink_non_met_standard_sizes": {
+        "group": "clear",
+        "finish": "Standard sizes",
+        "look": {
+          "face": "clear"
+        }
+      },
+      "clear_sticker_sheet_with_white_ink_non_met_large_sizes": {
+        "group": "clear",
+        "finish": "Large sizes",
+        "look": {
+          "face": "clear"
+        }
+      },
+      "die_cut_sticker": {
+        "group": "cut",
+        "finish": "Die cut",
+        "look": {
+          "face": "white",
+          "by": "material"
+        }
+      },
+      "kiss_cut_sticker": {
+        "group": "cut",
+        "finish": "Kiss cut",
+        "look": {
+          "face": "white",
+          "by": "material"
+        }
+      },
+      "clear_gloss_labels_on_rolls": {
+        "group": "labels",
+        "finish": "Clear",
+        "look": {
+          "face": "clear"
+        }
+      },
+      "gloss_white_paper_labels_on_rolls": {
+        "group": "labels",
+        "finish": "Gloss White Paper",
+        "look": {
+          "face": "white"
+        }
+      },
+      "grass_paper_labels_on_rolls": {
+        "group": "labels",
+        "finish": "Grass Paper",
+        "look": {
+          "face": "grass"
+        }
+      },
+      "kraft_paper_labels_on_rolls": {
+        "group": "labels",
+        "finish": "Kraft Paper",
+        "look": {
+          "face": "kraft"
+        }
+      },
+      "vinyl_lettering_cut_vinyl_logos_gloss_white": {
+        "group": "lettering",
+        "finish": "Gloss White",
+        "look": {
+          "face": "clear",
+          "one_color": "#FFFFFF"
+        }
+      },
+      "vinyl_lettering_cut_vinyl_logos_gloss_black": {
+        "group": "lettering",
+        "finish": "Gloss Black",
+        "look": {
+          "face": "clear",
+          "one_color": "#111111"
+        }
+      },
+      "vinyl_lettering_cut_vinyl_logos_gold": {
+        "group": "lettering",
+        "finish": "Gold",
+        "look": {
+          "face": "clear",
+          "one_color": "#C9A24A"
+        }
+      },
+      "vinyl_lettering_cut_vinyl_logos_silver": {
+        "group": "lettering",
+        "finish": "Silver",
+        "look": {
+          "face": "clear",
+          "one_color": "#BFC4C9"
+        }
+      },
+      "vinyl_lettering_cut_vinyl_logos_holographic": {
+        "group": "lettering",
+        "finish": "Holographic",
+        "look": {
+          "face": "clear",
+          "one_color": "#B9C8E8"
+        }
+      },
+      "window_clings_see_through_clear": {
+        "group": "clings",
+        "finish": "See-through clear",
+        "look": {
+          "face": "clear"
+        }
+      },
+      "window_clings_standard_white": {
+        "group": "clings",
+        "finish": "White",
+        "look": {
+          "face": "white"
+        }
+      }
+    },
+    "notes": [
+      "Looks are how the material is drawn on screen (white, matte, metal, clear, paper), from the product names. Confirm colors with production.",
+      "Domed Color: what makes it different from Domed White is not in BigCommerce; drawn on white until confirmed.",
+      "Vinyl lettering is shown cut from one solid color of vinyl (text and shapes, no photos), per the family assumptions."
+    ]
+  }
 }

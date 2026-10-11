@@ -7,10 +7,10 @@
   "group": "pens_pencils",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 131,
     "url": "/pencils/wooden-pencils-with-eraser-customizable-with-full-color-print/",
@@ -399,7 +399,7 @@
   },
   "mcp": {
     "product_id": "wooden_pencils_with_eraser_customizable_with_full_color_print",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Wooden Pencil",

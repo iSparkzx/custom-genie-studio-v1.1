@@ -7,10 +7,10 @@
   "group": "labels_clear",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 164,
     "url": "/stickers/clear-gloss-labels-on-rolls/",
@@ -1131,7 +1131,7 @@
   },
   "mcp": {
     "product_id": "clear_gloss_labels_on_rolls",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Clear Gloss Labels on Rolls",
@@ -1203,6 +1203,7 @@
   ],
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
-    "Roll labels: core size and unwind direction options, if production needs them."
+    "Roll labels: core size and unwind direction options, if production needs them.",
+    "Studio offers square (Carlos, 2026-10-10: keep them). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, Stadium, Custom Shape), so the cart mapping for square is still to be decided."
   ]
 }

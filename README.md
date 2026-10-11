@@ -74,7 +74,7 @@ The page is built from the files in `studio-src/src/`:
 
 * `studio.html`, `dialogs.html` and the other `.html` files: markup
 * `style.css`: all styles (brand colors, Poppins and Work Sans)
-* `js1_core.js`: canvas, pricing and rules
+* `js1_core.js`: canvas, the product model (every sticker, badge and pen from `products/`), pricing and rules
 * `js2_interact.js`: tools and dragging
 * `js3_panels.js`: panels and print check
 * `js4_genie.js`: Genie chat
@@ -92,7 +92,9 @@ python studio-src/build_pdp.py public/p
 Check both pages (with `node server.mjs` running):
 
 ```
-node tests/price-check.mjs
+node tests/price-check.mjs          # every BigCommerce variant of every product x every quantity break
+node tests/advanced-check.mjs       # Genie Studio Advanced opens and works for all 57 products
+node tests/advanced-check.mjs http://127.0.0.1:8766/ 390 844
 node tests/badge-check.mjs
 node tests/badge-check.mjs http://127.0.0.1:8766/badges.html?debug 390 844
 node tests/pdp-check.mjs

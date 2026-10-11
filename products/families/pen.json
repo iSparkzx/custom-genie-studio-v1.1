@@ -3,7 +3,21 @@
   "label": "Pens, pencils & notebooks",
   "bigcommerce_template": "penprod",
   "studios": {
-    "advanced": [],
+    "advanced": [
+      "bamboo_ballpoint_pens_engraved",
+      "bamboo_ballpoint_pens_printed",
+      "contour_color_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
+      "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
+      "contour_white_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
+      "derby_ballpoint_pen",
+      "electra_classic_ballpen_engraved",
+      "electra_soft_touch_ballpen",
+      "printed_notebooks",
+      "silver_executive_pens_ball_point",
+      "sparta_ballpoint_pen",
+      "value_stick_pen",
+      "wooden_pencils_with_eraser_customizable_with_full_color_print"
+    ],
     "basic": []
   },
   "editor": {
@@ -29,5 +43,164 @@
     "Imprint area (width x height) and position for every pen model and the notebook.",
     "Ink colors allowed per model and method (printed vs engraved), and the color limit.",
     "Production file format for imprints."
-  ]
+  ],
+  "studio": {
+    "default_product": "derby_ballpoint_pen",
+    "products": {
+      "bamboo_ballpoint_pens_engraved": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "barrel": "#C9A46B",
+        "engrave": "#4A2C17"
+      },
+      "bamboo_ballpoint_pens_printed": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "barrel": "#C9A46B"
+      },
+      "contour_color_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      },
+      "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "barrel": "#C3C7CC"
+      },
+      "contour_white_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "barrel": "#F7F7F7"
+      },
+      "derby_ballpoint_pen": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      },
+      "electra_classic_ballpen_engraved": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "engrave": "#E9ECEF"
+      },
+      "electra_soft_touch_ballpen": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      },
+      "silver_executive_pens_ball_point": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "engrave": "#E9ECEF"
+      },
+      "sparta_ballpoint_pen": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      },
+      "value_stick_pen": {
+        "kind": "pen",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.375,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        },
+        "barrel": "#F7F7F7"
+      },
+      "wooden_pencils_with_eraser_customizable_with_full_color_print": {
+        "kind": "pencil",
+        "imprint": {
+          "w": 1.75,
+          "h": 0.25,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      },
+      "printed_notebooks": {
+        "kind": "notebook",
+        "imprint": {
+          "w": 3,
+          "h": 3,
+          "known": false,
+          "src": "placeholder until production sends the imprint area"
+        }
+      }
+    },
+    "colors": {
+      "Aqua": "#2BB7C4",
+      "Black": "#1A1A1A",
+      "Blue": "#1F4FB4",
+      "Bronze": "#8C6239",
+      "Dark Blue": "#16285E",
+      "Dark Green": "#1E4D2B",
+      "Dark Red": "#7A1622",
+      "Green": "#1E8C45",
+      "Grey": "#8A8F96",
+      "Light Blue": "#6FA8DC",
+      "Magenta": "#C2187A",
+      "Orange": "#F07A1A",
+      "Pink": "#F27AB0",
+      "Purple": "#6B3FA0",
+      "Red": "#C8202F",
+      "Silver": "#C3C7CC",
+      "Slate": "#5B6770",
+      "Transparent": "#DDE6EE",
+      "White": "#F7F7F7",
+      "Yellow": "#F6CF1F",
+      "Black Cap & White Barrel": "#F7F7F7",
+      "Blue Cap & White Barrel": "#F7F7F7"
+    },
+    "notes": [
+      "Imprint areas are placeholders (pens 1.75 x 0.375 in, pencils 1.75 x 0.25 in, notebook 3 x 3 in) until production sends real sizes.",
+      "Engraved models show the design in one engraving color (light on metal and painted barrels, dark on bamboo). Confirm with production.",
+      "ink_color is a free-text modifier in BigCommerce, so printed imprints are full color and the cart records the colors used."
+    ]
+  }
 }

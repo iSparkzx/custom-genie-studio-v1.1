@@ -7,10 +7,10 @@
   "group": "pens_bamboo",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 130,
     "url": "/pens/bamboo-ballpoint-pens-engraved/",
@@ -336,7 +336,7 @@
   },
   "mcp": {
     "product_id": "bamboo_ballpoint_pens_engraved",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Engraved Bamboo Pens | Custom Logo, No Minimum",

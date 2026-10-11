@@ -317,7 +317,7 @@ function keepInCut(){if(D.shape!=='custom')return false;const vis=D.els.filter(e
  D.els.forEach(e=>{e.x+=dx;e.y+=dy});CT.sig='';return true}
 function commit(){if(!op&&keepInCut()&&typeof syncPanels==='function')syncPanels();const s=snapshot();if(s===last)return;hist.push(last);if(hist.length>100)hist.shift();last=s;fut=[];saveSoon();req();refreshUndo()}
 let cT;function commitSoon(){clearTimeout(cT);cT=setTimeout(commit,350)}
-function restore(s){const o=JSON.parse(s);D=o.D;tier=o.tier;D.groups=D.groups||{};sel=sel.filter(id=>get(id));if(editing){editing=null;inl.hidden=true}CT.sig='';if(D.shape!=='custom')CT.url=null;syncPanels();req();saveSoon();refreshUndo()}
+function restore(s){const o=JSON.parse(s);D=o.D;tier=o.tier;D.groups=D.groups||{};applyProduct(D.pid,true);sel=sel.filter(id=>get(id));if(editing){editing=null;inl.hidden=true}CT.sig='';if(D.shape!=='custom')CT.url=null;syncPanels();req();saveSoon();refreshUndo()}
 function undo(){if(!hist.length)return;fut.push(last);last=hist.pop();restore(last);say('Undone')}
 function redo(){if(!fut.length)return;hist.push(last);last=fut.pop();restore(last);say('Redone')}
 function refreshUndo(){$('#undoBtn').disabled=!hist.length;$('#redoBtn').disabled=!fut.length}
@@ -325,10 +325,12 @@ function refreshUndo(){$('#undoBtn').disabled=!hist.length;$('#redoBtn').disable
 $('#undoBtn').addEventListener('click',()=>undo());$('#redoBtn').addEventListener('click',()=>redo());
 let svT;function saveSoon(){clearTimeout(svT);svT=setTimeout(save,700)}
 let storeWarned=false;function save(){try{const keys=new Set(D.els.filter(e=>e.type==='image').map(e=>e.key));if(D.bg.t==='img'&&D.bg.img)keys.add(D.bg.img);const imgs={};keys.forEach(k=>{if(IM[k])imgs[k]={url:IM[k].url,name:IM[k].name,vector:!!IM[k].vector}});
- const b={v:3,D,tier};try{localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs},b)))}catch(e){localStorage.setItem(KEY,JSON.stringify(Object.assign({imgs:{}},b)));if(keys.size&&!storeWarned){storeWarned=true;toast("Your image is too large to keep after you leave this page. It stays while this tab is open.")}}}catch(e){}}
-let draftLostImg=false;function loadDraft(){try{const s=localStorage.getItem(KEY);if(!s)return false;const o=JSON.parse(s);if(!o||o.v!==3||!o.D||!Array.isArray(o.D.els))return false;
+ const b={v:3,D,tier};try{localStorage.setItem(DKEY(),JSON.stringify(Object.assign({imgs},b)))}catch(e){localStorage.setItem(DKEY(),JSON.stringify(Object.assign({imgs:{}},b)));if(keys.size&&!storeWarned){storeWarned=true;toast("Your image is too large to keep after you leave this page. It stays while this tab is open.")}}}catch(e){}}
+let draftLostImg=false;function loadDraft(){try{const s=localStorage.getItem(DKEY());if(!s)return false;const o=JSON.parse(s);if(!o||o.v!==3||!o.D||!Array.isArray(o.D.els))return false;
  Object.entries(o.imgs||{}).forEach(([k,v])=>{const img=new Image();IM[k]={url:v.url,img,name:v.name,vector:v.vector,natW:1000,natH:1000};img.onload=()=>{IM[k].natW=img.naturalWidth||1000;IM[k].natH=img.naturalHeight||1000;if(D.els.some(e=>e.key===k&&e.clear))makeClear(k).then(()=>{CT.sig='';req()});CT.sig='';upThumbs();syncPanels();req()};img.src=v.url});
  const n0=o.D.els.length;o.D.els=o.D.els.filter(e=>e.type!=='image'||IM[e.key]);if(o.D.els.length<n0)draftLostImg=true;if(o.D.bg&&o.D.bg.t==='img'&&!IM[o.D.bg.img]){o.D.bg.t='none';draftLostImg=true}D=o.D;D.groups=D.groups||{};tier=o.tier||0;
+  if(!PRODS[D.pid])D.pid={silver:'domed_silver_vinyl_sticker_sheet',gold:'domed_gold_vinyl_sticker_sheet'}[D.vinyl]||CATALOG.default;D.opt=D.opt||{};   /* drafts saved before products were stored */
+  if(PRODS[D.pid].family!==PRODS[CUR_PID].family){D=newDoc();return false}conform();
  if(D.els.length||D.bg.t!=='none'){startDismissed=true;started=true;return true}return false}catch(e){return false}}
 
 /* ---------- images ---------- */
@@ -357,4 +359,4 @@ function addText(kind){const m=Math.min(W(),H()),c=TSTYLES[kind]||TSTYLES.headin
  const el=T({text:c.t,size:Math.min(c.pt/.72,m*c.f),bold:c.b,font:c.font,curve:c.curve||0,spacing:c.spacing||0,fill:inkFor(),x:W()/2,y:freeY()});addEl(el,'text');requestAnimationFrame(()=>requestAnimationFrame(()=>startEdit(el.id)))}
 function addShape(kind){const s=Math.min(W(),H())*.4;if(kind==='prim-rect')return addEl(R({w:s*1.3,h:s,fill:lastFill,x:W()/2,y:H()/2}),'graphic');if(kind==='prim-ellipse')return addEl(E({w:s,h:s,fill:lastFill,x:W()/2,y:H()/2}),'graphic');if(kind==='prim-line')return addEl(L({w:s*1.5,x:W()/2,y:H()/2,stroke:penStyle.stroke,sw:penStyle.sw}),'graphic');
  addEl(S({kind,w:s,h:s,fill:D.bg.t==='color'&&D.bg.c.toUpperCase()===lastFill.toUpperCase()?'#FFFFFF':lastFill,x:W()/2,y:H()/2}),'graphic')}
-function applyTpl(t){D=t.make();D.groups={};sel=[];startDismissed=true;CT.sig='';CT.url=null;if(!started){started=true;track('builder_start',{method:'template'})}track('builder_template',{template:t.id});cam=null;zoom=1;if(!editable())setView('edit');commit();syncPanels();req();toast(COARSE.matches?'Template added. Tap any text, then the pencil, to change it.':'Template added. Double-click any text to change it.','Undo',undo)}
+function applyTpl(t){D=t.make();D.groups={};conform();sel=[];startDismissed=true;CT.sig='';CT.url=null;if(!started){started=true;track('builder_start',{method:'template'})}track('builder_template',{template:t.id});cam=null;zoom=1;if(!editable())setView('edit');commit();syncPanels();req();toast(COARSE.matches?'Template added. Tap any text, then the pencil, to change it.':'Template added. Double-click any text to change it.','Undo',undo)}

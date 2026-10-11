@@ -7,10 +7,10 @@
   "group": "pens_electra_soft_touch_printed",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 135,
     "url": "/pens/electra-soft-touch-ballpen/",
@@ -451,7 +451,7 @@
   },
   "mcp": {
     "product_id": "electra_soft_touch_ballpen",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Electra Soft Touch Ballpen",

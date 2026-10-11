@@ -3,12 +3,12 @@ const TOOLHINT={text:'Click anywhere to place text.',rect:'Drag to draw a rectan
 function chrome(){
  const blank=isBlank();$('#start').hidden=!(view==='edit'&&blank&&!startDismissed);
  const msg=$('#vpMsg');let m='';
- if(view==='sheet')m='Your sticker at actual size on the 9.25 x 10 in sheet.';
+ if(view==='sheet')m=`Your ${NOUN()} at actual size on the 9.25 x 10 in sheet.`;
  else if(editable()&&TOOLHINT[tool]&&!op)m=TOOLHINT[tool];else if(view==='dome'&&V3.failed&&!op&&!blank)m='Flat preview of the finished sticker (the 3D view needs an internet connection). Switch to Design to edit.';
  else if(view==='edit'&&D.shape==='custom'&&!CT.url&&$('#start').hidden)m='"Cut to design" traces around your artwork. Add a logo, text or shape first.';
  if(view!=='proof'){msg.textContent=m;msg.hidden=!m}
  legendUI();layersUI();fillIns();cbarUI();
- $('#layerArtTxt').textContent=`${SN[D.shape]} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
+ tplUI();heroUI();$('#layerArtTxt').textContent=`${artLabel()} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;viewBtns();$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
 
 /* ---------- layers ---------- */
 const gopen={};
@@ -64,25 +64,58 @@ const SHAPEICON={rect:'<rect x="3" y="5" width="24" height="14" rx="2"/>',square
 let keepRatio=false,docLock=false;
 const NUM=(p,lab,u,tip,icon)=>`<div class="num"><label data-scrub="${p}" for="in-${p}" data-tip="${tip||lab}">${icon?`<svg class="ico"><use href="#${icon}"/></svg>`:lab}</label><input id="in-${p}" data-p="${p}" inputmode="decimal" autocomplete="off" spellcheck="false" aria-label="${tip||lab}">${u?`<span class="u">${u}</span>`:''}</div>`;
 const PAINT=(k,lab)=>`<div class="paint"><button type="button" class="chip" data-paint="${k}" aria-label="${lab} color"></button><div class="num"><label class="nl" style="cursor:default">#</label><input data-hex="${k}" aria-label="${lab} hex color" maxlength="7" spellcheck="false" autocomplete="off"></div></div>`;
-function insSig(){const els=selEls();if(!els.length)return 'doc:'+D.shape+':'+(tool==='pencil'||tool==='line'?'pen':'');return els.map(e=>e.type+(e.locked?'L':'')+(hasStroke(e)?'s':'')+(hasFill(e)?'f':'')).join(',')+'|'+els.length}
+function insSig(){const els=selEls();if(!els.length)return 'doc:'+D.pid+':'+D.shape+':'+JSON.stringify(D.opt)+':'+LOOK().face+':'+(tool==='pencil'||tool==='line'?'pen':'');return els.map(e=>e.type+(e.locked?'L':'')+(hasStroke(e)?'s':'')+(hasFill(e)?'f':'')).join(',')+'|'+els.length}
 function syncPanels(){const sig=insSig(),ins=$('#ins');if(ins.dataset.sig!==sig){ins.dataset.sig=sig;ins.innerHTML=selEls().length?selHTML():docHTML();if(D.shape==='custom'&&!selEls().length){thumbSig='';schedThumbs()}}
- ctxUI();fillIns();layersUI();$('#mPropsLbl').textContent=sel.length?'Edit':'Sticker'}
+ ctxUI();fillIns();layersUI();$('#mPropsLbl').textContent=sel.length?'Edit':NOUN().replace(/^./,c=>c.toUpperCase())}
 function ctxUI(){const els=selEls(),c=$('#insCtx');let h;
- if(!els.length)h=tool==='pencil'||tool==='line'?`<svg class="ico"><use href="#${tool==='pencil'?'t-pencil':'t-line'}"/></svg><b>${tool==='pencil'?'Pencil':'Line'}</b>`:`<svg class="ico"><use href="#i-sticker"/></svg><b>Sticker</b><span>${esc(SN[D.shape])}</span>`;
- else if(els.length===1){const e=els[0];h=`<svg class="ico"><use href="#${TI[e.type]}"/></svg><b>${esc(label(e))}</b>${e.locked?'<svg class="ico" aria-label="Locked"><use href="#i-lock"/></svg>':''}<button type="button" class="linkbtn" data-ctx="doc">Sticker settings</button>`}
- else{const g=els[0].gid&&els.every(e=>e.gid===els[0].gid)?els[0].gid:null;h=`<svg class="ico"><use href="#t-group"/></svg><b>${g?esc((D.groups[g]||{}).name||'Group'):els.length+' items'}</b><button type="button" class="linkbtn" data-ctx="doc">Sticker settings</button>`}
+ if(!els.length)h=tool==='pencil'||tool==='line'?`<svg class="ico"><use href="#${tool==='pencil'?'t-pencil':'t-line'}"/></svg><b>${tool==='pencil'?'Pencil':'Line'}</b>`:`<svg class="ico"><use href="#i-sticker"/></svg><b>${esc(NOUN().replace(/^./,c=>c.toUpperCase()))}</b><span>${esc(artLabel())}</span>`;
+ else if(els.length===1){const e=els[0];h=`<svg class="ico"><use href="#${TI[e.type]}"/></svg><b>${esc(label(e))}</b>${e.locked?'<svg class="ico" aria-label="Locked"><use href="#i-lock"/></svg>':''}<button type="button" class="linkbtn" data-ctx="doc">${esc(NOUN().replace(/^./,c=>c.toUpperCase()))} settings</button>`}
+ else{const g=els[0].gid&&els.every(e=>e.gid===els[0].gid)?els[0].gid:null;h=`<svg class="ico"><use href="#t-group"/></svg><b>${g?esc((D.groups[g]||{}).name||'Group'):els.length+' items'}</b><button type="button" class="linkbtn" data-ctx="doc">${esc(NOUN().replace(/^./,c=>c.toUpperCase()))} settings</button>`}
  if(c.dataset.h!==h){c.dataset.h=h;c.innerHTML=h}}
 $('#insCtx').addEventListener('click',ev=>{if(ev.target.closest('[data-ctx="doc"]'))setSel([])});
-function docHTML(){const pen=tool==='pencil'||tool==='line';let s='';
+/* the product panel: built from the product's own BigCommerce options (nothing selected on the canvas) */
+function swCss(role,v){const p=PROD(),c=p.colors||{};if(/^gold$/i.test(v))return 'linear-gradient(135deg,#8F6A20,#D9B45A,#F6E3A3,#C99B3E)';if(/^silver$/i.test(v))return 'linear-gradient(135deg,#7E848A,#C9CDD2,#FAFBFC,#B3B8BD)';
+ if(v==='Custom Color')return 'conic-gradient(#F2364C,#F5B82E,#21C8E2,#5A3BD6,#F2364C)';if(v==='Upload Background')return 'linear-gradient(135deg,#9ad 0 40%,#fc8 40% 70%,#7b6 70%)';
+ if(String(v).includes('-')&&role==='background_color'){const [x,y]=v.split('-');return `linear-gradient(135deg,${c[x]||'#111'} 50%,${c[y]||'#fff'} 50%)`}
+ const lk=p.looks&&p.looks[v];if(lk)return PFACE[lk.face]||'#fff';
+ return c[String(v).replace(' Edge','')]||c[v]||null}
+const PFACE={white:'#FFFFFF',matte:'#EDEDE8',silver:'linear-gradient(135deg,#7E848A,#C9CDD2,#FAFBFC,#B3B8BD)',gold:'linear-gradient(135deg,#8F6A20,#D9B45A,#F6E3A3,#C99B3E)',clear:'repeating-conic-gradient(#E6EAEE 0 25%,#fff 0 50%) 0 0/8px 8px',glow:'#E4F4CC',reflective:'linear-gradient(135deg,#F4F6F8,#C9CFD5,#EEF1F4)',kraft:'#C49A6C',grass:'#DCD5BC'};
+function sibCss(q){const L=q.look||{};if(L.one_color)return L.one_color==='#B9C8E8'?'linear-gradient(135deg,#F2B8E0,#B9C8E8,#B8F0D8,#F4E6A8)':L.one_color;if(L.face==='color')return L.color;return PFACE[L.face]||'#fff'}
+function productSel(){const p=PROD(),cats={};Object.values(PRODS).filter(q=>q.family===p.family).forEach(q=>{(cats[q.category]=cats[q.category]||[]).push(q)});
+ Object.values(cats).forEach(l=>l.sort((x,y)=>x.name.localeCompare(y.name)));
+ return `<label class="fl" for="prodSel">Product</label><select id="prodSel" class="psel">${Object.entries(cats).map(([c,l])=>`<optgroup label="${esc(c)}">${l.map(q=>`<option value="${q.id}"${q.id===p.id?' selected':''}>${esc(q.name)}</option>`).join('')}</optgroup>`).join('')}</select>`}
+/* what's special about the material, in one line */
+function productHelp(L){const p=PROD();if(L.one)return `Cut from one color of ${finishName()} vinyl: everything in your design comes out in that color. Text and simple shapes work best.`;
+ if(L.engrave)return 'Engraved in one color: your design is shown in the engraving color.';
+ if(L.metal_clear)return 'White areas of your design print clear, so the metal shows through.';
+ if(L.face==='clear')return 'Clear material: areas with no ink stay see-through.';
+ if(L.dome)return L.face==='white'?'Bright white base for bold, full color, under a clear raised dome.':'';
+ if(p.family==='pen')return `Printed on the ${p.kind==='notebook'?'cover':'barrel'} inside the dashed imprint area.`;return ''}
+function docHTML(){const pen=tool==='pencil'||tool==='line',p=PROD(),L=LOOK(),fam=p.family;let s='';
  if(pen)s+=`<section class="psec"><h3 class="psec-h">Stroke</h3>${PAINT('pen','Stroke')}<div class="f-row">${NUM('pensw','W','pt','Stroke width','i-sliders')}</div><p class="hint">Applies to new ${tool==='pencil'?'drawings':'lines'}. Select a drawing afterwards to change it.</p></section>`;
- s+=`<section class="psec"><h3 class="psec-h">Shape</h3><div class="shapes" role="radiogroup" aria-label="Sticker shape">${Object.keys(SN).map(k=>`<button type="button" class="shp" role="radio" data-shape="${k}" aria-checked="false"><svg viewBox="0 0 30 24" aria-hidden="true">${SHAPEICON[k]}</svg><span>${SN[k]}</span></button>`).join('')}</div>
-  <div class="f-row" id="cornersRow" style="margin-top:10px;justify-content:space-between"><span class="fl" style="margin:0">Corners</span><div class="seg" id="cornersSeg" role="group" aria-label="Corner radius"><button type="button" data-corner="yes" data-tip="0.12 in radius">Standard</button><button type="button" data-corner="no" data-tip="0.04 in radius, the smallest we can dome">Minimal</button></div></div>
+ /* product + its siblings (finish, material or color of the same product line) */
+ const sib=siblings(p);
+ s+=`<section class="psec"><h3 class="psec-h">${esc(FAMI().label)}</h3>${productSel()}${sib.length>1?`<span class="fl" style="margin-top:12px">${esc(p.group_label||'Finish')}</span><div class="fins" role="radiogroup" aria-label="${esc(p.group_label||'Finish')}">${sib.map(q=>`<button type="button" class="fin" role="radio" data-pid="${q.id}" aria-checked="${q.id===p.id}"><span class="sw" style="background:${sibCss(q)}" aria-hidden="true"></span>${esc(q.finish)}</button>`).join('')}</div>`:''}<p class="hint" id="vinylHelp"></p></section>`;
+ if(fam==='sticker'&&p.shapes.length>1)s+=`<section class="psec"><h3 class="psec-h">Shape</h3><div class="shapes" role="radiogroup" aria-label="${esc(NOUN())} shape">${p.shapes.map(k=>`<button type="button" class="shp" role="radio" data-shape="${k}" aria-checked="false"><svg viewBox="0 0 30 24" aria-hidden="true">${SHAPEICON[k]}</svg><span>${SN[k]}</span></button>`).join('')}</div>
+  <div class="f-row" id="cornersRow" style="margin-top:10px;justify-content:space-between"><span class="fl" style="margin:0">Corners</span><div class="seg" id="cornersSeg" role="group" aria-label="Corner radius"><button type="button" data-corner="yes" data-tip="0.12 in radius">Standard</button><button type="button" data-corner="no" data-tip="0.04 in radius${L.dome?', the smallest we can dome':''}">Minimal</button></div></div>
   <div id="borderBox" hidden style="margin-top:12px"><span class="fl">White border around your design</span><div class="btiles" id="borderTiles" role="radiogroup" aria-label="Border width"></div><div class="range" style="margin-top:10px"><input type="range" id="gapIn" min="6" max="30" step="1" aria-label="Exact border width"><output id="gapOut" for="gapIn"></output></div></div>
   <p class="hint" id="shapeHelp"></p></section>`;
- s+=`<section class="psec"><h3 class="psec-h">Size <small>${fmt(MIN)} – ${fmt(MAX)} in</small></h3><div class="f-row">${NUM('dw','W','in','Sticker width')}<button type="button" class="ratio" id="docLockBtn" aria-pressed="false" aria-label="Keep proportions" data-tip="Keep proportions"><svg class="ico"><use href="#i-link"/></svg></button>${NUM('dh','H','in','Sticker height')}</div><div class="presets" id="presets"></div><p class="hint">Your design scales with the sticker. Price is per sticker at your quantity.</p></section>`;
- s+=`<section class="psec"><h3 class="psec-h">Finish</h3><div class="fins" role="radiogroup" aria-label="Vinyl finish">${[['white','Gloss White'],['silver','Silver'],['gold','Gold']].map(([v,n])=>`<button type="button" class="fin" role="radio" data-vinyl="${v}" aria-checked="false"><span class="sw sw-${v}" aria-hidden="true"></span>${n}</button>`).join('')}</div><p class="hint" id="vinylHelp"></p></section>`;
- s+=`<section class="psec"><h3 class="psec-h">Background<span><input type="file" id="bgFile" class="sr-only" accept="image/*"><button type="button" class="iconbtn" id="bgImgBtn" aria-label="Use an image as the background" data-tip="Use an image"><svg class="ico"><use href="#t-image"/></svg></button></span></h3>${PAINT('bg','Background')}<p class="hint" id="bgHelp"></p></section>`;
+ else if(fam==='sticker')s+=`<section class="psec"><h3 class="psec-h">Shape</h3><p class="hint" style="margin:0">${esc(SN[D.shape])}: ${L.one?'cut out around your lettering and shapes.':'cut around your design.'}</p>${L.one?'':`<div id="borderBox" hidden style="margin-top:12px"><span class="fl">Border around your design</span><div class="btiles" id="borderTiles" role="radiogroup" aria-label="Border width"></div><div class="range" style="margin-top:10px"><input type="range" id="gapIn" min="6" max="30" step="1" aria-label="Exact border width"><output id="gapOut" for="gapIn"></output></div></div>`}</section>`;
+ if(p.size.mode==='free')s+=`<section class="psec"><h3 class="psec-h">Size <small>${fmt(MINW)}–${fmt(MAXW)} × ${fmt(MINH)}–${fmt(MAXH)} in</small></h3><div class="f-row">${NUM('dw','W','in',`${NOUN()} width`)}<button type="button" class="ratio" id="docLockBtn" aria-pressed="false" aria-label="Keep proportions" data-tip="Keep proportions"><svg class="ico"><use href="#i-link"/></svg></button>${NUM('dh','H','in',`${NOUN()} height`)}</div><div class="presets" id="presets"></div><p class="hint">Your design scales with the ${esc(NOUN())}. Price is per ${esc(NOUN())} at your quantity.</p></section>`;
+ else{const ps=p.size.presets,z=presetOf(p),est=ps.some(x=>!x.known),hh=x=>p.shape==='circle'?x.w:x.h;
+  s+=`<section class="psec"><h3 class="psec-h">${fam==='pen'?'Imprint area':'Size'}</h3>${ps.length>1?`<div class="presets" role="radiogroup" aria-label="Size">${ps.map(x=>`<button type="button" class="pchip" role="radio" data-preset="${x.id}" aria-checked="${x.id===z.id}" aria-pressed="${x.id===z.id}">${esc(x.label)} · ${fmt(x.w)} × ${fmt(hh(x))} in</button>`).join('')}</div>`:`<p class="hint" style="margin:0"><b>${fmt(z.w)} × ${fmt(hh(z))} in</b>${fam==='pen'?' on the '+(p.kind==='notebook'?'cover':'barrel'):''}</p>`}${est?`<p class="hint" id="sizeEst">Preview size is approximate: the exact ${fam==='pen'?'imprint area':'size'} for this product isn't in our catalog yet.</p>`:''}</section>`}
+ /* every other BigCommerce option: material, background, border, back, color */
+ for(const role of optRoles(p)){const vals=p.vals[role],cur=choice()[role];if(vals.length<2&&role!=='attachment')continue;
+  s+=`<section class="psec"><h3 class="psec-h">${esc(OPT_LABEL[role]||p.opts[role].name)}</h3><div class="fins opts" role="radiogroup" aria-label="${esc(OPT_LABEL[role]||role)}">${vals.map(v=>{const css=swCss(role,v),ok=optOk(role,v);return `<button type="button" class="fin" role="radio" data-opt="${role}" data-val="${esc(v)}" aria-checked="${v===cur}"${ok?'':' aria-disabled="true" data-tip="Not available with your other choices"'}>${css?`<span class="sw" style="background:${css}" aria-hidden="true"></span>`:''}${esc(v)}</button>`}).join('')}</div></section>`}
+ /* background: stickers (not cut vinyl), and badges with a custom color or uploaded background */
+ const upl=fam==='badge'&&L.face==='upload';
+ if(fam==='sticker'&&!L.one||fam==='badge'&&(L.face==='custom'||upl))s+=`<section class="psec"><h3 class="psec-h">${upl?'Background image':fam==='badge'?'Badge color':'Background'}<span><input type="file" id="bgFile" class="sr-only" accept="image/*">${upl?'':`<button type="button" class="iconbtn" id="bgImgBtn" aria-label="Use an image as the background" data-tip="Use an image"><svg class="ico"><use href="#t-image"/></svg></button>`}</span></h3>${upl?`<button type="button" class="btn" id="bgImgBtn2">Upload a background image</button>`:PAINT('bg','Background')}<p class="hint" id="bgHelp"></p></section>`;
  return s}
+/* free-size presets inside the product's limits (big products fall back to their own size steps) */
+function presetList(){const base=PRESETS[D.shape]||PRESETS.rect,ok=([w,h])=>w>=MINW&&w<=MAXW&&h>=MINH&&h<=MAXH,l=base.filter(ok);if(l.length>=3)return l;
+ const st=PROD().size.steps,sq=D.shape==='square'||D.shape==='circle'||D.shape==='custom',out=[];
+ for(const w of st.w){if(out.length>=5)break;if(w<MINW||w>MAXW)continue;const h=sq?w:Math.min(MAXH,Math.max(MINH,r2(w*(D.h/D.w))));if(ok([w,h]))out.push([w,h])}return out.length?out:[[MINW,MINH]]}
+const artLabel=()=>PROD().family==='sticker'?SN[D.shape]:PROD().finish||PROD().name;
 function selHTML(){const els=selEls(),e=els.length===1?els[0]:null,types=new Set(els.map(x=>x.type)),allText=els.every(x=>x.type==='text'),locked=els.some(x=>x.locked);let s='';
  if(locked)return `<section class="psec"><p class="hint" style="margin:0"><b>Locked.</b> Locked layers can't be moved or edited on the canvas.</p><button type="button" class="btn btn-ghost sm" data-act="lock" style="margin-top:10px"><svg class="ico"><use href="#i-unlock"/></svg>Unlock</button></section>`;
  const A=(a,ic,l,k)=>`<button type="button" class="tool" data-act="${a}" aria-label="${l}" data-tip="${l}"${k?` data-key="${k}"`:''}><svg class="ico"><use href="#${ic}"/></svg></button>`;
@@ -109,7 +142,7 @@ function gp(p){if(p==='dw')return fmt(D.shape==='custom'?pricedSize().w:D.w);if(
  switch(p){case 'x':return f2(b.x0/100);case 'y':return f2(b.y0/100);case 'w':return f2(s.w/100);case 'h':return e.type==='line'&&els.length===1?'—':f2(s.h/100);case 'rot':return f2(e.rot||0);case 'op':return String(Math.round((e.opacity??1)*100));
   case 'rad':return f2((e.radius||0)/100);case 'pt':{const v=els.map(ptSize);return v.every(x=>x===v[0])?String(v[0]):''}case 'sp':return String(e.spacing||0);case 'lh':return f2(e.lineH||1.15);case 'curve':return String(e.curve||0);case 'sw':return f2((e.sw||0)*.72);
   case 'dw':return fmt(D.shape==='custom'?pricedSize().w:D.w);case 'dh':return fmt(D.shape==='custom'?pricedSize().h:D.h);case 'pensw':return f2(penStyle.sw*.72)}return ''}
-function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!(v>=MIN&&v<=MAX)){toast(`Enter a size between ${fmt(MIN)} and ${fmt(MAX)} inches.`);return false}if(D.shape==='custom'&&setCutSize(p==='dw'?v:null,p==='dh'?v:null))return true;const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
+function sp(p,v,live){const els=selEls();if(p==='dw'||p==='dh'){if(!isFree())return false;const lo=p==='dw'?MINW:MINH,hi=p==='dw'?MAXW:MAXH;if(!(v>=lo&&v<=hi)){toast(`Enter a ${p==='dw'?'width':'height'} between ${fmt(lo)} and ${fmt(hi)} inches.`);return false}if(D.shape==='custom'&&setCutSize(p==='dw'?v:null,p==='dh'?v:null))return true;const sq=D.shape==='square'||D.shape==='circle',r=D.h/D.w;if(p==='dw')setSize(v,sq?v:docLock?v*r:D.h);else setSize(sq?v:docLock?v/r:D.w,v);return true}
  if(p==='pensw'){penStyle.sw=clamp(v/.72,.5,200);return true}
  if(!els.length)return false;const b=els.length===1?bbox(els[0]):unionBox(els);
  switch(p){
@@ -131,14 +164,14 @@ function fillIns(){const ins=$('#ins'),els=selEls(),e=els.length===1?els[0]:null
  $$('input[data-p]',ins).forEach(i=>{if(document.activeElement!==i){const v=gp(i.dataset.p);i.value=v;i.placeholder=v===''?'Mixed':''}});
  $$('[data-paint]',ins).forEach(c=>{const k=c.dataset.paint,v=paintVal(k);c.style.background=v&&v!=='none'?v:'';c.classList.toggle('none',!v||v==='none')});
  $$('input[data-hex]',ins).forEach(i=>{if(document.activeElement!==i){const v=paintVal(i.dataset.hex);i.value=v&&v!=='none'?v.replace('#',''):''}});
- if(!els.length){$$('.shp',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.shape===D.shape)));$$('.fin',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.vinyl===D.vinyl)));
+ if(!els.length){$$('.shp',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.shape===D.shape)));$$('.fin[data-pid]',ins).forEach(b=>b.setAttribute('aria-checked',String(b.dataset.pid===D.pid)));const ch=choice();$$('.fin[data-opt]',ins).forEach(b=>b.setAttribute('aria-checked',String(ch[b.dataset.opt]===b.dataset.val)));const ps2=$('#prodSel');if(ps2&&ps2.value!==D.pid)ps2.value=D.pid;
   const cr=$('#cornersRow');if(cr){cr.hidden=!(D.shape==='rect'||D.shape==='square');$$('#cornersSeg button').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.corner==='yes')===!!D.rounded)))}
   const bb=$('#borderBox');if(bb){bb.hidden=D.shape!=='custom';const g=$('#gapIn');if(document.activeElement!==g)g.value=D.gap;$('#gapOut').textContent=fmt(D.gap/100)+' in';tilesUI()}
   const sh=$('#shapeHelp');if(sh){const t={custom:'The cut follows your artwork with a smooth outline. Size is the finished sticker, measured around the cut line.',circle:'Round art fits best. Square artwork will have its corners trimmed.'}[D.shape]||'';sh.textContent=t;sh.hidden=!t}
   const sq=D.shape==='square'||D.shape==='circle',dh=$('#in-dh');if(dh){dh.disabled=sq;$('#docLockBtn').disabled=sq;$('#docLockBtn').setAttribute('aria-pressed',String(sq||docLock))}
-  const pr=$('#presets');if(pr){const cut=D.shape==='custom',ps=pricedSize(),ar=ps.h/ps.w,list=PRESETS[D.shape]||PRESETS.rect,sig=JSON.stringify([D.shape,tier,D.w,D.h,cut&&[r2(ps.w),r2(ps.h)]]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const ew=cut?(ar<=1?w:w/ar):w,eh=cut?(ar<=1?w*ar:w):h,on=cut?Math.abs(Math.max(ps.w,ps.h)-w)<.03:D.w===w&&D.h===h,p=r2(basePrice(ew,eh).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${on}" data-tip="${cut?`${fmt(r2(ew))} × ${fmt(r2(eh))} in, `:''}${money(p)} each at ${QTY[tier].toLocaleString()}">${sq||cut?w+' in':w+' × '+h}</button>`}).join('')}}
-  const vh=$('#vinylHelp');if(vh)vh.textContent=D.vinyl==='white'?'Bright white base for bold, full color.':'White areas of your design print clear, so the metal shows through.';
-  const bh=$('#bgHelp');if(bh)bh.textContent=D.bg.t==='img'?'Using an image. Pick a color to replace it.':D.vinyl==='white'?'"None" leaves the gloss white vinyl.':'Choose "None" to let the metal show.';return}
+  const pr=$('#presets');if(pr){const cut=D.shape==='custom',ps=pricedSize(),ar=ps.h/ps.w,list=presetList(),sig=JSON.stringify([D.shape,tier,D.w,D.h,cut&&[r2(ps.w),r2(ps.h)]]);if(pr.dataset.sig!==sig){pr.dataset.sig=sig;pr.innerHTML=list.map(([w,h])=>{const ew=cut?(ar<=1?w:w/ar):w,eh=cut?(ar<=1?w*ar:w):h,on=cut?Math.abs(Math.max(ps.w,ps.h)-w)<.03:D.w===w&&D.h===h,p=r2(basePrice(ew,eh).b*(1-DISC[tier]));return `<button type="button" class="pchip" data-pw="${w}" data-ph="${h}" aria-pressed="${on}" data-tip="${cut?`${fmt(r2(ew))} × ${fmt(r2(eh))} in, `:''}${money(p)} each at ${QTY[tier].toLocaleString()}">${sq||cut?w+' in':w+' × '+h}</button>`}).join('')}}
+  const vh=$('#vinylHelp'),Lk=LOOK();if(vh){vh.textContent=productHelp(Lk);vh.hidden=!vh.textContent}
+  const bh=$('#bgHelp');if(bh)bh.textContent=PROD().family==='badge'?(Lk.face==='upload'?(D.bg.t==='img'?'Using your image. Upload another to replace it.':'Upload a photo or pattern for the badge background.'):'Pick the badge color.'):D.bg.t==='img'?'Using an image. Pick a color to replace it.':Lk.metal_clear?'Choose "None" to let the metal show.':Lk.face==='clear'?'"None" leaves the material clear.':`"None" leaves the ${(finishName()||'white').toLowerCase()} material.`;return}
  const rb=$('#ratioBtn');if(rb)rb.setAttribute('aria-pressed',String(keepRatio||(e&&(e.type==='image'||e.type==='text'))));
  if(els.every(x=>x.type==='text')){const f=els.map(x=>x.font),fs=$('#fontSel');if(fs){const one2=f.every(x=>x===f[0]);fs.textContent=one2?FONTS[f[0]].n:'Mixed fonts';fs.style.fontFamily=one2?FONTS[f[0]].f:''}
   $('#tBold').setAttribute('aria-pressed',String(els.every(x=>x.bold)));$('#tItal').setAttribute('aria-pressed',String(els.every(x=>x.ital)));
@@ -168,7 +201,10 @@ insEl.addEventListener('keydown',ev=>{const t=ev.target;if(t.dataset&&t.dataset.
 insEl.addEventListener('click',ev=>{const t=ev.target,b=t.closest('button');if(!b)return;
  if(b.dataset.act){act(b.dataset.act);return}
  if(b.dataset.shape){setShape(b.dataset.shape);return}
- if(b.dataset.vinyl){setVinyl(b.dataset.vinyl);return}
+ if(b.dataset.pid){switchProduct(b.dataset.pid);return}
+  if(b.dataset.opt){if(b.getAttribute('aria-disabled')==='true'){toast('That option isn\'t available with your other choices.');return}setOpt(b.dataset.opt,b.dataset.val);if(b.dataset.val==='Upload Background'&&D.bg.t!=='img'&&$('#bgFile'))$('#bgFile').click();return}
+  if(b.dataset.preset){setOpt('size',b.dataset.preset);return}
+  if(b.id==='bgImgBtn2'){$('#bgFile').click();return}
  if(b.dataset.corner){D.rounded=b.dataset.corner==='yes';commit();syncPanels();return}
  if(b.dataset.pw){setSize(+b.dataset.pw,+b.dataset.ph);commit();syncPanels();return}
  if(b.id==='docLockBtn'){docLock=!docLock;fillIns();return}
@@ -214,12 +250,12 @@ function cutSettle(){const g=cutGoal;if(!g||D.shape!=='custom'||!CT.bbox)return;
  if(g.n>=2||performance.now()-g.t>4000){cutGoal=null;return}
  const w=CT.bbox.w/100,h=CT.bbox.h/100,err=Math.min(g.nw!=null?Math.abs(w-g.nw):9,g.nh!=null?Math.abs(h-g.nh):9);if(err<.004){cutGoal=null;return}
  g.n++;if(cutPass(g.nw,g.nh,true)==null){cutGoal=null;return}g.sig=JSON.stringify(D.els);CT.sig='';last=snapshot();saveSoon();syncPanels();req()}
-function setSize(nw,nh,raw){if(!raw&&D.shape==='custom'&&setCutSize(nw,nh))return;nw=clamp(nw,MIN,MAX);nh=clamp(nh,MIN,MAX);
+function setSize(nw,nh,raw){if(!isFree())return;if(!raw&&D.shape==='custom'&&setCutSize(nw,nh))return;nw=clamp(nw,MINW,MAXW);nh=clamp(nh,MINH,MAXH);
  if(!szBase||szBase.sig!==JSON.stringify(D.els))szBase={w:D.w,h:D.h,els:JSON.stringify(D.els)};
  const sx=nw/szBase.w,sy=nh/szBase.h,s=Math.min(sx,sy);D.els=JSON.parse(szBase.els);
  D.els.forEach(e=>{e.x*=sx;e.y*=sy;if(e.type==='text')e.size*=s;else{e.w*=s;if(e.type!=='line')e.h*=s}});D.w=Math.round(nw*100)/100;D.h=Math.round(nh*100)/100;szBase.sig=JSON.stringify(D.els);CT.sig='';if(zoom===1)cam=null;req()}
-function setShape(v){D.shape=v;if(v==='square'||v==='circle'){const m=Math.max(D.w,D.h);if(D.w!==m||D.h!==m)setSize(m,m)}CT.sig='';if(v!=='custom')CT.url=null;track('builder_shape',{shape:v});commit();syncPanels()}
-function setVinyl(v){D.vinyl=v;track('builder_vinyl',{vinyl:v});commit();syncPanels()}
+function setShape(v){if(PROD().shapes&&!PROD().shapes.includes(v))return;D.shape=v;if(v==='square'||v==='circle'){const m=Math.max(D.w,D.h);if(D.w!==m||D.h!==m)setSize(m,m)}CT.sig='';if(v!=='custom')CT.url=null;track('builder_shape',{shape:v});commit();syncPanels()}
+function setVinyl(v){if(setFinishKey(v)){track('builder_vinyl',{vinyl:v});commit();syncPanels()}}
 
 /* ---------- popovers ---------- */
 const pop=$('#pop');let popFor=null,popClose=null;
@@ -281,14 +317,14 @@ document.addEventListener('pointerdown',hideTip,true);document.addEventListener(
 /* ---------- quote bar ---------- */
 function cbarUI(){const t=curTier(),all=tiers(),ps=pricedSize(),blank=isBlank(),ck=blank?null:checks(),nw=ck?ck.filter(c=>c.level==='warning'||c.level==='error').length:0;
  const pill=$('#chkPill');pill.className='pill '+(blank?'':nw?'warn':'ok');$('#chkTxt').textContent=blank?'Print check':nw?`${nw} thing${nw===1?'':'s'} to check`:'Print-ready';pill.setAttribute('aria-label',blank?'Print check runs once you add a design':nw?`${nw} print issues to check`:'Print check passed');
- const sm=`<b>${esc(SN[D.shape])}</b><span class="sep">·</span>${fmt(ps.w)} × ${fmt(ps.h)} in<span class="sep">·</span>${esc(VN[D.vinyl])}`;if($('#cbSum').dataset.h!==sm){$('#cbSum').dataset.h=sm;$('#cbSum').innerHTML=sm}
+ const fx=optRoles().map(r=>choice()[r]).filter(Boolean).slice(0,2),sm=`<b>${esc(artLabel())}</b><span class="sep">·</span>${fmt(ps.w)} × ${fmt(ps.h)} in${PROD().family==='sticker'&&finishName()?`<span class="sep">·</span>${esc(finishName())}`:''}${fx.map(v=>`<span class="sep">·</span>${esc(v)}`).join('')}`;if($('#cbSum').dataset.h!==sm){$('#cbSum').dataset.h=sm;$('#cbSum').innerHTML=sm}
  const rem=FREE-t.t;   /* price and quantity live in the Review & Print step, not in the designer bar */
  const rb=$('#reviewBtn'),rbh='Review &amp; Print<svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>';if(rb.dataset.h!==rbh){rb.dataset.h=rbh;rb.innerHTML=rbh}
  const tp=$('#tpShipTxt');if(tp)tp.textContent=rem>0?`Orders of $75 or more ship free. Add ${money(rem)} more to this order to qualify.`:'Good news: this order ships free.';
  $('#skuCode')&&($('#skuCode').textContent=skuFor());upsellUI(t)}
 function priceBreak(){const all=tiers(),t=all[tier],n=all[tier+1];if(!n)return '';return `At ${n.q.toLocaleString()} the price drops from ${money(t.p)} to ${money(n.p)} each.`}
 $('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}const all=tiers();
- openPop(b,`<div class="mh">Quantity · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in</div>${all.map((x,i)=>`<button type="button" class="qrow" role="menuitemradio" data-tier="${i}" aria-checked="${i===tier}"><span class="rd" aria-hidden="true"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span><span class="sv">Save ${x.s}%</span><span class="tt">${money(x.t)}</span></button>`).join('')}${priceBreak()?`<p class="qnote">${priceBreak()}</p>`:''}`,{btn:b,cls:'qpop',above:true,align:'right'});
+ openPop(b,`<div class="mh">Quantity · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in</div>${all.map((x,i)=>`<button type="button" class="qrow" role="menuitemradio" data-tier="${i}" aria-checked="${i===tier}"><span class="rd" aria-hidden="true"></span><span><b>${x.q.toLocaleString()}</b><small>${money(x.p)} each</small></span>${x.s?`<span class="sv">Save ${x.s}%</span>`:'<span class="sv sv0"></span>'}<span class="tt">${money(x.t)}</span></button>`).join('')}${priceBreak()?`<p class="qnote">${priceBreak()}</p>`:''}`,{btn:b,cls:'qpop',above:true,align:'right'});
  pop.onclick=e2=>{const r=e2.target.closest('[data-tier]');if(!r)return;tier=+r.dataset.tier;commit();closePop();track('builder_qty',{qty:QTY[tier]})}});
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
  if(isBlank()){openPop(b,`<p class="hint" style="margin:6px 8px 8px;max-width:280px">The print check looks for small text, low-resolution images, art past the safe area, thin lines and low contrast. It runs as soon as you add a design.</p>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});return}
@@ -297,14 +333,15 @@ $('#reviewBtn').addEventListener('click',()=>{if(isBlank()){startDismissed=false
 
 /* ---------- print check (codes follow the Print MCP spec) ---------- */
 const VBASE={white:'#FFFFFF',silver:'#C0C4CA',gold:'#C9A227'};
+const minPt=()=>(PROD().checks&&PROD().checks.min_text_pt)||8;
 function colorBehind(e){const i=D.els.indexOf(e);for(let j=i-1;j>=0;j--){const o=D.els[j];if(o.hidden)continue;const b=bbox(o);if(e.x<b.x0||e.x>b.x1||e.y<b.y0||e.y>b.y1)continue;if(o.type==='image')return null;if(['rect','ellipse','shape'].includes(o.type)&&hasFill(o))return o.fill}
- if(D.bg.t==='img')return null;if(D.bg.t==='color')return D.vinyl!=='white'&&D.bg.c.toUpperCase()==='#FFFFFF'?VBASE[D.vinyl]:D.bg.c;return VBASE[D.vinyl]}
+ const L=LOOK();if(L.one||L.engrave)return null;if(D.bg.t==='img'&&(PROD().family==='sticker'||L.face==='upload'))return null;if(D.bg.t==='color'&&(PROD().family==='sticker'||L.face==='custom'))return L.metal_clear&&D.bg.c.toUpperCase()==='#FFFFFF'?faceBase(L):D.bg.c;return faceBase(L)}
 function fitInside(e){const cx=W()/2,cy=H()/2;for(let i=0;i<60&&outsideSafe(e);i++){e.x+=(cx-e.x)*.15;e.y+=(cy-e.y)*.15;if(i>6){if(e.type==='text')e.size*=.96;else{e.w*=.96;if(e.type!=='line')e.h*=.96}if(e.type==='text')measureNow(e)}}}
 function measureNow(e){const host=$('#msr');host.textContent='';const g=mk('g');host.appendChild(g);drawEl(e,g);measure(e,g);host.textContent=''}
-function checks(){if(isBlank())return[{level:'error',code:'EMPTY_DESIGN',message:'Your sticker is blank.',suggestion:'Generate a design with Genie, upload artwork or pick a template.'}];const out=[];
+function checks(){if(isBlank())return[{level:'error',code:'EMPTY_DESIGN',message:`Your ${NOUN()} is blank.`,suggestion:'Generate a design with Genie, upload artwork or pick a template.'}];const out=[];
  for(const e of D.els){if(e.hidden)continue;const n=label(e);
-  if(outsideSafe(e)&&!covers(e))out.push({level:'warning',code:'OUTSIDE_SAFE_AREA',id:e.id,message:`"${n}" runs past the safe area.`,suggestion:'Details near the edge can be trimmed or distorted under the dome.',fix:'Move inside',run:()=>fitInside(e)});
-  if(e.type==='text'&&ptSize(e)<8)out.push({level:'warning',code:'TEXT_TOO_SMALL',id:e.id,message:`"${n}" is ${ptSize(e)} pt.`,suggestion:'Text under 8 pt is hard to read under the dome.',fix:'Make it 8 pt',run:()=>{e.size=8/.72}});
+  if(outsideSafe(e)&&!covers(e))out.push({level:'warning',code:'OUTSIDE_SAFE_AREA',id:e.id,message:`"${n}" runs past the safe area.`,suggestion:LOOK().dome?'Details near the edge can be trimmed or distorted under the dome.':PROD().family==='pen'?'Keep the design inside the imprint area.':'Details near the edge can be trimmed.',fix:'Move inside',run:()=>fitInside(e)});
+  if(e.type==='text'&&ptSize(e)<minPt())out.push({level:'warning',code:'TEXT_TOO_SMALL',id:e.id,message:`"${n}" is ${ptSize(e)} pt.`,suggestion:`Text under ${minPt()} pt is hard to read${LOOK().dome?' under the dome':''}.`,fix:`Make it ${minPt()} pt`,run:()=>{e.size=minPt()/.72}});
   if(e.type==='image'&&IM[e.key]&&!IM[e.key].vector&&dpi(e)<150){const sharpW=IM[e.key].natW/3;out.push({level:'warning',code:'RESOLUTION_TOO_LOW',id:e.id,message:`"${n}" is ${dpi(e)} dpi at this size.`,suggestion:`It may print blurry. Upload a larger file, or use it at ${f2(sharpW/100)} in wide or smaller.`,fix:sharpW>=30?'Resize to sharp':null,run:()=>{const f=sharpW/e.w;e.w*=f;e.h*=f}})}
   if((e.type==='line'||e.type==='path'||hasStroke(e))&&e.sw*.72<.5)out.push({level:'warning',code:'THIN_LINE',id:e.id,message:`"${n}" has a ${f2(e.sw*.72)} pt line.`,suggestion:'Lines under 0.5 pt may not print.',fix:'Make it 1 pt',run:()=>{e.sw=1/.72}});
   if(e.type==='text'&&hasFill(e)){const bg=colorBehind(e);if(bg&&contrast(e.fill,hasStroke(e)?e.stroke:bg)<1.5&&contrast(e.fill,bg)<1.5){const better=contrast('#111827',bg)>contrast('#FFFFFF',bg)?'#111827':'#FFFFFF';out.push({level:'warning',code:'LOW_CONTRAST',id:e.id,message:`"${n}" is hard to see on its background.`,suggestion:'Use a color with more contrast.',fix:better==='#111827'?'Use dark text':'Use light text',run:()=>{e.fill=better}})}}}
@@ -313,7 +350,11 @@ function checks(){if(isBlank())return[{level:'error',code:'EMPTY_DESIGN',message
  if(D.els.some(covers))out.push({level:'info',code:'EDGE_TO_EDGE',message:'Your artwork runs to the edge.',suggestion:'Keep key text and logos inside the dashed safe line.'});
  else if(hasBorder(borderTarget()))out.push({level:'info',code:'WHITE_BORDER',message:'There\'s a white border around your artwork.',fix:'Fill edge to edge',run:()=>removeBorder('fill'),later:1});
  if(D.shape==='custom'&&D.els.some(e=>e.type==='image'&&!e.clear))out.push({level:'info',code:'CUT_FOLLOWS_BOX',message:'The cut follows the image box.',suggestion:'If your logo has a white background, turn on "Remove white background" for a tighter cut.'});
- if(D.vinyl!=='white')out.push({level:'info',code:'METALLIC_WHITE',message:`White areas print clear, so the ${D.vinyl} shows through.`});
+ {const L=LOOK(),p=PROD();if(L.metal_clear)out.push({level:'info',code:'METALLIC_WHITE',message:`White areas print clear, so the ${L.face} shows through.`});
+  if(L.one){const im=D.els.filter(e=>e.type==='image'&&!e.hidden);out.push({level:im.length?'warning':'info',code:'ONE_COLOR_VINYL',id:im[0]&&im[0].id,message:im.length?`"${label(im[0])}" is a picture. Vinyl lettering is cut from one color, so pictures come out as a solid shape.`:`Everything is cut from ${finishName()} vinyl, in one color.`,suggestion:im.length?'Use text and simple shapes, or a one-color logo.':''})}
+  if(L.engrave)out.push({level:'info',code:'ENGRAVED_ONE_COLOR',message:'Engraving is one color: your design is shown in the engraving color.'});
+  if(p.size.presets&&p.size.presets.some(z=>!z.known))out.push({level:'info',code:'SIZE_APPROXIMATE',message:`The ${p.family==='pen'?'imprint area':'size'} shown is approximate.`,suggestion:'Exact sizes for this product aren\'t in our catalog yet.'});
+  const v=variantNow();if(!v||v.off)out.push({level:'error',code:'NOT_ORDERABLE',message:v?'This combination can\'t be ordered right now.':'There\'s no price for this combination.',suggestion:'Pick another option, or contact us for help.'})}
  const txt=D.els.filter(e=>e.type==='text'&&!e.hidden).map(e=>'"'+String(e.text).replace(/\n/g,' ')+'"');if(txt.length)out.push({level:'info',code:'SPELLING',message:`Check your spelling: ${txt.join(', ')}.`});
  if(!out.some(c=>c.level==='warning'||c.level==='error'))out.unshift({level:'ok',code:'OK',message:'No print problems found.'});return out}
 let CK=[];
@@ -386,9 +427,9 @@ function proofUI(){const g=$('#proofG');if(view!=='proof'){if(g.childElementCoun
    Replace with real calls to get_quote / create_proof / create_checkout. Nothing here collects payment data. */
 const PrintAPI=window.CustomGeniePrint=window.CustomGeniePrint||(()=>{const drafts={};const shipDate=d=>{const t=new Date();let n=0;while(n<d){t.setDate(t.getDate()+1);if(t.getDay()%6)n++}return t};
  return{
-  listProducts:async()=>[{product_id:'domed_vinyl_sticker',name:'Domed Vinyl Sticker Sheet',sizes:{min_in:MIN,max_in:MAX},shapes:Object.keys(SN),options:{finish:Object.keys(VN)},min_quantity:QTY[0],typical_turnaround_days:TURNAROUND_DAYS}],
+  listProducts:async()=>[{product_id:PROD().id,name:PROD().name,sizes:{min_in:MIN,max_in:MAX},shapes:PROD().shapes,options:PROD().vals,min_quantity:QTY[0],typical_turnaround_days:TURNAROUND_DAYS}],
   getQuote:async({size_in,shape,quantity,options})=>{const fin=options&&options.finish,bp=basePrice(size_in.w,size_in.h,fin).b,i=Math.max(0,QTY.indexOf(quantity)),unit=r2(bp*(1-DISC[i])),sub=r2(unit*quantity);
-   return{quote_id:'q_'+nid(),expires_at:new Date(Date.now()+864e5).toISOString(),product_id:'domed_vinyl_sticker',shape,size_in,quantity,options,unit_price:unit,subtotal:sub,setup_fee:0,shipping_estimate:sub>=FREE?0:null,total:sub,currency:'USD',price_breaks:QTY.map((q,j)=>({quantity:q,unit_price:r2(bp*(1-DISC[j]))})),turnaround_days:TURNAROUND_DAYS,estimated_ship_date:shipDate(TURNAROUND_DAYS).toISOString().slice(0,10),warnings:checks().filter(c=>c.level==='warning').map(c=>({code:c.code,message:c.message,suggestion:c.suggestion}))}},
+   return{quote_id:'q_'+nid(),expires_at:new Date(Date.now()+864e5).toISOString(),product_id:PROD().id,variant:variantNow(),shape,size_in,quantity,options,unit_price:unit,subtotal:sub,setup_fee:0,shipping_estimate:sub>=FREE?0:null,total:sub,currency:'USD',price_breaks:QTY.map((q,j)=>({quantity:q,unit_price:r2(bp*(1-DISC[j]))})),turnaround_days:TURNAROUND_DAYS,estimated_ship_date:shipDate(TURNAROUND_DAYS).toISOString().slice(0,10),warnings:checks().filter(c=>c.level==='warning').map(c=>({code:c.code,message:c.message,suggestion:c.suggestion}))}},
   createProof:async({quote_id,notes})=>({proof_id:'prf_'+nid(),quote_id,final_dimensions:pricedSize(),thread_or_ink_colors:docColors(),production_notes:notes?[notes]:[],status:'auto'}),
   createCheckout:async({quote_id,proof_id,idempotency_key})=>{if(drafts[idempotency_key])return drafts[idempotency_key];const id='do_'+nid();return drafts[idempotency_key]={checkout_url:'#checkout/'+id,draft_order_id:id,expires_at:new Date(Date.now()+36e5).toISOString(),summary:{quote_id,proof_id}}}}})();
 
@@ -402,7 +443,12 @@ const RV_ON={   /* typical object sizes, used for scale; w/h = the flat area a s
  notebook:{noun:'notebook cover',cap:'an A5 notebook (5.8 × 8.3 in)',w:4.8,h:8},
  bottle:{noun:'bottle',cap:'a 24 oz water bottle (2.9 in across)',w:2.9*Math.PI/2,h:6.8,r:1.45},
  flask:{noun:'flask',cap:'an 8 oz flask (3.8 × 5.5 in)',w:3.6,h:4.4}};
-function rvShapeTxt(){return SN[D.shape]+(D.shape==='rect'||D.shape==='square'?(D.rounded?', standard corners':', minimal corners'):'')}
+function rvShapeTxt(){return SN[D.shape]+(PROD().family==='sticker'&&(D.shape==='rect'||D.shape==='square')?(D.rounded?', standard corners':', minimal corners'):'')}
+/* the product's own rows for the proof and the cart summary */
+function rvRows(){const p=PROD(),ps=pricedSize(),c=choice(),r=[['Product',esc(p.name)]];if(p.family==='sticker')r.push(['Shape',rvShapeTxt()]);
+ r.push([p.family==='pen'?'Imprint area':'Size',`${fmt(ps.w)} × ${fmt(ps.h)} in${p.size.presets&&p.size.presets.some(z=>!z.known)?' (approximate)':''}`]);
+ if(p.family==='sticker'&&siblings(p).length>1)r.push([esc(p.group_label||'Finish'),esc(finishName())]);
+ optRoles(p).forEach(k=>{if(c[k])r.push([esc(OPT_LABEL[k]||p.opts[k].name),esc(c[k])])});return r}
 /* the finished sticker as a nested svg centred on (cx,cy) in scene units; sx squeezes it to fake a curved surface */
 function rvSticker(cx,cy,sx){let s=thumbSVG(D,'',{proof:false});const v=(s.match(/viewBox="([^"]+)"/)||[])[1];if(!v)return'';const [,,vw,vh]=v.split(/\s+/).map(Number);
  s=s.replace(/ role="img" aria-label="[^"]*"/,' aria-hidden="true"').replace('<svg ',`<svg x="${cx-vw/2}" y="${cy-vh/2}" width="${vw}" height="${vh}" overflow="visible" `);
@@ -444,22 +490,22 @@ function rvScene(k){const o=RV_ON[k],ps=pricedSize(),lab=esc(`Your ${fmt(ps.w)} 
 function rvPreview(){const ps=pricedSize(),o=RV_ON[rvMode];
  $$('#reviewDlg [data-rv]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rv===rvMode)));
  $('#rvProof').dataset.scene=o?rvMode:'';
- $('#rvArt').innerHTML=o?rvScene(rvMode):thumbSVG(D,'Proof of your sticker',{proof:rvMode==='flat'});
+ $('#rvArt').innerHTML=o?rvScene(rvMode):thumbSVG(D,`Proof of your ${NOUN()}`,{proof:rvMode==='flat'});
  const big=o&&(ps.w>o.w||ps.h>o.h)?` At this size it's bigger than the flat part of the ${o.noun}, so it would ${rvMode==='bottle'?'wrap around the sides':'hang over the edge'}.`:'';
  const curve=rvMode==='bottle'&&!big&&ps.w>2.2?' It curves around the bottle, so the sides turn away from view.':'';
- $('#rvCap').textContent=o?`Shown to scale: your ${fmt(ps.w)} × ${fmt(ps.h)} in sticker on ${o.cap}.${big||curve}`
-  :`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${D.vinyl!=='white'?` · white areas print clear on ${D.vinyl}`:''}${D.shape==='custom'?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`}
+ $('#rvCap').textContent=o?`Shown to scale: your ${fmt(ps.w)} × ${fmt(ps.h)} in ${NOUN()} on ${o.cap}.${big||curve}`
+  :`Actual size ${fmt(ps.w)} × ${fmt(ps.h)} in${LOOK().metal_clear?` · white areas print clear on ${LOOK().face}`:''}${LOOK().engrave?' · engraved in one color':''}${LOOK().one?` · cut from ${finishName()} vinyl`:''}${D.shape==='custom'&&!LOOK().one?` · ${fmt(D.gap/100)} in border, cut around the design`:''}`}
 function rvShip(){const q=QUOTE;return q&&q.estimated_ship_date?new Date(q.estimated_ship_date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):''}
 function rvQuotePill(){$('#rvQuoteTxt').textContent=QUOTE?`Quote ${QUOTE.quote_id.slice(0,10)} · valid 24 h`:'Pricing…'}
-function rvSpec1(){const ps=pricedSize();$('#rvSpec1').innerHTML=[['Product',PNAME[D.vinyl]],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]]].map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}
+function rvSpec1(){const ps=pricedSize();$('#rvSpec1').innerHTML=rvRows().map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}
 function rvQtys(){const all=tiers();
- $('#rvQtys').innerHTML=all.map((x,i)=>`<label class="qopt"><input type="radio" name="rvq" value="${i}"${i===tier?' checked':''}><span class="q"><b>${x.q.toLocaleString()}</b> stickers</span><span class="tt">${money(x.t)}</span><span class="ea">${money(x.p)} each</span><span class="sv">Save ${x.s}%</span></label>`).join('');rvPrice()}
+ $('#rvQtys').innerHTML=all.map((x,i)=>`<label class="qopt"><input type="radio" name="rvq" value="${i}"${i===tier?' checked':''}><span class="q"><b>${x.q.toLocaleString()}</b> ${x.q===1?NOUN():NOUNS()}</span><span class="tt">${money(x.t)}</span><span class="ea">${money(x.p)} each</span>${x.s?`<span class="sv">Save ${x.s}%</span>`:'<span class="sv sv0"></span>'}</label>`).join('');rvPrice()}
 function rvPrice(){const t=curTier(),rem=FREE-t.t,ship=rvShip();
- $('#rvPrice').innerHTML=`<div class="row"><span>${t.q.toLocaleString()} stickers × ${money(t.p)}</span><b class="tot">${money(t.t)}</b></div><small>Setup and design help are free. ${rem>0?`Shipping is calculated at checkout, free on orders over ${money(FREE)}.`:'Shipping is free.'}${ship?` Estimated to ship ${ship}.`:''}</small>`;
+ $('#rvPrice').innerHTML=`<div class="row"><span>${t.q.toLocaleString()} ${t.q===1?NOUN():NOUNS()} × ${money(t.p)}</span><b class="tot">${money(t.t)}</b></div><small>Setup and design help are free. ${rem>0?`Shipping is calculated at checkout, free on orders over ${money(FREE)}.`:'Shipping is free.'}${ship?` Estimated to ship ${ship}.`:''}</small>`;
  $('#rvNext2').innerHTML=`Continue · ${money(t.t)}<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg>`}
 function rvSpec3(){const t=curTier(),ps=pricedSize(),rem=FREE-t.t,ship=rvShip();
- $('#rvSpec').innerHTML=[['Product',PNAME[D.vinyl]],['Product code',skuFor()],['Shape',rvShapeTxt()],['Size',`${fmt(ps.w)} × ${fmt(ps.h)} in`],['Finish',VN[D.vinyl]],['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" data-go="2">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
- $('#addCart').textContent=`Add to cart · ${money(t.t)}`}
+ const rows=rvRows();rows.splice(1,0,['Product code',skuFor()]);$('#rvSpec').innerHTML=[...rows,['Quantity',`${t.q.toLocaleString()} <button type="button" class="linkbtn" data-go="2">Change</button>`],['Unit price',money(t.p)],['Subtotal',money(t.t)],['Setup fee','<span class="free">FREE</span>'],['Design help','<span class="free">FREE</span>'],['Shipping',rem>0?`Calculated at checkout · ${money(rem)} more ships free`:'<span class="free">FREE</span>'],ship?['Estimated ship date',ship]:null,['Total',money(t.t),'tot']].filter(Boolean).map(([a,b,c])=>`<div${c?` class="${c}"`:''}><dt>${a}</dt><dd>${b}</dd></div>`).join('');
+ const v=variantNow(),off=!v||v.off;$('#addCart').disabled=off;$('#addCart').textContent=off?'Not available to order':`Add to cart · ${money(t.t)}`}
 function renderReview(){rvPreview();rvSpec1();$('#rvChecks').innerHTML=checksHTML(checks());rvQuotePill();if(rvStep===2)rvQtys();if(rvStep===3)rvSpec3()}
 const RV_STEP=['proof','quantity','cart'],RV_LBL=['Proof','Quantity','Add to cart'];
 function rvGo(n,quiet){if(n>1&&!$('#confirm').checked){confirmOk();n=1}
@@ -470,9 +516,9 @@ function rvGo(n,quiet){if(n>1&&!$('#confirm').checked){confirmOk();n=1}
  if(n===2)rvQtys();if(n===3)rvSpec3();
  if(quiet)return;track('review_step',{step:RV_STEP[n-1]});
  const h=$('#rvS'+n);requestAnimationFrame(()=>{h.focus({preventScroll:true});if(NARROW.matches)h.scrollIntoView({block:'start',behavior:reduce.matches?'auto':'smooth'})})}
-async function rvRequote(){const seq=++rvQSeq,ps=pricedSize();let q=null;try{q=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:{finish:D.vinyl}})}catch(e){}
+async function rvRequote(){const seq=++rvQSeq,ps=pricedSize();let q=null;try{q=await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:QTY[tier],options:choice()})}catch(e){}
  if(seq!==rvQSeq||!q)return;QUOTE=q;rvQuotePill();if(rvStep===2)rvPrice();if(rvStep===3)rvSpec3()}
-async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';rvStep=1;rvMax=1;QUOTE=null;renderReview();rvGo(1,true);if(!d.open)d.showModal();
+async function openReview(){const d=$('#reviewDlg');resetOrder();rvMode='flat';rvModes();rvStep=1;rvMax=1;QUOTE=null;renderReview();rvGo(1,true);if(!d.open)d.showModal();
  requestAnimationFrame(()=>$('#rvS1').focus({preventScroll:true}));track('review_open');await rvRequote()}
 $('#reviewDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){ev.currentTarget.close();return}
  const v=ev.target.closest('[data-rv]');if(v){rvMode=v.dataset.rv;rvPreview();if(RV_ON[rvMode])track('mockup_view',{surface:rvMode});return}
@@ -489,13 +535,13 @@ $('#confirm').addEventListener('change',ev=>{if(ev.target.checked){$('#confirmBo
 function confirmOk(){const ok=$('#confirm').checked;$('#confirmBox').dataset.invalid=String(!ok);$('#confirmErr').hidden=ok;if(!ok)$('#confirm').focus();return ok}
 function resetOrder(){$('#confirm').checked=false;$('#confirmBox').dataset.invalid='false';$('#confirmErr').hidden=true;$('#instr').value='';$('#instrCount').textContent='0 / 250';$('#instrWrap').open=false}
 async function cartPush(artwork){const t=curTier(),ps=pricedSize(),instr=$('#instr').value.trim();
- let co=null;try{const q=QUOTE||await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:t.q,options:{finish:D.vinyl}}),pr=await PrintAPI.createProof({quote_id:q.quote_id,notes:instr});co=await PrintAPI.createCheckout({quote_id:q.quote_id,proof_id:pr.proof_id,idempotency_key:q.quote_id+':'+pr.proof_id})}catch(e){}
+ let co=null;try{const q=QUOTE||await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:t.q,options:choice()}),pr=await PrintAPI.createProof({quote_id:q.quote_id,notes:instr});co=await PrintAPI.createCheckout({quote_id:q.quote_id,proof_id:pr.proof_id,idempotency_key:q.quote_id+':'+pr.proof_id})}catch(e){}
  cart++;$('#cartCount').textContent=cart;$('#cartBtn').setAttribute('aria-label',`Cart, ${cart} item${cart===1?'':'s'}`);$('#cartBtn').classList.remove('bump');void $('#cartBtn').offsetWidth;$('#cartBtn').classList.add('bump');window.dataLayer.push({ecommerce:null});
- track('add_to_cart',{ecommerce:{currency:'USD',value:t.t,items:[{item_id:skuFor(),item_name:PNAME[D.vinyl],item_variant:`${VN[D.vinyl]} / ${SN[D.shape]} / ${fmt(ps.w)}x${fmt(ps.h)} in`,price:t.p,quantity:t.q}]},artwork,special_instructions:instr,draft_order_id:co&&co.draft_order_id});return t}
-$('#addCart').addEventListener('click',async()=>{if(!confirmOk())return;const t=await cartPush('designed');$('#reviewDlg').close();toast(`Added to cart: ${t.q.toLocaleString()} ${VN[D.vinyl]} domed stickers, ${money(t.t)}.`,'View cart',()=>toast("Prototype: the cart page isn't connected."));resetOrder()});
+ track('add_to_cart',{ecommerce:{currency:'USD',value:t.t,items:[{item_id:skuFor(),item_name:PROD().name,item_variant:[finishName(),PROD().family==='sticker'?SN[D.shape]:'',...optRoles().map(r=>choice()[r]),`${fmt(ps.w)}x${fmt(ps.h)} in`].filter(Boolean).join(' / '),price:t.p,quantity:t.q}]},bigcommerce:cartLine(),artwork,special_instructions:instr,draft_order_id:co&&co.draft_order_id});return t}
+$('#addCart').addEventListener('click',async()=>{if(!confirmOk())return;const t=await cartPush('designed');$('#reviewDlg').close();toast(`Added to cart: ${t.q.toLocaleString()} × ${PROD().name}, ${money(t.t)}.`,'View cart',()=>toast("Prototype: the cart page isn't connected."));resetOrder()});
 ['gpay','apay'].forEach(id=>$('#'+id).addEventListener('click',()=>{if(confirmOk())toast(`Prototype: ${id==='gpay'?'Google Pay':'Apple Pay'} opens on the secure checkout page in production.`)}));
 $('#saveBtn').addEventListener('click',()=>{save();toast("Design saved in this browser. It'll be here when you come back.")});
-$('#laterBtn').addEventListener('click',async()=>{const t=await cartPush('email_later');toast(`Added ${t.q.toLocaleString()} stickers (${money(t.t)}) to your cart. We'll email you to collect your artwork.`)});
+$('#laterBtn').addEventListener('click',async()=>{const t=await cartPush('email_later');toast(`Added ${t.q.toLocaleString()} ${t.q===1?NOUN():NOUNS()} (${money(t.t)}) to your cart. We'll email you to collect your artwork.`)});
 
 /* ---------- panels: tabs, toggles, mobile sheets ---------- */
 function setLTab(t){$$('.ptabs [data-ltab]').forEach(b=>{const on=b.dataset.ltab===t;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1});$$('#lp .pbody').forEach(p=>p.hidden=p.dataset.pane!==t);$('#lpTitle').textContent={layers:'Layers',assets:'Add to your sticker',genie:'Genie'}[t];studio.classList.toggle('lt-genie',t==='genie');$('#genieBtn').setAttribute('aria-pressed',String(t==='genie'&&!studio.classList.contains('no-left')));if(t==='genie'&&typeof genieOpened==='function')genieOpened()}
@@ -517,11 +563,12 @@ $('#upFile').addEventListener('change',ev=>{const fs=[...ev.target.files];ev.tar
 $('#replFile').addEventListener('change',ev=>{const f=ev.target.files[0];ev.target.value='';loadFile(f,k=>{const e=get(replTarget);if(!e)return;const m=IM[k];e.key=k;e.clear=false;e.h=e.w*m.natH/m.natW;CT.sig='';commit();syncPanels()})});
 
 /* assets */
-$('#tplGrid').innerHTML=TPL.map((t,i)=>`<button type="button" class="tpl" data-tpl="${i}">${thumbSVG(t.make(),t.n)}${esc(t.n)}</button>`).join('');
+function tplUI(){const sig=D.pid+':'+JSON.stringify(D.opt);if($('#tplGrid').dataset.sig===sig)return;$('#tplGrid').dataset.sig=sig;$('#tplGrid').innerHTML=TPLS().map((t,i)=>`<button type="button" class="tpl" data-tpl="${i}">${thumbSVG(t.make(),t.n)}${esc(t.n)}</button>`).join('')}
+tplUI();
 $('#tStyles').innerHTML=Object.entries(TSTYLES).map(([k,c])=>{const f=FONTS[c.font];return `<button type="button" class="tstyle" data-addtext="${k}" style="font-family:${f.f.replace(/"/g,"'")};font-weight:${c.b?700:f.w};font-size:${clamp(c.pt*.62,13,22)}px;${c.spacing?'letter-spacing:.08em;':''}">${esc(c.t)}<small>${c.lab}</small></button>`}).join('');
 $('#gfxGrid').innerHTML=[['prim-rect','Rectangle','<rect x="12" y="22" width="76" height="56" rx="4"/>'],['prim-ellipse','Ellipse','<circle cx="50" cy="50" r="38"/>'],['prim-line','Line','<path d="M14 86L86 14"/>']].map(([k,n,d])=>`<button type="button" class="prim" data-gfx="${k}" aria-label="Add ${n}" data-tip="${n}"><svg viewBox="0 0 100 100" aria-hidden="true">${d}</svg></button>`).join('')+Object.entries(GFX).map(([k,g])=>`<button type="button" data-gfx="${k}" aria-label="Add ${g.n}" data-tip="${g.n}"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill-rule="evenodd" d="${g.d}"/></svg></button>`).join('');
 $('#lp-assets').addEventListener('click',ev=>{const t=ev.target.closest('[data-tpl]'),x=ev.target.closest('[data-addtext]'),g=ev.target.closest('[data-gfx]'),i=ev.target.closest('[data-addimg]');
- if(t){if(!isBlank()&&!confirmReplace())return;applyTpl(TPL[+t.dataset.tpl])}else if(x)addText(x.dataset.addtext);else if(g)addShape(g.dataset.gfx);else if(i)addImage(i.dataset.addimg);else return;if(NARROW.matches)closeSheets()});
+ if(t){if(!isBlank()&&!confirmReplace())return;applyTpl(TPLS()[+t.dataset.tpl])}else if(x)addText(x.dataset.addtext);else if(g)addShape(g.dataset.gfx);else if(i)addImage(i.dataset.addimg);else return;if(NARROW.matches)closeSheets()});
 function confirmReplace(){return true}
 
 /* drag & drop images onto the studio */
@@ -619,3 +666,24 @@ $$('[data-tryfinish]').forEach(b=>b.addEventListener('click',()=>{const v=b.data
  h.addEventListener('pointerup',end);h.addEventListener('pointercancel',end);
  h.addEventListener('dblclick',()=>{delete WS[which()];apply();save();req()});
  h.addEventListener('keydown',ev=>{const d={ArrowLeft:-20,ArrowRight:20}[ev.key];if(!d)return;ev.preventDefault();ev.stopPropagation();const [a,b]=lim(),k=which();WS[k]=Math.round(clamp((WS[k]||lp.getBoundingClientRect().width)+d,a,b));apply();save();req()})}
+
+/* ---------- product-aware chrome ---------- */
+/* 3D is the domed preview; "On sheet" is the 9.25 x 10 in domed sheet */
+function viewBtns(){const L=LOOK(),p=PROD();$$('[data-view="dome"]').forEach(b=>b.hidden=!L.dome);$$('[data-view="sheet"]').forEach(b=>b.hidden=!p.sheet);
+ if((view==='dome'&&!L.dome)||(view==='sheet'&&!p.sheet))setView('edit')}
+/* Review & Print: "With dome" only on domed products; object scenes only for stickers small enough to sit on them */
+function rvModes(){const p=PROD(),L=LOOK(),sc=p.family==='sticker'&&!L.one&&MAX<=10;
+ $$('#reviewDlg [data-rv]').forEach(b=>{const k=b.dataset.rv;b.hidden=k==='dome'?!L.dome:k==='flat'?false:!sc});
+ const qh=$('#rvQtyH');if(qh)qh.textContent=`How many ${NOUNS()}?`;const qn=$('#rvQtyNote');if(qn)qn.textContent=`Every quantity is printed on the same proof. The more you order, the less each ${NOUN()} costs.`;
+ const fl=$('#reviewDlg [data-rv="flat"]');if(fl)fl.textContent=p.family==='pen'?'Imprint proof':'What prints'}
+/* what a real cart call needs: the BigCommerce product, the variant and the option value ids (sent with add_to_cart) */
+function cartLine(){const p=PROD(),c=choice(),v=variantNow();
+ return {product_id:p.bc_id,variant_id:v&&v.id,sku:v&&v.sku,option_selections:p.axes.filter(a=>p.opts[a]).map(a=>{const lab=a==='height'||a==='width'?(p.opts[a].ids[String(c[a])]!=null?String(c[a]):Object.keys(p.opts[a].ids).find(k=>Math.abs(parseFloat(k)-c[a])<1e-9)):c[a];return {option_id:p.opts[a].id,option_value_id:p.opts[a].ids[lab],label:lab}})}}
+insEl.addEventListener('change',ev=>{if(ev.target.id==='prodSel'){switchProduct(ev.target.value);requestAnimationFrame(()=>{const s2=$('#prodSel');if(s2)s2.focus()})}});
+/* page heading, breadcrumb and title follow the product being designed */
+let heroSig='';
+function heroUI(){const p=PROD();if(heroSig===p.id)return;heroSig=p.id;const f=FAMI(),cap=s2=>s2.replace(/^./,c=>c.toUpperCase());
+ $('#pTitle').textContent=p.name;$('#pTitle').classList.toggle('long',p.name.length>34);$('#crumbFam').textContent=f.label;$('#crumbProd').textContent=p.category||p.name;
+ document.title=`${p.name} | Genie Studio Advanced | Custom Genie`;$('#layerArtNoun').textContent=cap(NOUN());
+ $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());
+ const cv=$('#cv');cv.setAttribute('aria-label',`${cap(f.one)} design canvas`)}

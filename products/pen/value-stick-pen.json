@@ -7,10 +7,10 @@
   "group": "pens_value_stick",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 141,
     "url": "/pens/value-stick-pen/",
@@ -380,7 +380,7 @@
   },
   "mcp": {
     "product_id": "value_stick_pen",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Affordable Custom Stick Pens - Fast & No Minimum",

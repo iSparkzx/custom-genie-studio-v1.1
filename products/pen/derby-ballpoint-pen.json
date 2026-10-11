@@ -7,10 +7,10 @@
   "group": "pens_derby",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 140,
     "url": "/pens/derby-ballpoint-pen/",
@@ -464,7 +464,7 @@
   },
   "mcp": {
     "product_id": "derby_ballpoint_pen",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Derby Ballpoint Pen",

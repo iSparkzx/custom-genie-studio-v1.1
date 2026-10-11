@@ -7,7 +7,7 @@
   "group": "badges_chalkboard",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": true
   },
   "studio_status": "built",
