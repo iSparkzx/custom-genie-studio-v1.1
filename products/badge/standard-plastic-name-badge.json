@@ -6,6 +6,10 @@
   "type": "Badges - Standard",
   "group": "badges_standard",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 156,
@@ -58,7 +62,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 10.36,
     "quantity_tiers": [
       {
@@ -769,6 +773,56 @@
   "mcp": {
     "product_id": "standard_plastic_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Standard Plastic Name Badge (2 15/16\" x 1\")",
+    "meta_description": "Custom Standard Plastic Name Badges with full-color printing, epoxy coating, and pin or magnetic fasteners. Durable, scratch-proof, and perfect for staff name tags.",
+    "reviews_count": 4,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1041/NBI-amazon-standard-name-badges-06__81555.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1041/NBI-amazon-standard-name-badges-06__81555.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1041/NBI-amazon-standard-name-badges-06__81555.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1045/NBI-amazon-standard-name-badges-01__12540.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1045/NBI-amazon-standard-name-badges-01__12540.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1045/NBI-amazon-standard-name-badges-01__12540.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1044/NBI-amazon-standard-name-badges-02__02932.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1044/NBI-amazon-standard-name-badges-02__02932.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1044/NBI-amazon-standard-name-badges-02__02932.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1039/NBI-amazon-standard-name-badges-03__96496.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1039/NBI-amazon-standard-name-badges-03__96496.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1039/NBI-amazon-standard-name-badges-03__96496.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1046/NBI-amazon-standard-name-badges-07__84742.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1046/NBI-amazon-standard-name-badges-07__84742.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1046/NBI-amazon-standard-name-badges-07__84742.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1040/NBI-amazon-standard-name-badges-05__47616.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1040/NBI-amazon-standard-name-badges-05__47616.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1040/NBI-amazon-standard-name-badges-05__47616.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1043/NBI-amazon-standard-name-badges-04__04651.1778500183.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1043/NBI-amazon-standard-name-badges-04__04651.1778500183.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/156/images/1043/NBI-amazon-standard-name-badges-04__04651.1778500183.220.290.jpg?c=1",
+        "alt": "Standard Plastic Name Badge (2 15/16\" x 1\")"
+      }
+    ],
+    "description_html": "<p><strong>Customizable and Durable!</strong></p>\n<p>Elevate your brand with our Standard Name Badges, designed to combine vibrant full-color printing with durability and customization. Perfect for staff name tags and badges, these name badges offer a professional and polished look.</p>\n<p>Our Standard Name Badges include:</p>\n<ul>\n<li><strong>Full Custom Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Ideal for Staff Name Tags &amp; Badges</strong>: These badges are perfect for identifying staff members in any professional setting.</li>\n<li><strong>Pin or Magnetic Fasteners</strong>: Choose between pin or magnetic fasteners for easy attachment and versatility.</li>\n<li><strong>Scratch and Fade-Proof Epoxy Coating</strong>: Our badges feature a durable epoxy coating that protects against scratches and fading, ensuring they look great for a long time.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Free Doming</strong>: Enhance the look of your badges with free doming, adding a glossy and professional finish.</li>\n<li><strong>No Minimums</strong>: Order as many or as few as you need, with no minimum order requirements.</li>\n<li><strong>No Hidden Fees</strong>: Enjoy transparent pricing with no hidden charges.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Standard Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with vibrant, durable, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of durability. Click the \"Buy Now\" button and elevate your brand with our Standard Name Badges!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

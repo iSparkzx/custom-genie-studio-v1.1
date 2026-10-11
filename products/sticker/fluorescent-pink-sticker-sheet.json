@@ -6,6 +6,10 @@
   "type": "Sheets - Fluorescent",
   "group": "sheets_fluorescent",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 179,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.09,
     "quantity_tiers": [
       {
@@ -1601,6 +1605,32 @@
   "mcp": {
     "product_id": "fluorescent_pink_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Fluorescent Pink Stickers | Neon Pink Vinyl, No Minimum",
+    "meta_description": "Custom fluorescent pink stickers on bright, eye-catching neon vinyl. Water- and tear-resistant, full color, any size. No minimum, no setup fees.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/927/Image-Amazon-Fluorescent_Pink-02__96050.1778499967.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/927/Image-Amazon-Fluorescent_Pink-02__96050.1778499967.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/927/Image-Amazon-Fluorescent_Pink-02__96050.1778499967.220.290.jpg?c=1",
+        "alt": "Fluorescent Pink Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/647/Screenshot_2025-05-22_222653__17258.1778499967.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/647/Screenshot_2025-05-22_222653__17258.1778499967.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/647/Screenshot_2025-05-22_222653__17258.1778499967.220.290.png?c=1",
+        "alt": "Fluorescent Pink Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/827/Pink_value_prop__35897.1778499967.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/827/Pink_value_prop__35897.1778499967.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/179/images/827/Pink_value_prop__35897.1778499967.220.290.png?c=1",
+        "alt": "Fluorescent Pink Sticker Sheet"
+      }
+    ],
+    "description_html": "<p>Fluorescent pink stickers print your design on bright, eye-catching neon pink vinyl that grabs attention instantly. Pink stands out in a crowd and reads as bold and energetic, which makes it a favorite for events, product launches, promotions, and branding that needs to pop. Full-color digital printing keeps your artwork sharp against the vivid pink background, with no minimum order and no setup fees.</p>\n<h2>What Are Fluorescent Pink Stickers?</h2>\n<p>Your design is digitally printed onto fluorescent day-glow pink vinyl and supplied in sheet format, not on a roll. It is the same high-quality vinyl developed for police cars, ambulances, and other emergency vehicles, so it holds up to real-world use. For the boldest result we recommend darker artwork, which gives the strongest contrast against the bright pink background.</p>\n<h2>Where Fluorescent Pink Works Best</h2>\n<p>Pink draws the eye and feels lively and modern, so it is a strong pick for concerts and festivals, product launches, retail and seasonal promotions, packaging, and giveaways. Anywhere you want your design to stand out and feel fun, pink delivers.</p>\n<h2>Durable and Weather-Resistant</h2>\n<p>Fluorescent pink vinyl is water-resistant and tear-resistant, with outdoor durability of around 18 months. Full-color, high-resolution printing keeps your design crisp indoors or out.</p>\n<h2>Fluorescent Pink Sticker Features</h2>\n<ul>\n<li>Bright, eye-catching neon pink vinyl</li>\n<li>Full-color, high-resolution digital printing</li>\n<li>Water-resistant and tear-resistant</li>\n<li>Strong adhesion</li>\n<li>Supplied on sheets</li>\n<li>Outdoor durability around 18 months</li>\n<li>No minimum order</li>\n<li>No setup or design fees</li>\n</ul>\n<h2>Fluorescent Pink Sticker FAQs</h2>\n<p><strong>What are fluorescent pink stickers made of?</strong> Your design is digitally printed on fluorescent day-glow pink vinyl, supplied in sheets. It is the same material developed for emergency-vehicle use.</p>\n<p><strong>Are fluorescent pink stickers weatherproof?</strong> They are water-resistant and tear-resistant, with around 18 months of outdoor durability.</p>\n<p><strong>Can I print my own design?</strong> Yes, in full color. Darker artwork gives the best contrast against the bright pink background.</p>\n<p><strong>Is there a minimum order?</strong> No minimums and no setup or design fees, from one sheet to a large run.</p>\n<h2>Order Your Fluorescent Pink Stickers</h2>\n<p>Order any quantity, with no minimum and no setup fees. Looking for another shade? Browse all our <a href=\"../../../../stickers/fluorescent-sticker-sheets/\">custom neon and fluorescent stickers</a>.</p>\n<p>\n\n</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

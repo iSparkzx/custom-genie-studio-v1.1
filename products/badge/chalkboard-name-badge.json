@@ -6,6 +6,10 @@
   "type": "Badges - Chalkboard",
   "group": "badges_chalkboard",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 145,
@@ -62,7 +66,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 4.99,
     "quantity_tiers": [
       {
@@ -581,6 +585,80 @@
   "mcp": {
     "product_id": "chalkboard_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Chalkboard Name Badge (2 15/16\" x 1 9/16\")",
+    "meta_description": "Reusable chalkboard name badges with custom logo and liquid chalk pen option. Perfect for cafes, pubs, restaurants, and events.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/999/NBI-amazon-chalkboard-name-badges-06__62513.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/999/NBI-amazon-chalkboard-name-badges-06__62513.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/999/NBI-amazon-chalkboard-name-badges-06__62513.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/898/NBI-amazon-chalkboard-name-badges-01__61889.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/898/NBI-amazon-chalkboard-name-badges-01__61889.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/898/NBI-amazon-chalkboard-name-badges-01__61889.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1000/NBI-amazon-chalkboard-name-badges-02__09483.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1000/NBI-amazon-chalkboard-name-badges-02__09483.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1000/NBI-amazon-chalkboard-name-badges-02__09483.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/998/NBI-amazon-chalkboard-name-badges-03__69065.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/998/NBI-amazon-chalkboard-name-badges-03__69065.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/998/NBI-amazon-chalkboard-name-badges-03__69065.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1002/NBI-amazon-chalkboard-name-badges-07__56801.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1002/NBI-amazon-chalkboard-name-badges-07__56801.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1002/NBI-amazon-chalkboard-name-badges-07__56801.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/476/Chalkboard-Writing1643361745__02800.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/476/Chalkboard-Writing1643361745__02800.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/476/Chalkboard-Writing1643361745__02800.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/477/Chalkboard-Erasing1643361745__88145.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/477/Chalkboard-Erasing1643361745__88145.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/477/Chalkboard-Erasing1643361745__88145.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/479/Image_Chalkboard_Name_Badges_2022_NBI_81666707959__19135.1778500817.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/479/Image_Chalkboard_Name_Badges_2022_NBI_81666707959__19135.1778500817.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/479/Image_Chalkboard_Name_Badges_2022_NBI_81666707959__19135.1778500817.220.290.png?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/478/Chalkboard-Border-Closeup1643361745__81033.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/478/Chalkboard-Border-Closeup1643361745__81033.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/478/Chalkboard-Border-Closeup1643361745__81033.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1001/NBI-amazon-chalkboard-name-badges-04__18474.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1001/NBI-amazon-chalkboard-name-badges-04__18474.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/1001/NBI-amazon-chalkboard-name-badges-04__18474.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/997/NBI-amazon-chalkboard-name-badges-05__89576.1778500817.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/997/NBI-amazon-chalkboard-name-badges-05__89576.1778500817.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/145/images/997/NBI-amazon-chalkboard-name-badges-05__89576.1778500817.220.290.jpg?c=1",
+        "alt": "Chalkboard Name Badge"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<div dir=\"auto\">\n<div dir=\"auto\">\n<div>\n<div>\n<div tabindex=\"-1\" data-testid=\"loading-message\">\n<div aria-live=\"assertive\">\n<div>\n<p>Our chalkboard name badges are the perfect solution for those seeking a flexible and reusable option. Ideal for pubs, restaurants, cafes, and any business that needs a practical and stylish name badge without the hassle of printing.</p>\n<p><strong>Benefits of Chalkboard Name Badges</strong>:</p>\n<ul>\n<li><strong>Full-Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Wide Range of Options</strong>: Customize your badges with a variety of background colors and font options to match your brand's style.</li>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Unique Features</strong>:</p>\n<ul>\n<li><strong>Chalkboard Surface</strong>: Our chalkboard name badges offer an alternative to our 'normal' reusable name badge range. Simply add your logo to the top or left-hand side of the badge using our online badge designer, and the rest of the badge is covered in a chalkboard surface that works perfectly with liquid chalk pens.</li>\n<li><strong>Reusable Design</strong>: This unique approach allows you to handwrite and erase your name, time and time again, without the need for a printer or word processing software.</li>\n</ul>\n<p><strong>Perfect For</strong>:</p>\n<ul>\n<li><strong>Pubs, Restaurants, and Cafes</strong>: Ideal for businesses that require frequent updates to name badges.</li>\n<li><strong>Anyone Without Printer Access</strong>: Great for those who want a reusable name badge but don't have access to a printer.</li>\n</ul>\n<p><span>We highly recommend that you purchase our great value&nbsp;</span><a title=\"\" href=\"https://www.namebadgesinternational.us/consumable-products/chalkboard/\">Liquid Chalk Pen &amp; Microfibre Cloth Set</a><span>&nbsp;with your chalkboard badges as&nbsp;</span><strong>conventional chalk is not suitable.</strong><span>&nbsp;This pen and cloth combination has been specifically selected because the high quality white ink won't accidentally rub off once dry, but can be completely erased, quickly and easily, with the microfibre cloth included in the set.</span></p>\n<p><strong>Order Your Chalkboard Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with versatile, stylish, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of reusability. Click the \"Buy Now\" button and elevate your brand with our Chalkboard Name Badges!</p>\n<p><strong>Please Note</strong>: As the name badges are made using real wood, there will be slight variations in color and grain between each badge, adding to their unique charm.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

@@ -6,6 +6,10 @@
   "type": "Custom Cut - Vinyl Lettering",
   "group": "custom_cut_vinyl_lettering",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 215,
@@ -105,7 +109,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.31,
     "quantity_tiers": [
       {
@@ -4464,6 +4468,20 @@
   "mcp": {
     "product_id": "vinyl_lettering_cut_vinyl_logos_silver",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Silver Vinyl Lettering & Cut Vinyl Logos | No Minimum",
+    "meta_description": "Custom metallic silver vinyl lettering and cut vinyl logos, plotter-cut from adhesive vinyl. Weatherproof for windows, vehicles, and signage. No minimum.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/215/images/1231/Image-Amazon-Vinyl-05__98585.1753468864.1280.1280__74690.1778499411.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/215/images/1231/Image-Amazon-Vinyl-05__98585.1753468864.1280.1280__74690.1778499411.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/215/images/1231/Image-Amazon-Vinyl-05__98585.1753468864.1280.1280__74690.1778499411.220.290.jpg?c=1",
+        "alt": "Vinyl Lettering & Cut Vinyl Logos - Silver"
+      }
+    ],
+    "description_html": "<p><span><strong>Plotter cut colored vinyl lettering and logos. 5 colored vinyls including metallic gold and metallic silver. Excellent outdoor durability.</strong></span></p>\n<ul>\n<li><span>Perfect for 1 color lettering and&nbsp;logos</span></li>\n<li><span>5 colors - <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/vinyl-lettering-cut-vinyl-logos-gloss-white/\">white</a>, <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/vinyl-lettering-cut-vinyl-logos-gloss-black/\">black</a>, silver, <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/vinyl-lettering-cut-vinyl-logos-gold/\">gold</a>, <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/vinyl-lettering-cut-vinyl-logos-holographic/\">holographic</a></span></li>\n<li><span>Supplied with application tape&nbsp;applied</span></li>\n<li><span>Highly durable for long term outdoor&nbsp;use</span></li>\n</ul>\n<p><span>Vinyl lettering and cut vinyl logos are perfect for creating single-colored signs, vehicle branding, window applications and outdoor stickers onto flat or slightly curved surfaces. We use a premium grade sign-making vinyl with a high grade permanent solvent based adhesive for excellent outdoor durability.</span></p>\n<p><span>Your design is accurately plotter-cut on the colored vinyl of your choice then the waste material is removed to leave your 1 color design. We then apply a transparent application tape over the top so it's easy for you lift your entire design off the backing paper and apply in one go.</span></p>\n<p><span>If the vinyl lettering / logos are going to be applied to a window then we will cut your design in reverse (mirrored) so that it can be applied to the inside of the window and read from the outside. Simply choose \"Yes, I'm applying to a window\" when ordering so that we know to mirror your design.</span></p>\n<p><span><strong>Outdoor Durability</strong></span><br /><span>Black &amp; White: 5 years</span><br /><span>Holographic: 3 years</span><br /><span>Metallics: 3 years</span></p>\n<h3><span>Our vinyl lettering and logos have the following benefits:</span></h3>\n<ul>\n<li><span>Accurate plotter-cutting to almost any shape</span></li>\n<li><span>Strong adhesion</span></li>\n<li><span>Waterproof and weatherproof</span></li>\n<li><span>Non-yellowing</span></li>\n<li><span>No setup fees</span></li>\n<li><span>No design fees</span></li>\n</ul>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

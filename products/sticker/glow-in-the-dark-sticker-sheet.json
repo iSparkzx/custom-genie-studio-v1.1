@@ -6,6 +6,10 @@
   "type": "Sheets - Glow in the Dark",
   "group": "sheets_glow_in_the_dark",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 167,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.12,
     "quantity_tiers": [
       {
@@ -1601,6 +1605,44 @@
   "mcp": {
     "product_id": "glow_in_the_dark_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Custom Glow in the Dark Stickers | Upload Your Design",
+    "meta_description": "Custom Glow in the Dark Stickers - bright green glow, water & UV resistant. Perfect for safety signs, events, and standout designs day or night.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/848/Image-Amazon-Glow_in_the_Dark-02__89632.1778500047.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/848/Image-Amazon-Glow_in_the_Dark-02__89632.1778500047.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/848/Image-Amazon-Glow_in_the_Dark-02__89632.1778500047.220.290.jpg?c=1",
+        "alt": "Glow In The Dark Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/1222/Image-Amazon-Glow_in_the_Dark-06__15769.1778500047.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/1222/Image-Amazon-Glow_in_the_Dark-06__15769.1778500047.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/1222/Image-Amazon-Glow_in_the_Dark-06__15769.1778500047.220.290.jpg?c=1",
+        "alt": "Glow In The Dark Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/849/Image-Amazon-Glow_in_the_Dark-03__37850.1778500047.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/849/Image-Amazon-Glow_in_the_Dark-03__37850.1778500047.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/849/Image-Amazon-Glow_in_the_Dark-03__37850.1778500047.220.290.jpg?c=1",
+        "alt": "Glow In The Dark Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/851/Image-Amazon-Glow_in_the_Dark-05__08900.1778500047.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/851/Image-Amazon-Glow_in_the_Dark-05__08900.1778500047.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/851/Image-Amazon-Glow_in_the_Dark-05__08900.1778500047.220.290.jpg?c=1",
+        "alt": "Glow In The Dark Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/852/Image-Amazon-Glow_in_the_Dark-07__06578.1778500047.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/852/Image-Amazon-Glow_in_the_Dark-07__06578.1778500047.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/167/images/852/Image-Amazon-Glow_in_the_Dark-07__06578.1778500047.220.290.jpg?c=1",
+        "alt": "Glow In The Dark Sticker Sheet"
+      }
+    ],
+    "description_html": "<p>Custom glow-in-the-dark stickers, printed from the artwork you upload. These are made to your design, not sold as a pre-made pack. Upload your file and we print it on photoluminescent vinyl, cut it to the shape and size you need, and supply it on sheets ready to peel and place. Order a single sticker or a thousand, with no minimum.</p>\n<h2>What You Can Make With Glow Stickers</h2>\n<p>Glow-in-the-dark stickers, decals, and labels work anywhere you want a design that reads in daylight and again once the lights go out. Use them for safety markers in low-light areas, emergency signage that stays visible during outages, and trail or event markers for nighttime use. Brand them for after-hours retail, concerts, and venues. Or make them as novelties for Halloween, parties, kids' rooms, laptops, phones, water bottles, helmets, cars, and wall and ceiling decor. For daytime and headlight visibility instead of a charged glow, see our <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/reflective-stickers/\">reflective stickers</a>.</p>\n<h2>How Photoluminescent Vinyl Works</h2>\n<p>The vinyl is photoluminescent: it absorbs light during the day, from sunlight or ordinary room light, and releases it as a soft glow once the surrounding light fades. The brighter the charge, the stronger the glow. It is brightest in the first few minutes after the lights go out and fades gradually after that. There are no batteries and no wiring, and each time the sticker sees light it recharges, so the cycle repeats. Our glow color is bright green, which reads most clearly in low light, and the lighter areas of your design glow the most.</p>\n<h2>Durable, Water-Resistant Vinyl</h2>\n<p>Each glow sticker is built to hold up where it lives. The vinyl is water-resistant for kitchens, bathrooms, and outdoor surfaces, and tear-resistant for high-traffic spots. A UV-resistant top layer helps keep the glow vivid through sunlight cycles instead of fading. Glow stickers hold best on smooth, non-porous surfaces such as glass, finished plastic, polished metal, sealed wood, and laminate.</p>\n<h2>Design Your Glow Stickers Online</h2>\n<p>Upload your artwork in the online design tool, choose your shape, and set your size. Add text, adjust the placement until the preview looks right, then review and submit. There are no setup, design, or artwork fees, and the minimum order is one. If anything in your file needs adjusting, our team will reach out before printing.</p>\n<h2>Glow Sticker FAQ</h2>\n<p><strong>How long do glow-in-the-dark stickers stay glowing?</strong> After a full charge under bright light, the glow is strongest in the first few minutes after dark and then softens and fades. Every time the sticker is exposed to light it recharges, so it can glow again and again.</p>\n<p><strong>Can I order glow stickers on sheets, and is there a minimum?</strong> Yes. Glow stickers are supplied on sheets, and there is no minimum order and no setup fee. Order a single sticker or several hundred through the online configurator.</p>\n<p><strong>What sizes and shapes can I get?</strong> Glow stickers can be made in a range of sizes and in standard shapes like rectangles and circles, as well as fully custom shapes cut to your design. Add any special instructions at checkout.</p>\n<p><strong>Are glow-in-the-dark stickers safe for kids' rooms?</strong> The photoluminescent material glows through a passive light-storage effect rather than a chemical reaction. It is widely used in bedrooms, nurseries, and classrooms wherever standard vinyl decals are appropriate.</p>\n<p>\n\n</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

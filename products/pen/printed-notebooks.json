@@ -6,6 +6,10 @@
   "type": "Notebook",
   "group": "notebook",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 132,
@@ -49,7 +53,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 19.56,
     "quantity_tiers": [
       {
@@ -398,6 +402,80 @@
   "mcp": {
     "product_id": "printed_notebooks",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Notebook",
+    "meta_description": "Premium printed notebooks with textured covers, 160 lined pages, elastic closure & ribbon bookmark. Customizable branding for stylish everyday use.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1217/Notebooks_Branded_2__76064.1758047314.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1217/Notebooks_Branded_2__76064.1758047314.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1217/Notebooks_Branded_2__76064.1758047314.220.290.png?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1219/Notebook_Branded__00674.1758047398.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1219/Notebook_Branded__00674.1758047398.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1219/Notebook_Branded__00674.1758047398.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1199/Amazon-Notebook-09__75223.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1199/Amazon-Notebook-09__75223.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1199/Amazon-Notebook-09__75223.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1201/Amazon-Notebook-02__50095.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1201/Amazon-Notebook-02__50095.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1201/Amazon-Notebook-02__50095.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1206/Amazon-Notebook-03__21482.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1206/Amazon-Notebook-03__21482.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1206/Amazon-Notebook-03__21482.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1207/Amazon-Notebook-03a__54894.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1207/Amazon-Notebook-03a__54894.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1207/Amazon-Notebook-03a__54894.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1204/Amazon-Notebook-01__05694.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1204/Amazon-Notebook-01__05694.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1204/Amazon-Notebook-01__05694.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1203/Amazon-Notebook-05__51714.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1203/Amazon-Notebook-05__51714.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1203/Amazon-Notebook-05__51714.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1205/Amazon-Notebook-04__19606.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1205/Amazon-Notebook-04__19606.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1205/Amazon-Notebook-04__19606.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1200/Amazon-Notebook-08__23678.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1200/Amazon-Notebook-08__23678.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1200/Amazon-Notebook-08__23678.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1202/Amazon-Notebook-010__02368.1758047395.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1202/Amazon-Notebook-010__02368.1758047395.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/132/images/1202/Amazon-Notebook-010__02368.1758047395.220.290.jpg?c=1",
+        "alt": "Printed Notebooks"
+      }
+    ],
+    "description_html": "<p><strong>Discover Our Luxurious Printed Notebooks!</strong></p>\n<p>Elevate your writing experience with our premium notebooks, designed to combine style and functionality.</p>\n<p><strong>Elegant Design</strong>: Our notebooks feature a luxurious, textured feel cover available in three popular colors, adding a touch of sophistication to your everyday notes.</p>\n<p><strong>Ample Space</strong>: Each notebook contains 80 sheets (160 pages) of paper with printed lines, providing plenty of space for your thoughts, sketches, and plans.</p>\n<p><strong>Convenient Features</strong>:</p>\n<ul>\n<li><strong>Bookmark Ribbon</strong>: Easily keep track of your place with the convenient bookmark ribbon.</li>\n<li><strong>Secure Elastic Closure</strong>: Ensure your notebook stays closed and protected with the secure elastic closure band.</li>\n</ul>\n<p><strong>Customizable Printing</strong>:</p>\n<ul>\n<li><strong>Digital Print Area</strong>: Showcase your logo or design with a generous digital print area of 4.7\"W x 7.3\"H.</li>\n<li><strong>Notebook Size</strong>: Perfectly sized at 5.5\"W x 8.3\"H for portability and ease of use.</li>\n</ul>\n<p><strong>Hassle-Free Ordering</strong>:</p>\n<ul>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n</ul>\n<p><strong>Order Your Luxurious Printed Notebook Today!</strong><span>&nbsp;</span>Enhance your writing experience with a notebook that combines elegance, quality, and convenience. Click the \"Buy Now\" button and start enjoying your new favorite notebook!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

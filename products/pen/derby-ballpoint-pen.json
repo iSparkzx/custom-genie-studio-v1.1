@@ -6,6 +6,10 @@
   "type": "Pens - Derby",
   "group": "pens_derby",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 140,
@@ -55,7 +59,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 1.89,
     "quantity_tiers": [
       {
@@ -461,6 +465,56 @@
   "mcp": {
     "product_id": "derby_ballpoint_pen",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Derby Ballpoint Pen",
+    "meta_description": "Custom Derby ballpoint pens with sleek white barrel & colored clip. Budget-friendly, smooth writing, full-color logo printing & free delivery.",
+    "reviews_count": 1,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/749/AMAZON-Derby_01-2__03389.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/749/AMAZON-Derby_01-2__03389.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/749/AMAZON-Derby_01-2__03389.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/751/AMAZON-Derby_02-2__77294.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/751/AMAZON-Derby_02-2__77294.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/751/AMAZON-Derby_02-2__77294.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/745/AMAZON-Derby_11-2__89126.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/745/AMAZON-Derby_11-2__89126.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/745/AMAZON-Derby_11-2__89126.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/747/AMAZON-Derby_03-2__10649.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/747/AMAZON-Derby_03-2__10649.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/747/AMAZON-Derby_03-2__10649.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/746/AMAZON-Derby_09__10902.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/746/AMAZON-Derby_09__10902.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/746/AMAZON-Derby_09__10902.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/750/AMAZON-Derby_05-2__21838.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/750/AMAZON-Derby_05-2__21838.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/750/AMAZON-Derby_05-2__21838.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/748/AMAZON-Derby_10-2__16605.1778500414.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/748/AMAZON-Derby_10-2__16605.1778500414.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/140/images/748/AMAZON-Derby_10-2__16605.1778500414.220.290.jpg?c=1",
+        "alt": "Derby Ballpoint Pen"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<p>Discover the perfect blend of affordability and style with our Derby Ballpoint Pens. These push-button plastic ballpens feature a sleek white barrel and a vibrant colored clip, making them an excellent choice for budget-conscious customers.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Affordable and Stylish</strong>: Enjoy great value for money with a pen that combines functionality and style.</li>\n<li><strong>Wide Range of Colors</strong>: Choose from a selection of clip colors to match your brand or personal preference.</li>\n<li><strong>Full-Color, High-Resolution Digital Printing</strong>: Showcase your logo or message with a generous digital print area of 60 x 6mm, ensuring your brand stands out in vibrant, high-resolution color.</li>\n<li><strong>Smooth Writing</strong>: Equipped with black ink for a classic and professional writing experience.</li>\n<li><strong>Push-Button Design</strong>: Convenient push-top mechanism for effortless use.</li>\n</ul>\n<p><strong>Why Choose Our Derby Ballpoint Pens?</strong></p>\n<ul>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n<li><strong>Free Delivery</strong>: Get your pens delivered to your doorstep at no extra cost.</li>\n<li><strong>Perfect for Customers on a Budget</strong>: These pens offer excellent value without compromising on quality.</li>\n<li><strong>Multiple Colors to Choose From</strong>: Customize your pen with a variety of clip colors to suit your needs.</li>\n</ul>\n<p><strong>Order Your Derby Ballpoint Pens Today!</strong><span>&nbsp;</span>Elevate your promotional efforts with a pen that combines affordability, style, and customization. Customize your pen with your logo and text, and make a lasting impression. Click the \"Buy Now\" button and add these budget-friendly pens to your collection!</p>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

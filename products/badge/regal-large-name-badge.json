@@ -6,6 +6,10 @@
   "type": "Badges - Regal Large",
   "group": "badges_regal_large",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 154,
@@ -61,7 +65,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 12.38,
     "quantity_tiers": [
       {
@@ -882,6 +886,56 @@
   "mcp": {
     "product_id": "regal_large_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Large Name Badges | Full-Color Print, No Minimum Order",
+    "meta_description": "Custom Large Name Badges with full-color printing, durable scratch-resistant coating. Available with pin or magnetic fasteners. Perfect for businesses, events, and organizations.",
+    "reviews_count": 2,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1036/NBI-amazon-regal-large-badges-06__91625.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1036/NBI-amazon-regal-large-badges-06__91625.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1036/NBI-amazon-regal-large-badges-06__91625.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1034/NBI-amazon-regal-large-badges-01__55648.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1034/NBI-amazon-regal-large-badges-01__55648.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1034/NBI-amazon-regal-large-badges-01__55648.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1037/NBI-amazon-regal-large-badges-02__60853.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1037/NBI-amazon-regal-large-badges-02__60853.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1037/NBI-amazon-regal-large-badges-02__60853.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1031/NBI-amazon-regal-large-badges-03__78816.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1031/NBI-amazon-regal-large-badges-03__78816.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1031/NBI-amazon-regal-large-badges-03__78816.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1035/NBI-amazon-regal-large-badges-07__80535.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1035/NBI-amazon-regal-large-badges-07__80535.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1035/NBI-amazon-regal-large-badges-07__80535.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1032/NBI-amazon-regal-large-badges-05__77413.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1032/NBI-amazon-regal-large-badges-05__77413.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1032/NBI-amazon-regal-large-badges-05__77413.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1038/NBI-amazon-regal-large-badges-04__61867.1778500210.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1038/NBI-amazon-regal-large-badges-04__61867.1778500210.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/154/images/1038/NBI-amazon-regal-large-badges-04__61867.1778500210.220.290.jpg?c=1",
+        "alt": "Regal Large Name Badge (2 15/16\" x 1 9/16\")"
+      }
+    ],
+    "description_html": "<h2><strong>Spacious and Customizable!</strong></h2>\n<p>Elevate your brand with our Large Name Badges, designed to provide ample space for logos, text, and customization. Perfect for businesses, events, and organizations, these name badges offer a professional and polished look with the added benefit of extra space.</p>\n<p>Our Large Name Badges include:</p>\n<ul>\n<li><strong>Full-Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Ample Space</strong>: Our largest name badge provides more space than any other badge, making it ideal for detailed designs and information.</li>\n<li><strong>Border Options</strong>: Choose between white or black borders to complement your design and enhance the badge's appearance.</li>\n<li><strong>Pin or Magnet Fastener</strong>: Select from pin or magnet fasteners for easy attachment and versatility.</li>\n<li><strong>Scratch and Fade-Proof Coating</strong>: Our badges feature a durable polyurethane coating that protects against scratches and fading, ensuring they look great for a long time.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Large Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with vibrant, spacious, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of extra space. Click the \"Buy Now\" button and elevate your brand with our Large Name Badges!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

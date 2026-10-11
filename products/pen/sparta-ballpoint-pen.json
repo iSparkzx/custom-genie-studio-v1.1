@@ -6,6 +6,10 @@
   "type": "Pens - Sparta",
   "group": "pens_sparta",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 139,
@@ -53,7 +57,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 5.49,
     "quantity_tiers": [
       {
@@ -435,6 +439,56 @@
   "mcp": {
     "product_id": "sparta_ballpoint_pen",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Sparta Ballpoint Pen",
+    "meta_description": "Custom Sparta ballpoint pens with twist-top design, sleek white barrel & vibrant trim colors. Smooth black ink, full-color logo printing & free delivery.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/743/AMAZON-Sparta_01-2__01312.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/743/AMAZON-Sparta_01-2__01312.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/743/AMAZON-Sparta_01-2__01312.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/741/AMAZON-Sparta_02-2__77523.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/741/AMAZON-Sparta_02-2__77523.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/741/AMAZON-Sparta_02-2__77523.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/739/AMAZON-Sparta_03-2__58503.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/739/AMAZON-Sparta_03-2__58503.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/739/AMAZON-Sparta_03-2__58503.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/738/AMAZON-Sparta_09-2__06513.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/738/AMAZON-Sparta_09-2__06513.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/738/AMAZON-Sparta_09-2__06513.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/742/AMAZON-Sparta_05-2__88875.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/742/AMAZON-Sparta_05-2__88875.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/742/AMAZON-Sparta_05-2__88875.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/740/AMAZON-Sparta_11-2__52513.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/740/AMAZON-Sparta_11-2__52513.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/740/AMAZON-Sparta_11-2__52513.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/744/AMAZON-Sparta_10-2__84908.1778500427.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/744/AMAZON-Sparta_10-2__84908.1778500427.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/139/images/744/AMAZON-Sparta_10-2__84908.1778500427.220.290.jpg?c=1",
+        "alt": "Sparta Ballpoint Pen"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<p>Elevate your branding with our Sparta Ballpoint Pens, a perfect blend of style and functionality. These twist-top plastic ballpens feature a sleek white barrel and a vibrant colored section under the clip, making them an eye-catching addition to any promotional campaign.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Wide Range of Colors</strong>: Choose from 6 different trim colors to complement your design and make your brand stand out.</li>\n<li><strong>Full-Color, High-Resolution Digital Printing</strong>: Showcase your logo or message with a generous digital print area of 40 x 7mm, ensuring your brand is displayed in vibrant, high-resolution color.</li>\n<li><strong>Smooth Writing</strong>: Equipped with black ink for a classic and professional writing experience.</li>\n<li><strong>Twist-Top Design</strong>: Enjoy the convenience of a twist-top mechanism for effortless use.</li>\n</ul>\n<p><strong>Why Choose Our Sparta Ballpoint Pens?</strong></p>\n<ul>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n<li><strong>Free Delivery</strong>: Get your pens delivered to your doorstep at no extra cost.</li>\n<li><strong>Durable and Stylish</strong>: The white barrel and clip, combined with the colored section, offer a sleek and professional look.</li>\n</ul>\n<p><strong>Order Your Sparta Ballpoint Pens Today!</strong><span>&nbsp;</span>Elevate your promotional efforts with a pen that combines style, functionality, and customization. Customize your pen with your logo and text, and make a lasting impression. Click the \"Buy Now\" button and add these stylish pens to your collection!</p>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

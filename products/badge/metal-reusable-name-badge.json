@@ -6,6 +6,10 @@
   "type": "Badges - Metal Reusable",
   "group": "badges_metal_reusable",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 147,
@@ -77,7 +81,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 13.99,
     "quantity_tiers": [
       {
@@ -837,6 +841,62 @@
   "mcp": {
     "product_id": "metal_reusable_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Metal Reusable Name Badges | Window Insert, No Minimum",
+    "meta_description": "Durable metal reusable name badges with full-color printing, free inserts, and easy customization. Perfect for businesses and events.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1003/NBI-amazon-metal-reusable-name-badges-06__62297.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1003/NBI-amazon-metal-reusable-name-badges-06__62297.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1003/NBI-amazon-metal-reusable-name-badges-06__62297.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/934/NBI-amazon-metal-reusable-name-badges-01__29272.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/934/NBI-amazon-metal-reusable-name-badges-01__29272.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/934/NBI-amazon-metal-reusable-name-badges-01__29272.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1007/NBI-amazon-metal-reusable-name-badges-02__84648.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1007/NBI-amazon-metal-reusable-name-badges-02__84648.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1007/NBI-amazon-metal-reusable-name-badges-02__84648.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1005/NBI-amazon-metal-reusable-name-badges-03__01438.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1005/NBI-amazon-metal-reusable-name-badges-03__01438.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1005/NBI-amazon-metal-reusable-name-badges-03__01438.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1008/NBI-amazon-metal-reusable-name-badges-07__85117.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1008/NBI-amazon-metal-reusable-name-badges-07__85117.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1008/NBI-amazon-metal-reusable-name-badges-07__85117.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1004/NBI-amazon-metal-reusable-name-badges-05__95657.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1004/NBI-amazon-metal-reusable-name-badges-05__95657.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1004/NBI-amazon-metal-reusable-name-badges-05__95657.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1006/NBI-amazon-metal-reusable-name-badges-04__39500.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1006/NBI-amazon-metal-reusable-name-badges-04__39500.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1006/NBI-amazon-metal-reusable-name-badges-04__39500.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1086/NBI-amazon-metal-reusable-name-badges-08__39647.1778500305.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1086/NBI-amazon-metal-reusable-name-badges-08__39647.1778500305.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/147/images/1086/NBI-amazon-metal-reusable-name-badges-08__39647.1778500305.220.290.jpg?c=1",
+        "alt": "Metal Reusable Name Badge"
+      }
+    ],
+    "description_html": "<p>Elevate your brand with our Metal Reusable Window Badges, designed to combine durability, functionality, and cost-effectiveness. Perfect for businesses, events, and organizations, these badges offer a sleek and professional look.</p>\n<p><strong>Benefits of Metal Reusable Window Badges</strong>:</p>\n<ul>\n<li><strong>Real Metal Front</strong>: Each badge features a real metal front paired with a black plastic back, providing a sturdy and professional appearance.</li>\n<li><strong>Complimentary Reusable Name Badge Card Inserts</strong>: Shipped with free reusable name badge card inserts, ensuring you have everything you need with each order.</li>\n<li><strong>Economical to Use</strong>: Our A4 sheets of pre-perforated card inserts are compatible with your existing printer, whether inkjet, laser, or wax-based, making it easy and cost-effective to print new names.</li>\n<li><strong>Quick and Easy Customization</strong>: Simply print and slide in a new name, without the need for costly name badge printers or software.</li>\n<li><strong>Download Perforated Sheet Templates</strong>: Access templates to streamline the printing process.</li>\n</ul>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Full-Color Printing</strong>: Enjoy vibrant, full-color printing on the metal part of the badge, ensuring your brand stands out.</li>\n<li><strong>Clear Plastic Cover</strong>: Protect the paper name insert with a clear plastic cover, maintaining a professional look.</li>\n<li><strong>Free Perforated A4 Sheets</strong>: Receive free perforated A4 sheets for your printer, making customization easy and convenient.</li>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Metal Reusable Window Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with practical, stylish, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of reusability. Click the \"Add to Cart\" button and elevate your brand with our Metal Reusable Window Badges!</p>\n<p><strong><span data-teams=\"true\">To download printable sheet templates, please refer to the <a href=\"%%GLOBAL_ShopPathSSL%%/technical-guidelines/#namebadge-information\">technical guidelines</a> for name badges.</span></strong></p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

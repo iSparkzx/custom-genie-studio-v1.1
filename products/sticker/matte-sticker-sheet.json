@@ -6,6 +6,10 @@
   "type": "Sheets - Matte",
   "group": "sheets_matte",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 160,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.04,
     "quantity_tiers": [
       {
@@ -1533,6 +1537,44 @@
   "mcp": {
     "product_id": "matte_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Custom Matte Stickers | No Minimum Order | Custom Genie",
+    "meta_description": "Custom Matte Sticker Sheets - durable, water-resistant & tear-proof. Full-color vinyl stickers with a smooth matte finish, perfect for any branding need.",
+    "reviews_count": 1,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/866/Image-Amazon-Matte-02__08531.1778500155.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/866/Image-Amazon-Matte-02__08531.1778500155.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/866/Image-Amazon-Matte-02__08531.1778500155.220.290.jpg?c=1",
+        "alt": "Matte Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/871/Image-Amazon-Matte-05__57955.1778500155.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/871/Image-Amazon-Matte-05__57955.1778500155.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/871/Image-Amazon-Matte-05__57955.1778500155.220.290.jpg?c=1",
+        "alt": "Matte Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/867/Image-Amazon-Matte-03__59531.1778500155.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/867/Image-Amazon-Matte-03__59531.1778500155.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/867/Image-Amazon-Matte-03__59531.1778500155.220.290.jpg?c=1",
+        "alt": "Matte Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1227/Image-Amazon-Matte-07__82944.1778500155.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1227/Image-Amazon-Matte-07__82944.1778500155.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1227/Image-Amazon-Matte-07__82944.1778500155.220.290.jpg?c=1",
+        "alt": "Matte Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1228/Image-Amazon-Matte-06__67435.1778500155.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1228/Image-Amazon-Matte-06__67435.1778500155.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/160/images/1228/Image-Amazon-Matte-06__67435.1778500155.220.290.jpg?c=1",
+        "alt": "Matte Sticker Sheet"
+      }
+    ],
+    "description_html": "<ul>\n<li>Full color, high resolution digital printing</li>\n<li>Supplied on sheets</li>\n<li>Matte Finish</li>\n<li>Water-resistant, Tear-resistant</li>\n<li>No setup or design fees</li>\n</ul>\n<h2>Matte vinyl stickers in any size and shape</h2>\n<p>Digitally printed Matte Stickers are available in any size from 0.5\" x 0.5\" up to a massive 8.5\" x 8.5\". Our Matte Vinyl Stickers are supplied in sheet format, not on a roll or individually cut. Order custom matte stickers in any quantity, with no minimum and no setup fees. Get printed matte sticker sheets shipped flat, ready to peel and apply. Matte Vinyl Stickers (also referred to as custom stickers, printed stickers, printed vinyl stickers, gloss vinyl stickers, labels, etc.) are a hard-wearing, water-resistant sticker product that will display your logo professionally in almost any situation. Our Matte Vinyl Sticker products are available in any shape and any size from a tiny 0.5 x 0.5 inches up to a massive 8.5 x 8.5 inches. This flexibility in our product range allows you to produce the exact sticker you need.</p>\n<h2>Where matte stickers work best</h2>\n<p>Matte stickers work across most branding and personal-use applications. Small business packaging, product labels, equipment ID, retail signage, branded giveaways, and event swag work well with the muted, non-reflective finish. Personal use cases land just as well: laptop and water bottle branding, planner pages and sketchbook accents, gift wrap callouts, and creator merchandise. The matte finish looks understated and professional, so it's a good choice when <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/glossy-stickers/\">glossy stickers</a> or other high-shine vinyls would distract from the design.</p>\n<h2>Matte sticker features and durability</h2>\n<p>All of our vinyl stickers have the following benefits:</p>\n<ul>\n<li>Full color, high resolution digital printing</li>\n<li>Strong adhesion to clean, dry surfaces</li>\n<li>Water resistant, tear resistant, non-yellowing</li>\n<li>UV-protected for indoor or protected outdoor use</li>\n<li>No setup or design fees</li>\n<li>No minimum order; order a single sheet or thousands</li>\n</ul>\n<h2>Printing and color matching</h2>\n<h3>Digital CMYK printing</h3>\n<p>We digitally print using a high resolution 4 color (CMYK) process to print all logos, text and background colors onto the stickers. We can print onto white matte (non-glossy) substrate.</p>\n<h3>Pantone color matching</h3>\n<p>If Pantone colors are used in your design, we will use the CMYK Pantone matching system to print your stickers using CMYK inks. Please note: There are many Pantone colors that cannot be accurately matched using CMYK colors. If you use a Pantone color that cannot be matched it will be converted to the closest CMYK color available. If printing on a vinyl other than white, the color or effect of the vinyl may affect the final printed color.</p>\n<h2>Custom matte sticker FAQs</h2>\n<h3>How are the vinyl stickers supplied?</h3>\n<p>All of our custom stickers are supplied in an easy-to-peel sheet format. The sheets are 9.25 inches wide by 10 inches tall with a printable area for the location of the stickers which is 8.81 inches x 8.64 inches. They are not available on a roll or individually cut.</p>\n<h3>Do you offer metallic background options?</h3>\n<p>Matte Stickers are printed on a flat white vinyl material. The sticker can be printed with any image or background color. This product does not have a metallic option. If you require metallic stickers, see our <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/metallic-stickers/\">custom metallic stickers</a> range.</p>\n<h3>What is the minimum and maximum size for a vinyl sticker?</h3>\n<p>Minimum size: 0.5 x 0.5 inches<br />Maximum size: 8.81 x 8.64 inches<br />Radius corners: Optional</p>\n<h3>What shapes can I choose from?</h3>\n<p>Our vinyl stickers are available in almost any shape you can think of. On our website you can choose from: Rectangle, Square, Circle, Stadium, Diamond and Oval. Once you have chosen your shape you will have full control of the width, height and corner radius (if applicable) to tailor it to your requirements. If you would like to specify a custom shape or have the sticker contour-cut around the edge of your design or logo, please contact us, attach your logo and explain your requirements. Our graphic designers will be happy to put together a design for you to approve.</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

@@ -6,6 +6,10 @@
   "type": "Custom Cut - Die Cut and Kiss Cut",
   "group": "custom_cut_die_cut_and_kiss_cut",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 184,
@@ -90,7 +94,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.3,
     "quantity_tiers": [
       {
@@ -5585,6 +5589,38 @@
   "mcp": {
     "product_id": "die_cut_sticker",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Die Cut Stickers | Custom Designs & Shapes | Durable Vinyl",
+    "meta_description": "Glossy Die Cut Stickers - vibrant, durable & water-resistant with strong adhesion. Perfect for branding, promotions & creative designs.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/837/Image-Amazon-Die_Cut-02__11364.1778500791.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/837/Image-Amazon-Die_Cut-02__11364.1778500791.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/837/Image-Amazon-Die_Cut-02__11364.1778500791.220.290.jpg?c=1",
+        "alt": "Die Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/836/Image-Amazon-Die_Cut-03__41240.1778500791.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/836/Image-Amazon-Die_Cut-03__41240.1778500791.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/836/Image-Amazon-Die_Cut-03__41240.1778500791.220.290.jpg?c=1",
+        "alt": "Die Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/840/Image-Amazon-Die_Cut-06__57083.1778500791.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/840/Image-Amazon-Die_Cut-06__57083.1778500791.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/840/Image-Amazon-Die_Cut-06__57083.1778500791.220.290.jpg?c=1",
+        "alt": "Die Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/839/Image-Amazon-Die_Cut-07__94497.1778500791.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/839/Image-Amazon-Die_Cut-07__94497.1778500791.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/184/images/839/Image-Amazon-Die_Cut-07__94497.1778500791.220.290.jpg?c=1",
+        "alt": "Die Cut Sticker"
+      }
+    ],
+    "description_html": "<p><strong>Bring your design to life and promote your business with custom Die Cut Stickers, precisely cut to the shape of your design!</strong></p>\n<p>With full-color digital printing, our Die Cut stickers capture vibrant detail and precise color in every design.</p>\n<p>Take charge of your creativity and transform your ideas into custom stickers that are as unique as your brand.</p>\n<p><strong>All of our Die Cut Stickers have the following benefits:</strong></p>\n<ul>\n<li>Strong adhesion</li>\n<li>Water resistant</li>\n<li>Non-yellowing</li>\n</ul>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

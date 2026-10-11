@@ -6,6 +6,10 @@
   "type": "Labels - Kraft Paper",
   "group": "labels_kraft_paper",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 165,
@@ -94,7 +98,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 1.4,
     "quantity_tiers": [
       {
@@ -763,6 +767,62 @@
   "mcp": {
     "product_id": "kraft_paper_labels_on_rolls",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Kraft Paper Labels",
+    "meta_description": "Eco-friendly Kraft Paper Labels on rolls. Premium brown kraft with a rustic, natural look. Perfect for food, wine, cosmetics & handmade products.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/975/Image-Amazon-Kraft-02__30494.1778500078.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/975/Image-Amazon-Kraft-02__30494.1778500078.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/975/Image-Amazon-Kraft-02__30494.1778500078.220.290.jpg?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/977/Image-Amazon-Kraft-06__76385.1778500078.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/977/Image-Amazon-Kraft-06__76385.1778500078.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/977/Image-Amazon-Kraft-06__76385.1778500078.220.290.jpg?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/973/Image-Amazon-Kraft-03__92039.1778500078.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/973/Image-Amazon-Kraft-03__92039.1778500078.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/973/Image-Amazon-Kraft-03__92039.1778500078.220.290.jpg?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/976/Image-Amazon-Kraft-07__79088.1778500078.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/976/Image-Amazon-Kraft-07__79088.1778500078.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/976/Image-Amazon-Kraft-07__79088.1778500078.220.290.jpg?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/978/Image-Amazon-Kraft-05__61947.1778500078.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/978/Image-Amazon-Kraft-05__61947.1778500078.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/978/Image-Amazon-Kraft-05__61947.1778500078.220.290.jpg?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/578/Screenshot_2025-05-09_130214__01585.1778500078.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/578/Screenshot_2025-05-09_130214__01585.1778500078.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/578/Screenshot_2025-05-09_130214__01585.1778500078.220.290.png?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/579/Screenshot_2025-05-09_130230__94729.1778500078.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/579/Screenshot_2025-05-09_130230__94729.1778500078.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/579/Screenshot_2025-05-09_130230__94729.1778500078.220.290.png?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/580/Screenshot_2025-05-09_130251__75389.1778500078.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/580/Screenshot_2025-05-09_130251__75389.1778500078.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/165/images/580/Screenshot_2025-05-09_130251__75389.1778500078.220.290.png?c=1",
+        "alt": "Kraft Paper Labels on Rolls"
+      }
+    ],
+    "description_html": "<p>Custom kraft paper labels are printed on natural brown kraft paper with a matte, uncoated finish and supplied on a roll for fast, consistent application. The earthy, rustic look suits handmade, artisan, and natural product branding.</p>\n<h2>Material and finish</h2>\n<ul>\n<li>Natural brown kraft paper</li>\n<li>Matte, uncoated finish you can write or stamp on</li>\n<li>Slightly textured surface for an authentic, handmade feel</li>\n<li>Full-color digital printing, with a natural speckled effect on the kraft</li>\n<li>Custom size and shape, up to 5.12 inches wide</li>\n</ul>\n<h2>Durability</h2>\n<ul>\n<li>Made for indoor use</li>\n</ul>\n<h2>Best for</h2>\n<ul>\n<li>Food, wine, and cosmetics brands wanting a natural look</li>\n<li>Artisan, handmade, and craft products</li>\n<li>Small businesses, events, and wedding favors</li>\n</ul>\n<h2>Ordering</h2>\n<ul>\n<li>No minimum order, no setup fees, and no artwork fees</li>\n<li>Free digital proof before printing</li>\n<li>Most orders printed and delivered within 7 days, with expedited options</li>\n<li>Free shipping on orders over $75</li>\n</ul>\n<p><a href=\"%%GLOBAL_ShopPathSSL%%/stickers/labels-on-rolls/\">See all Labels on Rolls</a></p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

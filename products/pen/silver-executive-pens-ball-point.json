@@ -6,6 +6,10 @@
   "type": "Pens - Silver Executive",
   "group": "pens_silver_executive",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 133,
@@ -48,7 +52,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.99,
     "quantity_tiers": [
       {
@@ -370,6 +374,56 @@
   "mcp": {
     "product_id": "silver_executive_pens_ball_point",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Silver Executive Engraved Pens Ball Point",
+    "meta_description": "Silver Executive ballpoint pens with sleek metal finish, twist-top design & precision laser engraving. A premium, stylish choice for professionals.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/712/AMAZON-Silver_Executive_01-2__48404.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/712/AMAZON-Silver_Executive_01-2__48404.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/712/AMAZON-Silver_Executive_01-2__48404.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/710/AMAZON-Silver_Executive_02-2__71975.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/710/AMAZON-Silver_Executive_02-2__71975.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/710/AMAZON-Silver_Executive_02-2__71975.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/706/AMAZON-Silver_Executive_05__22380.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/706/AMAZON-Silver_Executive_05__22380.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/706/AMAZON-Silver_Executive_05__22380.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/709/AMAZON-Silver_Executive_03__79235.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/709/AMAZON-Silver_Executive_03__79235.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/709/AMAZON-Silver_Executive_03__79235.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/708/AMAZON-Silver_Executive_08-2__31098.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/708/AMAZON-Silver_Executive_08-2__31098.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/708/AMAZON-Silver_Executive_08-2__31098.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/707/AMAZON-Silver_Executive_09-2__34344.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/707/AMAZON-Silver_Executive_09-2__34344.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/707/AMAZON-Silver_Executive_09-2__34344.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/711/AMAZON-Silver_Executive_10-2__64803.1778500485.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/711/AMAZON-Silver_Executive_10-2__64803.1778500485.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/133/images/711/AMAZON-Silver_Executive_10-2__64803.1778500485.220.290.jpg?c=1",
+        "alt": "Silver Executive Pens Ball Point"
+      }
+    ],
+    "description_html": "<p><strong>Introducing Our Silver Executive Ballpoint Pens!</strong></p>\n<p>Elevate your writing experience with our premium metal ballpoint pen, designed for effortless use and unparalleled elegance. Crafted in sleek silver metal with a stylish black finish, this pen is the epitome of sophistication. It's part of our <a href=\"../../../../pens/metal-pens/\">custom metal pen range</a> at Custom Genie.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Twist-Top Design</strong>: Enjoy the convenience of a twist-top mechanism for smooth and easy use.</li>\n<li><strong>Precision Laser Engraving</strong>: Customize your pen with our precise laser engraving service, perfect for showcasing your brand or personal message.</li>\n<li><strong>Engraving Area</strong>: 40 x 6mm, ideal for detailed and clear engravings.</li>\n<li><strong>Writing Ink Color</strong>: Black, providing a classic and professional look.</li>\n</ul>\n<p><strong>Why Choose Our Silver Executive Pens?</strong></p>\n<ul>\n<li><strong>Premium Style</strong>: The heavier design ensures the pen rests comfortably in your grip, reducing the need for extra pressure.</li>\n<li><strong>Luxurious Look</strong>: The combination of silver metal and black finish offers a sleek and sophisticated appearance.</li>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n</ul>\n<p><strong>Order Your Premium Executive Pen Today!</strong><span>&nbsp;</span>Experience effortless writing with a touch of luxury. Customize your pen with your logo and text, and take your brand to the next level. Click the \"Buy Now\" button and add this elegant pen to your collection!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

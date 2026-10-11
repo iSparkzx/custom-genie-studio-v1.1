@@ -101,7 +101,10 @@ tests/                 browser tests (tests/price-check.mjs: studio prices vs Bi
 | 3 | Domed Color, Silver, Gold, then the other sticker sheets | |
 | 4 | Add to cart fills the same modifiers as Doogma | needs production input |
 | 5 | Name badge studio (`/badges.html`): all 14 badges, Doogma layouts 1 to 7, team names, Genie logo | PR #6; real badge sizes still needed |
-| 6 | Pens family | needs imprint areas |
+| 6 | Product pages (`/p/<product>.html`) with Start designing: Genie Studio Advanced and Genie Studio Basic | PR #7 |
+| 7 | Genie Studio Advanced for name badges (the sticker studio with a badge mode) | next |
+| 8 | Genie Studio Basic for stickers | |
+| 9 | Pens: Advanced and Basic, with placeholder imprint sizes until real ones arrive | |
 
 Every phase is its own PR. Nothing is deployed and the live store isn't touched without Carlos's explicit approval.
 

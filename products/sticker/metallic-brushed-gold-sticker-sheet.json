@@ -6,6 +6,10 @@
   "type": "Sheets - Metallic",
   "group": "sheets_metallic",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 169,
@@ -104,7 +108,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.11,
     "quantity_tiers": [
       {
@@ -1502,6 +1506,38 @@
   "mcp": {
     "product_id": "metallic_brushed_gold_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Custom Metallic Gold Stickers | Brushed Gold Sheet",
+    "meta_description": "Custom metallic gold stickers with a brushed glossy finish on water and tear-resistant vinyl. No Minimum, no setup fees, fast delivery.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/932/Image-Amazon-Metallic_Gold-02__09487.1778500023.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/932/Image-Amazon-Metallic_Gold-02__09487.1778500023.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/932/Image-Amazon-Metallic_Gold-02__09487.1778500023.220.290.jpg?c=1",
+        "alt": "Metallic Brushed Gold Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/913/Image-Amazon-Metallic-07__74926.1778500023.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/913/Image-Amazon-Metallic-07__74926.1778500023.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/913/Image-Amazon-Metallic-07__74926.1778500023.220.290.jpg?c=1",
+        "alt": "Metallic Brushed Gold Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/881/GoldValueProp__34642.1778500023.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/881/GoldValueProp__34642.1778500023.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/881/GoldValueProp__34642.1778500023.220.290.png?c=1",
+        "alt": "Metallic Brushed Gold Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/1223/Image-Amazon-Metallic-06__24697.1778500023.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/1223/Image-Amazon-Metallic-06__24697.1778500023.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/169/images/1223/Image-Amazon-Metallic-06__24697.1778500023.220.290.jpg?c=1",
+        "alt": "Metallic Brushed Gold Sticker Sheet"
+      }
+    ],
+    "description_html": "<p><strong>A brushed gold sticker sheet with a warm metallic shine, printed in full color.</strong> The gold comes from the metallic vinyl itself, so logos, packaging seals, and premium labels get a real brushed-gold look without foil stamping or a minimum order.</p>\n<ul>\n<li>Brushed gold metallic vinyl</li>\n<li>Glossy finish</li>\n<li>Water resistant and tear resistant</li>\n<li>Full-color CMYK printing</li>\n<li>No Minimum, no setup or design fees</li>\n</ul>\n<p>These are also searched for as metallic gold stickers, brushed gold stickers, and gold sticker sheets. They are part of our <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/metallic-stickers/\">metallic stickers</a> range, and are also available in <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/metallic-brushed-silver-sticker-sheet/\">Metallic Brushed Silver Sticker Sheet</a>.</p>\n<p>Supplied as an easy-to-peel sheet, not on a roll or individually cut.</p>\n<h3>How it is printed</h3>\n<p>We digitally print your logos, text, and background colors onto brushed gold vinyl using a high-resolution 4-color (CMYK) process. Because the gold comes from the vinyl, any white areas in your artwork print as clear, letting the brushed gold show through for the metallic effect.</p>\n<h3>Pantone colors</h3>\n<p>If your design uses Pantone colors, we match them as closely as possible using the CMYK Pantone matching system and CMYK inks. Some Pantone colors cannot be matched exactly in CMYK and will print as the closest available color, and the gold vinyl underneath can also affect the final printed color.</p>\n<h3>Proofing</h3>\n<p>You can design and preview your sheet online before you order. For orders placed by email, we send a PDF proof before production.</p>\n<h3>FAQs</h3>\n<h4>How are the sheets supplied?</h4>\n<p>In an easy-to-peel sheet format, 9.01 inches wide by 8.84 inches tall, with a printable area of 8.81 by 8.64 inches. Not available on a roll or individually cut.</p>\n<h4>What sizes can each sticker be?</h4>\n<p>From 0.5 by 0.5 inches up to 8.81 by 8.64 inches, with optional radius corners.</p>\n<h4>What shapes are available?</h4>\n<p>Rectangle, square, circle, stadium, diamond, and oval, with full control of width, height, and corner radius. For a custom shape or a contour cut around your logo, contact us with your artwork and our designers will set it up for your approval.</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

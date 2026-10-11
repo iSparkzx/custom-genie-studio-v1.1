@@ -6,6 +6,10 @@
   "type": "Labels - Grass Paper",
   "group": "labels_grass_paper",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 194,
@@ -98,7 +102,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.4,
     "quantity_tiers": [
       {
@@ -1043,6 +1047,44 @@
   "mcp": {
     "product_id": "grass_paper_labels_on_rolls",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Grass Paper Labels",
+    "meta_description": "Go green with Grass Paper Labels! Biodegradable, compostable, and supplied on rolls for easy use. Ideal for eco-conscious, organic brands.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/856/Image-Amazon-Grass_Papper-02__45934.1778499474.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/856/Image-Amazon-Grass_Papper-02__45934.1778499474.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/856/Image-Amazon-Grass_Papper-02__45934.1778499474.220.290.jpg?c=1",
+        "alt": "Grass Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/854/Image-Amazon-Grass_Papper-07__15182.1778499474.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/854/Image-Amazon-Grass_Papper-07__15182.1778499474.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/854/Image-Amazon-Grass_Papper-07__15182.1778499474.220.290.jpg?c=1",
+        "alt": "Grass Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/855/Image-Amazon-Grass_Papper-03__08897.1778499474.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/855/Image-Amazon-Grass_Papper-03__08897.1778499474.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/855/Image-Amazon-Grass_Papper-03__08897.1778499474.220.290.jpg?c=1",
+        "alt": "Grass Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/858/Image-Amazon-Grass_Papper-06__50123.1778499474.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/858/Image-Amazon-Grass_Papper-06__50123.1778499474.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/858/Image-Amazon-Grass_Papper-06__50123.1778499474.220.290.jpg?c=1",
+        "alt": "Grass Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/859/Image-Amazon-Grass_Papper-05__25371.1778499474.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/859/Image-Amazon-Grass_Papper-05__25371.1778499474.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/194/images/859/Image-Amazon-Grass_Papper-05__25371.1778499474.220.290.jpg?c=1",
+        "alt": "Grass Paper Labels on Rolls"
+      }
+    ],
+    "description_html": "<p>Custom grass paper labels are printed on grass-fiber paper and supplied on a roll for fast, consistent application. They are biodegradable and compostable, with an earthy, natural texture for the most eco-conscious branding.</p>\n<h2>Material and finish</h2>\n<ul>\n<li>Grass-fiber paper with a natural, earthy texture</li>\n<li>Biodegradable and compostable, with no plastic coatings or lamination</li>\n<li>Full-color digital printing</li>\n<li>Custom size and shape, up to 7.35 inches wide</li>\n</ul>\n<h2>Durability</h2>\n<ul>\n<li>Made for indoor use</li>\n</ul>\n<h2>Best for</h2>\n<ul>\n<li>Sustainable and eco-conscious brands</li>\n<li>Organic and natural products</li>\n<li>Handmade and artisan goods</li>\n<li>Compostable food and beverage packaging</li>\n</ul>\n<h2>Ordering</h2>\n<ul>\n<li>No minimum order, no setup fees, and no artwork fees</li>\n<li>Free digital proof before printing</li>\n<li>Most orders printed and delivered within 7 days, with expedited options</li>\n<li>Free shipping on orders over $75</li>\n</ul>\n<p><a href=\"%%GLOBAL_ShopPathSSL%%/stickers/labels-on-rolls/\">See all Labels on Rolls</a></p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

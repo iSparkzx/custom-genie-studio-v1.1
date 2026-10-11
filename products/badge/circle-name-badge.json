@@ -6,6 +6,10 @@
   "type": "Badges - Circle",
   "group": "badges_circle",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 150,
@@ -57,7 +61,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.99,
     "quantity_tiers": [
       {
@@ -768,6 +772,62 @@
   "mcp": {
     "product_id": "circle_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Custom Round & Circle Name Badges | No Minimum",
+    "meta_description": "Custom Circle Name Badges with full-color printing, magnetic or pin fasteners, and scratch-proof coating. Durable, professional, and customizable name tags for businesses and events.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/911/Circle-Hand__80064.1778500260.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/911/Circle-Hand__80064.1778500260.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/911/Circle-Hand__80064.1778500260.220.290.png?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/782/NBI-amazon-circle-name-badges-01__20549.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/782/NBI-amazon-circle-name-badges-01__20549.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/782/NBI-amazon-circle-name-badges-01__20549.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/786/NBI-amazon-circle-name-badges-02__44167.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/786/NBI-amazon-circle-name-badges-02__44167.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/786/NBI-amazon-circle-name-badges-02__44167.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/778/NBI-amazon-circle-name-badges-03__09797.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/778/NBI-amazon-circle-name-badges-03__09797.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/778/NBI-amazon-circle-name-badges-03__09797.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/785/NBI-amazon-circle-name-badges-07__37562.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/785/NBI-amazon-circle-name-badges-07__37562.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/785/NBI-amazon-circle-name-badges-07__37562.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/784/NBI-amazon-circle-name-badges-04__89509.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/784/NBI-amazon-circle-name-badges-04__89509.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/784/NBI-amazon-circle-name-badges-04__89509.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/779/NBI-amazon-circle-name-badges-05__59662.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/779/NBI-amazon-circle-name-badges-05__59662.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/779/NBI-amazon-circle-name-badges-05__59662.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/897/NBI-amazon-circle-name-badges-06__15722.1778500260.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/897/NBI-amazon-circle-name-badges-06__15722.1778500260.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/150/images/897/NBI-amazon-circle-name-badges-06__15722.1778500260.220.290.jpg?c=1",
+        "alt": "Circle Name Badge"
+      }
+    ],
+    "description_html": "<p>Elevate your brand with our round name badges, designed to combine vibrant full-color printing with durability and customization. Perfect for businesses, events, and organizations, these name badges offer a professional and polished look.</p>\n<p>Our round name badges include:</p>\n<ul>\n<li><strong>Full-Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Scratch and Fade-Proof Coating</strong>: Our badges feature a durable polyurethane coating that protects against scratches and fading, ensuring they look great for a long time.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Round Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with vibrant, durable, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of durability. Click the \"Buy Now\" button and elevate your brand with our round name badges!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

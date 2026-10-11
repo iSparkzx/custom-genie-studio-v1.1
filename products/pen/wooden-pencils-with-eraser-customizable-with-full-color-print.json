@@ -6,6 +6,10 @@
   "type": "Pens - Pencils",
   "group": "pens_pencils",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 131,
@@ -50,7 +54,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 1.6,
     "quantity_tiers": [
       {
@@ -396,6 +400,68 @@
   "mcp": {
     "product_id": "wooden_pencils_with_eraser_customizable_with_full_color_print",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Wooden Pencil",
+    "meta_description": "Customizable wooden pencils with gold ferrule & white eraser. HB lead, full-color logo printing, 130x4mm area. Perfect for branding & giveaways.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/705/Amazon-Pincels-01__06500.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/705/Amazon-Pincels-01__06500.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/705/Amazon-Pincels-01__06500.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/704/Amazon-Pincels-02__95031.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/704/Amazon-Pincels-02__95031.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/704/Amazon-Pincels-02__95031.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/703/Amazon-Pincels-03__37144.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/703/Amazon-Pincels-03__37144.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/703/Amazon-Pincels-03__37144.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/702/Amazon-Pincels-09__34367.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/702/Amazon-Pincels-09__34367.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/702/Amazon-Pincels-09__34367.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/700/Amazon-Pincels-010__51444.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/700/Amazon-Pincels-010__51444.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/700/Amazon-Pincels-010__51444.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/701/Amazon-Pincels-06__42812.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/701/Amazon-Pincels-06__42812.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/701/Amazon-Pincels-06__42812.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/699/Amazon-Pincels-07__58184.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/699/Amazon-Pincels-07__58184.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/699/Amazon-Pincels-07__58184.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/697/Amazon-Pincels-08__17003.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/697/Amazon-Pincels-08__17003.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/697/Amazon-Pincels-08__17003.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/698/Amazon-Pincels-011__39313.1778500500.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/698/Amazon-Pincels-011__39313.1778500500.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/131/images/698/Amazon-Pincels-011__39313.1778500500.220.290.jpg?c=1",
+        "alt": "Wooden Pencils with Eraser Customizable with Full-Color Print"
+      }
+    ],
+    "description_html": "<p><strong>Introducing Our Premium Wooden Pencil!</strong></p>\n<p>Experience the perfect blend of elegance and functionality with our round wooden pencil. Featuring a luxurious gold ferrule and a pristine white eraser, this pencil is designed to impress.</p>\n<p><strong>Vibrant Color Options</strong>: Choose from a range of popular colors to match your style. Our pencils are available with full-color digital printing, ensuring your design stands out.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Unsharpened for Customization</strong>: Each pencil comes unsharpened, allowing you to personalize the sharpening to your preference.</li>\n<li><strong>Generous Print Area</strong>: Enjoy a digital print area of 130 x 4mm, perfect for showcasing your logo or message.</li>\n<li><strong>High-Quality Lead</strong>: Equipped with HB lead, our pencils provide smooth and consistent writing.</li>\n</ul>\n<p><strong>Hassle-Free Ordering</strong>:</p>\n<ul>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n</ul>\n<p><strong>Order Your Premium Wooden Pencil Today!</strong><span>&nbsp;</span>Elevate your writing experience with a pencil that combines style, quality, and convenience.</p>\n<p>&nbsp;</p>\n<p><strong>No setup fees. No design fees!</strong></p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

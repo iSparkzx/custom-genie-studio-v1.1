@@ -19,7 +19,7 @@ def data():
     fam = json.loads(rd(os.path.join(P, 'families', 'badge.json'))); lay = json.loads(rd(os.path.join(P, 'families', 'badge-layouts.json')))
     cfg = fam['studio']['products']; prods = []
     for r in idx:
-        if r['family'] != 'badge' or r['studio_status'] != 'built': continue
+        if r['family'] != 'badge' or not r.get('studios', {}).get('basic'): continue
         d = json.loads(rd(os.path.join(P, r['file']))); c = cfg.get(d['id'])
         if not c: raise SystemExit(d['id'] + ': no studio settings in products/families/badge.json')
         pr = d['pricing']; vs = pr['variants']

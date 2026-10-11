@@ -6,6 +6,10 @@
   "type": "Sheets - Clear",
   "group": "sheets_clear",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 186,
@@ -104,7 +108,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.01,
     "quantity_tiers": [
       {
@@ -1520,6 +1524,44 @@
   "mcp": {
     "product_id": "clear_sticker_sheet_with_white_ink_non_met_standard_sizes",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes",
+    "meta_description": "Clear Sticker Sheets of stickers with white ink. Durable, waterproof & high-res. Ideal for logos, labels & branding with a sleek see-through look.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/809/Image-Amazon-Clear-02__26817.1778499533.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/809/Image-Amazon-Clear-02__26817.1778499533.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/809/Image-Amazon-Clear-02__26817.1778499533.220.290.jpg?c=1",
+        "alt": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/1220/Image-Amazon-Clear-06__68544.1778499533.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/1220/Image-Amazon-Clear-06__68544.1778499533.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/1220/Image-Amazon-Clear-06__68544.1778499533.220.290.jpg?c=1",
+        "alt": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/811/Image-Amazon-Clear-03__66201.1778499533.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/811/Image-Amazon-Clear-03__66201.1778499533.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/811/Image-Amazon-Clear-03__66201.1778499533.220.290.jpg?c=1",
+        "alt": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/923/Image-Amazon-Clear-07__58796.1778499533.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/923/Image-Amazon-Clear-07__58796.1778499533.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/923/Image-Amazon-Clear-07__58796.1778499533.220.290.jpg?c=1",
+        "alt": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/814/Image-Amazon-Clear-05__22366.1778499533.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/814/Image-Amazon-Clear-05__22366.1778499533.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/186/images/814/Image-Amazon-Clear-05__22366.1778499533.220.290.jpg?c=1",
+        "alt": "Clear Sticker Sheet with White Ink (NON-MET)-Standard Sizes"
+      }
+    ],
+    "description_html": "<!-- Notice -->\n<p>Digitally printed clear vinyl stickers. Your design is printed onto a waterproof transparent vinyl. Great for printing complex logos without a white background.</p>\n<p>Our Clear Stickers are supplied in sheet format, not on a roll.</p>\n<p>Clear Stickers (also referred to as transparent stickers) are a hardwearing, waterproof vinyl sticker with no coloured background. These are great for printing complex shaped logos onto simple shapes such as circle, oval, square or rectangle, as non-printed areas will show through the color of the surface the sticker is applied to.</p>\n<ul>\n<li>See-through (clear)</li>\n<li>Glossy / shiny</li>\n<li>Water-resistant</li>\n<li>Weatherproof</li>\n<li>Tear-resistant</li>\n<li>Permanent adhesive</li>\n</ul>\n<p>All of our clear stickers have the following benefits:</p>\n<ul>\n<li>Full color, high resolution digital printing</li>\n<li>Strong adhesion</li>\n<li>Water resistant</li>\n<li>Non-yellowing</li>\n<li>No setup or design fees</li>\n</ul>\n<!-- Technical Information -->\n<h3><span>Technical Information</span></h3>\n<p><strong>Printing</strong><br />We digitally print using a high resolution 4 color (CMYK) process to print all logos, text and background colours onto the stickers.</p>\n<p><strong>White Ink</strong><br />For more information about printing white ink, please contact us here.</p>\n<p><strong>Pantone&reg; Colours</strong><br />If Pantone&reg; colours are used in your design we will use the CMYK Pantone&reg; matching system to print your stickers using CMYK inks. Please note: There are many Pantone&reg; colours that cannot be accurately matched using CMYK colours. If you use a Pantone&reg; colour that cannot be matched it will be converted to the closest CMYK colour available. If printing on a vinyl other than white, the colour or effect of the vinyl may affect the final printed colour.</p>\n<p><strong>Please Note</strong><br />All email orders will be given a PDF proof before production. Orders placed on the website will be approved as part of the ordering process.</p>\n<!-- FAQs -->\n<h3><span>Product FAQs</span></h3>\n<p><strong>How are the clear stickers supplied?</strong><br />All of our custom stickers are supplied in an easy-to-peel sheet format. The sheets are 9.25 inches wide by 10 inches tall with a printable area for the location of the stickers which is 8.81 inches x 8.64 inches. They are not available on a roll or individually cut.</p>\n<p>Need clear stickers supplied on rolls? See our clear labels product.</p>\n<p><strong>What is the minimum and maximum size for a clear sticker?</strong><br />Minimum size: 0.5 x 0.5 inches<br />Maximum size: 8.81 x 8.64 inches<br />Radius corners: Optional</p>\n<p><strong>What shapes can I choose from?</strong><br />Our clear vinyl stickers are available in almost any shape you can think of. On our website you can choose from: Rectangle, Square, Circle, Diamond and Oval. Once you have chosen your shape you will have full control of the width, height and corner radius (if applicable) to tailor it to your requirements.</p>\n<p>If you would like to specify a custom shape or have the sticker / label contour-cut around the edge of your design / logo, you have two options:</p>\n<p>1) Customers with print-ready files made to the specifications on our artwork page can choose \"Custom\" as the shape when ordering and upload the file(s) online. You can then add the product to your shopping cart and checkout online.</p>\n<p>2) Please email us, attach your logo/design and explain your requirements. Our graphic designers will be happy to put together a design for you to approve.</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

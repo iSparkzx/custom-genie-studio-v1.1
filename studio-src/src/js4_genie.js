@@ -310,6 +310,9 @@ async function genieEdit(p){const l=p.toLowerCase(),done=[];
 nbInit();gcInit();
 const restored=loadDraft();
 D.groups=D.groups||{};
+/* opened from a product page: /?product=<definition id> picks that product's finish and links back to its page */
+{const want=new URLSearchParams(location.search).get('product'),v=Object.keys(CATALOG.vinyl).find(k=>CATALOG.vinyl[k]===want),pr=CATALOG.products[want],a=$('#pdpBack');
+ if(v){D.vinyl=v}if(pr&&a){a.href='p/'+pr.url.split('/').filter(Boolean).pop()+'.html';a.hidden=false}}
 last=snapshot();upThumbs();setTool('move');setLTab(restored?'layers':'assets');
 syncPanels();refreshUndo();panelBtns();genieIntro();
 new ResizeObserver(()=>req()).observe(vp);req();

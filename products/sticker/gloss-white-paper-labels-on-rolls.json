@@ -6,6 +6,10 @@
   "type": "Labels - Clear",
   "group": "labels_clear",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 163,
@@ -99,7 +103,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.4,
     "quantity_tiers": [
       {
@@ -1153,6 +1157,74 @@
   "mcp": {
     "product_id": "gloss_white_paper_labels_on_rolls",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Gloss White Paper Labels on Rolls",
+    "meta_description": "Custom Gloss White Paper Labels on rolls - affordable, professional-quality labels with a glossy finish. Perfect for bottles, jars & product packaging.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/961/Image-Amazon-LOAR-Paper-02__70229.1778500111.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/961/Image-Amazon-LOAR-Paper-02__70229.1778500111.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/961/Image-Amazon-LOAR-Paper-02__70229.1778500111.220.290.jpg?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/964/Image-Amazon-LOAR-Paper-06__44864.1778500111.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/964/Image-Amazon-LOAR-Paper-06__44864.1778500111.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/964/Image-Amazon-LOAR-Paper-06__44864.1778500111.220.290.jpg?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/966/Image-Amazon-LOAR_Paper-03__44434.1778500111.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/966/Image-Amazon-LOAR_Paper-03__44434.1778500111.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/966/Image-Amazon-LOAR_Paper-03__44434.1778500111.220.290.jpg?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/962/Image-Amazon-LOAR-Paper-07__74064.1778500111.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/962/Image-Amazon-LOAR-Paper-07__74064.1778500111.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/962/Image-Amazon-LOAR-Paper-07__74064.1778500111.220.290.jpg?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/965/Image-Amazon-LOAR-Paper-05__41390.1778500111.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/965/Image-Amazon-LOAR-Paper-05__41390.1778500111.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/965/Image-Amazon-LOAR-Paper-05__41390.1778500111.220.290.jpg?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/577/Screenshot_2025-05-09_125429__11877.1778500111.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/577/Screenshot_2025-05-09_125429__11877.1778500111.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/577/Screenshot_2025-05-09_125429__11877.1778500111.220.290.png?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/574/Screenshot_2025-05-09_125338__95001.1778500111.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/574/Screenshot_2025-05-09_125338__95001.1778500111.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/574/Screenshot_2025-05-09_125338__95001.1778500111.220.290.png?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/576/Screenshot_2025-05-09_125406__96906.1778500111.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/576/Screenshot_2025-05-09_125406__96906.1778500111.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/576/Screenshot_2025-05-09_125406__96906.1778500111.220.290.png?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/575/Screenshot_2025-05-09_125416__50998.1778500111.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/575/Screenshot_2025-05-09_125416__50998.1778500111.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/575/Screenshot_2025-05-09_125416__50998.1778500111.220.290.png?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/573/Screenshot_2025-05-09_125355__70059.1778500111.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/573/Screenshot_2025-05-09_125355__70059.1778500111.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/163/images/573/Screenshot_2025-05-09_125355__70059.1778500111.220.290.png?c=1",
+        "alt": "Gloss White Paper Labels on Rolls"
+      }
+    ],
+    "description_html": "<p>Custom gloss white paper labels are printed on white paper with a glossy finish and supplied on a roll for fast, consistent application. They are an affordable, professional-looking choice for everyday product and packaging labels.</p>\n<h2>Material and finish</h2>\n<ul>\n<li>White paper with a glossy finish</li>\n<li>Full-color digital printing</li>\n<li>Custom size and shape, up to 7.48 inches</li>\n</ul>\n<h2>Durability</h2>\n<ul>\n<li>Made for indoor use</li>\n</ul>\n<h2>Best for</h2>\n<ul>\n<li>Small businesses and retailers wanting affordable, quality labels</li>\n<li>Product packaging on bottles, jars, and containers</li>\n<li>Office and warehouse inventory and organization labels</li>\n<li>Event promotions and giveaways</li>\n</ul>\n<h2>Ordering</h2>\n<ul>\n<li>No minimum order, no setup fees, and no artwork fees</li>\n<li>Free digital proof before printing</li>\n<li>Most orders printed and delivered within 7 days, with expedited options</li>\n<li>Free shipping on orders over $75</li>\n</ul>\n<p><a href=\"%%GLOBAL_ShopPathSSL%%/stickers/labels-on-rolls/\">See all Labels on Rolls</a></p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

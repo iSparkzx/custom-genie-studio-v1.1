@@ -6,6 +6,10 @@
   "type": "Pens - Value Stick",
   "group": "pens_value_stick",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 141,
@@ -48,7 +52,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 1.49,
     "quantity_tiers": [
       {
@@ -377,6 +381,62 @@
   "mcp": {
     "product_id": "value_stick_pen",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Affordable Custom Stick Pens - Fast & No Minimum",
+    "meta_description": "Affordable custom value stick pens with smooth black ink. Perfect for bulk orders, giveaways & promotions with no setup fees and fast shipping.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/755/Amazon-Value_Pens-01__04995.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/755/Amazon-Value_Pens-01__04995.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/755/Amazon-Value_Pens-01__04995.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/758/Amazon-Value_Pens-02__03866.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/758/Amazon-Value_Pens-02__03866.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/758/Amazon-Value_Pens-02__03866.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/757/Amazon-Value_Pens-03__63236.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/757/Amazon-Value_Pens-03__63236.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/757/Amazon-Value_Pens-03__63236.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/756/Amazon-Value_Pens-010__01543.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/756/Amazon-Value_Pens-010__01543.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/756/Amazon-Value_Pens-010__01543.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/759/Amazon-Value_Pens-08__86746.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/759/Amazon-Value_Pens-08__86746.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/759/Amazon-Value_Pens-08__86746.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/752/Amazon-Value_Pens-09__02336.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/752/Amazon-Value_Pens-09__02336.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/752/Amazon-Value_Pens-09__02336.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/754/Amazon-Value_Pens-07__38803.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/754/Amazon-Value_Pens-07__38803.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/754/Amazon-Value_Pens-07__38803.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/753/Amazon-Value_Pens-06__97387.1778500401.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/753/Amazon-Value_Pens-06__97387.1778500401.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/141/images/753/Amazon-Value_Pens-06__97387.1778500401.220.290.jpg?c=1",
+        "alt": "Value Stick Pen"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<p>The Value Stick Pen is the perfect combination of affordability and functionality. Designed for bulk distribution, promotions, and everyday office use, this pen offers a clean, minimalistic white plastic barrel with a removable cap in black or blue.</p>\n<p><strong>Specifications</strong>:</p>\n<ul>\n<li><strong>Material</strong>: Lightweight white plastic barrel</li>\n<li><strong>Cap Colors</strong>: Black or Blue (barrel remains white)</li>\n<li><strong>Dimensions</strong>: 15cm x 1mm (+/-2mm tolerance)</li>\n<li><strong>Ink Color</strong>: Black</li>\n</ul>\n<p><strong>Customization Options</strong>:</p>\n<ul>\n<li><strong>Printing Method</strong>: UV Inkjet Printing</li>\n<li><strong>Print Area</strong>: 90mm x 5mm</li>\n<li><strong>Full-Color Digital Printing</strong>: Crisp, professional branding with no setup fees or hidden charges</li>\n</ul>\n<p><strong>Performance &amp; Benefits</strong>:</p>\n<ul>\n<li><strong>Reliable Ballpoint Ink</strong>: Smooth flow for effortless writing</li>\n<li><strong>Perfect for Various Uses</strong>: Ideal for trade shows, schools, businesses, and giveaways</li>\n<li><strong>Affordable Bulk Pricing</strong>: Enjoy volume discounts for large orders</li>\n<li><strong>Durable Design</strong>: Ensures extended usability</li>\n<li><strong>Lightweight and Durable</strong>: Easy to handle and built to last</li>\n<li><strong>Long-Lasting Black Ink</strong>: Provides a consistent writing experience</li>\n</ul>\n<p><strong>Order Your Value Stick Pens Today!</strong><span>&nbsp;</span>Elevate your promotional efforts with a pen that combines affordability, style, and functionality. Customize your pen with full-color digital printing for crisp, professional branding. Click the \"Buy Now\" button and add these budget-friendly pens to your collection!</p>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
