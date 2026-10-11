@@ -180,7 +180,7 @@ function syncPanel(){const p=P(),lk=look(p,S);
 
 /* ---------- render ---------- */
 let rq=0,actual=false;
-function render(){cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const p=P(),ppl=people();if(who>=ppl.length)who=0;const person=ppl[who],z=sizeOf(p,S);
+function render(){cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{resetUI();const p=P(),ppl=people();if(who>=ppl.length)who=0;const person=ppl[who],z=sizeOf(p,S);
   const r=badge(p,S,person,{mode:'edit',px:actual?96:null});$('#badgeView').innerHTML=r.svg;
   $('#badgeView').setAttribute('aria-label',`${p.name} preview${person.name?': '+person.name:''}${person.title?', '+person.title:''}`);
   $('#stageBox').classList.toggle('actual',actual);
@@ -211,7 +211,26 @@ async function setLogo(src,{genie=false,svg=false}={}){
 
 /* ---------- toast ---------- */
 window.CG_TOAST=m=>toast(m);   /* the shared site script (site.js: header, cart) uses this page's toast */
-let tt;function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,4200)}
+let tt;function toast(m,act,fn){const t=$('#toast'),b=$('#toastAct');$('#toastTxt').textContent=m;b.hidden=!act;b.textContent=act||'';b.onclick=act?()=>{t.hidden=true;fn()}:null;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,act?8000:4200)}
+
+/* ---------- start over: back to a fresh badge of the same product (Undo brings it back) ---------- */
+let undoS=null;
+const freshS=()=>fit(blank(P()));
+function resetUI(){$('#startOver').disabled=JSON.stringify(S)===JSON.stringify(freshS())}
+function openReset(){const n=parseNames(S.names).length,li=[];
+ if(S.logo)li.push('Your logo');
+ li.push('Your text, fonts and text colors');
+ if(n)li.push(`Your team names list (${n} name${n===1?'':'s'})`);
+ if(S.bgImg)li.push('Your background image');
+ li.push('Background, border, size and back go back to where this badge starts');
+ $('#resetList').innerHTML=li.map(x=>`<li>${esc(x)}</li>`).join('');$('#resetDlg').showModal();track('badge_reset_open',{product:S.pid})}
+function resetBadge(){undoS=JSON.stringify(S);S=freshS();$('#genieP').value='';$('#genieMsg').textContent='';$('#geniePicks').innerHTML='';
+ save();syncPanel();render();track('badge_reset',{product:S.pid});
+ toast('Badge cleared. You\'re starting fresh with the sample badge.','Undo',()=>{if(!undoS)return;S=JSON.parse(undoS);undoS=null;save();syncPanel();render();toast('Your badge is back.')})}
+$('#startOver').addEventListener('click',openReset);
+$('#resetKeep').addEventListener('click',()=>$('#resetDlg').close());
+$('#resetGo').addEventListener('click',()=>{$('#resetDlg').close();resetBadge()});
+$('#resetDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.currentTarget.close()});
 
 /* ---------- events ---------- */
 function on(){

@@ -109,6 +109,8 @@ node tests/site-check.mjs           # one website: same header and footer everyw
 node tests/site-check.mjs http://127.0.0.1:8766/ 390 844
 node tests/edit-check.mjs           # real mouse and keyboard: edit a pen, pencil, notebook, badge and sticker
 node tests/edit-check.mjs http://127.0.0.1:8766/ 390 844
+node tests/reset-check.mjs          # Start over in both studios: clear, keep, Undo, reload, keyboard
+node tests/reset-check.mjs http://127.0.0.1:8766/ 390 844
 ```
 
 Then commit and push. Render redeploys by itself.

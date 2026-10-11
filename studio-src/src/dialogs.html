@@ -55,6 +55,16 @@
 </dialog>
 
 <!-- ================= SHORTCUTS ================= -->
+<dialog class="dlg dlg-sm" id="resetDlg" aria-labelledby="resetTitle" aria-describedby="resetLead">
+ <div class="dlg-h"><h2 id="resetTitle">Start over?</h2><button type="button" class="iconbtn" data-close-dlg aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-b">
+  <p id="resetLead">This clears your whole design:</p>
+  <ul class="reset-list" id="resetList"></ul>
+  <p class="reset-keep" id="resetKeep">Undo brings the design back if you change your mind.</p>
+  <div class="dlg-act"><button type="button" class="btn btn-ghost" data-close-dlg autofocus>Keep my design</button><button type="button" class="btn btn-danger" id="resetGo"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Clear and start over</button></div>
+ </div>
+</dialog>
+
 <dialog class="dlg" id="keysDlg" aria-labelledby="keysTitle">
  <div class="dlg-h"><h2 id="keysTitle">Keyboard shortcuts</h2><button type="button" class="iconbtn" data-close-dlg aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
  <div class="dlg-b"><div class="kcols" id="kcols"></div></div>

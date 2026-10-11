@@ -120,6 +120,7 @@
       <ul class="issues" id="namesIssues"></ul>
      </div>
     </details>
+    <div class="restart" id="restart"><button type="button" class="btn btn-ghost btn-sm" id="startOver"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Start over</button><span class="hint">Clears your logo, text, colors and names</span></div>
    </form>
   </div>
  </div>
@@ -166,4 +167,12 @@
   </section>
  </form>
 </dialog>
-<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden><span id="toastTxt"></span><button type="button" class="toast-act" id="toastAct" hidden></button></div>
+
+<dialog class="cdlg" id="resetDlg" aria-labelledby="resetTitle" aria-describedby="resetLead">
+ <h2 id="resetTitle">Start over?</h2>
+ <p id="resetLead">This clears your badge:</p>
+ <ul class="reset-list" id="resetList"></ul>
+ <p class="hint">Undo brings it back if you change your mind.</p>
+ <div class="cdlg-act"><button type="button" class="btn btn-ghost" id="resetKeep" autofocus>Keep my design</button><button type="button" class="btn btn-danger" id="resetGo"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Clear and start over</button></div>
+</dialog>

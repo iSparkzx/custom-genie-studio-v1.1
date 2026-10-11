@@ -465,6 +465,24 @@ select.sel{appearance:none}
 .fin[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
 #cbSum{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cut.imprint{stroke-dasharray:6 4}
+/* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
+.tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
+.tool.tool-lbl .tool-t{white-space:nowrap}
+@media (max-width:1279px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+.lfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 12px 14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3)}
+.lfoot[hidden]{display:none}
+.lreset{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.lreset .ico{width:16px;height:16px}
+.lreset:hover{border-color:var(--err);color:var(--err)}
+.dlg-sm{width:min(440px,calc(100vw - 32px))}
+.reset-list{margin:8px 0 12px;padding-left:20px;line-height:1.55}
+.reset-list li{margin:2px 0}
+.reset-keep{margin:0 0 18px;font-size:13px;color:var(--ink-3)}
+.dlg-act{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.btn-danger{background:#B42318;color:#fff;border:0}
+.btn-danger:hover{background:#912018}
+.btn-danger .ico{width:18px;height:18px}
+@media (max-width:480px){.dlg-act{flex-direction:column-reverse}.dlg-act .btn{width:100%}}
 /* pens and notebooks: overview of the whole item while editing the imprint */
 .item-mini{position:absolute;top:30px;right:12px;z-index:3;width:min(260px,34%);margin:0;padding:6px 8px 4px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--surface) 88%,transparent);pointer-events:none}
 .item-mini svg{display:block;width:100%;height:auto;max-height:120px}
@@ -1181,7 +1199,8 @@ body.hide-notes .note{display:none}
  <symbol id="t-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
  <symbol id="t-path" viewBox="0 0 24 24"><path d="M4 17c3-9 6 3 9-4s5-6 7-5"/></symbol>
  <symbol id="t-group" viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/></symbol>
- <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
+ <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3.5 3.5V8H8"/></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M15 14l5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></symbol>
  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
  <symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.6A9.6 9.6 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a16 16 0 0 1-3 3.7M6.4 6.5A16 16 0 0 0 2.5 12S6 18.5 12 18.5a9 9 0 0 0 4.3-1.1M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
@@ -1419,6 +1438,7 @@ body.hide-notes .note{display:none}
      </div>
      <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
      <div class="tgrp tright">
+      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh" disabled><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
       <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
       <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
       <span class="tsep"></span>
@@ -1446,8 +1466,9 @@ body.hide-notes .note{display:none}
      <div class="pbody" id="lp-layers" data-pane="layers" role="tabpanel" aria-labelledby="lt-layers">
       <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b id="layerArtNoun">Sticker</b> · <span id="layerArtTxt"></span></span></button>
       <ul class="layers" id="layers" role="tree" aria-label="Layers" aria-multiselectable="true"></ul>
-      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the sticker shows up here. Drag to reorder, click the eye to hide.</p>
+      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the <span data-noun="one">sticker</span> shows up here. Drag to reorder, click the eye to hide.</p>
        <div class="qadd"><button type="button" data-quick="text"><svg class="ico"><use href="#t-text"/></svg>Text</button><button type="button" data-quick="image"><svg class="ico"><use href="#t-image"/></svg>Image</button><button type="button" data-quick="genie"><svg class="gmark" style="width:10px;height:18px"><use href="#g-mark"/></svg>Genie</button></div></div>
+      <div class="lfoot" id="lfoot" hidden><button type="button" class="lreset" id="resetLink"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Start over</button><span>Clears the whole design</span></div>
      </div>
      <div class="pbody" id="lp-assets" data-pane="assets" role="tabpanel" aria-labelledby="lt-assets" hidden>
       <section class="psec"><h3 class="psec-h">Templates <small>Replaces your design</small></h3><div class="a-grid" id="tplGrid"></div></section>
@@ -1665,6 +1686,16 @@ body.hide-notes .note{display:none}
 </dialog>
 
 <!-- ================= SHORTCUTS ================= -->
+<dialog class="dlg dlg-sm" id="resetDlg" aria-labelledby="resetTitle" aria-describedby="resetLead">
+ <div class="dlg-h"><h2 id="resetTitle">Start over?</h2><button type="button" class="iconbtn" data-close-dlg aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
+ <div class="dlg-b">
+  <p id="resetLead">This clears your whole design:</p>
+  <ul class="reset-list" id="resetList"></ul>
+  <p class="reset-keep" id="resetKeep">Undo brings the design back if you change your mind.</p>
+  <div class="dlg-act"><button type="button" class="btn btn-ghost" data-close-dlg autofocus>Keep my design</button><button type="button" class="btn btn-danger" id="resetGo"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Clear and start over</button></div>
+ </div>
+</dialog>
+
 <dialog class="dlg" id="keysDlg" aria-labelledby="keysTitle">
  <div class="dlg-h"><h2 id="keysTitle">Keyboard shortcuts</h2><button type="button" class="iconbtn" data-close-dlg aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button></div>
  <div class="dlg-b"><div class="kcols" id="kcols"></div></div>
@@ -2441,9 +2472,11 @@ inl.addEventListener('keydown',e=>{if(e.key==='Escape'||(e.key==='Enter'&&(e.ctr
 
 /* ---------- keyboard ---------- */
 const typing=t=>t&&t.closest&&t.closest('input,textarea,select,[contenteditable="true"]');
-document.addEventListener('keydown',ev=>{const t=ev.target;if(typing(t))return;if($('#reviewDlg').open||$('#keysDlg').open)return;
+document.addEventListener('keydown',ev=>{const t=ev.target;if(typing(t))return;if($('#reviewDlg').open||$('#keysDlg').open||$('#resetDlg').open)return;
  if(!studio.contains(t)&&t!==document.body&&!(t&&t.closest&&t.closest('.pop')))return;
  const mod=ev.ctrlKey||ev.metaKey,c=ev.code,k=ev.key;
+ /* Enter and Space press the focused button or control (WCAG 2.1.1); the canvas shortcuts only take them on the canvas itself */
+ if((k==='Enter'||k===' ')&&t&&t.closest&&t.closest('button,a[href],summary,select,[role="button"],[role="radio"],[role="tab"],[role="menuitem"]'))return;
  if(k===' '&&!ev.repeat&&!mod){ev.preventDefault();spaceDown=true;vp.classList.add('panning');return}
  if(mod&&c==='KeyZ'){ev.preventDefault();ev.shiftKey?redo():undo();return}
  if(mod&&c==='KeyY'){ev.preventDefault();redo();return}
@@ -2522,7 +2555,7 @@ let draftLostImg=false;function loadDraft(){try{const s=localStorage.getItem(DKE
 /* ---------- images ---------- */
 const MAX_MB=25;function loadFile(file,cb){if(!file)return;if(!/^image\//.test(file.type)){toast(`"${file.name}" isn't an image. Choose a PNG, JPG, SVG or WebP file.`);return}if(file.size>MAX_MB*1048576){toast(`"${file.name}" is ${(file.size/1048576).toFixed(0)} MB. Choose a file under ${MAX_MB} MB.`);return}
  const r=new FileReader();r.onload=()=>{const key=nid(),img=new Image();img.onload=()=>{IM[key]={url:r.result,img,name:file.name,vector:file.type==='image/svg+xml',natW:img.naturalWidth||1000,natH:img.naturalHeight||1000};upThumbs();cb(key)};img.onerror=()=>toast(`Couldn't open "${file.name}". Try a PNG or JPG.`);img.src=r.result};r.readAsDataURL(file)}
-function upThumbs(){const g=$('#upGrid');g.innerHTML=Object.entries(IM).filter(([k,m])=>!m.derived).map(([k,m])=>`<button type="button" data-addimg="${k}" aria-label="Add ${esc(m.name)} to the sticker" data-tip="${esc(m.name)}"><img src="${m.url}" alt=""></button>`).join('')}
+function upThumbs(){const g=$('#upGrid');g.innerHTML=Object.entries(IM).filter(([k,m])=>!m.derived).map(([k,m])=>`<button type="button" data-addimg="${k}" aria-label="Add ${esc(m.name)} to the ${esc(NOUN())}" data-tip="${esc(m.name)}"><img src="${m.url}" alt=""></button>`).join('')}
 function addImage(key,at){const m=IM[key],ar=m.natW/m.natH,mx=Math.min(W(),H())*.7;let w=mx,h=mx;if(ar>=1)h=w/ar;else w=h*ar;if(w>W()*.85){h*=W()*.85/w;w=W()*.85}
  const inside=at&&at.x>0&&at.y>0&&at.x<W()&&at.y<H();addEl(base('image',{key,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear:false}),'upload')}
 function makeClear(key){const m=IM[key];if(!m)return Promise.resolve();if(m.clear)return Promise.resolve();if(m.clearing)return m.clearing;
@@ -2556,7 +2589,7 @@ function chrome(){
  else if(editable()&&TOOLHINT[tool]&&!op)m=TOOLHINT[tool];else if(view==='dome'&&V3.failed&&!op&&!blank)m='Flat preview of the finished sticker (the 3D view needs an internet connection). Switch to Design to edit.';
  else if(view==='edit'&&D.shape==='custom'&&!CT.url&&$('#start').hidden)m='"Cut to design" traces around your artwork. Add a logo, text or shape first.';
  if(view!=='proof'){msg.textContent=m;msg.hidden=!m}
- legendUI();layersUI();fillIns();cbarUI();
+ legendUI();layersUI();fillIns();cbarUI();resetUI();
  tplUI();heroUI();miniUI();$('#layerArtTxt').textContent=`${artLabel()} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;viewBtns();$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
 
 /* ---------- layers ---------- */
@@ -2878,6 +2911,34 @@ $('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarge
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
  if(isBlank()){openPop(b,`<p class="hint" style="margin:6px 8px 8px;max-width:280px">The print check looks for small text, low-resolution images, art past the safe area, thin lines and low contrast. It runs as soon as you add a design.</p>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});return}
  openPop(b,`<div class="mh">Print check</div><ul class="checks" style="padding:0 2px 4px">${checksHTML(checks())}</ul>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});pop.onclick=e2=>onCheckClick(e2,false)});
+/* ---------- start over: clear the whole design in one step (Undo brings it back) ---------- */
+const canReset=()=>!isBlank()||GC.hist.length>0||NB.R.length>0;
+function resetUI(){$('#resetBtn').disabled=!canReset();$('#lfoot').hidden=isBlank()}
+function openReset(){if(!canReset())return;if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
+ const n=D.els.length,c={text:0,image:0,shape:0};D.els.forEach(e=>c[e.type==='text'?'text':e.type==='image'?'image':'shape']++);
+ const parts=[c.text&&`${c.text} text`,c.image&&`${c.image} image${c.image>1?'s':''}`,c.shape&&`${c.shape} shape${c.shape>1?'s':''}`].filter(Boolean),li=[];
+ if(n)li.push(`${n} layer${n>1?'s':''} (${parts.join(', ')})`);
+ if(D.bg.t!=='none')li.push(D.bg.t==='img'?'The background image':'The background color');
+ li.push(PROD().family==='sticker'?`Size, shape and options go back to where this ${NOUN()} starts`:`Options go back to where this ${NOUN()} starts`);
+ if(GC.hist.length||NB.R.length)li.push("Genie's conversation and artwork options");
+ $('#resetList').innerHTML=li.map(x=>`<li>${esc(x)}</li>`).join('');
+ const up=Object.values(IM).filter(m=>!m.derived).length;
+ $('#resetKeep').textContent=up?`Your uploaded ${up===1?'image stays':'images stay'} in Add, Uploads. Undo brings the design back if you change your mind.`:'Undo brings the design back if you change your mind.';
+ $('#resetDlg').showModal();track('builder_reset_open',{product:D.pid,layers:n})}
+function resetDesign(){const n=D.els.length,pid=D.pid;if(editing)inl.blur();if(NB.ctl)NB.ctl.abort();
+ CUR_PID=pid;CUR_OPT={};D=newDoc();D.groups={};tier=0;conform(false);     /* the same product, as it opens */
+ sel=[];hover=null;gfocus=null;guides=[];editing=null;CT.sig='';CT.url=null;CT.bbox=null;cam=null;zoom=1;FITSIG='';
+ startDismissed=false;QUOTE=null;resetOrder();
+ Object.assign(GC,{mode:'open',hist:[],brief:{},refs:[],notes:[],plans:[]});NB.R=[];RES.length=0;
+ Object.assign(AI,{a:null,mode:'prompt',logo:null,logoInfo:null,orig:null,recolorN:0,attach:null});
+ $('#startText').value='';$('#gtext').value='';genieIntro();
+ if(view!=='edit')setView('edit');setTool('move');if(NARROW.matches||MID.matches)closeSheets();
+ commit();syncPanels();req();track('builder_reset',{product:pid,layers:n});
+ toast('Design cleared. Start fresh with Genie, a template or a blank canvas.','Undo',undo);
+ requestAnimationFrame(()=>{const f=$('#start:not([hidden]) button');(f||svg).focus({preventScroll:true})})}
+$('#resetBtn').addEventListener('click',openReset);$('#resetLink').addEventListener('click',openReset);
+$('#resetGo').addEventListener('click',()=>{$('#resetDlg').close();resetDesign()});
+$('#resetDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.currentTarget.close()});
 $('#reviewBtn').addEventListener('click',()=>{if(isBlank()){startDismissed=false;setView('edit');req();if(NARROW.matches)openSheet('genie');else requestAnimationFrame(()=>$('#startText').focus());return}openReview()});
 
 /* ---------- print check (codes follow the Print MCP spec) ---------- */
@@ -3226,7 +3287,7 @@ let heroSig='';
 function heroUI(){const p=PROD();if(heroSig===p.id)return;heroSig=p.id;const f=FAMI(),cap=s2=>s2.replace(/^./,c=>c.toUpperCase());
  $('#pTitle').textContent=p.name;$('#pTitle').classList.toggle('long',p.name.length>34);$('#crumbFam').textContent=f.label;$('#crumbProd').textContent=p.category||p.name;
  document.title=`${p.name} | Genie Studio Advanced | Custom Genie`;$('#layerArtNoun').textContent=cap(NOUN());
- $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());
+ $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());$$('[data-noun="one"]').forEach(e=>e.textContent=NOUN());
  const cv=$('#cv');cv.setAttribute('aria-label',`${cap(NOUN())} design canvas`);startCopyUI()}
 /* start card: wording and example prompts for the product being designed */
 function startCopyUI(){const c=startCopy(),n=NOUN();$('#startText').placeholder=c.ph;$('#startLbl').textContent=`Describe your ${n}`;

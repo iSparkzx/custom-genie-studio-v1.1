@@ -453,6 +453,24 @@ select.sel{appearance:none}
 .fin[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
 #cbSum{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cut.imprint{stroke-dasharray:6 4}
+/* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
+.tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
+.tool.tool-lbl .tool-t{white-space:nowrap}
+@media (max-width:1279px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+.lfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 12px 14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3)}
+.lfoot[hidden]{display:none}
+.lreset{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.lreset .ico{width:16px;height:16px}
+.lreset:hover{border-color:var(--err);color:var(--err)}
+.dlg-sm{width:min(440px,calc(100vw - 32px))}
+.reset-list{margin:8px 0 12px;padding-left:20px;line-height:1.55}
+.reset-list li{margin:2px 0}
+.reset-keep{margin:0 0 18px;font-size:13px;color:var(--ink-3)}
+.dlg-act{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.btn-danger{background:#B42318;color:#fff;border:0}
+.btn-danger:hover{background:#912018}
+.btn-danger .ico{width:18px;height:18px}
+@media (max-width:480px){.dlg-act{flex-direction:column-reverse}.dlg-act .btn{width:100%}}
 /* pens and notebooks: overview of the whole item while editing the imprint */
 .item-mini{position:absolute;top:30px;right:12px;z-index:3;width:min(260px,34%);margin:0;padding:6px 8px 4px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--surface) 88%,transparent);pointer-events:none}
 .item-mini svg{display:block;width:100%;height:auto;max-height:120px}

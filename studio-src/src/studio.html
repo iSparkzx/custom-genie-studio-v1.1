@@ -19,6 +19,7 @@
      </div>
      <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
      <div class="tgrp tright">
+      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh" disabled><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
       <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
       <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
       <span class="tsep"></span>
@@ -46,8 +47,9 @@
      <div class="pbody" id="lp-layers" data-pane="layers" role="tabpanel" aria-labelledby="lt-layers">
       <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b id="layerArtNoun">Sticker</b> · <span id="layerArtTxt"></span></span></button>
       <ul class="layers" id="layers" role="tree" aria-label="Layers" aria-multiselectable="true"></ul>
-      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the sticker shows up here. Drag to reorder, click the eye to hide.</p>
+      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the <span data-noun="one">sticker</span> shows up here. Drag to reorder, click the eye to hide.</p>
        <div class="qadd"><button type="button" data-quick="text"><svg class="ico"><use href="#t-text"/></svg>Text</button><button type="button" data-quick="image"><svg class="ico"><use href="#t-image"/></svg>Image</button><button type="button" data-quick="genie"><svg class="gmark" style="width:10px;height:18px"><use href="#g-mark"/></svg>Genie</button></div></div>
+      <div class="lfoot" id="lfoot" hidden><button type="button" class="lreset" id="resetLink"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Start over</button><span>Clears the whole design</span></div>
      </div>
      <div class="pbody" id="lp-assets" data-pane="assets" role="tabpanel" aria-labelledby="lt-assets" hidden>
       <section class="psec"><h3 class="psec-h">Templates <small>Replaces your design</small></h3><div class="a-grid" id="tplGrid"></div></section>

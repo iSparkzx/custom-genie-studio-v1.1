@@ -7,7 +7,7 @@ function chrome(){
  else if(editable()&&TOOLHINT[tool]&&!op)m=TOOLHINT[tool];else if(view==='dome'&&V3.failed&&!op&&!blank)m='Flat preview of the finished sticker (the 3D view needs an internet connection). Switch to Design to edit.';
  else if(view==='edit'&&D.shape==='custom'&&!CT.url&&$('#start').hidden)m='"Cut to design" traces around your artwork. Add a logo, text or shape first.';
  if(view!=='proof'){msg.textContent=m;msg.hidden=!m}
- legendUI();layersUI();fillIns();cbarUI();
+ legendUI();layersUI();fillIns();cbarUI();resetUI();
  tplUI();heroUI();miniUI();$('#layerArtTxt').textContent=`${artLabel()} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;viewBtns();$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
 
 /* ---------- layers ---------- */
@@ -329,6 +329,34 @@ $('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarge
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
  if(isBlank()){openPop(b,`<p class="hint" style="margin:6px 8px 8px;max-width:280px">The print check looks for small text, low-resolution images, art past the safe area, thin lines and low contrast. It runs as soon as you add a design.</p>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});return}
  openPop(b,`<div class="mh">Print check</div><ul class="checks" style="padding:0 2px 4px">${checksHTML(checks())}</ul>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});pop.onclick=e2=>onCheckClick(e2,false)});
+/* ---------- start over: clear the whole design in one step (Undo brings it back) ---------- */
+const canReset=()=>!isBlank()||GC.hist.length>0||NB.R.length>0;
+function resetUI(){$('#resetBtn').disabled=!canReset();$('#lfoot').hidden=isBlank()}
+function openReset(){if(!canReset())return;if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
+ const n=D.els.length,c={text:0,image:0,shape:0};D.els.forEach(e=>c[e.type==='text'?'text':e.type==='image'?'image':'shape']++);
+ const parts=[c.text&&`${c.text} text`,c.image&&`${c.image} image${c.image>1?'s':''}`,c.shape&&`${c.shape} shape${c.shape>1?'s':''}`].filter(Boolean),li=[];
+ if(n)li.push(`${n} layer${n>1?'s':''} (${parts.join(', ')})`);
+ if(D.bg.t!=='none')li.push(D.bg.t==='img'?'The background image':'The background color');
+ li.push(PROD().family==='sticker'?`Size, shape and options go back to where this ${NOUN()} starts`:`Options go back to where this ${NOUN()} starts`);
+ if(GC.hist.length||NB.R.length)li.push("Genie's conversation and artwork options");
+ $('#resetList').innerHTML=li.map(x=>`<li>${esc(x)}</li>`).join('');
+ const up=Object.values(IM).filter(m=>!m.derived).length;
+ $('#resetKeep').textContent=up?`Your uploaded ${up===1?'image stays':'images stay'} in Add, Uploads. Undo brings the design back if you change your mind.`:'Undo brings the design back if you change your mind.';
+ $('#resetDlg').showModal();track('builder_reset_open',{product:D.pid,layers:n})}
+function resetDesign(){const n=D.els.length,pid=D.pid;if(editing)inl.blur();if(NB.ctl)NB.ctl.abort();
+ CUR_PID=pid;CUR_OPT={};D=newDoc();D.groups={};tier=0;conform(false);     /* the same product, as it opens */
+ sel=[];hover=null;gfocus=null;guides=[];editing=null;CT.sig='';CT.url=null;CT.bbox=null;cam=null;zoom=1;FITSIG='';
+ startDismissed=false;QUOTE=null;resetOrder();
+ Object.assign(GC,{mode:'open',hist:[],brief:{},refs:[],notes:[],plans:[]});NB.R=[];RES.length=0;
+ Object.assign(AI,{a:null,mode:'prompt',logo:null,logoInfo:null,orig:null,recolorN:0,attach:null});
+ $('#startText').value='';$('#gtext').value='';genieIntro();
+ if(view!=='edit')setView('edit');setTool('move');if(NARROW.matches||MID.matches)closeSheets();
+ commit();syncPanels();req();track('builder_reset',{product:pid,layers:n});
+ toast('Design cleared. Start fresh with Genie, a template or a blank canvas.','Undo',undo);
+ requestAnimationFrame(()=>{const f=$('#start:not([hidden]) button');(f||svg).focus({preventScroll:true})})}
+$('#resetBtn').addEventListener('click',openReset);$('#resetLink').addEventListener('click',openReset);
+$('#resetGo').addEventListener('click',()=>{$('#resetDlg').close();resetDesign()});
+$('#resetDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.currentTarget.close()});
 $('#reviewBtn').addEventListener('click',()=>{if(isBlank()){startDismissed=false;setView('edit');req();if(NARROW.matches)openSheet('genie');else requestAnimationFrame(()=>$('#startText').focus());return}openReview()});
 
 /* ---------- print check (codes follow the Print MCP spec) ---------- */
@@ -677,7 +705,7 @@ let heroSig='';
 function heroUI(){const p=PROD();if(heroSig===p.id)return;heroSig=p.id;const f=FAMI(),cap=s2=>s2.replace(/^./,c=>c.toUpperCase());
  $('#pTitle').textContent=p.name;$('#pTitle').classList.toggle('long',p.name.length>34);$('#crumbFam').textContent=f.label;$('#crumbProd').textContent=p.category||p.name;
  document.title=`${p.name} | Genie Studio Advanced | Custom Genie`;$('#layerArtNoun').textContent=cap(NOUN());
- $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());
+ $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());$$('[data-noun="one"]').forEach(e=>e.textContent=NOUN());
  const cv=$('#cv');cv.setAttribute('aria-label',`${cap(NOUN())} design canvas`);startCopyUI()}
 /* start card: wording and example prompts for the product being designed */
 function startCopyUI(){const c=startCopy(),n=NOUN();$('#startText').placeholder=c.ph;$('#startLbl').textContent=`Describe your ${n}`;
