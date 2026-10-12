@@ -11,6 +11,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import zlib from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -101,14 +102,16 @@ const VARIANTS = [
 const s = (v, n) => String(v ?? '').replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
 function genPrompt(o, i, n) {
   const L = [
-    'You are a senior brand designer at a top design agency. Create an original, professional, high-end logo for a custom domed vinyl sticker. The sticker is printed in full color at high resolution and covered with a clear, glossy resin dome, so rich color, gradients, shading and fine detail all print beautifully.',
+    o.product === 'badge'
+      ? 'You are a senior brand designer at a top design agency. Create an original, professional logo for a custom name badge. It is printed in full color but small, about 1 inch tall next to a person\'s name, so use bold, simple shapes, strong contrast, clean edges and few fine details.'
+      : 'You are a senior brand designer at a top design agency. Create an original, professional, high-end logo for a custom domed vinyl sticker. The sticker is printed in full color at high resolution and covered with a clear, glossy resin dome, so rich color, gradients, shading and fine detail all print beautifully.',
     `Customer brief: "${s(o.prompt, 600)}"`,
     'Follow the brief closely, including any subject, style or mood the customer asks for.',
   ];
   if (o.refCount) L.push(o.refCount > 1
     ? `The customer attached ${o.refCount} reference images. Use them for subject, colors and style. If one is their existing logo, keep it recognizable and build the new design around it. Do not copy any watermark or background clutter.`
     : 'The customer attached a reference image. Use it for subject, colors and style. If it is their existing logo, keep it recognizable and build the new design around it. Do not copy any watermark or background clutter.');
-  if (o.name) L.push(`Text: feature "${s(o.name, 40)}"${o.tagline ? ` and the tagline "${s(o.tagline, 60)}"` : ''}, spelled exactly, with beautiful, well-crafted typography that stays readable when the sticker is about 2 inches wide.`);
+  if (o.name) L.push(`Text: feature "${s(o.name, 40)}"${o.tagline ? ` and the tagline "${s(o.tagline, 60)}"` : ''}, spelled exactly, with beautiful, well-crafted typography that stays readable when the ${o.product === 'badge' ? 'logo is about 1 inch wide' : 'sticker is about 2 inches wide'}.`);
   if (Array.isArray(o.colors) && o.colors.length) L.push(`Color palette: ${o.colors.slice(0, 5).map(c => s(c, 20)).join(', ')}. Use rich tones, shading and highlights within this palette.`);
   if (SHAPE_WORDS[o.shape]) L.push(`The finished sticker is cut as a ${SHAPE_WORDS[o.shape]}: compose the logo so it suits that shape.`);
   L.push('Quality bar: polished, award-winning, agency-level craftsmanship with depth and dimension: the kind of logo a business would proudly put on its storefront.');
@@ -495,9 +498,16 @@ function serveStatic(req, res, url) {
   if (!f.startsWith(PUBLIC)) return send(res, 403, 'Forbidden', 'text/plain');
   fs.readFile(f, (err, buf) => {
     if (err) return send(res, 404, 'Not found', 'text/plain');
-    send(res, 200, buf, MIME[path.extname(f).toLowerCase()] || 'application/octet-stream');
+    const type = MIME[path.extname(f).toLowerCase()] || 'application/octet-stream';
+    if (/^(text\/|application\/json|image\/svg)/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] || '') && buf.length > 1024) {
+      const key = f + ':' + buf.length + ':' + crypto.createHash('sha1').update(buf).digest('hex');   // pages are rebuilt in place, so key on content
+      let gz = GZ.get(key); if (!gz) { gz = zlib.gzipSync(buf, { level: 9 }); GZ.set(key, gz); if (GZ.size > 50) GZ.delete(GZ.keys().next().value); }
+      return send(res, 200, gz, type, { 'content-encoding': 'gzip', vary: 'Accept-Encoding' });
+    }
+    send(res, 200, buf, type);
   });
 }
+const GZ = new Map();   // gzip cache for static pages
 
 /* optional team password (GENIE_TEAM_PASSWORD): the browser asks once, any user name works */
 function teamOK(req, c) {

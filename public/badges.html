@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Custom Name Badges | Custom Genie</title>
+<meta name="description" content="Design custom name badges with your logo, names and titles. Magnet or pin, metal, plastic, wood or engraved. Add your whole team's names and check every badge before you order.">
+<script>try{const t=localStorage.getItem('cg-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Homemade+Apple&family=Josefin+Sans:wght@400;700&family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Homemade+Apple&family=Josefin+Sans:wght@400;700&family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Work+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+<style>
+:root{
+  --bg:#F4F5F7; --surface:#FFFFFF; --sunk:#F5F6F8; --raise:#FFFFFF; --line:#E3E7EC; --line-strong:#C6CDD5;
+  --ink:#111827; --ink-2:#3F4854; --ink-3:#5F6875; --ink-4:#8A929D;
+  --navy:#0F1B3D; --accent:#5A3BD6; --accent-2:#6B3FD8; --accent-soft:#F0ECFF; --accent-ink:#4B2FC0;
+  --hot:#D21F4B; --hot-soft:#FDEDF1; --cyan:#21C8E2; --cyan-soft:#E6F8FB; --cyan-ink:#086F80;
+  --red:#F2364C; --cta:#D91F3A; --cta-hover:#C21D33;
+  --star:#F5B82E; --star-off:#C9CED6;
+  --ok:#0F7A45; --ok-bg:#E9F7EF; --warn:#9A5B00; --warn-bg:#FFF6E5; --err:#B42318; --err-bg:#FEF2F1;
+  --note-ink:#6B4200; --note-bg:#FFF6DF; --note-line:#D9A23A;
+  --canvas:#E9ECF1; --dot:#CBD2DA; --sel:#5A3BD6; --guide:#F2364C; --focus:#5A3BD6;
+  --grad-bar:linear-gradient(90deg,#1A5FD6 0%,#6B3FD8 55%,#D12A62 100%);
+  --grad-cta:linear-gradient(90deg,#D7265A 0%,#6E3BD8 100%);
+  --grad-cta-h:linear-gradient(90deg,#C81E50 0%,#5B33C9 100%);
+  --grad-genie:linear-gradient(120deg,#F43A55 0%,#A47A8E 50%,#2CCBE6 100%);
+  --bd1:rgba(26,95,214,.22); --bd2:rgba(107,63,216,.18); --bd3:rgba(209,42,98,.18);
+  --r-xl:20px; --r-lg:16px; --r-md:12px; --r-sm:8px;
+  --shadow-1:0 1px 2px rgba(17,24,39,.06);
+  --shadow-2:0 1px 3px rgba(17,24,39,.06),0 10px 28px rgba(17,24,39,.10);
+  --shadow-3:0 2px 6px rgba(17,24,39,.08),0 24px 60px rgba(15,27,61,.22);
+  --logo-filter:none;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1114; --surface:#161A1F; --sunk:#1B2027; --raise:#1F252C; --line:#272D35; --line-strong:#3A424C;
+  --ink:#EEF1F4; --ink-2:#C3CAD2; --ink-3:#9AA3AE; --ink-4:#6F7883;
+  --navy:#0A1226; --accent:#B7A6FF; --accent-2:#A08BFF; --accent-soft:#251D40; --accent-ink:#CBBEFF; --hot:#FF7A93; --hot-soft:#2A1520;
+  --cyan-soft:#0F2E34; --cyan-ink:#62D9EC; --star-off:#4A525C;
+  --ok:#6EDC9F; --ok-bg:#10261A; --warn:#F6C66B; --warn-bg:#2A2210; --err:#FF8A80; --err-bg:#2A1517;
+  --note-ink:#F6D28B; --note-bg:#2A2310; --note-line:#8A6A1F;
+  --canvas:#0F1317; --dot:#262D35; --sel:#A08BFF; --focus:#B7A6FF;
+  --bd1:rgba(59,130,246,.30); --bd2:rgba(139,92,246,.28); --bd3:rgba(236,72,153,.22);
+  --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 2px 4px rgba(0,0,0,.3),0 14px 36px rgba(0,0,0,.45); --shadow-3:0 4px 10px rgba(0,0,0,.4),0 30px 70px rgba(0,0,0,.6);
+  --logo-filter:invert(1) hue-rotate(180deg); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1114; --surface:#161A1F; --sunk:#1B2027; --raise:#1F252C; --line:#272D35; --line-strong:#3A424C;
+  --ink:#EEF1F4; --ink-2:#C3CAD2; --ink-3:#9AA3AE; --ink-4:#6F7883;
+  --navy:#0A1226; --accent:#B7A6FF; --accent-2:#A08BFF; --accent-soft:#251D40; --accent-ink:#CBBEFF; --hot:#FF7A93; --hot-soft:#2A1520;
+  --cyan-soft:#0F2E34; --cyan-ink:#62D9EC; --star-off:#4A525C;
+  --ok:#6EDC9F; --ok-bg:#10261A; --warn:#F6C66B; --warn-bg:#2A2210; --err:#FF8A80; --err-bg:#2A1517;
+  --note-ink:#F6D28B; --note-bg:#2A2310; --note-line:#8A6A1F;
+  --canvas:#0F1317; --dot:#262D35; --sel:#A08BFF; --focus:#B7A6FF;
+  --bd1:rgba(59,130,246,.30); --bd2:rgba(139,92,246,.28); --bd3:rgba(236,72,153,.22);
+  --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 2px 4px rgba(0,0,0,.3),0 14px 36px rgba(0,0,0,.45); --shadow-3:0 4px 10px rgba(0,0,0,.4),0 30px 70px rgba(0,0,0,.6);
+  --logo-filter:invert(1) hue-rotate(180deg); color-scheme:dark}
+
+
+/* ==========================================================================
+   Custom Genie · Name badge studio. Brand tokens come from studio-src/src/style.css (:root block).
+   Mobile first. The preview stays in view while editing (sticky on phones, side column on desktop).
+   ========================================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--accent-ink)}
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:8px;top:-60px;z-index:100;background:var(--surface);color:var(--ink);padding:10px 14px;border-radius:var(--r-sm);box-shadow:var(--shadow-2)}
+.skip:focus{top:8px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+[hidden]{display:none!important}
+:root[data-theme="dark"] .when-light,:root[data-theme="light"] .when-dark{display:none}
+
+/* header */
+.promo{background:var(--navy);color:#fff;font-size:13px}
+.promo-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:36px}
+.promo-msg{margin:0}
+.theme-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:#fff;cursor:pointer;min-height:36px;padding:0 4px}
+.hdr{background:var(--surface);border-bottom:1px solid var(--line)}
+.hdr-row{display:flex;align-items:center;gap:16px;min-height:64px}
+.logo img{height:40px;width:auto;filter:var(--logo-filter)}
+.hdr-nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+.hdr-nav a{padding:10px 12px;border-radius:var(--r-sm);color:var(--ink-2);text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap}
+.hdr-nav a[aria-current="page"]{color:var(--accent-ink);background:var(--accent-soft)}
+.cart-btn{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+.cart-count{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;border-radius:10px;background:var(--cta);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 5px}
+@media (max-width:560px){.hdr-nav a:not([aria-current]){display:none}.logo img{height:34px}.hdr-row{gap:8px}}
+
+/* intro */
+.crumbs ol{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0;font-size:13px;color:var(--ink-3)}
+.crumbs li+li::before{content:"/";margin-right:6px;color:var(--ink-4)}
+.crumbs a{color:var(--ink-3)}
+@media (max-width:560px){.crumbs li:nth-child(2){display:none}.crumbs li[aria-current]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:calc(100vw - 110px)}.crumbs ol{flex-wrap:nowrap}}
+.intro h1{margin:6px 0 2px;font-size:clamp(24px,4.4vw,34px);line-height:1.15;letter-spacing:-.01em}
+.sub{margin:0 0 14px;color:var(--ink-3);max-width:60ch}
+
+/* studio */
+.studio{display:grid;gap:16px;align-items:start;padding-bottom:96px}
+.stage{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px;margin:0 -16px;padding-inline:16px;border-bottom:1px solid var(--line)}
+.stage-box{position:relative;display:grid;place-items:center;height:clamp(150px,30vh,260px);border-radius:var(--r-lg);border:1px solid var(--line);
+  background:var(--canvas) radial-gradient(var(--dot) 1px,transparent 1.2px) 0 0/16px 16px;overflow:auto}
+.badge-view{display:grid;place-items:center;width:100%;height:100%;padding:14px}
+.badge-view svg{display:block;width:100%;height:100%;max-width:560px}
+.stage-box.actual .badge-view svg{width:auto;height:auto;max-width:none}
+.stage-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}
+.stage-cap{margin:0;font-size:12.5px;color:var(--ink-3)}
+.who{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px}
+.who p{margin:0;font-size:13px;font-weight:600;min-width:0;text-align:center}
+.checks{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px}
+.checks li{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.35;padding:6px 10px;border-radius:var(--r-sm)}
+.checks li.ok{color:var(--ok);background:var(--ok-bg)}
+.checks li.warn{color:var(--warn);background:var(--warn-bg)}
+.checks li .ico{width:16px;height:16px;margin-top:1px}
+@media (max-width:899px){.checks li.ok{display:none}.stage .checks{max-height:60px;overflow:auto}}
+@media (min-width:900px){
+  .wrap{padding:0 24px}
+  .studio{grid-template-columns:minmax(0,1.2fr) minmax(360px,.85fr);gap:24px}
+  .stage{top:16px;margin:0;padding:0;border:0;background:none}
+  .stage-box{height:clamp(320px,calc(100vh - 290px),600px)}
+  .badge-view{padding:32px}
+}
+
+/* panel */
+.panel{display:grid;gap:12px;min-width:0}
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg)}
+.sec>summary{display:flex;align-items:center;gap:10px;min-height:52px;padding:0 16px;font-weight:700;font-size:15px;cursor:pointer;list-style:none}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary::after{content:"";margin-left:auto;width:9px;height:9px;border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:rotate(45deg);transition:transform .15s}
+.sec[open]>summary::after{transform:rotate(-135deg)}
+.n{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);font-size:12.5px}
+.opt-l{font-weight:400;color:var(--ink-3)}
+.sec-in{padding:0 16px 16px;display:grid;gap:12px}
+.lbl{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:600;margin-bottom:4px;color:var(--ink-2)}
+.lbl output{font-weight:500;color:var(--ink-3)}
+.input{width:100%;min-height:44px;padding:9px 12px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--surface)}
+textarea.input{resize:vertical;line-height:1.45}
+.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13.5px}
+.input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+.hint{margin:0;font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{min-width:0}
+.range{width:100%;accent-color:var(--accent);min-height:32px}
+.color{width:100%;height:44px;padding:3px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--surface);cursor:pointer}
+fieldset.opt{border:0;margin:0;padding:0;min-width:0}
+fieldset.opt legend{padding:0;margin-bottom:6px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.pills,.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.pills label,.swatches label,.seg label{position:relative;cursor:pointer}
+.pills input,.swatches input,.seg input,.layouts input{position:absolute;opacity:0;width:1px;height:1px}
+.pills span{display:flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid var(--line-strong);border-radius:22px;font-size:14px;background:var(--surface)}
+.pills input:checked+span{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-ink);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+.swatches span{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 12px 4px 5px;border:1px solid var(--line-strong);border-radius:22px;font-size:13.5px;background:var(--surface)}
+.swatches i{width:32px;height:32px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.swatches input:checked+span{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);font-weight:600}
+.pills input:focus-visible+span,.swatches input:focus-visible+span,.seg input:focus-visible+span,.layouts input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.seg{display:inline-flex;padding:3px;border-radius:12px;background:var(--sunk);gap:2px}
+.seg span{display:flex;align-items:center;min-height:40px;padding:0 16px;border-radius:9px;font-size:14px}
+.seg input:checked+span{background:var(--surface);box-shadow:var(--shadow-1);font-weight:600}
+.layouts{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.layouts label{cursor:pointer;position:relative}
+.layouts span{display:grid;gap:4px;padding:6px;border:1px solid var(--line-strong);border-radius:var(--r-md);background:var(--surface);font-size:11.5px;text-align:center;color:var(--ink-3);line-height:1.25}
+.layouts svg{width:100%;height:auto;display:block}
+.layouts input:checked+span{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);color:var(--accent-ink);font-weight:600}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;cursor:pointer;line-height:1.4}
+.check input{width:20px;height:20px;margin:1px 0 0;flex:none;accent-color:var(--accent)}
+.logo-row{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:var(--r-md);border:1px solid transparent;font-weight:600;font-size:14.5px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-sm{min-height:36px;padding:0 12px;font-size:13px}
+.btn-primary{background:var(--grad-cta);color:#fff}
+.btn-primary:hover{background:var(--grad-cta-h)}
+.btn-ghost{background:var(--surface);border-color:var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-3)}
+.btn-genie{background:var(--grad-genie);color:#fff}
+.btn[disabled],.btn[aria-busy="true"]{opacity:.6;cursor:progress}
+.icon-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);background:var(--surface);cursor:pointer;flex:none}
+.genie{display:grid;gap:8px;padding:12px;border-radius:var(--r-md);background:var(--sunk);border:1px dashed var(--line-strong)}
+.genie-h{margin:0;display:flex;gap:8px;align-items:center;font-weight:700;font-size:14px}
+.genie-picks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.genie-picks button{padding:6px;border:1px solid var(--line-strong);border-radius:var(--r-md);background:#fff;cursor:pointer;display:grid;gap:4px;font-size:12px;color:#3F4854}
+.genie-picks img{aspect-ratio:1;object-fit:contain;width:100%}
+.issues{list-style:none;margin:0;padding:0;display:grid;gap:4px;max-height:180px;overflow:auto}
+.issues li{font-size:13px;padding:6px 10px;border-radius:var(--r-sm);background:var(--warn-bg);color:var(--warn)}
+
+/* bottom bar: Review & Print only */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.bar-row{display:flex;align-items:center;gap:12px;min-height:68px}
+.bar-sum{margin:0;font-size:13.5px;color:var(--ink-2);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .btn-primary{margin-left:auto;min-height:48px;padding:0 24px;font-size:15px}
+@media (max-width:560px){.bar-sum{display:none}.bar .btn-primary{width:100%}}
+
+.ftr{border-top:1px solid var(--line);background:var(--surface);padding:20px 0 96px}
+.ftr-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-3)}
+.ftr img{height:32px;width:auto;filter:var(--logo-filter)}
+.ftr p{margin:0}
+
+/* review dialog */
+.rv{width:min(920px,100%);max-height:100%;height:100%;margin:0;padding:0;border:0;background:var(--surface);color:var(--ink)}
+.rv::backdrop{background:rgba(15,27,61,.55)}
+@media (min-width:760px){.rv{margin:auto;height:auto;max-height:calc(100vh - 48px);border-radius:var(--r-xl);box-shadow:var(--shadow-3)}}
+.rv-in{display:flex;flex-direction:column;height:100%;max-height:inherit}
+.rv-hd{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.rv-hd h2{margin:0;font-size:18px}
+.steps{display:flex;gap:6px;list-style:none;margin:0 auto 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;font-size:12.5px;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1px solid var(--line-strong);font-weight:700;font-size:11.5px}
+.steps li.now{color:var(--accent-ink);font-weight:700}
+.steps li.now::before{background:var(--accent);border-color:var(--accent);color:#fff}
+.steps li.done::before{content:"✓";background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
+.pane{padding:16px;overflow:auto;display:grid;gap:12px;align-content:start;flex:1}
+.pane-lead{margin:0;font-size:14px;color:var(--ink-2)}
+.proofs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.proofs figure{margin:0;padding:10px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--canvas)}
+.proofs figure.bad{border-color:var(--warn);background:var(--warn-bg)}
+.proofs svg{width:100%;height:auto;display:block}
+.proofs figcaption{margin-top:6px;font-size:12px;color:var(--ink-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.approve{padding:12px;border-radius:var(--r-md);background:var(--sunk)}
+.err{margin:0;color:var(--err);font-size:13.5px;font-weight:600}
+.pane-ft{display:flex;gap:8px;justify-content:flex-end;padding-top:4px;position:sticky;bottom:0;background:var(--surface);padding-bottom:4px}
+.stepper{display:flex;gap:8px;align-items:center;max-width:240px}
+.stepper .input{text-align:center;font-weight:700;font-size:17px}
+.tiers{width:100%;border-collapse:collapse;font-size:14px}
+.tiers caption{text-align:left;font-weight:700;margin-bottom:6px}
+.tiers th,.tiers td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+.tiers tr.on td{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+.spec{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0;font-size:14px}
+.spec dt{color:var(--ink-3)}
+.spec dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:1px solid var(--line);font-size:16px}
+.total strong{font-size:22px}
+.debug pre{white-space:pre-wrap;font-size:11.5px;max-height:240px;overflow:auto;background:var(--sunk);padding:10px;border-radius:var(--r-sm)}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);z-index:60;max-width:min(520px,calc(100% - 32px));background:#111827;color:#fff;padding:12px 16px;border-radius:var(--r-md);box-shadow:var(--shadow-3);font-size:14px}
+:root[data-theme="dark"] .toast{background:#EEF1F4;color:#111827}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></symbol>
+ <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+ <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.5 3.5h2.2l2.5 11.6a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 1.9-1.5l1.8-7.2H6"/><circle cx="10" cy="20.3" r="1.2"/><circle cx="17" cy="20.3" r="1.2"/></symbol>
+ <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+ <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+ <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+ <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+ <symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></symbol>
+ <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5v.1"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+ <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15.5V4M7 8.5L12 4l5 4.5"/><path d="M4 15v3.5A2 2 0 0 0 6 20.5h12a2 2 0 0 0 2-2V15"/></symbol>
+ <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M18.5 14.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></symbol>
+ <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6 7l1 13h10l1-13"/></symbol>
+ <symbol id="i-wand" viewBox="0 0 24 24"><path d="M5 19L16 8"/><path d="M15 3v2M19 5l-1.5 1.5M21 9h-2M11 5l1.5 1.5"/></symbol>
+ </svg>
+<a class="skip" href="#studio">Skip to the badge designer</a>
+<div class="promo"><div class="wrap promo-row">
+  <p class="promo-msg">Free shipping on orders over $75</p>
+  <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode"><svg class="ico when-light" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico when-dark" aria-hidden="true"><use href="#i-sun"/></svg><span class="when-light">Dark mode</span><span class="when-dark">Light mode</span></button>
+</div></div>
+<header class="hdr"><div class="wrap hdr-row">
+  <a class="logo" href="#" data-proto="Logo links to the home page in production."><img src="data:image/png;base64,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" alt="Custom Genie home" width="154" height="66"></a>
+  <nav class="hdr-nav" aria-label="Main"><a href="index.html">Stickers</a><a href="badges.html" aria-current="page">Name badges</a><a href="#" data-proto="Pens are coming next.">Pens</a></nav>
+  <button class="cart-btn" type="button" id="cartBtn" aria-label="Cart, 0 items"><svg class="ico" aria-hidden="true"><use href="#i-cart"/></svg><span class="cart-count" id="cartCount" aria-hidden="true">0</span></button>
+</div></header>
+
+<main id="main">
+ <div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#" data-proto="Links to the home page in production.">Home</a></li><li><a href="#" data-proto="Links to the badge category in production.">Name badges</a></li><li aria-current="page" id="crumbName">Badge</li></ol></nav>
+  <div class="intro">
+   <h1 id="pageTitle">Custom Name Badges</h1>
+   <p class="sub">Add your logo, your team's names and titles, and check every badge before you order.</p>
+  </div>
+
+  <div class="studio" id="studio">
+   <section class="stage" aria-labelledby="stageH">
+    <h2 class="sr-only" id="stageH">Badge preview</h2>
+    <div class="stage-box" id="stageBox">
+     <div class="badge-view" id="badgeView" role="img" aria-label="Badge preview"></div>
+    </div>
+    <div class="stage-foot">
+     <p class="stage-cap" id="stageCap"></p>
+     <button type="button" class="btn btn-ghost btn-sm" id="actualBtn" aria-pressed="false">Actual size</button>
+    </div>
+    <div class="who" id="who" hidden>
+     <button type="button" class="icon-btn" id="whoPrev" aria-label="Previous name"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+     <p id="whoTxt" aria-live="polite"></p>
+     <button type="button" class="icon-btn" id="whoNext" aria-label="Next name"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+    </div>
+    <ul class="checks" id="checks" aria-live="polite"></ul>
+   </section>
+
+   <form class="panel" id="panel" novalidate>
+    <details class="sec" open>
+     <summary><span class="n">1</span>Badge</summary>
+     <div class="sec-in">
+      <label class="lbl" for="product">Badge type</label>
+      <select id="product" class="input"></select>
+      <p class="hint" id="productHint"></p>
+      <fieldset class="opt" id="sizeSet"><legend>Size</legend><div class="pills" id="sizes"></div></fieldset>
+      <fieldset class="opt" id="attachSet"><legend>Back</legend><div class="pills" id="attach"></div><p class="hint">Magnets don't put holes in clothing. Pins hold better on thick fabric.</p></fieldset>
+     </div>
+    </details>
+
+    <details class="sec" open>
+     <summary><span class="n">2</span>Layout</summary>
+     <div class="sec-in"><div class="layouts" id="layouts" role="radiogroup" aria-label="Layout"></div></div>
+    </details>
+
+    <details class="sec" open>
+     <summary><span class="n">3</span>Name and title</summary>
+     <div class="sec-in">
+      <div class="field"><label class="lbl" for="tName">Name</label><input id="tName" class="input" maxlength="40" autocomplete="off" spellcheck="false"></div>
+      <div class="field" id="titleField"><label class="lbl" for="tTitle">Title <span class="opt-l">(optional)</span></label><input id="tTitle" class="input" maxlength="50" autocomplete="off"></div>
+      <p class="hint" id="namesHint">Ordering for a team? Add everyone's names under Team names.</p>
+      <div class="grid2">
+       <div class="field"><label class="lbl" for="font1">Name font</label><select id="font1" class="input"></select></div>
+       <div class="field" id="font2Field"><label class="lbl" for="font2">Title font</label><select id="font2" class="input"></select></div>
+      </div>
+      <div class="grid2">
+       <div class="field"><label class="lbl" for="fs1">Name size <output id="fs1o" for="fs1"></output></label><input type="range" id="fs1" class="range"></div>
+       <div class="field" id="fs2Field"><label class="lbl" for="fs2">Title size <output id="fs2o" for="fs2"></output></label><input type="range" id="fs2" class="range"></div>
+      </div>
+      <div class="grid2" id="colorRow">
+       <div class="field"><label class="lbl" for="c1">Name color</label><input type="color" id="c1" class="color"></div>
+       <div class="field" id="c2Field"><label class="lbl" for="c2">Title color</label><input type="color" id="c2" class="color"></div>
+      </div>
+      <p class="hint" id="engraveHint" hidden></p>
+      <fieldset class="opt"><legend>Text alignment</legend><div class="seg" id="align">
+       <label><input type="radio" name="align" value="left"><span>Left</span></label><label><input type="radio" name="align" value="center"><span>Center</span></label><label><input type="radio" name="align" value="right"><span>Right</span></label>
+      </div></fieldset>
+     </div>
+    </details>
+
+    <details class="sec" open>
+     <summary><span class="n">4</span>Logo</summary>
+     <div class="sec-in">
+      <div class="logo-row">
+       <label class="btn btn-ghost" for="logoFile"><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg>Upload your logo</label>
+       <input type="file" id="logoFile" class="sr-only" accept="image/png,image/jpeg,image/svg+xml,image/webp">
+       <button type="button" class="btn btn-ghost" id="logoRemove" hidden><svg class="ico" aria-hidden="true"><use href="#i-trash"/></svg>Remove</button>
+      </div>
+      <p class="hint">PNG, JPG, SVG or WEBP up to 10 MB. A logo on a transparent background looks best.</p>
+      <div class="field" id="logoScaleField" hidden><label class="lbl" for="logoScale">Logo size <output id="logoScaleO" for="logoScale"></output></label><input type="range" id="logoScale" class="range"></div>
+      <label class="check" id="whiteRow" hidden><input type="checkbox" id="dropWhite"> Remove the white background around the logo</label>
+      <div class="genie" id="genie" hidden>
+       <p class="genie-h"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg>No logo? Create one with Genie AI</p>
+       <label class="lbl" for="genieP">Describe your logo</label>
+       <textarea id="genieP" class="input" rows="2" maxlength="400" placeholder="Example: a friendly coffee cup with steam, for a café called Bean There, warm browns"></textarea>
+       <button type="button" class="btn btn-genie" id="genieGo"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Create 2 logo options</button>
+       <p class="hint" id="genieMsg" role="status" aria-live="polite"></p>
+       <div class="genie-picks" id="geniePicks"></div>
+      </div>
+     </div>
+    </details>
+
+    <details class="sec" open id="bgSec">
+     <summary><span class="n">5</span>Background and border</summary>
+     <div class="sec-in">
+      <fieldset class="opt" id="bgSet"><legend id="bgLegend">Background</legend><div class="swatches" id="bgs"></div></fieldset>
+      <div class="field" id="customField" hidden><label class="lbl" for="custom">Background color</label><input type="color" id="custom" class="color"></div>
+      <div id="bgImgField" hidden>
+       <label class="btn btn-ghost" for="bgFile"><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg>Upload a background image</label>
+       <input type="file" id="bgFile" class="sr-only" accept="image/png,image/jpeg,image/webp">
+       <div class="field"><label class="lbl" for="bgScale">Background size <output id="bgScaleO" for="bgScale"></output></label><input type="range" id="bgScale" class="range"></div>
+      </div>
+      <fieldset class="opt" id="borderSet"><legend id="borderLegend">Border</legend><div class="swatches" id="borders"></div></fieldset>
+     </div>
+    </details>
+
+    <details class="sec" open id="namesSec">
+     <summary><span class="n">6</span>Team names <span class="opt-l">(optional)</span></summary>
+     <div class="sec-in">
+      <label class="lbl" for="names">One badge per line: name, then a comma, then the title</label>
+      <textarea id="names" class="input mono" rows="6" spellcheck="false" placeholder="Alex Morgan, Store Manager&#10;Jordan Lee, Barista&#10;Sam Rivera"></textarea>
+      <div class="logo-row">
+       <label class="btn btn-ghost btn-sm" for="namesFile"><svg class="ico" aria-hidden="true"><use href="#i-upload"/></svg>Import a CSV or TXT file</label>
+       <input type="file" id="namesFile" class="sr-only" accept=".csv,.txt,text/csv,text/plain">
+       <button type="button" class="btn btn-ghost btn-sm" id="namesClear" hidden>Clear list</button>
+      </div>
+      <p class="hint" id="namesCount" aria-live="polite">Leave this empty to order the same badge for everyone.</p>
+      <ul class="issues" id="namesIssues"></ul>
+     </div>
+    </details>
+   </form>
+  </div>
+ </div>
+</main>
+
+<div class="bar" id="bar"><div class="wrap bar-row">
+ <p class="bar-sum" id="barSum"></p>
+ <button type="button" class="btn btn-primary" id="reviewBtn">Review &amp; Print</button>
+</div></div>
+
+<footer class="ftr"><div class="wrap ftr-row">
+ <img alt="Custom Genie" width="120" height="51" id="ftrLogo">
+ <p>Custom Genie is a World Emblem brand.</p>
+</div></footer>
+
+<dialog class="rv" id="review" aria-labelledby="rvH">
+ <form method="dialog" class="rv-in" id="rvForm">
+  <header class="rv-hd">
+   <h2 id="rvH">Review &amp; Print</h2>
+   <ol class="steps" id="steps"><li data-s="1">Proof</li><li data-s="2">Quantity</li><li data-s="3">Price</li></ol>
+   <button type="button" class="icon-btn" id="rvClose" aria-label="Close"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </header>
+  <section class="pane" data-pane="1">
+   <p class="pane-lead" id="proofLead"></p>
+   <div class="proofs" id="proofs"></div>
+   <ul class="checks" id="rvChecks"></ul>
+   <label class="lbl" for="notes">Special instructions <span class="opt-l">(optional)</span></label>
+   <textarea id="notes" class="input" rows="2" maxlength="500" placeholder="Anything our design team should know"></textarea>
+   <label class="check approve"><input type="checkbox" id="approve"> I approve this proof. I checked every name and the spelling, and I understand badges are printed as shown.</label>
+   <p class="err" id="approveErr" role="alert" hidden>Please approve the proof to continue.</p>
+   <div class="pane-ft"><button type="button" class="btn btn-primary" id="next1">Continue to quantity</button></div>
+  </section>
+  <section class="pane" data-pane="2" hidden>
+   <div id="qtyNames" hidden><p class="pane-lead" id="qtyNamesTxt"></p></div>
+   <div id="qtySame"><label class="lbl" for="qty">How many badges?</label>
+    <div class="stepper"><button type="button" class="icon-btn" id="qMinus" aria-label="One fewer"><svg class="ico" aria-hidden="true"><use href="#i-minus"/></svg></button><input id="qty" class="input" type="number" inputmode="numeric" min="1" max="5000" value="1"><button type="button" class="icon-btn" id="qPlus" aria-label="One more"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+   </div>
+   <table class="tiers" id="tiers"><caption>Price per badge</caption><thead><tr><th scope="col">Quantity</th><th scope="col">Each</th><th scope="col">You save</th></tr></thead><tbody></tbody></table>
+   <p class="hint" id="tierHint" aria-live="polite"></p>
+   <div class="pane-ft"><button type="button" class="btn btn-ghost" data-go="1">Back</button><button type="button" class="btn btn-primary" id="next2">See price</button></div>
+  </section>
+  <section class="pane" data-pane="3" hidden>
+   <dl class="spec" id="spec"></dl>
+   <div class="total"><span>Total</span><strong id="total"></strong></div>
+   <details class="debug" id="cartDebug" hidden><summary>Cart data (developer view)</summary><pre id="cartJson"></pre></details>
+   <div class="pane-ft"><button type="button" class="btn btn-ghost" data-go="2">Back</button><button type="button" class="btn btn-primary" id="addCart">Add to cart</button></div>
+  </section>
+ </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(()=>{'use strict';
+const DATA={"vkeys":["size","background_color","border_color","attachment"],"products":[{"id":"borderless_plastic_name_badge","name":"Borderless Plastic Name Badge","bc_id":144,"url":"/name-badges/borderless-plastic-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"rect","frame":"edge","sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":["Black Edge","White Edge"],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":10.47,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18389,"52BLEP25BLKMG",10.47,"size1","Gold","Black Edge","Magnet"],[18390,"52BLEP25BLKPG",10.47,"size1","Gold","Black Edge","Pin"],[18391,"52BLEP25BLKMS",10.47,"size1","Silver","Black Edge","Magnet"],[18392,"52BLEP25BLKPS",10.47,"size1","Silver","Black Edge","Pin"],[18393,"52BLEP25BLKMW",10.47,"size1","Custom Color","Black Edge","Magnet"],[18394,"52BLEP25BLKPW",10.47,"size1","Custom Color","Black Edge","Pin"],[18395,"52BLEP25BLKMW-Background",10.47,"size1","Upload Background","Black Edge","Magnet"],[18396,"52BLEP25BLKPW-Background",10.47,"size1","Upload Background","Black Edge","Pin"],[18397,"52BLEP25WHTMG",10.47,"size1","Gold","White Edge","Magnet"],[18398,"52BLEP25WHTPG",10.47,"size1","Gold","White Edge","Pin"],[18399,"52BLEP25WHTMS",10.47,"size1","Silver","White Edge","Magnet"],[18400,"52BLEP25WHTPS",10.47,"size1","Silver","White Edge","Pin"],[18401,"52BLEP25WHTMW",10.47,"size1","Custom Color","White Edge","Magnet"],[18402,"52BLEP25WHTPW",10.47,"size1","Custom Color","White Edge","Pin"],[18403,"52BLEP25WHTMW-Background",10.47,"size1","Upload Background","White Edge","Magnet"],[18404,"52BLEP25WHTPW-Background",10.47,"size1","Upload Background","White Edge","Pin"],[18405,"52BLEP30BLKMG",10.47,"size2","Gold","Black Edge","Magnet"],[18406,"52BLEP30BLKPG",10.47,"size2","Gold","Black Edge","Pin"],[18407,"52BLEP30BLKMS",10.47,"size2","Silver","Black Edge","Magnet"],[18408,"52BLEP30BLKPS",10.47,"size2","Silver","Black Edge","Pin"],[18409,"52BLEP30BLKMW",10.47,"size2","Custom Color","Black Edge","Magnet"],[18410,"52BLEP30BLKPW",10.47,"size2","Custom Color","Black Edge","Pin"],[18411,"52BLEP30BLKMW-Background",10.47,"size2","Upload Background","Black Edge","Magnet"],[18412,"52BLEP30BLKPW-Background",10.47,"size2","Upload Background","Black Edge","Pin"],[18413,"52BLEP30WHTMG",10.47,"size2","Gold","White Edge","Magnet"],[18414,"52BLEP30WHTPG",10.47,"size2","Gold","White Edge","Pin"],[18415,"52BLEP30WHTMS",10.47,"size2","Silver","White Edge","Magnet"],[18416,"52BLEP30WHTPS",10.47,"size2","Silver","White Edge","Pin"],[18417,"52BLEP30WHTMW",10.47,"size2","Custom Color","White Edge","Magnet"],[18418,"52BLEP30WHTPW",10.47,"size2","Custom Color","White Edge","Pin"],[18419,"52BLEP30WHTMW-Background",10.47,"size2","Upload Background","White Edge","Magnet"],[18420,"52BLEP30WHTPW-Background",10.47,"size2","Upload Background","White Edge","Pin"],[18421,"52BLEP35BLKMG",10.47,"size3","Gold","Black Edge","Magnet"],[18422,"52BLEP35BLKPG",10.47,"size3","Gold","Black Edge","Pin"],[18423,"52BLEP35BLKMS",10.47,"size3","Silver","Black Edge","Magnet"],[18424,"52BLEP35BLKPS",10.47,"size3","Silver","Black Edge","Pin"],[18425,"52BLEP35BLKMW",10.47,"size3","Custom Color","Black Edge","Magnet"],[18426,"52BLEP35BLKPW",10.47,"size3","Custom Color","Black Edge","Pin"],[18427,"52BLEP35BLKMW-Background",10.47,"size3","Upload Background","Black Edge","Magnet"],[18428,"52BLEP35BLKPW-Background",10.47,"size3","Upload Background","Black Edge","Pin"],[18429,"52BLEP35WHTMG",10.47,"size3","Gold","White Edge","Magnet"],[18430,"52BLEP35WHTPG",10.47,"size3","Gold","White Edge","Pin"],[18431,"52BLEP35WHTMS",10.47,"size3","Silver","White Edge","Magnet"],[18432,"52BLEP35WHTPS",10.47,"size3","Silver","White Edge","Pin"],[18433,"52BLEP35WHTMW",10.47,"size3","Custom Color","White Edge","Magnet"],[18434,"52BLEP35WHTPW",10.47,"size3","Custom Color","White Edge","Pin"],[18435,"52BLEP35WHTMW-Background",10.47,"size3","Upload Background","White Edge","Magnet"],[18436,"52BLEP35WHTPW-Background",10.47,"size3","Upload Background","White Edge","Pin"]],"mods":{"image":{"id":1742,"name":"Image"},"alignment":{"id":1743,"name":"Alignment"},"special_instructions":{"id":1744,"name":"Special Design Instructions"},"logo_size":{"id":1745,"name":"Uploaded Logo Size"},"name":{"id":1746,"name":"Name"},"title":{"id":1747,"name":"Title"},"custom_color":{"id":1748,"name":"Custom Color"},"background_image":{"id":1749,"name":"Background Image"},"saved_design":{"id":1750,"name":"Saved Design"},"saved_design_link":{"id":1751,"name":"Saved Design Link"},"font_1":{"id":1752,"name":"Font1"},"layout":{"id":1753,"name":"Select Layout"},"font_2":{"id":1754,"name":"Font2"},"font_1_size":{"id":1755,"name":"Font1size"},"font_2_size":{"id":1756,"name":"Font2size"},"color_1":{"id":1757,"name":"Customcolor1"},"color_2":{"id":1758,"name":"Customcolor2"},"bulk_names_file":{"id":1759,"name":"Additional Names - File Upload"},"proof_approval":{"id":1760,"name":"Review"},"saved_print_output":{"id":1761,"name":"Saved Print Output"},"badge_text":{"id":2844,"name":"Badge Text"},"font_3_size":{"id":2845,"name":"Font3size"},"font_3":{"id":2846,"name":"Font3"},"color_3":{"id":2847,"name":"Customcolor3"},"order_file_disclaimer":{"id":2928,"name":"Order File Disclaimer"},"background_size":{"id":2998,"name":"Background Size"}},"opts":{"size":{"id":150,"name":"Size","values":{"size2":229,"size1":230,"size3":231}},"border_color":{"id":152,"name":"Border Color","values":{"Black Edge":234,"White Edge":235}},"background_color":{"id":1247,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1248,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"regal_large_name_badge","name":"Custom Large Name Badges with Full-Color Print - Regal","bc_id":154,"url":"/name-badges/regal-large-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"rect","frame":"border","sizes":[{"id":"default","label":"One size","w":2.9375,"h":1.5625,"known":true,"src":"prototype page name in the Doogma testing sheet (regal-large-name-badge-2-15-16-x-1-9-16)"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":["Black","White"],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":12.38,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[15288,"52REGR00BLKMG",12.38,null,"Gold","Black","Magnet"],[15289,"52REGR00BLKPG",12.38,null,"Gold","Black","Pin"],[15290,"52REGR00BLKMS",12.38,null,"Silver","Black","Magnet"],[15291,"52REGR00BLKPS",12.38,null,"Silver","Black","Pin"],[15292,"52REGR00BLKMW",12.38,null,"Custom Color","Black","Magnet"],[15293,"52REGR00BLKPW",12.38,null,"Custom Color","Black","Pin"],[15294,"52REGR00BLKMW-Background",12.38,null,"Upload Background","Black","Magnet"],[15295,"52REGR00BLKPW-Background",12.38,null,"Upload Background","Black","Pin"],[15296,"52REGR00WHTMG",12.38,null,"Gold","White","Magnet"],[15297,"52REGR00WHTPG",12.38,null,"Gold","White","Pin"],[15298,"52REGR00WHTMS",12.38,null,"Silver","White","Magnet"],[15299,"52REGR00WHTPS",12.38,null,"Silver","White","Pin"],[15300,"52REGR00WHTMW",12.38,null,"Custom Color","White","Magnet"],[15301,"52REGR00WHTPW",12.38,null,"Custom Color","White","Pin"],[15302,"52REGR00WHTMW-Background",12.38,null,"Upload Background","White","Magnet"],[15303,"52REGR00WHTPW-Background",12.38,null,"Upload Background","White","Pin"]],"mods":{"layout":{"id":417,"name":"Select Layout"},"custom_color":{"id":419,"name":"Custom Color"},"background_image":{"id":420,"name":"Background Image"},"image":{"id":421,"name":"Image"},"logo_size":{"id":422,"name":"Uploaded Logo Size"},"name":{"id":423,"name":"Name"},"font_1":{"id":424,"name":"Font1"},"font_1_size":{"id":425,"name":"Font1size"},"font_2_size":{"id":426,"name":"Font2size"},"title":{"id":427,"name":"Title"},"font_2":{"id":428,"name":"Font2"},"color_1":{"id":429,"name":"Customcolor1"},"color_2":{"id":430,"name":"Customcolor2"},"alignment":{"id":431,"name":"Alignment"},"special_instructions":{"id":432,"name":"Special Design Instructions"},"bulk_names_file":{"id":433,"name":"Additional Names - File Upload"},"proof_approval":{"id":434,"name":"Review"},"saved_design":{"id":1048,"name":"Saved Design"},"saved_design_link":{"id":1049,"name":"Saved Design Link"},"saved_print_output":{"id":2233,"name":"Saved Print Output"},"size_field":{"id":2234,"name":"Size"},"badge_text":{"id":2788,"name":"Badge Text"},"font_3_size":{"id":2789,"name":"Font3size"},"font_3":{"id":2790,"name":"Font3"},"color_3":{"id":2791,"name":"Customcolor3"},"order_file_disclaimer":{"id":2922,"name":"Order File Disclaimer"},"background_size":{"id":2977,"name":"Background Size"}},"opts":{"border_color":{"id":176,"name":"Border Color","values":{"Black":296,"White":297}},"background_color":{"id":437,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":438,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"prestige_plastic_name_badge","name":"Custom Prestige Plastic Name Badges","bc_id":148,"url":"/name-badges/prestige-plastic-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"rect","frame":"border","sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"},{"id":"size4","label":"Size 4","w":3.5,"h":2.25,"known":false,"src":"placeholder"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":["Black","Blue","Green","Maroon","Red","White"],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":11.46,"tiers":[{"min_qty":5,"pct":5},{"min_qty":10,"pct":10},{"min_qty":15,"pct":15},{"min_qty":20,"pct":20},{"min_qty":50,"pct":25},{"min_qty":100,"pct":30}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18488,"52PREP20BLKMG",11.46,"size1","Gold","Black","Magnet"],[18489,"52PREP20BLKPG",11.46,"size1","Gold","Black","Pin"],[18490,"52PREP20BLKMS",11.46,"size1","Silver","Black","Magnet"],[18491,"52PREP20BLKPS",11.46,"size1","Silver","Black","Pin"],[18492,"52PREP20BLKMW",11.46,"size1","Custom Color","Black","Magnet"],[18493,"52PREP20BLKPW",11.46,"size1","Custom Color","Black","Pin"],[18494,"52PREP20BLKMW-Background",11.46,"size1","Upload Background","Black","Magnet"],[18495,"52PREP20BLKPW-Background",11.46,"size1","Upload Background","Black","Pin"],[18496,"52PREP20BLUMG",11.46,"size1","Gold","Blue","Magnet"],[18497,"52PREP20BLUPG",11.46,"size1","Gold","Blue","Pin"],[18498,"52PREP20BLUMS",11.46,"size1","Silver","Blue","Magnet"],[18499,"52PREP20BLUPS",11.46,"size1","Silver","Blue","Pin"],[18500,"52PREP20BLUMW",11.46,"size1","Custom Color","Blue","Magnet"],[18501,"52PREP20BLUPW",11.46,"size1","Custom Color","Blue","Pin"],[18502,"52PREP20BLUMW-Background",11.46,"size1","Upload Background","Blue","Magnet"],[18503,"52PREP20BLUPW-Background",11.46,"size1","Upload Background","Blue","Pin"],[18504,"52PREP20GRNMG",11.46,"size1","Gold","Green","Magnet"],[18505,"52PREP20GRNPG",11.46,"size1","Gold","Green","Pin"],[18506,"52PREP20GRNMS",11.46,"size1","Silver","Green","Magnet"],[18507,"52PREP20GRNPS",11.46,"size1","Silver","Green","Pin"],[18508,"52PREP20GRNMW",11.46,"size1","Custom Color","Green","Magnet"],[18509,"52PREP20GRNPW",11.46,"size1","Custom Color","Green","Pin"],[18510,"52PREP20GRNMW-Background",11.46,"size1","Upload Background","Green","Magnet"],[18511,"52PREP20GRNPW-Background",11.46,"size1","Upload Background","Green","Pin"],[18512,"52PREP20MARMG",11.46,"size1","Gold","Maroon","Magnet"],[18513,"52PREP20MARPG",11.46,"size1","Gold","Maroon","Pin"],[18514,"52PREP20MARMS",11.46,"size1","Silver","Maroon","Magnet"],[18515,"52PREP20MARPS",11.46,"size1","Silver","Maroon","Pin"],[18516,"52PREP20MARMW",11.46,"size1","Custom Color","Maroon","Magnet"],[18517,"52PREP20MARPW",11.46,"size1","Custom Color","Maroon","Pin"],[18518,"52PREP20MARMW-Background",11.46,"size1","Upload Background","Maroon","Magnet"],[18519,"52PREP20MARPW-Background",11.46,"size1","Upload Background","Maroon","Pin"],[18520,"52PREP20REDMG",11.46,"size1","Gold","Red","Magnet"],[18521,"52PREP20REDPG",11.46,"size1","Gold","Red","Pin"],[18522,"52PREP20REDMS",11.46,"size1","Silver","Red","Magnet"],[18523,"52PREP20REDPS",11.46,"size1","Silver","Red","Pin"],[18524,"52PREP20REDMW",11.46,"size1","Custom Color","Red","Magnet"],[18525,"52PREP20REDPW",11.46,"size1","Custom Color","Red","Pin"],[18526,"52PREP20REDMW-Background",11.46,"size1","Upload Background","Red","Magnet"],[18527,"52PREP20REDPW-Background",11.46,"size1","Upload Background","Red","Pin"],[18528,"52PREP20WHTMG",11.46,"size1","Gold","White","Magnet"],[18529,"52PREP20WHTPG",11.46,"size1","Gold","White","Pin"],[18530,"52PREP20WHTMS",11.46,"size1","Silver","White","Magnet"],[18531,"52PREP20WHTPS",11.46,"size1","Silver","White","Pin"],[18532,"52PREP20WHTMW",11.46,"size1","Custom Color","White","Magnet"],[18533,"52PREP20WHTPW",11.46,"size1","Custom Color","White","Pin"],[18534,"52PREP20WHTMW-Background",11.46,"size1","Upload Background","White","Magnet"],[18535,"52PREP20WHTPW-Background",11.46,"size1","Upload Background","White","Pin"],[18536,"52PREP25BLKMG",11.46,"size2","Gold","Black","Magnet"],[18537,"52PREP25BLKPG",11.46,"size2","Gold","Black","Pin"],[18538,"52PREP25BLKMS",11.46,"size2","Silver","Black","Magnet"],[18539,"52PREP25BLKPS",11.46,"size2","Silver","Black","Pin"],[18540,"52PREP25BLKMW",11.46,"size2","Custom Color","Black","Magnet"],[18541,"52PREP25BLKPW",11.46,"size2","Custom Color","Black","Pin"],[18542,"52PREP25BLKMW-Background",11.46,"size2","Upload Background","Black","Magnet"],[18543,"52PREP25BLKPW-Background",11.46,"size2","Upload Background","Black","Pin"],[18544,"52PREP25BLUMG",11.46,"size2","Gold","Blue","Magnet"],[18545,"52PREP25BLUPG",11.46,"size2","Gold","Blue","Pin"],[18546,"52PREP25BLUMS",11.46,"size2","Silver","Blue","Magnet"],[18547,"52PREP25BLUPS",11.46,"size2","Silver","Blue","Pin"],[18548,"52PREP25BLUMW",11.46,"size2","Custom Color","Blue","Magnet"],[18549,"52PREP25BLUPW",11.46,"size2","Custom Color","Blue","Pin"],[18550,"52PREP25BLUMW-Background",11.46,"size2","Upload Background","Blue","Magnet"],[18551,"52PREP25BLUPW-Background",11.46,"size2","Upload Background","Blue","Pin"],[18552,"52PREP25GRNMG",11.46,"size2","Gold","Green","Magnet"],[18553,"52PREP25GRNPG",11.46,"size2","Gold","Green","Pin"],[18554,"52PREP25GRNMS",11.46,"size2","Silver","Green","Magnet"],[18555,"52PREP25GRNPS",11.46,"size2","Silver","Green","Pin"],[18556,"52PREP25GRNMW",11.46,"size2","Custom Color","Green","Magnet"],[18557,"52PREP25GRNPW",11.46,"size2","Custom Color","Green","Pin"],[18558,"52PREP25GRNMW-Background",11.46,"size2","Upload Background","Green","Magnet"],[18559,"52PREP25GRNPW-Background",11.46,"size2","Upload Background","Green","Pin"],[18560,"52PREP25MARMG",11.46,"size2","Gold","Maroon","Magnet"],[18561,"52PREP25MARPG",11.46,"size2","Gold","Maroon","Pin"],[18562,"52PREP25MARMS",11.46,"size2","Silver","Maroon","Magnet"],[18563,"52PREP25MARPS",11.46,"size2","Silver","Maroon","Pin"],[18564,"52PREP25MARMW",11.46,"size2","Custom Color","Maroon","Magnet"],[18565,"52PREP25MARPW",11.46,"size2","Custom Color","Maroon","Pin"],[18566,"52PREP25MARMW-Background",11.46,"size2","Upload Background","Maroon","Magnet"],[18567,"52PREP25MARPW-Background",11.46,"size2","Upload Background","Maroon","Pin"],[18568,"52PREP25REDMG",11.46,"size2","Gold","Red","Magnet"],[18569,"52PREP25REDPG",11.46,"size2","Gold","Red","Pin"],[18570,"52PREP25REDMS",11.46,"size2","Silver","Red","Magnet"],[18571,"52PREP25REDPS",11.46,"size2","Silver","Red","Pin"],[18572,"52PREP25REDMW",11.46,"size2","Custom Color","Red","Magnet"],[18573,"52PREP25REDPW",11.46,"size2","Custom Color","Red","Pin"],[18574,"52PREP25REDMW-Background",11.46,"size2","Upload Background","Red","Magnet"],[18575,"52PREP25REDPW-Background",11.46,"size2","Upload Background","Red","Pin"],[18576,"52PREP25WHTMG",11.46,"size2","Gold","White","Magnet"],[18577,"52PREP25WHTPG",11.46,"size2","Gold","White","Pin"],[18578,"52PREP25WHTMS",11.46,"size2","Silver","White","Magnet"],[18579,"52PREP25WHTPS",11.46,"size2","Silver","White","Pin"],[18580,"52PREP25WHTMW",11.46,"size2","Custom Color","White","Magnet"],[18581,"52PREP25WHTPW",11.46,"size2","Custom Color","White","Pin"],[18582,"52PREP25WHTMW-Background",11.46,"size2","Upload Background","White","Magnet"],[18583,"52PREP25WHTPW-Background",11.46,"size2","Upload Background","White","Pin"],[18584,"52PREP30BLKMG",11.46,"size3","Gold","Black","Magnet"],[18585,"52PREP30BLKPG",11.46,"size3","Gold","Black","Pin"],[18586,"52PREP30BLKMS",11.46,"size3","Silver","Black","Magnet"],[18587,"52PREP30BLKPS",11.46,"size3","Silver","Black","Pin"],[18588,"52PREP30BLKMW",11.46,"size3","Custom Color","Black","Magnet"],[18589,"52PREP30BLKPW",11.46,"size3","Custom Color","Black","Pin"],[18590,"52PREP30BLKMW-Background",11.46,"size3","Upload Background","Black","Magnet"],[18591,"52PREP30BLKPW-Background",11.46,"size3","Upload Background","Black","Pin"],[18592,"52PREP30BLUMG",11.46,"size3","Gold","Blue","Magnet"],[18593,"52PREP30BLUPG",11.46,"size3","Gold","Blue","Pin"],[18594,"52PREP30BLUMS",11.46,"size3","Silver","Blue","Magnet"],[18595,"52PREP30BLUPS",11.46,"size3","Silver","Blue","Pin"],[18596,"52PREP30BLUMW",11.46,"size3","Custom Color","Blue","Magnet"],[18597,"52PREP30BLUPW",11.46,"size3","Custom Color","Blue","Pin"],[18598,"52PREP30BLUMW-Background",11.46,"size3","Upload Background","Blue","Magnet"],[18599,"52PREP30BLUPW-Background",11.46,"size3","Upload Background","Blue","Pin"],[18600,"52PREP30GRNMG",11.46,"size3","Gold","Green","Magnet"],[18601,"52PREP30GRNPG",11.46,"size3","Gold","Green","Pin"],[18602,"52PREP30GRNMS",11.46,"size3","Silver","Green","Magnet"],[18603,"52PREP30GRNPS",11.46,"size3","Silver","Green","Pin"],[18604,"52PREP30GRNMW",11.46,"size3","Custom Color","Green","Magnet"],[18605,"52PREP30GRNPW",11.46,"size3","Custom Color","Green","Pin"],[18606,"52PREP30GRNMW-Background",11.46,"size3","Upload Background","Green","Magnet"],[18607,"52PREP30GRNPW-Background",11.46,"size3","Upload Background","Green","Pin"],[18608,"52PREP30MARMG",11.46,"size3","Gold","Maroon","Magnet"],[18609,"52PREP30MARPG",11.46,"size3","Gold","Maroon","Pin"],[18610,"52PREP30MARMS",11.46,"size3","Silver","Maroon","Magnet"],[18611,"52PREP30MARPS",11.46,"size3","Silver","Maroon","Pin"],[18612,"52PREP30MARMW",11.46,"size3","Custom Color","Maroon","Magnet"],[18613,"52PREP30MARPW",11.46,"size3","Custom Color","Maroon","Pin"],[18614,"52PREP30MARMW-Background",11.46,"size3","Upload Background","Maroon","Magnet"],[18615,"52PREP30MARPW-Background",11.46,"size3","Upload Background","Maroon","Pin"],[18616,"52PREP30REDMG",11.46,"size3","Gold","Red","Magnet"],[18617,"52PREP30REDPG",11.46,"size3","Gold","Red","Pin"],[18618,"52PREP30REDMS",11.46,"size3","Silver","Red","Magnet"],[18619,"52PREP30REDPS",11.46,"size3","Silver","Red","Pin"],[18620,"52PREP30REDMW",11.46,"size3","Custom Color","Red","Magnet"],[18621,"52PREP30REDPW",11.46,"size3","Custom Color","Red","Pin"],[18622,"52PREP30REDMW-Background",11.46,"size3","Upload Background","Red","Magnet"],[18623,"52PREP30REDPW-Background",11.46,"size3","Upload Background","Red","Pin"],[18624,"52PREP30WHTMG",11.46,"size3","Gold","White","Magnet"],[18625,"52PREP30WHTPG",11.46,"size3","Gold","White","Pin"],[18626,"52PREP30WHTMS",11.46,"size3","Silver","White","Magnet"],[18627,"52PREP30WHTPS",11.46,"size3","Silver","White","Pin"],[18628,"52PREP30WHTMW",11.46,"size3","Custom Color","White","Magnet"],[18629,"52PREP30WHTPW",11.46,"size3","Custom Color","White","Pin"],[18630,"52PREP30WHTMW-Background",11.46,"size3","Upload Background","White","Magnet"],[18631,"52PREP30WHTPW-Background",11.46,"size3","Upload Background","White","Pin"],[18632,"52PREP35BLKMG",11.46,"size4","Gold","Black","Magnet"],[18633,"52PREP35BLKPG",11.46,"size4","Gold","Black","Pin"],[18634,"52PREP35BLKMS",11.46,"size4","Silver","Black","Magnet"],[18635,"52PREP35BLKPS",11.46,"size4","Silver","Black","Pin"],[18636,"52PREP35BLKMW",11.46,"size4","Custom Color","Black","Magnet"],[18637,"52PREP35BLKPW",11.46,"size4","Custom Color","Black","Pin"],[18638,"52PREP35BLKMW-Background",11.46,"size4","Upload Background","Black","Magnet"],[18639,"52PREP35BLKPW-Background",11.46,"size4","Upload Background","Black","Pin"],[18640,"52PREP35BLUMG",11.46,"size4","Gold","Blue","Magnet"],[18641,"52PREP35BLUPG",11.46,"size4","Gold","Blue","Pin"],[18642,"52PREP35BLUMS",11.46,"size4","Silver","Blue","Magnet"],[18643,"52PREP35BLUPS",11.46,"size4","Silver","Blue","Pin"],[18644,"52PREP35BLUMW",11.46,"size4","Custom Color","Blue","Magnet"],[18645,"52PREP35BLUPW",11.46,"size4","Custom Color","Blue","Pin"],[18646,"52PREP35BLUMW-Background",11.46,"size4","Upload Background","Blue","Magnet"],[18647,"52PREP35BLUPW-Background",11.46,"size4","Upload Background","Blue","Pin"],[18648,"52PREP35GRNMG",11.46,"size4","Gold","Green","Magnet"],[18649,"52PREP35GRNPG",11.46,"size4","Gold","Green","Pin"],[18650,"52PREP35GRNMS",11.46,"size4","Silver","Green","Magnet"],[18651,"52PREP35GRNPS",11.46,"size4","Silver","Green","Pin"],[18652,"52PREP35GRNMW",11.46,"size4","Custom Color","Green","Magnet"],[18653,"52PREP35GRNPW",11.46,"size4","Custom Color","Green","Pin"],[18654,"52PREP35GRNMW-Background",11.46,"size4","Upload Background","Green","Magnet"],[18655,"52PREP35GRNPW-Background",11.46,"size4","Upload Background","Green","Pin"],[18656,"52PREP35MARMG-",11.46,"size4","Gold","Maroon","Magnet"],[18657,"52PREP35MARPG",11.46,"size4","Gold","Maroon","Pin"],[18658,"52PREP35MARMS",11.46,"size4","Silver","Maroon","Magnet"],[18659,"52PREP35MARPS",11.46,"size4","Silver","Maroon","Pin"],[18660,"52PREP35MARMW",11.46,"size4","Custom Color","Maroon","Magnet"],[18661,"52PREP35MARPW",11.46,"size4","Custom Color","Maroon","Pin"],[18662,"52PREP35MARMW-Background",11.46,"size4","Upload Background","Maroon","Magnet"],[18663,"52PREP35MARPW-Background",11.46,"size4","Upload Background","Maroon","Pin"],[18664,"52PREP35REDMG",11.46,"size4","Gold","Red","Magnet"],[18665,"52PREP35REDPG",11.46,"size4","Gold","Red","Pin"],[18666,"52PREP35REDMS",11.46,"size4","Silver","Red","Magnet"],[18667,"52PREP35REDPS",11.46,"size4","Silver","Red","Pin"],[18668,"52PREP35REDMW-",11.46,"size4","Custom Color","Red","Magnet"],[18669,"52PREP35REDPW",11.46,"size4","Custom Color","Red","Pin"],[18670,"52PREP35REDMW-Background",11.46,"size4","Upload Background","Red","Magnet"],[18671,"52PREP35REDPW-Background",11.46,"size4","Upload Background","Red","Pin"],[18672,"52PREP35WHTMG",11.46,"size4","Gold","White","Magnet"],[18673,"52PREP35WHTPG",11.46,"size4","Gold","White","Pin"],[18674,"52PREP35WHTMS",11.46,"size4","Silver","White","Magnet"],[18675,"52PREP35WHTPS",11.46,"size4","Silver","White","Pin"],[18676,"52PREP35WHTMW-",11.46,"size4","Custom Color","White","Magnet"],[18677,"52PREP35WHTPW",11.46,"size4","Custom Color","White","Pin"],[18678,"52PREP35WHTMW-Background",11.46,"size4","Upload Background","White","Magnet"],[18679,"52PREP35WHTPW-Background",11.46,"size4","Upload Background","White","Pin"]],"mods":{"image":{"id":1679,"name":"Image"},"alignment":{"id":1680,"name":"Alignment"},"special_instructions":{"id":1681,"name":"Special Design Instructions"},"logo_size":{"id":1682,"name":"Uploaded Logo Size"},"name":{"id":1683,"name":"Name"},"title":{"id":1684,"name":"Title"},"custom_color":{"id":1685,"name":"Custom Color"},"background_image":{"id":1686,"name":"Background Image"},"saved_design":{"id":1687,"name":"Saved Design"},"saved_design_link":{"id":1688,"name":"Saved Design Link"},"layout":{"id":1689,"name":"Select Layout"},"font_1":{"id":1690,"name":"Font1"},"font_2":{"id":1691,"name":"Font2"},"font_1_size":{"id":1692,"name":"Font1size"},"font_2_size":{"id":1693,"name":"Font2size"},"color_1":{"id":1694,"name":"Customcolor1"},"color_2":{"id":1695,"name":"Customcolor2"},"bulk_names_file":{"id":1696,"name":"Additional Names - File Upload"},"proof_approval":{"id":1698,"name":"Review"},"saved_print_output":{"id":1704,"name":"Saved Print Output"},"badge_text":{"id":2830,"name":"Badge Text"},"font_3_size":{"id":2831,"name":"Font3size"},"font_3":{"id":2832,"name":"Font3"},"color_3":{"id":2833,"name":"Customcolor3"},"order_file_disclaimer":{"id":2927,"name":"Order File Disclaimer"},"background_size":{"id":2995,"name":"Background Size"}},"opts":{"size":{"id":161,"name":"Size","values":{"size1":254,"size2":255,"size3":1296,"size4":1297}},"border_color":{"id":162,"name":"Border Color","values":{"Black":256,"Blue":257,"Green":258,"Maroon":259,"Red":260,"White":261}},"background_color":{"id":1282,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1283,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"circle_name_badge","name":"Custom Round & Circle Name Badges","bc_id":150,"url":"/name-badges/circle-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"circle","frame":null,"sizes":[{"id":"default","label":"One size","w":2.25,"h":2.25,"known":false,"src":"placeholder"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":5},{"min_qty":10,"pct":10},{"min_qty":15,"pct":15},{"min_qty":20,"pct":20},{"min_qty":50,"pct":25},{"min_qty":100,"pct":30}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[19235,"52CIRC00WHTMG",9.99,null,"Gold",null,"Magnet"],[19236,"52CIRC00WHTPG",9.99,null,"Gold",null,"Pin"],[19237,"52CIRC00WHTMS",9.99,null,"Silver",null,"Magnet"],[19238,"52CIRC00WHTPS",9.99,null,"Silver",null,"Pin"],[19239,"52CIRC00WHTMW",9.99,null,"Custom Color",null,"Magnet"],[19240,"52CIRC00WHTPW",9.99,null,"Custom Color",null,"Pin"],[19241,"52CIRC00WHTMW-Background",9.99,null,"Upload Background",null,"Magnet"],[19242,"52CIRC00WHTPW-Background",9.99,null,"Upload Background",null,"Pin"]],"mods":{"image":{"id":1658,"name":"Image"},"alignment":{"id":1659,"name":"Alignment"},"special_instructions":{"id":1660,"name":"Special Design Instructions"},"logo_size":{"id":1661,"name":"Uploaded Logo Size"},"name":{"id":1662,"name":"Name"},"title":{"id":1663,"name":"Title"},"custom_color":{"id":1664,"name":"Custom Color"},"background_image":{"id":1665,"name":"Background Image"},"saved_design":{"id":1666,"name":"Saved Design"},"saved_design_link":{"id":1667,"name":"Saved Design Link"},"font_1":{"id":1669,"name":"Font1"},"font_2":{"id":1670,"name":"Font2"},"font_1_size":{"id":1671,"name":"Font1size"},"font_2_size":{"id":1672,"name":"Font2size"},"color_1":{"id":1673,"name":"Customcolor1"},"color_2":{"id":1674,"name":"Customcolor2"},"bulk_names_file":{"id":1675,"name":"Additional Names - File Upload"},"proof_approval":{"id":1676,"name":"Review"},"saved_print_output":{"id":1677,"name":"Saved Print Output"},"size_field":{"id":1678,"name":"Size"},"layout":{"id":2525,"name":"Select Layout"},"badge_text":{"id":2816,"name":"Badge Text"},"font_3_size":{"id":2817,"name":"Font3size"},"font_3":{"id":2818,"name":"Font3"},"color_3":{"id":2819,"name":"Customcolor3"},"order_file_disclaimer":{"id":2926,"name":"Order File Disclaimer"},"background_size":{"id":2989,"name":"Background Size"}},"opts":{"background_color":{"id":1828,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1829,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"oval_name_badge","name":"Oval Name Badge (2 3/4\"  x 1 9/16\")","bc_id":151,"url":"/name-badges/oval-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"oval","frame":null,"sizes":[{"id":"default","label":"One size","w":2.75,"h":1.5625,"known":true,"src":"product name"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18704,"52SHAOVLBLKMG",9.99,null,"Gold",null,"Magnet"],[18705,"52SHAOVLBLKPG",9.99,null,"Gold",null,"Pin"],[18706,"52SHAOVLBLKMS",9.99,null,"Silver",null,"Magnet"],[18707,"52SHAOVLBLKPS",9.99,null,"Silver",null,"Pin"],[18708,"52SHAOVLBLKMW",9.99,null,"Custom Color",null,"Magnet"],[18709,"52SHAOVLBLKPW",9.99,null,"Custom Color",null,"Pin"],[18710,"52SHAOVLBLKMW-Background",9.99,null,"Upload Background",null,"Magnet"],[18711,"52SHAOVLBLKPW-Background",9.99,null,"Upload Background",null,"Pin"]],"mods":{"image":{"id":1637,"name":"Image"},"alignment":{"id":1638,"name":"Alignment"},"special_instructions":{"id":1639,"name":"Special Design Instructions"},"logo_size":{"id":1640,"name":"Uploaded Logo Size"},"name":{"id":1641,"name":"Name"},"title":{"id":1642,"name":"Title"},"custom_color":{"id":1643,"name":"Custom Color"},"background_image":{"id":1644,"name":"Background Image"},"saved_design":{"id":1645,"name":"Saved Design"},"saved_design_link":{"id":1646,"name":"Saved Design Link"},"layout":{"id":1647,"name":"Select Layout"},"font_1":{"id":1648,"name":"Font1"},"font_2":{"id":1649,"name":"Font2"},"font_1_size":{"id":1650,"name":"Font1size"},"font_2_size":{"id":1651,"name":"Font2size"},"color_1":{"id":1652,"name":"Customcolor1"},"color_2":{"id":1653,"name":"Customcolor2"},"proof_approval":{"id":1654,"name":"Review"},"bulk_names_file":{"id":1655,"name":"Additional Names - File Upload"},"size_field":{"id":1656,"name":"Size"},"saved_print_output":{"id":1657,"name":"Saved Print Output"},"badge_text":{"id":2809,"name":"Badge Text"},"font_3_size":{"id":2810,"name":"Font3size"},"font_3":{"id":2811,"name":"Font3"},"color_3":{"id":2812,"name":"Customcolor3"},"order_file_disclaimer":{"id":2925,"name":"Order File Disclaimer"},"background_size":{"id":2986,"name":"Background Size"}},"opts":{"background_color":{"id":1155,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1302,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"oval_top_name_badge","name":"Oval Top Name Badge (2 3/4\" x 1 9/16\")","bc_id":152,"url":"/name-badges/oval-top-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"oval_top","frame":null,"sizes":[{"id":"default","label":"One size","w":2.75,"h":1.5625,"known":true,"src":"product name"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18325,"52SHAOVTBLKMG",9.99,null,"Gold",null,"Magnet"],[18326,"52SHAOVTBLKMS",9.99,null,"Silver",null,"Magnet"],[18327,"52SHAOVTBLKMW",9.99,null,"Custom Color",null,"Magnet"],[18328,"52SHAOVTBLKMW-Background",9.99,null,"Upload Background",null,"Magnet"],[18329,"52SHAOVTBLKPG",9.99,null,"Gold",null,"Pin"],[18330,"52SHAOVTBLKPS",9.99,null,"Silver",null,"Pin"],[18331,"52SHAOVTBLKPW",9.99,null,"Custom Color",null,"Pin"],[18332,"52SHAOVTBLKPW-Background",9.99,null,"Upload Background",null,"Pin"]],"mods":{"image":{"id":1616,"name":"Image"},"alignment":{"id":1617,"name":"Alignment"},"special_instructions":{"id":1618,"name":"Special Design Instructions"},"logo_size":{"id":1619,"name":"Uploaded Logo Size"},"name":{"id":1620,"name":"Name"},"title":{"id":1621,"name":"Title"},"custom_color":{"id":1622,"name":"Custom Color"},"background_image":{"id":1623,"name":"Background Image"},"saved_design_link":{"id":1624,"name":"Saved Design Link"},"saved_design":{"id":1625,"name":"Saved Design"},"layout":{"id":1626,"name":"Select Layout"},"font_1":{"id":1627,"name":"Font1"},"font_2":{"id":1628,"name":"Font2"},"font_1_size":{"id":1629,"name":"Font1size"},"font_2_size":{"id":1630,"name":"Font2size"},"color_1":{"id":1631,"name":"Customcolor1"},"color_2":{"id":1632,"name":"Customcolor2"},"bulk_names_file":{"id":1633,"name":"Additional Names - File Upload"},"proof_approval":{"id":1634,"name":"Review"},"size_field":{"id":1635,"name":"Size"},"saved_print_output":{"id":1636,"name":"Saved Print Output"},"badge_text":{"id":2802,"name":"Badge Text"},"font_3_size":{"id":2803,"name":"Font3size"},"font_3":{"id":2804,"name":"Font3"},"color_3":{"id":2805,"name":"Customcolor3"},"order_file_disclaimer":{"id":2924,"name":"Order File Disclaimer"},"background_size":{"id":2983,"name":"Background Size"}},"opts":{"attachment":{"id":1172,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}},"background_color":{"id":1173,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}}},"bulk":true},{"id":"standard_plastic_name_badge","name":"Standard Plastic Name Badge (2 15/16\" x 1\")","bc_id":156,"url":"/name-badges/standard-plastic-name-badge/","decoration":"printed","group":"Printed plastic","kind":"plastic","shape":"rect","frame":null,"sizes":[{"id":"default","label":"One size","w":2.9375,"h":1,"known":true,"src":"product name"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":10.36,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18381,"52STDS00WHTMG",10.36,null,"Gold",null,"Magnet"],[18382,"52STDS00WHTPG",10.36,null,"Gold",null,"Pin"],[18383,"52STDS00WHTMS",10.36,null,"Silver",null,"Magnet"],[18384,"52STDS00WHTPS",10.36,null,"Silver",null,"Pin"],[18385,"52STDS00WHTMW",10.36,null,"Custom Color",null,"Magnet"],[18386,"52STDS00WHTPW",10.36,null,"Custom Color",null,"Pin"],[18387,"52STDS00WHTMW-Background",10.36,null,"Upload Background",null,"Magnet"],[18388,"52STDS00WHTPW-Background",10.36,null,"Upload Background",null,"Pin"]],"mods":{"layout":{"id":1807,"name":"Select Layout"},"custom_color":{"id":1808,"name":"Custom Color"},"background_image":{"id":1809,"name":"Background Image"},"logo_size":{"id":1810,"name":"Uploaded Logo Size"},"name":{"id":1811,"name":"Name"},"font_1":{"id":1812,"name":"Font1"},"font_1_size":{"id":1813,"name":"Font1size"},"color_1":{"id":1814,"name":"Customcolor1"},"title":{"id":1815,"name":"Title"},"font_2":{"id":1816,"name":"Font2"},"font_2_size":{"id":1817,"name":"Font2size"},"color_2":{"id":1818,"name":"Customcolor2"},"alignment":{"id":1819,"name":"Alignment"},"special_instructions":{"id":1820,"name":"Special Design Instructions"},"bulk_names_file":{"id":1821,"name":"Additional Names - File Upload"},"proof_approval":{"id":1822,"name":"Review"},"saved_print_output":{"id":1823,"name":"Saved Print Output"},"saved_design":{"id":1824,"name":"Saved Design"},"saved_design_link":{"id":1825,"name":"Saved Design Link"},"size_field":{"id":1826,"name":"Size"},"image":{"id":1827,"name":"Image"},"badge_text":{"id":2781,"name":"Badge Text"},"font_3":{"id":2782,"name":"Font3"},"font_3_size":{"id":2783,"name":"Font3size"},"color_3":{"id":2784,"name":"Customcolor3"},"order_file_disclaimer":{"id":2920,"name":"Order File Disclaimer"},"background_size":{"id":2971,"name":"Background Size"}},"opts":{"background_color":{"id":1222,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1223,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"executive_metal_name_badge","name":"Executive Brushed Metal Name Badges","bc_id":153,"url":"/name-badges/executive-metal-name-badge/","decoration":"printed","group":"Metal","kind":"metal","shape":"rect","frame":"metal","sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"},{"id":"size4","label":"Size 4","w":3.5,"h":2.25,"known":false,"src":"placeholder"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":["Gold","Silver"],"attach":[],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":21.95,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18333,"52EXEE20GLDMG",21.95,"size1","Gold","Gold",null],[18334,"52EXEE20GLDMS",21.95,"size1","Silver","Gold",null],[18335,"52EXEE20GLDMW",21.95,"size1","Custom Color","Gold",null],[18336,"52EXEE20GLDMW-Background",21.95,"size1","Upload Background","Gold",null],[18337,"52EXEE20SLVMG",21.95,"size1","Gold","Silver",null],[18338,"52EXEE20SLVMS",21.95,"size1","Silver","Silver",null],[18339,"52EXEE20SLVMW",21.95,"size1","Custom Color","Silver",null],[18340,"52EXEE20SLVMW-Background",21.95,"size1","Upload Background","Silver",null],[18341,"52EXEE25GLDMG",21.95,"size2","Gold","Gold",null],[18342,"52EXEE25GLDMS",21.95,"size2","Silver","Gold",null],[18343,"52EXEE25GLDMW",21.95,"size2","Custom Color","Gold",null],[18344,"52EXEE25GLDMW-Background",21.95,"size2","Upload Background","Gold",null],[18345,"52EXEE25SLVMG",21.95,"size2","Gold","Silver",null],[18346,"52EXEE25SLVMS",21.95,"size2","Silver","Silver",null],[18347,"52EXEE25SLVMW",21.95,"size2","Custom Color","Silver",null],[18348,"52EXEE25SLVMW-Background",21.95,"size2","Upload Background","Silver",null],[18349,"52EXEE00GLDMG",21.95,"size3","Gold","Gold",null],[18350,"52EXEE00GLDMS",21.95,"size3","Silver","Gold",null],[18351,"52EXEE00GLDMW",21.95,"size3","Custom Color","Gold",null],[18352,"52EXEE00GLDMW-Background",21.95,"size3","Upload Background","Gold",null],[18353,"52EXEE00SLVMG",21.95,"size3","Gold","Silver",null],[18354,"52EXEE00SLVMS",21.95,"size3","Silver","Silver",null],[18355,"52EXEE00SLVMW",21.95,"size3","Custom Color","Silver",null],[18356,"52EXEE00SLVMW-Background",21.95,"size3","Upload Background","Silver",null],[18357,"52EXEE35GLDMG",21.95,"size4","Gold","Gold",null],[18358,"52EXEE35GLDMS",21.95,"size4","Silver","Gold",null],[18359,"52EXEE35GLDMW",21.95,"size4","Custom Color","Gold",null],[18360,"52EXEE35GLDMW-Background",21.95,"size4","Upload Background","Gold",null],[18361,"52EXEE35SLVMG",21.95,"size4","Gold","Silver",null],[18362,"52EXEE35SLVMS",21.95,"size4","Silver","Silver",null],[18363,"52EXEE35SLVMW",21.95,"size4","Custom Color","Silver",null],[18364,"52EXEE35SLVMW-Background",21.95,"size4","Upload Background","Silver",null]],"mods":{"image":{"id":1595,"name":"Image"},"alignment":{"id":1596,"name":"Alignment"},"special_instructions":{"id":1597,"name":"Special Design Instructions"},"logo_size":{"id":1598,"name":"Uploaded Logo Size"},"name":{"id":1599,"name":"Name"},"title":{"id":1600,"name":"Title"},"custom_color":{"id":1601,"name":"Custom Color"},"background_image":{"id":1602,"name":"Background Image"},"saved_design":{"id":1603,"name":"Saved Design"},"saved_design_link":{"id":1604,"name":"Saved Design Link"},"layout":{"id":1605,"name":"Select Layout"},"font_1":{"id":1606,"name":"Font1"},"font_2":{"id":1607,"name":"Font2"},"font_1_size":{"id":1608,"name":"Font1size"},"font_2_size":{"id":1609,"name":"Font2size"},"color_1":{"id":1610,"name":"Customcolor1"},"color_2":{"id":1611,"name":"Customcolor2"},"bulk_names_file":{"id":1612,"name":"Additional Names - File Upload"},"proof_approval":{"id":1613,"name":"Review"},"saved_print_output":{"id":1614,"name":"Saved Print Output"},"badge_text":{"id":2795,"name":"Badge Text"},"font_3_size":{"id":2796,"name":"Font3size"},"font_3":{"id":2797,"name":"Font3"},"color_3":{"id":2798,"name":"Customcolor3"},"order_file_disclaimer":{"id":2923,"name":"Order File Disclaimer"},"background_size":{"id":2980,"name":"Background Size"}},"opts":{"size":{"id":173,"name":"Size","values":{"size1":287,"size2":288,"size3":289,"size4":290}},"border_color":{"id":174,"name":"Border Color","values":{"Gold":291,"Silver":292}},"background_color":{"id":1190,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}}},"bulk":true},{"id":"metal_reusable_name_badge","name":"Metal Reusable Name Badges with Window Inserts","bc_id":147,"url":"/name-badges/metal-reusable-name-badge/","decoration":"printed","group":"Reusable","kind":"window","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"},{"id":"size4","label":"Size 4","w":3.5,"h":2.25,"known":false,"src":"placeholder"}],"bg":["Silver","Gold"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":13.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[37771,"52EXRMA1SLVM9",13.99,"size1","Silver",null,"Magnet"],[37772,"52EXRMA0SLVP9",13.99,"size1","Silver",null,"Pin"],[37773,"52EXRMA0GLDM9",13.99,"size1","Gold",null,"Magnet"],[37774,"52EXRMA0GLDP9",13.99,"size1","Gold",null,"Pin"],[37775,"52EXRMB1SLVM9",13.99,"size2","Silver",null,"Magnet"],[37776,"52EXRMB1SLVP9",13.99,"size2","Silver",null,"Pin"],[37777,"52EXRMB1GLDM9",13.99,"size2","Gold",null,"Magnet"],[37778,"52EXRMB1GLDP9",13.99,"size2","Gold",null,"Pin"],[37779,"52EXRMA0SLVM9",13.99,"size3","Silver",null,"Magnet"],[37780,"52EXRMA1SLVP9",13.99,"size3","Silver",null,"Pin"],[37781,"52EXRMA1GLDM9",13.99,"size3","Gold",null,"Magnet"],[37782,"52EXRMA1GLDP9",13.99,"size3","Gold",null,"Pin"],[37783,"52EXRMB0SLVM9",13.99,"size4","Silver",null,"Magnet"],[37784,"52EXRMB0SLVP9",13.99,"size4","Silver",null,"Pin"],[37785,"52EXRMB0GLDM9",13.99,"size4","Gold",null,"Magnet"],[37786,"52EXRMB0GLDP9",13.99,"size4","Gold",null,"Pin"]],"mods":{"image":{"id":1721,"name":"Image"},"alignment":{"id":1722,"name":"Alignment"},"special_instructions":{"id":1723,"name":"Special Design Instructions"},"logo_size":{"id":1724,"name":"Uploaded Logo Size"},"name":{"id":1725,"name":"Name"},"title":{"id":1726,"name":"Title"},"custom_color":{"id":1727,"name":"Custom Color"},"background_image":{"id":1728,"name":"Background Image"},"saved_design":{"id":1729,"name":"Saved Design"},"saved_design_link":{"id":1730,"name":"Saved Design Link"},"layout":{"id":1731,"name":"Select Layout"},"font_1":{"id":1732,"name":"Font1"},"font_2":{"id":1733,"name":"Font2"},"font_1_size":{"id":1734,"name":"Font1size"},"font_2_size":{"id":1735,"name":"Font2size"},"color_1":{"id":1736,"name":"Customcolor1"},"color_2":{"id":1737,"name":"Customcolor2"},"proof_approval":{"id":1739,"name":"Review"},"saved_print_output":{"id":1741,"name":"Saved Print Output"},"badge_text":{"id":2837,"name":"Badge Text"},"font_3_size":{"id":2838,"name":"Font3size"},"font_3":{"id":2839,"name":"Font3"},"color_3":{"id":2840,"name":"Customcolor3"}},"opts":{"size":{"id":157,"name":"Size","values":{"size1":246,"size2":247,"size3":1298,"size4":1299}},"background_color":{"id":1832,"name":"Background Color","values":{"Gold":1392,"Silver":1393}},"attachment":{"id":2171,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":false},{"id":"plastic_reusable_name_badge","name":"Plastic Reusable Name Badge","bc_id":149,"url":"/name-badges/plastic-reusable-name-badge/","decoration":"printed","group":"Reusable","kind":"plastic","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"}],"bg":["Gold","Silver","Custom Color","Upload Background"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":12.96,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18680,"52PLRDA0GLDM9",12.96,"size1","Gold",null,"Magnet"],[18681,"52PLRDA0GLDP9",12.96,"size1","Gold",null,"Pin"],[18682,"52PLRDA0SLVM9",12.96,"size1","Silver",null,"Magnet"],[18683,"52PLRDA0SLVP9",12.96,"size1","Silver",null,"Pin"],[18684,"52PLRDA0WHTM9",12.96,"size1","Custom Color",null,"Magnet"],[18685,"52PLRDA0WHTP9",12.96,"size1","Custom Color",null,"Pin"],[18686,"52PLRDA0WHTM9-Background",12.96,"size1","Upload Background",null,"Magnet"],[18687,"52PLRDA0WHTP9-Background",12.96,"size1","Upload Background",null,"Pin"],[18688,"52PLRDB0GLDM9",12.96,"size2","Gold",null,"Magnet"],[18689,"52PLRDB0GLDP9",12.96,"size2","Gold",null,"Pin"],[18690,"52PLRDB0SLVM9",12.96,"size2","Silver",null,"Magnet"],[18691,"52PLRDB0SLVP9",12.96,"size2","Silver",null,"Pin"],[18692,"52PLRDB0WHTM9",12.96,"size2","Custom Color",null,"Magnet"],[18693,"52PLRDB0WHTP9",12.96,"size2","Custom Color",null,"Pin"],[18694,"52PLRDB0WHTM9-Background",12.96,"size2","Upload Background",null,"Magnet"],[18695,"52PLRDB0WHTP9-Background",12.96,"size2","Upload Background",null,"Pin"],[18696,"52PLRDC0GLDM9",12.96,"size3","Gold",null,"Magnet"],[18697,"52PLRDC0GLDP9",12.96,"size3","Gold",null,"Pin"],[18698,"52PLRDC0SLVM9",12.96,"size3","Silver",null,"Magnet"],[18699,"52PLRDC0SLVP9",12.96,"size3","Silver",null,"Pin"],[18700,"52PLRDC0WHTM9",12.96,"size3","Custom Color",null,"Magnet"],[18701,"52PLRDC0WHTP9",12.96,"size3","Custom Color",null,"Pin"],[18702,"52PLRDC0WHTM9-Background",12.96,"size3","Upload Background",null,"Magnet"],[18703,"52PLRDC0WHTP9-Background",12.96,"size3","Upload Background",null,"Pin"]],"mods":{"image":{"id":1697,"name":"Image"},"alignment":{"id":1699,"name":"Alignment"},"special_instructions":{"id":1700,"name":"Special Design Instructions"},"logo_size":{"id":1702,"name":"Uploaded Logo Size"},"name":{"id":1703,"name":"Name"},"title":{"id":1705,"name":"Title"},"custom_color":{"id":1706,"name":"Custom Color"},"background_image":{"id":1707,"name":"Background Image"},"saved_design":{"id":1708,"name":"Saved Design"},"saved_design_link":{"id":1709,"name":"Saved Design Link"},"font_1":{"id":1711,"name":"Font1"},"font_2":{"id":1712,"name":"Font2"},"font_1_size":{"id":1713,"name":"Font1size"},"font_2_size":{"id":1714,"name":"Font2size"},"color_2":{"id":1715,"name":"Customcolor2"},"color_1":{"id":1716,"name":"Customcolor1"},"proof_approval":{"id":1718,"name":"Review"},"saved_print_output":{"id":1720,"name":"Saved Print Output"},"layout":{"id":2524,"name":"Select Layout"},"badge_text":{"id":2823,"name":"Badge Text"},"font_3_size":{"id":2824,"name":"Font3size"},"font_3":{"id":2825,"name":"Font3"},"color_3":{"id":2826,"name":"Customcolor3"},"background_size":{"id":2992,"name":"Background Size"}},"opts":{"size":{"id":405,"name":"Size","values":{"size1":1293,"size2":1294,"size3":1295}},"background_color":{"id":1300,"name":"Background Color","values":{"Gold":1340,"Silver":1341,"Custom Color":1344,"Upload Background":1345}},"attachment":{"id":1301,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":false},{"id":"engraved_plastic_name_badge","name":"Engraved Plastic Name Badge","bc_id":155,"url":"/name-badges/engraved-plastic-name-badge/","decoration":"engraved","group":"Engraved","kind":"engraved_plastic","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"}],"bg":["Black-Tan","Black-White","Gold-Black","Silver-Black","White-Black"],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18365,"52ENGE02BLTM9",9.99,"size1","Black-Tan",null,"Magnet"],[18366,"52ENGE02BLTP9",9.99,"size1","Black-Tan",null,"Pin"],[18367,"52ENGE02BLWM9",9.99,"size1","Black-White",null,"Magnet"],[18368,"52ENGE02BLWP9",9.99,"size1","Black-White",null,"Pin"],[18369,"52ENGE02GLBM9",9.99,"size1","Gold-Black",null,"Magnet"],[18370,"52ENGE02GLBP9",9.99,"size1","Gold-Black",null,"Pin"],[18371,"52ENGE02SLBM9",9.99,"size1","Silver-Black",null,"Magnet"],[18372,"52ENGE02SLBP9",9.99,"size1","Silver-Black",null,"Pin"],[18373,"52ENGE01BLTM9",9.99,"size2","Black-Tan",null,"Magnet"],[18374,"52ENGE01BLTP9",9.99,"size2","Black-Tan",null,"Pin"],[18375,"52ENGE01BLWM9",9.99,"size2","Black-White",null,"Magnet"],[18376,"52ENGE01BLWP9",9.99,"size2","Black-White",null,"Pin"],[18377,"52ENGE01GLBM9",9.99,"size2","Gold-Black",null,"Magnet"],[18378,"52ENGE01GLBP9",9.99,"size2","Gold-Black",null,"Pin"],[18379,"52ENGE01SLBM9",9.99,"size2","Silver-Black",null,"Magnet"],[18380,"52ENGE01SLBP9",9.99,"size2","Silver-Black",null,"Pin"],[45090,"52ENGE02WHBM9",9.99,"size1","White-Black",null,"Magnet"],[45091,"52ENGE02WHBP9",9.99,"size1","White-Black",null,"Pin"],[45092,"52ENGE01WHBM9",9.99,"size2","White-Black",null,"Magnet"],[45093,"52ENGE01WHBP9",9.99,"size2","White-Black",null,"Pin"]],"mods":{"image":{"id":1575,"name":"Image"},"alignment":{"id":1576,"name":"Alignment"},"special_instructions":{"id":1577,"name":"Special Design Instructions"},"logo_size":{"id":1578,"name":"Uploaded Logo Size"},"name":{"id":1579,"name":"Name"},"title":{"id":1580,"name":"Title"},"custom_color":{"id":1581,"name":"Custom Color"},"background_image":{"id":1582,"name":"Background Image"},"saved_design_link":{"id":1583,"name":"Saved Design Link"},"saved_design":{"id":1584,"name":"Saved Design"},"layout":{"id":1585,"name":"Select Layout"},"font_1":{"id":1586,"name":"Font1"},"font_2":{"id":1587,"name":"Font2"},"font_1_size":{"id":1588,"name":"Font1size"},"font_2_size":{"id":1589,"name":"Font2size"},"bulk_names_file":{"id":1592,"name":"Additional Names - File Upload"},"proof_approval":{"id":1593,"name":"Review"},"saved_print_output":{"id":1594,"name":"Saved Print Output"},"badge_text":{"id":2865,"name":"Badge Text"},"font_3_size":{"id":2866,"name":"Font3size"},"font_3":{"id":2867,"name":"Font3"},"color_3":{"id":2868,"name":"Customcolor3"},"order_file_disclaimer":{"id":2921,"name":"Order File Disclaimer"},"background_size":{"id":2974,"name":"Background Size"}},"opts":{"size":{"id":179,"name":"Size","values":{"size1":303,"size2":304}},"background_color":{"id":180,"name":"Background Color","values":{"Black-Tan":305,"Black-White":306,"Gold-Black":307,"Silver-Black":308,"White-Black":1711}},"attachment":{"id":1206,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"engraved_wooden_name_badge","name":"Engraved Wooden Name Badge","bc_id":143,"url":"/name-badges/engraved-wooden-name-badge/","decoration":"engraved","group":"Engraved","kind":"wood","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"}],"bg":[],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18305,"520WDP25WMAM9",11.73,"size1",null,null,"Magnet"],[18306,"520WDP25WMAP9",11.73,"size1",null,null,"Pin"],[18307,"520WDP30WMAM9",11.73,"size2",null,null,"Magnet"],[18308,"520WDP30WMAP9",11.73,"size2",null,null,"Pin"],[18309,"520WDP35WMAM9",11.73,"size3",null,null,"Magnet"],[18310,"520WDP35WMAP9",11.73,"size3",null,null,"Pin"]],"mods":{"layout":{"id":496,"name":"Select Layout"},"custom_color":{"id":497,"name":"Custom Color"},"background_image":{"id":498,"name":"Background Image"},"image":{"id":499,"name":"Image"},"logo_size":{"id":500,"name":"Uploaded Logo Size"},"name":{"id":501,"name":"Name"},"alignment":{"id":502,"name":"Alignment"},"title":{"id":504,"name":"Title"},"special_instructions":{"id":505,"name":"Special Design Instructions"},"font_1_size":{"id":791,"name":"Font1size"},"font_1":{"id":792,"name":"Font1"},"font_2_size":{"id":793,"name":"Font2size"},"font_2":{"id":795,"name":"Font2"},"proof_approval":{"id":797,"name":"Review"},"bulk_names_file":{"id":1147,"name":"Additional Names - File Upload"},"saved_design":{"id":1148,"name":"Saved Design"},"saved_design_link":{"id":1149,"name":"Saved Design Link"},"saved_print_output":{"id":1150,"name":"Saved Print Output"},"badge_text":{"id":2851,"name":"Badge Text"},"font_3_size":{"id":2852,"name":"Font3size"},"font_3":{"id":2853,"name":"Font3"},"color_3":{"id":2854,"name":"Customcolor3"},"order_file_disclaimer":{"id":2929,"name":"Order File Disclaimer"}},"opts":{"size":{"id":148,"name":"Size","values":{"size1":224,"size2":225,"size3":226}},"attachment":{"id":1153,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"chalkboard_name_badge","name":"Chalkboard Name Badge (2 15/16\" x 1 9/16\")","bc_id":145,"url":"/name-badges/chalkboard-name-badge/","decoration":"printed","group":"Wood & chalkboard","kind":"chalk","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":2.9375,"h":1.5625,"known":false,"src":"placeholder (product name says 2 15/16 x 1 9/16, but the product has two sizes)"},{"id":"size2","label":"Size 2","w":3,"h":2,"known":false,"src":"placeholder"}],"bg":[],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":4.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[19243,"52CNMCB0999M9",4.99,"size2",null,null,"Magnet"],[19244,"52CNMCB0999P9",4.99,"size2",null,null,"Pin"],[19245,"52CNMCA0999M9",4.99,"size1",null,null,"Magnet"],[19246,"52CNMCA0999P9",4.99,"size1",null,null,"Pin"]],"mods":{"image":{"id":1554,"name":"Image"},"alignment":{"id":1555,"name":"Alignment"},"special_instructions":{"id":1556,"name":"Special Design Instructions"},"logo_size":{"id":1557,"name":"Uploaded Logo Size"},"name":{"id":1558,"name":"Name"},"title":{"id":1559,"name":"Title"},"custom_color":{"id":1560,"name":"Custom Color"},"background_image":{"id":1561,"name":"Background Image"},"saved_design":{"id":1562,"name":"Saved Design"},"saved_design_link":{"id":1563,"name":"Saved Design Link"},"layout":{"id":1564,"name":"Select Layout"},"font_1":{"id":1565,"name":"Font1"},"font_2":{"id":1566,"name":"Font2"},"font_1_size":{"id":1567,"name":"Font1size"},"font_2_size":{"id":1568,"name":"Font2size"},"color_1":{"id":1569,"name":"Customcolor1"},"color_2":{"id":1570,"name":"Customcolor2"},"bulk_names_file":{"id":1571,"name":"Additional Names - File Upload"},"proof_approval":{"id":1572,"name":"Review"},"saved_print_output":{"id":1573,"name":"Saved Print Output"}},"opts":{"size":{"id":155,"name":"Size","values":{"size2":242,"size1":243}},"attachment":{"id":1830,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true},{"id":"printed_wooden_name_badge","name":"Printed Wooden Name Badge","bc_id":142,"url":"/name-badges/printed-wooden-name-badge/","decoration":"printed","group":"Wood & chalkboard","kind":"wood","shape":"rect","frame":null,"sizes":[{"id":"size1","label":"Size 1","w":3,"h":1,"known":false,"src":"placeholder"},{"id":"size2","label":"Size 2","w":3,"h":1.5,"known":false,"src":"placeholder"},{"id":"size3","label":"Size 3","w":3,"h":2,"known":false,"src":"placeholder"}],"bg":[],"border":[],"attach":["Magnet","Pin"],"fonts":["Alegreya","Anton","Archivo Black","Bebas Neue","Homemade Apple","Josefin Sans","Lato","Libre Baskerville","Montserrat","Oswald"],"price":9.99,"tiers":[{"min_qty":5,"pct":10},{"min_qty":10,"pct":15},{"min_qty":15,"pct":20},{"min_qty":20,"pct":30},{"min_qty":50,"pct":35},{"min_qty":100,"pct":40}],"pulled_at":"2026-10-11T01:00:26.076Z","variants":[[18311,"520WDP25999M9",9.99,"size1",null,null,"Magnet"],[18312,"520WDP25999P9",9.99,"size1",null,null,"Pin"],[18313,"520WDP35999M9",9.99,"size2",null,null,"Magnet"],[18314,"520WDP35999P9",9.99,"size2",null,null,"Pin"],[18315,"520WDP30999M9",9.99,"size3",null,null,"Magnet"],[18316,"520WDP30999P9",9.99,"size3",null,null,"Pin"]],"mods":{"layout":{"id":485,"name":"Select Layout"},"custom_color":{"id":486,"name":"Custom Color"},"background_image":{"id":487,"name":"Background Image"},"image":{"id":488,"name":"Image"},"logo_size":{"id":489,"name":"Uploaded Logo Size"},"name":{"id":490,"name":"Name"},"alignment":{"id":491,"name":"Alignment"},"title":{"id":493,"name":"Title"},"special_instructions":{"id":494,"name":"Special Design Instructions"},"font_1_size":{"id":784,"name":"Font1size"},"font_1":{"id":785,"name":"Font1"},"font_2_size":{"id":786,"name":"Font2size"},"color_1":{"id":787,"name":"Customcolor1"},"font_2":{"id":788,"name":"Font2"},"proof_approval":{"id":789,"name":"Review"},"bulk_names_file":{"id":1141,"name":"Additional Names - File Upload"},"saved_design":{"id":1142,"name":"Saved Design"},"saved_design_link":{"id":1143,"name":"Saved Design Link"},"saved_print_output":{"id":1144,"name":"Saved Print Output"},"color_2":{"id":1246,"name":"Customcolor2"},"badge_text":{"id":2858,"name":"Badge Text"},"font_3_size":{"id":2859,"name":"Font3size"},"font_3":{"id":2860,"name":"Font3"},"color_3":{"id":2861,"name":"Customcolor3"},"order_file_disclaimer":{"id":2930,"name":"Order File Disclaimer"}},"opts":{"size":{"id":145,"name":"Size","values":{"size1":217,"size2":218,"size3":219}},"attachment":{"id":1140,"name":"Back Attachment","values":{"Magnet":932,"Pin":933}}},"bulk":true}],"default_product":"regal_large_name_badge","layouts":{"1":{"text1":[612,480,416,90],"text2":null,"image":[265,480,248,248],"label":"Logo, then name"},"2":{"text1":[349,480,416,90],"text2":null,"image":[696,480,248,248],"label":"Name, then logo"},"3":{"text1":[480,517,679,90],"text2":[480,608,679,73],"image":[480,388,679,144],"label":"Logo above name and title"},"4":{"text1":[480,593,679,90],"text2":null,"image":[480,419,679,205],"label":"Logo above name"},"5":{"text1":null,"text2":null,"image":[480,480,679,329],"label":"Logo only"},"6":{"text1":[612,439,416,90],"text2":[612,532,416,69],"image":[265,480,248,248],"label":"Logo, then name and title"},"7":{"text1":[349,439,416,90],"text2":[349,532,416,69],"image":[696,480,248,248],"label":"Name and title, then logo"}},"box":{"x":140.5,"y":315.5,"w":679,"h":329,"note":"Bounding box of every element across badge layouts 1 to 7. The studio maps this box onto the badge's printable area."},"text_size":{"text1":{"min":60,"max":100,"step":2,"default":60},"text2":{"min":40,"max":60,"step":2,"default":40}},"logo_scale":{"min":0.5,"max":4,"step":0.1,"default":1},"bg_scale":{"min":0.5,"max":4,"step":0.1,"default":1},"checks":{"safe_margin_in":0.08,"min_text_pt":6,"min_contrast":3,"source":"Studio judgment until production confirms: 6 pt is a common minimum for printed and engraved text; contrast 3:1 is the WCAG minimum for large text."},"engrave":{"wood":"#4A2C17"},"colors":{"Black":"#111111","White":"#FFFFFF","Blue":"#1F4E9C","Green":"#1F6B3A","Maroon":"#6E1F2B","Red":"#C0272D","Tan":"#C9A878","Gold":"#C9A24A","Silver":"#BFC4C9"}};
+/* Custom Genie · Name badge studio
+   DATA (embedded by build_badges.py): badge products from the BigCommerce definitions, the Doogma layout masters,
+   print checks and colors. Every badge is drawn as SVG in badge units (100 per inch). */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const KEY='cg-badge-v1',U=100,C=DATA.box,TS=DATA.text_size;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const r2=v=>Math.round(v*100)/100,money=v=>'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtIn=v=>{const w=Math.floor(v+1e-9),f=v-w;if(f<1e-6)return String(w);for(const d of[2,4,8,16]){const n=Math.round(f*d);if(Math.abs(n/d-f)<1e-6)return(w?w+' ':'')+n+'/'+d}return v.toFixed(2)};
+const prod=id=>DATA.products.find(p=>p.id===id);
+const params=new URLSearchParams(location.search),DEBUG=params.has('debug');
+const track=(event,p={})=>{(window.dataLayer=window.dataLayer||[]).push({event,...p})};
+const W700=new Set(['Alegreya','Josefin Sans','Lato','Libre Baskerville','Montserrat','Oswald']);
+const NAMED=DATA.colors;
+const pickFont=(list,pref)=>pref.find(f=>list.includes(f))||list[0];
+
+/* ---------- layouts: Doogma layouts 1 to 7, plus a studio text-only layout ---------- */
+const LAYOUTS={...DATA.layouts,text:{text1:[480,440,679,90],text2:[480,530,679,69],image:null,label:'Name and title only',studio:true}};
+const LAYOUT_ORDER=['text','1','2','3','4','5','6','7'];
+const hasImg=id=>!!LAYOUTS[id].image,hasT2=id=>!!LAYOUTS[id].text2,hasT1=id=>!!LAYOUTS[id].text1;
+
+/* ---------- state ---------- */
+function blank(p){return{pid:p.id,size:p.sizes[0].id,bg:p.bg[0]||null,border:p.border[0]||null,attach:p.attach[0]||null,custom:'#1F4E9C',bgImg:null,bgScale:DATA.bg_scale.default,
+  layout:'text',name:'Alex Morgan',title:'Store Manager',font1:pickFont(p.fonts,['Montserrat','Lato']),font2:pickFont(p.fonts,['Lato','Montserrat']),
+  fs1:TS.text1.default,fs2:TS.text2.default,c1:null,c2:null,align:'center',logo:null,logoRaw:null,logoW:0,logoH:0,logoSvg:false,logoScale:DATA.logo_scale.default,dropWhite:false,logoGenie:false,
+  names:'',qty:1,notes:''}}
+function fit(S){const p=prod(S.pid);const ok=(v,l)=>l.includes(v)?v:(l[0]||null);
+  S.size=p.sizes.some(z=>z.id===S.size)?S.size:p.sizes[0].id;S.bg=ok(S.bg,p.bg);S.border=ok(S.border,p.border);S.attach=ok(S.attach,p.attach);
+  S.font1=p.fonts.includes(S.font1)?S.font1:pickFont(p.fonts,['Montserrat']);S.font2=p.fonts.includes(S.font2)?S.font2:pickFont(p.fonts,['Lato']);
+  if(!LAYOUTS[S.layout])S.layout='text';return S}
+let S;{let saved=null;try{saved=JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){}
+  const want=prod(params.get('product'))||prod(saved&&saved.pid)||prod(DATA.default_product)||DATA.products[0];
+  S=fit(Object.assign(blank(want),saved||{},{pid:want.id}))}
+let saveT;function save(){clearTimeout(saveT);saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){try{localStorage.setItem(KEY,JSON.stringify({...S,logo:null,logoRaw:null,bgImg:null}))}catch(e2){}}},250)}
+const P=()=>prod(S.pid);
+
+/* ---------- colors ---------- */
+const hex2rgb=h=>{h=String(h||'#000').replace('#','');if(h.length===3)h=h.split('').map(c=>c+c).join('');const n=parseInt(h,16);return[n>>16&255,n>>8&255,n&255]};
+const lum=h=>{const[r,g,b]=hex2rgb(h).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*r+.7152*g+.0722*b};
+const contrast=(a,b)=>{const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const autoInk=bg=>bg&&lum(bg)<.32?'#FFFFFF':'#111111';
+function look(p,S){ /* what the badge face looks like: fill key, plain color used for contrast, engraving color */
+  const k=p.kind,bg=S.bg||'';
+  if(k==='engraved_plastic'){const[a,b]=bg.split('-');return{face:'solid',color:NAMED[a]||'#111111',engrave:NAMED[b]||'#FFFFFF'}}
+  if(k==='wood')return{face:'wood',color:'#C8925A',engrave:p.decoration==='engraved'?DATA.engrave.wood:null};
+  if(k==='chalk')return{face:'chalk',color:'#2E3A35'};
+  if(k==='window')return{face:'solid',color:'#FFFFFF',frame:bg==='Gold'?'gold':'silver'};
+  if(bg==='Gold')return{face:'gold',color:'#D7B35A'};
+  if(bg==='Silver')return{face:'silver',color:'#C9CDD2'};
+  if(bg==='Custom Color')return{face:'solid',color:S.custom};
+  if(bg==='Upload Background')return{face:'image',color:null};
+  return{face:'solid',color:'#FFFFFF'}}
+function borderPaint(p,S){const b=S.border||'';if(!b)return null;if(b==='Gold')return'gold';if(b==='Silver')return'silver';return NAMED[b.replace(' Edge','')]||'#111111'}
+
+/* ---------- geometry ---------- */
+const sizeOf=(p,S)=>p.sizes.find(z=>z.id===S.size)||p.sizes[0];
+function frameIn(p,look){if(p.kind==='window')return .12;if(p.frame==='metal')return .09;if(p.frame==='border')return .06;if(p.frame==='edge')return .02;return 0}
+function geo(p,S,lk){const z=sizeOf(p,S),W=z.w*U,H=(p.shape==='circle'?z.w:z.h)*U,fw=frameIn(p,lk)*U,m=DATA.checks.safe_margin_in*U;
+  let s={x:fw+m,y:fw+m,w:W-2*(fw+m),h:H-2*(fw+m)};
+  if(p.shape==='oval'||p.shape==='circle'){const cw=(W-2*fw)*Math.SQRT1_2-2*m,ch=(H-2*fw)*Math.SQRT1_2-2*m;s={x:(W-cw)/2,y:(H-ch)/2,w:cw,h:ch}}
+  if(p.shape==='oval_top'){const y0=H*.28*.6+fw+m;s={x:fw+m,y:y0,w:W-2*(fw+m),h:H-y0-fw-m}}
+  return{z,W,H,fw,s}}
+function shapePath(p,W,H){
+  if(p.shape==='oval'||p.shape==='circle')return`M0 ${H/2}A${W/2} ${H/2} 0 1 1 ${W} ${H/2}A${W/2} ${H/2} 0 1 1 0 ${H/2}Z`;
+  const r=Math.min(.1*U,H*.14);
+  if(p.shape==='oval_top'){const a=H*.28;return`M0 ${a}A${W/2} ${a} 0 0 1 ${W} ${a}L${W} ${H-r}Q${W} ${H} ${W-r} ${H}L${r} ${H}Q0 ${H} 0 ${H-r}Z`}
+  return`M${r} 0H${W-r}Q${W} 0 ${W} ${r}V${H-r}Q${W} ${H} ${W-r} ${H}H${r}Q0 ${H} 0 ${H-r}V${r}Q0 0 ${r} 0Z`}
+const mapBox=(b,s)=>b&&b[0]>-400?{x:s.x+(b[0]-b[2]/2-C.x)/C.w*s.w,y:s.y+(b[1]-b[3]/2-C.y)/C.h*s.h,w:b[2]/C.w*s.w,h:b[3]/C.h*s.h}:null;
+
+/* ---------- text measuring ---------- */
+const mctx=document.createElement('canvas').getContext('2d');
+function textW(t,font,w,size){mctx.font=`${w} 100px "${font}", sans-serif`;return mctx.measureText(t).width/100*size}
+
+/* ---------- one badge as SVG ---------- */
+let uid=0;
+const METAL={gold:['#8F6A20','#D9B45A','#F6E3A3','#C99B3E','#8A651E'],silver:['#7E848A','#C9CDD2','#FAFBFC','#B3B8BD','#7A8086']};
+function badge(p,S,person,{mode='edit',px=null}={}){
+  const id='b'+(++uid),lk=look(p,S),g=geo(p,S,lk),{W,H,s}=g,issues=[],d=shapePath(p,W,H);
+  const grad=(n,stops)=>`<linearGradient id="${id}${n}" x1="0" y1="0" x2="1" y2="1">${stops.map((c,i)=>`<stop offset="${i/(stops.length-1)}" stop-color="${c}"/>`).join('')}</linearGradient>`;
+  let defs=`<clipPath id="${id}c"><path d="${d}"/></clipPath>${grad('gold',METAL.gold)}${grad('silver',METAL.silver)}
+   <pattern id="${id}br" width="9" height="1.4" patternUnits="userSpaceOnUse"><rect width="9" height=".45" fill="#fff" opacity=".22"/></pattern>
+   <pattern id="${id}wd" width="80" height="16" patternUnits="userSpaceOnUse"><path d="M0 8Q20 3 40 8T80 8M0 14Q20 11 40 14T80 14" fill="none" stroke="#7A4B24" stroke-width=".9" opacity=".35"/></pattern>
+   <pattern id="${id}ck" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".7" fill="#fff" opacity=".09"/><circle cx="10" cy="11" r=".5" fill="#fff" opacity=".07"/></pattern>`;
+  /* face */
+  let face='';const f=lk.face;
+  if(f==='gold'||f==='silver')face=`<rect width="${W}" height="${H}" fill="url(#${id}${f})"/><rect width="${W}" height="${H}" fill="url(#${id}br)"/>`;
+  else if(f==='wood')face=`<rect width="${W}" height="${H}" fill="#C8925A"/><rect width="${W}" height="${H}" fill="url(#${id}wd)"/>`;
+  else if(f==='chalk')face=`<rect width="${W}" height="${H}" fill="#2E3A35"/><rect width="${W}" height="${H}" fill="url(#${id}ck)"/>`;
+  else if(f==='image'){if(S.bgImg){const k=S.bgScale,w=W*k,h=H*k;face=`<rect width="${W}" height="${H}" fill="#fff"/><image href="${S.bgImg}" x="${(W-w)/2}" y="${(H-h)/2}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>`}
+    else{face=`<rect width="${W}" height="${H}" fill="#E9ECF1"/>`;if(mode==='edit')face+=`<text x="${W/2}" y="${H-8}" font-family="Work Sans,sans-serif" font-size="${Math.max(7,H*.07)}" fill="#5F6875" text-anchor="middle">Upload a background image under Background</text>`;else issues.push({lvl:'warn',msg:'Upload a background image, or pick another background.'})}}
+  else face=`<rect width="${W}" height="${H}" fill="${lk.color}"/>`;
+  /* frame */
+  let frame='';const fw=g.fw;
+  if(fw>0){const paint=p.kind==='window'?lk.frame:borderPaint(p,S);if(paint){const fill=paint==='gold'||paint==='silver'?`url(#${id}${paint})`:paint;
+    frame=`<path d="${d}" fill="none" stroke="${fill}" stroke-width="${fw*2}"/>`;if(paint==='gold'||paint==='silver')frame+=`<path d="${d}" fill="none" stroke="url(#${id}br)" stroke-width="${fw*2}"/>`}}
+  /* ink */
+  const ink1=lk.engrave||S.c1||autoInk(lk.color),ink2=lk.engrave||S.c2||autoInk(lk.color);
+  /* layout */
+  const L=LAYOUTS[S.layout],k=s.h/C.h;let b1=mapBox(L.text1,s),b2=mapBox(L.text2,s);const bi=mapBox(L.image,s);
+  const name=(person.name||'').trim(),title=(person.title||'').trim();
+  if(b1&&b2&&!title){const top=b1.y,bot=b2.y+b2.h;b1={...b1,y:(top+bot)/2-b1.h/2};b2=null}
+  let txt='';const minU=DATA.checks.min_text_pt/72*U;
+  const line=(t,b,font,fs,ink,label)=>{if(!b||!t)return;const w=W700.has(font)&&label==='Name'?700:400,max=Math.min(fs*k,b.h),tw=textW(t,font,w,max),sz=tw>b.w?max*b.w/tw:max;
+    if(sz<minU)issues.push({lvl:'warn',field:label,msg:`${label} "${t}" is too long to print clearly (${(Math.floor(sz/U*72*10)/10).toFixed(1)} pt). Shorten it, pick a narrower font or a wider layout.`});
+    const a=S.align,x=a==='left'?b.x:a==='right'?b.x+b.w:b.x+b.w/2,anchor=a==='left'?'start':a==='right'?'end':'middle';
+    txt+=`<text x="${x.toFixed(2)}" y="${(b.y+b.h/2+sz*.35).toFixed(2)}" font-family="${esc(font)}, sans-serif" font-weight="${w}" font-size="${sz.toFixed(2)}" fill="${ink}" text-anchor="${anchor}">${esc(t)}</text>`};
+  if(hasT1(S.layout)&&!name)issues.push({lvl:'warn',field:'Name',msg:'Add a name.'});
+  line(name,b1,S.font1,S.fs1,ink1,'Name');line(title,b2,S.font2,S.fs2,ink2,'Title');
+  /* logo */
+  let logo='';
+  if(bi){if(S.logo){const sc=S.logoScale,w=bi.w*sc,h=bi.h*sc,x=bi.x+(bi.w-w)/2,y=bi.y+(bi.h-h)/2;
+      if(lk.engrave){const[r,gg,bb]=hex2rgb(lk.engrave).map(v=>(v/255).toFixed(3));defs+=`<filter id="${id}e" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 ${r} 0 0 0 0 ${gg} 0 0 0 0 ${bb} -.333 -.333 -.333 1 0"/><feComponentTransfer><feFuncA type="linear" slope="4"/></feComponentTransfer></filter>`}
+      logo=`<image href="${S.logo}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${w.toFixed(2)}" height="${h.toFixed(2)}" preserveAspectRatio="xMidYMid meet"${lk.engrave?` filter="url(#${id}e)"`:''}/>`;
+      if(S.logoW&&!S.logoSvg){const ar=S.logoW/S.logoH,fitW=Math.min(w,h*ar)/U,dpi=S.logoW/fitW;if(dpi<150)issues.push({lvl:'warn',msg:`Your logo is low resolution for this size (${Math.round(dpi)} dpi). It may print blurry; upload a larger file if you have one.`})}}
+    else{issues.push({lvl:'warn',msg:'This layout has a spot for a logo. Add one under Logo, or pick "Name and title only" under Layout.'});
+      if(mode==='edit')logo=`<rect x="${bi.x}" y="${bi.y}" width="${bi.w}" height="${bi.h}" rx="4" fill="none" stroke="#8A929D" stroke-width="1" stroke-dasharray="4 3"/><text x="${bi.x+bi.w/2}" y="${bi.y+bi.h/2+3}" font-family="Work Sans,sans-serif" font-size="${Math.min(bi.h*.2,11)}" fill="#5F6875" text-anchor="middle">Your logo</text>`}}
+  /* contrast */
+  if(lk.color&&!lk.engrave){const c=contrast(ink1,lk.color);if(name&&c<DATA.checks.min_contrast)issues.push({lvl:'warn',msg:`The name color is hard to read on this background (contrast ${c.toFixed(1)}:1). Pick a darker or lighter color.`})}
+  const size=px?` width="${(W/U*px).toFixed(1)}" height="${(H/U*px).toFixed(1)}"`:'';
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 ${W+4} ${H+4}"${size} aria-hidden="true" focusable="false"><defs>${defs}</defs><g clip-path="url(#${id}c)">${face}${logo}${txt}${frame}</g><path d="${d}" fill="none" stroke="rgba(0,0,0,.3)" stroke-width=".8"/></svg>`;
+  return{svg,issues}}
+
+/* ---------- names ---------- */
+function parseNames(t){const out=[];String(t||'').split(/\r?\n/).forEach((raw,i)=>{let l=raw.trim();if(!l)return;
+  if(i===0&&/^"?name"?\s*([,\t;]|$)/i.test(l))return;
+  const m=l.match(/^("?)(.*?)\1\s*(?:[,\t;]\s*("?)(.*?)\3\s*)?$/);const name=(m?m[2]:l).trim(),title=(m&&m[4]||'').trim();
+  if(name||title)out.push({name,title,line:i+1})});return out.slice(0,2000)}
+let who=0;
+const people=()=>{const n=parseNames(S.names);return n.length?n:[{name:S.name,title:S.title,line:0}]};
+const usingList=()=>parseNames(S.names).length>0;
+
+/* ---------- pricing (BigCommerce) ---------- */
+/* variants are compact arrays: [id, sku, price, size, background, border, attachment] (see DATA.vkeys) */
+const V=a=>({id:a[0],sku:a[1],price:a[2],o:Object.fromEntries(DATA.vkeys.map((k,i)=>[k,a[3+i]]).filter(([,v])=>v!=null))});
+function variant(p,S){const want={size:S.size==='default'?undefined:S.size,background_color:S.bg,border_color:S.border,attachment:S.attach};
+  const a=p.variants.find(x=>DATA.vkeys.every((k,i)=>x[3+i]==null||want[k]===undefined||want[k]===x[3+i]))||p.variants[0];return V(a)}
+function unitFor(p,v,q){let pct=0;for(const t of p.tiers)if(q>=t.min_qty)pct=t.pct;return{unit:r2(v.price*(1-pct/100)),pct}}
+const qtyNow=()=>usingList()?parseNames(S.names).length:Math.max(1,Math.min(5000,parseInt(S.qty,10)||1));
+
+/* ---------- UI build ---------- */
+const sw=(label,css,{name,val,checked,text=label})=>`<label><input type="radio" name="${name}" value="${esc(val)}"${checked?' checked':''}><span><i style="background:${css}" aria-hidden="true"></i>${esc(text)}</span></label>`;
+const metalCss=k=>`linear-gradient(135deg,${METAL[k].join(',')})`;
+function swCss(v){if(v==='Gold')return metalCss('gold');if(v==='Silver')return metalCss('silver');if(v==='Custom Color')return'conic-gradient(#F2364C,#F5B82E,#21C8E2,#5A3BD6,#F2364C)';
+  if(v==='Upload Background')return'linear-gradient(135deg,#9ad 0 40%,#fc8 40% 70%,#7b6 70%)';if(v.includes('-')){const[a,b]=v.split('-');return`linear-gradient(135deg,${NAMED[a]||'#111'} 50%,${NAMED[b]||'#fff'} 50%)`}
+  return NAMED[v.replace(' Edge','')]||'#ccc'}
+function layoutThumb(id){const L=LAYOUTS[id],pad=24,vb=`${C.x-pad} ${C.y-pad} ${C.w+2*pad} ${C.h+2*pad}`;let s=`<rect x="${C.x-pad+4}" y="${C.y-pad+4}" width="${C.w+2*pad-8}" height="${C.h+2*pad-8}" rx="22" fill="#fff" stroke="#C6CDD5" stroke-width="5"/>`;
+  const box=(b,fill,hFrac,wFrac)=>{if(!b||b[0]<-400)return'';const h=b[3]*hFrac,w=b[2]*wFrac;return`<rect x="${b[0]-w/2}" y="${b[1]-h/2}" width="${w}" height="${h}" rx="${Math.min(10,h/2)}" fill="${fill}"/>`};
+  if(L.image){const b=L.image,sz=Math.min(b[2],b[3])*.9;s+=`<rect x="${b[0]-b[2]/2+6}" y="${b[1]-b[3]/2+6}" width="${b[2]-12}" height="${b[3]-12}" rx="12" fill="#E3E7EC"/><path d="M${b[0]-sz*.35} ${b[1]+sz*.25}l${sz*.25}-${sz*.3}l${sz*.15}${sz*.15}l${sz*.12}-${sz*.1}l${sz*.18}${sz*.25}z" fill="#A9B1BB"/>`}
+  s+=box(L.text1,'#3F4854',.62,.72)+box(L.text2,'#A9B1BB',.5,.55);return`<svg viewBox="${vb}" aria-hidden="true">${s}</svg>`}
+function buildStatic(){
+  const groups={};DATA.products.forEach(p=>{(groups[p.group]=groups[p.group]||[]).push(p)});
+  $('#product').innerHTML=Object.entries(groups).map(([g,l])=>`<optgroup label="${esc(g)}">${l.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</optgroup>`).join('');
+  $('#layouts').innerHTML=LAYOUT_ORDER.map(id=>`<label><input type="radio" name="layout" value="${id}"><span>${layoutThumb(id)}${esc(LAYOUTS[id].label)}</span></label>`).join('');
+  const rng=(el,o)=>{el.min=o.min;el.max=o.max;el.step=o.step};rng($('#fs1'),TS.text1);rng($('#fs2'),TS.text2);rng($('#logoScale'),DATA.logo_scale);rng($('#bgScale'),DATA.bg_scale)}
+function syncPanel(){const p=P(),lk=look(p,S);
+  $('#product').value=p.id;$('#crumbName').textContent=p.name;
+  $('#productHint').textContent=p.decoration==='engraved'?'Engraved: your text and logo are cut into the badge in one color.':'Printed in full color.';
+  $('#sizes').innerHTML=p.sizes.map(z=>`<label><input type="radio" name="size" value="${z.id}"${z.id===S.size?' checked':''}><span>${z.known?`${fmtIn(z.w)} × ${fmtIn(p.shape==='circle'?z.w:z.h)} in`:esc(z.label)}</span></label>`).join('');
+  $('#attach').innerHTML=p.attach.map(a=>`<label><input type="radio" name="attach" value="${esc(a)}"${a===S.attach?' checked':''}><span>${esc(a)}</span></label>`).join('');$('#attachSet').hidden=!p.attach.length;
+  $$('#layouts input').forEach(i=>i.checked=i.value===S.layout);
+  const list=usingList();$('#tName').value=S.name;$('#tTitle').value=S.title;$('#tName').disabled=$('#tTitle').disabled=list;
+  $('#namesHint').textContent=list?`Using your Team names list (${parseNames(S.names).length} badges). These two fields are not used.`:'Ordering for a team? Add everyone\'s names under Team names.';
+  $('#titleField').hidden=!hasT2(S.layout);$('#font2Field').hidden=$('#fs2Field').hidden=$('#c2Field').hidden=!hasT2(S.layout);
+  const fo=l=>l.map(f=>`<option style="font-family:'${esc(f)}'">${esc(f)}</option>`).join('');$('#font1').innerHTML=fo(p.fonts);$('#font2').innerHTML=fo(p.fonts);$('#font1').value=S.font1;$('#font2').value=S.font2;
+  $('#fs1').value=S.fs1;$('#fs2').value=S.fs2;$('#fs1o').textContent=S.fs1;$('#fs2o').textContent=S.fs2;
+  $('#colorRow').hidden=!!lk.engrave;$('#engraveHint').hidden=!lk.engrave;
+  if(lk.engrave)$('#engraveHint').textContent=p.kind==='wood'?'Engraving burns the design into the wood, so it shows in one dark brown.':`Engraving shows in ${(S.bg||'').split('-')[1]||'the core color'}, set by the plate color you choose.`;
+  $('#c1').value=S.c1||autoInk(lk.color);$('#c2').value=S.c2||autoInk(lk.color);
+  $$('#align input').forEach(i=>i.checked=i.value===S.align);
+  $('#logoRemove').hidden=!S.logo;$('#logoScaleField').hidden=!S.logo;$('#logoScale').value=S.logoScale;$('#logoScaleO').textContent=S.logoScale.toFixed(1)+'×';
+  $('#whiteRow').hidden=!S.logo||S.logoSvg;$('#dropWhite').checked=S.dropWhite;
+  const bgLegend=p.kind==='engraved_plastic'?'Plate color':p.kind==='window'?'Frame':'Background';$('#bgLegend').textContent=bgLegend;
+  $('#bgs').innerHTML=p.bg.map(v=>sw(v,swCss(v),{name:'bg',val:v,checked:v===S.bg,text:v.replace('-',' with ')+(p.kind==='engraved_plastic'?' engraving':'')})).join('');$('#bgSet').hidden=!p.bg.length;
+  $('#customField').hidden=S.bg!=='Custom Color';$('#custom').value=S.custom;$('#bgImgField').hidden=S.bg!=='Upload Background';$('#bgScale').value=S.bgScale;$('#bgScaleO').textContent=S.bgScale.toFixed(1)+'×';
+  $('#borderLegend').textContent=p.frame==='metal'?'Frame':p.frame==='edge'?'Edge':'Border';
+  $('#borders').innerHTML=p.border.map(v=>sw(v,swCss(v),{name:'border',val:v,checked:v===S.border})).join('');$('#borderSet').hidden=!p.border.length;
+  $('#bgSec').hidden=!p.bg.length&&!p.border.length;
+  $('#namesSec').hidden=!p.bulk;
+  $$('.sec').filter(s=>!s.hidden).forEach((s,i)=>{s.querySelector('.n').textContent=i+1});
+  if($('#names').value!==S.names)$('#names').value=S.names;$('#namesClear').hidden=!S.names}
+
+/* ---------- render ---------- */
+let rq=0,actual=false;
+function render(){cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const p=P(),ppl=people();if(who>=ppl.length)who=0;const person=ppl[who],z=sizeOf(p,S);
+  const r=badge(p,S,person,{mode:'edit',px:actual?96:null});$('#badgeView').innerHTML=r.svg;
+  $('#badgeView').setAttribute('aria-label',`${p.name} preview${person.name?': '+person.name:''}${person.title?', '+person.title:''}`);
+  $('#stageBox').classList.toggle('actual',actual);
+  const dim=z.known?`${fmtIn(z.w)} × ${fmtIn(p.shape==='circle'?z.w:z.h)} in`:`${z.label}, preview proportions are approximate`;
+  $('#stageCap').textContent=dim+(actual?' · close to actual size (screens vary)':' · enlarged to show detail');
+  const list=usingList();$('#who').hidden=!list;if(list)$('#whoTxt').textContent=`Badge ${who+1} of ${ppl.length}: ${person.name||'(no name)'}`;
+  const iss=dedupe(r.issues);$('#checks').innerHTML=iss.length?iss.map(i=>`<li class="warn"><svg class="ico" aria-hidden="true"><use href="#i-warn"/></svg><span>${esc(i.msg)}</span></li>`).join(''):`<li class="ok"><svg class="ico" aria-hidden="true"><use href="#i-ok"/></svg><span>Ready to print.</span></li>`;
+  const q=qtyNow();$('#barSum').textContent=`${p.name} · ${dim.split(',')[0]} · ${q} badge${q===1?'':'s'}`;
+  namesReport();save()})}
+const dedupe=l=>{const s=new Set();return l.filter(i=>!s.has(i.msg)&&s.add(i.msg))};
+function namesReport(){const p=P(),list=parseNames(S.names);if(!list.length){$('#namesCount').textContent='Leave this empty to order the same badge for everyone.';$('#namesIssues').innerHTML='';return}
+  const bad=[];list.forEach(n=>{const r=badge(p,S,n,{mode:'proof'});r.issues.filter(i=>i.field).forEach(i=>bad.push(`Line ${n.line}: ${i.msg}`))});
+  $('#namesCount').textContent=`${list.length} badge${list.length===1?'':'s'}, one per line.${bad.length?` ${bad.length} need${bad.length===1?'s':''} attention:`:' Every name fits.'}`;
+  $('#namesIssues').innerHTML=bad.slice(0,100).map(t=>`<li>${esc(t)}</li>`).join('')+(bad.length>100?`<li>And ${bad.length-100} more.</li>`:'')}
+
+/* ---------- images ---------- */
+const MAXB=10*1024*1024;
+const readFile=f=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f)});
+const loadImg=src=>new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src});
+async function shrink(src,max=1400){const i=await loadImg(src),k=Math.min(1,max/Math.max(i.naturalWidth,i.naturalHeight));const c=document.createElement('canvas');c.width=Math.round(i.naturalWidth*k);c.height=Math.round(i.naturalHeight*k);c.getContext('2d').drawImage(i,0,0,c.width,c.height);return{src:c.toDataURL('image/png'),w:i.naturalWidth,h:i.naturalHeight}}
+async function dropWhite(src){const i=await loadImg(src),c=document.createElement('canvas');c.width=i.naturalWidth;c.height=i.naturalHeight;const x=c.getContext('2d');x.drawImage(i,0,0);
+  const d=x.getImageData(0,0,c.width,c.height),a=d.data;for(let j=0;j<a.length;j+=4){const m=Math.min(a[j],a[j+1],a[j+2]);if(m>=245)a[j+3]=0;else if(m>=215)a[j+3]=Math.round(a[j+3]*(245-m)/30)}x.putImageData(d,0,0);return c.toDataURL('image/png')}
+async function setLogo(src,{genie=false,svg=false}={}){
+  if(svg){S.logoRaw=S.logo=src;S.logoSvg=true;S.logoW=S.logoH=0;S.dropWhite=false}
+  else{const r=await shrink(src);S.logoRaw=r.src;S.logoW=r.w;S.logoH=r.h;S.logoSvg=false;S.dropWhite=genie;S.logo=genie?await dropWhite(r.src):r.src}
+  S.logoGenie=genie;let moved=false;if(!hasImg(S.layout)){S.layout='6';moved=true}
+  syncPanel();render();return moved}
+
+/* ---------- toast ---------- */
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,4200)}
+
+/* ---------- events ---------- */
+function on(){
+  $('#panel').addEventListener('submit',e=>e.preventDefault());
+  $('#product').addEventListener('change',e=>{const keep={...S};S=fit(Object.assign(blank(prod(e.target.value)),{name:keep.name,title:keep.title,layout:keep.layout,font1:keep.font1,font2:keep.font2,fs1:keep.fs1,fs2:keep.fs2,
+    align:keep.align,logo:keep.logo,logoRaw:keep.logoRaw,logoW:keep.logoW,logoH:keep.logoH,logoSvg:keep.logoSvg,logoScale:keep.logoScale,dropWhite:keep.dropWhite,logoGenie:keep.logoGenie,names:keep.names,qty:keep.qty,custom:keep.custom,bgImg:keep.bgImg,bgScale:keep.bgScale,c1:keep.c1,c2:keep.c2}));
+    history.replaceState(null,'',`?product=${S.pid}${DEBUG?'&debug':''}`);track('badge_product',{product:S.pid});syncPanel();render()});
+  $('#panel').addEventListener('change',e=>{const t=e.target;if(t.type!=='radio')return;const k={size:'size',attach:'attach',layout:'layout',bg:'bg',border:'border',align:'align'}[t.name];if(!k)return;S[k]=t.value;track('badge_option',{option:k,value:t.value});syncPanel();render()});
+  const txt=(id,k)=>$(id).addEventListener('input',e=>{S[k]=e.target.value;render()});txt('#tName','name');txt('#tTitle','title');
+  $('#font1').addEventListener('change',e=>{S.font1=e.target.value;loadFont(S.font1)});$('#font2').addEventListener('change',e=>{S.font2=e.target.value;loadFont(S.font2)});
+  const num=(id,k,o,fmt)=>$(id).addEventListener('input',e=>{S[k]=parseFloat(e.target.value);if(o)$(o).textContent=fmt?fmt(S[k]):S[k];render()});
+  num('#fs1','fs1','#fs1o');num('#fs2','fs2','#fs2o');num('#logoScale','logoScale','#logoScaleO',v=>v.toFixed(1)+'×');num('#bgScale','bgScale','#bgScaleO',v=>v.toFixed(1)+'×');
+  $('#c1').addEventListener('input',e=>{S.c1=e.target.value;render()});$('#c2').addEventListener('input',e=>{S.c2=e.target.value;render()});
+  $('#custom').addEventListener('input',e=>{S.custom=e.target.value;if(!S.c1)$('#c1').value=autoInk(S.custom);render()});
+  $('#logoFile').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;
+    if(f.size>MAXB)return toast('That file is over 10 MB. Please upload a smaller one.');if(!/^image\/(png|jpeg|svg\+xml|webp)$/.test(f.type))return toast('Please upload a PNG, JPG, SVG or WEBP file.');
+    try{const moved=await setLogo(await readFile(f),{svg:f.type==='image/svg+xml'});track('badge_logo_upload',{type:f.type});toast(moved?'Logo added. Layout changed to "Logo, then name and title"; you can pick another under Layout.':'Logo added.')}catch(err){toast('We couldn\'t read that image. Try a PNG or JPG.')}});
+  $('#logoRemove').addEventListener('click',()=>{Object.assign(S,{logo:null,logoRaw:null,logoW:0,logoH:0,logoSvg:false,logoGenie:false});syncPanel();render()});
+  $('#dropWhite').addEventListener('change',async e=>{S.dropWhite=e.target.checked;S.logo=S.dropWhite?await dropWhite(S.logoRaw):S.logoRaw;render()});
+  $('#bgFile').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;if(f.size>MAXB)return toast('That file is over 10 MB. Please upload a smaller one.');
+    try{S.bgImg=(await shrink(await readFile(f),1600)).src;render()}catch(err){toast('We couldn\'t read that image. Try a PNG or JPG.')}});
+  $('#names').addEventListener('input',e=>{S.names=e.target.value;who=0;syncPanelNames();render()});
+  $('#namesFile').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;if(f.size>5*1024*1024)return toast('That file is over 5 MB.');
+    S.names=(await f.text()).slice(0,200000);$('#names').value=S.names;who=0;track('badge_names_import',{rows:parseNames(S.names).length});syncPanel();render()});
+  $('#namesClear').addEventListener('click',()=>{S.names='';$('#names').value='';syncPanel();render()});
+  $('#whoPrev').addEventListener('click',()=>{const n=people().length;who=(who-1+n)%n;render()});$('#whoNext').addEventListener('click',()=>{who=(who+1)%people().length;render()});
+  $('#actualBtn').addEventListener('click',e=>{actual=!actual;e.currentTarget.setAttribute('aria-pressed',String(actual));e.currentTarget.textContent=actual?'Fit to screen':'Actual size';render()});
+  $('#reviewBtn').addEventListener('click',openReview);
+  $('#themeBtn').addEventListener('click',()=>{const d=document.documentElement,n=d.dataset.theme==='dark'?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('cg-theme',n)}catch(e){}themeLabel()});
+  document.addEventListener('click',e=>{const a=e.target.closest('[data-proto]');if(a){e.preventDefault();toast(a.dataset.proto)}});
+  $('#cartBtn').addEventListener('click',()=>toast('The cart opens on customgenie.com in production.'))}
+let syncN;function syncPanelNames(){clearTimeout(syncN);syncN=setTimeout(syncPanel,300)}
+function themeLabel(){const d=document.documentElement;if(!d.dataset.theme)d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';const dark=d.dataset.theme==='dark';$('#themeBtn').setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode')}
+
+/* ---------- fonts: re-measure once each font arrives ---------- */
+const loaded=new Set();
+function loadFont(f){if(!document.fonts){render();return}Promise.all([document.fonts.load(`700 40px "${f}"`),document.fonts.load(`400 40px "${f}"`)]).then(()=>{loaded.add(f);render()}).catch(render);render()}
+if(document.fonts){document.fonts.addEventListener('loadingdone',()=>render());document.fonts.ready.then(render)}
+
+/* ---------- Genie AI logo ---------- */
+async function genieInit(){try{const r=await fetch('/api/genie/status');if(!r.ok)return;const s=await r.json();if(!s.enabled)return;$('#genie').hidden=false}catch(e){return}
+  $('#genieGo').addEventListener('click',async()=>{const prompt=$('#genieP').value.trim(),btn=$('#genieGo'),msg=$('#genieMsg');if(!prompt){msg.textContent='Describe the logo you want first.';$('#genieP').focus();return}
+    btn.disabled=true;btn.setAttribute('aria-busy','true');msg.textContent='Genie is designing 2 options. This takes about 30 seconds.';$('#geniePicks').innerHTML='';track('badge_genie_request');
+    try{const r=await fetch('/api/genie/image',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,mode:'generate',n:2,product:'badge',shape:'square'})});const j=await r.json();
+      if(!r.ok)throw new Error(j&&j.error&&j.error.message||'Genie couldn\'t make a logo right now.');
+      $('#geniePicks').innerHTML=j.images.map((im,i)=>`<button type="button" data-i="${i}" aria-label="Use option ${i+1}"><img src="${im.src}" alt="Genie AI Generated Artwork, option ${i+1}"><span>Use option ${i+1}</span></button>`).join('');
+      $$('#geniePicks button').forEach(b=>b.addEventListener('click',async()=>{const moved=await setLogo(j.images[+b.dataset.i].src,{genie:true});track('badge_genie_pick');toast('Genie AI Generated Artwork added as your logo.'+(moved?' Layout changed to "Logo, then name and title".':''))}));
+      msg.textContent='Pick one to use it. Genie AI Generated Artwork.'}
+    catch(e){msg.textContent=e.message}finally{btn.disabled=false;btn.removeAttribute('aria-busy')}})}
+
+/* ---------- Review & Print ---------- */
+const dlg=$('#review');let step=1;
+function go(n){step=n;$$('.pane',dlg).forEach(p=>p.hidden=+p.dataset.pane!==n);$$('#steps li').forEach(li=>{const s=+li.dataset.s;li.className=s===n?'now':s<n?'done':'';li.toggleAttribute('aria-current',s===n)});
+  if(n===2)renderQty();if(n===3)renderPrice();track('review_step',{step:n})}
+function openReview(){const p=P(),ppl=people();const all=[];
+  const cap=Math.min(ppl.length,120);let html='';for(let i=0;i<cap;i++){const r=badge(p,S,ppl[i],{mode:'proof'});all.push(...r.issues);const bad=r.issues.some(x=>x.field);
+    html+=`<figure${bad?' class="bad"':''}>${r.svg}<figcaption>${esc(ppl[i].name||'(no name)')}${ppl[i].title?' · '+esc(ppl[i].title):''}</figcaption></figure>`}
+  $('#proofs').innerHTML=html+(ppl.length>cap?`<p class="hint">And ${ppl.length-cap} more badges in the same design.</p>`:'');
+  $('#proofLead').textContent=usingList()?`${ppl.length} badges, one per name. Check every name and title.`:'Check the name, title and logo.';
+  const iss=dedupe(all);$('#rvChecks').innerHTML=iss.map(i=>`<li class="warn"><svg class="ico" aria-hidden="true"><use href="#i-warn"/></svg><span>${esc(i.msg)}</span></li>`).join('');
+  $('#approve').checked=false;$('#approveErr').hidden=true;$('#notes').value=S.notes;go(1);dlg.showModal();track('review_open',{badges:ppl.length})}
+function renderQty(){const p=P(),v=variant(p,S),list=usingList(),q=qtyNow();$('#qtyNames').hidden=!list;$('#qtySame').hidden=list;
+  if(list)$('#qtyNamesTxt').textContent=`${q} badges, one per name on your list. To order spares, add them to the list.`;else $('#qty').value=q;
+  const rows=[{min_qty:1,pct:0},...p.tiers];$('#tiers tbody').innerHTML=rows.map((t,i)=>{const hi=rows[i+1]?rows[i+1].min_qty-1:null,on=q>=t.min_qty&&(hi===null||q<=hi);
+    return`<tr${on?' class="on"':''}><td>${t.min_qty}${hi===null?'+':hi===t.min_qty?'':`–${hi}`}</td><td>${money(r2(v.price*(1-t.pct/100)))}</td><td>${t.pct?t.pct+'%':'–'}</td></tr>`}).join('');
+  const next=p.tiers.find(t=>t.min_qty>q);$('#tierHint').textContent=next?`Order ${next.min_qty-q} more to pay ${money(r2(v.price*(1-next.pct/100)))} each (${next.pct}% off).`:'You get the best price per badge.'}
+function cartData(){const p=P(),v=variant(p,S),q=qtyNow(),u=unitFor(p,v,q),list=parseNames(S.names),m=p.mods,set={};
+  const put=(role,val)=>{if(m[role]&&val!==undefined&&val!==null&&val!=='')set[m[role].name]={modifier_id:m[role].id,value:val}};
+  put('name',list.length?list[0].name:S.name);put('title',hasT2(S.layout)?(list.length?list[0].title:S.title):'');put('font_1',S.font1);put('font_2',hasT2(S.layout)?S.font2:'');
+  put('font_1_size',String(S.fs1));put('font_2_size',String(S.fs2));put('color_1',S.c1||autoInk(look(p,S).color));put('color_2',S.c2||autoInk(look(p,S).color));put('alignment',S.align);
+  put('layout',LAYOUTS[S.layout].studio?'(text only: no matching Doogma layout yet)':'layout'+S.layout);put('logo_size',S.logo?String(S.logoScale):'');put('custom_color',S.bg==='Custom Color'?S.custom:'');
+  put('background_size',S.bg==='Upload Background'?String(S.bgScale):'');put('special_instructions',S.notes);put('proof_approval','Yes');
+  if(list.length)put('bulk_names_file',`(names file to attach: ${list.length} rows)`);put('saved_print_output','(not available yet)');
+  const opt=Object.entries({size:S.size==='default'?null:S.size,background_color:S.bg,border_color:S.border,attachment:S.attach}).filter(([k,v2])=>v2&&p.opts[k]).map(([k,v2])=>({option_id:p.opts[k].id,option:p.opts[k].name,value_id:p.opts[k].values[v2],value:v2}));
+  return{product_id:p.bc_id,variant_id:v.id,sku:v.sku,quantity:q,unit_price:u.unit,discount_pct:u.pct,options:opt,modifiers:set,images:{logo:!!S.logo,background:S.bg==='Upload Background'&&!!S.bgImg},names:list.length?list:undefined}}
+function renderPrice(){const p=P(),v=variant(p,S),q=qtyNow(),u=unitFor(p,v,q),z=sizeOf(p,S),sub=r2(u.unit*q);
+  const rows=[['Badge',p.name],['Product code',v.sku||'–'],['Size',z.known?`${fmtIn(z.w)} × ${fmtIn(p.shape==='circle'?z.w:z.h)} in`:z.label],['Layout',LAYOUTS[S.layout].label]];
+  if(S.bg)rows.push([$('#bgLegend').textContent,S.bg==='Custom Color'?`Custom color ${S.custom.toUpperCase()}`:S.bg]);if(S.border)rows.push([$('#borderLegend').textContent,S.border]);if(S.attach)rows.push(['Back',S.attach]);
+  rows.push(['Logo',S.logo?(S.logoGenie?'Genie AI Generated Artwork':'Your upload'):'None']);rows.push(['Quantity',`${q} badge${q===1?'':'s'}${usingList()?' (one per name)':''}`]);
+  rows.push(['Price each',u.pct?`${money(u.unit)} (${u.pct}% off ${money(v.price)})`:money(u.unit)]);
+  $('#spec').innerHTML=rows.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('');$('#total').textContent=money(sub);$('#addCart').textContent=`Add to cart · ${money(sub)}`;
+  const cd=cartData();window.__badgeCart=cd;$('#cartDebug').hidden=!DEBUG;if(DEBUG)$('#cartJson').textContent=JSON.stringify(cd,null,2)}
+function rvEvents(){
+  $('#rvClose').addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(+b.dataset.go)});
+  $('#notes').addEventListener('input',e=>{S.notes=e.target.value;save()});
+  $('#approve').addEventListener('change',()=>{if($('#approve').checked)$('#approveErr').hidden=true});
+  $('#next1').addEventListener('click',()=>{if(!$('#approve').checked){$('#approveErr').hidden=false;$('#approve').focus();return}go(2)});
+  const setQ=v=>{S.qty=Math.max(1,Math.min(5000,v||1));$('#qty').value=S.qty;renderQty();save()};
+  $('#qty').addEventListener('input',e=>{const v=parseInt(e.target.value,10);if(v>0)setQ(v)});$('#qMinus').addEventListener('click',()=>setQ(qtyNow()-1));$('#qPlus').addEventListener('click',()=>setQ(qtyNow()+1));
+  $('#next2').addEventListener('click',()=>go(3));
+  $('#addCart').addEventListener('click',()=>{const p=P(),cd=cartData(),value=r2(cd.unit_price*cd.quantity);
+    track('add_to_cart',{ecommerce:{currency:'USD',value,items:[{item_id:cd.sku,item_name:p.name,item_variant:[S.size,S.bg,S.border,S.attach].filter(Boolean).join(' / '),price:cd.unit_price,quantity:cd.quantity}]}});
+    let n=0;try{n=(parseInt(localStorage.getItem('cg-badge-cart')||'0',10)||0)+1;localStorage.setItem('cg-badge-cart',String(n))}catch(e){n=1}cartCount(n);dlg.close();
+    toast(`Added to cart: ${p.name}, ${cd.quantity} badge${cd.quantity===1?'':'s'}, ${money(value)}.`)})}
+function cartCount(n){if(n==null){try{n=parseInt(localStorage.getItem('cg-badge-cart')||'0',10)||0}catch(e){n=0}}$('#cartCount').textContent=n;$('#cartBtn').setAttribute('aria-label',`Cart, ${n} item${n===1?'':'s'}`)}
+
+/* ---------- start ---------- */
+$('#ftrLogo').src=$('.logo img').src;
+buildStatic();syncPanel();on();rvEvents();themeLabel();cartCount();render();loadFont(S.font1);loadFont(S.font2);genieInit();
+track('badge_view',{product:S.pid});
+if(DEBUG)window.__badge={get S(){return S},people,badge:(n)=>badge(P(),S,n||people()[0],{mode:'proof'}),variant:()=>variant(P(),S),cartData,DATA};
+
+})();
+</script>
+</body>
+</html>

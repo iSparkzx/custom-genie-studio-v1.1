@@ -6308,17 +6308,135 @@
       {
         "id": 441,
         "name": "SH Range (3.0-10.0)",
-        "role": "height"
+        "role": "height",
+        "values": [
+          {
+            "id": 1077,
+            "label": "3.0"
+          },
+          {
+            "id": 1079,
+            "label": "4.0"
+          },
+          {
+            "id": 1081,
+            "label": "5.0"
+          },
+          {
+            "id": 1083,
+            "label": "6.0"
+          },
+          {
+            "id": 1085,
+            "label": "7.0"
+          },
+          {
+            "id": 1087,
+            "label": "8.0"
+          },
+          {
+            "id": 1089,
+            "label": "9.0"
+          },
+          {
+            "id": 1091,
+            "label": "10.0"
+          }
+        ]
       },
       {
         "id": 442,
         "name": "SW Range (3.0-10.0)",
-        "role": "width"
+        "role": "width",
+        "values": [
+          {
+            "id": 1102,
+            "label": "3.0"
+          },
+          {
+            "id": 1103,
+            "label": "3.5"
+          },
+          {
+            "id": 1104,
+            "label": "4.0"
+          },
+          {
+            "id": 1105,
+            "label": "4.5"
+          },
+          {
+            "id": 1106,
+            "label": "5.0"
+          },
+          {
+            "id": 1107,
+            "label": "5.5"
+          },
+          {
+            "id": 1108,
+            "label": "6.0"
+          },
+          {
+            "id": 1109,
+            "label": "6.5"
+          },
+          {
+            "id": 1110,
+            "label": "7.0"
+          },
+          {
+            "id": 1111,
+            "label": "7.5"
+          },
+          {
+            "id": 1112,
+            "label": "8.0"
+          },
+          {
+            "id": 1113,
+            "label": "8.5"
+          },
+          {
+            "id": 1114,
+            "label": "9.0"
+          },
+          {
+            "id": 1115,
+            "label": "9.5"
+          },
+          {
+            "id": 1116,
+            "label": "10.0"
+          }
+        ]
       },
       {
         "id": 2357,
         "name": "Material",
-        "role": "material"
+        "role": "material",
+        "values": [
+          {
+            "id": 1665,
+            "label": "Glossy"
+          },
+          {
+            "id": 1666,
+            "label": "Matte"
+          },
+          {
+            "id": 1667,
+            "label": "Clear"
+          },
+          {
+            "id": 1668,
+            "label": "Removable"
+          },
+          {
+            "id": 1669,
+            "label": "Reflective"
+          }
+        ]
       }
     ],
     "modifiers": [

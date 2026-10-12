@@ -8,7 +8,8 @@ World Emblem's Custom Genie sticker customizer:
 * **Print MCP spec v0.2**: `docs/print-mcp-spec-v0.2.md`, also viewable at `/spec.html`.
 
 ```
-public/index.html      the studio page (one self-contained file, built from studio-src/)
+public/index.html      the sticker studio page (one self-contained file, built from studio-src/)
+public/badges.html     the name badge studio (built from studio-src/badge/ + products/)
 public/spec.html       the Print MCP spec, readable in a browser
 server.mjs             small Node server: serves the page and holds the AI key (no npm install needed)
 render.yaml            one-click deploy settings for Render
@@ -83,6 +84,15 @@ After editing, rebuild the page (Python 3):
 
 ```
 python studio-src/build.py public/index.html
+python studio-src/build_badges.py public/badges.html
+```
+
+Check both pages (with `node server.mjs` running):
+
+```
+node tests/price-check.mjs
+node tests/badge-check.mjs
+node tests/badge-check.mjs http://127.0.0.1:8766/badges.html?debug 390 844
 ```
 
 Then commit and push. Render redeploys by itself.

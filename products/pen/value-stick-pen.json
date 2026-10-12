@@ -134,7 +134,17 @@
       {
         "id": 144,
         "name": "Pen Color",
-        "role": "pen_color"
+        "role": "pen_color",
+        "values": [
+          {
+            "id": 213,
+            "label": "Black Cap & White Barrel"
+          },
+          {
+            "id": 214,
+            "label": "Blue Cap & White Barrel"
+          }
+        ]
       }
     ],
     "modifiers": [

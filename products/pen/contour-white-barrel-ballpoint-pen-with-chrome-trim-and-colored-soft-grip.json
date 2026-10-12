@@ -161,7 +161,29 @@
       {
         "id": 117,
         "name": "Pen Color",
-        "role": "pen_color"
+        "role": "pen_color",
+        "values": [
+          {
+            "id": 107,
+            "label": "Black"
+          },
+          {
+            "id": 108,
+            "label": "Blue"
+          },
+          {
+            "id": 110,
+            "label": "Red"
+          },
+          {
+            "id": 111,
+            "label": "Green"
+          },
+          {
+            "id": 113,
+            "label": "Transparent"
+          }
+        ]
       }
     ],
     "modifiers": [

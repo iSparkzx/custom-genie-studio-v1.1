@@ -133,7 +133,7 @@ function build(p) {
     ...(fam.cut_border_in_options && shapes?.some(s => s.id === "custom") ? { cut_border_in_options: fam.cut_border_in_options } : {}),
     cart: {
       note: "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
-      options: options.map(({ id, name, role }) => ({ id, name, role })),
+      options: options.map(({ id, name, role, values }) => ({ id, name, role, values })),
       modifiers,
       required_modifiers: modifiers.filter(m => m.required).map(m => m.name),
     },
