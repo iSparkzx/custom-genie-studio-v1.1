@@ -18,10 +18,12 @@
       <button type="button" class="tool" id="imgBtn" aria-label="Place image" data-tip="Place image" data-key="Ctrl ⇧ K"><svg class="ico"><use href="#t-image"/></svg></button>
      </div>
      <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
-     <div class="tgrp tright">
-      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh" disabled><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
+     <div class="tgrp tedit" role="group" aria-label="Start over, undo and redo">
+      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
       <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
       <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
+     </div>
+     <div class="tgrp tright">
       <span class="tsep"></span>
       <div class="views" role="group" aria-label="Preview mode">
        <button type="button" data-view="edit" aria-pressed="true">Design</button>

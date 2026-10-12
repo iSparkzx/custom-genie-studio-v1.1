@@ -23,7 +23,7 @@ const press = async (sel, wait = 450) => { await ev(`document.querySelector(${JS
   if (!b) return false; if (mobile) await tap(b.x, b.y); else { await mouse("mouseMoved", b.x, b.y); await mouse("mousePressed", b.x, b.y); await mouse("mouseReleased", b.x, b.y) } await sleep(wait); return true };
 const key = async (k, code, vk, mods = 0) => { await send("Input.dispatchKeyEvent", { type: "keyDown", key: k, code, windowsVirtualKeyCode: vk, modifiers: mods, ...(k === "Enter" ? { text: "\r" } : {}) }); await send("Input.dispatchKeyEvent", { type: "keyUp", key: k, code, windowsVirtualKeyCode: vk, modifiers: mods }); await sleep(250) };
 const S = () => ev(`(()=>{const k=Object.keys(localStorage).find(k=>/^cg-studio-v3/.test(k)&&localStorage.getItem(k).includes('"pid"')&&JSON.parse(localStorage.getItem(k)).D.pid===new URLSearchParams(location.search).get('product'));const sv=k?JSON.parse(localStorage.getItem(k)).D:null;
-  return {els:document.querySelectorAll('#elsG > g').length,sum:document.querySelector('#cbSum').innerText.replace(/\\s+/g,' ').trim(),start:!document.querySelector('#start').hidden,btn:document.querySelector('#resetBtn').disabled,foot:!document.querySelector('#lfoot').hidden,
+  return {els:document.querySelectorAll('#elsG > g').length,sum:document.querySelector('#cbSum').innerText.replace(/\\s+/g,' ').trim(),start:!document.querySelector('#start').hidden,btn:document.querySelector('#resetBtn').getAttribute('aria-disabled')==='true',foot:!document.querySelector('#lfoot').hidden,
    dlg:document.querySelector('#resetDlg').open,list:[...document.querySelectorAll('#resetList li')].map(l=>l.textContent),feed:document.querySelector('#gfeed,#feed,.gfeed')?.children.length,undo:document.querySelector('#undoBtn').disabled,toast:document.querySelector('#toastTxt')?.textContent||'',saved:sv&&sv.els.length,focus:document.activeElement?.id||document.activeElement?.textContent?.trim().slice(0,20)}})()`);
 let pass = 0, fail = 0; const ok = (c, m) => { if (c) pass++; else { fail++; console.log("FAIL", m) } };
 const shot = async n => { const r = await send("Page.captureScreenshot", { format: "png" }); writeFileSync(join(out, `${W}-${n}.png`), Buffer.from(r.result.data, "base64")) };
@@ -33,10 +33,19 @@ await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceSc
 for (const [pid, change] of [["domed_white_vinyl_sticker_sheet", '[data-shape="circle"]'], ["regal_large_name_badge", '[data-opt="background_color"][data-val="Silver"]'], ["derby_ballpoint_pen", '[data-opt="pen_color"][data-val="Red"]']]) {
   await send("Page.navigate", { url: base + "index.html?product=" + pid }); await sleep(2600);
   const s0 = await S(); ok(s0.btn === true && !s0.foot, `${pid}: Start over should be off on a blank design (${JSON.stringify(s0)})`);
+  /* the toolbar button is on screen and takes a real click at this width, without scrolling the toolbar */
+  await ev(`document.querySelector('.tbar').scrollIntoView({block:'center'})`); await sleep(200);
+  const vis = await ev(`(()=>{const b=document.querySelector('#resetBtn'),r=b.getBoundingClientRect(),T=document.querySelector('.tbar').getBoundingClientRect(),h=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {in:r.x>=T.x-1&&r.right<=Math.min(T.right,innerWidth)+1,hit:!!h&&b.contains(h),op:+getComputedStyle(b).opacity,u:(()=>{const u=document.querySelector('#undoBtn').getBoundingClientRect();return u.right<=Math.min(T.right,innerWidth)+1})()}})()`);
+  ok(vis.in && vis.hit && vis.u, `${pid}: Start over and Undo on screen and clickable at ${W}px ${JSON.stringify(vis)}`);
+  ok(vis.op >= 0.55, `${pid}: Start over readable when there's nothing to clear (opacity ${vis.op})`);
+  await press('#resetBtn', 450); let n0 = await S(); ok(!n0.dlg && /Nothing to clear/.test(n0.toast), `${pid}: nothing to clear says so (${n0.toast})`);
+  await press('#startClose', 450); ok((await S()).btn === false, `${pid}: with the start card closed, Start over is on`);
+  await press('#resetBtn', 450); n0 = await S(); ok(!n0.dlg && n0.start, `${pid}: on a blank canvas Start over brings the start card back`);
   /* build up a design: template, then an option change */
-  if (mobile) { await press('[data-start="templates"]', 800) }
+  /* under 1100 px the left panel is hidden: shoppers reach templates from the start card, like here */
+  if (W < 1100) { await press('[data-start="templates"]', 800) }
   await press('#tplGrid [data-tpl]', 900);
-  if (mobile) { await ev(`document.querySelectorAll('.sheet-close,[data-close-sheet]').forEach(b=>b.offsetParent&&b.click())`); await sleep(400) }
+  if (W < 1100) { await ev(`document.querySelectorAll('.sheet-close,[data-close-sheet]').forEach(b=>b.offsetParent&&b.click())`); await sleep(400) }
   await key("Escape", "Escape", 27); await key("Escape", "Escape", 27);
   if (mobile) await press('.mtabs [data-mtab="props"]', 600);
   const changed = await press('#ins ' + change, 600);
@@ -71,7 +80,10 @@ for (const [pid, change] of [["domed_white_vinyl_sticker_sheet", '[data-shape="c
 }
 /* keyboard only: Tab to the button, Enter opens, Escape closes and focus goes back */
 if (!mobile) {
-  await press('#tplGrid [data-tpl]', 900); await key("Escape", "Escape", 27); await key("Escape", "Escape", 27);
+  if (W < 1100) await press('[data-start="templates"]', 800);
+  await press('#tplGrid [data-tpl]', 900);
+  if (W < 1100) { await ev(`document.querySelectorAll('.sheet-close,[data-close-sheet]').forEach(b=>b.offsetParent&&b.click())`); await sleep(400) }
+  await key("Escape", "Escape", 27); await key("Escape", "Escape", 27);
   /* with something selected on the canvas, Enter and Space must still press the focused button */
   const el = await ev(`(()=>{const g=document.querySelector('#elsG > g');const r=g.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);
   await mouse("mouseMoved", el.x, el.y); await mouse("mousePressed", el.x, el.y); await mouse("mouseReleased", el.x, el.y); await sleep(400);

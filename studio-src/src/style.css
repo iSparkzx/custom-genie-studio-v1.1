@@ -463,7 +463,13 @@ select.sel{appearance:none}
 /* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
 .tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
 .tool.tool-lbl .tool-t{white-space:nowrap}
-@media (max-width:1279px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+@container (max-width:900px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+.tool.tool-lbl[aria-disabled="true"]{opacity:.6}
+.tool.tool-lbl[aria-disabled="true"]:hover{background:none;color:var(--ink-2)}
+/* Start over, Undo and Redo: right side of the toolbar; on narrow screens they stay pinned at the right edge while the tools scroll */
+.tedit{display:flex;align-items:center;gap:4px;margin-left:auto;flex:none}
+.tedit+.tright{margin-left:0}
+@media (max-width:820px){.tright{order:1}.tedit{order:2;position:sticky;right:-6px;z-index:2;align-self:stretch;margin-left:auto;padding:0 6px 0 10px;background:var(--surface);box-shadow:-12px 0 12px -8px rgba(0,0,0,.45)}}
 .lfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 12px 14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3)}
 .lfoot[hidden]{display:none}
 .lreset{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}

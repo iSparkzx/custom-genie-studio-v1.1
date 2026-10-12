@@ -475,7 +475,13 @@ select.sel{appearance:none}
 /* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
 .tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
 .tool.tool-lbl .tool-t{white-space:nowrap}
-@media (max-width:1279px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+@container (max-width:900px){.tool.tool-lbl{width:36px;padding:0;justify-content:center}.tool.tool-lbl .tool-t{display:none}}
+.tool.tool-lbl[aria-disabled="true"]{opacity:.6}
+.tool.tool-lbl[aria-disabled="true"]:hover{background:none;color:var(--ink-2)}
+/* Start over, Undo and Redo: right side of the toolbar; on narrow screens they stay pinned at the right edge while the tools scroll */
+.tedit{display:flex;align-items:center;gap:4px;margin-left:auto;flex:none}
+.tedit+.tright{margin-left:0}
+@media (max-width:820px){.tright{order:1}.tedit{order:2;position:sticky;right:-6px;z-index:2;align-self:stretch;margin-left:auto;padding:0 6px 0 10px;background:var(--surface);box-shadow:-12px 0 12px -8px rgba(0,0,0,.45)}}
 .lfoot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 12px 14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3)}
 .lfoot[hidden]{display:none}
 .lreset{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
@@ -1444,10 +1450,12 @@ body.hide-notes .note{display:none}
       <button type="button" class="tool" id="imgBtn" aria-label="Place image" data-tip="Place image" data-key="Ctrl ⇧ K"><svg class="ico"><use href="#t-image"/></svg></button>
      </div>
      <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
-     <div class="tgrp tright">
-      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh" disabled><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
+     <div class="tgrp tedit" role="group" aria-label="Start over, undo and redo">
+      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
       <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
       <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
+     </div>
+     <div class="tgrp tright">
       <span class="tsep"></span>
       <div class="views" role="group" aria-label="Preview mode">
        <button type="button" data-view="edit" aria-pressed="true">Design</button>
@@ -2921,8 +2929,10 @@ $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hid
  openPop(b,`<div class="mh">Print check</div><ul class="checks" style="padding:0 2px 4px">${checksHTML(checks())}</ul>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});pop.onclick=e2=>onCheckClick(e2,false)});
 /* ---------- start over: clear the whole design in one step (Undo brings it back) ---------- */
 const canReset=()=>!isBlank()||GC.hist.length>0||NB.R.length>0;
-function resetUI(){$('#resetBtn').disabled=!canReset();$('#lfoot').hidden=isBlank()}
-function openReset(){if(!canReset())return;if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
+/* never disabled, so it can't fade out or ignore a click: with nothing to clear it says so, and on a blank canvas
+   with the start card closed it brings the card back */
+function resetUI(){const on=canReset()||startDismissed,b=$('#resetBtn');b.setAttribute('aria-disabled',String(!on));b.dataset.tip=on?(canReset()?'Clear the whole design and start fresh':'Show the start card again'):'Nothing to clear yet';$('#lfoot').hidden=isBlank()}
+function openReset(){if(!canReset()){if(startDismissed&&isBlank()){startDismissed=false;req();requestAnimationFrame(()=>$('#startText').focus({preventScroll:true}));return}toast('Nothing to clear yet. Your design is already blank.');return}if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
  const n=D.els.length,c={text:0,image:0,shape:0};D.els.forEach(e=>c[e.type==='text'?'text':e.type==='image'?'image':'shape']++);
  const parts=[c.text&&`${c.text} text`,c.image&&`${c.image} image${c.image>1?'s':''}`,c.shape&&`${c.shape} shape${c.shape>1?'s':''}`].filter(Boolean),li=[];
  if(n)li.push(`${n} layer${n>1?'s':''} (${parts.join(', ')})`);

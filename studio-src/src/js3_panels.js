@@ -331,8 +331,10 @@ $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hid
  openPop(b,`<div class="mh">Print check</div><ul class="checks" style="padding:0 2px 4px">${checksHTML(checks())}</ul>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});pop.onclick=e2=>onCheckClick(e2,false)});
 /* ---------- start over: clear the whole design in one step (Undo brings it back) ---------- */
 const canReset=()=>!isBlank()||GC.hist.length>0||NB.R.length>0;
-function resetUI(){$('#resetBtn').disabled=!canReset();$('#lfoot').hidden=isBlank()}
-function openReset(){if(!canReset())return;if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
+/* never disabled, so it can't fade out or ignore a click: with nothing to clear it says so, and on a blank canvas
+   with the start card closed it brings the card back */
+function resetUI(){const on=canReset()||startDismissed,b=$('#resetBtn');b.setAttribute('aria-disabled',String(!on));b.dataset.tip=on?(canReset()?'Clear the whole design and start fresh':'Show the start card again'):'Nothing to clear yet';$('#lfoot').hidden=isBlank()}
+function openReset(){if(!canReset()){if(startDismissed&&isBlank()){startDismissed=false;req();requestAnimationFrame(()=>$('#startText').focus({preventScroll:true}));return}toast('Nothing to clear yet. Your design is already blank.');return}if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
  const n=D.els.length,c={text:0,image:0,shape:0};D.els.forEach(e=>c[e.type==='text'?'text':e.type==='image'?'image':'shape']++);
  const parts=[c.text&&`${c.text} text`,c.image&&`${c.image} image${c.image>1?'s':''}`,c.shape&&`${c.shape} shape${c.shape>1?'s':''}`].filter(Boolean),li=[];
  if(n)li.push(`${n} layer${n>1?'s':''} (${parts.join(', ')})`);
