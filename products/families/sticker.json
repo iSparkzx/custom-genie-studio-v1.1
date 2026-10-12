@@ -2,6 +2,7 @@
   "family": "sticker",
   "label": "Stickers & labels",
   "bigcommerce_template": "stickerprod",
+  "studio_built": ["domed_white_vinyl_sticker_sheet", "domed_silver_vinyl_sticker_sheet", "domed_gold_vinyl_sticker_sheet"],
   "editor": {
     "mode": "free_layout",
     "layers": ["text", "image", "shape", "rect", "ellipse", "line", "path"],
@@ -19,7 +20,7 @@
   "previews": ["flat", "scene:laptop", "scene:notebook", "scene:bottle", "scene:flask"],
   "shape_map": { "Rectangle": "rect", "Circle": "circle", "Stadium": "stadium", "Custom Shape": "custom", "CustomShape": "custom", "Oval": "oval", "Square": "square" },
   "types": {
-    "Sheets - Domed": { "format": "sheet", "dome": true, "sheet_in": { "w": 9.25, "h": 10 }, "previews_add": ["dome", "3d"], "studio_status": "built" },
+    "Sheets - Domed": { "format": "sheet", "dome": true, "sheet_in": { "w": 9.25, "h": 10 }, "previews_add": ["dome", "3d"] },
     "Sheets - Glossy": { "format": "sheet" },
     "Sheets - Matte": { "format": "sheet" },
     "Sheets - Metallic": { "format": "sheet", "white_prints_clear": true },

@@ -27,7 +27,7 @@ Largest differences, per sticker before the quantity discount:
 | 6 x 2 | $6.25 | $3.89 | -2.36 (-38%) | $500.00 | $311.00 |
 | 4 x 7 | $18.87 | $11.99 | -6.88 (-36%) | $1,510.00 | $959.00 |
 
-**Fix (planned, step 3):** the studio reads prices from the product definition (`pricing.price_grid` and `pricing.quantity_tiers`, pulled from BigCommerce) instead of its own table, so the studio always equals the cart.
+**Fixed in PR #5:** the studio reads prices from the product definitions (`pricing.price_grid` and `pricing.quantity_tiers`, pulled from BigCommerce) instead of its own table. `tests/price-check.mjs` checks every size, quantity and finish against BigCommerce: 2,880 checks, 0 mismatches. The same PR fixes the Silver and Gold product codes (the studio built `57NOMSILDOM--30-50`; BigCommerce uses `57METSILDOM-30-50` and `57METGLDDOM-30-50`).
 
 ## 2. BigCommerce's own size grid is irregular (confirmed intended)
 

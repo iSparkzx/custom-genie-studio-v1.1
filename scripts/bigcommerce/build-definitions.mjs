@@ -109,7 +109,7 @@ function build(p) {
     $schema: "../schema/product-definition.schema.json",
     id, name: p.name, family, type, group: type ? idOf(type) : null,
     status: p.is_visible ? "live" : "hidden",
-    studio_status: typeCfg.studio_status || "planned",
+    studio_status: (fam.studio_built || []).includes(id) ? "built" : "planned",
     bigcommerce: { product_id: p.id, url: p.custom_url.url, sku: p.sku || null, base_variant_id: p.base_variant_id, template: cf(p, "bctemplate") },
     size,
     ...(shapes ? { shapes } : {}),
@@ -137,7 +137,7 @@ function build(p) {
       modifiers,
       required_modifiers: modifiers.filter(m => m.required).map(m => m.name),
     },
-    mcp: { product_id: id, studio_supported: (typeCfg.studio_status || "planned") === "built" },
+    mcp: { product_id: id, studio_supported: (fam.studio_built || []).includes(id) },
     assumptions: fam.assumptions || [],
     todo,
   };

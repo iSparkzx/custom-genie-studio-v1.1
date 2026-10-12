@@ -4,27 +4,29 @@
    ===================================================================== */
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const NS='http://www.w3.org/2000/svg';
-const MIN=.5,MAX=8.5,SAFE=8,FREE=75,KEY='cg-studio-v3';
+const SAFE=8,FREE=75,KEY='cg-studio-v3';
 
-/* ---------- product + pricing (unchanged business rules from v2) ----------
-   SIL and GLD follow the White SKU pattern and are placeholders: replace with the real codes. */
-const PNAME={white:'Domed White Vinyl Sticker Sheet',silver:'Domed Silver Vinyl Sticker Sheet',gold:'Domed Gold Vinyl Sticker Sheet'},FINCODE={white:'WHI',silver:'SIL',gold:'GLD'};
-/* Each size bucket (SKU 57NOMWHIDOM--HH-WW) has a base price; tiers are 20/25/30/35/40% off. Known base prices were read off
-   customgenie.com on Oct 5, 2026; other buckets are estimated by area. Replace PRICE with the full SKU matrix before launch. */
-const QTY=[100,200,300,500,1000],DISC=[.20,.25,.30,.35,.40];
-const PRICE={'0.5x0.5':.19,'1x1':.77,'2x2':1.54,'1x3':2.31,'2x3':2.31,'1x8':3.08,'4x4':4.69,'6x6':16.85,'7x7':16.85,'8.5x8.5':19.02};
-const ROUND_UP=true; /* a size between buckets is priced at the next bucket up */
+/* ---------- product + pricing ----------
+   From the product definitions (products/*.json, pulled read-only from BigCommerce), embedded by build.py.
+   Prices, size steps, quantity discounts and product codes are BigCommerce's own: the studio keeps no price table,
+   so what a shopper sees here is what the cart charges. To update: re-run the pull, the generator and the build. */
+const CATALOG={{PRODUCTS_JSON}};
+const prodFor=v=>CATALOG.products[CATALOG.vinyl[v||D.vinyl]]||CATALOG.products[CATALOG.vinyl.white];
+const P0=prodFor('white');
+const MIN=P0.size.min,MAX=P0.size.max;
+const PNAME=Object.fromEntries(Object.keys(CATALOG.vinyl).map(k=>[k,prodFor(k).name]));
+const QTY=P0.tiers.map(t=>t.min_qty),DISC=P0.tiers.map(t=>t.pct/100); /* same breaks on every studio product (build.py checks) */
 const TURNAROUND_DAYS=5; /* PLACEHOLDER: production days used for the estimated ship date. Confirm with operations. */
-const bkt=v=>ROUND_UP?(v<=.5+1e-9?.5:v>8+1e-9?8.5:Math.ceil(v-1e-9)):(v<1?.5:v>=8.5?8.5:Math.floor(v+1e-9));
-const PKNOWN=(()=>{const m={};for(const k in PRICE){const [a,b]=k.split('x').map(Number),ar=a*b;(m[ar]=m[ar]||[]).push(PRICE[k])}return Object.keys(m).map(Number).sort((a,b)=>a-b).map(a=>[a,m[a].reduce((x,y)=>x+y,0)/m[a].length])})();
-function basePrice(w,h){const a=bkt(Math.min(w,h)),b=bkt(Math.max(w,h)),k=a+'x'+b;if(PRICE[k]!=null)return{b:PRICE[k],exact:true};
- const ar=a*b,P=PKNOWN;let v;if(ar<=P[0][0])v=P[0][1];else if(ar>=P[P.length-1][0])v=P[P.length-1][1];else{for(let i=1;i<P.length;i++)if(ar<=P[i][0]){const [x0,y0]=P[i-1],[x1,y1]=P[i];v=y0+(y1-y0)*(ar-x0)/(x1-x0);break}}
- return{b:Math.round(v*100)/100,exact:false}}
+/* A size between BigCommerce's size steps is priced at the next step up (0.5, 1, 2 ... 8, 8.5 in). */
+const bkt=(v,steps=P0.size.steps.w)=>{for(const x of steps)if(v<=x+1e-9)return x;return steps[steps.length-1]};
+const sizeKey=(w,h,pr=prodFor())=>bkt(h,pr.size.steps.h)+'x'+bkt(w,pr.size.steps.w); /* BigCommerce order: height x width */
+function basePrice(w,h,vinyl){const pr=prodFor(vinyl),k=sizeKey(w,h,pr),b=pr.grid[k];
+ if(b==null){console.warn('no BigCommerce price for',k);return{b:0,exact:false,key:k}}return{b,exact:true,key:k}}
 const r2=v=>Math.round(v*100)/100;
 function pricedSize(){return D.shape==='custom'&&CT.url&&CT.bbox?{w:CT.bbox.w/100,h:CT.bbox.h/100}:{w:D.w,h:D.h}}
-function tiers(){const s=pricedSize(),bp=basePrice(s.w,s.h);return QTY.map((q,i)=>{const p=r2(bp.b*(1-DISC[i]));return{q,p,s:Math.round(DISC[i]*100),t:r2(p*q)}})}
+function tiers(){const s=pricedSize(),pr=prodFor(),bp=basePrice(s.w,s.h);return QTY.map((q,i)=>{const pct=pr.tiers[i].pct,p=r2(bp.b*(1-pct/100));return{q,p,s:Math.round(pct),t:r2(p*q)}})}
 const curTier=()=>tiers()[tier];
-function skuFor(){const s=pricedSize(),c=v=>String(Math.round(bkt(v)*10)).padStart(2,'0');return '57NOM'+(FINCODE[D.vinyl]||'WHI')+'DOM--'+c(s.h)+'-'+c(s.w)}
+function skuFor(){const s=pricedSize(),pr=prodFor();return pr.sku[sizeKey(s.w,s.h,pr)]||''} /* the BigCommerce variant SKU */
 
 const FONTS=[
  {n:'Libre Baskerville',f:"'Libre Baskerville', Georgia, serif",w:400},
