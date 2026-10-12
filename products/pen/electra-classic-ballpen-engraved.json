@@ -6,6 +6,10 @@
   "type": "Pens - Electra Classic Engraved",
   "group": "pens_electra_classic_engraved",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 134,
@@ -55,7 +59,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 5.49,
     "quantity_tiers": [
       {
@@ -461,6 +465,56 @@
   "mcp": {
     "product_id": "electra_classic_ballpen_engraved",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Electra Classic Engraved Pens",
+    "meta_description": "Electra Classic engraved ballpens with anodized colors, chrome trim & black ink. Precision laser engraving for a sleek, professional branded look.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/716/AMAZON-_Electra_Classic_01__98154.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/716/AMAZON-_Electra_Classic_01__98154.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/716/AMAZON-_Electra_Classic_01__98154.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/713/AMAZON-Electra_Classic_02-2__52758.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/713/AMAZON-Electra_Classic_02-2__52758.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/713/AMAZON-Electra_Classic_02-2__52758.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/719/AMAZON-Electra_classic_03-2__79869.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/719/AMAZON-Electra_classic_03-2__79869.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/719/AMAZON-Electra_classic_03-2__79869.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/717/AMAZON-Electra_Classic_09-2__44029.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/717/AMAZON-Electra_Classic_09-2__44029.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/717/AMAZON-Electra_Classic_09-2__44029.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/714/AMAZON-Electra_Classic_11__60607.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/714/AMAZON-Electra_Classic_11__60607.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/714/AMAZON-Electra_Classic_11__60607.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/715/AMAZON-Electra_Classic_05-2__55239.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/715/AMAZON-Electra_Classic_05-2__55239.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/715/AMAZON-Electra_Classic_05-2__55239.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/718/AMAZON-Electra_Classic_10-2__04591.1778500473.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/718/AMAZON-Electra_Classic_10-2__04591.1778500473.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/134/images/718/AMAZON-Electra_Classic_10-2__04591.1778500473.220.290.jpg?c=1",
+        "alt": "Electra Classic Ballpen Engraved"
+      }
+    ],
+    "description_html": "<p>A popular aluminum push-button metal ballpen available in a wide range of anodized colors with chrome metal clip and trim. It's part of our <a href=\"../../../../pens/metal-pens/\">metal pen collection</a> at Custom Genie.</p>\n<ul>\n<li>Precision laser engraving beside the clip</li>\n<li>Laser engraving produces an all-white&nbsp;design*</li>\n<li>Colored metal barrel with chrome trim</li>\n<li>8 different anodized colors to choose from</li>\n<li>Push button action</li>\n<li>Engraving area: 50 x 6.5mm</li>\n<li>Writing ink color: Black</li>\n</ul>\n<p><strong>* Please Note:</strong><span>&nbsp;</span>As these pens are laser engraved rather than printed, your logo or design appears in 1-color white and multiple colors are not available. When you design this pen on our website your text and logos will be converted to 1-color white even if you upload logos or text in different colors. The engraving effect on the white pen is a light grey as shown in the images above<strong><br /></strong></p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

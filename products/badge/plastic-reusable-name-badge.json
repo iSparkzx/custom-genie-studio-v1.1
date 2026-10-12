@@ -6,6 +6,10 @@
   "type": "Badges - Reusable",
   "group": "badges_reusable",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 149,
@@ -73,7 +77,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 12.96,
     "quantity_tiers": [
       {
@@ -938,6 +942,56 @@
   "mcp": {
     "product_id": "plastic_reusable_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Plastic Reusable Name Badge",
+    "meta_description": "Economical reusable name badges with free card inserts, easy customization, and no costly equipment. Ideal for events and seasonal staff.",
+    "reviews_count": 1,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1010/NBI-amazon-reusable-name-badges-06__99666.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1010/NBI-amazon-reusable-name-badges-06__99666.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1010/NBI-amazon-reusable-name-badges-06__99666.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1011/NBI-amazon-reusable-name-badges-01__05909.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1011/NBI-amazon-reusable-name-badges-01__05909.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1011/NBI-amazon-reusable-name-badges-01__05909.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1015/NBI-amazon-reusable-name-badges-02__53487.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1015/NBI-amazon-reusable-name-badges-02__53487.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1015/NBI-amazon-reusable-name-badges-02__53487.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1009/NBI-amazon-reusable-name-badges-03__70815.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1009/NBI-amazon-reusable-name-badges-03__70815.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1009/NBI-amazon-reusable-name-badges-03__70815.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1016/NBI-amazon-reusable-name-badges-07__95102.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1016/NBI-amazon-reusable-name-badges-07__95102.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1016/NBI-amazon-reusable-name-badges-07__95102.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1012/NBI-amazon-reusable-name-badges-05__10616.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1012/NBI-amazon-reusable-name-badges-05__10616.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1012/NBI-amazon-reusable-name-badges-05__10616.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1014/NBI-amazon-reusable-name-badges-04__50696.1778500276.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1014/NBI-amazon-reusable-name-badges-04__50696.1778500276.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/149/images/1014/NBI-amazon-reusable-name-badges-04__50696.1778500276.220.290.jpg?c=1",
+        "alt": "Plastic Reusable Name Badge"
+      }
+    ],
+    "description_html": "<p><strong>Practical and Cost-Effective!</strong></p>\n<p>Our Reusable Name Badges &amp; Name Tags are designed to provide a flexible and economical solution for businesses and organizations with high turnover or seasonal needs. Perfect for events, conferences, and everyday office use, these badges offer convenience and customization without the need for costly equipment.</p>\n<p><strong>Benefits of Reusable Name Badges &amp; Name Tags</strong>:</p>\n<ul>\n<li><strong>Complimentary Card Inserts</strong>: Each order is shipped with an appropriate number of reusable name badge card inserts, free of charge, ensuring you have everything you need to get started.</li>\n<li><strong>Economical to Use</strong>: Our A4 sheets of pre-perforated card inserts are compatible with your existing printer, whether inkjet, laser, or wax-based, making it easy and cost-effective to print new names.</li>\n<li><strong>Ideal for Seasonal Businesses</strong>: These badges are perfect for industries with high turnover or seasonal staff, providing a practical solution for frequent updates.</li>\n<li><strong>Quick and Easy Customization</strong>: Simply print and slide in a new name, without the need for costly, specific reusable name badge printers or software.</li>\n<li><strong>No Costly Equipment</strong>: Enjoy the convenience of customization without the need to invest in expensive printers or software.</li>\n</ul>\n<p data-start=\"1196\" data-end=\"1417\"><strong data-start=\"1196\" data-end=\"1225\">Available Window Options:</strong><br data-start=\"1225\" data-end=\"1228\" />Our Metal Reusable Window Badges are available in three standard window styles: A, B, and C. Each designed to fit various name insert sizes while maintaining a consistent professional look.</p>\n<p data-start=\"1419\" data-end=\"1504\"><img loading=\"lazy\" src=\"https://cdn11.bigcommerce.com/s-idicuo6kuq/images/stencil/original/image-manager/image-1760346654084.png?t=1760346654\" alt=\"\" width=\"296\" height=\"464\" /></p>\n<p data-start=\"1506\" data-end=\"1615\"><strong data-start=\"1506\" data-end=\"1518\">Window A</strong> - 60mm x 10mm window<br data-start=\"1539\" data-end=\"1542\" /><strong data-start=\"1542\" data-end=\"1554\">Window B</strong> - 60mm x 14mm window<br data-start=\"1575\" data-end=\"1578\" /><strong data-start=\"1578\" data-end=\"1590\">Window C</strong> - 42mm x 23.8mm window</p>\n<p data-start=\"1617\" data-end=\"1753\">All badge sizes measure 71.20mm x 31.60mm and feature a sleek, reusable design that&rsquo;s ideal for businesses, events, and organizations.</p>\n<p><strong>Perforated Sheet Templates:</strong></p>\n<ul>\n<li aria-level=\"3\"><a href=\"https://www.dropbox.com/scl/fi/5uujt1j2m9bwhjgbwu4lk/Reusable-Perforated-Sheet-Window-A.doc?rlkey=dfsn9gvq9l44zgt7ldkphhp8r&amp;st=pgbsnni6&amp;dl=0\"><span>Window A-1Line</span></a></li>\n<li aria-level=\"3\"><span></span><a href=\"https://www.dropbox.com/scl/fi/qlfyyz9tmub6vs9p1rzm8/Reusable-Perforated-Sheet-Window-B-1Line.doc?rlkey=llqqe1gmdf7ljvh7ln6mud7bb&amp;st=kwsmsnsw&amp;dl=0\"><span>Window B-1Line</span></a></li>\n<li aria-level=\"3\"><a href=\"https://www.dropbox.com/scl/fi/qr52phj9dqaww6trs8cla/Reusable-Perforated-Sheet-Window-B-2Line.doc?rlkey=spsk6mk6eobslarx5b9ptv7d9&amp;st=ao709g5n&amp;e=1&amp;dl=0\"><span>Window B-2Line</span></a></li>\n<li aria-level=\"3\"><a href=\"https://www.dropbox.com/scl/fi/arnqwbv3l1zyic2tohysl/Reusable-Perforated-Sheet-Window-C-1Line.doc?rlkey=psjcspmnyq1lqmlv2chtz1lw0&amp;st=1zpdqzxo&amp;dl=0\"><span>Window C-1Line</span></a><span>&nbsp;</span></li>\n<li aria-level=\"3\"><span></span><a href=\"https://www.dropbox.com/scl/fi/qpu02ifx7urt0th04eth8/Reusable-Perforated-Sheet-Window-C-2Line.doc?rlkey=2u6nrjq4xhsenohaa8srkxgu6&amp;st=rnvr9h1w&amp;dl=0\"><span>Window C-2Line</span></a></li>\n<li aria-level=\"3\"><a href=\"https://www.dropbox.com/scl/fi/yb87ksjm37w9hlar3xvvz/Reusable-Perforated-Sheet-Window-C-3Line.doc?rlkey=u9dcobdjuyr0qgqye4b6ip85j&amp;st=-k4dhgnjh&amp;dl=0\"><span>Window C-3Line</span></a></li>\n<li aria-level=\"3\"><a href=\"https://www.dropbox.com/scl/fi/ixue5pkx8k3bshmluu0we/Reusable-Perforated-Sheet-Window-C-4Line.doc?rlkey=s0543jy59yurflqp2h73gaszx&amp;st=8fuhvzs4&amp;dl=0\"><span>Window C-4Line</span></a></li>\n</ul>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

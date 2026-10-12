@@ -1076,3 +1076,7 @@ body.hide-notes .note{display:none}
   .rv-stepper li{gap:8px}
   .rv-stepper button{font-size:12.5px;gap:6px}
 }
+
+/* studio name + link back to the product page (Genie Studio Advanced) */
+.studio-name{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:6px 0 0;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.studio-name a{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink-2)}

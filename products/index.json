@@ -1,6 +1,6 @@
 {
   "generated_from": "BigCommerce (read-only pull)",
-  "pulled_at": "2026-10-11T01:00:26.076Z",
+  "pulled_at": "2026-10-11T15:27:31.646Z",
   "count": 57,
   "products": [
     {
@@ -11,6 +11,10 @@
       "group": "badges_borderless",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 144,
       "url": "/name-badges/borderless-plastic-name-badge/",
       "size_mode": "preset",
@@ -24,6 +28,10 @@
       "group": "badges_chalkboard",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 145,
       "url": "/name-badges/chalkboard-name-badge/",
       "size_mode": "preset",
@@ -37,6 +45,10 @@
       "group": "badges_circle",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 150,
       "url": "/name-badges/circle-name-badge/",
       "size_mode": "fixed",
@@ -50,6 +62,10 @@
       "group": "badges_engraved",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 155,
       "url": "/name-badges/engraved-plastic-name-badge/",
       "size_mode": "preset",
@@ -63,6 +79,10 @@
       "group": "badges_engraved_wooden",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 143,
       "url": "/name-badges/engraved-wooden-name-badge/",
       "size_mode": "preset",
@@ -76,6 +96,10 @@
       "group": "badges_executive_metal",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 153,
       "url": "/name-badges/executive-metal-name-badge/",
       "size_mode": "preset",
@@ -89,6 +113,10 @@
       "group": "badges_metal_reusable",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 147,
       "url": "/name-badges/metal-reusable-name-badge/",
       "size_mode": "preset",
@@ -102,6 +130,10 @@
       "group": "badges_oval",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 151,
       "url": "/name-badges/oval-name-badge/",
       "size_mode": "fixed",
@@ -115,6 +147,10 @@
       "group": "badges_oval_top",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 152,
       "url": "/name-badges/oval-top-name-badge/",
       "size_mode": "fixed",
@@ -128,6 +164,10 @@
       "group": "badges_prestige",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 148,
       "url": "/name-badges/prestige-plastic-name-badge/",
       "size_mode": "preset",
@@ -141,6 +181,10 @@
       "group": "badges_printed_wooden",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 142,
       "url": "/name-badges/printed-wooden-name-badge/",
       "size_mode": "preset",
@@ -154,6 +198,10 @@
       "group": "badges_regal_large",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 154,
       "url": "/name-badges/regal-large-name-badge/",
       "size_mode": "fixed",
@@ -167,6 +215,10 @@
       "group": "badges_reusable",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 149,
       "url": "/name-badges/plastic-reusable-name-badge/",
       "size_mode": "preset",
@@ -180,6 +232,10 @@
       "group": "badges_standard",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": false,
+        "basic": true
+      },
       "bigcommerce_product_id": 156,
       "url": "/name-badges/standard-plastic-name-badge/",
       "size_mode": "fixed",
@@ -193,6 +249,10 @@
       "group": "notebook",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 132,
       "url": "/notebooks/printed-notebooks/",
       "size_mode": "fixed",
@@ -206,6 +266,10 @@
       "group": "pens_bamboo",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 130,
       "url": "/pens/bamboo-ballpoint-pens-engraved/",
       "size_mode": "fixed",
@@ -219,6 +283,10 @@
       "group": "pens_bamboo",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 129,
       "url": "/pens/bamboo-ballpoint-pens-printed/",
       "size_mode": "fixed",
@@ -232,6 +300,10 @@
       "group": "pens_contour_color",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 137,
       "url": "/pens/contour-color-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
       "size_mode": "fixed",
@@ -245,6 +317,10 @@
       "group": "pens_contour_silver",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 138,
       "url": "/pens/contour-silver-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
       "size_mode": "fixed",
@@ -258,6 +334,10 @@
       "group": "pens_contour_white",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 112,
       "url": "/pens/contour-white-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
       "size_mode": "fixed",
@@ -271,6 +351,10 @@
       "group": "pens_derby",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 140,
       "url": "/pens/derby-ballpoint-pen/",
       "size_mode": "fixed",
@@ -284,6 +368,10 @@
       "group": "pens_electra_classic_engraved",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 134,
       "url": "/pens/electra-classic-ballpen-engraved/",
       "size_mode": "fixed",
@@ -297,6 +385,10 @@
       "group": "pens_electra_soft_touch_printed",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 135,
       "url": "/pens/electra-soft-touch-ballpen/",
       "size_mode": "fixed",
@@ -310,6 +402,10 @@
       "group": "pens_pencils",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 131,
       "url": "/pencils/wooden-pencils-with-eraser-customizable-with-full-color-print/",
       "size_mode": "fixed",
@@ -323,6 +419,10 @@
       "group": "pens_silver_executive",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 133,
       "url": "/pens/silver-executive-pens-ball-point/",
       "size_mode": "fixed",
@@ -336,6 +436,10 @@
       "group": "pens_sparta",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 139,
       "url": "/pens/sparta-ballpoint-pen/",
       "size_mode": "fixed",
@@ -349,6 +453,10 @@
       "group": "pens_value_stick",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 141,
       "url": "/pens/value-stick-pen/",
       "size_mode": "fixed",
@@ -362,6 +470,10 @@
       "group": "custom_cut_die_cut_and_kiss_cut",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 184,
       "url": "/stickers/die-cut-sticker/",
       "size_mode": "free",
@@ -375,6 +487,10 @@
       "group": "custom_cut_die_cut_and_kiss_cut",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 174,
       "url": "/stickers/kiss-cut-sticker/",
       "size_mode": "free",
@@ -388,6 +504,10 @@
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 213,
       "url": "/stickers/vinyl-lettering-cut-vinyl-logos-gloss-white/",
       "size_mode": "free",
@@ -401,6 +521,10 @@
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 214,
       "url": "/stickers/vinyl-lettering-cut-vinyl-logos-gold/",
       "size_mode": "free",
@@ -414,6 +538,10 @@
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 215,
       "url": "/stickers/vinyl-lettering-cut-vinyl-logos-silver/",
       "size_mode": "free",
@@ -427,6 +555,10 @@
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 166,
       "url": "/stickers/vinyl-lettering-cut-vinyl-logos-gloss-black/",
       "size_mode": "free",
@@ -440,6 +572,10 @@
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 216,
       "url": "/stickers/vinyl-lettering-cut-vinyl-logos-holographic/",
       "size_mode": "free",
@@ -453,6 +589,10 @@
       "group": "custom_cut_window_clings",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 191,
       "url": "/stickers/window-clings-see-through-clear/",
       "size_mode": "free",
@@ -466,6 +606,10 @@
       "group": "custom_cut_window_clings",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 185,
       "url": "/stickers/window-clings-standard-white/",
       "size_mode": "free",
@@ -479,6 +623,10 @@
       "group": "labels_clear",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 164,
       "url": "/stickers/clear-gloss-labels-on-rolls/",
       "size_mode": "free",
@@ -492,6 +640,10 @@
       "group": "labels_clear",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 163,
       "url": "/stickers/gloss-white-paper-labels-on-rolls/",
       "size_mode": "free",
@@ -505,6 +657,10 @@
       "group": "labels_grass_paper",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 194,
       "url": "/stickers/grass-paper-labels-on-rolls/",
       "size_mode": "free",
@@ -518,6 +674,10 @@
       "group": "labels_kraft_paper",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 165,
       "url": "/stickers/kraft-paper-labels-on-rolls/",
       "size_mode": "free",
@@ -531,6 +691,10 @@
       "group": "sheets_clear",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 187,
       "url": "/stickers/clear-sticker-sheet-with-white-ink-non-met-large-sizes/",
       "size_mode": "free",
@@ -544,6 +708,10 @@
       "group": "sheets_clear",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 186,
       "url": "/stickers/clear-sticker-sheet-with-white-ink-non-met-standard-sizes/",
       "size_mode": "free",
@@ -557,6 +725,10 @@
       "group": "sheets_domed",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 181,
       "url": "/stickers/domed-color-vinyl-sticker-sheet/",
       "size_mode": "free",
@@ -570,6 +742,10 @@
       "group": "sheets_domed",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": true,
+        "basic": false
+      },
       "bigcommerce_product_id": 183,
       "url": "/stickers/domed-gold-vinyl-sticker-sheet/",
       "size_mode": "free",
@@ -583,6 +759,10 @@
       "group": "sheets_domed",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": true,
+        "basic": false
+      },
       "bigcommerce_product_id": 182,
       "url": "/stickers/domed-silver-vinyl-sticker-sheet/",
       "size_mode": "free",
@@ -596,6 +776,10 @@
       "group": "sheets_domed",
       "status": "live",
       "studio_status": "built",
+      "studios": {
+        "advanced": true,
+        "basic": false
+      },
       "bigcommerce_product_id": 261,
       "url": "/stickers/domed-white-vinyl-sticker-sheet/",
       "size_mode": "free",
@@ -609,6 +793,10 @@
       "group": "sheets_fluorescent",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 178,
       "url": "/stickers/fluorescent-green-sticker-sheet/",
       "size_mode": "free",
@@ -622,6 +810,10 @@
       "group": "sheets_fluorescent",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 177,
       "url": "/stickers/fluorescent-orange-sticker-sheet/",
       "size_mode": "free",
@@ -635,6 +827,10 @@
       "group": "sheets_fluorescent",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 179,
       "url": "/stickers/fluorescent-pink-sticker-sheet/",
       "size_mode": "free",
@@ -648,6 +844,10 @@
       "group": "sheets_fluorescent",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 180,
       "url": "/stickers/fluorescent-yellow-sticker-sheet/",
       "size_mode": "free",
@@ -661,6 +861,10 @@
       "group": "sheets_glossy",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 159,
       "url": "/stickers/glossy-white-vinyl-sticker-sheet/",
       "size_mode": "free",
@@ -674,6 +878,10 @@
       "group": "sheets_glow_in_the_dark",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 167,
       "url": "/stickers/glow-in-the-dark-sticker-sheet/",
       "size_mode": "free",
@@ -687,6 +895,10 @@
       "group": "sheets_matte",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 160,
       "url": "/stickers/matte-sticker-sheet/",
       "size_mode": "free",
@@ -700,6 +912,10 @@
       "group": "sheets_metallic",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 169,
       "url": "/stickers/metallic-brushed-gold-sticker-sheet/",
       "size_mode": "free",
@@ -713,6 +929,10 @@
       "group": "sheets_metallic",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 168,
       "url": "/stickers/metallic-brushed-silver-sticker-sheet/",
       "size_mode": "free",
@@ -726,6 +946,10 @@
       "group": "sheets_reflective",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 161,
       "url": "/stickers/reflective-sticker-sheet/",
       "size_mode": "free",
@@ -739,6 +963,10 @@
       "group": "sheets_removable",
       "status": "live",
       "studio_status": "planned",
+      "studios": {
+        "advanced": false,
+        "basic": false
+      },
       "bigcommerce_product_id": 162,
       "url": "/stickers/removable-sticker-sheet/",
       "size_mode": "free",

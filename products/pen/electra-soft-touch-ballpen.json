@@ -6,6 +6,10 @@
   "type": "Pens - Electra Soft Touch - Printed",
   "group": "pens_electra_soft_touch_printed",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 135,
@@ -54,7 +58,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 5.49,
     "quantity_tiers": [
       {
@@ -448,6 +452,50 @@
   "mcp": {
     "product_id": "electra_soft_touch_ballpen",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Electra Soft Touch Ballpen",
+    "meta_description": "Electra soft touch ballpens with matte finish, chrome trim & smooth black ink. Custom printed in full color, stylish design & free delivery.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/725/Amazon-Electra_Soft-01__04062.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/725/Amazon-Electra_Soft-01__04062.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/725/Amazon-Electra_Soft-01__04062.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/723/Amazon-Electra_Soft-02__09374.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/723/Amazon-Electra_Soft-02__09374.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/723/Amazon-Electra_Soft-02__09374.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/720/Amazon-Electra_Soft-03__93883.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/720/Amazon-Electra_Soft-03__93883.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/720/Amazon-Electra_Soft-03__93883.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/721/Amazon-Electra_Soft-014__47482.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/721/Amazon-Electra_Soft-014__47482.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/721/Amazon-Electra_Soft-014__47482.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/722/Amazon-Electra_Soft-015__16186.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/722/Amazon-Electra_Soft-015__16186.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/722/Amazon-Electra_Soft-015__16186.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/724/Amazon-Electra_Soft-016__90114.1778500462.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/724/Amazon-Electra_Soft-016__90114.1778500462.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/135/images/724/Amazon-Electra_Soft-016__90114.1778500462.220.290.jpg?c=1",
+        "alt": "Electra Soft Touch Ballpen"
+      }
+    ],
+    "description_html": "<p><strong>Introducing Electra Soft Touch Ballpoint Pens!</strong></p>\n<p>Experience the perfect blend of style and comfort with our popular aluminum click-top metal ballpen. Featuring a tactile soft-touch coating, this pen is available in a wide range of matte colors with a sleek chrome metal clip and trim.</p>\n<p>It's one of the <a href=\"../../../../pens/metal-pens/\">custom metal pens</a> in the Custom Genie range.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Wide Range of Colors</strong>: Choose from 8 different matte colors to match your style.</li>\n<li><strong>Tactile Soft-Touch Coating</strong>: Enjoy a comfortable grip with the soft-touch coating that feels great in your hand.</li>\n<li><strong>Digital Print Area</strong>: Showcase your logo or design with a generous digital print area of 50 x 6.5mm, printed in full color beside the clip.</li>\n<li><strong>Smooth Writing</strong>: Equipped with black ink for a classic and professional look.</li>\n<li><strong>Click-Top Action</strong>: Convenient click-top mechanism for effortless use.</li>\n</ul>\n<p><strong>Why Choose Our Electra Soft Touch Ballpoint Pens?</strong></p>\n<ul>\n<li><strong>Full-Color, High-Resolution Digital Printing</strong>: Your logo or design will be printed in vibrant, high-resolution color.</li>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n<li><strong>Free Delivery</strong>: Get your pens delivered to your doorstep at no extra cost.</li>\n</ul>\n<p><strong>Order Your Electra Soft Touch Ballpoint Pen Today!</strong><span>&nbsp;</span>Elevate your writing experience with a pen that combines elegance, comfort, and functionality. Customize your pen with your logo and text, and make a lasting impression. Click the \"Buy Now\" button and add this stylish pen to your collection!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

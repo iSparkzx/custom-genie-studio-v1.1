@@ -6,6 +6,10 @@
   "type": "Sheets - Fluorescent",
   "group": "sheets_fluorescent",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 178,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.09,
     "quantity_tiers": [
       {
@@ -1601,6 +1605,32 @@
   "mcp": {
     "product_id": "fluorescent_green_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Fluorescent Green Sticker Sheet",
+    "meta_description": "Fluorescent Green Stickers - bright, neon day-glow vinyl with strong adhesion & water resistance. Perfect for promotions, safety & warning labels.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/929/Image-Amazon-Fluorescent_Green-02__50326.1778499977.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/929/Image-Amazon-Fluorescent_Green-02__50326.1778499977.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/929/Image-Amazon-Fluorescent_Green-02__50326.1778499977.220.290.jpg?c=1",
+        "alt": "Fluorescent Green Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/954/Image-Amazon-Fluorescent-05__05802.1778499977.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/954/Image-Amazon-Fluorescent-05__05802.1778499977.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/954/Image-Amazon-Fluorescent-05__05802.1778499977.220.290.jpg?c=1",
+        "alt": "Fluorescent Green Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/930/Image-Amazon-Fluorescent-03Green__28549.1778499977.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/930/Image-Amazon-Fluorescent-03Green__28549.1778499977.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/178/images/930/Image-Amazon-Fluorescent-03Green__28549.1778499977.220.290.jpg?c=1",
+        "alt": "Fluorescent Green Sticker Sheet"
+      }
+    ],
+    "description_html": "<p><strong>Digitally printed fluorescent vinyl stickers. Your design is printed onto a choice of fluorescent day-glow colored vinyl. Perfect if you really want your design to stand out.<br /></strong></p>\n<p>Our Fluorescent Vinyl Stickers are supplied in sheet format, not on a roll.</p>\n<p>Fluorescent Stickers (also referred to as neon stickers, fluorescent vinyl stickers, day-glow stickers, high visibility stickers, hi-vis stickers etc.) are a <strong>water-resistant</strong> sticker product, but in bright fluorescent colors.</p>\n<p>We recommend using darker colors on the fluorescent vinyl (solid black looks best) as they give the best contrast against the really bright colored background.</p>\n<p>Fluorescent stickers are suitable for application onto almost all flat or slightly curved surfaces. Our fluorescent vinyl is really high quality, having been developed for use on police cars, ambulances and other emergency vehicles.</p>\n<p><strong>Outdoor Durability</strong><br />Yellow: 24 months<br />Orange / Pink / Green: 18 months</p>\n<h3><br />All of our fluorescent neon stickers have the following benefits:</h3>\n<ul>\n<li>Full color, high resolution digital printing</li>\n<li>Strong adhesion</li>\n<li>Water resistant</li>\n<li>No setup or design fees</li>\n</ul>\n<ul>\n<li>Choice of 4 bright colors - Fluorescent Yellow, Orange, Pink or&nbsp;Green</li>\n<li>Great for promotions, price labels &amp; warning&nbsp;stickers</li>\n<li>Tear-resistant</li>\n<li>UV resistant</li>\n<li>Supplied on&nbsp;sheets</li>\n</ul>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

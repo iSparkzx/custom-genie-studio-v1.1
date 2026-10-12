@@ -6,6 +6,10 @@
   "type": "Badges - Engraved",
   "group": "badges_engraved",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 155,
@@ -70,7 +74,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.99,
     "quantity_tiers": [
       {
@@ -924,6 +928,68 @@
   "mcp": {
     "product_id": "engraved_plastic_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Engraved Plastic Name Badge",
+    "meta_description": "Custom Engraved Plastic Name Badges with precision laser engraving, magnetic or pin fittings. Durable, professional, and perfect for staff identification.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/907/Engtraved-Hand__67265.1778500198.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/907/Engtraved-Hand__67265.1778500198.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/907/Engtraved-Hand__67265.1778500198.220.290.png?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/900/NBI-amazon-engraved-name-badges-01__00759.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/900/NBI-amazon-engraved-name-badges-01__00759.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/900/NBI-amazon-engraved-name-badges-01__00759.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/906/NBI-amazon-engraved-name-badges-02__96024.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/906/NBI-amazon-engraved-name-badges-02__96024.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/906/NBI-amazon-engraved-name-badges-02__96024.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/904/NBI-amazon-engraved-name-badges-03__16008.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/904/NBI-amazon-engraved-name-badges-03__16008.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/904/NBI-amazon-engraved-name-badges-03__16008.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/905/NBI-amazon-engraved-name-badges-07__90987.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/905/NBI-amazon-engraved-name-badges-07__90987.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/905/NBI-amazon-engraved-name-badges-07__90987.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/901/NBI-amazon-engraved-name-badges-06__18088.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/901/NBI-amazon-engraved-name-badges-06__18088.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/901/NBI-amazon-engraved-name-badges-06__18088.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/903/NBI-amazon-engraved-name-badges-04__42156.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/903/NBI-amazon-engraved-name-badges-04__42156.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/903/NBI-amazon-engraved-name-badges-04__42156.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/899/NBI-amazon-engraved-name-badges-05__85720.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/899/NBI-amazon-engraved-name-badges-05__85720.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/899/NBI-amazon-engraved-name-badges-05__85720.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/902/NBI-amazon-engraved-name-badges-08__29366.1778500198.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/902/NBI-amazon-engraved-name-badges-08__29366.1778500198.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/155/images/902/NBI-amazon-engraved-name-badges-08__29366.1778500198.220.290.jpg?c=1",
+        "alt": "Engraved Plastic Name Badge"
+      }
+    ],
+    "description_html": "<p><strong>Elegant and Customizable!</strong></p>\n<p>Elevate your brand with our Plastic Engraved Name Badges, designed to combine precision laser engraving. Perfect for businesses, events, and organizations, these name badges offer a professional and polished look.</p>\n<p>Our Plastic Engraved Name Badges include:</p>\n<ul>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>No Minimums</strong>: Order as many or as few as you need, with no minimum order requirements.</li>\n<li><strong>No Hidden Fees</strong>: Enjoy transparent pricing with no hidden charges.</li>\n<li><strong>Laser Engraved Logos and Text</strong>: Enjoy the precision of laser engraving for logos and text, ensuring your brand stands out.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Plastic Engraved Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with elegant, durable, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of precision laser engraving. Click the \"Buy Now\" button and elevate your brand with our Plastic Engraved Name Badges!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

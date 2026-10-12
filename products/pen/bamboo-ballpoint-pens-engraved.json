@@ -6,6 +6,10 @@
   "type": "Pens - Bamboo",
   "group": "pens_bamboo",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 130,
@@ -44,7 +48,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 4.99,
     "quantity_tiers": [
       {
@@ -333,6 +337,56 @@
   "mcp": {
     "product_id": "bamboo_ballpoint_pens_engraved",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Engraved Bamboo Pens | Custom Logo, No Minimum",
+    "meta_description": "Eco-friendly bamboo ballpoint pens with black trim. Custom laser engraving, 60x6mm area. Stylish, sustainable alternative to plastic pens.",
+    "reviews_count": 1,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/695/AMAZON-Bamboo_Engraved_01-2__56816.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/695/AMAZON-Bamboo_Engraved_01-2__56816.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/695/AMAZON-Bamboo_Engraved_01-2__56816.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/692/AMAZON-Bamboo_Engraved_10-2__43073.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/692/AMAZON-Bamboo_Engraved_10-2__43073.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/692/AMAZON-Bamboo_Engraved_10-2__43073.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/691/AMAZON-Bamboo_Engraved_03-2__49634.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/691/AMAZON-Bamboo_Engraved_03-2__49634.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/691/AMAZON-Bamboo_Engraved_03-2__49634.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/693/AMAZON-Bamboo_Engraved_09-2__47098.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/693/AMAZON-Bamboo_Engraved_09-2__47098.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/693/AMAZON-Bamboo_Engraved_09-2__47098.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/694/AMAZON-Bamboo_Engraved_02-2__78400.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/694/AMAZON-Bamboo_Engraved_02-2__78400.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/694/AMAZON-Bamboo_Engraved_02-2__78400.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/690/AMAZON-Bamboo-Engraved-08-2__16776.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/690/AMAZON-Bamboo-Engraved-08-2__16776.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/690/AMAZON-Bamboo-Engraved-08-2__16776.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/696/AMAZON-Bamboo_Engraved_11-2__52865.1778500514.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/696/AMAZON-Bamboo_Engraved_11-2__52865.1778500514.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/130/images/696/AMAZON-Bamboo_Engraved_11-2__52865.1778500514.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Engraved"
+      }
+    ],
+    "description_html": "<p>A push-button ballpen made from sustainable bamboo with black trim and a chrome clip. An eco-friendly alternative to plastic promotional pens. It's part of our <a href=\"../../../../pens/bamboo-pens/\">custom bamboo pen range</a> at Custom Genie.</p>\n<ul>\n<li>Made from sustainable bamboo with black trim and a chrome clip</li>\n<li>Eco-friendly alternative to plastic pens</li>\n<li>Large area for 'burned' effect laser engraving</li>\n<li>Prefer printed? See our printed version</li>\n</ul>\n<p>Engraving area: 60 x 6mm (printed version also available)<br />Writing ink color: Black</p>\n<p>Engraved bamboo pens are often referred to as engraved wooden pens, but bamboo is actually a type of grass. They do look and feel like wooden pens, so it's easy to see why they are often confused!</p>\n<p><strong>Please Note:</strong> As these pens are laser engraved rather than printed, your logo or design appears in 1-color 'burned' dark brown and multiple colors are not available. When you design this pen on our website your text and logos will be converted to 1-color dark brown even if you upload logos or text in different colors. If you prefer to have colored printing on your bamboo pens, please see our <a href=\"../../../../pens/bamboo-ballpoint-pens-printed/\">Printed Bamboo Pens</a>.</p>\n<p>No setup fees. No design fees!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

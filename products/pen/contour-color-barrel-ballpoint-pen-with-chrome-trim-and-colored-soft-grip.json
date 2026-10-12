@@ -6,6 +6,10 @@
   "type": "Pens - Contour Color",
   "group": "pens_contour_color",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 137,
@@ -56,7 +60,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 2.99,
     "quantity_tiers": [
       {
@@ -474,6 +478,50 @@
   "mcp": {
     "product_id": "contour_color_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip",
+    "meta_description": "Custom contour color barrel pens with chrome trim & soft grip. Choose from 10 vibrant colors, smooth black ink & full-color logo printing at no setup cost.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/731/Amazon-Color_Contour-01__09403.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/731/Amazon-Color_Contour-01__09403.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/731/Amazon-Color_Contour-01__09403.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/729/Amazon-Color_Contour-02__95843.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/729/Amazon-Color_Contour-02__95843.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/729/Amazon-Color_Contour-02__95843.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/730/Amazon-Color_Contour-03__12854.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/730/Amazon-Color_Contour-03__12854.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/730/Amazon-Color_Contour-03__12854.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/726/Amazon-Color_Contour-016__09603.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/726/Amazon-Color_Contour-016__09603.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/726/Amazon-Color_Contour-016__09603.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/728/Amazon-Color_Contour-018__55480.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/728/Amazon-Color_Contour-018__55480.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/728/Amazon-Color_Contour-018__55480.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/727/Amazon-Color_Contour-017__84349.1778500452.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/727/Amazon-Color_Contour-017__84349.1778500452.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/137/images/727/Amazon-Color_Contour-017__84349.1778500452.220.290.jpg?c=1",
+        "alt": "Contour Color Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      }
+    ],
+    "description_html": "<p>Where vibrant colors and style meet functionality and personalization! The Color Barrel Contour Pen is designed to make a statement in any setting. With 10 vibrant colors to choose from, each pen will serve as a mini billboard for your brand. Its smooth, high-quality black ink and sleek design will ensure your brand makes its mark! It's part of our <a href=\"../../../../pens/contour-pens/\">custom contour pens</a> range at Custom Genie.</p>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Vibrant Color Options</strong>: Choose from 10 vibrant colors to match your brand's style.</li>\n<li><strong>Transparent Color Barrel</strong>: Adds a touch of elegance and allows for a clear view of the pen's inner workings.</li>\n<li><strong>Full-Color, High-Resolution Digital Printing</strong>: Showcase your logo or design with a generous digital print area of 60 x 6mm, ensuring your brand stands out.</li>\n<li><strong>Retractable Push Top</strong>: Convenient click-top action for effortless use.</li>\n<li><strong>Sleek Chrome Trim &amp; Comfy Rubber Grip</strong>: Provides a comfortable writing experience and a professional look.</li>\n<li><strong>Smooth Writing</strong>: Equipped with black ink for a classic and professional writing experience.</li>\n</ul>\n<p><strong>Why Choose Our Color Barrel Contour Pens?</strong></p>\n<ul>\n<li><strong>No Setup Fees</strong>: Start your order without any additional setup costs.</li>\n<li><strong>No Design Fees</strong>: Enjoy the freedom to create without worrying about design charges.</li>\n<li><strong>Full-Color Digital Printing</strong>: Your logo or design will be printed in vibrant, high-resolution color, making a lasting impression.</li>\n</ul>\n<p><strong>Order Your Color Barrel Contour Pens Today!</strong><span>&nbsp;</span>Elevate your brand with a pen that combines style, functionality, and personalization. Customize your pen with your logo and text, and make a lasting impression. Click the \"Buy Now\" button and add these stylish pens to your collection!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

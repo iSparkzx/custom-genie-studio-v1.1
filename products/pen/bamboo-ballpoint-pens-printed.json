@@ -6,6 +6,10 @@
   "type": "Pens - Bamboo",
   "group": "pens_bamboo",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 129,
@@ -44,7 +48,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 4.99,
     "quantity_tiers": [
       {
@@ -346,6 +350,62 @@
   "mcp": {
     "product_id": "bamboo_ballpoint_pens_printed",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Printed Bamboo Pens | Full-Color Logo, No Minimum",
+    "meta_description": "Eco-friendly bamboo ballpoint pens with black trim. Large 60x6mm print area for full-color branding. A sustainable alternative to plastic pens.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/688/Amazon-Bamboo_Printed-01__43207.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/688/Amazon-Bamboo_Printed-01__43207.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/688/Amazon-Bamboo_Printed-01__43207.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/685/Amazon-Bamboo_Printed-07__68507.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/685/Amazon-Bamboo_Printed-07__68507.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/685/Amazon-Bamboo_Printed-07__68507.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/684/Amazon-Bamboo_Printed-03__28848.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/684/Amazon-Bamboo_Printed-03__28848.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/684/Amazon-Bamboo_Printed-03__28848.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/689/Amazon-Bamboo_Printed-09__61482.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/689/Amazon-Bamboo_Printed-09__61482.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/689/Amazon-Bamboo_Printed-09__61482.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/683/Amazon-Bamboo_Printed-08__62907.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/683/Amazon-Bamboo_Printed-08__62907.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/683/Amazon-Bamboo_Printed-08__62907.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/687/Amazon-Bamboo_Printed-02__74019.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/687/Amazon-Bamboo_Printed-02__74019.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/687/Amazon-Bamboo_Printed-02__74019.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/682/Amazon-Bamboo_Printed-05__45229.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/682/Amazon-Bamboo_Printed-05__45229.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/682/Amazon-Bamboo_Printed-05__45229.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/686/Amazon-Bamboo_Printed-04__53634.1778500528.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/686/Amazon-Bamboo_Printed-04__53634.1778500528.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/129/images/686/Amazon-Bamboo_Printed-04__53634.1778500528.220.290.jpg?c=1",
+        "alt": "Bamboo Ballpoint Pens - Printed"
+      }
+    ],
+    "description_html": "<p>A push-button ballpen made from sustainable bamboo with black trim and a chrome clip. An eco-friendly alternative to plastic promotional pens. It's part of our <a href=\"../../../../pens/bamboo-pens/\">bamboo pen collection</a> at Custom Genie.</p>\n<ul>\n<li>Made from sustainable bamboo with black trim and a chrome clip</li>\n<li>Eco-friendly alternative to plastic pens</li>\n<li>Large, full-color digital print area</li>\n<li>Digital print area: 60 x 6mm</li>\n<li>Writing ink color: Black</li>\n</ul>\n<p>Prefer a permanent laser-engraved 'burned' finish? See our <a href=\"../../../../pens/bamboo-ballpoint-pens-engraved/\">Engraved Bamboo Pens</a>.</p>\n<p>No setup fees. No design fees!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

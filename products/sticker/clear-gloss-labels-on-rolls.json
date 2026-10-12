@@ -6,6 +6,10 @@
   "type": "Labels - Clear",
   "group": "labels_clear",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 164,
@@ -99,7 +103,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.7,
     "quantity_tiers": [
       {
@@ -1128,6 +1132,68 @@
   "mcp": {
     "product_id": "clear_gloss_labels_on_rolls",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Clear Gloss Labels on Rolls",
+    "meta_description": "Custom Clear Gloss Labels on rolls - transparent, waterproof & UV-resistant. Perfect for bottles, cosmetics & premium product packaging.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/967/Image-Amazon-LOAR-Clear-02__16016.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/967/Image-Amazon-LOAR-Clear-02__16016.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/967/Image-Amazon-LOAR-Clear-02__16016.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/971/Image-Amazon-LOAR-Clear-06__09251.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/971/Image-Amazon-LOAR-Clear-06__09251.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/971/Image-Amazon-LOAR-Clear-06__09251.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/968/Image-Amazon-LOAR-Clear-03__66228.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/968/Image-Amazon-LOAR-Clear-03__66228.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/968/Image-Amazon-LOAR-Clear-03__66228.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/972/Image-Amazon-LOAR-Clear-05__11424.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/972/Image-Amazon-LOAR-Clear-05__11424.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/972/Image-Amazon-LOAR-Clear-05__11424.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/970/Image-Amazon-LOAR-Clear-07__55540.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/970/Image-Amazon-LOAR-Clear-07__55540.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/970/Image-Amazon-LOAR-Clear-07__55540.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/581/Screenshot_2025-05-09_125740__64236.1778500094.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/581/Screenshot_2025-05-09_125740__64236.1778500094.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/581/Screenshot_2025-05-09_125740__64236.1778500094.220.290.png?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/802/Image-Amazon-Clear-03__80121.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/802/Image-Amazon-Clear-03__80121.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/802/Image-Amazon-Clear-03__80121.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/582/Screenshot_2025-05-09_125754__04953.1778500094.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/582/Screenshot_2025-05-09_125754__04953.1778500094.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/582/Screenshot_2025-05-09_125754__04953.1778500094.220.290.png?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/808/Image-Amazon-Clear-05__94305.1778500094.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/808/Image-Amazon-Clear-05__94305.1778500094.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/164/images/808/Image-Amazon-Clear-05__94305.1778500094.220.290.jpg?c=1",
+        "alt": "Clear Gloss Labels on Rolls"
+      }
+    ],
+    "description_html": "<p>Custom clear gloss labels are printed on transparent film with a high-shine glossy finish and supplied on a roll for fast, consistent application. The clear material lets your design sit on the product with no visible background, for a clean, no-label look on bottles, jars, and packaging.</p>\n<h2>Material and finish</h2>\n<ul>\n<li>Transparent film with a glossy, high-shine surface</li>\n<li>Full-color digital printing with glossy ink</li>\n<li>Matte lamination available for a fully matte finish</li>\n<li>Custom size and shape, up to 7.48 inches</li>\n</ul>\n<h2>Durability</h2>\n<ul>\n<li>Water-resistant, tear-resistant, and UV-resistant</li>\n</ul>\n<h2>Best for</h2>\n<ul>\n<li>Food and beverage brands labeling bottles, jars, and containers</li>\n<li>Cosmetic and skincare products that want a clear, premium look</li>\n<li>Small businesses wanting seamless, no-background branding</li>\n<li>Packaging where the product should show through</li>\n</ul>\n<h2>Ordering</h2>\n<ul>\n<li>No minimum order, no setup fees, and no artwork fees</li>\n<li>Free digital proof before printing</li>\n<li>Most orders printed and delivered within 7 days, with expedited options</li>\n<li>Free shipping on orders over $75</li>\n<li>Text smaller than 2mm may be darkened slightly for legibility</li>\n</ul>\n<p><a href=\"%%GLOBAL_ShopPathSSL%%/stickers/labels-on-rolls/\">See all Labels on Rolls</a></p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

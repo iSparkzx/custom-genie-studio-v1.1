@@ -25,6 +25,9 @@ const families = Object.fromEntries(Object.values(FAMILY_BY_TEMPLATE).map(f => [
 
 const cf = (p, name) => p.custom_fields.find(f => f.name === name)?.value;
 const slugOf = p => p.custom_url.url.split("/").filter(Boolean).pop();
+// Store descriptions are shown on the prototype product pages: keep the store's copy, drop anything executable.
+const clean = h => String(h || "").replace(/<(script|style|iframe|object|embed|form)[\s\S]*?<\/\1>/gi, "").replace(/<(script|iframe|object|embed|link|meta)[^>]*>/gi, "")
+  .replace(/\s(on\w+|style|class|id)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "").replace(/(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, "$1=\"#\"").replace(/<img /gi, '<img loading="lazy" ').trim();
 const idOf = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
 const num = s => Number.parseFloat(s);
 
@@ -109,7 +112,8 @@ function build(p) {
     $schema: "../schema/product-definition.schema.json",
     id, name: p.name, family, type, group: type ? idOf(type) : null,
     status: p.is_visible ? "live" : "hidden",
-    studio_status: (fam.studio_built || []).includes(id) ? "built" : "planned",
+    studios: { advanced: (fam.studios?.advanced || []).includes(id), basic: (fam.studios?.basic || []).includes(id) },
+    studio_status: (fam.studios?.advanced || []).includes(id) || (fam.studios?.basic || []).includes(id) ? "built" : "planned",
     bigcommerce: { product_id: p.id, url: p.custom_url.url, sku: p.sku || null, base_variant_id: p.base_variant_id, template: cf(p, "bctemplate") },
     size,
     ...(shapes ? { shapes } : {}),
@@ -137,7 +141,12 @@ function build(p) {
       modifiers,
       required_modifiers: modifiers.filter(m => m.required).map(m => m.name),
     },
-    mcp: { product_id: id, studio_supported: (fam.studio_built || []).includes(id) },
+    mcp: { product_id: id, studio_supported: (fam.studios?.advanced || []).includes(id) || (fam.studios?.basic || []).includes(id) },
+    pdp: {
+      page_title: p.page_title || p.name, meta_description: p.meta_description || "", reviews_count: p.reviews_count || 0,
+      images: (p.images || []).slice().sort((a, b) => a.sort_order - b.sort_order).map(im => ({ zoom: im.url_zoom, standard: im.url_standard, thumb: im.url_thumbnail, alt: im.description || p.name })),
+      description_html: clean(p.description),
+    },
     assumptions: fam.assumptions || [],
     todo,
   };
@@ -173,7 +182,7 @@ for (const p of selected.sort((a, b) => a.id - b.id)) {
   if (errs.length) problems.push(`${p.id} ${p.name}: ${errs.join("; ")}`);
   const file = `${d.family}/${slugOf(p)}.json`;
   writeFileSync(join(OUT, file), JSON.stringify(d, null, 2) + "\n");
-  index.push({ id: d.id, name: d.name, family: d.family, type: d.type, group: d.group, status: d.status, studio_status: d.studio_status,
+  index.push({ id: d.id, name: d.name, family: d.family, type: d.type, group: d.group, status: d.status, studio_status: d.studio_status, studios: d.studios,
     bigcommerce_product_id: p.id, url: d.bigcommerce.url, size_mode: d.size.mode, file });
 }
 index.sort((a, b) => a.family.localeCompare(b.family) || (a.type || "").localeCompare(b.type || "") || a.name.localeCompare(b.name));

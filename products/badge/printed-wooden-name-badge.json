@@ -6,6 +6,10 @@
   "type": "Badges - Printed Wooden",
   "group": "badges_printed_wooden",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 142,
@@ -69,7 +73,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.99,
     "quantity_tiers": [
       {
@@ -729,6 +733,62 @@
   "mcp": {
     "product_id": "printed_wooden_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Printed Wooden Name Badge",
+    "meta_description": "Custom printed wooden name badges with full-color logos. Eco-friendly, durable, and stylish with fast shipping & no setup fees.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1063/NBI-amazon-printed-wooden-name-badges-06__11559.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1063/NBI-amazon-printed-wooden-name-badges-06__11559.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1063/NBI-amazon-printed-wooden-name-badges-06__11559.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/936/NBI-amazon-printed-wooden-name-badges-01__97896.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/936/NBI-amazon-printed-wooden-name-badges-01__97896.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/936/NBI-amazon-printed-wooden-name-badges-01__97896.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1067/NBI-amazon-printed-wooden-name-badges-07__12086.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1067/NBI-amazon-printed-wooden-name-badges-07__12086.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1067/NBI-amazon-printed-wooden-name-badges-07__12086.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/935/NBI-amazon-printed-wooden-name-badges-03__14694.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/935/NBI-amazon-printed-wooden-name-badges-03__14694.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/935/NBI-amazon-printed-wooden-name-badges-03__14694.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1068/NBI-amazon-printed-wooden-name-badges-02__16197.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1068/NBI-amazon-printed-wooden-name-badges-02__16197.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1068/NBI-amazon-printed-wooden-name-badges-02__16197.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1066/NBI-amazon-printed-wooden-name-badges-04__75694.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1066/NBI-amazon-printed-wooden-name-badges-04__75694.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1066/NBI-amazon-printed-wooden-name-badges-04__75694.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1065/NBI-amazon-printed-wooden-name-badges-05__55701.1778500356.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1065/NBI-amazon-printed-wooden-name-badges-05__55701.1778500356.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1065/NBI-amazon-printed-wooden-name-badges-05__55701.1778500356.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1064/NBI-amazon-printed-wooden-name-badges-03__38700.1778500357.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1064/NBI-amazon-printed-wooden-name-badges-03__38700.1778500357.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/142/images/1064/NBI-amazon-printed-wooden-name-badges-03__38700.1778500357.220.290.jpg?c=1",
+        "alt": "Printed Wooden Name Badge"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<div dir=\"auto\">\n<div dir=\"auto\">\n<div>\n<div>\n<div tabindex=\"-1\" data-testid=\"loading-message\">\n<div>\n<div aria-live=\"assertive\">\n<div>\n<p>Elevate your brand with our Printed Wooden Name Badges, designed to combine sustainability and elegance. Perfect for businesses, events, and organizations looking to make a lasting impression, these name badges offer a unique and professional look.</p>\n<p><strong>Benefits of Printed Wooden Name Badges</strong>:</p>\n<ul>\n<li><strong>Real Wood Construction</strong>: Crafted from real wood, our name badges are available in three popular sizes, providing a natural and authentic appearance.</li>\n<li><strong>Contrasting Dark Brown 'Burned' Edges</strong>: The dark brown edges add a touch of sophistication and contrast, enhancing the overall design.</li>\n<li><strong>Eco-Friendly and Recyclable</strong>: Made from sustainable materials, these badges are eco-friendly and recyclable, making them an excellent choice for environmentally conscious customers.</li>\n<li><strong>Full Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Wide Range of Font Options</strong>: Customize your badges with a variety of font options to match your brand's style.</li>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Please Note</strong>: As the name badges are made using real wood, there will be variations in color and grain between each badge, adding to their unique charm.</p>\n<p><strong>Order Your Printed Wooden Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with eco-friendly, stylish, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of sustainability.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<p>Want to compare options? Browse our <a href=\"%%GLOBAL_ShopPathSSL%%/name-badges/wooden-name-badges/\">custom wooden name badges</a>, including laser-engraved mahogany.</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

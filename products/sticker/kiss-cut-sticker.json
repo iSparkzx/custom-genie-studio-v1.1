@@ -6,6 +6,10 @@
   "type": "Custom Cut - Die Cut and Kiss Cut",
   "group": "custom_cut_die_cut_and_kiss_cut",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 174,
@@ -109,7 +113,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 1.44,
     "quantity_tiers": [
       {
@@ -6661,6 +6665,44 @@
   "mcp": {
     "product_id": "kiss_cut_sticker",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Custom Kiss Cut Stickers | Easy Peel, Full Color",
+    "meta_description": "Custom Kiss Cut Stickers - easy-peel, fade & water-resistant with full-color printing. Perfect for packaging, giveaways & creative branding.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/860/Image-Amazon-Kiss_Cut-02__54344.1778500801.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/860/Image-Amazon-Kiss_Cut-02__54344.1778500801.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/860/Image-Amazon-Kiss_Cut-02__54344.1778500801.220.290.jpg?c=1",
+        "alt": "Kiss Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/865/Image-Amazon-Kiss_Cut-05__42603.1778500801.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/865/Image-Amazon-Kiss_Cut-05__42603.1778500801.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/865/Image-Amazon-Kiss_Cut-05__42603.1778500801.220.290.jpg?c=1",
+        "alt": "Kiss Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/861/Image-Amazon-Kiss_Cut-03__88463.1778500801.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/861/Image-Amazon-Kiss_Cut-03__88463.1778500801.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/861/Image-Amazon-Kiss_Cut-03__88463.1778500801.220.290.jpg?c=1",
+        "alt": "Kiss Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/863/Image-Amazon-Kiss_Cut-06__48903.1778500801.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/863/Image-Amazon-Kiss_Cut-06__48903.1778500801.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/863/Image-Amazon-Kiss_Cut-06__48903.1778500801.220.290.jpg?c=1",
+        "alt": "Kiss Cut Sticker"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/864/Image-Amazon-Kiss_Cut-07__17996.1778500801.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/864/Image-Amazon-Kiss_Cut-07__17996.1778500801.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/174/images/864/Image-Amazon-Kiss_Cut-07__17996.1778500801.220.290.jpg?c=1",
+        "alt": "Kiss Cut Sticker"
+      }
+    ],
+    "description_html": "<p>Kiss cut stickers are cut through the sticker layer only, leaving the backing paper intact, so each sticker sits inside a border that makes it easy to peel and apply. The cut follows the exact shape of your design, regular or irregular, for a clean, professional finish.</p>\n<p><strong>Why choose kiss cut?</strong></p>\n<ul>\n<li><strong>Easy peel:</strong> the surrounding backing gives you something to hold, so even small or intricate designs lift off cleanly.</li>\n<li><strong>Printable background:</strong> add your branding, contact details, or a promotional message on the paper around the sticker itself.</li>\n<li><strong>Full color digital printing:</strong> vibrant detail and precise color in every design.</li>\n<li><strong>Fade and water resistant:</strong> built for long lasting use.</li>\n<li><strong>Protects intricate shapes:</strong> the border shields fine cut lines during handling and handouts.</li>\n<li><strong>No Minimum:</strong> order the quantity your project needs.</li>\n</ul>\n<p>Kiss cut stickers are ideal for giveaways, packaging inserts, event handouts, and product branding. If you want a standalone sticker cut to the exact edge of your artwork with no border, choose our <a href=\"%%GLOBAL_ShopPathSSL%%/stickers/die-cut-sticker/\">die cut sticker</a> instead.</p>\n<p><strong>What is a kiss cut sticker?</strong><br />A sticker cut through the top layer only, leaving the backing intact. Each sticker sits inside a border of backing paper that makes peeling easy.</p>\n<p><strong>What is the difference between kiss cut and die cut?</strong><br />Kiss cut stickers keep their backing border and peel off the paper. Die cut stickers are cut through the backing too, so each one is a standalone sticker shaped exactly like your design.</p>\n<p><strong>Can I print on the background around the sticker?</strong><br />Yes. The surrounding paper can carry your branding, a message, or contact details for extra impact when you hand them out.</p>\n<p><strong>Is there a minimum order?</strong><br />No Minimum. Order one kiss cut sticker or hundreds, whatever the project calls for.</p>\n<p><strong>How durable are kiss cut stickers?</strong><br />They are printed in full color and are fade and water resistant, built to hold up through handling and everyday use.</p>\n<p><strong>What are kiss cut stickers best for?</strong><br />Giveaways, packaging inserts, event handouts, and any time you want an easy peel sticker that protects intricate designs.</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

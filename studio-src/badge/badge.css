@@ -38,6 +38,8 @@ a{color:var(--accent-ink)}
 .crumbs li+li::before{content:"/";margin-right:6px;color:var(--ink-4)}
 .crumbs a{color:var(--ink-3)}
 @media (max-width:560px){.crumbs li:nth-child(2){display:none}.crumbs li[aria-current]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:calc(100vw - 110px)}.crumbs ol{flex-wrap:nowrap}}
+.studio-name{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:10px 0 0;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.studio-name a{font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink-2)}
 .intro h1{margin:6px 0 2px;font-size:clamp(24px,4.4vw,34px);line-height:1.15;letter-spacing:-.01em}
 .sub{margin:0 0 14px;color:var(--ink-3);max-width:60ch}
 

@@ -6,6 +6,10 @@
   "type": "Badges - Borderless",
   "group": "badges_borderless",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 144,
@@ -79,7 +83,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 10.47,
     "quantity_tiers": [
       {
@@ -1273,6 +1277,62 @@
   "mcp": {
     "product_id": "borderless_plastic_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Borderless Plastic Name Badge",
+    "meta_description": "Custom borderless name badges with full-color print, scratch-proof coating & fast shipping. No setup fees, no hidden costs.",
+    "reviews_count": 1,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/888/Borderless-Hand__81194.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/888/Borderless-Hand__81194.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/888/Borderless-Hand__81194.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/896/1_MUST_HAVE_-_NBI-amazon-borderless-name-badges-01__69721.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/896/1_MUST_HAVE_-_NBI-amazon-borderless-name-badges-01__69721.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/896/1_MUST_HAVE_-_NBI-amazon-borderless-name-badges-01__69721.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/892/NBI-amazon-borderless-name-badges-02__84730.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/892/NBI-amazon-borderless-name-badges-02__84730.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/892/NBI-amazon-borderless-name-badges-02__84730.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/893/NBI-amazon-borderless-name-badges-03__13449.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/893/NBI-amazon-borderless-name-badges-03__13449.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/893/NBI-amazon-borderless-name-badges-03__13449.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/895/NBI-amazon-borderless-name-badges-07__76763.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/895/NBI-amazon-borderless-name-badges-07__76763.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/895/NBI-amazon-borderless-name-badges-07__76763.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/890/NBI-amazon-borderless-name-badges-06__83429.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/890/NBI-amazon-borderless-name-badges-06__83429.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/890/NBI-amazon-borderless-name-badges-06__83429.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/894/NBI-amazon-borderless-name-badges-04__21367.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/894/NBI-amazon-borderless-name-badges-04__21367.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/894/NBI-amazon-borderless-name-badges-04__21367.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/889/NBI-amazon-borderless-name-badges-05__59266.1778500328.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/889/NBI-amazon-borderless-name-badges-05__59266.1778500328.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/144/images/889/NBI-amazon-borderless-name-badges-05__59266.1778500328.220.290.jpg?c=1",
+        "alt": "Borderless Plastic Name Badge"
+      }
+    ],
+    "description_html": "<div>\n<div>\n<div dir=\"auto\">\n<div dir=\"auto\">\n<div>\n<div>\n<div tabindex=\"-1\" data-testid=\"loading-message\">\n<div aria-live=\"assertive\">\n<div>\n<p>Elevate your brand with our Borderless Name Badges, designed to combine vibrant full-color printing with durability and customization. Perfect for businesses, events, and organizations, these name badges offer a professional and polished look.</p>\n<p><strong>Benefits of Borderless Name Badges</strong>:</p>\n<ul>\n<li><strong>Full-Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Pin or Magnetic Fittings</strong>: Choose between pin or magnetic fittings for easy attachment and versatility.</li>\n<li><strong>Scratch and Fade-Proof Coating</strong>: Our badges feature a durable polyurethane coating that protects against scratches and fading, ensuring they look great for a long time.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Borderless Name Badges Today!</strong><span>&nbsp;</span>Make a lasting impression with vibrant, durable, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of durability. Click the \"Buy Now\" button and elevate your brand with our Borderless Name Badges!</p>\n<p><strong>Please Note</strong>: As the name badges are made using real wood, there will be slight variations in color and grain between each badge, adding to their unique charm.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

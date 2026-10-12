@@ -2,13 +2,24 @@
   "family": "pen",
   "label": "Pens, pencils & notebooks",
   "bigcommerce_template": "penprod",
+  "studios": {
+    "advanced": [],
+    "basic": []
+  },
   "editor": {
     "mode": "imprint",
-    "fields": ["text_1", "text_2", "logo"],
+    "fields": [
+      "text_1",
+      "text_2",
+      "logo"
+    ],
     "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout8)",
     "genie": true
   },
-  "previews": ["flat", "scene:product_model"],
+  "previews": [
+    "flat",
+    "scene:product_model"
+  ],
   "types": {},
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

@@ -6,6 +6,10 @@
   "type": "Badges - Oval Top",
   "group": "badges_oval_top",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": true
+  },
   "studio_status": "built",
   "bigcommerce": {
     "product_id": 152,
@@ -58,7 +62,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 9.99,
     "quantity_tiers": [
       {
@@ -769,6 +773,26 @@
   "mcp": {
     "product_id": "oval_top_name_badge",
     "studio_supported": true
+  },
+  "pdp": {
+    "page_title": "Oval Top Name Badge (2 3/4\" x 1 9/16\")",
+    "meta_description": "Custom Oval Top Name Badges with full-color printing, pin or magnetic fasteners, and scratch-resistant coating. Durable and professional name tags.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1021/NBI-amazon-shaped-top-oval-name-badges-06__75224.1778500231.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1021/NBI-amazon-shaped-top-oval-name-badges-06__75224.1778500231.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1021/NBI-amazon-shaped-top-oval-name-badges-06__75224.1778500231.220.290.jpg?c=1",
+        "alt": "Oval Top Name Badge"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1022/NBI-amazon-shaped-top-oval-name-badges-01__55212.1778500231.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1022/NBI-amazon-shaped-top-oval-name-badges-01__55212.1778500231.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/152/images/1022/NBI-amazon-shaped-top-oval-name-badges-01__55212.1778500231.220.290.jpg?c=1",
+        "alt": "Oval Top Name Badge"
+      }
+    ],
+    "description_html": "<p>Elevate your brand with our Top Oval Name Badges designed to combine vibrant full-color printing with durability and customization. Perfect for businesses, events, and organizations, these name badges offer a professional and polished look.</p>\n<ul>\n<li><strong>Full Custom Color Printing</strong>: Enjoy vibrant, full-color printing of logos and text, ensuring your brand stands out.</li>\n<li><strong>Pin or Magnetic Fastener</strong>: Choose between pin or magnetic fasteners for easy attachment and versatility.</li>\n<li><strong>Scratch and Fade-Proof Coating</strong>: Our badges feature a durable polyurethane coating that protects against scratches and fading, ensuring they look great for a long time.</li>\n<li><strong>Rapid Production Times</strong>: Benefit from quick turnaround times, ensuring you receive your badges promptly.</li>\n<li><strong>No Setup Fees &amp; No Design Fees</strong>: Start your order without any additional setup or design costs.</li>\n<li><strong>Free Doming</strong>: Enhance the look of your badges with free doming, adding a glossy and professional finish.</li>\n<li><strong>No Minimums</strong>: Order as many or as few as you need, with no minimum order requirements.</li>\n<li><strong>No Hidden Fees</strong>: Enjoy transparent pricing with no hidden charges.</li>\n<li><strong>Quantity-Based Prices</strong>: Enjoy competitive pricing with discounts based on order quantity.</li>\n</ul>\n<p><strong>Order Your Top Oval Name Badge Today!</strong><span>&nbsp;</span>Make a lasting impression with vibrant, durable, and customizable name badges. Perfect for businesses, events, and organizations, these badges offer a professional look with the added benefit of durability. Click the \"Buy Now\" button and elevate your brand with our Top Oval Name Tags!</p>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

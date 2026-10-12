@@ -6,6 +6,10 @@
   "type": "Sheets - Removable",
   "group": "sheets_removable",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 162,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.06,
     "quantity_tiers": [
       {
@@ -1526,6 +1530,74 @@
   "mcp": {
     "product_id": "removable_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Removable Sticker Sheet",
+    "meta_description": "Custom Removable Sticker Sheets - easy to apply, peel off cleanly, waterproof & durable. Perfect for temporary labels, promotions, and reusable branding.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/883/Image-Amazon-Removable-02__29832.1778500126.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/883/Image-Amazon-Removable-02__29832.1778500126.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/883/Image-Amazon-Removable-02__29832.1778500126.220.290.jpg?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/887/Image-Amazon-Removable-05__86883.1778500126.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/887/Image-Amazon-Removable-05__86883.1778500126.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/887/Image-Amazon-Removable-05__86883.1778500126.220.290.jpg?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/882/Image-Amazon-Removable-03__73301.1778500126.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/882/Image-Amazon-Removable-03__73301.1778500126.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/882/Image-Amazon-Removable-03__73301.1778500126.220.290.jpg?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/885/Image-Amazon-Removable-07__80987.1778500126.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/885/Image-Amazon-Removable-07__80987.1778500126.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/885/Image-Amazon-Removable-07__80987.1778500126.220.290.jpg?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/1225/Image-Amazon-Removable-06__04860.1778500126.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/1225/Image-Amazon-Removable-06__04860.1778500126.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/1225/Image-Amazon-Removable-06__04860.1778500126.220.290.jpg?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/572/Screenshot_2025-05-09_124734__07463.1778500126.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/572/Screenshot_2025-05-09_124734__07463.1778500126.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/572/Screenshot_2025-05-09_124734__07463.1778500126.220.290.png?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/571/Screenshot_2025-05-09_124750__56633.1778500126.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/571/Screenshot_2025-05-09_124750__56633.1778500126.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/571/Screenshot_2025-05-09_124750__56633.1778500126.220.290.png?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/568/Screenshot_2025-05-09_124743__10613.1778500126.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/568/Screenshot_2025-05-09_124743__10613.1778500126.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/568/Screenshot_2025-05-09_124743__10613.1778500126.220.290.png?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/569/Screenshot_2025-05-09_124727__86520.1778500126.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/569/Screenshot_2025-05-09_124727__86520.1778500126.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/569/Screenshot_2025-05-09_124727__86520.1778500126.220.290.png?c=1",
+        "alt": "Removable Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/570/Screenshot_2025-05-09_124720__16802.1778500126.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/570/Screenshot_2025-05-09_124720__16802.1778500126.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/162/images/570/Screenshot_2025-05-09_124720__16802.1778500126.220.290.png?c=1",
+        "alt": "Removable Sticker Sheet"
+      }
+    ],
+    "description_html": "<ul>\n<li>High visibility removable vinyl</li>\n<li>Waterproof</li>\n<li>Tear-resistant &amp; UV resistant</li>\n<li>Supplied on&nbsp;sheets</li>\n</ul>\n<p><strong>Digitally printed, high visibility (Hi-Viz) removable vinyl stickers. Any size from 0.5\"x0.5\" up to 8.5\"x8.5\".</strong></p>\n<p><span data-contrast=\"auto\">Removable vinyl stickers are </span><span data-contrast=\"auto\">high-resolution, digitally printed stickers</span><span data-contrast=\"auto\"> with </span><span data-contrast=\"auto\">a </span><strong><span data-contrast=\"auto\">strong but temporary adhesive</span></strong><span data-contrast=\"auto\">, allowing for </span><strong><span data-contrast=\"auto\">easy removal without residue for up to 6 months</span></strong><span data-contrast=\"auto\">.&nbsp;</span><span>&nbsp;</span></p>\n<p><span data-contrast=\"auto\">Designed for </span><strong><span data-contrast=\"auto\">promotions, advertising, and temporary branding</span></strong><span data-contrast=\"auto\">, these stickers feature a </span><strong><span data-contrast=\"auto\">glossy finish, water resistance, and tear resistance</span></strong><span data-contrast=\"auto\">, ensuring </span><strong><span data-contrast=\"auto\">durability while remaining easy to remove</span></strong><span data-contrast=\"auto\">.</span><span>&nbsp;</span></p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

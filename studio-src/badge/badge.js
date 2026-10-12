@@ -152,7 +152,7 @@ function buildStatic(){
   $('#layouts').innerHTML=LAYOUT_ORDER.map(id=>`<label><input type="radio" name="layout" value="${id}"><span>${layoutThumb(id)}${esc(LAYOUTS[id].label)}</span></label>`).join('');
   const rng=(el,o)=>{el.min=o.min;el.max=o.max;el.step=o.step};rng($('#fs1'),TS.text1);rng($('#fs2'),TS.text2);rng($('#logoScale'),DATA.logo_scale);rng($('#bgScale'),DATA.bg_scale)}
 function syncPanel(){const p=P(),lk=look(p,S);
-  $('#product').value=p.id;$('#crumbName').textContent=p.name;
+  $('#product').value=p.id;$('#crumbName').textContent=p.name;$('#pdpBack').href='p/'+p.url.split('/').filter(Boolean).pop()+'.html';
   $('#productHint').textContent=p.decoration==='engraved'?'Engraved: your text and logo are cut into the badge in one color.':'Printed in full color.';
   $('#sizes').innerHTML=p.sizes.map(z=>`<label><input type="radio" name="size" value="${z.id}"${z.id===S.size?' checked':''}><span>${z.known?`${fmtIn(z.w)} × ${fmtIn(p.shape==='circle'?z.w:z.h)} in`:esc(z.label)}</span></label>`).join('');
   $('#attach').innerHTML=p.attach.map(a=>`<label><input type="radio" name="attach" value="${esc(a)}"${a===S.attach?' checked':''}><span>${esc(a)}</span></label>`).join('');$('#attachSet').hidden=!p.attach.length;

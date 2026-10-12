@@ -49,7 +49,7 @@ async function getAll(path) {
 mkdirSync(OUT, { recursive: true });
 const save = (name, data) => writeFileSync(join(OUT, `${name}.json`), JSON.stringify(data, null, 1));
 
-const products = await getAll("/v3/catalog/products?include=variants,modifiers,options,custom_fields,bulk_pricing_rules,primary_image");
+const products = await getAll("/v3/catalog/products?include=variants,modifiers,options,custom_fields,bulk_pricing_rules,primary_image,images");
 save("products", products);
 save("categories", await getAll("/v3/catalog/trees/categories"));
 const store = await bcGet("/v2/store");

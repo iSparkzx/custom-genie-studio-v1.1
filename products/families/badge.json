@@ -2,15 +2,33 @@
   "family": "badge",
   "label": "Name badges",
   "bigcommerce_template": "badgeprod",
-  "studio_built": [
-    "regal_large_name_badge", "standard_plastic_name_badge", "oval_name_badge", "oval_top_name_badge",
-    "circle_name_badge", "borderless_plastic_name_badge", "prestige_plastic_name_badge", "plastic_reusable_name_badge",
-    "executive_metal_name_badge", "metal_reusable_name_badge", "engraved_plastic_name_badge",
-    "printed_wooden_name_badge", "engraved_wooden_name_badge", "chalkboard_name_badge"
-  ],
+  "studios": {
+    "advanced": [],
+    "basic": [
+      "regal_large_name_badge",
+      "standard_plastic_name_badge",
+      "oval_name_badge",
+      "oval_top_name_badge",
+      "circle_name_badge",
+      "borderless_plastic_name_badge",
+      "prestige_plastic_name_badge",
+      "plastic_reusable_name_badge",
+      "executive_metal_name_badge",
+      "metal_reusable_name_badge",
+      "engraved_plastic_name_badge",
+      "printed_wooden_name_badge",
+      "engraved_wooden_name_badge",
+      "chalkboard_name_badge"
+    ]
+  },
   "editor": {
     "mode": "template_layout",
-    "fields": ["name", "title", "logo", "background"],
+    "fields": [
+      "name",
+      "title",
+      "logo",
+      "background"
+    ],
     "layouts": "products/families/badge-layouts.json (Doogma layout masters, layouts 1 to 7)",
     "genie": true
   },
@@ -27,25 +45,326 @@
   "studio": {
     "default_product": "regal_large_name_badge",
     "products": {
-      "regal_large_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "rect", "frame": "border", "sizes": { "default": [2.9375, 1.5625, true, "prototype page name in the Doogma testing sheet (regal-large-name-badge-2-15-16-x-1-9-16)"] } },
-      "standard_plastic_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "rect", "sizes": { "default": [2.9375, 1, true, "product name"] } },
-      "oval_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "oval", "sizes": { "default": [2.75, 1.5625, true, "product name"] } },
-      "oval_top_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "oval_top", "sizes": { "default": [2.75, 1.5625, true, "product name"] } },
-      "circle_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "circle", "sizes": { "default": [2.25, 2.25, false, "placeholder"] } },
-      "borderless_plastic_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "rect", "frame": "edge", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"] } },
-      "prestige_plastic_name_badge": { "group": "Printed plastic", "kind": "plastic", "shape": "rect", "frame": "border", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"], "size4": [3.5, 2.25, false, "placeholder"] } },
-      "plastic_reusable_name_badge": { "group": "Reusable", "kind": "plastic", "shape": "rect", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"] } },
-      "executive_metal_name_badge": { "group": "Metal", "kind": "metal", "shape": "rect", "frame": "metal", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"], "size4": [3.5, 2.25, false, "placeholder"] } },
-      "metal_reusable_name_badge": { "group": "Reusable", "kind": "window", "shape": "rect", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"], "size4": [3.5, 2.25, false, "placeholder"] } },
-      "engraved_plastic_name_badge": { "group": "Engraved", "kind": "engraved_plastic", "shape": "rect", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"] } },
-      "printed_wooden_name_badge": { "group": "Wood & chalkboard", "kind": "wood", "shape": "rect", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"] } },
-      "engraved_wooden_name_badge": { "group": "Engraved", "kind": "wood", "shape": "rect", "sizes": { "size1": [3, 1, false, "placeholder"], "size2": [3, 1.5, false, "placeholder"], "size3": [3, 2, false, "placeholder"] } },
-      "chalkboard_name_badge": { "group": "Wood & chalkboard", "kind": "chalk", "shape": "rect", "sizes": { "size1": [2.9375, 1.5625, false, "placeholder (product name says 2 15/16 x 1 9/16, but the product has two sizes)"], "size2": [3, 2, false, "placeholder"] } }
+      "regal_large_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "rect",
+        "frame": "border",
+        "sizes": {
+          "default": [
+            2.9375,
+            1.5625,
+            true,
+            "prototype page name in the Doogma testing sheet (regal-large-name-badge-2-15-16-x-1-9-16)"
+          ]
+        }
+      },
+      "standard_plastic_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "rect",
+        "sizes": {
+          "default": [
+            2.9375,
+            1,
+            true,
+            "product name"
+          ]
+        }
+      },
+      "oval_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "oval",
+        "sizes": {
+          "default": [
+            2.75,
+            1.5625,
+            true,
+            "product name"
+          ]
+        }
+      },
+      "oval_top_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "oval_top",
+        "sizes": {
+          "default": [
+            2.75,
+            1.5625,
+            true,
+            "product name"
+          ]
+        }
+      },
+      "circle_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "circle",
+        "sizes": {
+          "default": [
+            2.25,
+            2.25,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "borderless_plastic_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "rect",
+        "frame": "edge",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "prestige_plastic_name_badge": {
+        "group": "Printed plastic",
+        "kind": "plastic",
+        "shape": "rect",
+        "frame": "border",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ],
+          "size4": [
+            3.5,
+            2.25,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "plastic_reusable_name_badge": {
+        "group": "Reusable",
+        "kind": "plastic",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "executive_metal_name_badge": {
+        "group": "Metal",
+        "kind": "metal",
+        "shape": "rect",
+        "frame": "metal",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ],
+          "size4": [
+            3.5,
+            2.25,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "metal_reusable_name_badge": {
+        "group": "Reusable",
+        "kind": "window",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ],
+          "size4": [
+            3.5,
+            2.25,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "engraved_plastic_name_badge": {
+        "group": "Engraved",
+        "kind": "engraved_plastic",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "printed_wooden_name_badge": {
+        "group": "Wood & chalkboard",
+        "kind": "wood",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "engraved_wooden_name_badge": {
+        "group": "Engraved",
+        "kind": "wood",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            3,
+            1,
+            false,
+            "placeholder"
+          ],
+          "size2": [
+            3,
+            1.5,
+            false,
+            "placeholder"
+          ],
+          "size3": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ]
+        }
+      },
+      "chalkboard_name_badge": {
+        "group": "Wood & chalkboard",
+        "kind": "chalk",
+        "shape": "rect",
+        "sizes": {
+          "size1": [
+            2.9375,
+            1.5625,
+            false,
+            "placeholder (product name says 2 15/16 x 1 9/16, but the product has two sizes)"
+          ],
+          "size2": [
+            3,
+            2,
+            false,
+            "placeholder"
+          ]
+        }
+      }
     },
-    "engraving_colors": { "wood": "#4A2C17" },
-    "named_colors": { "Black": "#111111", "White": "#FFFFFF", "Blue": "#1F4E9C", "Green": "#1F6B3A", "Maroon": "#6E1F2B", "Red": "#C0272D", "Tan": "#C9A878", "Gold": "#C9A24A", "Silver": "#BFC4C9" }
+    "engraving_colors": {
+      "wood": "#4A2C17"
+    },
+    "named_colors": {
+      "Black": "#111111",
+      "White": "#FFFFFF",
+      "Blue": "#1F4E9C",
+      "Green": "#1F6B3A",
+      "Maroon": "#6E1F2B",
+      "Red": "#C0272D",
+      "Tan": "#C9A878",
+      "Gold": "#C9A24A",
+      "Silver": "#BFC4C9"
+    }
   },
-  "previews": ["flat", "scene:lapel"],
+  "previews": [
+    "flat",
+    "scene:lapel"
+  ],
   "types": {},
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

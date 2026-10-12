@@ -2,10 +2,25 @@
   "family": "sticker",
   "label": "Stickers & labels",
   "bigcommerce_template": "stickerprod",
-  "studio_built": ["domed_white_vinyl_sticker_sheet", "domed_silver_vinyl_sticker_sheet", "domed_gold_vinyl_sticker_sheet"],
+  "studios": {
+    "advanced": [
+      "domed_white_vinyl_sticker_sheet",
+      "domed_silver_vinyl_sticker_sheet",
+      "domed_gold_vinyl_sticker_sheet"
+    ],
+    "basic": []
+  },
   "editor": {
     "mode": "free_layout",
-    "layers": ["text", "image", "shape", "rect", "ellipse", "line", "path"],
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
     "genie": true
   },
   "checks": {
@@ -16,25 +31,90 @@
     "min_line_pt": 0.5,
     "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
   },
-  "cut_border_in_options": [0.06, 0.12, 0.20, 0.30],
-  "previews": ["flat", "scene:laptop", "scene:notebook", "scene:bottle", "scene:flask"],
-  "shape_map": { "Rectangle": "rect", "Circle": "circle", "Stadium": "stadium", "Custom Shape": "custom", "CustomShape": "custom", "Oval": "oval", "Square": "square" },
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "shape_map": {
+    "Rectangle": "rect",
+    "Circle": "circle",
+    "Stadium": "stadium",
+    "Custom Shape": "custom",
+    "CustomShape": "custom",
+    "Oval": "oval",
+    "Square": "square"
+  },
   "types": {
-    "Sheets - Domed": { "format": "sheet", "dome": true, "sheet_in": { "w": 9.25, "h": 10 }, "previews_add": ["dome", "3d"] },
-    "Sheets - Glossy": { "format": "sheet" },
-    "Sheets - Matte": { "format": "sheet" },
-    "Sheets - Metallic": { "format": "sheet", "white_prints_clear": true },
-    "Sheets - Fluorescent": { "format": "sheet" },
-    "Sheets - Clear": { "format": "sheet", "white_ink": true },
-    "Sheets - Glow in the Dark": { "format": "sheet" },
-    "Sheets - Reflective": { "format": "sheet" },
-    "Sheets - Removable": { "format": "sheet" },
-    "Custom Cut - Die Cut and Kiss Cut": { "format": "single" },
-    "Labels - Clear": { "format": "roll" },
-    "Labels - Grass Paper": { "format": "roll" },
-    "Labels - Kraft Paper": { "format": "roll" },
-    "Custom Cut - Vinyl Lettering": { "format": "cut_vinyl", "max_colors": 1, "layers": ["text", "path"] },
-    "Custom Cut - Window Clings": { "format": "window_cling" }
+    "Sheets - Domed": {
+      "format": "sheet",
+      "dome": true,
+      "sheet_in": {
+        "w": 9.25,
+        "h": 10
+      },
+      "previews_add": [
+        "dome",
+        "3d"
+      ]
+    },
+    "Sheets - Glossy": {
+      "format": "sheet"
+    },
+    "Sheets - Matte": {
+      "format": "sheet"
+    },
+    "Sheets - Metallic": {
+      "format": "sheet",
+      "white_prints_clear": true
+    },
+    "Sheets - Fluorescent": {
+      "format": "sheet"
+    },
+    "Sheets - Clear": {
+      "format": "sheet",
+      "white_ink": true
+    },
+    "Sheets - Glow in the Dark": {
+      "format": "sheet"
+    },
+    "Sheets - Reflective": {
+      "format": "sheet"
+    },
+    "Sheets - Removable": {
+      "format": "sheet"
+    },
+    "Custom Cut - Die Cut and Kiss Cut": {
+      "format": "single"
+    },
+    "Labels - Clear": {
+      "format": "roll"
+    },
+    "Labels - Grass Paper": {
+      "format": "roll"
+    },
+    "Labels - Kraft Paper": {
+      "format": "roll"
+    },
+    "Custom Cut - Vinyl Lettering": {
+      "format": "cut_vinyl",
+      "max_colors": 1,
+      "layers": [
+        "text",
+        "path"
+      ]
+    },
+    "Custom Cut - Window Clings": {
+      "format": "window_cling"
+    }
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",

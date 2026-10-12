@@ -6,6 +6,10 @@
   "type": "Pens - Contour Silver",
   "group": "pens_contour_silver",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 138,
@@ -56,7 +60,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 2.99,
     "quantity_tiers": [
       {
@@ -474,6 +478,50 @@
   "mcp": {
     "product_id": "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip",
+    "meta_description": "Custom silver barrel contour pens with chrome trim & soft grip. Smooth black ink, 10 grip colors, full-color logo printing & no minimum order.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/735/Amazon-Silver_Contour-01__47508.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/735/Amazon-Silver_Contour-01__47508.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/735/Amazon-Silver_Contour-01__47508.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/734/Amazon-Silver_Contour-02__54506.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/734/Amazon-Silver_Contour-02__54506.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/734/Amazon-Silver_Contour-02__54506.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/737/Amazon-Silver_Contour-014__49688.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/737/Amazon-Silver_Contour-014__49688.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/737/Amazon-Silver_Contour-014__49688.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/732/Amazon-Silver_Contour-015__41842.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/732/Amazon-Silver_Contour-015__41842.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/732/Amazon-Silver_Contour-015__41842.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/733/Amazon-Silver_Contour-03__66936.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/733/Amazon-Silver_Contour-03__66936.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/733/Amazon-Silver_Contour-03__66936.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/736/Amazon-Silver_Contour-016__08986.1778500441.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/736/Amazon-Silver_Contour-016__08986.1778500441.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/138/images/736/Amazon-Silver_Contour-016__08986.1778500441.220.290.jpg?c=1",
+        "alt": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip"
+      }
+    ],
+    "description_html": "<div>\n<div><strong>Introducing Silver Barrel Contour Pens!</strong></div>\n</div>\n<div dir=\"auto\">\n<div dir=\"auto\">\n<div>\n<div>\n<div tabindex=\"-1\" data-testid=\"loading-message\">\n<div aria-live=\"assertive\">\n<div>\n<p>Experience the perfect blend of elegance and functionality with our Silver Barrel Contour Pens. Designed with a sleek silver barrel, these pens offer smooth writing and customizable branding, making them an ideal choice for professionals and businesses alike. They're part of our <a href=\"../../../../pens/contour-pens/\">soft-grip contour pen range</a> at Custom Genie.</p>\n<p><strong>Details</strong>:</p>\n<ul>\n<li><strong>Digital Print Area</strong>: 60 x 6mm, perfect for showcasing your logo or message in vibrant, high-resolution color.</li>\n<li><strong>Ink Color</strong>: Black, providing a classic and professional writing experience.</li>\n<li><strong>Grip Colors</strong>: Choose from 10 rubberized options to match your style and preference.</li>\n</ul>\n<p><strong>Key Features</strong>:</p>\n<ul>\n<li><strong>Polished Silver Finish</strong>: The sleek and polished silver barrel gives the pen a sophisticated and professional look.</li>\n<li><strong>Custom Digital Printing</strong>: Personalize your pen with custom digital printed logos and text, ensuring your brand stands out.</li>\n<li><strong>10 Rubberized Grip Colors</strong>: Enjoy a comfortable writing experience with a choice of 10 vibrant rubberized grip colors.</li>\n<li><strong>Smooth Ink Flow</strong>: The high-quality black ink ensures smooth and consistent writing.</li>\n<li><strong>Push-to-Open Design</strong>: Convenient push-top mechanism for effortless use.</li>\n<li><strong>Durable Yet Lightweight</strong>: Crafted from premium materials, these pens are built to last while remaining lightweight for easy handling.</li>\n<li><strong>Minimalist, Professional Look</strong>: The sleek design and polished finish make these pens a perfect addition to any professional setting.</li>\n<li><strong>No Minimum Order</strong>: Order as many or as few as you need, with no minimum order requirements.</li>\n</ul>\n<p><strong>Order Your Silver Barrel Contour Pens Today!</strong><span>&nbsp;</span>Elevate your writing experience with a pen that combines style, comfort, and functionality. Customize your pen with your logo and text, and make a lasting impression. Click the \"Buy Now\" button and add these elegant pens to your collection!</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>"
   },
   "assumptions": [
     "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",

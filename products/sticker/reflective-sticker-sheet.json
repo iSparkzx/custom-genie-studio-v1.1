@@ -6,6 +6,10 @@
   "type": "Sheets - Reflective",
   "group": "sheets_reflective",
   "status": "live",
+  "studios": {
+    "advanced": false,
+    "basic": false
+  },
   "studio_status": "planned",
   "bigcommerce": {
     "product_id": 161,
@@ -103,7 +107,7 @@
   },
   "pricing": {
     "source": "bigcommerce_variants",
-    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "pulled_at": "2026-10-11T15:27:31.646Z",
     "base_price": 0.1,
     "quantity_tiers": [
       {
@@ -1526,6 +1530,68 @@
   "mcp": {
     "product_id": "reflective_sticker_sheet",
     "studio_supported": false
+  },
+  "pdp": {
+    "page_title": "Reflective Sticker Sheet",
+    "meta_description": "Custom Reflective Sticker Sheets - waterproof, tear-resistant & UV safe. Durable hi-viz vinyl stickers ideal for safety, branding & night visibility.",
+    "reviews_count": 0,
+    "images": [
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/955/Image-Amazon-Reflective_-02__70158.1778500144.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/955/Image-Amazon-Reflective_-02__70158.1778500144.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/955/Image-Amazon-Reflective_-02__70158.1778500144.220.290.jpg?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/956/Image-Amazon-Reflective-03__44433.1778500144.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/956/Image-Amazon-Reflective-03__44433.1778500144.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/956/Image-Amazon-Reflective-03__44433.1778500144.220.290.jpg?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/959/Image-Amazon-Reflective-07__37075.1778500144.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/959/Image-Amazon-Reflective-07__37075.1778500144.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/959/Image-Amazon-Reflective-07__37075.1778500144.220.290.jpg?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/958/Image-Amazon-Reflective-06__23419.1778500144.1280.1280.jpg?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/958/Image-Amazon-Reflective-06__23419.1778500144.386.513.jpg?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/958/Image-Amazon-Reflective-06__23419.1778500144.220.290.jpg?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/563/Screenshot_2025-05-09_124629__71675.1778500144.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/563/Screenshot_2025-05-09_124629__71675.1778500144.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/563/Screenshot_2025-05-09_124629__71675.1778500144.220.290.png?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/564/Screenshot_2025-05-09_124623__25395.1778500144.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/564/Screenshot_2025-05-09_124623__25395.1778500144.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/564/Screenshot_2025-05-09_124623__25395.1778500144.220.290.png?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/566/Screenshot_2025-05-09_124601__50507.1778500144.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/566/Screenshot_2025-05-09_124601__50507.1778500144.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/566/Screenshot_2025-05-09_124601__50507.1778500144.220.290.png?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/565/Screenshot_2025-05-09_124615__29861.1778500144.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/565/Screenshot_2025-05-09_124615__29861.1778500144.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/565/Screenshot_2025-05-09_124615__29861.1778500144.220.290.png?c=1",
+        "alt": "Reflective Sticker Sheet"
+      },
+      {
+        "zoom": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/654/Screenshot_2025-05-22_233512__63559.1778500144.1280.1280.png?c=1",
+        "standard": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/654/Screenshot_2025-05-22_233512__63559.1778500144.386.513.png?c=1",
+        "thumb": "https://cdn11.bigcommerce.com/s-idicuo6kuq/products/161/images/654/Screenshot_2025-05-22_233512__63559.1778500144.220.290.png?c=1",
+        "alt": "Reflective Sticker Sheet"
+      }
+    ],
+    "description_html": "<ul>\n<li>High visibility reflective vinyl</li>\n<li>Waterproof</li>\n<li>Tear-resistant &amp; UV resistant</li>\n<li>Supplied on&nbsp;sheets</li>\n</ul>\n<p><strong>Digitally printed, high visibility (Hi-Viz) reflective vinyl stickers. Any size from 0.5\"x0.5\" up to 8.81\"x8.64\".</strong></p>\n<p>Our Reflective Stickers are supplied in sheet format, not on a roll.</p>\n<p>Reflective Stickers (also referred to as reflective vinyl stickers and reflective labels) are a hardwearing, waterproof, custom sticker solution. These look particularly good with black or dark colors to contrast the light silver reflective color. They look great with a reflective background or reversed so text is reflective inside&nbsp;a black or dark background.</p>"
   },
   "assumptions": [
     "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
