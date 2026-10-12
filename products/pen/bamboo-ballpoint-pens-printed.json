@@ -7,10 +7,10 @@
   "group": "pens_bamboo",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 129,
     "url": "/pens/bamboo-ballpoint-pens-printed/",
@@ -349,7 +349,7 @@
   },
   "mcp": {
     "product_id": "bamboo_ballpoint_pens_printed",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Printed Bamboo Pens | Full-Color Logo, No Minimum",

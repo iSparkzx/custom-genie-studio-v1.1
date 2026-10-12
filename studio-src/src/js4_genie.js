@@ -184,17 +184,25 @@ function uploadGenerate(a,seed){const i=AI.logoInfo,shape=a.shape||a.shapeHint||
  return out}
 
 /* static render of any doc (Genie results, templates, proof) */
-function thumbSVG(doc,lab,opt){opt=opt||{};const save=D;D=doc;const w=doc.w*100,h=doc.h*100,m=Math.max(w,h)*(opt.proof?.05:.08),host=$('#msr'),metal=doc.vinyl!=='white',basef=doc.vinyl==='white'?'#FFFFFF':doc.vinyl==='silver'?'url(#gSilver)':'url(#gGold)';let els='';
- for(const e of doc.els){if(e.hidden)continue;host.textContent='';const g=mk('g');host.appendChild(g);drawEl(e,g);if(e.type==='text')measure(e,g);els+=`<g transform="${elTransform(e)}"${(e.opacity??1)<1?` opacity="${e.opacity}"`:''}>${g.outerHTML}</g>`}
- host.textContent='';D=save;const u=nid();
- els=els.replace(/id="arc-([^"]+)"/g,`id="arc-$1-${u}"`).replace(/href="#arc-([^"]+)"/g,`href="#arc-$1-${u}"`);
- if(metal)els=els.replace(/fill="#FFFFFF"/gi,`fill="${basef}"`);
- const bg=doc.bg.t==='color'?`<rect width="${w}" height="${h}" fill="${metal&&doc.bg.c.toUpperCase()==='#FFFFFF'?basef:doc.bg.c}"/>`:doc.bg.t==='img'&&IM[doc.bg.img]?`<image href="${IM[doc.bg.img].url}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>`:'';
- const lbl=`role="img" aria-label="${esc(lab||'Design option')}"`;
- if(doc.shape==='custom'){const back=doc.vinyl==='white'?'#FFFFFF':doc.vinyl==='silver'?'#CDD2D8':'#D9B865';
-  return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><filter id="ct${u}" x="-20%" y="-20%" width="140%" height="140%"><feComponentTransfer in="SourceAlpha" result="a"><feFuncA type="discrete" tableValues="0 1 1 1 1 1 1 1 1 1"/></feComponentTransfer><feMorphology in="a" operator="dilate" radius="${doc.gap}" result="d"/><feFlood flood-color="${back}"/><feComposite in2="d" operator="in" result="bk"/><feComposite in="SourceGraphic" in2="d" operator="in" result="art"/><feMerge><feMergeNode in="bk"/><feMergeNode in="art"/></feMerge></filter></defs><g filter="url(#ct${u})">${els}</g></svg>`}
- const sd=shapeD(doc,0);
- return `<svg viewBox="${-m} ${-m} ${w+2*m} ${h+2*m}" ${lbl}><defs><clipPath id="cp${u}"><path d="${sd}"/></clipPath></defs><path d="${sd}" fill="${basef}"/><g clip-path="url(#cp${u})">${bg}${els}${opt.proof?'':`<path d="${sd}" fill="url(#gGloss)"/>`}</g><path d="${sd}" fill="none" stroke="rgba(0,0,0,${opt.proof?.45:.12})" stroke-width="${Math.max(w,h)*(opt.proof?.004:.006)}"/></svg>`}
+function thumbSVG(doc,lab,opt){opt=opt||{};const save=D;D=doc;const p=PROD(),Lk=LOOK(),w=doc.w*100,h=doc.h*100,host=$('#msr'),metal=!!Lk.metal_clear,basef=faceFill(Lk),back=faceBase(Lk);let els='';
+  const ctx=opt.proof&&p.family==='pen'?ctxMarkup(p,Lk,w,h):null,sd=shapeD(doc,0);
+  for(const e of doc.els){if(e.hidden)continue;host.textContent='';const g=mk('g');host.appendChild(g);drawEl(e,g);if(e.type==='text')measure(e,g);els+=`<g transform="${elTransform(e)}"${(e.opacity??1)<1?` opacity="${e.opacity}"`:''}>${g.outerHTML}</g>`}
+  host.textContent='';D=save;const u=nid();
+  els=els.replace(/id="arc-([^"]+)"/g,`id="arc-$1-${u}"`).replace(/href="#arc-([^"]+)"/g,`href="#arc-$1-${u}"`);
+  if(metal)els=els.replace(/fill="#FFFFFF"/gi,`fill="${basef}"`);
+  const useBg=p.family==='sticker'?!Lk.one:Lk.face==='custom'||Lk.face==='upload';
+  const bg=useBg&&doc.bg.t==='color'&&Lk.face!=='custom'?`<rect width="${w}" height="${h}" fill="${metal&&doc.bg.c.toUpperCase()==='#FFFFFF'?basef:doc.bg.c}"/>`:useBg&&doc.bg.t==='img'&&IM[doc.bg.img]?`<image href="${IM[doc.bg.img].url}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>`:'';
+  /* one color: engraving (color from the image's darkness) or cut vinyl (every mark in the vinyl color) */
+  const hexA=c=>{const n=parseInt(c.slice(1),16);return [n>>16&255,n>>8&255,n&255].map(v=>(v/255).toFixed(3))};
+  let flt='';if(Lk.engrave){const [r,g2,b2]=hexA(Lk.engrave);flt=`<filter id="fe${u}" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 ${r} 0 0 0 0 ${g2} 0 0 0 0 ${b2} -.333 -.333 -.333 1 0"/><feComponentTransfer><feFuncA type="linear" slope="4"/></feComponentTransfer></filter>`}
+  else if(Lk.one){const [r,g2,b2]=hexA(Lk.one);flt=`<filter id="fe${u}" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 ${r} 0 0 0 0 ${g2} 0 0 0 0 ${b2} 0 0 0 1 0"/></filter>`}
+  const art=flt?`<g filter="url(#fe${u})">${els}</g>`:els;
+  const frame=Lk.frame?`<path d="${sd}" fill="none" stroke="${Lk.frame.paint==='gold'?'url(#gGold)':Lk.frame.paint==='silver'?'url(#gSilver)':Lk.frame.paint}" stroke-width="${Lk.frame.w*2}"/>`:'';
+  const lbl=`role="img" aria-label="${esc(lab||'Design option')}"`,m=Math.max(w,h)*(opt.proof?.05:.08);
+  let vb=[-m,-m,w+2*m,h+2*m];if(ctx){const [x,y,cw,ch]=ctx.box,pad=Math.max(cw,ch)*.03;vb=[Math.min(vb[0],x-pad),Math.min(vb[1],y-pad),0,0];vb[2]=Math.max(w+m,x+cw+pad)-vb[0];vb[3]=Math.max(h+m,y+ch+pad)-vb[1]}
+  if(doc.shape==='custom'){const bk=back||'none';
+   return `<svg viewBox="${vb.join(' ')}" ${lbl}><defs>${flt}<filter id="ct${u}" x="-20%" y="-20%" width="140%" height="140%"><feComponentTransfer in="SourceAlpha" result="a"><feFuncA type="discrete" tableValues="0 1 1 1 1 1 1 1 1 1"/></feComponentTransfer><feMorphology in="a" operator="dilate" radius="${Lk.one?0:doc.gap}" result="d"/><feFlood flood-color="${bk==='none'?'#000':bk}" flood-opacity="${bk==='none'?0:1}"/><feComposite in2="d" operator="in" result="bk"/><feComposite in="SourceGraphic" in2="d" operator="in" result="art"/><feMerge><feMergeNode in="bk"/><feMergeNode in="art"/></feMerge></filter></defs>${ctx?ctx.svg:''}<g filter="url(#ct${u})">${art}</g></svg>`}
+  return `<svg viewBox="${vb.join(' ')}" ${lbl}><defs>${flt}<clipPath id="cp${u}"><path d="${sd}"/></clipPath></defs>${ctx?ctx.svg:''}<path d="${sd}" fill="${basef}"/><g clip-path="url(#cp${u})">${bg}${art}${frame}${opt.proof||!Lk.dome?'':`<path d="${sd}" fill="url(#gGloss)"/>`}</g><path d="${sd}" fill="none" stroke="rgba(0,0,0,${opt.proof?.45:.12})" stroke-width="${Math.max(w,h)*(opt.proof?.004:.006)}"${p.family==='pen'?` stroke-dasharray="${Math.max(w,h)*.02} ${Math.max(w,h)*.014}"`:''}/></svg>`}
 
 /* ---------- Genie conversation UI ---------- */
 const feed=$('#gfeed');
@@ -204,7 +212,7 @@ function gUser(text,key){gPush('me',(text?esc(text):(key?'Here\'s my artwork.':'
 function gSay(html){return gPush('genie',html)}
 function gThinking(t){return gPush('genie',`<p style="display:flex;align-items:center;gap:8px"><span class="gtyping" aria-hidden="true"><i></i><i></i><i></i></span>${esc(t)}</p>`)}
 function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge();if(GC.on)gcIntro()}
-function quickUI(){const q=$('#gquick'),blank=isBlank();const list=blank?[]:['New colors','Bolder text','Add an outline','Tidy the layout',D.vinyl==='gold'?'Make it silver':'Make it gold','Curve the name'];const s=list.join('|');if(q.dataset.sig===s)return;q.dataset.sig=s;q.innerHTML=list.map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x)}</button>`).join('');q.hidden=!list.length}
+function quickUI(){const q=$('#gquick'),blank=isBlank();const list=blank?[]:['New colors','Bolder text','Add an outline','Tidy the layout',finishKey()==='gold'?(finishAvail('silver')?'Make it silver':''):finishAvail('gold')?'Make it gold':'','Curve the name'];const s=list.join('|');if(q.dataset.sig===s)return;q.dataset.sig=s;q.innerHTML=list.map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x)}</button>`).join('');q.hidden=!list.length}
 function openGenie(focus){if(NARROW.matches)openSheet('genie');else{studio.classList.remove('no-left');if(MID.matches)studio.classList.add('show-left');setLTab('genie');panelBtns()}quickUI();if(focus)setTimeout(()=>$('#gtext').focus(),60)}
 function genieOpened(){quickUI()}
 feed.addEventListener('click',ev=>{const s=ev.target.closest('[data-gsend]'),pk=ev.target.closest('[data-pick]'),rf=ev.target.closest('[data-refine]'),up=ev.target.closest('[data-gupload]'),un=ev.target.closest('[data-gundo]'),mo=ev.target.closest('[data-gmore]');
@@ -256,7 +264,7 @@ async function generate(){AI.busy=true;const a=AI.a,th=gThinking(UP()?'Placing y
  const sh=a.shape||a.shapeHint||'circle',s=resolveSize(a),cur=a.vinyl||'white';
  const chip=(o,txt,on,say)=>`<button type="button" class="gchip" data-res="${rid}" data-refine='${esc(JSON.stringify(o))}' aria-pressed="${!!on}"${say?` data-say="${esc(say)}"`:''}>${txt}</button>`;
  const shapes=(UP()?['circle','oval','rect','square','custom']:['circle','oval','rect','stadium','custom']).map(k=>chip({shape:k},SN[k]+(k===AI.logoInfo?.suggest&&UP()?' ★':''),k===sh,`Make it ${SN[k].toLowerCase()}`)).join('');
- const fins=['white','silver','gold'].map(v=>chip({vinyl:v},`<span class="sw sw-${v}" style="width:12px;height:12px" aria-hidden="true"></span>${VN[v]}`,v===cur,`Use ${VN[v]}`)).join('');
+ const fins=['white','silver','gold'].filter(finishAvail).map(v=>chip({vinyl:v},`<span class="sw sw-${v}" style="width:12px;height:12px" aria-hidden="true"></span>${VN[v]}`,v===cur,`Use ${VN[v]}`)).join('');
  const pals=UP()?'':PALS.slice(0,5).map(p=>chip({colors:p.c},`<span class="pal">${p.c.map(c=>`<i style="background:${c}"></i>`).join('')}</span>${p.n}`,false,`Use ${p.n.toLowerCase()}`)).join('');
  const who=a.name?`"${esc(a.name)}"`:UP()?'your artwork':'your sticker';
  gSay(`<p>Here ${out.length===1?'is an option':`are ${out.length} options`} for ${who}: ${esc(SN[sh].toLowerCase())}, ${fmt(s.w)} × ${fmt(s.h)} in, ${esc(VN[cur])}. Pick one to start.</p>
@@ -282,7 +290,7 @@ async function genieEdit(p){const l=p.toLowerCase(),done=[];
  if(m&&main){main.text=m[1].trim();done.push(`changed the text to "${esc(main.text)}"`)}
  const a=parsePrompt(m?'':p,false);
  if(a.shape&&a.shape!==D.shape){D.shape=a.shape;if(a.shape==='square'||a.shape==='circle'){const s=Math.max(D.w,D.h);setSize(s,s)}if(a.shape!=='custom')CT.url=null;done.push(`made it ${/^[aeiou]/i.test(SN[a.shape])?'an':'a'} ${SN[a.shape].toLowerCase()}`)}
- if(a.vinyl&&a.vinyl!==D.vinyl){D.vinyl=a.vinyl;done.push(`switched to ${VN[a.vinyl]}`)}
+ if(a.vinyl&&a.vinyl!==finishKey()&&setFinishKey(a.vinyl))done.push(`switched to ${finishName()}`)
  if(a.size){const sq=D.shape==='square'||D.shape==='circle';let nw=a.size.w,nh=a.size.one?(sq?a.size.w:r2(a.size.w*D.h/D.w)):a.size.h;if(sq)nh=nw;setSize(nw,nh);done.push(`resized it to ${fmt(D.w)} × ${fmt(D.h)} in`)}
  if(a.tier!=null&&a.tier!==tier){tier=a.tier;done.push(`set the quantity to ${QTY[tier].toLocaleString()}`)}
  if(/new colou?rs|different colou?rs|another palette|surprise|recolou?r|random colou?rs?|other colou?rs/.test(l)){AI.recolorN++;recolor(PALS[AI.recolorN%PALS.length].c,'all');done.push(`tried ${PALS[AI.recolorN%PALS.length].n.toLowerCase()}`)}
@@ -311,12 +319,13 @@ nbInit();gcInit();
 const restored=loadDraft();
 D.groups=D.groups||{};
 /* opened from a product page: /?product=<definition id> picks that product's finish and links back to its page */
-{const want=new URLSearchParams(location.search).get('product'),v=Object.keys(CATALOG.vinyl).find(k=>CATALOG.vinyl[k]===want),pr=CATALOG.products[want],a=$('#pdpBack');
- if(v){D.vinyl=v}if(pr&&a){a.href='p/'+pr.url.split('/').filter(Boolean).pop()+'.html';a.hidden=false}}
+{const pr=PRODS[URL_PID],a=$('#pdpBack');
+ if(pr){if(D.pid!==pr.id)switchProduct(pr.id,true);if(a){a.href='p/'+pr.url.split('/').filter(Boolean).pop()+'.html';a.hidden=false}}}
+conform();
 last=snapshot();upThumbs();setTool('move');setLTab(restored?'layers':'assets');
 syncPanels();refreshUndo();panelBtns();genieIntro();
 new ResizeObserver(()=>req()).observe(vp);req();
 if(restored||draftLostImg)setTimeout(()=>toast(draftLostImg?(restored?"Welcome back. Your design was restored, but your uploaded image couldn't be kept. Please upload it again.":"Your uploaded image couldn't be kept. Please upload it again."):'Welcome back. Your last design was restored.'),400);
-if(document.fonts){document.fonts.ready.then(()=>{invalidateText();$('#tplGrid').innerHTML=TPL.map((t,i)=>`<button type="button" class="tpl" data-tpl="${i}">${thumbSVG(t.make(),t.n)}${esc(t.n)}</button>`).join('')});if(document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',invalidateText)}
+if(document.fonts){document.fonts.ready.then(()=>{invalidateText();$('#tplGrid').dataset.sig='';tplUI()});if(document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',invalidateText)}
 setTimeout(invalidateText,1500);
 window.addEventListener('beforeunload',save);

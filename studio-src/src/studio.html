@@ -44,7 +44,7 @@
       <button type="button" role="tab" id="lt-genie" aria-controls="lp-genie" aria-selected="false" data-ltab="genie" tabindex="-1"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>Genie</button>
      </div>
      <div class="pbody" id="lp-layers" data-pane="layers" role="tabpanel" aria-labelledby="lt-layers">
-      <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b>Sticker</b> · <span id="layerArtTxt"></span></span></button>
+      <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b id="layerArtNoun">Sticker</b> · <span id="layerArtTxt"></span></span></button>
       <ul class="layers" id="layers" role="tree" aria-label="Layers" aria-multiselectable="true"></ul>
       <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the sticker shows up here. Drag to reorder, click the eye to hide.</p>
        <div class="qadd"><button type="button" data-quick="text"><svg class="ico"><use href="#t-text"/></svg>Text</button><button type="button" data-quick="image"><svg class="ico"><use href="#t-image"/></svg>Image</button><button type="button" data-quick="genie"><svg class="gmark" style="width:10px;height:18px"><use href="#g-mark"/></svg>Genie</button></div></div>
@@ -83,7 +83,7 @@
      <canvas class="rul" id="rulX" aria-hidden="true"></canvas>
      <canvas class="rul" id="rulY" aria-hidden="true"></canvas>
      <div class="vp" id="vp" data-tool="move">
-      <svg id="cv" tabindex="0" role="application" aria-roledescription="sticker editor" aria-label="Sticker design canvas" aria-describedby="kbdHelp" data-view="edit" viewBox="0 0 300 200">
+      <svg id="cv" tabindex="0" role="application" aria-roledescription="design editor" aria-label="Design canvas" aria-describedby="kbdHelp" data-view="edit" viewBox="0 0 300 200">
        <defs>
         <mask id="cutMask" maskUnits="userSpaceOnUse" x="-20000" y="-20000" width="40000" height="40000"><path id="maskPath" fill="#fff"/><image id="maskImg" preserveAspectRatio="none" style="display:none"/></mask>
         <linearGradient id="gSilver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF0F2"/><stop offset=".42" stop-color="#B7BDC4"/><stop offset=".58" stop-color="#D3D7DC"/><stop offset="1" stop-color="#9AA1A9"/></linearGradient>
@@ -94,14 +94,22 @@
         <filter id="fShImg" x="-20%" y="-20%" width="140%" height="140%"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/><feGaussianBlur id="shBlur2" stdDeviation="3"/></filter>
         <filter id="fEdge" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB"><feMorphology id="edgeR" in="SourceAlpha" operator="dilate" radius="1" result="d"/><feComposite in="d" in2="SourceAlpha" operator="out" result="ring"/><feFlood flood-color="#5A3BD6"/><feComposite in2="ring" operator="in"/></filter>
         <filter id="fRim" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="rimBlur" stdDeviation="2"/></filter>
+        <linearGradient id="gRefl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F6F8"/><stop offset=".5" stop-color="#D9DEE3"/><stop offset="1" stop-color="#EEF1F4"/></linearGradient>
+        <pattern id="pClear" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#FFFFFF"/><rect width="8" height="8" fill="#E6EAEE"/><rect x="8" y="8" width="8" height="8" fill="#E6EAEE"/></pattern>
+        <pattern id="pWood" width="80" height="16" patternUnits="userSpaceOnUse"><rect width="80" height="16" fill="#C8925A"/><path d="M0 8Q20 3 40 8T80 8M0 14Q20 11 40 14T80 14" fill="none" stroke="#7A4B24" stroke-width=".9" opacity=".35"/></pattern>
+        <pattern id="pChalk" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#2E3A35"/><circle cx="3" cy="4" r=".7" fill="#fff" opacity=".09"/><circle cx="10" cy="11" r=".5" fill="#fff" opacity=".07"/></pattern>
+        <filter id="fEngrave" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feColorMatrix id="fEngM" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.333 -.333 -.333 1 0"/><feComponentTransfer><feFuncA type="linear" slope="4"/></feComponentTransfer></filter>
+        <filter id="fOne" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feColorMatrix id="fOneM" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/></filter>
         <linearGradient id="gGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".32" stop-color="#fff" stop-opacity=".07"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".09"/></linearGradient>
         <radialGradient id="gSpec" cx=".3" cy=".16" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
        </defs>
        <g class="v-sheet"><rect id="sheetRect" class="sheet" rx="6"/><rect id="paRect" class="pa" rx="4"/><text id="sheetCap" class="svg-t"></text></g>
+       <g id="ctxG" aria-hidden="true"></g>
        <g id="shadowG"><path id="shadowP" fill="#000" filter="url(#fSoft)"/><image id="shadowImg" preserveAspectRatio="none" filter="url(#fShImg)" style="display:none"/></g>
        <g mask="url(#cutMask)">
         <g><rect id="subRect"/><rect id="brushRect" fill="#000" filter="url(#fBrush)" opacity=".45"/></g>
         <g id="printG"><rect id="bgRect"/><image id="bgImg" preserveAspectRatio="xMidYMid slice"/><g id="elsG"></g></g>
+        <path id="frameP" fill="none" style="display:none"/>
         <g class="v-dome"><rect id="glossR" fill="url(#gGloss)"/><rect id="specR" fill="url(#gSpec)"/><path id="rimP" fill="none" stroke="#000" filter="url(#fRim)"/></g>
        </g>
        <g class="v-edit"><path id="safeP" class="safe"/><path id="cutP" class="cut"/><image id="cutImg" preserveAspectRatio="none" filter="url(#fEdge)" style="display:none"/></g>

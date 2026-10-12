@@ -7,10 +7,10 @@
   "group": "pens_sparta",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 139,
     "url": "/pens/sparta-ballpoint-pen/",
@@ -438,7 +438,7 @@
   },
   "mcp": {
     "product_id": "sparta_ballpoint_pen",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Sparta Ballpoint Pen",

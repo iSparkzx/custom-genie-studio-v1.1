@@ -152,8 +152,11 @@ function build(p) {
   };
   // The studio's shapes (decision, Carlos 2026-10-10: keep Square and Oval) vs this product's BigCommerce Shape values
   if (shapes && def.studio_status === "built") {
-    const missing = ["square", "oval"].filter(s => !shapes.some(x => x.id === s));
-    if (missing.length) def.todo.push(`Keep ${missing.join(" and ")} in the studio (Carlos, 2026-10-10). This product's BigCommerce 'Shape' modifier has no matching value (${shapes.map(s => s.bigcommerce_label).join(", ")}), so the cart mapping for ${missing.join(" and ")} is still to be decided.`);
+    /* what the studio adds on top of BigCommerce's shapes: Square wherever Rectangle exists (a rectangle with equal
+       sides), Oval on domed sheets (Carlos's decision) */
+    const offered = [shapes.some(x => x.id === "rect") && "square", def.type === "Sheets - Domed" && "oval"].filter(Boolean);
+    const missing = offered.filter(s => !shapes.some(x => x.id === s));
+    if (missing.length) def.todo.push(`Studio offers ${missing.join(" and ")} (Carlos, 2026-10-10: keep them). This product's BigCommerce 'Shape' modifier has no matching value (${shapes.map(s => s.bigcommerce_label).join(", ")}), so the cart mapping for ${missing.join(" and ")} is still to be decided.`);
   }
   return def;
 }

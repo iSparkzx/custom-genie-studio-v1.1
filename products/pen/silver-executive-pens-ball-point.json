@@ -7,10 +7,10 @@
   "group": "pens_silver_executive",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 133,
     "url": "/pens/silver-executive-pens-ball-point/",
@@ -373,7 +373,7 @@
   },
   "mcp": {
     "product_id": "silver_executive_pens_ball_point",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Silver Executive Engraved Pens Ball Point",

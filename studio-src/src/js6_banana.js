@@ -36,7 +36,7 @@ async function nbGenerate(p,opt){if(!(await nbCheck()))return false;opt=opt||{};
  const a=parsePrompt(p),blank=isBlank(),shape=a.shape||(blank?null:D.shape),size=a.size?resolveSize(Object.assign({},a,{shape:shape||'circle',mode:'prompt'})):(blank?null:{w:D.w,h:D.h});
  const n=NB.n;AI.busy=true;const w=nbWait(n,opt.more?'Genie is drawing more designs…':`Genie is drawing ${n>1?n+' designs':'your design'}…`);
  track('builder_ai_prompt',{length:p.length,engine:'genie-ai'});
- try{const j=await nbCall({mode:'generate',prompt:p,name:a.name||null,tagline:a.tagline||null,colors:a.colorWords||a.colors||[],shape,size,n});w._stop();
+ try{const j=await nbCall({mode:'generate',prompt:p,name:a.name||null,tagline:a.tagline||null,colors:a.colorWords||a.colors||[],shape,size,n,product:PROD().family==='pen'?(PROD().kind==='notebook'?'notebook':'pen'):PROD().family,one_color:!!(LOOK().engrave||LOOK().one)});w._stop();
   nbShow(j,{prompt:p,a});return true}
  catch(e){w._stop();return nbFail(e)}
  finally{AI.busy=false;NB.ctl=null}}
@@ -71,7 +71,7 @@ async function nbPick(rid,i,at){const R=NB.R[rid],im=R&&R.images[i];if(!im||AI.b
   if(a.size){const z=resolveSize(Object.assign({},a,{shape,mode:'prompt'}));D.w=z.w;D.h=z.h}
   else if(shape==='circle'||shape==='square'){D.w=D.h=2}
   else{D.w=ar>=1?2.5:r2(clamp(2.5*ar,MIN,MAX));D.h=ar>=1?r2(clamp(2.5/ar,MIN,MAX)):2.5}
-  if(a.vinyl)D.vinyl=a.vinyl;if(a.tier!=null)tier=a.tier;D.bg={t:'none',c:D.bg.c||'#FFFFFF',img:null};cam=null;zoom=1}
+  if(a.vinyl)setFinishKey(a.vinyl);if(a.tier!=null)tier=clamp(a.tier,0,QTY.length-1);D.bg={t:'none',c:D.bg.c||'#FFFFFF',img:null};cam=null;zoom=1}
  /* fit inside the safe area for the sticker's shape (round art is checked by its outline, not its box) */
  let w,h;const fit=(bw,bh)=>{w=bw;h=w/ar;if(h>bh){h=bh;w=h*ar}};
  if(!blank)fit(Math.min(W(),H())*.6,Math.min(W(),H())*.6);

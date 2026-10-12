@@ -98,13 +98,13 @@ tests/                 browser tests (tests/price-check.mjs: studio prices vs Bi
 | 0 | Builder fixes (PR #3) | open for review |
 | 1 | Price check and product definitions from BigCommerce | PR #4 |
 | 2 | Studio reads the White, Silver and Gold definitions instead of hard-coded settings; prices and product codes from BigCommerce | PR #5 |
-| 3 | Domed Color, Silver, Gold, then the other sticker sheets | |
+| 3 | Domed Color, Silver, Gold, then the other sticker sheets | done in PR #8 (all 30 sticker products) |
 | 4 | Add to cart fills the same modifiers as Doogma | needs production input |
 | 5 | Name badge studio (`/badges.html`): all 14 badges, Doogma layouts 1 to 7, team names, Genie logo | PR #6; real badge sizes still needed |
 | 6 | Product pages (`/p/<product>.html`) with Start designing: Genie Studio Advanced and Genie Studio Basic | PR #7 |
-| 7 | Genie Studio Advanced for name badges (the sticker studio with a badge mode) | next |
+| 7 | Genie Studio Advanced designs every product: 30 stickers, 14 name badges, 13 pens, pencils and notebooks, with all their BigCommerce variants | PR #8 |
 | 8 | Genie Studio Basic for stickers | |
-| 9 | Pens: Advanced and Basic, with placeholder imprint sizes until real ones arrive | |
+| 9 | Genie Studio Basic for pens | needs imprint sizes |
 
 Every phase is its own PR. Nothing is deployed and the live store isn't touched without Carlos's explicit approval.
 
@@ -127,3 +127,23 @@ Every phase is its own PR. Nothing is deployed and the live store isn't touched 
 6. **Hidden drafts:** should FlexStyle emblems, the acrylic ornament, can cooler, mouse pad or journal become customizable?
 
 Phases that depend on items 2 to 4 (add to cart, badges, pens) wait for that information. Nothing is built on guesses.
+
+## Genie Studio Advanced: one studio, every product (PR #8)
+
+The studio page (`public/index.html`, built by `studio-src/build.py`) embeds every product with `studios.advanced` on.
+A design carries its product (`D.pid`) and the shopper's option choices (`D.opt`, by BigCommerce option role).
+
+* **Price and product code**: the BigCommerce variant that matches the choices. Free sizes round up to the next size
+  step. Nothing is computed from a table of our own. `tests/price-check.mjs` checks every variant of every product.
+* **What the panel shows**: the product's own options. Stickers: shape, free size, finish/material/color siblings,
+  background. Badges: preset sizes, background, border, back. Pens and notebooks: imprint area, barrel or cover color.
+  Options BigCommerce can't sell together are disabled; a product with ordering turned off can still be previewed, and
+  Review & Print says it can't be ordered.
+* **How it looks on screen**: `products/families/<family>.json` `studio`: sticker material looks and groups, badge
+  shape, frame and material, pen imprint areas and colors. Engraving and cut vinyl show the design in one color.
+* **Previews**: 3D and On sheet only on domed sheets; object scenes only for stickers small enough to sit on them.
+* **Templates**: sticker templates, plus badge, pen and notebook templates built on the product's own size.
+* **Drafts** are saved per family, so a sticker in progress is not squeezed onto a pen.
+
+Still placeholders (marked in the data and shown to shoppers as approximate): badge sizes size1 to size4 except the
+named ones, every pen, pencil and notebook imprint area, and the Domed Color look.

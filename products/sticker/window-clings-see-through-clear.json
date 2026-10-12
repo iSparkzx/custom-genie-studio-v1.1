@@ -7,10 +7,10 @@
   "group": "custom_cut_window_clings",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 191,
     "url": "/stickers/window-clings-see-through-clear/",
@@ -5652,7 +5652,7 @@
   },
   "mcp": {
     "product_id": "window_clings_see_through_clear",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Custom Clear Window Clings | See-Through, No Minimum",
@@ -5688,6 +5688,7 @@
   ],
   "todo": [
     "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
-    "Roll labels: core size and unwind direction options, if production needs them."
+    "Roll labels: core size and unwind direction options, if production needs them.",
+    "Studio offers square (Carlos, 2026-10-10: keep them). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, CustomShape), so the cart mapping for square is still to be decided."
   ]
 }

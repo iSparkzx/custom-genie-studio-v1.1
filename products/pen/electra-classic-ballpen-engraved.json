@@ -7,10 +7,10 @@
   "group": "pens_electra_classic_engraved",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 134,
     "url": "/pens/electra-classic-ballpen-engraved/",
@@ -464,7 +464,7 @@
   },
   "mcp": {
     "product_id": "electra_classic_ballpen_engraved",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Electra Classic Engraved Pens",

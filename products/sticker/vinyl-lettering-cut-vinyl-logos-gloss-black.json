@@ -7,10 +7,10 @@
   "group": "custom_cut_vinyl_lettering",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 166,
     "url": "/stickers/vinyl-lettering-cut-vinyl-logos-gloss-black/",
@@ -4467,7 +4467,7 @@
   },
   "mcp": {
     "product_id": "vinyl_lettering_cut_vinyl_logos_gloss_black",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Vinyl Lettering & Cut Vinyl Logos - Gloss Black",

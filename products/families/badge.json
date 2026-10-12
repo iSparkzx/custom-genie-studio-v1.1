@@ -3,7 +3,22 @@
   "label": "Name badges",
   "bigcommerce_template": "badgeprod",
   "studios": {
-    "advanced": [],
+    "advanced": [
+      "borderless_plastic_name_badge",
+      "chalkboard_name_badge",
+      "circle_name_badge",
+      "engraved_plastic_name_badge",
+      "engraved_wooden_name_badge",
+      "executive_metal_name_badge",
+      "metal_reusable_name_badge",
+      "oval_name_badge",
+      "oval_top_name_badge",
+      "plastic_reusable_name_badge",
+      "prestige_plastic_name_badge",
+      "printed_wooden_name_badge",
+      "regal_large_name_badge",
+      "standard_plastic_name_badge"
+    ],
     "basic": [
       "regal_large_name_badge",
       "standard_plastic_name_badge",

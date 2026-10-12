@@ -6,7 +6,7 @@ const repo = join(dirname(fileURLToPath(import.meta.url)), "..");
 const base = (process.argv[2] || "http://127.0.0.1:8766/").replace(/\/?$/, "/");
 const idx = JSON.parse(readFileSync(join(repo, "products", "index.json"), "utf8")).products.filter(r => r.status === "live");
 const defs = idx.map(r => JSON.parse(readFileSync(join(repo, "products", r.file), "utf8")));
-const ADV = { sticker: "index.html" }, BAS = { badge: "badges.html" };
+const ADV = { sticker: "index.html", badge: "index.html", pen: "index.html" }, BAS = { badge: "badges.html" };
 const slug = d => d.bigcommerce.url.split("/").filter(Boolean).pop();
 const exe = process.env.CHROME || "C:/Program Files/Google/Chrome/Application/chrome.exe", port = 9700 + Math.floor(Math.random() * 90);
 const proc = spawn(exe, ["--headless=new", `--remote-debugging-port=${port}`, `--user-data-dir=${mkdtempSync(join(tmpdir(), "pd-"))}`, "--no-first-run", "about:blank"], { stdio: "ignore" });
@@ -36,10 +36,9 @@ for (const d of defs) {
     if (want) {   // open it: the studio must load this product and link back here
       await go(new URL(want, u).href, 3500);
       const st = await ev(k === "advanced"
-        ? `({fin:document.querySelector('.fin[aria-checked="true"]')?.dataset.vinyl,back:document.querySelector('#pdpBack')?.href,name:document.querySelector('.studio-name span')?.textContent})`
+        ? `({pid:document.querySelector('#prodSel')?.value,h1:document.querySelector('#pTitle')?.textContent,back:document.querySelector('#pdpBack')?.href,name:document.querySelector('.studio-name span')?.textContent})`
         : `({pid:document.querySelector('#product')?.value,back:document.querySelector('#pdpBack')?.href,name:document.querySelector('.studio-name span')?.textContent})`);
-      const vinyl = { domed_white_vinyl_sticker_sheet: "white", domed_silver_vinyl_sticker_sheet: "silver", domed_gold_vinyl_sticker_sheet: "gold" }[d.id];
-      ok(st && (k === "advanced" ? st.fin === vinyl : st.pid === d.id), `${d.id}: ${k} studio opened on ${JSON.stringify(st)}`);
+      ok(st && st.pid === d.id && (k !== "advanced" || st.h1 === d.name), `${d.id}: ${k} studio opened on ${JSON.stringify(st)}`);
       ok(st && st.back === u && st.name === (k === "advanced" ? "Genie Studio Advanced" : "Genie Studio Basic"), `${d.id}: ${k} studio label and back link (${st && st.back})`);
     }
   }

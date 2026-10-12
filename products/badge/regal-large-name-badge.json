@@ -7,7 +7,7 @@
   "group": "badges_regal_large",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": true
   },
   "studio_status": "built",

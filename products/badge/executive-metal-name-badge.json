@@ -7,7 +7,7 @@
   "group": "badges_executive_metal",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": true
   },
   "studio_status": "built",

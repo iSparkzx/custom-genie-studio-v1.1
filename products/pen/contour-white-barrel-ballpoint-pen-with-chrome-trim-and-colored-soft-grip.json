@@ -7,10 +7,10 @@
   "group": "pens_contour_white",
   "status": "live",
   "studios": {
-    "advanced": false,
+    "advanced": true,
     "basic": false
   },
-  "studio_status": "planned",
+  "studio_status": "built",
   "bigcommerce": {
     "product_id": 112,
     "url": "/pens/contour-white-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
@@ -412,7 +412,7 @@
   },
   "mcp": {
     "product_id": "contour_white_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
-    "studio_supported": false
+    "studio_supported": true
   },
   "pdp": {
     "page_title": "Custom Contour Pens | White Barrel, Soft Grip & Logo",

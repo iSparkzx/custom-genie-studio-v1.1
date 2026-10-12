@@ -12,7 +12,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 144,
@@ -29,7 +29,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 145,
@@ -46,7 +46,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 150,
@@ -63,7 +63,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 155,
@@ -80,7 +80,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 143,
@@ -97,7 +97,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 153,
@@ -114,7 +114,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 147,
@@ -131,7 +131,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 151,
@@ -148,7 +148,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 152,
@@ -165,7 +165,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 148,
@@ -182,7 +182,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 142,
@@ -199,7 +199,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 154,
@@ -216,7 +216,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 149,
@@ -233,7 +233,7 @@
       "status": "live",
       "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": true
       },
       "bigcommerce_product_id": 156,
@@ -248,9 +248,9 @@
       "type": "Notebook",
       "group": "notebook",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 132,
@@ -265,9 +265,9 @@
       "type": "Pens - Bamboo",
       "group": "pens_bamboo",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 130,
@@ -282,9 +282,9 @@
       "type": "Pens - Bamboo",
       "group": "pens_bamboo",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 129,
@@ -299,9 +299,9 @@
       "type": "Pens - Contour Color",
       "group": "pens_contour_color",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 137,
@@ -316,9 +316,9 @@
       "type": "Pens - Contour Silver",
       "group": "pens_contour_silver",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 138,
@@ -333,9 +333,9 @@
       "type": "Pens - Contour White",
       "group": "pens_contour_white",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 112,
@@ -350,9 +350,9 @@
       "type": "Pens - Derby",
       "group": "pens_derby",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 140,
@@ -367,9 +367,9 @@
       "type": "Pens - Electra Classic Engraved",
       "group": "pens_electra_classic_engraved",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 134,
@@ -384,9 +384,9 @@
       "type": "Pens - Electra Soft Touch - Printed",
       "group": "pens_electra_soft_touch_printed",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 135,
@@ -401,9 +401,9 @@
       "type": "Pens - Pencils",
       "group": "pens_pencils",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 131,
@@ -418,9 +418,9 @@
       "type": "Pens - Silver Executive",
       "group": "pens_silver_executive",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 133,
@@ -435,9 +435,9 @@
       "type": "Pens - Sparta",
       "group": "pens_sparta",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 139,
@@ -452,9 +452,9 @@
       "type": "Pens - Value Stick",
       "group": "pens_value_stick",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 141,
@@ -469,9 +469,9 @@
       "type": "Custom Cut - Die Cut and Kiss Cut",
       "group": "custom_cut_die_cut_and_kiss_cut",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 184,
@@ -486,9 +486,9 @@
       "type": "Custom Cut - Die Cut and Kiss Cut",
       "group": "custom_cut_die_cut_and_kiss_cut",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 174,
@@ -503,9 +503,9 @@
       "type": "Custom Cut - Vinyl Lettering",
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 213,
@@ -520,9 +520,9 @@
       "type": "Custom Cut - Vinyl Lettering",
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 214,
@@ -537,9 +537,9 @@
       "type": "Custom Cut - Vinyl Lettering",
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 215,
@@ -554,9 +554,9 @@
       "type": "Custom Cut - Vinyl Lettering",
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 166,
@@ -571,9 +571,9 @@
       "type": "Custom Cut - Vinyl Lettering",
       "group": "custom_cut_vinyl_lettering",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 216,
@@ -588,9 +588,9 @@
       "type": "Custom Cut - Window Clings",
       "group": "custom_cut_window_clings",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 191,
@@ -605,9 +605,9 @@
       "type": "Custom Cut - Window Clings",
       "group": "custom_cut_window_clings",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 185,
@@ -622,9 +622,9 @@
       "type": "Labels - Clear",
       "group": "labels_clear",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 164,
@@ -639,9 +639,9 @@
       "type": "Labels - Clear",
       "group": "labels_clear",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 163,
@@ -656,9 +656,9 @@
       "type": "Labels - Grass Paper",
       "group": "labels_grass_paper",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 194,
@@ -673,9 +673,9 @@
       "type": "Labels - Kraft Paper",
       "group": "labels_kraft_paper",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 165,
@@ -690,9 +690,9 @@
       "type": "Sheets - Clear",
       "group": "sheets_clear",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 187,
@@ -707,9 +707,9 @@
       "type": "Sheets - Clear",
       "group": "sheets_clear",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 186,
@@ -724,9 +724,9 @@
       "type": "Sheets - Domed",
       "group": "sheets_domed",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 181,
@@ -792,9 +792,9 @@
       "type": "Sheets - Fluorescent",
       "group": "sheets_fluorescent",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 178,
@@ -809,9 +809,9 @@
       "type": "Sheets - Fluorescent",
       "group": "sheets_fluorescent",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 177,
@@ -826,9 +826,9 @@
       "type": "Sheets - Fluorescent",
       "group": "sheets_fluorescent",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 179,
@@ -843,9 +843,9 @@
       "type": "Sheets - Fluorescent",
       "group": "sheets_fluorescent",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 180,
@@ -860,9 +860,9 @@
       "type": "Sheets - Glossy",
       "group": "sheets_glossy",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 159,
@@ -877,9 +877,9 @@
       "type": "Sheets - Glow in the Dark",
       "group": "sheets_glow_in_the_dark",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 167,
@@ -894,9 +894,9 @@
       "type": "Sheets - Matte",
       "group": "sheets_matte",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 160,
@@ -911,9 +911,9 @@
       "type": "Sheets - Metallic",
       "group": "sheets_metallic",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 169,
@@ -928,9 +928,9 @@
       "type": "Sheets - Metallic",
       "group": "sheets_metallic",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 168,
@@ -945,9 +945,9 @@
       "type": "Sheets - Reflective",
       "group": "sheets_reflective",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 161,
@@ -962,9 +962,9 @@
       "type": "Sheets - Removable",
       "group": "sheets_removable",
       "status": "live",
-      "studio_status": "planned",
+      "studio_status": "built",
       "studios": {
-        "advanced": false,
+        "advanced": true,
         "basic": false
       },
       "bigcommerce_product_id": 162,

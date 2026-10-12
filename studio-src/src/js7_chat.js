@@ -11,9 +11,10 @@ const GC = { on: false, model: '', mode: 'open', hist: [], brief: {}, refs: [], 
 const gcFmt = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n+/g, '<br>');
 
 /* what Genie knows about the sticker and the product (sent each turn, never invented by the model) */
-function gcFacts() { return { shapes: Object.values(SN), minIn: MIN, maxIn: MAX, finishes: Object.values(VN), quantities: QTY } }
+function gcFacts() { const p = PROD(); return { product: p.name, product_type: FAMI().one, shapes: (p.shapes || []).map(k => SN[k]), size: isFree() ? { min_w_in: MINW, max_w_in: MAXW, min_h_in: MINH, max_h_in: MAXH } : 'fixed by the product', minIn: MIN, maxIn: MAX,
+  finishes: ['white', 'silver', 'gold'].filter(finishAvail).map(v => VN[v]), options: Object.fromEntries(optRoles().map(r => [OPT_LABEL[r] || r, p.vals[r]])), quantities: QTY } }
 function gcDesign() {
-  return { blank: isBlank(), shape: D.shape, width_in: D.w, height_in: D.h, finish: VN[D.vinyl] || D.vinyl, quantity: QTY[tier],
+  return { blank: isBlank(), product: PROD().name, shape: D.shape, width_in: D.w, height_in: D.h, finish: finishName(), options: Object.fromEntries(optRoles().map(r => [OPT_LABEL[r] || r, choice()[r]])), quantity: QTY[tier],
     background: D.bg.t === 'color' ? D.bg.c : D.bg.t === 'img' ? 'image' : 'none',
     elements: D.els.filter(e => !e.hidden).slice(0, 12).map(e => e.type === 'text'
       ? { type: 'text', text: String(e.text || '').slice(0, 40), font: (FONTS[e.font] || {}).n, color: e.fill }
@@ -124,12 +125,12 @@ async function gcApply(j) {
 
 function gcSetSticker(a, quiet) {
   const done = [];
-  if (a.shape && a.shape !== D.shape) { setShape(a.shape); done.push(`shape ${SN[a.shape]}`) }
-  if (a.width_in || a.height_in) {
+  if (a.shape && a.shape !== D.shape && (PROD().shapes || []).includes(a.shape) && PROD().family === 'sticker') { setShape(a.shape); done.push(`shape ${SN[a.shape]}`) }
+  if ((a.width_in || a.height_in) && isFree()) {
     let w = a.width_in || D.w, h = a.height_in || D.h; if (D.shape === 'circle' || D.shape === 'square') w = h = Math.max(a.width_in || 0, a.height_in || 0) || Math.max(w, h);
     setSize(w, h); done.push(`size ${fmt(D.w)} x ${fmt(D.h)} in`);
   }
-  if (a.vinyl && a.vinyl !== D.vinyl) { D.vinyl = a.vinyl; done.push(VN[a.vinyl]) }
+  if (a.vinyl && a.vinyl !== finishKey() && setFinishKey(a.vinyl)) done.push(finishName())
   if (a.quantity) { let t = 0; QTY.forEach((q, i) => { if (a.quantity >= q) t = i }); if (t !== tier) { tier = t; done.push(`quantity ${QTY[t].toLocaleString()}`) } }
   if (!done.length) return '';
   CT.sig = ''; commit(); syncPanels(); req(); quickUI();
