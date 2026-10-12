@@ -1,6 +1,6 @@
 /* =====================================================================
    Genie chat: a chat model (server.mjs /api/genie/chat) talks with the shopper,
-   gathers the brief, and decides when Nano Banana Pro should draw.
+   gathers the brief, and decides when Genie AI should draw.
    The model never touches the canvas directly. It returns actions, and this file
    carries each one out with the studio's own functions (setShape, setSize, genieEdit,
    nbEdit, generate, commit), so every change is a normal, undoable studio edit and

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE14D"/><stop offset=".6" stop-color="#FFA133"/><stop offset="1" stop-color="#FF5E62"/></linearGradient>
+<linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".8"/><stop offset=".45" stop-color="#fff" stop-opacity=".06"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="rim" cx=".5" cy=".42" r=".62"><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+<filter id="sh" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#7A2A00" flood-opacity=".42"/></filter>
+</defs>
+<rect width="1600" height="600" fill="url(#bg)"/>
+<circle cx="1500" cy="40" r="240" fill="#fff" opacity=".12"/>
+<text x="60" y="250" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="72" fill="#3A1300" letter-spacing="-2">Any shape.</text>
+<text x="60" y="338" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="72" fill="#fff" letter-spacing="-2">Any size.</text>
+<text x="64" y="392" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="26" fill="#3A1300" opacity=".8">We cut right around your design.</text>
+<!-- leaf -->
+<g transform="translate(660 300) rotate(-18)">
+<path d="M0-130C80-90 96 20 0 130-96 20-80-90 0-130z" fill="#22B34C" filter="url(#sh)"/>
+<path d="M0-110V115M0-40l38-30M0 0l44-34M0 40l38-30M0-40l-38-30M0 0l-44-34M0 40l-38-30" stroke="#BFF5C9" stroke-width="6" stroke-linecap="round" fill="none"/>
+<path d="M0-130C80-90 96 20 0 130-96 20-80-90 0-130z" fill="url(#rim)"/><path d="M0-130C80-90 96 20 0 130-96 20-80-90 0-130z" fill="url(#gloss)"/>
+<ellipse cx="-22" cy="-70" rx="12" ry="26" fill="#fff" opacity=".7" transform="rotate(20 -22 -70)"/>
+</g>
+<!-- soccer ball -->
+<g transform="translate(900 210)">
+<circle r="105" fill="#fff" filter="url(#sh)"/>
+<path d="M0-36l34 25-13 40h-42l-13-40z" fill="#1A1A1A"/>
+<path d="M0-105l0 0 0 0M-34-11l-58-19M34-11l58-19M21 29l36 52M-21 29l-36 52M0-36V-90" stroke="#1A1A1A" stroke-width="5"/>
+<path d="M-28-100l28 10 28-10 -4-6q-24-6-48 0z M-100-36l8 6 0 30-20 6q-6-20 12-42z M100-36l-8 6 0 30 20 6q6-20-12-42z M-66 76l26-2 18 22-10 10q-22-10-34-30z M66 76l-26-2-18 22 10 10q22-10 34-30z" fill="#1A1A1A"/>
+<circle r="105" fill="url(#rim)"/><circle r="105" fill="url(#gloss)"/>
+<ellipse cx="-38" cy="-62" rx="32" ry="11" fill="#fff" opacity=".85" transform="rotate(-28 -38 -62)"/>
+</g>
+<!-- heart -->
+<g transform="translate(1150 330) rotate(10)">
+<path d="M0 105C-120 20-130-60-75-95-40-115-10-95 0-70 10-95 40-115 75-95 130-60 120 20 0 105z" fill="#FF2D55" filter="url(#sh)"/>
+<text y="10" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="34" fill="#fff">LOVE</text>
+<path d="M0 105C-120 20-130-60-75-95-40-115-10-95 0-70 10-95 40-115 75-95 130-60 120 20 0 105z" fill="url(#rim)"/><path d="M0 105C-120 20-130-60-75-95-40-115-10-95 0-70 10-95 40-115 75-95 130-60 120 20 0 105z" fill="url(#gloss)"/>
+<ellipse cx="-58" cy="-62" rx="24" ry="10" fill="#fff" opacity=".85" transform="rotate(-30 -58 -62)"/>
+</g>
+<!-- star -->
+<g transform="translate(1390 200) rotate(-10)">
+<path d="M0-100l29 60 66 9-48 46 12 65-59-31-59 31 12-65-48-46 66-9z" fill="#2F6BFF" filter="url(#sh)"/>
+<path d="M0-100l29 60 66 9-48 46 12 65-59-31-59 31 12-65-48-46 66-9z" fill="url(#rim)"/><path d="M0-100l29 60 66 9-48 46 12 65-59-31-59 31 12-65-48-46 66-9z" fill="url(#gloss)"/>
+<ellipse cx="-6" cy="-48" rx="10" ry="18" fill="#fff" opacity=".8"/>
+</g>
+<!-- badge -->
+<g transform="translate(1420 455) rotate(8)">
+<path d="M0-90l78 26v50c0 50-34 84-78 104-44-20-78-54-78-104v-50z" fill="#3A1300" filter="url(#sh)"/>
+<path d="M0-72l62 20v38c0 40-27 68-62 84-35-16-62-44-62-84v-38z" fill="none" stroke="#FFE14D" stroke-width="5"/>
+<text y="14" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="30" fill="#FFE14D">TEAM</text>
+<path d="M0-90l78 26v50c0 50-34 84-78 104-44-20-78-54-78-104v-50z" fill="url(#gloss)"/>
+<ellipse cx="-34" cy="-50" rx="18" ry="7" fill="#fff" opacity=".6" transform="rotate(-18 -34 -50)"/>
+</g>
+<!-- acorn -->
+<g transform="translate(1000 470) rotate(-12)">
+<path d="M-62-20h124c0 70-30 100-62 120-32-20-62-50-62-120z" fill="#C9772B" filter="url(#sh)"/>
+<path d="M-74-14c0-40 34-58 74-58s74 18 74 58z" fill="#6B3A12"/>
+<path d="M0-72v-24" stroke="#6B3A12" stroke-width="10" stroke-linecap="round"/>
+<path d="M-50-30l14-18M-24-30l14-22M2-30l14-22M28-30l14-18" stroke="#8E5422" stroke-width="5" stroke-linecap="round"/>
+<path d="M-62-20h124c0 70-30 100-62 120-32-20-62-50-62-120z" fill="url(#gloss)"/>
+<ellipse cx="-26" cy="10" rx="9" ry="20" fill="#fff" opacity=".6"/>
+</g>
+</svg>

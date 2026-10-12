@@ -103,8 +103,25 @@ tests/                 browser tests (tests/price-check.mjs: studio prices vs Bi
 | 5 | Name badge studio (`/badges.html`): all 14 badges, Doogma layouts 1 to 7, team names, Genie logo | PR #6; real badge sizes still needed |
 | 6 | Product pages (`/p/<product>.html`) with Start designing: Genie Studio Advanced and Genie Studio Basic | PR #7 |
 | 7 | Genie Studio Advanced designs every product: 30 stickers, 14 name badges, 13 pens, pencils and notebooks, with all their BigCommerce variants | PR #8 |
-| 8 | Genie Studio Basic for stickers | |
-| 9 | Genie Studio Basic for pens | needs imprint sizes |
+| 8 | One website: the Genie Studio Advanced header, footer and cart on every page (studio-src/site/), working nav, search and mega menu; pens and notebooks edited up close with an overview | PR #9 |
+| 9 | Genie Studio Basic for stickers | |
+| 10 | Genie Studio Basic for pens | needs imprint sizes |
+
+## One website
+
+Every page uses the same header, footer and cart, from `studio-src/site/` through `studio-src/sitechrome.py`:
+
+| Page | Built by | Header section marked |
+|---|---|---|
+| Genie Studio Advanced, `/index.html?product=<id>` | `build.py` | the product's family (set before first paint) |
+| Genie Studio Basic, `/badges.html` | `build_badges.py` | Name Badges |
+| Product pages `/p/<slug>.html`, All products `/p/index.html` | `build_pdp.py` | the product's family / All Products |
+
+* **Header and footer CSS** are taken from `style.css` at build time (one source), so the header can't drift between pages.
+* **The cart** is one list in the browser (`localStorage cg-cart-v1`), with the BigCommerce cart line for each item. Every page shows the same count and mini cart. Checkout is BigCommerce's in production.
+* **Search** opens All products filtered by the words typed.
+* **Mega menu** shape and finish buttons set the design on the studio page and open the studio (`?shape=`) everywhere else.
+* **Links to pages the prototype doesn't have** (Genie's Picks, About Us, Contact, Account, Track Order) say so instead of going nowhere.
 
 Every phase is its own PR. Nothing is deployed and the live store isn't touched without Carlos's explicit approval.
 

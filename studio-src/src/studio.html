@@ -18,9 +18,12 @@
       <button type="button" class="tool" id="imgBtn" aria-label="Place image" data-tip="Place image" data-key="Ctrl ⇧ K"><svg class="ico"><use href="#t-image"/></svg></button>
      </div>
      <button type="button" class="genie-btn" id="genieBtn" aria-pressed="false" data-tip="Design or edit with Genie AI"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg><span class="gl">Generate with Genie</span></button>
-     <div class="tgrp tright">
+     <div class="tgrp tedit" role="group" aria-label="Start over, undo and redo">
+      <button type="button" class="tool tool-lbl" id="resetBtn" aria-label="Start over" data-tip="Clear the whole design and start fresh"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg><span class="tool-t">Start over</span></button>
       <button type="button" class="tool" id="undoBtn" aria-label="Undo" data-tip="Undo" data-key="Ctrl Z" disabled><svg class="ico"><use href="#i-undo"/></svg></button>
       <button type="button" class="tool" id="redoBtn" aria-label="Redo" data-tip="Redo" data-key="Ctrl ⇧ Z" disabled><svg class="ico"><use href="#i-redo"/></svg></button>
+     </div>
+     <div class="tgrp tright">
       <span class="tsep"></span>
       <div class="views" role="group" aria-label="Preview mode">
        <button type="button" data-view="edit" aria-pressed="true">Design</button>
@@ -46,8 +49,9 @@
      <div class="pbody" id="lp-layers" data-pane="layers" role="tabpanel" aria-labelledby="lt-layers">
       <button type="button" class="layer-art" id="layerArt" style="width:100%;border:0;background:none;text-align:left;border-bottom:1px solid var(--line)"><svg class="ico" aria-hidden="true"><use href="#i-sticker"/></svg><span><b id="layerArtNoun">Sticker</b> · <span id="layerArtTxt"></span></span></button>
       <ul class="layers" id="layers" role="tree" aria-label="Layers" aria-multiselectable="true"></ul>
-      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the sticker shows up here. Drag to reorder, click the eye to hide.</p>
+      <div class="lempty" id="lempty"><b>No layers yet</b><p>Everything you add to the <span data-noun="one">sticker</span> shows up here. Drag to reorder, click the eye to hide.</p>
        <div class="qadd"><button type="button" data-quick="text"><svg class="ico"><use href="#t-text"/></svg>Text</button><button type="button" data-quick="image"><svg class="ico"><use href="#t-image"/></svg>Image</button><button type="button" data-quick="genie"><svg class="gmark" style="width:10px;height:18px"><use href="#g-mark"/></svg>Genie</button></div></div>
+      <div class="lfoot" id="lfoot" hidden><button type="button" class="lreset" id="resetLink"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Start over</button><span>Clears the whole design</span></div>
      </div>
      <div class="pbody" id="lp-assets" data-pane="assets" role="tabpanel" aria-labelledby="lt-assets" hidden>
       <section class="psec"><h3 class="psec-h">Templates <small>Replaces your design</small></h3><div class="a-grid" id="tplGrid"></div></section>
@@ -126,10 +130,11 @@
 
       <div class="start" id="start" hidden>
        <div class="start-card" role="region" aria-labelledby="startH">
+        <button type="button" class="start-x" id="startClose" aria-label="Close" data-tip="Close (Esc)"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
         <h2 id="startH"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>What should we make?</h2>
         <p id="startSub">Describe your sticker and Genie designs four options. Everything stays editable, layer by layer.</p>
         <div class="prompt">
-         <label class="sr-only" for="startText">Describe your sticker</label>
+         <label class="sr-only" for="startText" id="startLbl">Describe your sticker</label>
          <textarea id="startText" placeholder='e.g. A round gold sticker for my coffee shop "Bean There" with a coffee cup, about 3 inches'></textarea>
          <div class="prompt-bar">
           <input type="file" id="startFile" class="sr-only" accept="image/*" tabindex="-1">
@@ -137,7 +142,7 @@
           <button type="button" class="btn btn-primary" id="startGo"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg>Generate</button>
          </div>
         </div>
-        <div class="ex" aria-label="Example prompts">
+        <div class="ex" id="startEx" aria-label="Example prompts">
          <button type="button" data-ex='Round sticker for my coffee shop "Bean There" with a coffee cup, brown and cream'>Coffee shop logo</button>
          <button type="button" data-ex='Silver equipment nameplate that says "Apex Machining" with the tagline "Precision Parts", 3 x 1 inches'>Equipment nameplate</button>
          <button type="button" data-ex='Fun gold label for "Sunny Days" lemonade with a sun, 500 stickers'>Product label</button>
@@ -152,6 +157,7 @@
        </div>
       </div>
       <div class="vp-msg" id="vpMsg" hidden></div>
+      <figure class="item-mini" id="itemMini" hidden><div id="itemMiniArt"></div><figcaption id="itemMiniCap">On the pen</figcaption></figure>
       <div class="vp-legend" id="legend"></div>
       <div class="zoomfab" role="group" aria-label="Zoom">
        <button type="button" class="tool" id="zOut" aria-label="Zoom out" data-tip="Zoom out" data-key="Ctrl −"><svg class="ico"><use href="#i-minus"/></svg></button>

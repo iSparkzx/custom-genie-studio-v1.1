@@ -8,6 +8,7 @@ A studio that doesn't support the product yet shows as "Coming soon", never as a
 Prototype pages are marked noindex; canonical points at the live customgenie.com URL.
 """
 import os, sys, re, json, html as H
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import sitechrome
 B = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(B, '..'); S = os.path.join(B, 'src'); P = os.path.join(ROOT, 'products')
 rd = lambda p: open(p, encoding='utf-8').read()
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'public', 'p')
@@ -61,8 +62,9 @@ def cta(kind, d):
     return f'<div class="cta cta-off" aria-disabled="true" data-studio="{kind}"><span class="cta-t">{label}</span><span class="cta-d">Coming soon for this product.</span></div>'
 
 def page(d, head_extra, body):
+    SITE = sitechrome.chrome('../', d['family'] if d else 'all')   # shared site header/footer (studio-src/site/)
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -80,20 +82,19 @@ def page(d, head_extra, body):
 <body>
 {SPRITE}
 <a class="skip" href="#main">Skip to content</a>
-<div class="promo"><div class="wrap promo-row"><p class="promo-msg">Free shipping on orders over $75</p>
- <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode"><svg class="ico when-light" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico when-dark" aria-hidden="true"><use href="#i-sun"/></svg><span class="when-light">Dark mode</span><span class="when-dark">Light mode</span></button></div></div>
-<header class="hdr"><div class="wrap hdr-row">
- <a class="logo" href="index.html"><img src="{LOGO}" alt="Custom Genie products" width="154" height="66"></a>
- <nav class="hdr-nav" aria-label="Main">{''.join(f'<a href="index.html#{FAMILY[f][1]}"{" aria-current=\"page\"" if d and d["family"] == f else ""}>{e(FAMILY[f][0].split(",")[0].split(" &")[0])}</a>' for f in FAMILY)}</nav>
-</div></header>
+{SITE[0]}
 <main id="main"><div class="wrap">
 {body}
 </div></main>
-<footer class="ftr"><div class="wrap ftr-row"><img src="{LOGO}" alt="Custom Genie" width="120" height="51" loading="lazy"><p>Custom Genie is a World Emblem brand. Prototype pages: product data from the BigCommerce catalog.</p></div></footer>
+{SITE[1]}
 <script>
-(()=>{{const b=document.getElementById('themeBtn'),d=document.documentElement,lab=()=>b.setAttribute('aria-label',d.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode');lab();
-b.addEventListener('click',()=>{{d.dataset.theme=d.dataset.theme==='dark'?'light':'dark';try{{localStorage.setItem('cg-theme',d.dataset.theme)}}catch(e){{}}lab()}});
-const main=document.getElementById('mainImg');document.querySelectorAll('[data-img]').forEach(t=>t.addEventListener('click',()=>{{main.srcset=t.dataset.srcset||'';main.src=t.dataset.img;main.alt=t.dataset.alt;document.querySelectorAll('[data-img]').forEach(x=>x.setAttribute('aria-pressed',String(x===t)))}}));
+{SITE_JS}
+</script>
+<script>
+(()=>{{const main=document.getElementById('mainImg');if(main)document.querySelectorAll('[data-img]').forEach(t=>t.addEventListener('click',()=>{{main.srcset=t.dataset.srcset||'';main.src=t.dataset.img;main.alt=t.dataset.alt;document.querySelectorAll('[data-img]').forEach(x=>x.setAttribute('aria-pressed',String(x===t)))}}));
+const qr=document.getElementById('qRes');if(qr){{const q=(new URLSearchParams(location.search).get('q')||'').trim().toLowerCase(),words=q.split(/\\s+/).filter(Boolean);if(words.length){{let n=0;
+ document.querySelectorAll('.fam').forEach(s=>{{let k=0;s.querySelectorAll('li').forEach(li=>{{const t=li.textContent.toLowerCase(),hit=words.every(w=>t.includes(w)||(w.endsWith('s')&&t.includes(w.slice(0,-1))));li.hidden=!hit;if(hit)k++}});s.hidden=!k;n+=k;const c=s.querySelector('h2 .muted');if(c)c.textContent='('+k+')'}});
+ qr.innerHTML=(n?n+' product'+(n===1?'':'s')+' match':'No products match')+' <b></b>. <a href="index.html">Show all products</a>';qr.querySelector('b').textContent='\u201c'+q+'\u201d';qr.hidden=false;(window.dataLayer=window.dataLayer||[]).push({{event:'view_search_results',search_term:q,results:n}})}}}}
 document.querySelectorAll('a[data-studio]').forEach(a=>a.addEventListener('click',()=>{{(window.dataLayer=window.dataLayer||[]).push({{event:'start_designing',studio:a.dataset.studio,product:new URL(a.href).searchParams.get('product')}})}}));}})();
 </script>
 </body>
@@ -147,19 +148,21 @@ def index(defs):
         avail = ' '.join(f'<span class="tag{"" if ready(k) else " tag-off"}">{"Advanced" if k == "advanced" else "Basic"}<span class="sr-only">{" ready" if ready(k) else " coming soon"}</span></span>' for k in ('advanced', 'basic'))
         cards.setdefault(d['family'], []).append(f'<li><a class="card" href="{slug(d)}.html"><img src="{e(img)}" alt="" width="240" height="240" loading="lazy"><span class="card-n">{e(d["name"])}</span><span class="card-p">From {money(lo)} each</span><span class="tags">{avail}</span></a></li>')
     secs = ''.join(f'<section class="fam" id="{FAMILY[f][1]}" aria-labelledby="h-{f}"><h2 id="h-{f}">{e(FAMILY[f][0])} <span class="muted">({len(cards.get(f, []))})</span></h2><ul class="cards">{"".join(cards.get(f, []))}</ul></section>' for f in FAMILY)
-    body = f'<div class="intro"><h1>Custom Genie products</h1><p class="sub">Every customizable product, with the studios you can design it in. <span class="tag">Advanced</span> and <span class="tag">Basic</span> show which Genie Studio is ready; grey means coming soon.</p></div>{secs}'
+    body = f'<div class="intro"><h1>Custom Genie products</h1><p class="sub">Every customizable product, with the studios you can design it in. <span class="tag">Advanced</span> and <span class="tag">Basic</span> show which Genie Studio is ready; grey means coming soon.</p><p class="q-res" id="qRes" role="status" hidden></p></div>{secs}'
     return page(None, '<title>Custom Genie products | Prototype</title>', body)
 
 idx = json.loads(rd(os.path.join(P, 'index.json')))['products']
 defs = [json.loads(rd(os.path.join(P, r['file']))) for r in idx if r['status'] == 'live']
-FONT = 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap'
+FONT = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap'
 tokens = rd(os.path.join(S, 'style.css')); tokens = tokens[tokens.index(':root{'):tokens.index('*,*::before,*::after')]
 base = rd(os.path.join(B, 'badge', 'badge.css')); base = base[:base.index('/* intro */')]       # reset, header, buttons from the badge studio
-CSS = tokens + base + rd(os.path.join(B, 'pdp', 'pdp.css'))
+CSS = (tokens + sitechrome.css(rd(os.path.join(S, 'style.css'))) + sitechrome.strip(base) + sitechrome.strip(rd(os.path.join(B, 'pdp', 'pdp.css')))
+       + '\nbody{font-family:"Poppins","Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif}\n')
+SITE_JS = sitechrome.js()
 LOGO = rd(os.path.join(B, 'assets', 'logo.txt')).strip()
 sp = rd(os.path.join(S, 'sprite.html')); sp = sp[:sp.index('</svg>') + 6]; sp = re.sub(r'<defs>[\s\S]*?</defs>\s*', '', sp)
-SPRITE = re.sub(r'<symbol id="([^"]+)"[\s\S]*?</symbol>\s*', lambda m: m.group(0) if m.group(1) in ('i-moon', 'i-sun') else '', sp)
-os.makedirs(OUT, exist_ok=True)
+SPRITE = re.sub(r'<symbol id="([^"]+)"[\s\S]*?</symbol>\s*', lambda m: m.group(0) if m.group(1) in set(sitechrome.ICONS) | set(re.findall(r'#(i-[a-z-]+)', rd(os.path.join(sitechrome.SITE, 'header.html')) + rd(os.path.join(sitechrome.SITE, 'footer.html')))) else '', sp)
+os.makedirs(OUT, exist_ok=True); sitechrome.write_assets(os.path.join(OUT, '..'))
 for f in os.listdir(OUT):
     if f.endswith('.html'): os.remove(os.path.join(OUT, f))
 for d in defs: open(os.path.join(OUT, slug(d) + '.html'), 'w', encoding='utf-8').write(pdp(d))

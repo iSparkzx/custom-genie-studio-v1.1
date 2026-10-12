@@ -211,7 +211,7 @@ function gPush(who,html){const d=document.createElement('div');d.className='gm '
 function gUser(text,key){gPush('me',(text?esc(text):(key?'Here\'s my artwork.':''))+(key&&IM[key]?`<br><img src="${IM[key].url}" alt="">`:''))}
 function gSay(html){return gPush('genie',html)}
 function gThinking(t){return gPush('genie',`<p style="display:flex;align-items:center;gap:8px"><span class="gtyping" aria-hidden="true"><i></i><i></i><i></i></span>${esc(t)}</p>`)}
-function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your sticker and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${['Round sticker for my coffee shop "Bean There", brown and cream','Silver nameplate "Apex Machining", 3 x 1 inches','Fun gold label for "Sunny Days" lemonade with a sun'].map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge();if(GC.on)gcIntro()}
+function genieIntro(){feed.innerHTML='';gSay(`<p><b>Hi, I'm Genie.</b> Tell me about your ${esc(NOUN())} and I'll design four options to start from. Everything stays editable.</p><div class="gchips">${startCopy().ex.map(e=>e[1]).map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x.length>36?x.slice(0,34)+'…':x)}</button>`).join('')}</div><p style="margin-top:8px;color:var(--ink-3)">Have a logo? <button type="button" class="linkbtn" data-gupload>Upload it</button> and I'll check it for print and suggest a shape and size. Once you have a design, ask me to change it, like <i>"make it navy and gold"</i>.</p>`);quickUI();if(NB.on)nbBadge();if(GC.on)gcIntro()}
 function quickUI(){const q=$('#gquick'),blank=isBlank();const list=blank?[]:['New colors','Bolder text','Add an outline','Tidy the layout',finishKey()==='gold'?(finishAvail('silver')?'Make it silver':''):finishAvail('gold')?'Make it gold':'','Curve the name'];const s=list.join('|');if(q.dataset.sig===s)return;q.dataset.sig=s;q.innerHTML=list.map(x=>`<button type="button" class="gchip" data-gsend="${esc(x)}">${esc(x)}</button>`).join('');q.hidden=!list.length}
 function openGenie(focus){if(NARROW.matches)openSheet('genie');else{studio.classList.remove('no-left');if(MID.matches)studio.classList.add('show-left');setLTab('genie');panelBtns()}quickUI();if(focus)setTimeout(()=>$('#gtext').focus(),60)}
 function genieOpened(){quickUI()}
@@ -238,9 +238,9 @@ async function genieSubmit(p,key,direct){if(AI.busy||GC.busy)return;openGenie(fa
  if(GC.on&&!direct){if(await gcTurn(p,key))return}          /* Genie chat (server model) leads; built-in rules below are the fallback */
  if(!p&&key){genieAnalyze(key);return}
  const isNew=/\b(sticker|label|badge|logo|design|nameplate|plate|tag) (for|that|with|of)\b|\bfor my\b|\bnew (design|sticker)\b|\bcreate\b|\bdesign (a|an|me)\b|\bmake (a|an|me) /i.test(p);
- if(!key&&!isNew&&NB.on){const t=nbTarget();if(t){await nbEdit(p,t);return}}          /* change the selected Nano Banana logo */
+ if(!key&&!isNew&&NB.on){const t=nbTarget();if(t){await nbEdit(p,t);return}}          /* change the selected Genie AI artwork */
  if(!isBlank()&&!key&&!isNew){const done=await genieEdit(p);if(done)return}
- if(!key&&await nbGenerate(p))return;                                                   /* draw new logos with Nano Banana Pro */
+ if(!key&&await nbGenerate(p))return;                                                   /* draw new logos with Genie AI */
  AI.mode='prompt';AI.logo=key||null;AI.logoInfo=key?analyzeArt(IM[key].img,IM[key]):null;if(AI.logoInfo&&AI.logoInfo.whiteBg)makeClear(key);
  AI.a=parsePrompt(p);AI.a.mode='prompt';AI.seed=0;track('builder_ai_prompt',{length:p.length,logo:!!key});generate()}
 async function genieAnalyze(k){AI.busy=true;const m=IM[k],first=analyzeArt(m.img,m);AI.orig={key:k,info:first};
@@ -321,6 +321,9 @@ D.groups=D.groups||{};
 /* opened from a product page: /?product=<definition id> picks that product's finish and links back to its page */
 {const pr=PRODS[URL_PID],a=$('#pdpBack');
  if(pr){if(D.pid!==pr.id)switchProduct(pr.id,true);if(a){a.href='p/'+pr.url.split('/').filter(Boolean).pop()+'.html';a.hidden=false}}}
+/* opened from the mega menu on another page: ?shape=<shape> sets the sticker shape, ?genie=1 opens Genie */
+{const q=new URLSearchParams(location.search),sh=q.get('shape');if(sh&&SN[sh]&&PROD().family==='sticker'&&(PROD().shapes||[]).includes(sh)&&D.shape!==sh){D.shape=sh;if(sh==='circle'||sh==='square'){const m=Math.max(D.w,D.h);D.w=D.h=m}}
+ if(q.get('genie')==='1')setTimeout(()=>openGenie(true),300)}
 conform();
 last=snapshot();upThumbs();setTool('move');setLTab(restored?'layers':'assets');
 syncPanels();refreshUndo();panelBtns();genieIntro();

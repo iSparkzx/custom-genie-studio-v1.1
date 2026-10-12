@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<defs>
+<!-- desk: warm oak with soft light falloff -->
+<linearGradient id="desk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9D3B4"/><stop offset=".55" stop-color="#D6B48A"/><stop offset="1" stop-color="#B98E62"/></linearGradient>
+<radialGradient id="light" cx=".72" cy=".18" r=".85"><stop offset="0" stop-color="#FFF6E8" stop-opacity=".75"/><stop offset=".5" stop-color="#FFF6E8" stop-opacity=".12"/><stop offset="1" stop-color="#3B2410" stop-opacity=".35"/></radialGradient>
+<pattern id="grain" width="800" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)"><path d="M0 3C200 1 400 6 800 2M0 9C220 11 520 7 800 10" fill="none" stroke="#8A5E35" stroke-opacity=".14" stroke-width="1.2"/></pattern>
+<!-- phone glass -->
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A4256"/><stop offset=".45" stop-color="#1D2333"/><stop offset="1" stop-color="#0E121C"/></linearGradient>
+<linearGradient id="frame" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9AA3B2"/><stop offset=".5" stop-color="#E6EAF0"/><stop offset="1" stop-color="#7E8796"/></linearGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".38" stop-color="#fff" stop-opacity="0"/><stop offset=".44" stop-color="#fff" stop-opacity=".16"/><stop offset=".52" stop-color="#fff" stop-opacity=".04"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="lens" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#4B5875"/><stop offset=".35" stop-color="#121826"/><stop offset=".7" stop-color="#05070C"/><stop offset="1" stop-color="#2A3142"/></radialGradient>
+<radialGradient id="ring" cx=".5" cy=".5" r=".5"><stop offset=".78" stop-color="#C9CFD8"/><stop offset=".9" stop-color="#6F7887"/><stop offset="1" stop-color="#2B313C"/></radialGradient>
+<!-- sticker -->
+<radialGradient id="ball" cx=".42" cy=".36" r=".72"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#F3EFE6"/><stop offset="1" stop-color="#DCD5C7"/></radialGradient>
+<linearGradient id="dome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".38" stop-color="#fff" stop-opacity=".1"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".08"/></linearGradient>
+<radialGradient id="rim" cx=".5" cy=".42" r=".6"><stop offset=".74" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".34"/></radialGradient>
+<filter id="phoneSh" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="16"/><feOffset dx="18" dy="26"/><feColorMatrix values="0 0 0 0 .18  0 0 0 0 .1  0 0 0 0 .03  0 0 0 .55 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="stSh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#000" flood-opacity=".55"/></filter>
+<filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+<clipPath id="phoneClip"><rect x="-150" y="-280" width="300" height="560" rx="46"/></clipPath>
+</defs>
+
+<!-- desk -->
+<rect width="800" height="600" fill="url(#desk)"/>
+<rect width="800" height="600" fill="url(#grain)"/>
+<rect width="800" height="600" fill="url(#light)"/>
+<!-- out-of-focus props for depth -->
+<g filter="url(#blur2)" opacity=".9">
+ <ellipse cx="96" cy="520" rx="120" ry="70" fill="#F7F1E7"/><ellipse cx="96" cy="508" rx="92" ry="48" fill="#5A3A22"/><ellipse cx="86" cy="500" rx="40" ry="14" fill="#fff" opacity=".25"/>
+ <rect x="640" y="470" width="200" height="22" rx="4" fill="#2F3A4F" transform="rotate(-14 640 470)"/>
+</g>
+
+<!-- headline -->
+<text x="40" y="70" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="40" fill="#2A1A0C" letter-spacing="-1">Raised. Glossy.</text>
+<text x="40" y="116" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="40" fill="#7B3FD8" letter-spacing="-1">Built to last.</text>
+
+<!-- phone, back side up, lying at an angle -->
+<g transform="translate(520 330) rotate(18)" filter="url(#phoneSh)">
+ <rect x="-156" y="-286" width="312" height="572" rx="52" fill="url(#frame)"/>
+ <rect x="-150" y="-280" width="300" height="560" rx="46" fill="url(#glass)"/>
+ <g clip-path="url(#phoneClip)">
+  <rect x="-150" y="-280" width="300" height="560" fill="url(#sheen)"/>
+  <path d="M-150 120L150 -40V-10L-150 150Z" fill="#fff" opacity=".05"/>
+  <!-- camera bump -->
+  <rect x="-128" y="-258" width="150" height="150" rx="38" fill="#2A3142" stroke="#59627A" stroke-width="2"/>
+  <rect x="-128" y="-258" width="150" height="150" rx="38" fill="url(#sheen)"/>
+  <circle cx="-88" cy="-218" r="30" fill="url(#ring)"/><circle cx="-88" cy="-218" r="22" fill="url(#lens)"/><circle cx="-94" cy="-225" r="5" fill="#fff" opacity=".55"/>
+  <circle cx="-88" cy="-148" r="30" fill="url(#ring)"/><circle cx="-88" cy="-148" r="22" fill="url(#lens)"/><circle cx="-94" cy="-155" r="5" fill="#fff" opacity=".55"/>
+  <circle cx="-22" cy="-183" r="30" fill="url(#ring)"/><circle cx="-22" cy="-183" r="22" fill="url(#lens)"/><circle cx="-28" cy="-190" r="5" fill="#fff" opacity=".55"/>
+  <circle cx="2" cy="-238" r="8" fill="#F6E7B8" opacity=".9"/>
+  <circle cx="2" cy="-132" r="5" fill="#0B0F17"/>
+ </g>
+ <!-- the domed Sluggers sticker on the phone back -->
+ <g transform="translate(6 70)">
+  <circle r="104" fill="url(#ball)" filter="url(#stSh)"/>
+  <g fill="none" stroke="#E0263A" stroke-width="4.2" stroke-linecap="round"><path d="M-66 -82c26 38 26 126 0 164"/><path d="M66 -82c-26 38-26 126 0 164"/></g>
+  <g stroke="#E0263A" stroke-width="3" stroke-linecap="round">
+   <path d="M-62 -66l-12 4M-55 -47l-13 2M-52 -27l-13 1M-51 -7l-13 0M-51 13l-13 -1M-53 33l-13 -2M-56 53l-12 -4M-61 71l-12 -5"/>
+   <path d="M62 -66l12 4M55 -47l13 2M52 -27l13 1M51 -7l13 0M51 13l13 -1M53 33l13 -2M56 53l12 -4M61 71l12 -5"/>
+  </g>
+  <text y="11" text-anchor="middle" font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-size="30" fill="#22127A">SLUGGERS</text>
+  <circle r="104" fill="url(#rim)"/>
+  <circle r="104" fill="url(#dome)"/>
+  <ellipse cx="-38" cy="-70" rx="38" ry="11" fill="#fff" opacity=".88" transform="rotate(-24 -38 -70)"/>
+  <circle cx="52" cy="-66" r="4.5" fill="#fff" opacity=".9"/>
+  <circle r="103.5" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2"/>
+ </g>
+</g>
+</svg>

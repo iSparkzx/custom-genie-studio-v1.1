@@ -1,0 +1,29 @@
+/* ---------- site chrome additions (shared by every page) ---------- */
+/* the section you're in: plain nav links get the same mark as the Stickers menu button */
+.nav a[aria-current="page"]{color:var(--hot);border-bottom-color:var(--hot)}
+/* mini cart: opens from the header cart button on every page */
+.mini-cart{position:absolute;right:max(16px,calc((100vw - 1400px)/2 + 16px));z-index:80;width:min(380px,calc(100vw - 24px));max-height:min(70vh,560px);overflow:auto;padding:14px 16px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:var(--shadow-3,0 18px 48px rgba(0,0,0,.28))}
+.mini-cart[hidden]{display:none}
+.mc-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;font-size:15px}
+.mc-x{display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:8px;background:none;color:var(--ink-2);cursor:pointer}
+.mc-x:hover{background:var(--sunk)}
+.mc-list{list-style:none;margin:0;padding:0}
+.mc-list li{display:flex;gap:12px;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line)}
+.mc-t{min-width:0;font-size:13.5px;font-weight:600;line-height:1.35}
+.mc-t a{color:inherit;text-decoration:none}.mc-t a:hover{text-decoration:underline}
+.mc-t small{display:block;font-weight:400;color:var(--ink-3);font-size:12px;margin-top:2px}
+.mc-r{display:flex;flex-direction:column;align-items:flex-end;gap:4px;font-size:13.5px;white-space:nowrap}
+.mc-r .linkbtn{border:0;background:none;padding:6px 0;color:var(--ink-3);font:inherit;font-size:12px;text-decoration:underline;cursor:pointer}
+.mc-sub{display:flex;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px}
+.mc-note{margin:6px 0 12px;font-size:12px;color:var(--ink-3)}
+.mc-empty{margin:8px 0 14px;color:var(--ink-2)}
+.mc-go{display:flex;align-items:center;justify-content:center;width:100%;min-height:44px;border:0;border-radius:10px;background:var(--grad-cta);color:#fff;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+.mc-go:hover{background:var(--grad-cta-h)}
+.mc-go:focus-visible,.mc-x:focus-visible,.mc-r .linkbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+/* toast for pages without their own */
+.site-toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));z-index:90;max-width:min(520px,calc(100vw - 32px));padding:12px 16px;border-radius:12px;background:#111827;color:#fff;font-size:14px;box-shadow:0 12px 32px rgba(0,0,0,.3);transform:translate(-50%,16px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.site-toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion: reduce){.site-toast{transition:none}}
+
+/* one interface font for the whole site (designs keep their own fonts) */
+.promo,header,.foot,.mini-cart,.site-toast{font-family:"Poppins","Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif}

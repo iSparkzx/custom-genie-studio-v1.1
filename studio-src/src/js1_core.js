@@ -114,7 +114,14 @@ const finishProduct=v=>siblings().find(q=>(q.look&&q.look.face)===v&&!(q.look&&q
 const finishAvail=v=>!!finishProduct(v);
 const finishKey=()=>{const f=PROD().look&&PROD().look.face;return f==='silver'||f==='gold'?f:'white'};
 function setFinishKey(v){const q=finishProduct(v);if(!q)return false;if(q.id!==D.pid)switchProduct(q.id,true);return true}
-const DKEY=()=>KEY+(PROD().family==='sticker'?'':':'+PROD().family);   /* drafts are kept per family */
+const DKEY=()=>KEY+(PROD().family==='sticker'?'':':'+PROD().family);
+/* start card and Genie wording, per product type */
+const START_COPY={
+ sticker:{ph:'e.g. A round gold sticker for my coffee shop "Bean There" with a coffee cup, about 3 inches',ex:[['Coffee shop logo','Round sticker for my coffee shop "Bean There" with a coffee cup, brown and cream'],['Equipment nameplate','Silver equipment nameplate that says "Apex Machining" with the tagline "Precision Parts", 3 x 1 inches'],['Product label','Fun gold label for "Sunny Days" lemonade with a sun, 500 stickers']]},
+ badge:{ph:'e.g. Name badges for my dental office "Bright Smile", blue and white, with a tooth icon',ex:[['Dental office','Name badges for my dental office "Bright Smile", blue and white, with a tooth icon'],['Restaurant staff','Staff badges for "Harbor Grill", navy and gold with an anchor'],['Real estate team','Name badges for "Summit Realty" agents, green with a mountain logo']]},
+ pen:{ph:'e.g. Pens for "Keystone Realty" with a simple key icon and our phone number',ex:[['Real estate office','Pens for "Keystone Realty" with a simple key icon and our phone number'],['Event giveaway','Giveaway pens for the "Riverside 5K" charity run, bold and simple'],['Law firm','Pens for "Oak & Pine Law", classic serif lettering']]},
+ notebook:{ph:'e.g. Notebook cover with the "Northwind Coffee" logo and a coffee bean, centered',ex:[['Coffee shop','Notebook cover with the "Northwind Coffee" logo and a coffee bean, centered'],['Conference','Notebooks for our "Tech Summit 2026" conference, modern and clean'],['School','Notebooks for "Bright Start Academy" with a sun logo']]}};
+const startCopy=()=>{const p=PROD();return START_COPY[p.family==='pen'?(p.kind==='notebook'?'notebook':'pen'):p.family]};   /* drafts are kept per family */
 const FONTS=[
  {n:'Libre Baskerville',f:"'Libre Baskerville', Georgia, serif",w:400},
  {n:'Anton',f:"Anton, Impact, sans-serif",w:400},
@@ -398,17 +405,23 @@ function computeContour(){const P=Math.min(8,900/Math.max(W(),H())),c=contourAt(
 
 /* ---------- camera ---------- */
 function fitBox(){const w=W(),h=H();if(view==='sheet')return[w/2-505,h/2-545,1010,1135];
- if(view==='edit'&&PROD().family==='pen'){const c=ctxMarkup(PROD(),LOOK(),w,h).box,wide=vp.clientWidth>=700;   /* desktop: the whole item; phones: the imprint stays big enough to edit */
-  if(wide){const pad=Math.max(c[2],c[3])*.06;return[c[0]-pad,c[1]-pad-h*.6,c[2]+2*pad,c[3]+2*pad+h*1.2]}const bw=w*1.5,bh=h*3;return[w/2-bw/2,h/2-bh/2,bw,bh]}
- const m=Math.max(w,h)*.22;if(view==='proof'){const q=Math.max(150,Math.max(w,h)*.08+150),nar=vp.clientWidth<700;return[-m,-m*1.2,w+2*m+q,h+(nar?4.2:2.8)*m]}return[-m,-m,w+2*m,h+2*m]}
-function curCam(){if(cam)return cam;const b=fitBox();return{x:b[0]+b[2]/2,y:b[1]+b[3]/2}}
-function k0(){const vw=vp.clientWidth||1,vh=vp.clientHeight||1,b=fitBox();return Math.max(b[2]/vw,b[3]/vh)}
+ if(view==='edit'&&PROD().family==='pen'){const nb=PROD().kind==='notebook',nar=vp.clientWidth<700,bw=w*(nb?(nar?1.25:1.7):(nar?1.16:1.5)),bh=h*(nb?1.5:2.6);return[w/2-bw/2,h/2-bh/2,bw,bh]}   /* the imprint area fills most of the canvas; the whole item shows in the corner overview */
+ const m=Math.max(w,h)*(view==='edit'&&vp.clientWidth<700?.15:.22);if(view==='proof'){const q=Math.max(150,Math.max(w,h)*.08+150),nar=vp.clientWidth<700;return[-m,-m*1.2,w+2*m+q,h+(nar?4.2:2.8)*m]}return[-m,-m,w+2*m,h+2*m]}
+function curCam(){if(cam)return cam;const b=fitBox(),fv=fitVis();return{x:b[0]+b[2]/2,y:b[1]+b[3]/2-fv.dy*k0()/zoom}}
+/* the part of the canvas a shopper can actually see when the view is fitted (the page can push the bottom of the
+   canvas under the bottom bar or off screen). Measured when the fit changes, not while scrolling, so nothing jumps. */
+let FITV=null,FITSIG='';
+function visPart(){const r=vp.getBoundingClientRect(),cb=document.querySelector('.cbar'),cbh=cb?cb.getBoundingClientRect().height:0,top=Math.max(r.top,0),bot=Math.min(r.bottom,innerHeight-cbh);
+ const h=clamp(bot-top,r.height*.45,r.height),mid=top+h/2;return{h,dy:mid-(r.top+r.height/2)}}
+function fitVis(){const sig=[W(),H(),view,vp.clientWidth,vp.clientHeight,D.pid].join(',');if(!FITV||cam===null&&sig!==FITSIG){FITSIG=sig;FITV=visPart()}return FITV}
+function k0(){const vw=vp.clientWidth||1,vh=fitVis().h||vp.clientHeight||1,b=fitBox();return Math.max(b[2]/vw,b[3]/vh)}
 let VB=[0,0,1,1];
 function camera(){const vw=vp.clientWidth,vh=vp.clientHeight;if(!vw||!vh)return;K=k0()/zoom;const c=curCam();VB=[c.x-vw*K/2,c.y-vh*K/2,vw*K,vh*K];
  svg.setAttribute('viewBox',VB.join(' '));$('#zLbl').textContent=Math.round(10000/(96*K))+'%'}
 function zoomTo(z,sx,sy){const vw=vp.clientWidth,vh=vp.clientHeight,kk=k0(),c=curCam(),kOld=kk/zoom;if(sx==null){sx=vw/2;sy=vh/2}
  const wx=c.x+(sx-vw/2)*kOld,wy=c.y+(sy-vh/2)*kOld;zoom=clamp(z,.25,16);const kNew=kk/zoom;cam={x:wx-(sx-vw/2)*kNew,y:wy-(sy-vh/2)*kNew};req()}
-function fit(){zoom=1;cam=null;req()}
+function fit(){zoom=1;cam=null;FITSIG='';req()}
+addEventListener('resize',()=>{FITSIG=''});
 function zoomActual(){zoomTo(zoom*(10000/(96*K))/100)}
 function zoomSel(){const els=selEls();if(!els.length){fit();return}const b=unionBox(els),vw=vp.clientWidth,vh=vp.clientHeight,pad=1.6,kk=k0();const k=Math.max(b.w*pad/vw,b.h*pad/vh,.02);zoom=clamp(kk/k,.25,16);cam={x:b.cx,y:b.cy};req()}
 function toScreen(x,y){return{x:(x-VB[0])/K,y:(y-VB[1])/K}}

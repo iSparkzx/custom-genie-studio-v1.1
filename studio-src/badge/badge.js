@@ -180,7 +180,7 @@ function syncPanel(){const p=P(),lk=look(p,S);
 
 /* ---------- render ---------- */
 let rq=0,actual=false;
-function render(){cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{const p=P(),ppl=people();if(who>=ppl.length)who=0;const person=ppl[who],z=sizeOf(p,S);
+function render(){cancelAnimationFrame(rq);rq=requestAnimationFrame(()=>{resetUI();const p=P(),ppl=people();if(who>=ppl.length)who=0;const person=ppl[who],z=sizeOf(p,S);
   const r=badge(p,S,person,{mode:'edit',px:actual?96:null});$('#badgeView').innerHTML=r.svg;
   $('#badgeView').setAttribute('aria-label',`${p.name} preview${person.name?': '+person.name:''}${person.title?', '+person.title:''}`);
   $('#stageBox').classList.toggle('actual',actual);
@@ -210,7 +210,27 @@ async function setLogo(src,{genie=false,svg=false}={}){
   syncPanel();render();return moved}
 
 /* ---------- toast ---------- */
-let tt;function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,4200)}
+window.CG_TOAST=m=>toast(m);   /* the shared site script (site.js: header, cart) uses this page's toast */
+let tt;function toast(m,act,fn){const t=$('#toast'),b=$('#toastAct');$('#toastTxt').textContent=m;b.hidden=!act;b.textContent=act||'';b.onclick=act?()=>{t.hidden=true;fn()}:null;t.hidden=false;clearTimeout(tt);tt=setTimeout(()=>t.hidden=true,act?8000:4200)}
+
+/* ---------- start over: back to a fresh badge of the same product (Undo brings it back) ---------- */
+let undoS=null;
+const freshS=()=>fit(blank(P()));
+function resetUI(){$('#startOver').disabled=JSON.stringify(S)===JSON.stringify(freshS())}
+function openReset(){const n=parseNames(S.names).length,li=[];
+ if(S.logo)li.push('Your logo');
+ li.push('Your text, fonts and text colors');
+ if(n)li.push(`Your team names list (${n} name${n===1?'':'s'})`);
+ if(S.bgImg)li.push('Your background image');
+ li.push('Background, border, size and back go back to where this badge starts');
+ $('#resetList').innerHTML=li.map(x=>`<li>${esc(x)}</li>`).join('');$('#resetDlg').showModal();track('badge_reset_open',{product:S.pid})}
+function resetBadge(){undoS=JSON.stringify(S);S=freshS();$('#genieP').value='';$('#genieMsg').textContent='';$('#geniePicks').innerHTML='';
+ save();syncPanel();render();track('badge_reset',{product:S.pid});
+ toast('Badge cleared. You\'re starting fresh with the sample badge.','Undo',()=>{if(!undoS)return;S=JSON.parse(undoS);undoS=null;save();syncPanel();render();toast('Your badge is back.')})}
+$('#startOver').addEventListener('click',openReset);
+$('#resetKeep').addEventListener('click',()=>$('#resetDlg').close());
+$('#resetGo').addEventListener('click',()=>{$('#resetDlg').close();resetBadge()});
+$('#resetDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.currentTarget.close()});
 
 /* ---------- events ---------- */
 function on(){
@@ -239,11 +259,9 @@ function on(){
   $('#whoPrev').addEventListener('click',()=>{const n=people().length;who=(who-1+n)%n;render()});$('#whoNext').addEventListener('click',()=>{who=(who+1)%people().length;render()});
   $('#actualBtn').addEventListener('click',e=>{actual=!actual;e.currentTarget.setAttribute('aria-pressed',String(actual));e.currentTarget.textContent=actual?'Fit to screen':'Actual size';render()});
   $('#reviewBtn').addEventListener('click',openReview);
-  $('#themeBtn').addEventListener('click',()=>{const d=document.documentElement,n=d.dataset.theme==='dark'?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('cg-theme',n)}catch(e){}themeLabel()});
-  document.addEventListener('click',e=>{const a=e.target.closest('[data-proto]');if(a){e.preventDefault();toast(a.dataset.proto)}});
-  $('#cartBtn').addEventListener('click',()=>toast('The cart opens on customgenie.com in production.'))}
+}
 let syncN;function syncPanelNames(){clearTimeout(syncN);syncN=setTimeout(syncPanel,300)}
-function themeLabel(){const d=document.documentElement;if(!d.dataset.theme)d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';const dark=d.dataset.theme==='dark';$('#themeBtn').setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode')}
+function themeLabel(){const d=document.documentElement;if(!d.dataset.theme)d.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
 
 /* ---------- fonts: re-measure once each font arrives ---------- */
 const loaded=new Set();
@@ -304,12 +322,10 @@ function rvEvents(){
   $('#next2').addEventListener('click',()=>go(3));
   $('#addCart').addEventListener('click',()=>{const p=P(),cd=cartData(),value=r2(cd.unit_price*cd.quantity);
     track('add_to_cart',{ecommerce:{currency:'USD',value,items:[{item_id:cd.sku,item_name:p.name,item_variant:[S.size,S.bg,S.border,S.attach].filter(Boolean).join(' / '),price:cd.unit_price,quantity:cd.quantity}]}});
-    let n=0;try{n=(parseInt(localStorage.getItem('cg-badge-cart')||'0',10)||0)+1;localStorage.setItem('cg-badge-cart',String(n))}catch(e){n=1}cartCount(n);dlg.close();
+    if(window.CGSite)window.CGSite.add({name:p.name,detail:(()=>{const z=sizeOf(p,S),n=parseNames(S.names).length;return[`${fmtIn(z.w)} × ${fmtIn(z.h)} in`,S.bg,S.border,S.attach,n>1?n+' names':''].filter(Boolean).join(' · ')})(),qty:cd.quantity,unit:cd.unit_price,total:value,sku:cd.sku,url:'p/'+p.url.split('/').filter(Boolean).pop()+'.html',studio:'basic',bigcommerce:cd});dlg.close();   /* one cart for the whole site (site.js) */
     toast(`Added to cart: ${p.name}, ${cd.quantity} badge${cd.quantity===1?'':'s'}, ${money(value)}.`)})}
-function cartCount(n){if(n==null){try{n=parseInt(localStorage.getItem('cg-badge-cart')||'0',10)||0}catch(e){n=0}}$('#cartCount').textContent=n;$('#cartBtn').setAttribute('aria-label',`Cart, ${n} item${n===1?'':'s'}`)}
 
 /* ---------- start ---------- */
-$('#ftrLogo').src=$('.logo img').src;
-buildStatic();syncPanel();on();rvEvents();themeLabel();cartCount();render();loadFont(S.font1);loadFont(S.font2);genieInit();
+buildStatic();syncPanel();on();rvEvents();themeLabel();render();loadFont(S.font1);loadFont(S.font2);genieInit();
 track('badge_view',{product:S.pid});
 if(DEBUG)window.__badge={get S(){return S},people,badge:(n)=>badge(P(),S,n||people()[0],{mode:'proof'}),variant:()=>variant(P(),S),cartData,DATA};

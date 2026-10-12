@@ -1,7 +1,7 @@
 /* =====================================================================
-   Genie × Nano Banana Pro (Gemini 3 Pro Image)
-   Logo requests in Genie are drawn by Nano Banana Pro through the Custom Genie server
-   (server.mjs), which keeps the Google API key private; the page never sees the key.
+   Genie AI artwork (server side image generation)
+   Logo requests in Genie are drawn by the Custom Genie server
+   (server.mjs), which keeps the AI provider key private; the page never sees the key.
    Click a result to add it to the canvas, or drag it onto the sticker. Follow-ups
    ("make the cup blue") edit the selected AI logo. Without the server (or its key),
    Genie keeps its built-in layouts, so customers never hit a dead end.
@@ -12,7 +12,7 @@ function nbCheck(){if(NB.on)return Promise.resolve(true);if(NB.checking)return N
  if(!/^https?:$/.test(location.protocol)&&!window.CUSTOM_GENIE_API)return Promise.resolve(false);
  NB.checking=fetch(NB.api+'/status',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{NB.on=!!(j&&j.enabled);if(j){NB.model=j.model||'';NB.n=j.perRequest||2;GC.on=!!(j.chat&&j.chat.enabled)&&!window.CUSTOM_GENIE_NO_CHAT;GC.model=(j.chat&&j.chat.model)||''}if(NB.on)nbBadge();if(GC.on)gcIntro();return NB.on}).catch(()=>false).finally(()=>{NB.checking=null});
  return NB.checking}
-function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent='Describe your logo or sticker and Genie draws options for you. Click one to add it to your canvas.';
+function nbBadge(){const ss=$('#startSub');if(ss)ss.textContent=`Describe your logo or ${NOUN()} and Genie draws options for you. Click one to add it to your canvas.`;
  const first=feed.querySelector('.gm.bot .bd');if(!first||first.querySelector('.gai-badge'))return;const p0=first.querySelector('p');if(p0)p0.innerHTML=p0.innerHTML.replace("I'll design four options to start from.","I'll draw logo options for you.");
  first.insertAdjacentHTML('beforeend','<p class="gai-badge"><span class="gai-dot" aria-hidden="true"></span><span><b>Genie AI Generated Artwork</b>. Click a design to add it to your canvas.</span></p>')}
 const nbIsAI=e=>!!(e&&e.type==='image'&&IM[e.key]&&(IM[e.key].ai||e.name==='Genie logo'));

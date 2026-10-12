@@ -8,6 +8,7 @@ Inputs:
   studio-src/badge/badge.html, badge.css, badge.js
 """
 import os, sys, re, json
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import sitechrome
 B = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(B, '..'); S = os.path.join(B, 'src'); BD = os.path.join(B, 'badge'); P = os.path.join(ROOT, 'products')
 rd = lambda p: open(p, encoding='utf-8').read()
 out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'public', 'badges.html')
@@ -49,17 +50,18 @@ def data():
 D = data()
 tokens = rd(os.path.join(S, 'style.css')); tokens = tokens[tokens.index(':root{'):tokens.index('*,*::before,*::after')]
 logo = rd(os.path.join(B, 'assets', 'logo.txt')).strip()
-used = set(re.findall(r'#(i-[a-z-]+)', rd(os.path.join(BD, 'badge.html')) + rd(os.path.join(BD, 'badge.js'))))
+SITE_HEADER, SITE_FOOTER = sitechrome.chrome('', 'badge')   # shared site header/footer (studio-src/site/)
+used = set(re.findall(r'#(i-[a-z-]+)', rd(os.path.join(BD, 'badge.html')) + rd(os.path.join(BD, 'badge.js')) + SITE_HEADER + SITE_FOOTER + sitechrome.js())) | set(sitechrome.ICONS)
 sprite = rd(os.path.join(S, 'sprite.html')); sprite = sprite[:sprite.index('</svg>') + 6]
 sprite = re.sub(r'<defs>[\s\S]*?</defs>\s*', '', sprite)
 sprite = re.sub(r'<symbol id="([^"]+)"[\s\S]*?</symbol>\s*', lambda m: m.group(0) if m.group(1) in used else '', sprite)
 missing = used - set(re.findall(r'<symbol id="([^"]+)"', sprite))
 if missing: raise SystemExit('icons not in sprite.html: %s' % sorted(missing))
 FONTS = ['Alegreya:wght@400;700', 'Anton', 'Archivo+Black', 'Bebas+Neue', 'Homemade+Apple', 'Josefin+Sans:wght@400;700', 'Lato:wght@400;700',
-         'Libre+Baskerville:wght@400;700', 'Montserrat:wght@400;700', 'Oswald:wght@400;700', 'Work+Sans:wght@400;500;600;700;800']
+         'Libre+Baskerville:wght@400;700', 'Montserrat:wght@400;700', 'Oswald:wght@400;700', 'Poppins:wght@400;500;600;700;800', 'Work+Sans:wght@400;500;600;700;800']
 font_url = 'https://fonts.googleapis.com/css2?' + '&'.join('family=' + f for f in FONTS) + '&display=swap'
 html = f'''<!doctype html>
-<html lang="en">
+<html lang="en" data-root="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -73,12 +75,17 @@ html = f'''<!doctype html>
 <noscript><link rel="stylesheet" href="{font_url}"></noscript>
 <style>
 {tokens}
-{rd(os.path.join(BD, 'badge.css'))}
+{sitechrome.css(rd(os.path.join(S, 'style.css')))}
+{sitechrome.strip(rd(os.path.join(BD, 'badge.css')))}
+body{{font-family:"Poppins","Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif}}
 </style>
 </head>
 <body>
 {sprite}
-{rd(os.path.join(BD, 'badge.html')).replace('{{LOGO}}', logo)}
+{rd(os.path.join(BD, 'badge.html')).replace('{{LOGO}}', logo).replace('{{SITE_HEADER}}', SITE_HEADER).replace('{{SITE_FOOTER}}', SITE_FOOTER)}
+<script>
+{sitechrome.js()}
+</script>
 <script>
 (()=>{{'use strict';
 const DATA={json.dumps(D, separators=(',', ':'))};
@@ -99,5 +106,6 @@ def asset(m):
 html = re.sub(r'\{\{([A-Z_]+)\}\}', asset, html)
 left = re.findall(r'\{\{[A-Z_]+\}\}', html)
 if left: raise SystemExit('leftover placeholders: %s' % left)
+sitechrome.write_assets(os.path.dirname(os.path.abspath(out)))
 open(out, 'w', encoding='utf-8').write(html)
 print('wrote', out, len(html), 'bytes |', len(D['products']), 'badges:', ', '.join('%s (%s)' % (p['name'], p['bc_id']) for p in D['products']))

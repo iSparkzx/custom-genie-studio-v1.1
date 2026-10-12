@@ -7,8 +7,8 @@ function chrome(){
  else if(editable()&&TOOLHINT[tool]&&!op)m=TOOLHINT[tool];else if(view==='dome'&&V3.failed&&!op&&!blank)m='Flat preview of the finished sticker (the 3D view needs an internet connection). Switch to Design to edit.';
  else if(view==='edit'&&D.shape==='custom'&&!CT.url&&$('#start').hidden)m='"Cut to design" traces around your artwork. Add a logo, text or shape first.';
  if(view!=='proof'){msg.textContent=m;msg.hidden=!m}
- legendUI();layersUI();fillIns();cbarUI();
- tplUI();heroUI();$('#layerArtTxt').textContent=`${artLabel()} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;viewBtns();$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
+ legendUI();layersUI();fillIns();cbarUI();resetUI();
+ tplUI();heroUI();miniUI();$('#layerArtTxt').textContent=`${artLabel()} · ${fmt(pricedSize().w)} × ${fmt(pricedSize().h)} in`;viewBtns();$('#layerArt').setAttribute('aria-pressed',String(!sel.length))}
 
 /* ---------- layers ---------- */
 const gopen={};
@@ -329,6 +329,36 @@ $('#qtyBtn')&&$('#qtyBtn').addEventListener('click',ev=>{const b=ev.currentTarge
 $('#chkPill').addEventListener('click',ev=>{const b=ev.currentTarget;if(!pop.hidden&&popFor===b){closePop();return}
  if(isBlank()){openPop(b,`<p class="hint" style="margin:6px 8px 8px;max-width:280px">The print check looks for small text, low-resolution images, art past the safe area, thin lines and low contrast. It runs as soon as you add a design.</p>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});return}
  openPop(b,`<div class="mh">Print check</div><ul class="checks" style="padding:0 2px 4px">${checksHTML(checks())}</ul>`,{btn:b,above:true,role:'dialog',cls:'chkpop'});pop.onclick=e2=>onCheckClick(e2,false)});
+/* ---------- start over: clear the whole design in one step (Undo brings it back) ---------- */
+const canReset=()=>!isBlank()||GC.hist.length>0||NB.R.length>0;
+/* never disabled, so it can't fade out or ignore a click: with nothing to clear it says so, and on a blank canvas
+   with the start card closed it brings the card back */
+function resetUI(){const on=canReset()||startDismissed,b=$('#resetBtn');b.setAttribute('aria-disabled',String(!on));b.dataset.tip=on?(canReset()?'Clear the whole design and start fresh':'Show the start card again'):'Nothing to clear yet';$('#lfoot').hidden=isBlank()}
+function openReset(){if(!canReset()){if(startDismissed&&isBlank()){startDismissed=false;req();requestAnimationFrame(()=>$('#startText').focus({preventScroll:true}));return}toast('Nothing to clear yet. Your design is already blank.');return}if(AI.busy||GC.busy){toast('Genie is still working on your design. Stop it first, then start over.');return}
+ const n=D.els.length,c={text:0,image:0,shape:0};D.els.forEach(e=>c[e.type==='text'?'text':e.type==='image'?'image':'shape']++);
+ const parts=[c.text&&`${c.text} text`,c.image&&`${c.image} image${c.image>1?'s':''}`,c.shape&&`${c.shape} shape${c.shape>1?'s':''}`].filter(Boolean),li=[];
+ if(n)li.push(`${n} layer${n>1?'s':''} (${parts.join(', ')})`);
+ if(D.bg.t!=='none')li.push(D.bg.t==='img'?'The background image':'The background color');
+ li.push(PROD().family==='sticker'?`Size, shape and options go back to where this ${NOUN()} starts`:`Options go back to where this ${NOUN()} starts`);
+ if(GC.hist.length||NB.R.length)li.push("Genie's conversation and artwork options");
+ $('#resetList').innerHTML=li.map(x=>`<li>${esc(x)}</li>`).join('');
+ const up=Object.values(IM).filter(m=>!m.derived).length;
+ $('#resetKeep').textContent=up?`Your uploaded ${up===1?'image stays':'images stay'} in Add, Uploads. Undo brings the design back if you change your mind.`:'Undo brings the design back if you change your mind.';
+ $('#resetDlg').showModal();track('builder_reset_open',{product:D.pid,layers:n})}
+function resetDesign(){const n=D.els.length,pid=D.pid;if(editing)inl.blur();if(NB.ctl)NB.ctl.abort();
+ CUR_PID=pid;CUR_OPT={};D=newDoc();D.groups={};tier=0;conform(false);     /* the same product, as it opens */
+ sel=[];hover=null;gfocus=null;guides=[];editing=null;CT.sig='';CT.url=null;CT.bbox=null;cam=null;zoom=1;FITSIG='';
+ startDismissed=false;QUOTE=null;resetOrder();
+ Object.assign(GC,{mode:'open',hist:[],brief:{},refs:[],notes:[],plans:[]});NB.R=[];RES.length=0;
+ Object.assign(AI,{a:null,mode:'prompt',logo:null,logoInfo:null,orig:null,recolorN:0,attach:null});
+ $('#startText').value='';$('#gtext').value='';genieIntro();
+ if(view!=='edit')setView('edit');setTool('move');if(NARROW.matches||MID.matches)closeSheets();
+ commit();syncPanels();req();track('builder_reset',{product:pid,layers:n});
+ toast('Design cleared. Start fresh with Genie, a template or a blank canvas.','Undo',undo);
+ requestAnimationFrame(()=>{const f=$('#start:not([hidden]) button');(f||svg).focus({preventScroll:true})})}
+$('#resetBtn').addEventListener('click',openReset);$('#resetLink').addEventListener('click',openReset);
+$('#resetGo').addEventListener('click',()=>{$('#resetDlg').close();resetDesign()});
+$('#resetDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.currentTarget.close()});
 $('#reviewBtn').addEventListener('click',()=>{if(isBlank()){startDismissed=false;setView('edit');req();if(NARROW.matches)openSheet('genie');else requestAnimationFrame(()=>$('#startText').focus());return}openReview()});
 
 /* ---------- print check (codes follow the Print MCP spec) ---------- */
@@ -536,12 +566,13 @@ function confirmOk(){const ok=$('#confirm').checked;$('#confirmBox').dataset.inv
 function resetOrder(){$('#confirm').checked=false;$('#confirmBox').dataset.invalid='false';$('#confirmErr').hidden=true;$('#instr').value='';$('#instrCount').textContent='0 / 250';$('#instrWrap').open=false}
 async function cartPush(artwork){const t=curTier(),ps=pricedSize(),instr=$('#instr').value.trim();
  let co=null;try{const q=QUOTE||await PrintAPI.getQuote({size_in:{w:ps.w,h:ps.h},shape:D.shape,quantity:t.q,options:choice()}),pr=await PrintAPI.createProof({quote_id:q.quote_id,notes:instr});co=await PrintAPI.createCheckout({quote_id:q.quote_id,proof_id:pr.proof_id,idempotency_key:q.quote_id+':'+pr.proof_id})}catch(e){}
- cart++;$('#cartCount').textContent=cart;$('#cartBtn').setAttribute('aria-label',`Cart, ${cart} item${cart===1?'':'s'}`);$('#cartBtn').classList.remove('bump');void $('#cartBtn').offsetWidth;$('#cartBtn').classList.add('bump');window.dataLayer.push({ecommerce:null});
+ const p=PROD(),url='p/'+p.url.split('/').filter(Boolean).pop()+'.html';   /* one cart for the whole site (site.js) */
+ cart=window.CGSite?window.CGSite.add({name:p.name,detail:[finishName(),p.family==='sticker'?SN[D.shape]:'',...optRoles().map(r=>choice()[r]),`${fmt(ps.w)} × ${fmt(ps.h)} in`,artwork==='email_later'?'artwork by email':''].filter(Boolean).join(' · '),qty:t.q,unit:t.p,total:t.t,sku:skuFor(),url,studio:'advanced',bigcommerce:cartLine()}):cart+1;window.dataLayer.push({ecommerce:null});
  track('add_to_cart',{ecommerce:{currency:'USD',value:t.t,items:[{item_id:skuFor(),item_name:PROD().name,item_variant:[finishName(),PROD().family==='sticker'?SN[D.shape]:'',...optRoles().map(r=>choice()[r]),`${fmt(ps.w)}x${fmt(ps.h)} in`].filter(Boolean).join(' / '),price:t.p,quantity:t.q}]},bigcommerce:cartLine(),artwork,special_instructions:instr,draft_order_id:co&&co.draft_order_id});return t}
-$('#addCart').addEventListener('click',async()=>{if(!confirmOk())return;const t=await cartPush('designed');$('#reviewDlg').close();toast(`Added to cart: ${t.q.toLocaleString()} × ${PROD().name}, ${money(t.t)}.`,'View cart',()=>toast("Prototype: the cart page isn't connected."));resetOrder()});
+$('#addCart').addEventListener('click',async()=>{if(!confirmOk())return;const t=await cartPush('designed');$('#reviewDlg').close();toast(`Added to cart: ${t.q.toLocaleString()} × ${PROD().name}, ${money(t.t)}.`,'View cart',()=>window.CGSite&&window.CGSite.openCart());resetOrder()});
 ['gpay','apay'].forEach(id=>$('#'+id).addEventListener('click',()=>{if(confirmOk())toast(`Prototype: ${id==='gpay'?'Google Pay':'Apple Pay'} opens on the secure checkout page in production.`)}));
 $('#saveBtn').addEventListener('click',()=>{save();toast("Design saved in this browser. It'll be here when you come back.")});
-$('#laterBtn').addEventListener('click',async()=>{const t=await cartPush('email_later');toast(`Added ${t.q.toLocaleString()} ${t.q===1?NOUN():NOUNS()} (${money(t.t)}) to your cart. We'll email you to collect your artwork.`)});
+$('#laterBtn').addEventListener('click',async()=>{const t=await cartPush('email_later');toast(`Added ${t.q.toLocaleString()} ${t.q===1?NOUN():NOUNS()} (${money(t.t)}) to your cart. We'll email you to collect your artwork.`,'View cart',()=>window.CGSite&&window.CGSite.openCart())});
 
 /* ---------- panels: tabs, toggles, mobile sheets ---------- */
 function setLTab(t){$$('.ptabs [data-ltab]').forEach(b=>{const on=b.dataset.ltab===t;b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1});$$('#lp .pbody').forEach(p=>p.hidden=p.dataset.pane!==t);$('#lpTitle').textContent={layers:'Layers',assets:'Add to your sticker',genie:'Genie'}[t];studio.classList.toggle('lt-genie',t==='genie');$('#genieBtn').setAttribute('aria-pressed',String(t==='genie'&&!studio.classList.contains('no-left')));if(t==='genie'&&typeof genieOpened==='function')genieOpened()}
@@ -586,9 +617,14 @@ $('#startText').addEventListener('keydown',ev=>{if(ev.key==='Enter'&&!ev.shiftKe
 let startLogo=null;
 $('#startAttach').addEventListener('click',()=>$('#startFile').click());
 $('#startFile').addEventListener('change',ev=>{const f=ev.target.files[0];ev.target.value='';loadFile(f,k=>{startLogo=k;const b=$('#startAttach');b.classList.add('has');$('span',b).textContent=IM[k].name})});
-$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast('Describe your sticker, or add your logo.');return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
-$$('#start [data-ex]').forEach(b=>b.addEventListener('click',()=>{const t=$('#startText');t.value=b.dataset.ex;t.dispatchEvent(new Event('input'));t.focus()}));
-$('#start').addEventListener('click',ev=>{const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
+$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast(`Describe your ${NOUN()}, or add your logo.`);return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
+/* example prompts are re-drawn per product (startCopyUI), so listen on the card, not on each button */
+function closeStart(){startDismissed=true;req();svg.focus({preventScroll:true});track('builder_start_close');
+ toast(NARROW.matches?'Genie is still here: tap Genie at the bottom.':'Genie is still here: Generate with Genie in the toolbar.')}
+$('#startClose').addEventListener('click',closeStart);
+$('#start').addEventListener('keydown',ev=>{if(ev.key==='Escape'){ev.preventDefault();ev.stopPropagation();closeStart()}});
+$('#start').addEventListener('click',ev=>{const x=ev.target.closest('[data-ex]');if(x){const t=$('#startText');t.value=x.dataset.ex;t.dispatchEvent(new Event('input'));t.focus();return}
+ const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
  if(k==='upload'){$('#gfile').dataset.mode='analyze';$('#gfile').click()}
  if(k==='templates'){openSheet('assets');setLTab('assets');toast('Pick a template on the left. Everything in it stays editable.')}
  if(k==='blank'){startDismissed=true;req();svg.focus();toast('Blank canvas. Press T for text, R for a rectangle, or open Assets.')}});
@@ -607,14 +643,11 @@ $('#keysDlg').addEventListener('click',ev=>{if(ev.target===ev.currentTarget)ev.c
 /* ---------- page chrome ---------- */
 let tt;function toast(m,label,fn){const t=$('#toast');$('#toastTxt').textContent=m;const b=$('#toastAct');if(label&&fn){b.hidden=false;b.textContent=label;b.onclick=()=>{t.classList.remove('show');fn()}}else{b.hidden=true;b.onclick=null}t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),label?6500:4200)}
 function say(m){const l=$('#live');l.textContent='';setTimeout(()=>{l.textContent=m},30)}
-document.addEventListener('click',ev=>{const a=ev.target.closest('[data-proto]');if(a){ev.preventDefault();toast('Prototype: '+a.dataset.proto)}});
-$('#cartBtn').addEventListener('click',()=>toast(cart?`Prototype: the cart page isn't connected. ${cart} item${cart===1?'':'s'} added this session.`:'Your cart is empty. Design your sticker and add it here.'));
-$('#searchForm').addEventListener('submit',ev=>{ev.preventDefault();toast("Prototype: search isn't connected.")});
+window.CG_TOAST=m=>toast(m);   /* the shared site script (site.js: theme, mega menu, search, prototype links, cart) uses this page's toast */
 const DARKQ=matchMedia('(prefers-color-scheme: dark)');
 const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':DARKQ.matches};
-function themeUI(){const l=isDark()?'Switch to light mode':'Switch to dark mode',b=$('#themeBtn');b.setAttribute('aria-label',l);b.title=l;rulCol=null}
-$('#themeBtn').addEventListener('click',()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('cg-theme',t)}catch(e){}themeUI();req()});
-DARKQ.addEventListener('change',()=>{themeUI();req()});themeUI();
+function themeUI(){rulCol=null}   /* the theme button lives in the shared header (site.js); redraw rulers and canvas in the new colors */
+addEventListener('cg:theme',()=>{themeUI();req()});
 {const more=$('#descMore'),db=$('#descBtn');if(db)db.addEventListener('click',()=>{const open=db.getAttribute('aria-expanded')==='true';db.setAttribute('aria-expanded',String(!open));more.hidden=open;db.textContent=open?'Read more':'Show less'})}
 const dtabs=$$('.dtabs [role=tab]');
 function openD(t){dtabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on})}
@@ -635,18 +668,12 @@ $$('[data-tryfinish]').forEach(b=>b.addEventListener('click',()=>{const v=b.data
 {const row=$('.up-cards'),dots=$('#upDots');if(row&&dots){const cards=$$('.pcard',row);dots.innerHTML=cards.map((c,i)=>`<button type="button" aria-label="Show card ${i+1} of ${cards.length}"></button>`).join('');const bs=$$('button',dots);
  const cur=()=>{const x=row.scrollLeft;let best=0,bd=1e9;cards.forEach((c,i)=>{const d=Math.abs(c.offsetLeft-16-x);if(d<bd){bd=d;best=i}});bs.forEach((b,i)=>b.setAttribute('aria-current',String(i===best)))};
  row.addEventListener('scroll',()=>requestAnimationFrame(cur),{passive:true});bs.forEach((b,i)=>b.addEventListener('click',()=>row.scrollTo({left:cards[i].offsetLeft-16,behavior:reduce.matches?'auto':'smooth'})));cur()}}
-/* mega menu */
-{const megaBtn=$('#megaBtn'),mega=$('#mega'),megaHov=matchMedia('(hover:hover) and (min-width:1180px)');let megaT=0,megaAt=0;
- const megaOpen=(on,back)=>{if(on===!mega.hidden)return;megaBtn.setAttribute('aria-expanded',String(on));mega.hidden=!on;if(on){megaAt=Date.now();$$('#mega .pop img').forEach(im=>{if(!im.getAttribute('src')&&im.dataset.src)im.src=im.dataset.src})}else if(back)megaBtn.focus()};
- megaBtn.addEventListener('click',()=>{if(!mega.hidden&&Date.now()-megaAt<450)return;megaOpen(mega.hidden)});
- megaBtn.parentElement.addEventListener('mouseenter',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(true),140)});
- megaBtn.parentElement.addEventListener('mouseleave',()=>{if(!megaHov.matches)return;clearTimeout(megaT);megaT=setTimeout(()=>megaOpen(false),220)});
- document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&!mega.hidden)megaOpen(false,true)});
- document.addEventListener('click',ev=>{if(!mega.hidden&&!ev.target.closest('.has-mega'))megaOpen(false)});
- megaBtn.parentElement.addEventListener('focusout',ev=>{if(!megaBtn.parentElement.contains(ev.relatedTarget))megaOpen(false)});
- mega.addEventListener('click',ev=>{const sh=ev.target.closest('[data-mshape]'),fn=ev.target.closest('[data-mfin]'),go=ev.target.closest('[data-mgo]'),cur=ev.target.closest('a[aria-current]');if(!sh&&!fn&&!go&&!cur)return;ev.preventDefault();megaOpen(false);
-  $('#builder').scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'start'});
-  if(go&&go.dataset.mgo==='ai'){openGenie(true);return}if(sh){setSel([]);setShape(sh.dataset.mshape);toast(`Shape set to ${SN[sh.dataset.mshape]}.`)}if(fn){setSel([]);setVinyl(fn.dataset.mfin);toast(`Finish set to ${VN[fn.dataset.mfin]}.`)}})}
+/* mega menu actions on this page (the menu itself is the shared header, site.js): shape and finish buttons set the
+   design, "Ask the AI designer" opens Genie. Other pages open this studio with ?shape= / ?genie=1 instead. */
+window.CG_MEGA=a=>{$('#builder').scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'start'});
+ if(a.go==='ai'){openGenie(true);return true}if(a.go==='design')return true;
+ if(a.shape){if(PROD().family!=='sticker'||!(PROD().shapes||[]).includes(a.shape))return false;setSel([]);setShape(a.shape);toast(`Shape set to ${SN[a.shape]}.`)}
+ if(a.fin){if(!finishAvail(a.fin))return false;setSel([]);setVinyl(a.fin);toast(`Finish set to ${VN[a.fin]}.`)}return true};
 
 /* how much of the viewport bottom the quote bar covers; notes pill and toasts sit above it */
 {let raf=0;const cb=$('.cbar'),upd=()=>{raf=0;const r=cb.getBoundingClientRect(),ob=r.top<innerHeight&&r.bottom>0?Math.max(0,innerHeight-r.top):0;document.documentElement.style.setProperty('--ob',Math.round(ob)+'px')};
@@ -685,5 +712,13 @@ let heroSig='';
 function heroUI(){const p=PROD();if(heroSig===p.id)return;heroSig=p.id;const f=FAMI(),cap=s2=>s2.replace(/^./,c=>c.toUpperCase());
  $('#pTitle').textContent=p.name;$('#pTitle').classList.toggle('long',p.name.length>34);$('#crumbFam').textContent=f.label;$('#crumbProd').textContent=p.category||p.name;
  document.title=`${p.name} | Genie Studio Advanced | Custom Genie`;$('#layerArtNoun').textContent=cap(NOUN());
- $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());
- const cv=$('#cv');cv.setAttribute('aria-label',`${cap(f.one)} design canvas`)}
+ $$('[data-noun="many"]').forEach(e=>e.textContent=NOUNS());$$('[data-noun="one"]').forEach(e=>e.textContent=NOUN());
+ const cv=$('#cv');cv.setAttribute('aria-label',`${cap(NOUN())} design canvas`);startCopyUI()}
+/* start card: wording and example prompts for the product being designed */
+function startCopyUI(){const c=startCopy(),n=NOUN();$('#startText').placeholder=c.ph;$('#startLbl').textContent=`Describe your ${n}`;
+ const ss=$('#startSub');if(ss)ss.textContent=NB.on?`Describe your logo or ${n} and Genie draws options for you. Click one to add it to your canvas.`:`Describe your ${n} and Genie designs four options. Everything stays editable, layer by layer.`;
+ $('#startEx').innerHTML=c.ex.map(([l,x])=>`<button type="button" data-ex="${esc(x)}">${esc(l)}</button>`).join('')}
+/* pens and notebooks: the whole item, with the design, in the corner while you edit the imprint up close */
+let miniT=0,miniSig='';
+function miniUI(){const m=$('#itemMini');if(!m)return;const on=PROD().family==='pen'&&view==='edit';m.hidden=!on;if(!on)return;
+ const sig=JSON.stringify([D.pid,D.opt,D.els,D.bg]);if(sig===miniSig)return;miniSig=sig;clearTimeout(miniT);miniT=setTimeout(()=>{$('#itemMiniArt').innerHTML=thumbSVG(D,`Your design on the ${NOUN()}`,{proof:true});$('#itemMiniCap').textContent=`On the ${NOUN()}`},120)}

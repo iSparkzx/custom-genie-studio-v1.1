@@ -255,9 +255,11 @@ inl.addEventListener('keydown',e=>{if(e.key==='Escape'||(e.key==='Enter'&&(e.ctr
 
 /* ---------- keyboard ---------- */
 const typing=t=>t&&t.closest&&t.closest('input,textarea,select,[contenteditable="true"]');
-document.addEventListener('keydown',ev=>{const t=ev.target;if(typing(t))return;if($('#reviewDlg').open||$('#keysDlg').open)return;
+document.addEventListener('keydown',ev=>{const t=ev.target;if(typing(t))return;if($('#reviewDlg').open||$('#keysDlg').open||$('#resetDlg').open)return;
  if(!studio.contains(t)&&t!==document.body&&!(t&&t.closest&&t.closest('.pop')))return;
  const mod=ev.ctrlKey||ev.metaKey,c=ev.code,k=ev.key;
+ /* Enter and Space press the focused button or control (WCAG 2.1.1); the canvas shortcuts only take them on the canvas itself */
+ if((k==='Enter'||k===' ')&&t&&t.closest&&t.closest('button,a[href],summary,select,[role="button"],[role="radio"],[role="tab"],[role="menuitem"]'))return;
  if(k===' '&&!ev.repeat&&!mod){ev.preventDefault();spaceDown=true;vp.classList.add('panning');return}
  if(mod&&c==='KeyZ'){ev.preventDefault();ev.shiftKey?redo():undo();return}
  if(mod&&c==='KeyY'){ev.preventDefault();redo();return}
@@ -336,7 +338,7 @@ let draftLostImg=false;function loadDraft(){try{const s=localStorage.getItem(DKE
 /* ---------- images ---------- */
 const MAX_MB=25;function loadFile(file,cb){if(!file)return;if(!/^image\//.test(file.type)){toast(`"${file.name}" isn't an image. Choose a PNG, JPG, SVG or WebP file.`);return}if(file.size>MAX_MB*1048576){toast(`"${file.name}" is ${(file.size/1048576).toFixed(0)} MB. Choose a file under ${MAX_MB} MB.`);return}
  const r=new FileReader();r.onload=()=>{const key=nid(),img=new Image();img.onload=()=>{IM[key]={url:r.result,img,name:file.name,vector:file.type==='image/svg+xml',natW:img.naturalWidth||1000,natH:img.naturalHeight||1000};upThumbs();cb(key)};img.onerror=()=>toast(`Couldn't open "${file.name}". Try a PNG or JPG.`);img.src=r.result};r.readAsDataURL(file)}
-function upThumbs(){const g=$('#upGrid');g.innerHTML=Object.entries(IM).filter(([k,m])=>!m.derived).map(([k,m])=>`<button type="button" data-addimg="${k}" aria-label="Add ${esc(m.name)} to the sticker" data-tip="${esc(m.name)}"><img src="${m.url}" alt=""></button>`).join('')}
+function upThumbs(){const g=$('#upGrid');g.innerHTML=Object.entries(IM).filter(([k,m])=>!m.derived).map(([k,m])=>`<button type="button" data-addimg="${k}" aria-label="Add ${esc(m.name)} to the ${esc(NOUN())}" data-tip="${esc(m.name)}"><img src="${m.url}" alt=""></button>`).join('')}
 function addImage(key,at){const m=IM[key],ar=m.natW/m.natH,mx=Math.min(W(),H())*.7;let w=mx,h=mx;if(ar>=1)h=w/ar;else w=h*ar;if(w>W()*.85){h*=W()*.85/w;w=W()*.85}
  const inside=at&&at.x>0&&at.y>0&&at.x<W()&&at.y<H();addEl(base('image',{key,w,h,x:inside?at.x:W()/2,y:inside?at.y:H()/2,clear:false}),'upload')}
 function makeClear(key){const m=IM[key];if(!m)return Promise.resolve();if(m.clear)return Promise.resolve();if(m.clearing)return m.clearing;
