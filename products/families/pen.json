@@ -1,0 +1,22 @@
+{
+  "family": "pen",
+  "label": "Pens, pencils & notebooks",
+  "bigcommerce_template": "penprod",
+  "editor": {
+    "mode": "imprint",
+    "fields": ["text_1", "text_2", "logo"],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout8)",
+    "genie": true
+  },
+  "previews": ["flat", "scene:product_model"],
+  "types": {},
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:product_model' means a picture of the actual pen or notebook model in the chosen color; still to be built."
+  ],
+  "todo": [
+    "Imprint area (width x height) and position for every pen model and the notebook.",
+    "Ink colors allowed per model and method (printed vs engraved), and the color limit.",
+    "Production file format for imprints."
+  ]
+}

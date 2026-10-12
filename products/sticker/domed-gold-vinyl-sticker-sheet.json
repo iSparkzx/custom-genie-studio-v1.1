@@ -1,0 +1,1474 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "domed_gold_vinyl_sticker_sheet",
+  "name": "Domed Gold Vinyl Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Domed",
+  "group": "sheets_domed",
+  "status": "live",
+  "studio_status": "built",
+  "bigcommerce": {
+    "product_id": 183,
+    "url": "/stickers/domed-gold-vinyl-sticker-sheet/",
+    "sku": "57METGLDDOM",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "dome": true,
+  "sheet_in": {
+    "w": 9.25,
+    "h": 10
+  },
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.19,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 35664,
+        "sku": "57METGLDDOM-05-05",
+        "price": 0.19,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 35675,
+        "sku": "57METGLDDOM-05-10",
+        "price": 0.38,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 35681,
+        "sku": "57METGLDDOM-05-20",
+        "price": 0.77,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 35684,
+        "sku": "57METGLDDOM-05-30",
+        "price": 1.15,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 35688,
+        "sku": "57METGLDDOM-05-40",
+        "price": 1.54,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 35691,
+        "sku": "57METGLDDOM-05-50",
+        "price": 1.92,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 35694,
+        "sku": "57METGLDDOM-05-60",
+        "price": 2.31,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 35697,
+        "sku": "57METGLDDOM-05-70",
+        "price": 2.69,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 35701,
+        "sku": "57METGLDDOM-05-80",
+        "price": 1.54,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 35702,
+        "sku": "57METGLDDOM-05-85",
+        "price": 1.64,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 35943,
+        "sku": "57METGLDDOM-10-05",
+        "price": 0.38,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 35955,
+        "sku": "57METGLDDOM-10-10",
+        "price": 0.77,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 35962,
+        "sku": "57METGLDDOM-10-20",
+        "price": 1.54,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 35966,
+        "sku": "57METGLDDOM-10-30",
+        "price": 2.31,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 35969,
+        "sku": "57METGLDDOM-10-40",
+        "price": 1.54,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 35972,
+        "sku": "57METGLDDOM-10-50",
+        "price": 1.92,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 35975,
+        "sku": "57METGLDDOM-10-60",
+        "price": 2.31,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 35978,
+        "sku": "57METGLDDOM-10-70",
+        "price": 2.69,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 35982,
+        "sku": "57METGLDDOM-10-80",
+        "price": 3.08,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 35983,
+        "sku": "57METGLDDOM-10-85",
+        "price": 3.27,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36104,
+        "sku": "57METGLDDOM-20-05",
+        "price": 0.77,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36115,
+        "sku": "57METGLDDOM-20-10",
+        "price": 1.54,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36121,
+        "sku": "57METGLDDOM-20-20",
+        "price": 1.54,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36124,
+        "sku": "57METGLDDOM-20-30",
+        "price": 2.31,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36127,
+        "sku": "57METGLDDOM-20-40",
+        "price": 3.08,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36130,
+        "sku": "57METGLDDOM-20-50",
+        "price": 5.21,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36133,
+        "sku": "57METGLDDOM-20-60",
+        "price": 6.25,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36137,
+        "sku": "57METGLDDOM-20-70",
+        "price": 7.3,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36140,
+        "sku": "57METGLDDOM-20-80",
+        "price": 4.69,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36141,
+        "sku": "57METGLDDOM-20-85",
+        "price": 4.98,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36183,
+        "sku": "57METGLDDOM-30-05",
+        "price": 1.15,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36194,
+        "sku": "57METGLDDOM-30-10",
+        "price": 2.31,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36200,
+        "sku": "57METGLDDOM-30-20",
+        "price": 2.31,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36204,
+        "sku": "57METGLDDOM-30-30",
+        "price": 4.69,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36207,
+        "sku": "57METGLDDOM-30-40",
+        "price": 6.25,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36210,
+        "sku": "57METGLDDOM-30-50",
+        "price": 7.82,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36213,
+        "sku": "57METGLDDOM-30-60",
+        "price": 5.28,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36216,
+        "sku": "57METGLDDOM-30-70",
+        "price": 6.16,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36220,
+        "sku": "57METGLDDOM-30-80",
+        "price": 7.04,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36221,
+        "sku": "57METGLDDOM-30-85",
+        "price": 17.19,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36262,
+        "sku": "57METGLDDOM-40-05",
+        "price": 1.54,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36273,
+        "sku": "57METGLDDOM-40-10",
+        "price": 1.54,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36279,
+        "sku": "57METGLDDOM-40-20",
+        "price": 3.08,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36283,
+        "sku": "57METGLDDOM-40-30",
+        "price": 6.25,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36286,
+        "sku": "57METGLDDOM-40-40",
+        "price": 4.69,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36289,
+        "sku": "57METGLDDOM-40-50",
+        "price": 5.86,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36292,
+        "sku": "57METGLDDOM-40-60",
+        "price": 7.04,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36295,
+        "sku": "57METGLDDOM-40-70",
+        "price": 18.87,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36298,
+        "sku": "57METGLDDOM-40-80",
+        "price": 21.57,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36300,
+        "sku": "57METGLDDOM-40-85",
+        "price": 22.92,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36341,
+        "sku": "57METGLDDOM-50-05",
+        "price": 1.92,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36352,
+        "sku": "57METGLDDOM-50-10",
+        "price": 1.92,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36359,
+        "sku": "57METGLDDOM-50-20",
+        "price": 5.21,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36362,
+        "sku": "57METGLDDOM-50-30",
+        "price": 7.82,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36365,
+        "sku": "57METGLDDOM-50-40",
+        "price": 5.86,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36368,
+        "sku": "57METGLDDOM-50-50",
+        "price": 16.85,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36371,
+        "sku": "57METGLDDOM-50-60",
+        "price": 20.22,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36375,
+        "sku": "57METGLDDOM-50-70",
+        "price": 23.59,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36378,
+        "sku": "57METGLDDOM-50-80",
+        "price": 18.72,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36379,
+        "sku": "57METGLDDOM-50-85",
+        "price": 19.89,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36421,
+        "sku": "57METGLDDOM-60-05",
+        "price": 2.31,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36430,
+        "sku": "57METGLDDOM-60-10",
+        "price": 2.31,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36434,
+        "sku": "57METGLDDOM-60-20",
+        "price": 6.25,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36436,
+        "sku": "57METGLDDOM-60-30",
+        "price": 5.28,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36438,
+        "sku": "57METGLDDOM-60-40",
+        "price": 7.04,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36440,
+        "sku": "57METGLDDOM-60-50",
+        "price": 20.22,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36442,
+        "sku": "57METGLDDOM-60-60",
+        "price": 16.85,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36444,
+        "sku": "57METGLDDOM-60-70",
+        "price": 19.66,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36446,
+        "sku": "57METGLDDOM-60-80",
+        "price": 22.47,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36447,
+        "sku": "57METGLDDOM-60-85",
+        "price": 17.54,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36473,
+        "sku": "57METGLDDOM-70-05",
+        "price": 2.69,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36480,
+        "sku": "57METGLDDOM-70-10",
+        "price": 2.69,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36484,
+        "sku": "57METGLDDOM-70-20",
+        "price": 7.3,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36486,
+        "sku": "57METGLDDOM-70-30",
+        "price": 6.16,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36488,
+        "sku": "57METGLDDOM-70-40",
+        "price": 18.87,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36490,
+        "sku": "57METGLDDOM-70-50",
+        "price": 23.59,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36492,
+        "sku": "57METGLDDOM-70-60",
+        "price": 19.66,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36494,
+        "sku": "57METGLDDOM-70-70",
+        "price": 16.85,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36496,
+        "sku": "57METGLDDOM-70-80",
+        "price": 19.26,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36497,
+        "sku": "57METGLDDOM-70-85",
+        "price": 20.46,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36498,
+        "sku": "57METGLDDOM-80-05",
+        "price": 1.54,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36505,
+        "sku": "57METGLDDOM-80-10",
+        "price": 3.08,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36509,
+        "sku": "57METGLDDOM-80-20",
+        "price": 4.69,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36511,
+        "sku": "57METGLDDOM-80-30",
+        "price": 7.04,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36513,
+        "sku": "57METGLDDOM-80-40",
+        "price": 21.57,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36515,
+        "sku": "57METGLDDOM-80-50",
+        "price": 18.72,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36517,
+        "sku": "57METGLDDOM-80-60",
+        "price": 22.47,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36519,
+        "sku": "57METGLDDOM-80-70",
+        "price": 19.26,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36521,
+        "sku": "57METGLDDOM-80-80",
+        "price": 16.85,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36522,
+        "sku": "57METGLDDOM-80-85",
+        "price": 17.9,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36523,
+        "sku": "57METGLDDOM-85-05",
+        "price": 1.64,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36530,
+        "sku": "57METGLDDOM-85-10",
+        "price": 3.27,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36534,
+        "sku": "57METGLDDOM-85-20",
+        "price": 4.98,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36536,
+        "sku": "57METGLDDOM-85-30",
+        "price": 17.19,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36538,
+        "sku": "57METGLDDOM-85-40",
+        "price": 22.92,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36540,
+        "sku": "57METGLDDOM-85-50",
+        "price": 19.89,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36542,
+        "sku": "57METGLDDOM-85-60",
+        "price": 17.54,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36544,
+        "sku": "57METGLDDOM-85-70",
+        "price": 20.46,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36546,
+        "sku": "57METGLDDOM-85-80",
+        "price": 17.9,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36547,
+        "sku": "57METGLDDOM-85-85",
+        "price": 19.02,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.19,
+      "0.5x1": 0.38,
+      "0.5x2": 0.77,
+      "0.5x3": 1.15,
+      "0.5x4": 1.54,
+      "0.5x5": 1.92,
+      "0.5x6": 2.31,
+      "0.5x7": 2.69,
+      "0.5x8": 1.54,
+      "0.5x8.5": 1.64,
+      "1x0.5": 0.38,
+      "1x1": 0.77,
+      "1x2": 1.54,
+      "1x3": 2.31,
+      "1x4": 1.54,
+      "1x5": 1.92,
+      "1x6": 2.31,
+      "1x7": 2.69,
+      "1x8": 3.08,
+      "1x8.5": 3.27,
+      "2x0.5": 0.77,
+      "2x1": 1.54,
+      "2x2": 1.54,
+      "2x3": 2.31,
+      "2x4": 3.08,
+      "2x5": 5.21,
+      "2x6": 6.25,
+      "2x7": 7.3,
+      "2x8": 4.69,
+      "2x8.5": 4.98,
+      "3x0.5": 1.15,
+      "3x1": 2.31,
+      "3x2": 2.31,
+      "3x3": 4.69,
+      "3x4": 6.25,
+      "3x5": 7.82,
+      "3x6": 5.28,
+      "3x7": 6.16,
+      "3x8": 7.04,
+      "3x8.5": 17.19,
+      "4x0.5": 1.54,
+      "4x1": 1.54,
+      "4x2": 3.08,
+      "4x3": 6.25,
+      "4x4": 4.69,
+      "4x5": 5.86,
+      "4x6": 7.04,
+      "4x7": 18.87,
+      "4x8": 21.57,
+      "4x8.5": 22.92,
+      "5x0.5": 1.92,
+      "5x1": 1.92,
+      "5x2": 5.21,
+      "5x3": 7.82,
+      "5x4": 5.86,
+      "5x5": 16.85,
+      "5x6": 20.22,
+      "5x7": 23.59,
+      "5x8": 18.72,
+      "5x8.5": 19.89,
+      "6x0.5": 2.31,
+      "6x1": 2.31,
+      "6x2": 6.25,
+      "6x3": 5.28,
+      "6x4": 7.04,
+      "6x5": 20.22,
+      "6x6": 16.85,
+      "6x7": 19.66,
+      "6x8": 22.47,
+      "6x8.5": 17.54,
+      "7x0.5": 2.69,
+      "7x1": 2.69,
+      "7x2": 7.3,
+      "7x3": 6.16,
+      "7x4": 18.87,
+      "7x5": 23.59,
+      "7x6": 19.66,
+      "7x7": 16.85,
+      "7x8": 19.26,
+      "7x8.5": 20.46,
+      "8x0.5": 1.54,
+      "8x1": 3.08,
+      "8x2": 4.69,
+      "8x3": 7.04,
+      "8x4": 21.57,
+      "8x5": 18.72,
+      "8x6": 22.47,
+      "8x7": 19.26,
+      "8x8": 16.85,
+      "8x8.5": 17.9,
+      "8.5x0.5": 1.64,
+      "8.5x1": 3.27,
+      "8.5x2": 4.98,
+      "8.5x3": 17.19,
+      "8.5x4": 22.92,
+      "8.5x5": 19.89,
+      "8.5x6": 17.54,
+      "8.5x7": 20.46,
+      "8.5x8": 17.9,
+      "8.5x8.5": 19.02
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask",
+    "dome",
+    "3d"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1942,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1943,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 972,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 973,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 974,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 975,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 977,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 978,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 979,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 980,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 981,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 982,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 983,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 985,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 986,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 987,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 988,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 989,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2062,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2172,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      },
+      {
+        "id": 2173,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2531,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 2533,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 2534,
+        "name": "Background Color",
+        "type": "swatch",
+        "required": false,
+        "role": "background_mode",
+        "values": [
+          {
+            "id": 1779,
+            "label": "Gold"
+          },
+          {
+            "id": 1780,
+            "label": "Upload Background"
+          },
+          {
+            "id": 1781,
+            "label": "White-Custom Color"
+          }
+        ]
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Width",
+      "Sticker Height"
+    ]
+  },
+  "mcp": {
+    "product_id": "domed_gold_vinyl_sticker_sheet",
+    "studio_supported": true
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them.",
+    "Keep square and oval in the studio (Carlos, 2026-10-10). This product's BigCommerce 'Shape' modifier has no matching value (Rectangle, Circle, Stadium, Custom Shape), so the cart mapping for square and oval is still to be decided."
+  ]
+}

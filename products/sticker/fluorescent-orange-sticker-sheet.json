@@ -1,0 +1,1531 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "fluorescent_orange_sticker_sheet",
+  "name": "Fluorescent Orange Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Fluorescent",
+  "group": "sheets_fluorescent",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 177,
+    "url": "/stickers/fluorescent-orange-sticker-sheet/",
+    "sku": "57FLUORANOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.36,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 29348,
+        "sku": "57FLUORANOD-05-05",
+        "price": 0.09,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29355,
+        "sku": "57FLUORANOD-05-10",
+        "price": 0.18,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29359,
+        "sku": "57FLUORANOD-05-20",
+        "price": 0.36,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29361,
+        "sku": "57FLUORANOD-05-30",
+        "price": 0.54,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29363,
+        "sku": "57FLUORANOD-05-40",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29365,
+        "sku": "57FLUORANOD-05-50",
+        "price": 0.9,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29367,
+        "sku": "57FLUORANOD-05-60",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29369,
+        "sku": "57FLUORANOD-05-70",
+        "price": 1.25,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29370,
+        "sku": "57FLUORANOD-05-80",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29371,
+        "sku": "57FLUORANOD-05-85",
+        "price": 0.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "0.5",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29516,
+        "sku": "57FLUORANOD-10-05",
+        "price": 0.18,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29523,
+        "sku": "57FLUORANOD-10-10",
+        "price": 0.36,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29527,
+        "sku": "57FLUORANOD-10-20",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29529,
+        "sku": "57FLUORANOD-10-30",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29531,
+        "sku": "57FLUORANOD-10-40",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29533,
+        "sku": "57FLUORANOD-10-50",
+        "price": 0.9,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29535,
+        "sku": "57FLUORANOD-10-60",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29537,
+        "sku": "57FLUORANOD-10-70",
+        "price": 1.25,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29538,
+        "sku": "57FLUORANOD-10-80",
+        "price": 1.43,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29539,
+        "sku": "57FLUORANOD-10-85",
+        "price": 1.52,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "1.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29612,
+        "sku": "57FLUORANOD-20-05",
+        "price": 0.36,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29619,
+        "sku": "57FLUORANOD-20-10",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29623,
+        "sku": "57FLUORANOD-20-20",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29625,
+        "sku": "57FLUORANOD-20-30",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29627,
+        "sku": "57FLUORANOD-20-40",
+        "price": 1.43,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29629,
+        "sku": "57FLUORANOD-20-50",
+        "price": 1.95,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29631,
+        "sku": "57FLUORANOD-20-60",
+        "price": 2.34,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29633,
+        "sku": "57FLUORANOD-20-70",
+        "price": 2.73,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29634,
+        "sku": "57FLUORANOD-20-80",
+        "price": 1.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29635,
+        "sku": "57FLUORANOD-20-85",
+        "price": 1.86,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "2.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29660,
+        "sku": "57FLUORANOD-30-05",
+        "price": 0.54,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29667,
+        "sku": "57FLUORANOD-30-10",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29671,
+        "sku": "57FLUORANOD-30-20",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29673,
+        "sku": "57FLUORANOD-30-30",
+        "price": 1.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29675,
+        "sku": "57FLUORANOD-30-40",
+        "price": 2.34,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29677,
+        "sku": "57FLUORANOD-30-50",
+        "price": 2.93,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29679,
+        "sku": "57FLUORANOD-30-60",
+        "price": 1.97,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29681,
+        "sku": "57FLUORANOD-30-70",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29682,
+        "sku": "57FLUORANOD-30-80",
+        "price": 2.63,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29683,
+        "sku": "57FLUORANOD-30-85",
+        "price": 5.94,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "3.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29708,
+        "sku": "57FLUORANOD-40-05",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29715,
+        "sku": "57FLUORANOD-40-10",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29719,
+        "sku": "57FLUORANOD-40-20",
+        "price": 1.43,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29721,
+        "sku": "57FLUORANOD-40-30",
+        "price": 2.34,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29723,
+        "sku": "57FLUORANOD-40-40",
+        "price": 1.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29725,
+        "sku": "57FLUORANOD-40-50",
+        "price": 2.19,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29727,
+        "sku": "57FLUORANOD-40-60",
+        "price": 2.63,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29729,
+        "sku": "57FLUORANOD-40-70",
+        "price": 6.52,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29730,
+        "sku": "57FLUORANOD-40-80",
+        "price": 7.45,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29731,
+        "sku": "57FLUORANOD-40-85",
+        "price": 7.92,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "4.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29756,
+        "sku": "57FLUORANOD-50-05",
+        "price": 0.9,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29763,
+        "sku": "57FLUORANOD-50-10",
+        "price": 0.9,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29767,
+        "sku": "57FLUORANOD-50-20",
+        "price": 1.95,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29769,
+        "sku": "57FLUORANOD-50-30",
+        "price": 2.93,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29771,
+        "sku": "57FLUORANOD-50-40",
+        "price": 2.19,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29773,
+        "sku": "57FLUORANOD-50-50",
+        "price": 5.82,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29775,
+        "sku": "57FLUORANOD-50-60",
+        "price": 6.98,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29777,
+        "sku": "57FLUORANOD-50-70",
+        "price": 8.15,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29778,
+        "sku": "57FLUORANOD-50-80",
+        "price": 6.47,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29779,
+        "sku": "57FLUORANOD-50-85",
+        "price": 6.87,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "5.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29804,
+        "sku": "57FLUORANOD-60-05",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29811,
+        "sku": "57FLUORANOD-60-10",
+        "price": 1.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29815,
+        "sku": "57FLUORANOD-60-20",
+        "price": 2.34,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29817,
+        "sku": "57FLUORANOD-60-30",
+        "price": 1.97,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29819,
+        "sku": "57FLUORANOD-60-40",
+        "price": 2.63,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29821,
+        "sku": "57FLUORANOD-60-50",
+        "price": 6.98,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29823,
+        "sku": "57FLUORANOD-60-60",
+        "price": 5.82,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29825,
+        "sku": "57FLUORANOD-60-70",
+        "price": 6.79,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29826,
+        "sku": "57FLUORANOD-60-80",
+        "price": 7.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29827,
+        "sku": "57FLUORANOD-60-85",
+        "price": 6.06,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "6.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29852,
+        "sku": "57FLUORANOD-70-05",
+        "price": 1.25,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29859,
+        "sku": "57FLUORANOD-70-10",
+        "price": 1.25,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29863,
+        "sku": "57FLUORANOD-70-20",
+        "price": 2.73,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29865,
+        "sku": "57FLUORANOD-70-30",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29867,
+        "sku": "57FLUORANOD-70-40",
+        "price": 6.52,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29869,
+        "sku": "57FLUORANOD-70-50",
+        "price": 8.15,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29871,
+        "sku": "57FLUORANOD-70-60",
+        "price": 6.79,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29873,
+        "sku": "57FLUORANOD-70-70",
+        "price": 5.82,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29874,
+        "sku": "57FLUORANOD-70-80",
+        "price": 6.65,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29875,
+        "sku": "57FLUORANOD-70-85",
+        "price": 7.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "7.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29900,
+        "sku": "57FLUORANOD-80-05",
+        "price": 0.72,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29907,
+        "sku": "57FLUORANOD-80-10",
+        "price": 1.43,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29911,
+        "sku": "57FLUORANOD-80-20",
+        "price": 1.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29913,
+        "sku": "57FLUORANOD-80-30",
+        "price": 2.63,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29915,
+        "sku": "57FLUORANOD-80-40",
+        "price": 7.45,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29917,
+        "sku": "57FLUORANOD-80-50",
+        "price": 6.47,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29919,
+        "sku": "57FLUORANOD-80-60",
+        "price": 7.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29921,
+        "sku": "57FLUORANOD-80-70",
+        "price": 6.65,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29922,
+        "sku": "57FLUORANOD-80-80",
+        "price": 5.82,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29923,
+        "sku": "57FLUORANOD-80-85",
+        "price": 6.18,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.0",
+          "height": "8.5"
+        }
+      },
+      {
+        "id": 29924,
+        "sku": "57FLUORANOD-85-05",
+        "price": 0.76,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "0.5"
+        }
+      },
+      {
+        "id": 29931,
+        "sku": "57FLUORANOD-85-10",
+        "price": 1.52,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "1.0"
+        }
+      },
+      {
+        "id": 29935,
+        "sku": "57FLUORANOD-85-20",
+        "price": 1.86,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "2.0"
+        }
+      },
+      {
+        "id": 29937,
+        "sku": "57FLUORANOD-85-30",
+        "price": 5.94,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "3.0"
+        }
+      },
+      {
+        "id": 29939,
+        "sku": "57FLUORANOD-85-40",
+        "price": 7.92,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "4.0"
+        }
+      },
+      {
+        "id": 29941,
+        "sku": "57FLUORANOD-85-50",
+        "price": 6.87,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "5.0"
+        }
+      },
+      {
+        "id": 29943,
+        "sku": "57FLUORANOD-85-60",
+        "price": 6.06,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "6.0"
+        }
+      },
+      {
+        "id": 29945,
+        "sku": "57FLUORANOD-85-70",
+        "price": 7.07,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "7.0"
+        }
+      },
+      {
+        "id": 29946,
+        "sku": "57FLUORANOD-85-80",
+        "price": 6.18,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "8.0"
+        }
+      },
+      {
+        "id": 29947,
+        "sku": "57FLUORANOD-85-85",
+        "price": 6.57,
+        "purchasing_disabled": true,
+        "options": {
+          "width": "8.5",
+          "height": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.09,
+      "1x0.5": 0.18,
+      "2x0.5": 0.36,
+      "3x0.5": 0.54,
+      "4x0.5": 0.72,
+      "5x0.5": 0.9,
+      "6x0.5": 1.07,
+      "7x0.5": 1.25,
+      "8x0.5": 0.72,
+      "8.5x0.5": 0.76,
+      "0.5x1": 0.18,
+      "1x1": 0.36,
+      "2x1": 0.72,
+      "3x1": 1.07,
+      "4x1": 0.72,
+      "5x1": 0.9,
+      "6x1": 1.07,
+      "7x1": 1.25,
+      "8x1": 1.43,
+      "8.5x1": 1.52,
+      "0.5x2": 0.36,
+      "1x2": 0.72,
+      "2x2": 0.72,
+      "3x2": 1.07,
+      "4x2": 1.43,
+      "5x2": 1.95,
+      "6x2": 2.34,
+      "7x2": 2.73,
+      "8x2": 1.76,
+      "8.5x2": 1.86,
+      "0.5x3": 0.54,
+      "1x3": 1.07,
+      "2x3": 1.07,
+      "3x3": 1.76,
+      "4x3": 2.34,
+      "5x3": 2.93,
+      "6x3": 1.97,
+      "7x3": 2.3,
+      "8x3": 2.63,
+      "8.5x3": 5.94,
+      "0.5x4": 0.72,
+      "1x4": 0.72,
+      "2x4": 1.43,
+      "3x4": 2.34,
+      "4x4": 1.76,
+      "5x4": 2.19,
+      "6x4": 2.63,
+      "7x4": 6.52,
+      "8x4": 7.45,
+      "8.5x4": 7.92,
+      "0.5x5": 0.9,
+      "1x5": 0.9,
+      "2x5": 1.95,
+      "3x5": 2.93,
+      "4x5": 2.19,
+      "5x5": 5.82,
+      "6x5": 6.98,
+      "7x5": 8.15,
+      "8x5": 6.47,
+      "8.5x5": 6.87,
+      "0.5x6": 1.07,
+      "1x6": 1.07,
+      "2x6": 2.34,
+      "3x6": 1.97,
+      "4x6": 2.63,
+      "5x6": 6.98,
+      "6x6": 5.82,
+      "7x6": 6.79,
+      "8x6": 7.76,
+      "8.5x6": 6.06,
+      "0.5x7": 1.25,
+      "1x7": 1.25,
+      "2x7": 2.73,
+      "3x7": 2.3,
+      "4x7": 6.52,
+      "5x7": 8.15,
+      "6x7": 6.79,
+      "7x7": 5.82,
+      "8x7": 6.65,
+      "8.5x7": 7.07,
+      "0.5x8": 0.72,
+      "1x8": 1.43,
+      "2x8": 1.76,
+      "3x8": 2.63,
+      "4x8": 7.45,
+      "5x8": 6.47,
+      "6x8": 7.76,
+      "7x8": 6.65,
+      "8x8": 5.82,
+      "8.5x8": 6.18,
+      "0.5x8.5": 0.76,
+      "1x8.5": 1.52,
+      "2x8.5": 1.86,
+      "3x8.5": 5.94,
+      "4x8.5": 7.92,
+      "5x8.5": 6.87,
+      "6x8.5": 6.06,
+      "7x8.5": 7.07,
+      "8x8.5": 6.18,
+      "8.5x8.5": 6.57
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1920,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      },
+      {
+        "id": 1921,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1437,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1438,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1439,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1441,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1442,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1444,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1446,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1449,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1452,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1455,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1457,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1460,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1464,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1467,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1469,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 1472,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 2107,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2182,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2183,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "fluorescent_orange_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

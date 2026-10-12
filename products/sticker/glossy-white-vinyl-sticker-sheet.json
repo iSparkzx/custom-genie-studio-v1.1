@@ -1,0 +1,1463 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "glossy_white_vinyl_sticker_sheet",
+  "name": "Glossy White Vinyl Sticker Sheet",
+  "family": "sticker",
+  "type": "Sheets - Glossy",
+  "group": "sheets_glossy",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 159,
+    "url": "/stickers/glossy-white-vinyl-sticker-sheet/",
+    "sku": "57GLOWHINOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.04,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 31748,
+        "sku": "57GLOWHINOD-05-05",
+        "price": 0.04,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 31755,
+        "sku": "57GLOWHINOD-05-10",
+        "price": 0.08,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 31759,
+        "sku": "57GLOWHINOD-05-20",
+        "price": 0.16,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 31761,
+        "sku": "57GLOWHINOD-05-30",
+        "price": 0.25,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 31763,
+        "sku": "57GLOWHINOD-05-40",
+        "price": 0.33,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 31765,
+        "sku": "57GLOWHINOD-05-50",
+        "price": 0.41,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 31767,
+        "sku": "57GLOWHINOD-05-60",
+        "price": 0.49,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 31769,
+        "sku": "57GLOWHINOD-05-70",
+        "price": 0.57,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 31771,
+        "sku": "57GLOWHINOD-05-80",
+        "price": 0.33,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 31772,
+        "sku": "57GLOWHINOD-05-85",
+        "price": 0.35,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 31923,
+        "sku": "57GLOWHINOD-10-05",
+        "price": 0.08,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 31930,
+        "sku": "57GLOWHINOD-10-10",
+        "price": 0.16,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 31934,
+        "sku": "57GLOWHINOD-10-20",
+        "price": 0.33,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 31936,
+        "sku": "57GLOWHINOD-10-30",
+        "price": 0.49,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 31938,
+        "sku": "57GLOWHINOD-10-40",
+        "price": 0.33,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 31940,
+        "sku": "57GLOWHINOD-10-50",
+        "price": 0.41,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 31942,
+        "sku": "57GLOWHINOD-10-60",
+        "price": 0.49,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 31944,
+        "sku": "57GLOWHINOD-10-70",
+        "price": 0.57,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 31946,
+        "sku": "57GLOWHINOD-10-80",
+        "price": 0.66,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 31947,
+        "sku": "57GLOWHINOD-10-85",
+        "price": 0.7,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32023,
+        "sku": "57GLOWHINOD-20-05",
+        "price": 0.16,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32030,
+        "sku": "57GLOWHINOD-20-10",
+        "price": 0.33,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32034,
+        "sku": "57GLOWHINOD-20-20",
+        "price": 0.33,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32036,
+        "sku": "57GLOWHINOD-20-30",
+        "price": 0.49,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32038,
+        "sku": "57GLOWHINOD-20-40",
+        "price": 0.66,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32040,
+        "sku": "57GLOWHINOD-20-50",
+        "price": 1.09,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32042,
+        "sku": "57GLOWHINOD-20-60",
+        "price": 1.31,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32044,
+        "sku": "57GLOWHINOD-20-70",
+        "price": 1.52,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32046,
+        "sku": "57GLOWHINOD-20-80",
+        "price": 0.98,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32047,
+        "sku": "57GLOWHINOD-20-85",
+        "price": 1.04,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32073,
+        "sku": "57GLOWHINOD-30-05",
+        "price": 0.25,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32080,
+        "sku": "57GLOWHINOD-30-10",
+        "price": 0.49,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32084,
+        "sku": "57GLOWHINOD-30-20",
+        "price": 0.49,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32086,
+        "sku": "57GLOWHINOD-30-30",
+        "price": 0.98,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32088,
+        "sku": "57GLOWHINOD-30-40",
+        "price": 1.31,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32090,
+        "sku": "57GLOWHINOD-30-50",
+        "price": 1.63,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32092,
+        "sku": "57GLOWHINOD-30-60",
+        "price": 1.1,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32094,
+        "sku": "57GLOWHINOD-30-70",
+        "price": 1.29,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32096,
+        "sku": "57GLOWHINOD-30-80",
+        "price": 1.47,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32097,
+        "sku": "57GLOWHINOD-30-85",
+        "price": 3.8,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32123,
+        "sku": "57GLOWHINOD-40-05",
+        "price": 0.33,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32130,
+        "sku": "57GLOWHINOD-40-10",
+        "price": 0.33,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32134,
+        "sku": "57GLOWHINOD-40-20",
+        "price": 0.66,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32136,
+        "sku": "57GLOWHINOD-40-30",
+        "price": 1.31,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32138,
+        "sku": "57GLOWHINOD-40-40",
+        "price": 0.98,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32140,
+        "sku": "57GLOWHINOD-40-50",
+        "price": 1.23,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32142,
+        "sku": "57GLOWHINOD-40-60",
+        "price": 1.47,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32144,
+        "sku": "57GLOWHINOD-40-70",
+        "price": 4.18,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32146,
+        "sku": "57GLOWHINOD-40-80",
+        "price": 4.77,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32147,
+        "sku": "57GLOWHINOD-40-85",
+        "price": 5.07,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32173,
+        "sku": "57GLOWHINOD-50-05",
+        "price": 0.41,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32180,
+        "sku": "57GLOWHINOD-50-10",
+        "price": 0.41,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32184,
+        "sku": "57GLOWHINOD-50-20",
+        "price": 1.09,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32186,
+        "sku": "57GLOWHINOD-50-30",
+        "price": 1.63,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32188,
+        "sku": "57GLOWHINOD-50-40",
+        "price": 1.23,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32190,
+        "sku": "57GLOWHINOD-50-50",
+        "price": 3.73,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32192,
+        "sku": "57GLOWHINOD-50-60",
+        "price": 4.48,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32194,
+        "sku": "57GLOWHINOD-50-70",
+        "price": 5.22,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32196,
+        "sku": "57GLOWHINOD-50-80",
+        "price": 4.14,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32197,
+        "sku": "57GLOWHINOD-50-85",
+        "price": 4.4,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32223,
+        "sku": "57GLOWHINOD-60-05",
+        "price": 0.49,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32230,
+        "sku": "57GLOWHINOD-60-10",
+        "price": 0.49,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32234,
+        "sku": "57GLOWHINOD-60-20",
+        "price": 1.31,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32236,
+        "sku": "57GLOWHINOD-60-30",
+        "price": 1.1,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32238,
+        "sku": "57GLOWHINOD-60-40",
+        "price": 1.47,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32240,
+        "sku": "57GLOWHINOD-60-50",
+        "price": 4.48,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32242,
+        "sku": "57GLOWHINOD-60-60",
+        "price": 3.73,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32244,
+        "sku": "57GLOWHINOD-60-70",
+        "price": 4.35,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32246,
+        "sku": "57GLOWHINOD-60-80",
+        "price": 4.97,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32247,
+        "sku": "57GLOWHINOD-60-85",
+        "price": 3.88,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32273,
+        "sku": "57GLOWHINOD-70-05",
+        "price": 0.57,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32280,
+        "sku": "57GLOWHINOD-70-10",
+        "price": 0.57,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32284,
+        "sku": "57GLOWHINOD-70-20",
+        "price": 1.52,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32286,
+        "sku": "57GLOWHINOD-70-30",
+        "price": 1.29,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32288,
+        "sku": "57GLOWHINOD-70-40",
+        "price": 4.18,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32290,
+        "sku": "57GLOWHINOD-70-50",
+        "price": 5.22,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32292,
+        "sku": "57GLOWHINOD-70-60",
+        "price": 4.35,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32294,
+        "sku": "57GLOWHINOD-70-70",
+        "price": 3.73,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32296,
+        "sku": "57GLOWHINOD-70-80",
+        "price": 4.26,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32297,
+        "sku": "57GLOWHINOD-70-85",
+        "price": 4.53,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32298,
+        "sku": "57GLOWHINOD-80-05",
+        "price": 0.33,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32305,
+        "sku": "57GLOWHINOD-80-10",
+        "price": 0.66,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32309,
+        "sku": "57GLOWHINOD-80-20",
+        "price": 0.98,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32311,
+        "sku": "57GLOWHINOD-80-30",
+        "price": 1.47,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32313,
+        "sku": "57GLOWHINOD-80-40",
+        "price": 4.77,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32315,
+        "sku": "57GLOWHINOD-80-50",
+        "price": 4.14,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32317,
+        "sku": "57GLOWHINOD-80-60",
+        "price": 4.97,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32319,
+        "sku": "57GLOWHINOD-80-70",
+        "price": 4.26,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32321,
+        "sku": "57GLOWHINOD-80-80",
+        "price": 3.73,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32322,
+        "sku": "57GLOWHINOD-80-85",
+        "price": 3.96,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 32323,
+        "sku": "57GLOWHINOD-85-05",
+        "price": 0.35,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 32330,
+        "sku": "57GLOWHINOD-85-10",
+        "price": 0.7,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 32334,
+        "sku": "57GLOWHINOD-85-20",
+        "price": 1.04,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 32336,
+        "sku": "57GLOWHINOD-85-30",
+        "price": 3.8,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 32338,
+        "sku": "57GLOWHINOD-85-40",
+        "price": 5.07,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 32340,
+        "sku": "57GLOWHINOD-85-50",
+        "price": 4.4,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 32342,
+        "sku": "57GLOWHINOD-85-60",
+        "price": 3.88,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 32344,
+        "sku": "57GLOWHINOD-85-70",
+        "price": 4.53,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 32346,
+        "sku": "57GLOWHINOD-85-80",
+        "price": 3.96,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 32347,
+        "sku": "57GLOWHINOD-85-85",
+        "price": 4.21,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.04,
+      "0.5x1": 0.08,
+      "0.5x2": 0.16,
+      "0.5x3": 0.25,
+      "0.5x4": 0.33,
+      "0.5x5": 0.41,
+      "0.5x6": 0.49,
+      "0.5x7": 0.57,
+      "0.5x8": 0.33,
+      "0.5x8.5": 0.35,
+      "1x0.5": 0.08,
+      "1x1": 0.16,
+      "1x2": 0.33,
+      "1x3": 0.49,
+      "1x4": 0.33,
+      "1x5": 0.41,
+      "1x6": 0.49,
+      "1x7": 0.57,
+      "1x8": 0.66,
+      "1x8.5": 0.7,
+      "2x0.5": 0.16,
+      "2x1": 0.33,
+      "2x2": 0.33,
+      "2x3": 0.49,
+      "2x4": 0.66,
+      "2x5": 1.09,
+      "2x6": 1.31,
+      "2x7": 1.52,
+      "2x8": 0.98,
+      "2x8.5": 1.04,
+      "3x0.5": 0.25,
+      "3x1": 0.49,
+      "3x2": 0.49,
+      "3x3": 0.98,
+      "3x4": 1.31,
+      "3x5": 1.63,
+      "3x6": 1.1,
+      "3x7": 1.29,
+      "3x8": 1.47,
+      "3x8.5": 3.8,
+      "4x0.5": 0.33,
+      "4x1": 0.33,
+      "4x2": 0.66,
+      "4x3": 1.31,
+      "4x4": 0.98,
+      "4x5": 1.23,
+      "4x6": 1.47,
+      "4x7": 4.18,
+      "4x8": 4.77,
+      "4x8.5": 5.07,
+      "5x0.5": 0.41,
+      "5x1": 0.41,
+      "5x2": 1.09,
+      "5x3": 1.63,
+      "5x4": 1.23,
+      "5x5": 3.73,
+      "5x6": 4.48,
+      "5x7": 5.22,
+      "5x8": 4.14,
+      "5x8.5": 4.4,
+      "6x0.5": 0.49,
+      "6x1": 0.49,
+      "6x2": 1.31,
+      "6x3": 1.1,
+      "6x4": 1.47,
+      "6x5": 4.48,
+      "6x6": 3.73,
+      "6x7": 4.35,
+      "6x8": 4.97,
+      "6x8.5": 3.88,
+      "7x0.5": 0.57,
+      "7x1": 0.57,
+      "7x2": 1.52,
+      "7x3": 1.29,
+      "7x4": 4.18,
+      "7x5": 5.22,
+      "7x6": 4.35,
+      "7x7": 3.73,
+      "7x8": 4.26,
+      "7x8.5": 4.53,
+      "8x0.5": 0.33,
+      "8x1": 0.66,
+      "8x2": 0.98,
+      "8x3": 1.47,
+      "8x4": 4.77,
+      "8x5": 4.14,
+      "8x6": 4.97,
+      "8x7": 4.26,
+      "8x8": 3.73,
+      "8x8.5": 3.96,
+      "8.5x0.5": 0.35,
+      "8.5x1": 0.7,
+      "8.5x2": 1.04,
+      "8.5x3": 3.8,
+      "8.5x4": 5.07,
+      "8.5x5": 4.4,
+      "8.5x6": 3.88,
+      "8.5x7": 4.53,
+      "8.5x8": 3.96,
+      "8.5x8.5": 4.21
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1928,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1929,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1336,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1337,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1338,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1339,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1340,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1341,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1342,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1343,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1344,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1345,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1346,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1347,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 1348,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1349,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1350,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1351,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2051,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2052,
+        "name": "Background Color",
+        "type": "swatch",
+        "required": true,
+        "role": "background_mode",
+        "values": [
+          {
+            "id": 1622,
+            "label": "Upload Background"
+          },
+          {
+            "id": 1621,
+            "label": "Custom Color"
+          }
+        ]
+      },
+      {
+        "id": 2053,
+        "name": "Custom Color",
+        "type": "text",
+        "required": false,
+        "role": "custom_color"
+      },
+      {
+        "id": 2091,
+        "name": "Background Image",
+        "type": "text",
+        "required": false,
+        "role": "background_image"
+      },
+      {
+        "id": 2190,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2191,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Shape",
+      "Review",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Background Color",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "glossy_white_vinyl_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

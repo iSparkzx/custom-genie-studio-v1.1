@@ -1,0 +1,446 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
+  "name": "Contour Silver Barrel Ballpoint Pen with Chrome Trim and Colored Soft Grip",
+  "family": "pen",
+  "type": "Pens - Contour Silver",
+  "group": "pens_contour_silver",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 138,
+    "url": "/pens/contour-silver-barrel-ballpoint-pen-with-chrome-trim-and-colored-soft-grip/",
+    "sku": "5101101001",
+    "base_variant_id": null,
+    "template": "penprod"
+  },
+  "size": {
+    "mode": "fixed",
+    "unit": "in",
+    "w_in": null,
+    "h_in": null
+  },
+  "product_colors": [
+    "Black",
+    "Dark Blue",
+    "Light Blue",
+    "Red",
+    "Green",
+    "Purple",
+    "Orange",
+    "Yellow",
+    "Transparent",
+    "Magenta"
+  ],
+  "decoration": "printed",
+  "text_fields": [
+    "text_1",
+    "text_2"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 2.99,
+    "quantity_tiers": [
+      {
+        "min_qty": 10,
+        "max_qty": 24,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 25,
+        "max_qty": 49,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 50,
+        "max_qty": 99,
+        "type": "percent",
+        "amount": 40
+      },
+      {
+        "min_qty": 100,
+        "max_qty": 249,
+        "type": "percent",
+        "amount": 45
+      },
+      {
+        "min_qty": 250,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 50
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 55
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 60
+      }
+    ],
+    "variants": [
+      {
+        "id": 186,
+        "sku": "5101101001001",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Black"
+        }
+      },
+      {
+        "id": 187,
+        "sku": "5101101001002",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Dark Blue"
+        }
+      },
+      {
+        "id": 188,
+        "sku": "5101101001010",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Light Blue"
+        }
+      },
+      {
+        "id": 189,
+        "sku": "5101101001003",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Red"
+        }
+      },
+      {
+        "id": 190,
+        "sku": "5101101001004",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Green"
+        }
+      },
+      {
+        "id": 191,
+        "sku": "5101101001005",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Purple"
+        }
+      },
+      {
+        "id": 192,
+        "sku": "5101101001007",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Orange"
+        }
+      },
+      {
+        "id": 193,
+        "sku": "5101101001007-1",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Yellow"
+        }
+      },
+      {
+        "id": 194,
+        "sku": "5101101001018",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Transparent"
+        }
+      },
+      {
+        "id": 195,
+        "sku": "5101101001022",
+        "price": 2.99,
+        "options": {
+          "pen_color": "Magenta"
+        }
+      }
+    ]
+  },
+  "editor": {
+    "mode": "imprint",
+    "fields": [
+      "text_1",
+      "text_2",
+      "logo"
+    ],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout8)",
+    "genie": true
+  },
+  "checks": null,
+  "previews": [
+    "flat",
+    "scene:product_model"
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 141,
+        "name": "Pen Color",
+        "role": "pen_color"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 637,
+        "name": "Select Layout",
+        "type": "swatch",
+        "required": true,
+        "role": "layout",
+        "values": [
+          {
+            "id": 890,
+            "label": "layout1"
+          },
+          {
+            "id": 909,
+            "label": "layout2"
+          },
+          {
+            "id": 910,
+            "label": "layout3"
+          },
+          {
+            "id": 912,
+            "label": "layout4"
+          },
+          {
+            "id": 911,
+            "label": "layout5"
+          },
+          {
+            "id": 1300,
+            "label": "layout6"
+          },
+          {
+            "id": 1301,
+            "label": "layout7"
+          },
+          {
+            "id": 1302,
+            "label": "layout8"
+          }
+        ]
+      },
+      {
+        "id": 638,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 640,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 641,
+        "name": "Text Line 2",
+        "type": "text",
+        "required": false,
+        "role": "text_2"
+      },
+      {
+        "id": 642,
+        "name": "Alignment",
+        "type": "swatch",
+        "required": false,
+        "role": "alignment",
+        "values": [
+          {
+            "id": 903,
+            "label": "left"
+          },
+          {
+            "id": 904,
+            "label": "center"
+          },
+          {
+            "id": 905,
+            "label": "right"
+          }
+        ]
+      },
+      {
+        "id": 643,
+        "name": "Color",
+        "type": "text",
+        "required": false,
+        "role": "ink_color"
+      },
+      {
+        "id": 644,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 645,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 753,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1103,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1104,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1105,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 1106,
+        "name": "Size",
+        "type": "text",
+        "required": false,
+        "role": "size_field"
+      },
+      {
+        "id": 2161,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 2162,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 2163,
+        "name": "Font2size",
+        "type": "text",
+        "required": false,
+        "role": "font_2_size"
+      }
+    ],
+    "required_modifiers": [
+      "Select Layout",
+      "Review",
+      "Saved Print Output"
+    ]
+  },
+  "mcp": {
+    "product_id": "contour_silver_barrel_ballpoint_pen_with_chrome_trim_and_colored_soft_grip",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:product_model' means a picture of the actual pen or notebook model in the chosen color; still to be built."
+  ],
+  "todo": [
+    "Imprint area (width x height) and position for every pen model and the notebook.",
+    "Ink colors allowed per model and method (printed vs engraved), and the color limit.",
+    "Production file format for imprints.",
+    "Imprint area for this model (see family todo)."
+  ]
+}

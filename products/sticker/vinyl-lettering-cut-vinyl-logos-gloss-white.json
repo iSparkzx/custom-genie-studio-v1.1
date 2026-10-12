@@ -1,0 +1,4310 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "vinyl_lettering_cut_vinyl_logos_gloss_white",
+  "name": "Gloss White Vinyl Lettering & Cut Vinyl Logos",
+  "family": "sticker",
+  "type": "Custom Cut - Vinyl Lettering",
+  "group": "custom_cut_vinyl_lettering",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 213,
+    "url": "/stickers/vinyl-lettering-cut-vinyl-logos-gloss-white/",
+    "sku": "57000PCVGWVL",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 5,
+      "max": 30
+    },
+    "height": {
+      "min": 5,
+      "max": 19
+    },
+    "price_steps": {
+      "width": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "height": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "custom",
+      "bigcommerce_label": "CustomShape"
+    }
+  ],
+  "decoration": "cut_vinyl",
+  "format": "cut_vinyl",
+  "max_colors": 1,
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 9.31,
+    "quantity_tiers": [
+      {
+        "min_qty": 3,
+        "max_qty": 4,
+        "type": "percent",
+        "amount": 10
+      },
+      {
+        "min_qty": 5,
+        "max_qty": 9,
+        "type": "percent",
+        "amount": 15
+      },
+      {
+        "min_qty": 10,
+        "max_qty": 19,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 20,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 25
+      }
+    ],
+    "variants": [
+      {
+        "id": 41334,
+        "sku": "57000PCVGWVL-5-5",
+        "price": 9.31,
+        "options": {
+          "width": "5",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41335,
+        "sku": "57000PCVGWVL-5-6",
+        "price": 11.17,
+        "options": {
+          "width": "5",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41336,
+        "sku": "57000PCVGWVL-5-7",
+        "price": 13.03,
+        "options": {
+          "width": "5",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41337,
+        "sku": "57000PCVGWVL-5-8",
+        "price": 14.9,
+        "options": {
+          "width": "5",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41338,
+        "sku": "57000PCVGWVL-5-9",
+        "price": 16.76,
+        "options": {
+          "width": "5",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41339,
+        "sku": "57000PCVGWVL-5-10",
+        "price": 18.62,
+        "options": {
+          "width": "5",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41340,
+        "sku": "57000PCVGWVL-5-11",
+        "price": 20.48,
+        "options": {
+          "width": "5",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41341,
+        "sku": "57000PCVGWVL-5-12",
+        "price": 22.34,
+        "options": {
+          "width": "5",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41342,
+        "sku": "57000PCVGWVL-5-13",
+        "price": 11.69,
+        "options": {
+          "width": "5",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41343,
+        "sku": "57000PCVGWVL-5-14",
+        "price": 12.59,
+        "options": {
+          "width": "5",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41344,
+        "sku": "57000PCVGWVL-5-15",
+        "price": 13.49,
+        "options": {
+          "width": "5",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41345,
+        "sku": "57000PCVGWVL-5-16",
+        "price": 14.39,
+        "options": {
+          "width": "5",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41346,
+        "sku": "57000PCVGWVL-5-17",
+        "price": 15.29,
+        "options": {
+          "width": "5",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41347,
+        "sku": "57000PCVGWVL-5-18",
+        "price": 16.19,
+        "options": {
+          "width": "5",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41348,
+        "sku": "57000PCVGWVL-5-19",
+        "price": 17.09,
+        "options": {
+          "width": "5",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41349,
+        "sku": "57000PCVGWVL-6-5",
+        "price": 17.98,
+        "options": {
+          "width": "6",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41350,
+        "sku": "57000PCVGWVL-6-6",
+        "price": 18.88,
+        "options": {
+          "width": "6",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41351,
+        "sku": "57000PCVGWVL-6-7",
+        "price": 19.78,
+        "options": {
+          "width": "6",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41352,
+        "sku": "57000PCVGWVL-6-8",
+        "price": 20.68,
+        "options": {
+          "width": "6",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41353,
+        "sku": "57000PCVGWVL-6-9",
+        "price": 21.58,
+        "options": {
+          "width": "6",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41354,
+        "sku": "57000PCVGWVL-6-10",
+        "price": 22.48,
+        "options": {
+          "width": "6",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41355,
+        "sku": "57000PCVGWVL-6-11",
+        "price": 23.38,
+        "options": {
+          "width": "6",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41356,
+        "sku": "57000PCVGWVL-6-12",
+        "price": 24.28,
+        "options": {
+          "width": "6",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41357,
+        "sku": "57000PCVGWVL-6-13",
+        "price": 25.18,
+        "options": {
+          "width": "6",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41358,
+        "sku": "57000PCVGWVL-6-14",
+        "price": 12.73,
+        "options": {
+          "width": "6",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41359,
+        "sku": "57000PCVGWVL-6-15",
+        "price": 13.17,
+        "options": {
+          "width": "6",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41360,
+        "sku": "57000PCVGWVL-6-16",
+        "price": 11.17,
+        "options": {
+          "width": "6",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41361,
+        "sku": "57000PCVGWVL-6-17",
+        "price": 13.41,
+        "options": {
+          "width": "6",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41362,
+        "sku": "57000PCVGWVL-6-18",
+        "price": 15.64,
+        "options": {
+          "width": "6",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41363,
+        "sku": "57000PCVGWVL-6-19",
+        "price": 17.88,
+        "options": {
+          "width": "6",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41364,
+        "sku": "57000PCVGWVL-7-5",
+        "price": 20.11,
+        "options": {
+          "width": "7",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41365,
+        "sku": "57000PCVGWVL-7-6",
+        "price": 22.34,
+        "options": {
+          "width": "7",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41366,
+        "sku": "57000PCVGWVL-7-7",
+        "price": 11.87,
+        "options": {
+          "width": "7",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41367,
+        "sku": "57000PCVGWVL-7-8",
+        "price": 12.95,
+        "options": {
+          "width": "7",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41368,
+        "sku": "57000PCVGWVL-7-9",
+        "price": 14.03,
+        "options": {
+          "width": "7",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41369,
+        "sku": "57000PCVGWVL-7-10",
+        "price": 15.11,
+        "options": {
+          "width": "7",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41370,
+        "sku": "57000PCVGWVL-7-11",
+        "price": 16.19,
+        "options": {
+          "width": "7",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41371,
+        "sku": "57000PCVGWVL-7-12",
+        "price": 17.27,
+        "options": {
+          "width": "7",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41372,
+        "sku": "57000PCVGWVL-7-13",
+        "price": 18.34,
+        "options": {
+          "width": "7",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41373,
+        "sku": "57000PCVGWVL-7-14",
+        "price": 19.42,
+        "options": {
+          "width": "7",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41374,
+        "sku": "57000PCVGWVL-7-15",
+        "price": 20.5,
+        "options": {
+          "width": "7",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41375,
+        "sku": "57000PCVGWVL-7-16",
+        "price": 21.58,
+        "options": {
+          "width": "7",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41376,
+        "sku": "57000PCVGWVL-7-17",
+        "price": 22.66,
+        "options": {
+          "width": "7",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41377,
+        "sku": "57000PCVGWVL-7-18",
+        "price": 23.74,
+        "options": {
+          "width": "7",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41378,
+        "sku": "57000PCVGWVL-7-19",
+        "price": 24.82,
+        "options": {
+          "width": "7",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41379,
+        "sku": "57000PCVGWVL-8-5",
+        "price": 12.64,
+        "options": {
+          "width": "8",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41380,
+        "sku": "57000PCVGWVL-8-6",
+        "price": 13.17,
+        "options": {
+          "width": "8",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41381,
+        "sku": "57000PCVGWVL-8-7",
+        "price": 13.69,
+        "options": {
+          "width": "8",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41382,
+        "sku": "57000PCVGWVL-8-8",
+        "price": 14.22,
+        "options": {
+          "width": "8",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41383,
+        "sku": "57000PCVGWVL-8-9",
+        "price": 14.75,
+        "options": {
+          "width": "8",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41384,
+        "sku": "57000PCVGWVL-8-10",
+        "price": 15.27,
+        "options": {
+          "width": "8",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41385,
+        "sku": "57000PCVGWVL-8-11",
+        "price": 15.8,
+        "options": {
+          "width": "8",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41386,
+        "sku": "57000PCVGWVL-8-12",
+        "price": 13.03,
+        "options": {
+          "width": "8",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41387,
+        "sku": "57000PCVGWVL-8-13",
+        "price": 15.64,
+        "options": {
+          "width": "8",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41388,
+        "sku": "57000PCVGWVL-8-14",
+        "price": 18.25,
+        "options": {
+          "width": "8",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41389,
+        "sku": "57000PCVGWVL-8-15",
+        "price": 20.85,
+        "options": {
+          "width": "8",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41390,
+        "sku": "57000PCVGWVL-8-16",
+        "price": 23.46,
+        "options": {
+          "width": "8",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41391,
+        "sku": "57000PCVGWVL-8-17",
+        "price": 12.59,
+        "options": {
+          "width": "8",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41392,
+        "sku": "57000PCVGWVL-8-18",
+        "price": 13.85,
+        "options": {
+          "width": "8",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41393,
+        "sku": "57000PCVGWVL-8-19",
+        "price": 15.11,
+        "options": {
+          "width": "8",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41394,
+        "sku": "57000PCVGWVL-9-5",
+        "price": 16.37,
+        "options": {
+          "width": "9",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41395,
+        "sku": "57000PCVGWVL-9-6",
+        "price": 17.62,
+        "options": {
+          "width": "9",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41396,
+        "sku": "57000PCVGWVL-9-7",
+        "price": 18.88,
+        "options": {
+          "width": "9",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41397,
+        "sku": "57000PCVGWVL-9-8",
+        "price": 20.14,
+        "options": {
+          "width": "9",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41398,
+        "sku": "57000PCVGWVL-9-9",
+        "price": 21.4,
+        "options": {
+          "width": "9",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41399,
+        "sku": "57000PCVGWVL-9-10",
+        "price": 22.66,
+        "options": {
+          "width": "9",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41400,
+        "sku": "57000PCVGWVL-9-11",
+        "price": 23.92,
+        "options": {
+          "width": "9",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41401,
+        "sku": "57000PCVGWVL-9-12",
+        "price": 25.18,
+        "options": {
+          "width": "9",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41402,
+        "sku": "57000PCVGWVL-9-13",
+        "price": 12.9,
+        "options": {
+          "width": "9",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41403,
+        "sku": "57000PCVGWVL-9-14",
+        "price": 13.52,
+        "options": {
+          "width": "9",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41404,
+        "sku": "57000PCVGWVL-9-15",
+        "price": 14.13,
+        "options": {
+          "width": "9",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41405,
+        "sku": "57000PCVGWVL-9-16",
+        "price": 14.75,
+        "options": {
+          "width": "9",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41406,
+        "sku": "57000PCVGWVL-9-17",
+        "price": 15.36,
+        "options": {
+          "width": "9",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41407,
+        "sku": "57000PCVGWVL-9-18",
+        "price": 15.98,
+        "options": {
+          "width": "9",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41408,
+        "sku": "57000PCVGWVL-9-19",
+        "price": 16.59,
+        "options": {
+          "width": "9",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41409,
+        "sku": "57000PCVGWVL-10-5",
+        "price": 17.2,
+        "options": {
+          "width": "10",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41410,
+        "sku": "57000PCVGWVL-10-6",
+        "price": 17.82,
+        "options": {
+          "width": "10",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41411,
+        "sku": "57000PCVGWVL-10-7",
+        "price": 18.43,
+        "options": {
+          "width": "10",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41412,
+        "sku": "57000PCVGWVL-10-8",
+        "price": 14.9,
+        "options": {
+          "width": "10",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41413,
+        "sku": "57000PCVGWVL-10-9",
+        "price": 17.88,
+        "options": {
+          "width": "10",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41414,
+        "sku": "57000PCVGWVL-10-10",
+        "price": 20.85,
+        "options": {
+          "width": "10",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41415,
+        "sku": "57000PCVGWVL-10-11",
+        "price": 11.51,
+        "options": {
+          "width": "10",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41416,
+        "sku": "57000PCVGWVL-10-12",
+        "price": 12.95,
+        "options": {
+          "width": "10",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41417,
+        "sku": "57000PCVGWVL-10-13",
+        "price": 14.39,
+        "options": {
+          "width": "10",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41418,
+        "sku": "57000PCVGWVL-10-14",
+        "price": 15.83,
+        "options": {
+          "width": "10",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41419,
+        "sku": "57000PCVGWVL-10-15",
+        "price": 17.27,
+        "options": {
+          "width": "10",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41420,
+        "sku": "57000PCVGWVL-10-16",
+        "price": 18.7,
+        "options": {
+          "width": "10",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41421,
+        "sku": "57000PCVGWVL-10-17",
+        "price": 20.14,
+        "options": {
+          "width": "10",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41422,
+        "sku": "57000PCVGWVL-10-18",
+        "price": 21.58,
+        "options": {
+          "width": "10",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41423,
+        "sku": "57000PCVGWVL-10-19",
+        "price": 23.02,
+        "options": {
+          "width": "10",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41424,
+        "sku": "57000PCVGWVL-11-5",
+        "price": 24.46,
+        "options": {
+          "width": "11",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41425,
+        "sku": "57000PCVGWVL-11-6",
+        "price": 12.64,
+        "options": {
+          "width": "11",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41426,
+        "sku": "57000PCVGWVL-11-7",
+        "price": 13.34,
+        "options": {
+          "width": "11",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41427,
+        "sku": "57000PCVGWVL-11-8",
+        "price": 14.04,
+        "options": {
+          "width": "11",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41428,
+        "sku": "57000PCVGWVL-11-9",
+        "price": 14.75,
+        "options": {
+          "width": "11",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41429,
+        "sku": "57000PCVGWVL-11-10",
+        "price": 15.45,
+        "options": {
+          "width": "11",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41430,
+        "sku": "57000PCVGWVL-11-11",
+        "price": 16.15,
+        "options": {
+          "width": "11",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41431,
+        "sku": "57000PCVGWVL-11-12",
+        "price": 16.85,
+        "options": {
+          "width": "11",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41432,
+        "sku": "57000PCVGWVL-11-13",
+        "price": 17.56,
+        "options": {
+          "width": "11",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41433,
+        "sku": "57000PCVGWVL-11-14",
+        "price": 18.26,
+        "options": {
+          "width": "11",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41434,
+        "sku": "57000PCVGWVL-11-15",
+        "price": 18.96,
+        "options": {
+          "width": "11",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41435,
+        "sku": "57000PCVGWVL-11-16",
+        "price": 19.66,
+        "options": {
+          "width": "11",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41436,
+        "sku": "57000PCVGWVL-11-17",
+        "price": 18.97,
+        "options": {
+          "width": "11",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41437,
+        "sku": "57000PCVGWVL-11-18",
+        "price": 19.63,
+        "options": {
+          "width": "11",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41438,
+        "sku": "57000PCVGWVL-11-19",
+        "price": 16.76,
+        "options": {
+          "width": "11",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41439,
+        "sku": "57000PCVGWVL-12-5",
+        "price": 20.11,
+        "options": {
+          "width": "12",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41440,
+        "sku": "57000PCVGWVL-12-6",
+        "price": 23.46,
+        "options": {
+          "width": "12",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41441,
+        "sku": "57000PCVGWVL-12-7",
+        "price": 12.95,
+        "options": {
+          "width": "12",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41442,
+        "sku": "57000PCVGWVL-12-8",
+        "price": 14.57,
+        "options": {
+          "width": "12",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41443,
+        "sku": "57000PCVGWVL-12-9",
+        "price": 16.19,
+        "options": {
+          "width": "12",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41444,
+        "sku": "57000PCVGWVL-12-10",
+        "price": 17.8,
+        "options": {
+          "width": "12",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41445,
+        "sku": "57000PCVGWVL-12-11",
+        "price": 19.42,
+        "options": {
+          "width": "12",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41446,
+        "sku": "57000PCVGWVL-12-12",
+        "price": 21.04,
+        "options": {
+          "width": "12",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41447,
+        "sku": "57000PCVGWVL-12-13",
+        "price": 22.66,
+        "options": {
+          "width": "12",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41448,
+        "sku": "57000PCVGWVL-12-14",
+        "price": 24.28,
+        "options": {
+          "width": "12",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41449,
+        "sku": "57000PCVGWVL-12-15",
+        "price": 12.64,
+        "options": {
+          "width": "12",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41450,
+        "sku": "57000PCVGWVL-12-16",
+        "price": 13.43,
+        "options": {
+          "width": "12",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41451,
+        "sku": "57000PCVGWVL-12-17",
+        "price": 14.22,
+        "options": {
+          "width": "12",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41452,
+        "sku": "57000PCVGWVL-12-18",
+        "price": 15.01,
+        "options": {
+          "width": "12",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41453,
+        "sku": "57000PCVGWVL-12-19",
+        "price": 15.8,
+        "options": {
+          "width": "12",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41454,
+        "sku": "57000PCVGWVL-13-5",
+        "price": 16.59,
+        "options": {
+          "width": "13",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41455,
+        "sku": "57000PCVGWVL-13-6",
+        "price": 17.38,
+        "options": {
+          "width": "13",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41456,
+        "sku": "57000PCVGWVL-13-7",
+        "price": 18.17,
+        "options": {
+          "width": "13",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41457,
+        "sku": "57000PCVGWVL-13-8",
+        "price": 18.96,
+        "options": {
+          "width": "13",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41458,
+        "sku": "57000PCVGWVL-13-9",
+        "price": 18.4,
+        "options": {
+          "width": "13",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41459,
+        "sku": "57000PCVGWVL-13-10",
+        "price": 19.14,
+        "options": {
+          "width": "13",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41460,
+        "sku": "57000PCVGWVL-13-11",
+        "price": 19.87,
+        "options": {
+          "width": "13",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41461,
+        "sku": "57000PCVGWVL-13-12",
+        "price": 20.61,
+        "options": {
+          "width": "13",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41462,
+        "sku": "57000PCVGWVL-13-13",
+        "price": 21.34,
+        "options": {
+          "width": "13",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41463,
+        "sku": "57000PCVGWVL-13-14",
+        "price": 22.08,
+        "options": {
+          "width": "13",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41464,
+        "sku": "57000PCVGWVL-13-15",
+        "price": 18.62,
+        "options": {
+          "width": "13",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41465,
+        "sku": "57000PCVGWVL-13-16",
+        "price": 22.34,
+        "options": {
+          "width": "13",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41466,
+        "sku": "57000PCVGWVL-13-17",
+        "price": 12.59,
+        "options": {
+          "width": "13",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41467,
+        "sku": "57000PCVGWVL-13-18",
+        "price": 14.39,
+        "options": {
+          "width": "13",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41468,
+        "sku": "57000PCVGWVL-13-19",
+        "price": 16.19,
+        "options": {
+          "width": "13",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41469,
+        "sku": "57000PCVGWVL-14-5",
+        "price": 17.98,
+        "options": {
+          "width": "14",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41470,
+        "sku": "57000PCVGWVL-14-6",
+        "price": 19.78,
+        "options": {
+          "width": "14",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41471,
+        "sku": "57000PCVGWVL-14-7",
+        "price": 21.58,
+        "options": {
+          "width": "14",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41472,
+        "sku": "57000PCVGWVL-14-8",
+        "price": 23.38,
+        "options": {
+          "width": "14",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41473,
+        "sku": "57000PCVGWVL-14-9",
+        "price": 25.18,
+        "options": {
+          "width": "14",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41474,
+        "sku": "57000PCVGWVL-14-10",
+        "price": 13.17,
+        "options": {
+          "width": "14",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41475,
+        "sku": "57000PCVGWVL-14-11",
+        "price": 14.04,
+        "options": {
+          "width": "14",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41476,
+        "sku": "57000PCVGWVL-14-12",
+        "price": 14.92,
+        "options": {
+          "width": "14",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41477,
+        "sku": "57000PCVGWVL-14-13",
+        "price": 15.8,
+        "options": {
+          "width": "14",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41478,
+        "sku": "57000PCVGWVL-14-14",
+        "price": 16.68,
+        "options": {
+          "width": "14",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41479,
+        "sku": "57000PCVGWVL-14-15",
+        "price": 17.56,
+        "options": {
+          "width": "14",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41480,
+        "sku": "57000PCVGWVL-14-16",
+        "price": 18.43,
+        "options": {
+          "width": "14",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41481,
+        "sku": "57000PCVGWVL-14-17",
+        "price": 19.31,
+        "options": {
+          "width": "14",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41482,
+        "sku": "57000PCVGWVL-14-18",
+        "price": 18.81,
+        "options": {
+          "width": "14",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41483,
+        "sku": "57000PCVGWVL-14-19",
+        "price": 19.63,
+        "options": {
+          "width": "14",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41484,
+        "sku": "57000PCVGWVL-15-5",
+        "price": 20.44,
+        "options": {
+          "width": "15",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41485,
+        "sku": "57000PCVGWVL-15-6",
+        "price": 21.26,
+        "options": {
+          "width": "15",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41486,
+        "sku": "57000PCVGWVL-15-7",
+        "price": 22.08,
+        "options": {
+          "width": "15",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41487,
+        "sku": "57000PCVGWVL-15-8",
+        "price": 22.9,
+        "options": {
+          "width": "15",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41488,
+        "sku": "57000PCVGWVL-15-9",
+        "price": 23.72,
+        "options": {
+          "width": "15",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41489,
+        "sku": "57000PCVGWVL-15-10",
+        "price": 24.53,
+        "options": {
+          "width": "15",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41490,
+        "sku": "57000PCVGWVL-15-11",
+        "price": 20.48,
+        "options": {
+          "width": "15",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41491,
+        "sku": "57000PCVGWVL-15-12",
+        "price": 11.87,
+        "options": {
+          "width": "15",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41492,
+        "sku": "57000PCVGWVL-15-13",
+        "price": 13.85,
+        "options": {
+          "width": "15",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41493,
+        "sku": "57000PCVGWVL-15-14",
+        "price": 15.83,
+        "options": {
+          "width": "15",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41494,
+        "sku": "57000PCVGWVL-15-15",
+        "price": 17.8,
+        "options": {
+          "width": "15",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41495,
+        "sku": "57000PCVGWVL-15-16",
+        "price": 19.78,
+        "options": {
+          "width": "15",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41496,
+        "sku": "57000PCVGWVL-15-17",
+        "price": 21.76,
+        "options": {
+          "width": "15",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41497,
+        "sku": "57000PCVGWVL-15-18",
+        "price": 23.74,
+        "options": {
+          "width": "15",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41498,
+        "sku": "57000PCVGWVL-15-19",
+        "price": 25.72,
+        "options": {
+          "width": "15",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41499,
+        "sku": "57000PCVGWVL-16-5",
+        "price": 13.52,
+        "options": {
+          "width": "16",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41500,
+        "sku": "57000PCVGWVL-16-6",
+        "price": 14.48,
+        "options": {
+          "width": "16",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41501,
+        "sku": "57000PCVGWVL-16-7",
+        "price": 15.45,
+        "options": {
+          "width": "16",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41502,
+        "sku": "57000PCVGWVL-16-8",
+        "price": 16.41,
+        "options": {
+          "width": "16",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41503,
+        "sku": "57000PCVGWVL-16-9",
+        "price": 17.38,
+        "options": {
+          "width": "16",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41504,
+        "sku": "57000PCVGWVL-16-10",
+        "price": 18.35,
+        "options": {
+          "width": "16",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41505,
+        "sku": "57000PCVGWVL-16-11",
+        "price": 19.31,
+        "options": {
+          "width": "16",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41506,
+        "sku": "57000PCVGWVL-16-12",
+        "price": 18.89,
+        "options": {
+          "width": "16",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41507,
+        "sku": "57000PCVGWVL-16-13",
+        "price": 19.79,
+        "options": {
+          "width": "16",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41508,
+        "sku": "57000PCVGWVL-16-14",
+        "price": 20.69,
+        "options": {
+          "width": "16",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41509,
+        "sku": "57000PCVGWVL-16-15",
+        "price": 21.59,
+        "options": {
+          "width": "16",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41510,
+        "sku": "57000PCVGWVL-16-16",
+        "price": 22.49,
+        "options": {
+          "width": "16",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41511,
+        "sku": "57000PCVGWVL-16-17",
+        "price": 23.39,
+        "options": {
+          "width": "16",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41512,
+        "sku": "57000PCVGWVL-16-18",
+        "price": 24.29,
+        "options": {
+          "width": "16",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41513,
+        "sku": "57000PCVGWVL-16-19",
+        "price": 25.19,
+        "options": {
+          "width": "16",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41514,
+        "sku": "57000PCVGWVL-17-5",
+        "price": 26.09,
+        "options": {
+          "width": "17",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41515,
+        "sku": "57000PCVGWVL-17-6",
+        "price": 26.99,
+        "options": {
+          "width": "17",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41516,
+        "sku": "57000PCVGWVL-17-7",
+        "price": 22.34,
+        "options": {
+          "width": "17",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41517,
+        "sku": "57000PCVGWVL-17-8",
+        "price": 12.95,
+        "options": {
+          "width": "17",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41518,
+        "sku": "57000PCVGWVL-17-9",
+        "price": 15.11,
+        "options": {
+          "width": "17",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41519,
+        "sku": "57000PCVGWVL-17-10",
+        "price": 17.27,
+        "options": {
+          "width": "17",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41520,
+        "sku": "57000PCVGWVL-17-11",
+        "price": 19.42,
+        "options": {
+          "width": "17",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41521,
+        "sku": "57000PCVGWVL-17-12",
+        "price": 21.58,
+        "options": {
+          "width": "17",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41522,
+        "sku": "57000PCVGWVL-17-13",
+        "price": 23.74,
+        "options": {
+          "width": "17",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41523,
+        "sku": "57000PCVGWVL-17-14",
+        "price": 12.64,
+        "options": {
+          "width": "17",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41524,
+        "sku": "57000PCVGWVL-17-15",
+        "price": 13.69,
+        "options": {
+          "width": "17",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41525,
+        "sku": "57000PCVGWVL-17-16",
+        "price": 14.75,
+        "options": {
+          "width": "17",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41526,
+        "sku": "57000PCVGWVL-17-17",
+        "price": 15.8,
+        "options": {
+          "width": "17",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41527,
+        "sku": "57000PCVGWVL-17-18",
+        "price": 16.85,
+        "options": {
+          "width": "17",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41528,
+        "sku": "57000PCVGWVL-17-19",
+        "price": 17.91,
+        "options": {
+          "width": "17",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41529,
+        "sku": "57000PCVGWVL-18-5",
+        "price": 18.96,
+        "options": {
+          "width": "18",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41530,
+        "sku": "57000PCVGWVL-18-6",
+        "price": 18.65,
+        "options": {
+          "width": "18",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41531,
+        "sku": "57000PCVGWVL-18-7",
+        "price": 19.63,
+        "options": {
+          "width": "18",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41532,
+        "sku": "57000PCVGWVL-18-8",
+        "price": 20.61,
+        "options": {
+          "width": "18",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41533,
+        "sku": "57000PCVGWVL-18-9",
+        "price": 21.59,
+        "options": {
+          "width": "18",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41534,
+        "sku": "57000PCVGWVL-18-10",
+        "price": 22.57,
+        "options": {
+          "width": "18",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41535,
+        "sku": "57000PCVGWVL-18-11",
+        "price": 23.55,
+        "options": {
+          "width": "18",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41536,
+        "sku": "57000PCVGWVL-18-12",
+        "price": 24.53,
+        "options": {
+          "width": "18",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41537,
+        "sku": "57000PCVGWVL-18-13",
+        "price": 25.51,
+        "options": {
+          "width": "18",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41538,
+        "sku": "57000PCVGWVL-18-14",
+        "price": 26.5,
+        "options": {
+          "width": "18",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41539,
+        "sku": "57000PCVGWVL-18-15",
+        "price": 27.48,
+        "options": {
+          "width": "18",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41540,
+        "sku": "57000PCVGWVL-18-16",
+        "price": 28.46,
+        "options": {
+          "width": "18",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41541,
+        "sku": "57000PCVGWVL-18-17",
+        "price": 29.44,
+        "options": {
+          "width": "18",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41542,
+        "sku": "57000PCVGWVL-18-18",
+        "price": 11.69,
+        "options": {
+          "width": "18",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41543,
+        "sku": "57000PCVGWVL-18-19",
+        "price": 14.03,
+        "options": {
+          "width": "18",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41544,
+        "sku": "57000PCVGWVL-19-5",
+        "price": 16.37,
+        "options": {
+          "width": "19",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41545,
+        "sku": "57000PCVGWVL-19-6",
+        "price": 18.7,
+        "options": {
+          "width": "19",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41546,
+        "sku": "57000PCVGWVL-19-7",
+        "price": 21.04,
+        "options": {
+          "width": "19",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41547,
+        "sku": "57000PCVGWVL-19-8",
+        "price": 23.38,
+        "options": {
+          "width": "19",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41548,
+        "sku": "57000PCVGWVL-19-9",
+        "price": 25.72,
+        "options": {
+          "width": "19",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41549,
+        "sku": "57000PCVGWVL-19-10",
+        "price": 13.69,
+        "options": {
+          "width": "19",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41550,
+        "sku": "57000PCVGWVL-19-11",
+        "price": 14.83,
+        "options": {
+          "width": "19",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41551,
+        "sku": "57000PCVGWVL-19-12",
+        "price": 15.98,
+        "options": {
+          "width": "19",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41552,
+        "sku": "57000PCVGWVL-19-13",
+        "price": 17.12,
+        "options": {
+          "width": "19",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41553,
+        "sku": "57000PCVGWVL-19-14",
+        "price": 18.26,
+        "options": {
+          "width": "19",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41554,
+        "sku": "57000PCVGWVL-19-15",
+        "price": 19.4,
+        "options": {
+          "width": "19",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41555,
+        "sku": "57000PCVGWVL-19-16",
+        "price": 19.14,
+        "options": {
+          "width": "19",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41556,
+        "sku": "57000PCVGWVL-19-17",
+        "price": 20.2,
+        "options": {
+          "width": "19",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41557,
+        "sku": "57000PCVGWVL-19-18",
+        "price": 21.26,
+        "options": {
+          "width": "19",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41558,
+        "sku": "57000PCVGWVL-19-19",
+        "price": 22.33,
+        "options": {
+          "width": "19",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41559,
+        "sku": "57000PCVGWVL-20-5",
+        "price": 23.39,
+        "options": {
+          "width": "20",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41560,
+        "sku": "57000PCVGWVL-20-6",
+        "price": 24.45,
+        "options": {
+          "width": "20",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41561,
+        "sku": "57000PCVGWVL-20-7",
+        "price": 25.51,
+        "options": {
+          "width": "20",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41562,
+        "sku": "57000PCVGWVL-20-8",
+        "price": 26.58,
+        "options": {
+          "width": "20",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41563,
+        "sku": "57000PCVGWVL-20-9",
+        "price": 27.64,
+        "options": {
+          "width": "20",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41564,
+        "sku": "57000PCVGWVL-20-10",
+        "price": 28.7,
+        "options": {
+          "width": "20",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41565,
+        "sku": "57000PCVGWVL-20-11",
+        "price": 29.77,
+        "options": {
+          "width": "20",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41566,
+        "sku": "57000PCVGWVL-20-12",
+        "price": 30.83,
+        "options": {
+          "width": "20",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41567,
+        "sku": "57000PCVGWVL-20-13",
+        "price": 35.15,
+        "options": {
+          "width": "20",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41568,
+        "sku": "57000PCVGWVL-20-14",
+        "price": 12.59,
+        "options": {
+          "width": "20",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41569,
+        "sku": "57000PCVGWVL-20-15",
+        "price": 15.11,
+        "options": {
+          "width": "20",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41570,
+        "sku": "57000PCVGWVL-20-16",
+        "price": 17.62,
+        "options": {
+          "width": "20",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41571,
+        "sku": "57000PCVGWVL-20-17",
+        "price": 20.14,
+        "options": {
+          "width": "20",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41572,
+        "sku": "57000PCVGWVL-20-18",
+        "price": 22.66,
+        "options": {
+          "width": "20",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41573,
+        "sku": "57000PCVGWVL-20-19",
+        "price": 25.18,
+        "options": {
+          "width": "20",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41574,
+        "sku": "57000PCVGWVL-21-5",
+        "price": 13.52,
+        "options": {
+          "width": "21",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41575,
+        "sku": "57000PCVGWVL-21-6",
+        "price": 14.75,
+        "options": {
+          "width": "21",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41576,
+        "sku": "57000PCVGWVL-21-7",
+        "price": 15.98,
+        "options": {
+          "width": "21",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41577,
+        "sku": "57000PCVGWVL-21-8",
+        "price": 17.2,
+        "options": {
+          "width": "21",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41578,
+        "sku": "57000PCVGWVL-21-9",
+        "price": 18.43,
+        "options": {
+          "width": "21",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41579,
+        "sku": "57000PCVGWVL-21-10",
+        "price": 19.66,
+        "options": {
+          "width": "21",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41580,
+        "sku": "57000PCVGWVL-21-11",
+        "price": 19.46,
+        "options": {
+          "width": "21",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41581,
+        "sku": "57000PCVGWVL-21-12",
+        "price": 20.61,
+        "options": {
+          "width": "21",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41582,
+        "sku": "57000PCVGWVL-21-13",
+        "price": 21.75,
+        "options": {
+          "width": "21",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41583,
+        "sku": "57000PCVGWVL-21-14",
+        "price": 22.9,
+        "options": {
+          "width": "21",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41584,
+        "sku": "57000PCVGWVL-21-15",
+        "price": 24.04,
+        "options": {
+          "width": "21",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41585,
+        "sku": "57000PCVGWVL-21-16",
+        "price": 25.19,
+        "options": {
+          "width": "21",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41586,
+        "sku": "57000PCVGWVL-21-17",
+        "price": 26.33,
+        "options": {
+          "width": "21",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41587,
+        "sku": "57000PCVGWVL-21-18",
+        "price": 27.48,
+        "options": {
+          "width": "21",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41588,
+        "sku": "57000PCVGWVL-21-19",
+        "price": 28.62,
+        "options": {
+          "width": "21",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41589,
+        "sku": "57000PCVGWVL-22-5",
+        "price": 29.77,
+        "options": {
+          "width": "22",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41590,
+        "sku": "57000PCVGWVL-22-6",
+        "price": 30.91,
+        "options": {
+          "width": "22",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41591,
+        "sku": "57000PCVGWVL-22-7",
+        "price": 35.33,
+        "options": {
+          "width": "22",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41592,
+        "sku": "57000PCVGWVL-22-8",
+        "price": 36.59,
+        "options": {
+          "width": "22",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41593,
+        "sku": "57000PCVGWVL-22-9",
+        "price": 37.86,
+        "options": {
+          "width": "22",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41594,
+        "sku": "57000PCVGWVL-22-10",
+        "price": 13.49,
+        "options": {
+          "width": "22",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41595,
+        "sku": "57000PCVGWVL-22-11",
+        "price": 16.19,
+        "options": {
+          "width": "22",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41596,
+        "sku": "57000PCVGWVL-22-12",
+        "price": 18.88,
+        "options": {
+          "width": "22",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41597,
+        "sku": "57000PCVGWVL-22-13",
+        "price": 21.58,
+        "options": {
+          "width": "22",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41598,
+        "sku": "57000PCVGWVL-22-14",
+        "price": 24.28,
+        "options": {
+          "width": "22",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41599,
+        "sku": "57000PCVGWVL-22-15",
+        "price": 13.17,
+        "options": {
+          "width": "22",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41600,
+        "sku": "57000PCVGWVL-22-16",
+        "price": 14.48,
+        "options": {
+          "width": "22",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41601,
+        "sku": "57000PCVGWVL-22-17",
+        "price": 15.8,
+        "options": {
+          "width": "22",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41602,
+        "sku": "57000PCVGWVL-22-18",
+        "price": 17.12,
+        "options": {
+          "width": "22",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41603,
+        "sku": "57000PCVGWVL-22-19",
+        "price": 18.43,
+        "options": {
+          "width": "22",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41604,
+        "sku": "57000PCVGWVL-23-5",
+        "price": 18.4,
+        "options": {
+          "width": "23",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41605,
+        "sku": "57000PCVGWVL-23-6",
+        "price": 19.63,
+        "options": {
+          "width": "23",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41606,
+        "sku": "57000PCVGWVL-23-7",
+        "price": 20.85,
+        "options": {
+          "width": "23",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41607,
+        "sku": "57000PCVGWVL-23-8",
+        "price": 22.08,
+        "options": {
+          "width": "23",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41608,
+        "sku": "57000PCVGWVL-23-9",
+        "price": 23.31,
+        "options": {
+          "width": "23",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41609,
+        "sku": "57000PCVGWVL-23-10",
+        "price": 24.53,
+        "options": {
+          "width": "23",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41610,
+        "sku": "57000PCVGWVL-23-11",
+        "price": 25.76,
+        "options": {
+          "width": "23",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41611,
+        "sku": "57000PCVGWVL-23-12",
+        "price": 26.99,
+        "options": {
+          "width": "23",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41612,
+        "sku": "57000PCVGWVL-23-13",
+        "price": 28.21,
+        "options": {
+          "width": "23",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41613,
+        "sku": "57000PCVGWVL-23-14",
+        "price": 29.44,
+        "options": {
+          "width": "23",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41614,
+        "sku": "57000PCVGWVL-23-15",
+        "price": 30.67,
+        "options": {
+          "width": "23",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41615,
+        "sku": "57000PCVGWVL-23-16",
+        "price": 35.15,
+        "options": {
+          "width": "23",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41616,
+        "sku": "57000PCVGWVL-23-17",
+        "price": 36.5,
+        "options": {
+          "width": "23",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41617,
+        "sku": "57000PCVGWVL-23-18",
+        "price": 37.86,
+        "options": {
+          "width": "23",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41618,
+        "sku": "57000PCVGWVL-23-19",
+        "price": 39.21,
+        "options": {
+          "width": "23",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41619,
+        "sku": "57000PCVGWVL-24-5",
+        "price": 40.56,
+        "options": {
+          "width": "24",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41620,
+        "sku": "57000PCVGWVL-24-6",
+        "price": 14.39,
+        "options": {
+          "width": "24",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41621,
+        "sku": "57000PCVGWVL-24-7",
+        "price": 17.27,
+        "options": {
+          "width": "24",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41622,
+        "sku": "57000PCVGWVL-24-8",
+        "price": 20.14,
+        "options": {
+          "width": "24",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41623,
+        "sku": "57000PCVGWVL-24-9",
+        "price": 23.02,
+        "options": {
+          "width": "24",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41624,
+        "sku": "57000PCVGWVL-24-10",
+        "price": 12.64,
+        "options": {
+          "width": "24",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41625,
+        "sku": "57000PCVGWVL-24-11",
+        "price": 14.04,
+        "options": {
+          "width": "24",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41626,
+        "sku": "57000PCVGWVL-24-12",
+        "price": 15.45,
+        "options": {
+          "width": "24",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41627,
+        "sku": "57000PCVGWVL-24-13",
+        "price": 16.85,
+        "options": {
+          "width": "24",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41628,
+        "sku": "57000PCVGWVL-24-14",
+        "price": 18.26,
+        "options": {
+          "width": "24",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41629,
+        "sku": "57000PCVGWVL-24-15",
+        "price": 19.66,
+        "options": {
+          "width": "24",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41630,
+        "sku": "57000PCVGWVL-24-16",
+        "price": 19.63,
+        "options": {
+          "width": "24",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41631,
+        "sku": "57000PCVGWVL-24-17",
+        "price": 20.94,
+        "options": {
+          "width": "24",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41632,
+        "sku": "57000PCVGWVL-24-18",
+        "price": 22.24,
+        "options": {
+          "width": "24",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41633,
+        "sku": "57000PCVGWVL-24-19",
+        "price": 23.55,
+        "options": {
+          "width": "24",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41634,
+        "sku": "57000PCVGWVL-25-5",
+        "price": 24.86,
+        "options": {
+          "width": "25",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41635,
+        "sku": "57000PCVGWVL-25-6",
+        "price": 26.17,
+        "options": {
+          "width": "25",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41636,
+        "sku": "57000PCVGWVL-25-7",
+        "price": 27.48,
+        "options": {
+          "width": "25",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41637,
+        "sku": "57000PCVGWVL-25-8",
+        "price": 28.79,
+        "options": {
+          "width": "25",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41638,
+        "sku": "57000PCVGWVL-25-9",
+        "price": 30.09,
+        "options": {
+          "width": "25",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41639,
+        "sku": "57000PCVGWVL-25-10",
+        "price": 34.61,
+        "options": {
+          "width": "25",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41640,
+        "sku": "57000PCVGWVL-25-11",
+        "price": 36.05,
+        "options": {
+          "width": "25",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41641,
+        "sku": "57000PCVGWVL-25-12",
+        "price": 37.49,
+        "options": {
+          "width": "25",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41642,
+        "sku": "57000PCVGWVL-25-13",
+        "price": 38.94,
+        "options": {
+          "width": "25",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41643,
+        "sku": "57000PCVGWVL-25-14",
+        "price": 40.38,
+        "options": {
+          "width": "25",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41644,
+        "sku": "57000PCVGWVL-25-15",
+        "price": 41.82,
+        "options": {
+          "width": "25",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41645,
+        "sku": "57000PCVGWVL-25-16",
+        "price": 55.04,
+        "options": {
+          "width": "25",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41646,
+        "sku": "57000PCVGWVL-25-17",
+        "price": 15.29,
+        "options": {
+          "width": "25",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41647,
+        "sku": "57000PCVGWVL-25-18",
+        "price": 18.34,
+        "options": {
+          "width": "25",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41648,
+        "sku": "57000PCVGWVL-25-19",
+        "price": 21.4,
+        "options": {
+          "width": "25",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41649,
+        "sku": "57000PCVGWVL-26-5",
+        "price": 24.46,
+        "options": {
+          "width": "26",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41650,
+        "sku": "57000PCVGWVL-26-6",
+        "price": 13.43,
+        "options": {
+          "width": "26",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41651,
+        "sku": "57000PCVGWVL-26-7",
+        "price": 14.92,
+        "options": {
+          "width": "26",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41652,
+        "sku": "57000PCVGWVL-26-8",
+        "price": 16.41,
+        "options": {
+          "width": "26",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41653,
+        "sku": "57000PCVGWVL-26-9",
+        "price": 17.91,
+        "options": {
+          "width": "26",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41654,
+        "sku": "57000PCVGWVL-26-10",
+        "price": 19.4,
+        "options": {
+          "width": "26",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41655,
+        "sku": "57000PCVGWVL-26-11",
+        "price": 19.46,
+        "options": {
+          "width": "26",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41656,
+        "sku": "57000PCVGWVL-26-12",
+        "price": 20.85,
+        "options": {
+          "width": "26",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41657,
+        "sku": "57000PCVGWVL-26-13",
+        "price": 22.24,
+        "options": {
+          "width": "26",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41658,
+        "sku": "57000PCVGWVL-26-14",
+        "price": 23.63,
+        "options": {
+          "width": "26",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41659,
+        "sku": "57000PCVGWVL-26-15",
+        "price": 25.02,
+        "options": {
+          "width": "26",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41660,
+        "sku": "57000PCVGWVL-26-16",
+        "price": 26.41,
+        "options": {
+          "width": "26",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41661,
+        "sku": "57000PCVGWVL-26-17",
+        "price": 27.8,
+        "options": {
+          "width": "26",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41662,
+        "sku": "57000PCVGWVL-26-18",
+        "price": 29.19,
+        "options": {
+          "width": "26",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41663,
+        "sku": "57000PCVGWVL-26-19",
+        "price": 30.58,
+        "options": {
+          "width": "26",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41664,
+        "sku": "57000PCVGWVL-27-5",
+        "price": 35.24,
+        "options": {
+          "width": "27",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41665,
+        "sku": "57000PCVGWVL-27-6",
+        "price": 36.77,
+        "options": {
+          "width": "27",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41666,
+        "sku": "57000PCVGWVL-27-7",
+        "price": 38.31,
+        "options": {
+          "width": "27",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41667,
+        "sku": "57000PCVGWVL-27-8",
+        "price": 39.84,
+        "options": {
+          "width": "27",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41668,
+        "sku": "57000PCVGWVL-27-9",
+        "price": 41.37,
+        "options": {
+          "width": "27",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41669,
+        "sku": "57000PCVGWVL-27-10",
+        "price": 54.58,
+        "options": {
+          "width": "27",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41670,
+        "sku": "57000PCVGWVL-27-11",
+        "price": 56.53,
+        "options": {
+          "width": "27",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41671,
+        "sku": "57000PCVGWVL-27-12",
+        "price": 58.48,
+        "options": {
+          "width": "27",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41672,
+        "sku": "57000PCVGWVL-27-13",
+        "price": 16.19,
+        "options": {
+          "width": "27",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41673,
+        "sku": "57000PCVGWVL-27-14",
+        "price": 19.42,
+        "options": {
+          "width": "27",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41674,
+        "sku": "57000PCVGWVL-27-15",
+        "price": 22.66,
+        "options": {
+          "width": "27",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41675,
+        "sku": "57000PCVGWVL-27-16",
+        "price": 12.64,
+        "options": {
+          "width": "27",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41676,
+        "sku": "57000PCVGWVL-27-17",
+        "price": 14.22,
+        "options": {
+          "width": "27",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41677,
+        "sku": "57000PCVGWVL-27-18",
+        "price": 15.8,
+        "options": {
+          "width": "27",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41678,
+        "sku": "57000PCVGWVL-27-19",
+        "price": 17.38,
+        "options": {
+          "width": "27",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41679,
+        "sku": "57000PCVGWVL-28-5",
+        "price": 18.96,
+        "options": {
+          "width": "28",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41680,
+        "sku": "57000PCVGWVL-28-6",
+        "price": 19.14,
+        "options": {
+          "width": "28",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41681,
+        "sku": "57000PCVGWVL-28-7",
+        "price": 20.61,
+        "options": {
+          "width": "28",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41682,
+        "sku": "57000PCVGWVL-28-8",
+        "price": 22.08,
+        "options": {
+          "width": "28",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41683,
+        "sku": "57000PCVGWVL-28-9",
+        "price": 23.55,
+        "options": {
+          "width": "28",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41684,
+        "sku": "57000PCVGWVL-28-10",
+        "price": 25.02,
+        "options": {
+          "width": "28",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41685,
+        "sku": "57000PCVGWVL-28-11",
+        "price": 26.5,
+        "options": {
+          "width": "28",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41686,
+        "sku": "57000PCVGWVL-28-12",
+        "price": 27.97,
+        "options": {
+          "width": "28",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41687,
+        "sku": "57000PCVGWVL-28-13",
+        "price": 29.44,
+        "options": {
+          "width": "28",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41688,
+        "sku": "57000PCVGWVL-28-14",
+        "price": 30.91,
+        "options": {
+          "width": "28",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41689,
+        "sku": "57000PCVGWVL-28-15",
+        "price": 35.69,
+        "options": {
+          "width": "28",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41690,
+        "sku": "57000PCVGWVL-28-16",
+        "price": 37.31,
+        "options": {
+          "width": "28",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41691,
+        "sku": "57000PCVGWVL-28-17",
+        "price": 38.94,
+        "options": {
+          "width": "28",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41692,
+        "sku": "57000PCVGWVL-28-18",
+        "price": 40.56,
+        "options": {
+          "width": "28",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41693,
+        "sku": "57000PCVGWVL-28-19",
+        "price": 42.18,
+        "options": {
+          "width": "28",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41694,
+        "sku": "57000PCVGWVL-29-5",
+        "price": 55.73,
+        "options": {
+          "width": "29",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41695,
+        "sku": "57000PCVGWVL-29-6",
+        "price": 57.8,
+        "options": {
+          "width": "29",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41696,
+        "sku": "57000PCVGWVL-29-7",
+        "price": 59.86,
+        "options": {
+          "width": "29",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41697,
+        "sku": "57000PCVGWVL-29-8",
+        "price": 61.92,
+        "options": {
+          "width": "29",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41698,
+        "sku": "57000PCVGWVL-29-9",
+        "price": 17.09,
+        "options": {
+          "width": "29",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41699,
+        "sku": "57000PCVGWVL-29-10",
+        "price": 20.5,
+        "options": {
+          "width": "29",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41700,
+        "sku": "57000PCVGWVL-29-11",
+        "price": 23.92,
+        "options": {
+          "width": "29",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41701,
+        "sku": "57000PCVGWVL-29-12",
+        "price": 13.34,
+        "options": {
+          "width": "29",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41702,
+        "sku": "57000PCVGWVL-29-13",
+        "price": 15.01,
+        "options": {
+          "width": "29",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41703,
+        "sku": "57000PCVGWVL-29-14",
+        "price": 16.68,
+        "options": {
+          "width": "29",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41704,
+        "sku": "57000PCVGWVL-29-15",
+        "price": 18.35,
+        "options": {
+          "width": "29",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41705,
+        "sku": "57000PCVGWVL-29-16",
+        "price": 18.65,
+        "options": {
+          "width": "29",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41706,
+        "sku": "57000PCVGWVL-29-17",
+        "price": 20.2,
+        "options": {
+          "width": "29",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41707,
+        "sku": "57000PCVGWVL-29-18",
+        "price": 21.75,
+        "options": {
+          "width": "29",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41708,
+        "sku": "57000PCVGWVL-29-19",
+        "price": 23.31,
+        "options": {
+          "width": "29",
+          "height": "19"
+        }
+      },
+      {
+        "id": 41709,
+        "sku": "57000PCVGWVL-30-5",
+        "price": 24.86,
+        "options": {
+          "width": "30",
+          "height": "5"
+        }
+      },
+      {
+        "id": 41710,
+        "sku": "57000PCVGWVL-30-6",
+        "price": 26.41,
+        "options": {
+          "width": "30",
+          "height": "6"
+        }
+      },
+      {
+        "id": 41711,
+        "sku": "57000PCVGWVL-30-7",
+        "price": 27.97,
+        "options": {
+          "width": "30",
+          "height": "7"
+        }
+      },
+      {
+        "id": 41712,
+        "sku": "57000PCVGWVL-30-8",
+        "price": 29.52,
+        "options": {
+          "width": "30",
+          "height": "8"
+        }
+      },
+      {
+        "id": 41713,
+        "sku": "57000PCVGWVL-30-9",
+        "price": 34.25,
+        "options": {
+          "width": "30",
+          "height": "9"
+        }
+      },
+      {
+        "id": 41714,
+        "sku": "57000PCVGWVL-30-10",
+        "price": 35.96,
+        "options": {
+          "width": "30",
+          "height": "10"
+        }
+      },
+      {
+        "id": 41715,
+        "sku": "57000PCVGWVL-30-11",
+        "price": 37.68,
+        "options": {
+          "width": "30",
+          "height": "11"
+        }
+      },
+      {
+        "id": 41716,
+        "sku": "57000PCVGWVL-30-12",
+        "price": 39.39,
+        "options": {
+          "width": "30",
+          "height": "12"
+        }
+      },
+      {
+        "id": 41717,
+        "sku": "57000PCVGWVL-30-13",
+        "price": 41.1,
+        "options": {
+          "width": "30",
+          "height": "13"
+        }
+      },
+      {
+        "id": 41718,
+        "sku": "57000PCVGWVL-30-14",
+        "price": 54.47,
+        "options": {
+          "width": "30",
+          "height": "14"
+        }
+      },
+      {
+        "id": 41719,
+        "sku": "57000PCVGWVL-30-15",
+        "price": 56.65,
+        "options": {
+          "width": "30",
+          "height": "15"
+        }
+      },
+      {
+        "id": 41720,
+        "sku": "57000PCVGWVL-30-16",
+        "price": 58.83,
+        "options": {
+          "width": "30",
+          "height": "16"
+        }
+      },
+      {
+        "id": 41721,
+        "sku": "57000PCVGWVL-30-17",
+        "price": 61.01,
+        "options": {
+          "width": "30",
+          "height": "17"
+        }
+      },
+      {
+        "id": 41722,
+        "sku": "57000PCVGWVL-30-18",
+        "price": 63.19,
+        "options": {
+          "width": "30",
+          "height": "18"
+        }
+      },
+      {
+        "id": 41723,
+        "sku": "57000PCVGWVL-30-19",
+        "price": 54.47,
+        "options": {
+          "width": "30",
+          "height": "19"
+        }
+      }
+    ],
+    "price_grid": {
+      "5x5": 9.31,
+      "6x5": 11.17,
+      "7x5": 13.03,
+      "8x5": 14.9,
+      "9x5": 16.76,
+      "10x5": 18.62,
+      "11x5": 20.48,
+      "12x5": 22.34,
+      "13x5": 11.69,
+      "14x5": 12.59,
+      "15x5": 13.49,
+      "16x5": 14.39,
+      "17x5": 15.29,
+      "18x5": 16.19,
+      "19x5": 17.09,
+      "5x6": 17.98,
+      "6x6": 18.88,
+      "7x6": 19.78,
+      "8x6": 20.68,
+      "9x6": 21.58,
+      "10x6": 22.48,
+      "11x6": 23.38,
+      "12x6": 24.28,
+      "13x6": 25.18,
+      "14x6": 12.73,
+      "15x6": 13.17,
+      "16x6": 11.17,
+      "17x6": 13.41,
+      "18x6": 15.64,
+      "19x6": 17.88,
+      "5x7": 20.11,
+      "6x7": 22.34,
+      "7x7": 11.87,
+      "8x7": 12.95,
+      "9x7": 14.03,
+      "10x7": 15.11,
+      "11x7": 16.19,
+      "12x7": 17.27,
+      "13x7": 18.34,
+      "14x7": 19.42,
+      "15x7": 20.5,
+      "16x7": 21.58,
+      "17x7": 22.66,
+      "18x7": 23.74,
+      "19x7": 24.82,
+      "5x8": 12.64,
+      "6x8": 13.17,
+      "7x8": 13.69,
+      "8x8": 14.22,
+      "9x8": 14.75,
+      "10x8": 15.27,
+      "11x8": 15.8,
+      "12x8": 13.03,
+      "13x8": 15.64,
+      "14x8": 18.25,
+      "15x8": 20.85,
+      "16x8": 23.46,
+      "17x8": 12.59,
+      "18x8": 13.85,
+      "19x8": 15.11,
+      "5x9": 16.37,
+      "6x9": 17.62,
+      "7x9": 18.88,
+      "8x9": 20.14,
+      "9x9": 21.4,
+      "10x9": 22.66,
+      "11x9": 23.92,
+      "12x9": 25.18,
+      "13x9": 12.9,
+      "14x9": 13.52,
+      "15x9": 14.13,
+      "16x9": 14.75,
+      "17x9": 15.36,
+      "18x9": 15.98,
+      "19x9": 16.59,
+      "5x10": 17.2,
+      "6x10": 17.82,
+      "7x10": 18.43,
+      "8x10": 14.9,
+      "9x10": 17.88,
+      "10x10": 20.85,
+      "11x10": 11.51,
+      "12x10": 12.95,
+      "13x10": 14.39,
+      "14x10": 15.83,
+      "15x10": 17.27,
+      "16x10": 18.7,
+      "17x10": 20.14,
+      "18x10": 21.58,
+      "19x10": 23.02,
+      "5x11": 24.46,
+      "6x11": 12.64,
+      "7x11": 13.34,
+      "8x11": 14.04,
+      "9x11": 14.75,
+      "10x11": 15.45,
+      "11x11": 16.15,
+      "12x11": 16.85,
+      "13x11": 17.56,
+      "14x11": 18.26,
+      "15x11": 18.96,
+      "16x11": 19.66,
+      "17x11": 18.97,
+      "18x11": 19.63,
+      "19x11": 16.76,
+      "5x12": 20.11,
+      "6x12": 23.46,
+      "7x12": 12.95,
+      "8x12": 14.57,
+      "9x12": 16.19,
+      "10x12": 17.8,
+      "11x12": 19.42,
+      "12x12": 21.04,
+      "13x12": 22.66,
+      "14x12": 24.28,
+      "15x12": 12.64,
+      "16x12": 13.43,
+      "17x12": 14.22,
+      "18x12": 15.01,
+      "19x12": 15.8,
+      "5x13": 16.59,
+      "6x13": 17.38,
+      "7x13": 18.17,
+      "8x13": 18.96,
+      "9x13": 18.4,
+      "10x13": 19.14,
+      "11x13": 19.87,
+      "12x13": 20.61,
+      "13x13": 21.34,
+      "14x13": 22.08,
+      "15x13": 18.62,
+      "16x13": 22.34,
+      "17x13": 12.59,
+      "18x13": 14.39,
+      "19x13": 16.19,
+      "5x14": 17.98,
+      "6x14": 19.78,
+      "7x14": 21.58,
+      "8x14": 23.38,
+      "9x14": 25.18,
+      "10x14": 13.17,
+      "11x14": 14.04,
+      "12x14": 14.92,
+      "13x14": 15.8,
+      "14x14": 16.68,
+      "15x14": 17.56,
+      "16x14": 18.43,
+      "17x14": 19.31,
+      "18x14": 18.81,
+      "19x14": 19.63,
+      "5x15": 20.44,
+      "6x15": 21.26,
+      "7x15": 22.08,
+      "8x15": 22.9,
+      "9x15": 23.72,
+      "10x15": 24.53,
+      "11x15": 20.48,
+      "12x15": 11.87,
+      "13x15": 13.85,
+      "14x15": 15.83,
+      "15x15": 17.8,
+      "16x15": 19.78,
+      "17x15": 21.76,
+      "18x15": 23.74,
+      "19x15": 25.72,
+      "5x16": 13.52,
+      "6x16": 14.48,
+      "7x16": 15.45,
+      "8x16": 16.41,
+      "9x16": 17.38,
+      "10x16": 18.35,
+      "11x16": 19.31,
+      "12x16": 18.89,
+      "13x16": 19.79,
+      "14x16": 20.69,
+      "15x16": 21.59,
+      "16x16": 22.49,
+      "17x16": 23.39,
+      "18x16": 24.29,
+      "19x16": 25.19,
+      "5x17": 26.09,
+      "6x17": 26.99,
+      "7x17": 22.34,
+      "8x17": 12.95,
+      "9x17": 15.11,
+      "10x17": 17.27,
+      "11x17": 19.42,
+      "12x17": 21.58,
+      "13x17": 23.74,
+      "14x17": 12.64,
+      "15x17": 13.69,
+      "16x17": 14.75,
+      "17x17": 15.8,
+      "18x17": 16.85,
+      "19x17": 17.91,
+      "5x18": 18.96,
+      "6x18": 18.65,
+      "7x18": 19.63,
+      "8x18": 20.61,
+      "9x18": 21.59,
+      "10x18": 22.57,
+      "11x18": 23.55,
+      "12x18": 24.53,
+      "13x18": 25.51,
+      "14x18": 26.5,
+      "15x18": 27.48,
+      "16x18": 28.46,
+      "17x18": 29.44,
+      "18x18": 11.69,
+      "19x18": 14.03,
+      "5x19": 16.37,
+      "6x19": 18.7,
+      "7x19": 21.04,
+      "8x19": 23.38,
+      "9x19": 25.72,
+      "10x19": 13.69,
+      "11x19": 14.83,
+      "12x19": 15.98,
+      "13x19": 17.12,
+      "14x19": 18.26,
+      "15x19": 19.4,
+      "16x19": 19.14,
+      "17x19": 20.2,
+      "18x19": 21.26,
+      "19x19": 22.33,
+      "5x20": 23.39,
+      "6x20": 24.45,
+      "7x20": 25.51,
+      "8x20": 26.58,
+      "9x20": 27.64,
+      "10x20": 28.7,
+      "11x20": 29.77,
+      "12x20": 30.83,
+      "13x20": 35.15,
+      "14x20": 12.59,
+      "15x20": 15.11,
+      "16x20": 17.62,
+      "17x20": 20.14,
+      "18x20": 22.66,
+      "19x20": 25.18,
+      "5x21": 13.52,
+      "6x21": 14.75,
+      "7x21": 15.98,
+      "8x21": 17.2,
+      "9x21": 18.43,
+      "10x21": 19.66,
+      "11x21": 19.46,
+      "12x21": 20.61,
+      "13x21": 21.75,
+      "14x21": 22.9,
+      "15x21": 24.04,
+      "16x21": 25.19,
+      "17x21": 26.33,
+      "18x21": 27.48,
+      "19x21": 28.62,
+      "5x22": 29.77,
+      "6x22": 30.91,
+      "7x22": 35.33,
+      "8x22": 36.59,
+      "9x22": 37.86,
+      "10x22": 13.49,
+      "11x22": 16.19,
+      "12x22": 18.88,
+      "13x22": 21.58,
+      "14x22": 24.28,
+      "15x22": 13.17,
+      "16x22": 14.48,
+      "17x22": 15.8,
+      "18x22": 17.12,
+      "19x22": 18.43,
+      "5x23": 18.4,
+      "6x23": 19.63,
+      "7x23": 20.85,
+      "8x23": 22.08,
+      "9x23": 23.31,
+      "10x23": 24.53,
+      "11x23": 25.76,
+      "12x23": 26.99,
+      "13x23": 28.21,
+      "14x23": 29.44,
+      "15x23": 30.67,
+      "16x23": 35.15,
+      "17x23": 36.5,
+      "18x23": 37.86,
+      "19x23": 39.21,
+      "5x24": 40.56,
+      "6x24": 14.39,
+      "7x24": 17.27,
+      "8x24": 20.14,
+      "9x24": 23.02,
+      "10x24": 12.64,
+      "11x24": 14.04,
+      "12x24": 15.45,
+      "13x24": 16.85,
+      "14x24": 18.26,
+      "15x24": 19.66,
+      "16x24": 19.63,
+      "17x24": 20.94,
+      "18x24": 22.24,
+      "19x24": 23.55,
+      "5x25": 24.86,
+      "6x25": 26.17,
+      "7x25": 27.48,
+      "8x25": 28.79,
+      "9x25": 30.09,
+      "10x25": 34.61,
+      "11x25": 36.05,
+      "12x25": 37.49,
+      "13x25": 38.94,
+      "14x25": 40.38,
+      "15x25": 41.82,
+      "16x25": 55.04,
+      "17x25": 15.29,
+      "18x25": 18.34,
+      "19x25": 21.4,
+      "5x26": 24.46,
+      "6x26": 13.43,
+      "7x26": 14.92,
+      "8x26": 16.41,
+      "9x26": 17.91,
+      "10x26": 19.4,
+      "11x26": 19.46,
+      "12x26": 20.85,
+      "13x26": 22.24,
+      "14x26": 23.63,
+      "15x26": 25.02,
+      "16x26": 26.41,
+      "17x26": 27.8,
+      "18x26": 29.19,
+      "19x26": 30.58,
+      "5x27": 35.24,
+      "6x27": 36.77,
+      "7x27": 38.31,
+      "8x27": 39.84,
+      "9x27": 41.37,
+      "10x27": 54.58,
+      "11x27": 56.53,
+      "12x27": 58.48,
+      "13x27": 16.19,
+      "14x27": 19.42,
+      "15x27": 22.66,
+      "16x27": 12.64,
+      "17x27": 14.22,
+      "18x27": 15.8,
+      "19x27": 17.38,
+      "5x28": 18.96,
+      "6x28": 19.14,
+      "7x28": 20.61,
+      "8x28": 22.08,
+      "9x28": 23.55,
+      "10x28": 25.02,
+      "11x28": 26.5,
+      "12x28": 27.97,
+      "13x28": 29.44,
+      "14x28": 30.91,
+      "15x28": 35.69,
+      "16x28": 37.31,
+      "17x28": 38.94,
+      "18x28": 40.56,
+      "19x28": 42.18,
+      "5x29": 55.73,
+      "6x29": 57.8,
+      "7x29": 59.86,
+      "8x29": 61.92,
+      "9x29": 17.09,
+      "10x29": 20.5,
+      "11x29": 23.92,
+      "12x29": 13.34,
+      "13x29": 15.01,
+      "14x29": 16.68,
+      "15x29": 18.35,
+      "16x29": 18.65,
+      "17x29": 20.2,
+      "18x29": 21.75,
+      "19x29": 23.31,
+      "5x30": 24.86,
+      "6x30": 26.41,
+      "7x30": 27.97,
+      "8x30": 29.52,
+      "9x30": 34.25,
+      "10x30": 35.96,
+      "11x30": 37.68,
+      "12x30": 39.39,
+      "13x30": 41.1,
+      "14x30": 54.47,
+      "15x30": 56.65,
+      "16x30": 58.83,
+      "17x30": 61.01,
+      "18x30": 63.19,
+      "19x30": 54.47
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 2393,
+        "name": "SW Range (5-30)",
+        "role": "width"
+      },
+      {
+        "id": 2413,
+        "name": "SH Range (5-19)",
+        "role": "height"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 2394,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 2395,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 2396,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 2397,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 2398,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 2399,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 2400,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 2402,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2403,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 2404,
+        "name": "Readability",
+        "type": "swatch",
+        "required": true,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1368,
+            "label": "Read from Outside"
+          },
+          {
+            "id": 1369,
+            "label": "Read from Inside"
+          }
+        ]
+      },
+      {
+        "id": 2405,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2406,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 2407,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 2408,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2409,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2410,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2411,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2412,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      },
+      {
+        "id": 2512,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1707,
+            "label": "CustomShape"
+          }
+        ]
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Readability",
+      "Saved Print Output",
+      "Sticker Height",
+      "Sticker Width",
+      "Shape"
+    ]
+  },
+  "mcp": {
+    "product_id": "vinyl_lettering_cut_vinyl_logos_gloss_white",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

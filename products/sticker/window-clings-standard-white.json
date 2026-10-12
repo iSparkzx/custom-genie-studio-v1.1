@@ -1,0 +1,5482 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "window_clings_standard_white",
+  "name": "Custom White Window Clings",
+  "family": "sticker",
+  "type": "Custom Cut - Window Clings",
+  "group": "custom_cut_window_clings",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 185,
+    "url": "/stickers/window-clings-standard-white/",
+    "sku": "570GLOSSWHITE",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 10,
+      "max": 65
+    },
+    "height": {
+      "min": 10,
+      "max": 45
+    },
+    "price_steps": {
+      "width": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        65
+      ],
+      "height": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        45
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "CustomShape"
+    }
+  ],
+  "decoration": "printed",
+  "format": "window_cling",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 19.24,
+    "quantity_tiers": [
+      {
+        "min_qty": 3,
+        "max_qty": 4,
+        "type": "percent",
+        "amount": 10
+      },
+      {
+        "min_qty": 5,
+        "max_qty": 9,
+        "type": "percent",
+        "amount": 15
+      },
+      {
+        "min_qty": 10,
+        "max_qty": 19,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 20,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 25
+      }
+    ],
+    "variants": [
+      {
+        "id": 17777,
+        "sku": "570GLOSSWHITE-10-10",
+        "price": 19.24,
+        "options": {
+          "height": "10",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17778,
+        "sku": "570GLOSSWHITE-10-12",
+        "price": 23.09,
+        "options": {
+          "height": "10",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17779,
+        "sku": "570GLOSSWHITE-10-14",
+        "price": 26.94,
+        "options": {
+          "height": "10",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17780,
+        "sku": "570GLOSSWHITE-10-16",
+        "price": 30.78,
+        "options": {
+          "height": "10",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17781,
+        "sku": "570GLOSSWHITE-10-18",
+        "price": 34.63,
+        "options": {
+          "height": "10",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17782,
+        "sku": "570GLOSSWHITE-10-20",
+        "price": 38.48,
+        "options": {
+          "height": "10",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17783,
+        "sku": "570GLOSSWHITE-10-22",
+        "price": 42.33,
+        "options": {
+          "height": "10",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17784,
+        "sku": "570GLOSSWHITE-10-24",
+        "price": 46.18,
+        "options": {
+          "height": "10",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17785,
+        "sku": "570GLOSSWHITE-10-26",
+        "price": 50.02,
+        "options": {
+          "height": "10",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17786,
+        "sku": "570GLOSSWHITE-10-28",
+        "price": 53.87,
+        "options": {
+          "height": "10",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17787,
+        "sku": "570GLOSSWHITE-10-30",
+        "price": 57.72,
+        "options": {
+          "height": "10",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17788,
+        "sku": "570GLOSSWHITE-10-32",
+        "price": 61.57,
+        "options": {
+          "height": "10",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17789,
+        "sku": "570GLOSSWHITE-10-34",
+        "price": 65.42,
+        "options": {
+          "height": "10",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17790,
+        "sku": "570GLOSSWHITE-10-36",
+        "price": 69.26,
+        "options": {
+          "height": "10",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17791,
+        "sku": "570GLOSSWHITE-10-38",
+        "price": 73.11,
+        "options": {
+          "height": "10",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17792,
+        "sku": "570GLOSSWHITE-10-40",
+        "price": 61.57,
+        "options": {
+          "height": "10",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17793,
+        "sku": "570GLOSSWHITE-10-42",
+        "price": 64.65,
+        "options": {
+          "height": "10",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17794,
+        "sku": "570GLOSSWHITE-10-44",
+        "price": 67.72,
+        "options": {
+          "height": "10",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17795,
+        "sku": "570GLOSSWHITE-10-46",
+        "price": 70.8,
+        "options": {
+          "height": "10",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17796,
+        "sku": "570GLOSSWHITE-10-48",
+        "price": 73.88,
+        "options": {
+          "height": "10",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17797,
+        "sku": "570GLOSSWHITE-10-50",
+        "price": 76.96,
+        "options": {
+          "height": "10",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17798,
+        "sku": "570GLOSSWHITE-10-52",
+        "price": 80.04,
+        "options": {
+          "height": "10",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17799,
+        "sku": "570GLOSSWHITE-10-54",
+        "price": 83.12,
+        "options": {
+          "height": "10",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17800,
+        "sku": "570GLOSSWHITE-10-56",
+        "price": 86.2,
+        "options": {
+          "height": "10",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17801,
+        "sku": "570GLOSSWHITE-10-58",
+        "price": 89.27,
+        "options": {
+          "height": "10",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17802,
+        "sku": "570GLOSSWHITE-10-60",
+        "price": 92.35,
+        "options": {
+          "height": "10",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17803,
+        "sku": "570GLOSSWHITE-10-62",
+        "price": 95.43,
+        "options": {
+          "height": "10",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17804,
+        "sku": "570GLOSSWHITE-10-65",
+        "price": 100.05,
+        "options": {
+          "height": "10",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17805,
+        "sku": "570GLOSSWHITE-12-10",
+        "price": 23.09,
+        "options": {
+          "height": "12",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17806,
+        "sku": "570GLOSSWHITE-12-12",
+        "price": 27.71,
+        "options": {
+          "height": "12",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17807,
+        "sku": "570GLOSSWHITE-12-14",
+        "price": 32.32,
+        "options": {
+          "height": "12",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17808,
+        "sku": "570GLOSSWHITE-12-16",
+        "price": 36.94,
+        "options": {
+          "height": "12",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17809,
+        "sku": "570GLOSSWHITE-12-18",
+        "price": 41.56,
+        "options": {
+          "height": "12",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17810,
+        "sku": "570GLOSSWHITE-12-20",
+        "price": 46.18,
+        "options": {
+          "height": "12",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17811,
+        "sku": "570GLOSSWHITE-12-22",
+        "price": 50.79,
+        "options": {
+          "height": "12",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17812,
+        "sku": "570GLOSSWHITE-12-24",
+        "price": 55.41,
+        "options": {
+          "height": "12",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17813,
+        "sku": "570GLOSSWHITE-12-26",
+        "price": 60.03,
+        "options": {
+          "height": "12",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17814,
+        "sku": "570GLOSSWHITE-12-28",
+        "price": 64.65,
+        "options": {
+          "height": "12",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17815,
+        "sku": "570GLOSSWHITE-12-30",
+        "price": 69.26,
+        "options": {
+          "height": "12",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17816,
+        "sku": "570GLOSSWHITE-12-32",
+        "price": 73.88,
+        "options": {
+          "height": "12",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17817,
+        "sku": "570GLOSSWHITE-12-34",
+        "price": 62.8,
+        "options": {
+          "height": "12",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17818,
+        "sku": "570GLOSSWHITE-12-36",
+        "price": 66.49,
+        "options": {
+          "height": "12",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17819,
+        "sku": "570GLOSSWHITE-12-38",
+        "price": 70.19,
+        "options": {
+          "height": "12",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17820,
+        "sku": "570GLOSSWHITE-12-40",
+        "price": 73.88,
+        "options": {
+          "height": "12",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17821,
+        "sku": "570GLOSSWHITE-12-42",
+        "price": 77.58,
+        "options": {
+          "height": "12",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17822,
+        "sku": "570GLOSSWHITE-12-44",
+        "price": 81.27,
+        "options": {
+          "height": "12",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17823,
+        "sku": "570GLOSSWHITE-12-46",
+        "price": 84.96,
+        "options": {
+          "height": "12",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17824,
+        "sku": "570GLOSSWHITE-12-48",
+        "price": 88.66,
+        "options": {
+          "height": "12",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17825,
+        "sku": "570GLOSSWHITE-12-50",
+        "price": 92.35,
+        "options": {
+          "height": "12",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17826,
+        "sku": "570GLOSSWHITE-12-52",
+        "price": 96.05,
+        "options": {
+          "height": "12",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17827,
+        "sku": "570GLOSSWHITE-12-54",
+        "price": 99.74,
+        "options": {
+          "height": "12",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17828,
+        "sku": "570GLOSSWHITE-12-56",
+        "price": 103.43,
+        "options": {
+          "height": "12",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17829,
+        "sku": "570GLOSSWHITE-12-58",
+        "price": 107.13,
+        "options": {
+          "height": "12",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17830,
+        "sku": "570GLOSSWHITE-12-60",
+        "price": 110.82,
+        "options": {
+          "height": "12",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17831,
+        "sku": "570GLOSSWHITE-12-62",
+        "price": 114.52,
+        "options": {
+          "height": "12",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17832,
+        "sku": "570GLOSSWHITE-12-65",
+        "price": 120.06,
+        "options": {
+          "height": "12",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17833,
+        "sku": "570GLOSSWHITE-14-10",
+        "price": 26.94,
+        "options": {
+          "height": "14",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17834,
+        "sku": "570GLOSSWHITE-14-12",
+        "price": 32.32,
+        "options": {
+          "height": "14",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17835,
+        "sku": "570GLOSSWHITE-14-14",
+        "price": 37.71,
+        "options": {
+          "height": "14",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17836,
+        "sku": "570GLOSSWHITE-14-16",
+        "price": 43.1,
+        "options": {
+          "height": "14",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17837,
+        "sku": "570GLOSSWHITE-14-18",
+        "price": 48.48,
+        "options": {
+          "height": "14",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17838,
+        "sku": "570GLOSSWHITE-14-20",
+        "price": 53.87,
+        "options": {
+          "height": "14",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17839,
+        "sku": "570GLOSSWHITE-14-22",
+        "price": 59.26,
+        "options": {
+          "height": "14",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17840,
+        "sku": "570GLOSSWHITE-14-24",
+        "price": 64.65,
+        "options": {
+          "height": "14",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17841,
+        "sku": "570GLOSSWHITE-14-26",
+        "price": 70.03,
+        "options": {
+          "height": "14",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17842,
+        "sku": "570GLOSSWHITE-14-28",
+        "price": 75.42,
+        "options": {
+          "height": "14",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17843,
+        "sku": "570GLOSSWHITE-14-30",
+        "price": 64.65,
+        "options": {
+          "height": "14",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17844,
+        "sku": "570GLOSSWHITE-14-32",
+        "price": 68.96,
+        "options": {
+          "height": "14",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17845,
+        "sku": "570GLOSSWHITE-14-34",
+        "price": 73.27,
+        "options": {
+          "height": "14",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17846,
+        "sku": "570GLOSSWHITE-14-36",
+        "price": 77.58,
+        "options": {
+          "height": "14",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17847,
+        "sku": "570GLOSSWHITE-14-38",
+        "price": 81.89,
+        "options": {
+          "height": "14",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17848,
+        "sku": "570GLOSSWHITE-14-40",
+        "price": 86.2,
+        "options": {
+          "height": "14",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17849,
+        "sku": "570GLOSSWHITE-14-42",
+        "price": 90.5,
+        "options": {
+          "height": "14",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17850,
+        "sku": "570GLOSSWHITE-14-44",
+        "price": 94.81,
+        "options": {
+          "height": "14",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17851,
+        "sku": "570GLOSSWHITE-14-46",
+        "price": 99.12,
+        "options": {
+          "height": "14",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17852,
+        "sku": "570GLOSSWHITE-14-48",
+        "price": 103.43,
+        "options": {
+          "height": "14",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17853,
+        "sku": "570GLOSSWHITE-14-50",
+        "price": 107.74,
+        "options": {
+          "height": "14",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17854,
+        "sku": "570GLOSSWHITE-14-52",
+        "price": 112.05,
+        "options": {
+          "height": "14",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17855,
+        "sku": "570GLOSSWHITE-14-54",
+        "price": 116.36,
+        "options": {
+          "height": "14",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17856,
+        "sku": "570GLOSSWHITE-14-56",
+        "price": 120.67,
+        "options": {
+          "height": "14",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17857,
+        "sku": "570GLOSSWHITE-14-58",
+        "price": 124.98,
+        "options": {
+          "height": "14",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17858,
+        "sku": "570GLOSSWHITE-14-60",
+        "price": 129.29,
+        "options": {
+          "height": "14",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17859,
+        "sku": "570GLOSSWHITE-14-62",
+        "price": 133.6,
+        "options": {
+          "height": "14",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17860,
+        "sku": "570GLOSSWHITE-14-65",
+        "price": 122.56,
+        "options": {
+          "height": "14",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17861,
+        "sku": "570GLOSSWHITE-16-10",
+        "price": 30.78,
+        "options": {
+          "height": "16",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17862,
+        "sku": "570GLOSSWHITE-16-12",
+        "price": 36.94,
+        "options": {
+          "height": "16",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17863,
+        "sku": "570GLOSSWHITE-16-14",
+        "price": 43.1,
+        "options": {
+          "height": "16",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17864,
+        "sku": "570GLOSSWHITE-16-16",
+        "price": 49.25,
+        "options": {
+          "height": "16",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17865,
+        "sku": "570GLOSSWHITE-16-18",
+        "price": 55.41,
+        "options": {
+          "height": "16",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17866,
+        "sku": "570GLOSSWHITE-16-20",
+        "price": 61.57,
+        "options": {
+          "height": "16",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17867,
+        "sku": "570GLOSSWHITE-16-22",
+        "price": 67.72,
+        "options": {
+          "height": "16",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17868,
+        "sku": "570GLOSSWHITE-16-24",
+        "price": 73.88,
+        "options": {
+          "height": "16",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17869,
+        "sku": "570GLOSSWHITE-16-26",
+        "price": 64.03,
+        "options": {
+          "height": "16",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17870,
+        "sku": "570GLOSSWHITE-16-28",
+        "price": 68.96,
+        "options": {
+          "height": "16",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17871,
+        "sku": "570GLOSSWHITE-16-30",
+        "price": 73.88,
+        "options": {
+          "height": "16",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17872,
+        "sku": "570GLOSSWHITE-16-32",
+        "price": 78.81,
+        "options": {
+          "height": "16",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17873,
+        "sku": "570GLOSSWHITE-16-34",
+        "price": 83.73,
+        "options": {
+          "height": "16",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17874,
+        "sku": "570GLOSSWHITE-16-36",
+        "price": 88.66,
+        "options": {
+          "height": "16",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17875,
+        "sku": "570GLOSSWHITE-16-38",
+        "price": 93.58,
+        "options": {
+          "height": "16",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17876,
+        "sku": "570GLOSSWHITE-16-40",
+        "price": 98.51,
+        "options": {
+          "height": "16",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17877,
+        "sku": "570GLOSSWHITE-16-42",
+        "price": 103.43,
+        "options": {
+          "height": "16",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17878,
+        "sku": "570GLOSSWHITE-16-44",
+        "price": 108.36,
+        "options": {
+          "height": "16",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17879,
+        "sku": "570GLOSSWHITE-16-46",
+        "price": 113.29,
+        "options": {
+          "height": "16",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17880,
+        "sku": "570GLOSSWHITE-16-48",
+        "price": 118.21,
+        "options": {
+          "height": "16",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17881,
+        "sku": "570GLOSSWHITE-16-50",
+        "price": 123.14,
+        "options": {
+          "height": "16",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17882,
+        "sku": "570GLOSSWHITE-16-52",
+        "price": 128.06,
+        "options": {
+          "height": "16",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17883,
+        "sku": "570GLOSSWHITE-16-54",
+        "price": 132.99,
+        "options": {
+          "height": "16",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17884,
+        "sku": "570GLOSSWHITE-16-56",
+        "price": 137.91,
+        "options": {
+          "height": "16",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17885,
+        "sku": "570GLOSSWHITE-16-58",
+        "price": 124.98,
+        "options": {
+          "height": "16",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17886,
+        "sku": "570GLOSSWHITE-16-60",
+        "price": 129.29,
+        "options": {
+          "height": "16",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17887,
+        "sku": "570GLOSSWHITE-16-62",
+        "price": 133.6,
+        "options": {
+          "height": "16",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17888,
+        "sku": "570GLOSSWHITE-16-65",
+        "price": 140.07,
+        "options": {
+          "height": "16",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17889,
+        "sku": "570GLOSSWHITE-18-10",
+        "price": 34.63,
+        "options": {
+          "height": "18",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17890,
+        "sku": "570GLOSSWHITE-18-12",
+        "price": 41.56,
+        "options": {
+          "height": "18",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17891,
+        "sku": "570GLOSSWHITE-18-14",
+        "price": 48.48,
+        "options": {
+          "height": "18",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17892,
+        "sku": "570GLOSSWHITE-18-16",
+        "price": 55.41,
+        "options": {
+          "height": "18",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17893,
+        "sku": "570GLOSSWHITE-18-18",
+        "price": 62.34,
+        "options": {
+          "height": "18",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17894,
+        "sku": "570GLOSSWHITE-18-20",
+        "price": 69.26,
+        "options": {
+          "height": "18",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17895,
+        "sku": "570GLOSSWHITE-18-22",
+        "price": 76.19,
+        "options": {
+          "height": "18",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17896,
+        "sku": "570GLOSSWHITE-18-24",
+        "price": 66.49,
+        "options": {
+          "height": "18",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17897,
+        "sku": "570GLOSSWHITE-18-26",
+        "price": 72.03,
+        "options": {
+          "height": "18",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17898,
+        "sku": "570GLOSSWHITE-18-28",
+        "price": 77.58,
+        "options": {
+          "height": "18",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17899,
+        "sku": "570GLOSSWHITE-18-30",
+        "price": 83.12,
+        "options": {
+          "height": "18",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17900,
+        "sku": "570GLOSSWHITE-18-32",
+        "price": 88.66,
+        "options": {
+          "height": "18",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17901,
+        "sku": "570GLOSSWHITE-18-34",
+        "price": 94.2,
+        "options": {
+          "height": "18",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17902,
+        "sku": "570GLOSSWHITE-18-36",
+        "price": 99.74,
+        "options": {
+          "height": "18",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17903,
+        "sku": "570GLOSSWHITE-18-38",
+        "price": 105.28,
+        "options": {
+          "height": "18",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17904,
+        "sku": "570GLOSSWHITE-18-40",
+        "price": 110.82,
+        "options": {
+          "height": "18",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17905,
+        "sku": "570GLOSSWHITE-18-42",
+        "price": 116.36,
+        "options": {
+          "height": "18",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17906,
+        "sku": "570GLOSSWHITE-18-44",
+        "price": 121.9,
+        "options": {
+          "height": "18",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17907,
+        "sku": "570GLOSSWHITE-18-46",
+        "price": 127.45,
+        "options": {
+          "height": "18",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17908,
+        "sku": "570GLOSSWHITE-18-48",
+        "price": 132.99,
+        "options": {
+          "height": "18",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17909,
+        "sku": "570GLOSSWHITE-18-50",
+        "price": 121.21,
+        "options": {
+          "height": "18",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17910,
+        "sku": "570GLOSSWHITE-18-52",
+        "price": 126.06,
+        "options": {
+          "height": "18",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17911,
+        "sku": "570GLOSSWHITE-18-54",
+        "price": 130.91,
+        "options": {
+          "height": "18",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17912,
+        "sku": "570GLOSSWHITE-18-56",
+        "price": 135.76,
+        "options": {
+          "height": "18",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17913,
+        "sku": "570GLOSSWHITE-18-58",
+        "price": 140.61,
+        "options": {
+          "height": "18",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17914,
+        "sku": "570GLOSSWHITE-18-60",
+        "price": 145.45,
+        "options": {
+          "height": "18",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17915,
+        "sku": "570GLOSSWHITE-18-62",
+        "price": 150.3,
+        "options": {
+          "height": "18",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17916,
+        "sku": "570GLOSSWHITE-18-65",
+        "price": 157.58,
+        "options": {
+          "height": "18",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17917,
+        "sku": "570GLOSSWHITE-20-10",
+        "price": 38.48,
+        "options": {
+          "height": "20",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17918,
+        "sku": "570GLOSSWHITE-20-12",
+        "price": 46.18,
+        "options": {
+          "height": "20",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17919,
+        "sku": "570GLOSSWHITE-20-14",
+        "price": 53.87,
+        "options": {
+          "height": "20",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17920,
+        "sku": "570GLOSSWHITE-20-16",
+        "price": 61.57,
+        "options": {
+          "height": "20",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17921,
+        "sku": "570GLOSSWHITE-20-18",
+        "price": 69.26,
+        "options": {
+          "height": "20",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17922,
+        "sku": "570GLOSSWHITE-20-20",
+        "price": 61.57,
+        "options": {
+          "height": "20",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17923,
+        "sku": "570GLOSSWHITE-20-22",
+        "price": 67.72,
+        "options": {
+          "height": "20",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17924,
+        "sku": "570GLOSSWHITE-20-24",
+        "price": 73.88,
+        "options": {
+          "height": "20",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17925,
+        "sku": "570GLOSSWHITE-20-26",
+        "price": 80.04,
+        "options": {
+          "height": "20",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17926,
+        "sku": "570GLOSSWHITE-20-28",
+        "price": 86.2,
+        "options": {
+          "height": "20",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17927,
+        "sku": "570GLOSSWHITE-20-30",
+        "price": 92.35,
+        "options": {
+          "height": "20",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17928,
+        "sku": "570GLOSSWHITE-20-32",
+        "price": 98.51,
+        "options": {
+          "height": "20",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17929,
+        "sku": "570GLOSSWHITE-20-34",
+        "price": 104.67,
+        "options": {
+          "height": "20",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17930,
+        "sku": "570GLOSSWHITE-20-36",
+        "price": 110.82,
+        "options": {
+          "height": "20",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17931,
+        "sku": "570GLOSSWHITE-20-38",
+        "price": 116.98,
+        "options": {
+          "height": "20",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17932,
+        "sku": "570GLOSSWHITE-20-40",
+        "price": 123.14,
+        "options": {
+          "height": "20",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17933,
+        "sku": "570GLOSSWHITE-20-42",
+        "price": 129.29,
+        "options": {
+          "height": "20",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17934,
+        "sku": "570GLOSSWHITE-20-44",
+        "price": 135.45,
+        "options": {
+          "height": "20",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17935,
+        "sku": "570GLOSSWHITE-20-46",
+        "price": 123.91,
+        "options": {
+          "height": "20",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17936,
+        "sku": "570GLOSSWHITE-20-48",
+        "price": 129.29,
+        "options": {
+          "height": "20",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17937,
+        "sku": "570GLOSSWHITE-20-50",
+        "price": 134.68,
+        "options": {
+          "height": "20",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17938,
+        "sku": "570GLOSSWHITE-20-52",
+        "price": 140.07,
+        "options": {
+          "height": "20",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17939,
+        "sku": "570GLOSSWHITE-20-54",
+        "price": 145.45,
+        "options": {
+          "height": "20",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17940,
+        "sku": "570GLOSSWHITE-20-56",
+        "price": 150.84,
+        "options": {
+          "height": "20",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17941,
+        "sku": "570GLOSSWHITE-20-58",
+        "price": 156.23,
+        "options": {
+          "height": "20",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17942,
+        "sku": "570GLOSSWHITE-20-60",
+        "price": 161.62,
+        "options": {
+          "height": "20",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17943,
+        "sku": "570GLOSSWHITE-20-62",
+        "price": 167,
+        "options": {
+          "height": "20",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17944,
+        "sku": "570GLOSSWHITE-20-65",
+        "price": 175.08,
+        "options": {
+          "height": "20",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17945,
+        "sku": "570GLOSSWHITE-22-10",
+        "price": 42.33,
+        "options": {
+          "height": "22",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17946,
+        "sku": "570GLOSSWHITE-22-12",
+        "price": 50.79,
+        "options": {
+          "height": "22",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17947,
+        "sku": "570GLOSSWHITE-22-14",
+        "price": 59.26,
+        "options": {
+          "height": "22",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17948,
+        "sku": "570GLOSSWHITE-22-16",
+        "price": 67.72,
+        "options": {
+          "height": "22",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17949,
+        "sku": "570GLOSSWHITE-22-18",
+        "price": 76.19,
+        "options": {
+          "height": "22",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17950,
+        "sku": "570GLOSSWHITE-22-20",
+        "price": 67.72,
+        "options": {
+          "height": "22",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17951,
+        "sku": "570GLOSSWHITE-22-22",
+        "price": 74.5,
+        "options": {
+          "height": "22",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17952,
+        "sku": "570GLOSSWHITE-22-24",
+        "price": 81.27,
+        "options": {
+          "height": "22",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17953,
+        "sku": "570GLOSSWHITE-22-26",
+        "price": 88.04,
+        "options": {
+          "height": "22",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17954,
+        "sku": "570GLOSSWHITE-22-28",
+        "price": 94.81,
+        "options": {
+          "height": "22",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17955,
+        "sku": "570GLOSSWHITE-22-30",
+        "price": 101.59,
+        "options": {
+          "height": "22",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17956,
+        "sku": "570GLOSSWHITE-22-32",
+        "price": 108.36,
+        "options": {
+          "height": "22",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17957,
+        "sku": "570GLOSSWHITE-22-34",
+        "price": 115.13,
+        "options": {
+          "height": "22",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17958,
+        "sku": "570GLOSSWHITE-22-36",
+        "price": 121.9,
+        "options": {
+          "height": "22",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17959,
+        "sku": "570GLOSSWHITE-22-38",
+        "price": 128.68,
+        "options": {
+          "height": "22",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17960,
+        "sku": "570GLOSSWHITE-22-40",
+        "price": 135.45,
+        "options": {
+          "height": "22",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17961,
+        "sku": "570GLOSSWHITE-22-42",
+        "price": 124.44,
+        "options": {
+          "height": "22",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17962,
+        "sku": "570GLOSSWHITE-22-44",
+        "price": 130.37,
+        "options": {
+          "height": "22",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17963,
+        "sku": "570GLOSSWHITE-22-46",
+        "price": 136.3,
+        "options": {
+          "height": "22",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17964,
+        "sku": "570GLOSSWHITE-22-48",
+        "price": 142.22,
+        "options": {
+          "height": "22",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17965,
+        "sku": "570GLOSSWHITE-22-50",
+        "price": 148.15,
+        "options": {
+          "height": "22",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17966,
+        "sku": "570GLOSSWHITE-22-52",
+        "price": 154.07,
+        "options": {
+          "height": "22",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17967,
+        "sku": "570GLOSSWHITE-22-54",
+        "price": 160,
+        "options": {
+          "height": "22",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17968,
+        "sku": "570GLOSSWHITE-22-56",
+        "price": 165.93,
+        "options": {
+          "height": "22",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17969,
+        "sku": "570GLOSSWHITE-22-58",
+        "price": 171.85,
+        "options": {
+          "height": "22",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17970,
+        "sku": "570GLOSSWHITE-22-60",
+        "price": 177.78,
+        "options": {
+          "height": "22",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17971,
+        "sku": "570GLOSSWHITE-22-62",
+        "price": 183.7,
+        "options": {
+          "height": "22",
+          "width": "62"
+        }
+      },
+      {
+        "id": 17972,
+        "sku": "570GLOSSWHITE-22-65",
+        "price": 192.59,
+        "options": {
+          "height": "22",
+          "width": "65"
+        }
+      },
+      {
+        "id": 17973,
+        "sku": "570GLOSSWHITE-24-10",
+        "price": 46.18,
+        "options": {
+          "height": "24",
+          "width": "10"
+        }
+      },
+      {
+        "id": 17974,
+        "sku": "570GLOSSWHITE-24-12",
+        "price": 55.41,
+        "options": {
+          "height": "24",
+          "width": "12"
+        }
+      },
+      {
+        "id": 17975,
+        "sku": "570GLOSSWHITE-24-14",
+        "price": 64.65,
+        "options": {
+          "height": "24",
+          "width": "14"
+        }
+      },
+      {
+        "id": 17976,
+        "sku": "570GLOSSWHITE-24-16",
+        "price": 73.88,
+        "options": {
+          "height": "24",
+          "width": "16"
+        }
+      },
+      {
+        "id": 17977,
+        "sku": "570GLOSSWHITE-24-18",
+        "price": 66.49,
+        "options": {
+          "height": "24",
+          "width": "18"
+        }
+      },
+      {
+        "id": 17978,
+        "sku": "570GLOSSWHITE-24-20",
+        "price": 73.88,
+        "options": {
+          "height": "24",
+          "width": "20"
+        }
+      },
+      {
+        "id": 17979,
+        "sku": "570GLOSSWHITE-24-22",
+        "price": 81.27,
+        "options": {
+          "height": "24",
+          "width": "22"
+        }
+      },
+      {
+        "id": 17980,
+        "sku": "570GLOSSWHITE-24-24",
+        "price": 88.66,
+        "options": {
+          "height": "24",
+          "width": "24"
+        }
+      },
+      {
+        "id": 17981,
+        "sku": "570GLOSSWHITE-24-26",
+        "price": 96.05,
+        "options": {
+          "height": "24",
+          "width": "26"
+        }
+      },
+      {
+        "id": 17982,
+        "sku": "570GLOSSWHITE-24-28",
+        "price": 103.43,
+        "options": {
+          "height": "24",
+          "width": "28"
+        }
+      },
+      {
+        "id": 17983,
+        "sku": "570GLOSSWHITE-24-30",
+        "price": 110.82,
+        "options": {
+          "height": "24",
+          "width": "30"
+        }
+      },
+      {
+        "id": 17984,
+        "sku": "570GLOSSWHITE-24-32",
+        "price": 118.21,
+        "options": {
+          "height": "24",
+          "width": "32"
+        }
+      },
+      {
+        "id": 17985,
+        "sku": "570GLOSSWHITE-24-34",
+        "price": 125.6,
+        "options": {
+          "height": "24",
+          "width": "34"
+        }
+      },
+      {
+        "id": 17986,
+        "sku": "570GLOSSWHITE-24-36",
+        "price": 132.99,
+        "options": {
+          "height": "24",
+          "width": "36"
+        }
+      },
+      {
+        "id": 17987,
+        "sku": "570GLOSSWHITE-24-38",
+        "price": 122.83,
+        "options": {
+          "height": "24",
+          "width": "38"
+        }
+      },
+      {
+        "id": 17988,
+        "sku": "570GLOSSWHITE-24-40",
+        "price": 129.29,
+        "options": {
+          "height": "24",
+          "width": "40"
+        }
+      },
+      {
+        "id": 17989,
+        "sku": "570GLOSSWHITE-24-42",
+        "price": 135.76,
+        "options": {
+          "height": "24",
+          "width": "42"
+        }
+      },
+      {
+        "id": 17990,
+        "sku": "570GLOSSWHITE-24-44",
+        "price": 142.22,
+        "options": {
+          "height": "24",
+          "width": "44"
+        }
+      },
+      {
+        "id": 17991,
+        "sku": "570GLOSSWHITE-24-46",
+        "price": 148.69,
+        "options": {
+          "height": "24",
+          "width": "46"
+        }
+      },
+      {
+        "id": 17992,
+        "sku": "570GLOSSWHITE-24-48",
+        "price": 155.15,
+        "options": {
+          "height": "24",
+          "width": "48"
+        }
+      },
+      {
+        "id": 17993,
+        "sku": "570GLOSSWHITE-24-50",
+        "price": 161.62,
+        "options": {
+          "height": "24",
+          "width": "50"
+        }
+      },
+      {
+        "id": 17994,
+        "sku": "570GLOSSWHITE-24-52",
+        "price": 168.08,
+        "options": {
+          "height": "24",
+          "width": "52"
+        }
+      },
+      {
+        "id": 17995,
+        "sku": "570GLOSSWHITE-24-54",
+        "price": 174.55,
+        "options": {
+          "height": "24",
+          "width": "54"
+        }
+      },
+      {
+        "id": 17996,
+        "sku": "570GLOSSWHITE-24-56",
+        "price": 181.01,
+        "options": {
+          "height": "24",
+          "width": "56"
+        }
+      },
+      {
+        "id": 17997,
+        "sku": "570GLOSSWHITE-24-58",
+        "price": 187.47,
+        "options": {
+          "height": "24",
+          "width": "58"
+        }
+      },
+      {
+        "id": 17998,
+        "sku": "570GLOSSWHITE-24-60",
+        "price": 193.94,
+        "options": {
+          "height": "24",
+          "width": "60"
+        }
+      },
+      {
+        "id": 17999,
+        "sku": "570GLOSSWHITE-24-62",
+        "price": 200.4,
+        "options": {
+          "height": "24",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18000,
+        "sku": "570GLOSSWHITE-24-65",
+        "price": 210.1,
+        "options": {
+          "height": "24",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18001,
+        "sku": "570GLOSSWHITE-26-10",
+        "price": 50.02,
+        "options": {
+          "height": "26",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18002,
+        "sku": "570GLOSSWHITE-26-12",
+        "price": 60.03,
+        "options": {
+          "height": "26",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18003,
+        "sku": "570GLOSSWHITE-26-14",
+        "price": 70.03,
+        "options": {
+          "height": "26",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18004,
+        "sku": "570GLOSSWHITE-26-16",
+        "price": 64.03,
+        "options": {
+          "height": "26",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18005,
+        "sku": "570GLOSSWHITE-26-18",
+        "price": 72.03,
+        "options": {
+          "height": "26",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18006,
+        "sku": "570GLOSSWHITE-26-20",
+        "price": 80.04,
+        "options": {
+          "height": "26",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18007,
+        "sku": "570GLOSSWHITE-26-22",
+        "price": 88.04,
+        "options": {
+          "height": "26",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18008,
+        "sku": "570GLOSSWHITE-26-24",
+        "price": 96.05,
+        "options": {
+          "height": "26",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18009,
+        "sku": "570GLOSSWHITE-26-26",
+        "price": 104.05,
+        "options": {
+          "height": "26",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18010,
+        "sku": "570GLOSSWHITE-26-28",
+        "price": 112.05,
+        "options": {
+          "height": "26",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18011,
+        "sku": "570GLOSSWHITE-26-30",
+        "price": 120.06,
+        "options": {
+          "height": "26",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18012,
+        "sku": "570GLOSSWHITE-26-32",
+        "price": 128.06,
+        "options": {
+          "height": "26",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18013,
+        "sku": "570GLOSSWHITE-26-34",
+        "price": 136.07,
+        "options": {
+          "height": "26",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18014,
+        "sku": "570GLOSSWHITE-26-36",
+        "price": 126.06,
+        "options": {
+          "height": "26",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18015,
+        "sku": "570GLOSSWHITE-26-38",
+        "price": 133.06,
+        "options": {
+          "height": "26",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18016,
+        "sku": "570GLOSSWHITE-26-40",
+        "price": 140.07,
+        "options": {
+          "height": "26",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18017,
+        "sku": "570GLOSSWHITE-26-42",
+        "price": 147.07,
+        "options": {
+          "height": "26",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18018,
+        "sku": "570GLOSSWHITE-26-44",
+        "price": 154.07,
+        "options": {
+          "height": "26",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18019,
+        "sku": "570GLOSSWHITE-26-46",
+        "price": 161.08,
+        "options": {
+          "height": "26",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18020,
+        "sku": "570GLOSSWHITE-26-48",
+        "price": 168.08,
+        "options": {
+          "height": "26",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18021,
+        "sku": "570GLOSSWHITE-26-50",
+        "price": 175.08,
+        "options": {
+          "height": "26",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18022,
+        "sku": "570GLOSSWHITE-26-52",
+        "price": 182.09,
+        "options": {
+          "height": "26",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18023,
+        "sku": "570GLOSSWHITE-26-54",
+        "price": 189.09,
+        "options": {
+          "height": "26",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18024,
+        "sku": "570GLOSSWHITE-26-56",
+        "price": 196.09,
+        "options": {
+          "height": "26",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18025,
+        "sku": "570GLOSSWHITE-26-58",
+        "price": 203.1,
+        "options": {
+          "height": "26",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18026,
+        "sku": "570GLOSSWHITE-26-60",
+        "price": 210.1,
+        "options": {
+          "height": "26",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18027,
+        "sku": "570GLOSSWHITE-26-62",
+        "price": 186.09,
+        "options": {
+          "height": "26",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18028,
+        "sku": "570GLOSSWHITE-26-65",
+        "price": 195.09,
+        "options": {
+          "height": "26",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18029,
+        "sku": "570GLOSSWHITE-28-10",
+        "price": 53.87,
+        "options": {
+          "height": "28",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18030,
+        "sku": "570GLOSSWHITE-28-12",
+        "price": 64.65,
+        "options": {
+          "height": "28",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18031,
+        "sku": "570GLOSSWHITE-28-14",
+        "price": 75.42,
+        "options": {
+          "height": "28",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18032,
+        "sku": "570GLOSSWHITE-28-16",
+        "price": 68.96,
+        "options": {
+          "height": "28",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18033,
+        "sku": "570GLOSSWHITE-28-18",
+        "price": 77.58,
+        "options": {
+          "height": "28",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18034,
+        "sku": "570GLOSSWHITE-28-20",
+        "price": 86.2,
+        "options": {
+          "height": "28",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18035,
+        "sku": "570GLOSSWHITE-28-22",
+        "price": 94.81,
+        "options": {
+          "height": "28",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18036,
+        "sku": "570GLOSSWHITE-28-24",
+        "price": 103.43,
+        "options": {
+          "height": "28",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18037,
+        "sku": "570GLOSSWHITE-28-26",
+        "price": 112.05,
+        "options": {
+          "height": "28",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18038,
+        "sku": "570GLOSSWHITE-28-28",
+        "price": 120.67,
+        "options": {
+          "height": "28",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18039,
+        "sku": "570GLOSSWHITE-28-30",
+        "price": 129.29,
+        "options": {
+          "height": "28",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18040,
+        "sku": "570GLOSSWHITE-28-32",
+        "price": 137.91,
+        "options": {
+          "height": "28",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18041,
+        "sku": "570GLOSSWHITE-28-34",
+        "price": 128.22,
+        "options": {
+          "height": "28",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18042,
+        "sku": "570GLOSSWHITE-28-36",
+        "price": 135.76,
+        "options": {
+          "height": "28",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18043,
+        "sku": "570GLOSSWHITE-28-38",
+        "price": 143.3,
+        "options": {
+          "height": "28",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18044,
+        "sku": "570GLOSSWHITE-28-40",
+        "price": 150.84,
+        "options": {
+          "height": "28",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18045,
+        "sku": "570GLOSSWHITE-28-42",
+        "price": 158.38,
+        "options": {
+          "height": "28",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18046,
+        "sku": "570GLOSSWHITE-28-44",
+        "price": 165.93,
+        "options": {
+          "height": "28",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18047,
+        "sku": "570GLOSSWHITE-28-46",
+        "price": 173.47,
+        "options": {
+          "height": "28",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18048,
+        "sku": "570GLOSSWHITE-28-48",
+        "price": 181.01,
+        "options": {
+          "height": "28",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18049,
+        "sku": "570GLOSSWHITE-28-50",
+        "price": 188.55,
+        "options": {
+          "height": "28",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18050,
+        "sku": "570GLOSSWHITE-28-52",
+        "price": 196.09,
+        "options": {
+          "height": "28",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18051,
+        "sku": "570GLOSSWHITE-28-54",
+        "price": 203.64,
+        "options": {
+          "height": "28",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18052,
+        "sku": "570GLOSSWHITE-28-56",
+        "price": 211.18,
+        "options": {
+          "height": "28",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18053,
+        "sku": "570GLOSSWHITE-28-58",
+        "price": 187.47,
+        "options": {
+          "height": "28",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18054,
+        "sku": "570GLOSSWHITE-28-60",
+        "price": 193.94,
+        "options": {
+          "height": "28",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18055,
+        "sku": "570GLOSSWHITE-28-62",
+        "price": 200.4,
+        "options": {
+          "height": "28",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18056,
+        "sku": "570GLOSSWHITE-28-65",
+        "price": 210.1,
+        "options": {
+          "height": "28",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18057,
+        "sku": "570GLOSSWHITE-30-10",
+        "price": 57.72,
+        "options": {
+          "height": "30",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18058,
+        "sku": "570GLOSSWHITE-30-12",
+        "price": 69.26,
+        "options": {
+          "height": "30",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18059,
+        "sku": "570GLOSSWHITE-30-14",
+        "price": 64.65,
+        "options": {
+          "height": "30",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18060,
+        "sku": "570GLOSSWHITE-30-16",
+        "price": 73.88,
+        "options": {
+          "height": "30",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18061,
+        "sku": "570GLOSSWHITE-30-18",
+        "price": 83.12,
+        "options": {
+          "height": "30",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18062,
+        "sku": "570GLOSSWHITE-30-20",
+        "price": 92.35,
+        "options": {
+          "height": "30",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18063,
+        "sku": "570GLOSSWHITE-30-22",
+        "price": 101.59,
+        "options": {
+          "height": "30",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18064,
+        "sku": "570GLOSSWHITE-30-24",
+        "price": 110.82,
+        "options": {
+          "height": "30",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18065,
+        "sku": "570GLOSSWHITE-30-26",
+        "price": 120.06,
+        "options": {
+          "height": "30",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18066,
+        "sku": "570GLOSSWHITE-30-28",
+        "price": 129.29,
+        "options": {
+          "height": "30",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18067,
+        "sku": "570GLOSSWHITE-30-30",
+        "price": 121.21,
+        "options": {
+          "height": "30",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18068,
+        "sku": "570GLOSSWHITE-30-32",
+        "price": 129.29,
+        "options": {
+          "height": "30",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18069,
+        "sku": "570GLOSSWHITE-30-34",
+        "price": 137.37,
+        "options": {
+          "height": "30",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18070,
+        "sku": "570GLOSSWHITE-30-36",
+        "price": 145.45,
+        "options": {
+          "height": "30",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18071,
+        "sku": "570GLOSSWHITE-30-38",
+        "price": 153.54,
+        "options": {
+          "height": "30",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18072,
+        "sku": "570GLOSSWHITE-30-40",
+        "price": 161.62,
+        "options": {
+          "height": "30",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18073,
+        "sku": "570GLOSSWHITE-30-42",
+        "price": 169.7,
+        "options": {
+          "height": "30",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18074,
+        "sku": "570GLOSSWHITE-30-44",
+        "price": 177.78,
+        "options": {
+          "height": "30",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18075,
+        "sku": "570GLOSSWHITE-30-46",
+        "price": 185.86,
+        "options": {
+          "height": "30",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18076,
+        "sku": "570GLOSSWHITE-30-48",
+        "price": 193.94,
+        "options": {
+          "height": "30",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18077,
+        "sku": "570GLOSSWHITE-30-50",
+        "price": 202.02,
+        "options": {
+          "height": "30",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18078,
+        "sku": "570GLOSSWHITE-30-52",
+        "price": 210.1,
+        "options": {
+          "height": "30",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18079,
+        "sku": "570GLOSSWHITE-30-54",
+        "price": 187.01,
+        "options": {
+          "height": "30",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18080,
+        "sku": "570GLOSSWHITE-30-56",
+        "price": 193.94,
+        "options": {
+          "height": "30",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18081,
+        "sku": "570GLOSSWHITE-30-58",
+        "price": 200.87,
+        "options": {
+          "height": "30",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18082,
+        "sku": "570GLOSSWHITE-30-60",
+        "price": 207.79,
+        "options": {
+          "height": "30",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18083,
+        "sku": "570GLOSSWHITE-30-62",
+        "price": 214.72,
+        "options": {
+          "height": "30",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18084,
+        "sku": "570GLOSSWHITE-30-65",
+        "price": 225.11,
+        "options": {
+          "height": "30",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18085,
+        "sku": "570GLOSSWHITE-32-10",
+        "price": 61.57,
+        "options": {
+          "height": "32",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18086,
+        "sku": "570GLOSSWHITE-32-12",
+        "price": 73.88,
+        "options": {
+          "height": "32",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18087,
+        "sku": "570GLOSSWHITE-32-14",
+        "price": 68.96,
+        "options": {
+          "height": "32",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18088,
+        "sku": "570GLOSSWHITE-32-16",
+        "price": 78.81,
+        "options": {
+          "height": "32",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18089,
+        "sku": "570GLOSSWHITE-32-18",
+        "price": 88.66,
+        "options": {
+          "height": "32",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18090,
+        "sku": "570GLOSSWHITE-32-20",
+        "price": 98.51,
+        "options": {
+          "height": "32",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18091,
+        "sku": "570GLOSSWHITE-32-22",
+        "price": 108.36,
+        "options": {
+          "height": "32",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18092,
+        "sku": "570GLOSSWHITE-32-24",
+        "price": 118.21,
+        "options": {
+          "height": "32",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18093,
+        "sku": "570GLOSSWHITE-32-26",
+        "price": 128.06,
+        "options": {
+          "height": "32",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18094,
+        "sku": "570GLOSSWHITE-32-28",
+        "price": 137.91,
+        "options": {
+          "height": "32",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18095,
+        "sku": "570GLOSSWHITE-32-30",
+        "price": 129.29,
+        "options": {
+          "height": "32",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18096,
+        "sku": "570GLOSSWHITE-32-32",
+        "price": 137.91,
+        "options": {
+          "height": "32",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18097,
+        "sku": "570GLOSSWHITE-32-34",
+        "price": 146.53,
+        "options": {
+          "height": "32",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18098,
+        "sku": "570GLOSSWHITE-32-36",
+        "price": 155.15,
+        "options": {
+          "height": "32",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18099,
+        "sku": "570GLOSSWHITE-32-38",
+        "price": 163.77,
+        "options": {
+          "height": "32",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18100,
+        "sku": "570GLOSSWHITE-32-40",
+        "price": 172.39,
+        "options": {
+          "height": "32",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18101,
+        "sku": "570GLOSSWHITE-32-42",
+        "price": 181.01,
+        "options": {
+          "height": "32",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18102,
+        "sku": "570GLOSSWHITE-32-44",
+        "price": 189.63,
+        "options": {
+          "height": "32",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18103,
+        "sku": "570GLOSSWHITE-32-46",
+        "price": 198.25,
+        "options": {
+          "height": "32",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18104,
+        "sku": "570GLOSSWHITE-32-48",
+        "price": 206.87,
+        "options": {
+          "height": "32",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18105,
+        "sku": "570GLOSSWHITE-32-50",
+        "price": 184.7,
+        "options": {
+          "height": "32",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18106,
+        "sku": "570GLOSSWHITE-32-52",
+        "price": 192.09,
+        "options": {
+          "height": "32",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18107,
+        "sku": "570GLOSSWHITE-32-54",
+        "price": 199.48,
+        "options": {
+          "height": "32",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18108,
+        "sku": "570GLOSSWHITE-32-56",
+        "price": 206.87,
+        "options": {
+          "height": "32",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18109,
+        "sku": "570GLOSSWHITE-32-58",
+        "price": 214.26,
+        "options": {
+          "height": "32",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18110,
+        "sku": "570GLOSSWHITE-32-60",
+        "price": 221.64,
+        "options": {
+          "height": "32",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18111,
+        "sku": "570GLOSSWHITE-32-62",
+        "price": 229.03,
+        "options": {
+          "height": "32",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18112,
+        "sku": "570GLOSSWHITE-32-65",
+        "price": 240.12,
+        "options": {
+          "height": "32",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18113,
+        "sku": "570GLOSSWHITE-34-10",
+        "price": 65.42,
+        "options": {
+          "height": "34",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18114,
+        "sku": "570GLOSSWHITE-34-12",
+        "price": 62.8,
+        "options": {
+          "height": "34",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18115,
+        "sku": "570GLOSSWHITE-34-14",
+        "price": 73.27,
+        "options": {
+          "height": "34",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18116,
+        "sku": "570GLOSSWHITE-34-16",
+        "price": 83.73,
+        "options": {
+          "height": "34",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18117,
+        "sku": "570GLOSSWHITE-34-18",
+        "price": 94.2,
+        "options": {
+          "height": "34",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18118,
+        "sku": "570GLOSSWHITE-34-20",
+        "price": 104.67,
+        "options": {
+          "height": "34",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18119,
+        "sku": "570GLOSSWHITE-34-22",
+        "price": 115.13,
+        "options": {
+          "height": "34",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18120,
+        "sku": "570GLOSSWHITE-34-24",
+        "price": 125.6,
+        "options": {
+          "height": "34",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18121,
+        "sku": "570GLOSSWHITE-34-26",
+        "price": 136.07,
+        "options": {
+          "height": "34",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18122,
+        "sku": "570GLOSSWHITE-34-28",
+        "price": 128.22,
+        "options": {
+          "height": "34",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18123,
+        "sku": "570GLOSSWHITE-34-30",
+        "price": 137.37,
+        "options": {
+          "height": "34",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18124,
+        "sku": "570GLOSSWHITE-34-32",
+        "price": 146.53,
+        "options": {
+          "height": "34",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18125,
+        "sku": "570GLOSSWHITE-34-34",
+        "price": 155.69,
+        "options": {
+          "height": "34",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18126,
+        "sku": "570GLOSSWHITE-34-36",
+        "price": 164.85,
+        "options": {
+          "height": "34",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18127,
+        "sku": "570GLOSSWHITE-34-38",
+        "price": 174.01,
+        "options": {
+          "height": "34",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18128,
+        "sku": "570GLOSSWHITE-34-40",
+        "price": 183.16,
+        "options": {
+          "height": "34",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18129,
+        "sku": "570GLOSSWHITE-34-42",
+        "price": 192.32,
+        "options": {
+          "height": "34",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18130,
+        "sku": "570GLOSSWHITE-34-44",
+        "price": 201.48,
+        "options": {
+          "height": "34",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18131,
+        "sku": "570GLOSSWHITE-34-46",
+        "price": 210.64,
+        "options": {
+          "height": "34",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18132,
+        "sku": "570GLOSSWHITE-34-48",
+        "price": 188.4,
+        "options": {
+          "height": "34",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18133,
+        "sku": "570GLOSSWHITE-34-50",
+        "price": 196.25,
+        "options": {
+          "height": "34",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18134,
+        "sku": "570GLOSSWHITE-34-52",
+        "price": 204.1,
+        "options": {
+          "height": "34",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18135,
+        "sku": "570GLOSSWHITE-34-54",
+        "price": 211.95,
+        "options": {
+          "height": "34",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18136,
+        "sku": "570GLOSSWHITE-34-56",
+        "price": 219.8,
+        "options": {
+          "height": "34",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18137,
+        "sku": "570GLOSSWHITE-34-58",
+        "price": 227.65,
+        "options": {
+          "height": "34",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18138,
+        "sku": "570GLOSSWHITE-34-60",
+        "price": 235.5,
+        "options": {
+          "height": "34",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18139,
+        "sku": "570GLOSSWHITE-34-62",
+        "price": 243.35,
+        "options": {
+          "height": "34",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18140,
+        "sku": "570GLOSSWHITE-34-65",
+        "price": 255.12,
+        "options": {
+          "height": "34",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18141,
+        "sku": "570GLOSSWHITE-36-10",
+        "price": 69.26,
+        "options": {
+          "height": "36",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18142,
+        "sku": "570GLOSSWHITE-36-12",
+        "price": 66.49,
+        "options": {
+          "height": "36",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18143,
+        "sku": "570GLOSSWHITE-36-14",
+        "price": 77.58,
+        "options": {
+          "height": "36",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18144,
+        "sku": "570GLOSSWHITE-36-16",
+        "price": 88.66,
+        "options": {
+          "height": "36",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18145,
+        "sku": "570GLOSSWHITE-36-18",
+        "price": 99.74,
+        "options": {
+          "height": "36",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18146,
+        "sku": "570GLOSSWHITE-36-20",
+        "price": 110.82,
+        "options": {
+          "height": "36",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18147,
+        "sku": "570GLOSSWHITE-36-22",
+        "price": 121.9,
+        "options": {
+          "height": "36",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18148,
+        "sku": "570GLOSSWHITE-36-24",
+        "price": 132.99,
+        "options": {
+          "height": "36",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18149,
+        "sku": "570GLOSSWHITE-36-26",
+        "price": 126.06,
+        "options": {
+          "height": "36",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18150,
+        "sku": "570GLOSSWHITE-36-28",
+        "price": 135.76,
+        "options": {
+          "height": "36",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18151,
+        "sku": "570GLOSSWHITE-36-30",
+        "price": 145.45,
+        "options": {
+          "height": "36",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18152,
+        "sku": "570GLOSSWHITE-36-32",
+        "price": 155.15,
+        "options": {
+          "height": "36",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18153,
+        "sku": "570GLOSSWHITE-36-34",
+        "price": 164.85,
+        "options": {
+          "height": "36",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18154,
+        "sku": "570GLOSSWHITE-36-36",
+        "price": 174.55,
+        "options": {
+          "height": "36",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18155,
+        "sku": "570GLOSSWHITE-36-38",
+        "price": 184.24,
+        "options": {
+          "height": "36",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18156,
+        "sku": "570GLOSSWHITE-36-40",
+        "price": 193.94,
+        "options": {
+          "height": "36",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18157,
+        "sku": "570GLOSSWHITE-36-42",
+        "price": 203.64,
+        "options": {
+          "height": "36",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18158,
+        "sku": "570GLOSSWHITE-36-44",
+        "price": 213.33,
+        "options": {
+          "height": "36",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18159,
+        "sku": "570GLOSSWHITE-36-46",
+        "price": 191.17,
+        "options": {
+          "height": "36",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18160,
+        "sku": "570GLOSSWHITE-36-48",
+        "price": 199.48,
+        "options": {
+          "height": "36",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18161,
+        "sku": "570GLOSSWHITE-36-50",
+        "price": 207.79,
+        "options": {
+          "height": "36",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18162,
+        "sku": "570GLOSSWHITE-36-52",
+        "price": 216.1,
+        "options": {
+          "height": "36",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18163,
+        "sku": "570GLOSSWHITE-36-54",
+        "price": 224.42,
+        "options": {
+          "height": "36",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18164,
+        "sku": "570GLOSSWHITE-36-56",
+        "price": 232.73,
+        "options": {
+          "height": "36",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18165,
+        "sku": "570GLOSSWHITE-36-58",
+        "price": 241.04,
+        "options": {
+          "height": "36",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18166,
+        "sku": "570GLOSSWHITE-36-60",
+        "price": 249.35,
+        "options": {
+          "height": "36",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18167,
+        "sku": "570GLOSSWHITE-36-62",
+        "price": 257.66,
+        "options": {
+          "height": "36",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18168,
+        "sku": "570GLOSSWHITE-36-65",
+        "price": 225.11,
+        "options": {
+          "height": "36",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18169,
+        "sku": "570GLOSSWHITE-38-10",
+        "price": 73.11,
+        "options": {
+          "height": "38",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18170,
+        "sku": "570GLOSSWHITE-38-12",
+        "price": 70.19,
+        "options": {
+          "height": "38",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18171,
+        "sku": "570GLOSSWHITE-38-14",
+        "price": 81.89,
+        "options": {
+          "height": "38",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18172,
+        "sku": "570GLOSSWHITE-38-16",
+        "price": 93.58,
+        "options": {
+          "height": "38",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18173,
+        "sku": "570GLOSSWHITE-38-18",
+        "price": 105.28,
+        "options": {
+          "height": "38",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18174,
+        "sku": "570GLOSSWHITE-38-20",
+        "price": 116.98,
+        "options": {
+          "height": "38",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18175,
+        "sku": "570GLOSSWHITE-38-22",
+        "price": 128.68,
+        "options": {
+          "height": "38",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18176,
+        "sku": "570GLOSSWHITE-38-24",
+        "price": 122.83,
+        "options": {
+          "height": "38",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18177,
+        "sku": "570GLOSSWHITE-38-26",
+        "price": 133.06,
+        "options": {
+          "height": "38",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18178,
+        "sku": "570GLOSSWHITE-38-28",
+        "price": 143.3,
+        "options": {
+          "height": "38",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18179,
+        "sku": "570GLOSSWHITE-38-30",
+        "price": 153.54,
+        "options": {
+          "height": "38",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18180,
+        "sku": "570GLOSSWHITE-38-32",
+        "price": 163.77,
+        "options": {
+          "height": "38",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18181,
+        "sku": "570GLOSSWHITE-38-34",
+        "price": 174.01,
+        "options": {
+          "height": "38",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18182,
+        "sku": "570GLOSSWHITE-38-36",
+        "price": 184.24,
+        "options": {
+          "height": "38",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18183,
+        "sku": "570GLOSSWHITE-38-38",
+        "price": 194.48,
+        "options": {
+          "height": "38",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18184,
+        "sku": "570GLOSSWHITE-38-40",
+        "price": 204.71,
+        "options": {
+          "height": "38",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18185,
+        "sku": "570GLOSSWHITE-38-42",
+        "price": 214.95,
+        "options": {
+          "height": "38",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18186,
+        "sku": "570GLOSSWHITE-38-44",
+        "price": 193.02,
+        "options": {
+          "height": "38",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18187,
+        "sku": "570GLOSSWHITE-38-46",
+        "price": 201.79,
+        "options": {
+          "height": "38",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18188,
+        "sku": "570GLOSSWHITE-38-48",
+        "price": 210.56,
+        "options": {
+          "height": "38",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18189,
+        "sku": "570GLOSSWHITE-38-50",
+        "price": 219.34,
+        "options": {
+          "height": "38",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18190,
+        "sku": "570GLOSSWHITE-38-52",
+        "price": 228.11,
+        "options": {
+          "height": "38",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18191,
+        "sku": "570GLOSSWHITE-38-54",
+        "price": 236.88,
+        "options": {
+          "height": "38",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18192,
+        "sku": "570GLOSSWHITE-38-56",
+        "price": 245.66,
+        "options": {
+          "height": "38",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18193,
+        "sku": "570GLOSSWHITE-38-58",
+        "price": 254.43,
+        "options": {
+          "height": "38",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18194,
+        "sku": "570GLOSSWHITE-38-60",
+        "price": 219.34,
+        "options": {
+          "height": "38",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18195,
+        "sku": "570GLOSSWHITE-38-62",
+        "price": 226.65,
+        "options": {
+          "height": "38",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18196,
+        "sku": "570GLOSSWHITE-38-65",
+        "price": 237.61,
+        "options": {
+          "height": "38",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18197,
+        "sku": "570GLOSSWHITE-40-10",
+        "price": 61.57,
+        "options": {
+          "height": "40",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18198,
+        "sku": "570GLOSSWHITE-40-12",
+        "price": 73.88,
+        "options": {
+          "height": "40",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18199,
+        "sku": "570GLOSSWHITE-40-14",
+        "price": 86.2,
+        "options": {
+          "height": "40",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18200,
+        "sku": "570GLOSSWHITE-40-16",
+        "price": 98.51,
+        "options": {
+          "height": "40",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18201,
+        "sku": "570GLOSSWHITE-40-18",
+        "price": 110.82,
+        "options": {
+          "height": "40",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18202,
+        "sku": "570GLOSSWHITE-40-20",
+        "price": 123.14,
+        "options": {
+          "height": "40",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18203,
+        "sku": "570GLOSSWHITE-40-22",
+        "price": 135.45,
+        "options": {
+          "height": "40",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18204,
+        "sku": "570GLOSSWHITE-40-24",
+        "price": 129.29,
+        "options": {
+          "height": "40",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18205,
+        "sku": "570GLOSSWHITE-40-26",
+        "price": 140.07,
+        "options": {
+          "height": "40",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18206,
+        "sku": "570GLOSSWHITE-40-28",
+        "price": 150.84,
+        "options": {
+          "height": "40",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18207,
+        "sku": "570GLOSSWHITE-40-30",
+        "price": 161.62,
+        "options": {
+          "height": "40",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18208,
+        "sku": "570GLOSSWHITE-40-32",
+        "price": 172.39,
+        "options": {
+          "height": "40",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18209,
+        "sku": "570GLOSSWHITE-40-34",
+        "price": 183.16,
+        "options": {
+          "height": "40",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18210,
+        "sku": "570GLOSSWHITE-40-36",
+        "price": 193.94,
+        "options": {
+          "height": "40",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18211,
+        "sku": "570GLOSSWHITE-40-38",
+        "price": 204.71,
+        "options": {
+          "height": "40",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18212,
+        "sku": "570GLOSSWHITE-40-40",
+        "price": 184.7,
+        "options": {
+          "height": "40",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18213,
+        "sku": "570GLOSSWHITE-40-42",
+        "price": 193.94,
+        "options": {
+          "height": "40",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18214,
+        "sku": "570GLOSSWHITE-40-44",
+        "price": 203.17,
+        "options": {
+          "height": "40",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18215,
+        "sku": "570GLOSSWHITE-40-46",
+        "price": 212.41,
+        "options": {
+          "height": "40",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18216,
+        "sku": "570GLOSSWHITE-40-48",
+        "price": 221.64,
+        "options": {
+          "height": "40",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18217,
+        "sku": "570GLOSSWHITE-40-50",
+        "price": 230.88,
+        "options": {
+          "height": "40",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18218,
+        "sku": "570GLOSSWHITE-40-52",
+        "price": 240.12,
+        "options": {
+          "height": "40",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18219,
+        "sku": "570GLOSSWHITE-40-54",
+        "price": 249.35,
+        "options": {
+          "height": "40",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18220,
+        "sku": "570GLOSSWHITE-40-56",
+        "price": 258.59,
+        "options": {
+          "height": "40",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18221,
+        "sku": "570GLOSSWHITE-40-58",
+        "price": 223.18,
+        "options": {
+          "height": "40",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18222,
+        "sku": "570GLOSSWHITE-40-60",
+        "price": 230.88,
+        "options": {
+          "height": "40",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18223,
+        "sku": "570GLOSSWHITE-40-62",
+        "price": 238.58,
+        "options": {
+          "height": "40",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18224,
+        "sku": "570GLOSSWHITE-40-65",
+        "price": 250.12,
+        "options": {
+          "height": "40",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18225,
+        "sku": "570GLOSSWHITE-42-10",
+        "price": 64.65,
+        "options": {
+          "height": "42",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18226,
+        "sku": "570GLOSSWHITE-42-12",
+        "price": 77.58,
+        "options": {
+          "height": "42",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18227,
+        "sku": "570GLOSSWHITE-42-14",
+        "price": 90.5,
+        "options": {
+          "height": "42",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18228,
+        "sku": "570GLOSSWHITE-42-16",
+        "price": 103.43,
+        "options": {
+          "height": "42",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18229,
+        "sku": "570GLOSSWHITE-42-18",
+        "price": 116.36,
+        "options": {
+          "height": "42",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18230,
+        "sku": "570GLOSSWHITE-42-20",
+        "price": 129.29,
+        "options": {
+          "height": "42",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18231,
+        "sku": "570GLOSSWHITE-42-22",
+        "price": 124.44,
+        "options": {
+          "height": "42",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18232,
+        "sku": "570GLOSSWHITE-42-24",
+        "price": 135.76,
+        "options": {
+          "height": "42",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18233,
+        "sku": "570GLOSSWHITE-42-26",
+        "price": 147.07,
+        "options": {
+          "height": "42",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18234,
+        "sku": "570GLOSSWHITE-42-28",
+        "price": 158.38,
+        "options": {
+          "height": "42",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18235,
+        "sku": "570GLOSSWHITE-42-30",
+        "price": 169.7,
+        "options": {
+          "height": "42",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18236,
+        "sku": "570GLOSSWHITE-42-32",
+        "price": 181.01,
+        "options": {
+          "height": "42",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18237,
+        "sku": "570GLOSSWHITE-42-34",
+        "price": 192.32,
+        "options": {
+          "height": "42",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18238,
+        "sku": "570GLOSSWHITE-42-36",
+        "price": 203.64,
+        "options": {
+          "height": "42",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18239,
+        "sku": "570GLOSSWHITE-42-38",
+        "price": 214.95,
+        "options": {
+          "height": "42",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18240,
+        "sku": "570GLOSSWHITE-42-40",
+        "price": 193.94,
+        "options": {
+          "height": "42",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18241,
+        "sku": "570GLOSSWHITE-42-42",
+        "price": 203.64,
+        "options": {
+          "height": "42",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18242,
+        "sku": "570GLOSSWHITE-42-44",
+        "price": 213.33,
+        "options": {
+          "height": "42",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18243,
+        "sku": "570GLOSSWHITE-42-46",
+        "price": 223.03,
+        "options": {
+          "height": "42",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18244,
+        "sku": "570GLOSSWHITE-42-48",
+        "price": 232.73,
+        "options": {
+          "height": "42",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18245,
+        "sku": "570GLOSSWHITE-42-50",
+        "price": 242.42,
+        "options": {
+          "height": "42",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18246,
+        "sku": "570GLOSSWHITE-42-52",
+        "price": 252.12,
+        "options": {
+          "height": "42",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18247,
+        "sku": "570GLOSSWHITE-42-54",
+        "price": 218.18,
+        "options": {
+          "height": "42",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18248,
+        "sku": "570GLOSSWHITE-42-56",
+        "price": 226.26,
+        "options": {
+          "height": "42",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18249,
+        "sku": "570GLOSSWHITE-42-58",
+        "price": 234.34,
+        "options": {
+          "height": "42",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18250,
+        "sku": "570GLOSSWHITE-42-60",
+        "price": 242.42,
+        "options": {
+          "height": "42",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18251,
+        "sku": "570GLOSSWHITE-42-62",
+        "price": 250.5,
+        "options": {
+          "height": "42",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18252,
+        "sku": "570GLOSSWHITE-42-65",
+        "price": 210.1,
+        "options": {
+          "height": "42",
+          "width": "65"
+        }
+      },
+      {
+        "id": 18253,
+        "sku": "570GLOSSWHITE-45-10",
+        "price": 69.26,
+        "options": {
+          "height": "45",
+          "width": "10"
+        }
+      },
+      {
+        "id": 18254,
+        "sku": "570GLOSSWHITE-45-12",
+        "price": 83.12,
+        "options": {
+          "height": "45",
+          "width": "12"
+        }
+      },
+      {
+        "id": 18255,
+        "sku": "570GLOSSWHITE-45-14",
+        "price": 96.97,
+        "options": {
+          "height": "45",
+          "width": "14"
+        }
+      },
+      {
+        "id": 18256,
+        "sku": "570GLOSSWHITE-45-16",
+        "price": 110.82,
+        "options": {
+          "height": "45",
+          "width": "16"
+        }
+      },
+      {
+        "id": 18257,
+        "sku": "570GLOSSWHITE-45-18",
+        "price": 124.68,
+        "options": {
+          "height": "45",
+          "width": "18"
+        }
+      },
+      {
+        "id": 18258,
+        "sku": "570GLOSSWHITE-45-20",
+        "price": 121.21,
+        "options": {
+          "height": "45",
+          "width": "20"
+        }
+      },
+      {
+        "id": 18259,
+        "sku": "570GLOSSWHITE-45-22",
+        "price": 133.33,
+        "options": {
+          "height": "45",
+          "width": "22"
+        }
+      },
+      {
+        "id": 18260,
+        "sku": "570GLOSSWHITE-45-24",
+        "price": 145.45,
+        "options": {
+          "height": "45",
+          "width": "24"
+        }
+      },
+      {
+        "id": 18261,
+        "sku": "570GLOSSWHITE-45-26",
+        "price": 157.58,
+        "options": {
+          "height": "45",
+          "width": "26"
+        }
+      },
+      {
+        "id": 18262,
+        "sku": "570GLOSSWHITE-45-28",
+        "price": 169.7,
+        "options": {
+          "height": "45",
+          "width": "28"
+        }
+      },
+      {
+        "id": 18263,
+        "sku": "570GLOSSWHITE-45-30",
+        "price": 181.82,
+        "options": {
+          "height": "45",
+          "width": "30"
+        }
+      },
+      {
+        "id": 18264,
+        "sku": "570GLOSSWHITE-45-32",
+        "price": 193.94,
+        "options": {
+          "height": "45",
+          "width": "32"
+        }
+      },
+      {
+        "id": 18265,
+        "sku": "570GLOSSWHITE-45-34",
+        "price": 206.06,
+        "options": {
+          "height": "45",
+          "width": "34"
+        }
+      },
+      {
+        "id": 18266,
+        "sku": "570GLOSSWHITE-45-36",
+        "price": 187.01,
+        "options": {
+          "height": "45",
+          "width": "36"
+        }
+      },
+      {
+        "id": 18267,
+        "sku": "570GLOSSWHITE-45-38",
+        "price": 197.4,
+        "options": {
+          "height": "45",
+          "width": "38"
+        }
+      },
+      {
+        "id": 18268,
+        "sku": "570GLOSSWHITE-45-40",
+        "price": 207.79,
+        "options": {
+          "height": "45",
+          "width": "40"
+        }
+      },
+      {
+        "id": 18269,
+        "sku": "570GLOSSWHITE-45-42",
+        "price": 218.18,
+        "options": {
+          "height": "45",
+          "width": "42"
+        }
+      },
+      {
+        "id": 18270,
+        "sku": "570GLOSSWHITE-45-44",
+        "price": 228.57,
+        "options": {
+          "height": "45",
+          "width": "44"
+        }
+      },
+      {
+        "id": 18271,
+        "sku": "570GLOSSWHITE-45-46",
+        "price": 238.96,
+        "options": {
+          "height": "45",
+          "width": "46"
+        }
+      },
+      {
+        "id": 18272,
+        "sku": "570GLOSSWHITE-45-48",
+        "price": 249.35,
+        "options": {
+          "height": "45",
+          "width": "48"
+        }
+      },
+      {
+        "id": 18273,
+        "sku": "570GLOSSWHITE-45-50",
+        "price": 216.45,
+        "options": {
+          "height": "45",
+          "width": "50"
+        }
+      },
+      {
+        "id": 18274,
+        "sku": "570GLOSSWHITE-45-52",
+        "price": 225.11,
+        "options": {
+          "height": "45",
+          "width": "52"
+        }
+      },
+      {
+        "id": 18275,
+        "sku": "570GLOSSWHITE-45-54",
+        "price": 233.77,
+        "options": {
+          "height": "45",
+          "width": "54"
+        }
+      },
+      {
+        "id": 18276,
+        "sku": "570GLOSSWHITE-45-56",
+        "price": 242.42,
+        "options": {
+          "height": "45",
+          "width": "56"
+        }
+      },
+      {
+        "id": 18277,
+        "sku": "570GLOSSWHITE-45-58",
+        "price": 251.08,
+        "options": {
+          "height": "45",
+          "width": "58"
+        }
+      },
+      {
+        "id": 18278,
+        "sku": "570GLOSSWHITE-45-60",
+        "price": 207.79,
+        "options": {
+          "height": "45",
+          "width": "60"
+        }
+      },
+      {
+        "id": 18279,
+        "sku": "570GLOSSWHITE-45-62",
+        "price": 214.72,
+        "options": {
+          "height": "45",
+          "width": "62"
+        }
+      },
+      {
+        "id": 18280,
+        "sku": "570GLOSSWHITE-45-65",
+        "price": 168.83,
+        "options": {
+          "height": "45",
+          "width": "65"
+        }
+      }
+    ],
+    "price_grid": {
+      "10x10": 19.24,
+      "10x12": 23.09,
+      "10x14": 26.94,
+      "10x16": 30.78,
+      "10x18": 34.63,
+      "10x20": 38.48,
+      "10x22": 42.33,
+      "10x24": 46.18,
+      "10x26": 50.02,
+      "10x28": 53.87,
+      "10x30": 57.72,
+      "10x32": 61.57,
+      "10x34": 65.42,
+      "10x36": 69.26,
+      "10x38": 73.11,
+      "10x40": 61.57,
+      "10x42": 64.65,
+      "10x44": 67.72,
+      "10x46": 70.8,
+      "10x48": 73.88,
+      "10x50": 76.96,
+      "10x52": 80.04,
+      "10x54": 83.12,
+      "10x56": 86.2,
+      "10x58": 89.27,
+      "10x60": 92.35,
+      "10x62": 95.43,
+      "10x65": 100.05,
+      "12x10": 23.09,
+      "12x12": 27.71,
+      "12x14": 32.32,
+      "12x16": 36.94,
+      "12x18": 41.56,
+      "12x20": 46.18,
+      "12x22": 50.79,
+      "12x24": 55.41,
+      "12x26": 60.03,
+      "12x28": 64.65,
+      "12x30": 69.26,
+      "12x32": 73.88,
+      "12x34": 62.8,
+      "12x36": 66.49,
+      "12x38": 70.19,
+      "12x40": 73.88,
+      "12x42": 77.58,
+      "12x44": 81.27,
+      "12x46": 84.96,
+      "12x48": 88.66,
+      "12x50": 92.35,
+      "12x52": 96.05,
+      "12x54": 99.74,
+      "12x56": 103.43,
+      "12x58": 107.13,
+      "12x60": 110.82,
+      "12x62": 114.52,
+      "12x65": 120.06,
+      "14x10": 26.94,
+      "14x12": 32.32,
+      "14x14": 37.71,
+      "14x16": 43.1,
+      "14x18": 48.48,
+      "14x20": 53.87,
+      "14x22": 59.26,
+      "14x24": 64.65,
+      "14x26": 70.03,
+      "14x28": 75.42,
+      "14x30": 64.65,
+      "14x32": 68.96,
+      "14x34": 73.27,
+      "14x36": 77.58,
+      "14x38": 81.89,
+      "14x40": 86.2,
+      "14x42": 90.5,
+      "14x44": 94.81,
+      "14x46": 99.12,
+      "14x48": 103.43,
+      "14x50": 107.74,
+      "14x52": 112.05,
+      "14x54": 116.36,
+      "14x56": 120.67,
+      "14x58": 124.98,
+      "14x60": 129.29,
+      "14x62": 133.6,
+      "14x65": 122.56,
+      "16x10": 30.78,
+      "16x12": 36.94,
+      "16x14": 43.1,
+      "16x16": 49.25,
+      "16x18": 55.41,
+      "16x20": 61.57,
+      "16x22": 67.72,
+      "16x24": 73.88,
+      "16x26": 64.03,
+      "16x28": 68.96,
+      "16x30": 73.88,
+      "16x32": 78.81,
+      "16x34": 83.73,
+      "16x36": 88.66,
+      "16x38": 93.58,
+      "16x40": 98.51,
+      "16x42": 103.43,
+      "16x44": 108.36,
+      "16x46": 113.29,
+      "16x48": 118.21,
+      "16x50": 123.14,
+      "16x52": 128.06,
+      "16x54": 132.99,
+      "16x56": 137.91,
+      "16x58": 124.98,
+      "16x60": 129.29,
+      "16x62": 133.6,
+      "16x65": 140.07,
+      "18x10": 34.63,
+      "18x12": 41.56,
+      "18x14": 48.48,
+      "18x16": 55.41,
+      "18x18": 62.34,
+      "18x20": 69.26,
+      "18x22": 76.19,
+      "18x24": 66.49,
+      "18x26": 72.03,
+      "18x28": 77.58,
+      "18x30": 83.12,
+      "18x32": 88.66,
+      "18x34": 94.2,
+      "18x36": 99.74,
+      "18x38": 105.28,
+      "18x40": 110.82,
+      "18x42": 116.36,
+      "18x44": 121.9,
+      "18x46": 127.45,
+      "18x48": 132.99,
+      "18x50": 121.21,
+      "18x52": 126.06,
+      "18x54": 130.91,
+      "18x56": 135.76,
+      "18x58": 140.61,
+      "18x60": 145.45,
+      "18x62": 150.3,
+      "18x65": 157.58,
+      "20x10": 38.48,
+      "20x12": 46.18,
+      "20x14": 53.87,
+      "20x16": 61.57,
+      "20x18": 69.26,
+      "20x20": 61.57,
+      "20x22": 67.72,
+      "20x24": 73.88,
+      "20x26": 80.04,
+      "20x28": 86.2,
+      "20x30": 92.35,
+      "20x32": 98.51,
+      "20x34": 104.67,
+      "20x36": 110.82,
+      "20x38": 116.98,
+      "20x40": 123.14,
+      "20x42": 129.29,
+      "20x44": 135.45,
+      "20x46": 123.91,
+      "20x48": 129.29,
+      "20x50": 134.68,
+      "20x52": 140.07,
+      "20x54": 145.45,
+      "20x56": 150.84,
+      "20x58": 156.23,
+      "20x60": 161.62,
+      "20x62": 167,
+      "20x65": 175.08,
+      "22x10": 42.33,
+      "22x12": 50.79,
+      "22x14": 59.26,
+      "22x16": 67.72,
+      "22x18": 76.19,
+      "22x20": 67.72,
+      "22x22": 74.5,
+      "22x24": 81.27,
+      "22x26": 88.04,
+      "22x28": 94.81,
+      "22x30": 101.59,
+      "22x32": 108.36,
+      "22x34": 115.13,
+      "22x36": 121.9,
+      "22x38": 128.68,
+      "22x40": 135.45,
+      "22x42": 124.44,
+      "22x44": 130.37,
+      "22x46": 136.3,
+      "22x48": 142.22,
+      "22x50": 148.15,
+      "22x52": 154.07,
+      "22x54": 160,
+      "22x56": 165.93,
+      "22x58": 171.85,
+      "22x60": 177.78,
+      "22x62": 183.7,
+      "22x65": 192.59,
+      "24x10": 46.18,
+      "24x12": 55.41,
+      "24x14": 64.65,
+      "24x16": 73.88,
+      "24x18": 66.49,
+      "24x20": 73.88,
+      "24x22": 81.27,
+      "24x24": 88.66,
+      "24x26": 96.05,
+      "24x28": 103.43,
+      "24x30": 110.82,
+      "24x32": 118.21,
+      "24x34": 125.6,
+      "24x36": 132.99,
+      "24x38": 122.83,
+      "24x40": 129.29,
+      "24x42": 135.76,
+      "24x44": 142.22,
+      "24x46": 148.69,
+      "24x48": 155.15,
+      "24x50": 161.62,
+      "24x52": 168.08,
+      "24x54": 174.55,
+      "24x56": 181.01,
+      "24x58": 187.47,
+      "24x60": 193.94,
+      "24x62": 200.4,
+      "24x65": 210.1,
+      "26x10": 50.02,
+      "26x12": 60.03,
+      "26x14": 70.03,
+      "26x16": 64.03,
+      "26x18": 72.03,
+      "26x20": 80.04,
+      "26x22": 88.04,
+      "26x24": 96.05,
+      "26x26": 104.05,
+      "26x28": 112.05,
+      "26x30": 120.06,
+      "26x32": 128.06,
+      "26x34": 136.07,
+      "26x36": 126.06,
+      "26x38": 133.06,
+      "26x40": 140.07,
+      "26x42": 147.07,
+      "26x44": 154.07,
+      "26x46": 161.08,
+      "26x48": 168.08,
+      "26x50": 175.08,
+      "26x52": 182.09,
+      "26x54": 189.09,
+      "26x56": 196.09,
+      "26x58": 203.1,
+      "26x60": 210.1,
+      "26x62": 186.09,
+      "26x65": 195.09,
+      "28x10": 53.87,
+      "28x12": 64.65,
+      "28x14": 75.42,
+      "28x16": 68.96,
+      "28x18": 77.58,
+      "28x20": 86.2,
+      "28x22": 94.81,
+      "28x24": 103.43,
+      "28x26": 112.05,
+      "28x28": 120.67,
+      "28x30": 129.29,
+      "28x32": 137.91,
+      "28x34": 128.22,
+      "28x36": 135.76,
+      "28x38": 143.3,
+      "28x40": 150.84,
+      "28x42": 158.38,
+      "28x44": 165.93,
+      "28x46": 173.47,
+      "28x48": 181.01,
+      "28x50": 188.55,
+      "28x52": 196.09,
+      "28x54": 203.64,
+      "28x56": 211.18,
+      "28x58": 187.47,
+      "28x60": 193.94,
+      "28x62": 200.4,
+      "28x65": 210.1,
+      "30x10": 57.72,
+      "30x12": 69.26,
+      "30x14": 64.65,
+      "30x16": 73.88,
+      "30x18": 83.12,
+      "30x20": 92.35,
+      "30x22": 101.59,
+      "30x24": 110.82,
+      "30x26": 120.06,
+      "30x28": 129.29,
+      "30x30": 121.21,
+      "30x32": 129.29,
+      "30x34": 137.37,
+      "30x36": 145.45,
+      "30x38": 153.54,
+      "30x40": 161.62,
+      "30x42": 169.7,
+      "30x44": 177.78,
+      "30x46": 185.86,
+      "30x48": 193.94,
+      "30x50": 202.02,
+      "30x52": 210.1,
+      "30x54": 187.01,
+      "30x56": 193.94,
+      "30x58": 200.87,
+      "30x60": 207.79,
+      "30x62": 214.72,
+      "30x65": 225.11,
+      "32x10": 61.57,
+      "32x12": 73.88,
+      "32x14": 68.96,
+      "32x16": 78.81,
+      "32x18": 88.66,
+      "32x20": 98.51,
+      "32x22": 108.36,
+      "32x24": 118.21,
+      "32x26": 128.06,
+      "32x28": 137.91,
+      "32x30": 129.29,
+      "32x32": 137.91,
+      "32x34": 146.53,
+      "32x36": 155.15,
+      "32x38": 163.77,
+      "32x40": 172.39,
+      "32x42": 181.01,
+      "32x44": 189.63,
+      "32x46": 198.25,
+      "32x48": 206.87,
+      "32x50": 184.7,
+      "32x52": 192.09,
+      "32x54": 199.48,
+      "32x56": 206.87,
+      "32x58": 214.26,
+      "32x60": 221.64,
+      "32x62": 229.03,
+      "32x65": 240.12,
+      "34x10": 65.42,
+      "34x12": 62.8,
+      "34x14": 73.27,
+      "34x16": 83.73,
+      "34x18": 94.2,
+      "34x20": 104.67,
+      "34x22": 115.13,
+      "34x24": 125.6,
+      "34x26": 136.07,
+      "34x28": 128.22,
+      "34x30": 137.37,
+      "34x32": 146.53,
+      "34x34": 155.69,
+      "34x36": 164.85,
+      "34x38": 174.01,
+      "34x40": 183.16,
+      "34x42": 192.32,
+      "34x44": 201.48,
+      "34x46": 210.64,
+      "34x48": 188.4,
+      "34x50": 196.25,
+      "34x52": 204.1,
+      "34x54": 211.95,
+      "34x56": 219.8,
+      "34x58": 227.65,
+      "34x60": 235.5,
+      "34x62": 243.35,
+      "34x65": 255.12,
+      "36x10": 69.26,
+      "36x12": 66.49,
+      "36x14": 77.58,
+      "36x16": 88.66,
+      "36x18": 99.74,
+      "36x20": 110.82,
+      "36x22": 121.9,
+      "36x24": 132.99,
+      "36x26": 126.06,
+      "36x28": 135.76,
+      "36x30": 145.45,
+      "36x32": 155.15,
+      "36x34": 164.85,
+      "36x36": 174.55,
+      "36x38": 184.24,
+      "36x40": 193.94,
+      "36x42": 203.64,
+      "36x44": 213.33,
+      "36x46": 191.17,
+      "36x48": 199.48,
+      "36x50": 207.79,
+      "36x52": 216.1,
+      "36x54": 224.42,
+      "36x56": 232.73,
+      "36x58": 241.04,
+      "36x60": 249.35,
+      "36x62": 257.66,
+      "36x65": 225.11,
+      "38x10": 73.11,
+      "38x12": 70.19,
+      "38x14": 81.89,
+      "38x16": 93.58,
+      "38x18": 105.28,
+      "38x20": 116.98,
+      "38x22": 128.68,
+      "38x24": 122.83,
+      "38x26": 133.06,
+      "38x28": 143.3,
+      "38x30": 153.54,
+      "38x32": 163.77,
+      "38x34": 174.01,
+      "38x36": 184.24,
+      "38x38": 194.48,
+      "38x40": 204.71,
+      "38x42": 214.95,
+      "38x44": 193.02,
+      "38x46": 201.79,
+      "38x48": 210.56,
+      "38x50": 219.34,
+      "38x52": 228.11,
+      "38x54": 236.88,
+      "38x56": 245.66,
+      "38x58": 254.43,
+      "38x60": 219.34,
+      "38x62": 226.65,
+      "38x65": 237.61,
+      "40x10": 61.57,
+      "40x12": 73.88,
+      "40x14": 86.2,
+      "40x16": 98.51,
+      "40x18": 110.82,
+      "40x20": 123.14,
+      "40x22": 135.45,
+      "40x24": 129.29,
+      "40x26": 140.07,
+      "40x28": 150.84,
+      "40x30": 161.62,
+      "40x32": 172.39,
+      "40x34": 183.16,
+      "40x36": 193.94,
+      "40x38": 204.71,
+      "40x40": 184.7,
+      "40x42": 193.94,
+      "40x44": 203.17,
+      "40x46": 212.41,
+      "40x48": 221.64,
+      "40x50": 230.88,
+      "40x52": 240.12,
+      "40x54": 249.35,
+      "40x56": 258.59,
+      "40x58": 223.18,
+      "40x60": 230.88,
+      "40x62": 238.58,
+      "40x65": 250.12,
+      "42x10": 64.65,
+      "42x12": 77.58,
+      "42x14": 90.5,
+      "42x16": 103.43,
+      "42x18": 116.36,
+      "42x20": 129.29,
+      "42x22": 124.44,
+      "42x24": 135.76,
+      "42x26": 147.07,
+      "42x28": 158.38,
+      "42x30": 169.7,
+      "42x32": 181.01,
+      "42x34": 192.32,
+      "42x36": 203.64,
+      "42x38": 214.95,
+      "42x40": 193.94,
+      "42x42": 203.64,
+      "42x44": 213.33,
+      "42x46": 223.03,
+      "42x48": 232.73,
+      "42x50": 242.42,
+      "42x52": 252.12,
+      "42x54": 218.18,
+      "42x56": 226.26,
+      "42x58": 234.34,
+      "42x60": 242.42,
+      "42x62": 250.5,
+      "42x65": 210.1,
+      "45x10": 69.26,
+      "45x12": 83.12,
+      "45x14": 96.97,
+      "45x16": 110.82,
+      "45x18": 124.68,
+      "45x20": 121.21,
+      "45x22": 133.33,
+      "45x24": 145.45,
+      "45x26": 157.58,
+      "45x28": 169.7,
+      "45x30": 181.82,
+      "45x32": 193.94,
+      "45x34": 206.06,
+      "45x36": 187.01,
+      "45x38": 197.4,
+      "45x40": 207.79,
+      "45x42": 218.18,
+      "45x44": 228.57,
+      "45x46": 238.96,
+      "45x48": 249.35,
+      "45x50": 216.45,
+      "45x52": 225.11,
+      "45x54": 233.77,
+      "45x56": 242.42,
+      "45x58": 251.08,
+      "45x60": 207.79,
+      "45x62": 214.72,
+      "45x65": 168.83
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1046,
+        "name": "SH Range (10-45)",
+        "role": "height"
+      },
+      {
+        "id": 1047,
+        "name": "SW Range (10-65)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 444,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 445,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 448,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 449,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 451,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 454,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 455,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 892,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 893,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 896,
+        "name": "Readability",
+        "type": "swatch",
+        "required": true,
+        "role": "layout_data",
+        "values": [
+          {
+            "id": 1368,
+            "label": "Read from Outside"
+          },
+          {
+            "id": 1369,
+            "label": "Read from Inside"
+          }
+        ]
+      },
+      {
+        "id": 902,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 904,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 905,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 910,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 911,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2040,
+        "name": "Selected Layout Data",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 2218,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2219,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      },
+      {
+        "id": 2226,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2514,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1708,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1709,
+            "label": "Circle"
+          },
+          {
+            "id": 1710,
+            "label": "CustomShape"
+          }
+        ]
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Readability",
+      "Sticker Height",
+      "Sticker Width",
+      "Saved Print Output",
+      "Shape"
+    ]
+  },
+  "mcp": {
+    "product_id": "window_clings_standard_white",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}

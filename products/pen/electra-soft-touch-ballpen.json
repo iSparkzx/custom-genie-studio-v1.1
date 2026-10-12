@@ -1,0 +1,428 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "electra_soft_touch_ballpen",
+  "name": "Electra Soft Touch Ballpen",
+  "family": "pen",
+  "type": "Pens - Electra Soft Touch - Printed",
+  "group": "pens_electra_soft_touch_printed",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 135,
+    "url": "/pens/electra-soft-touch-ballpen/",
+    "sku": "5100301001",
+    "base_variant_id": null,
+    "template": "penprod"
+  },
+  "size": {
+    "mode": "fixed",
+    "unit": "in",
+    "w_in": null,
+    "h_in": null
+  },
+  "product_colors": [
+    "Dark Blue",
+    "Blue",
+    "Aqua",
+    "Black",
+    "Slate",
+    "Dark Green",
+    "Dark Red",
+    "Red"
+  ],
+  "decoration": "printed",
+  "text_fields": [
+    "text_1",
+    "text_2"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 5.49,
+    "quantity_tiers": [
+      {
+        "min_qty": 10,
+        "max_qty": 24,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 25,
+        "max_qty": 49,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 50,
+        "max_qty": 99,
+        "type": "percent",
+        "amount": 40
+      },
+      {
+        "min_qty": 100,
+        "max_qty": 249,
+        "type": "percent",
+        "amount": 45
+      },
+      {
+        "min_qty": 250,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 50
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 55
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 60
+      }
+    ],
+    "variants": [
+      {
+        "id": 161,
+        "sku": "5100301001012",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Dark Blue"
+        }
+      },
+      {
+        "id": 162,
+        "sku": "5100301001002",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Blue"
+        }
+      },
+      {
+        "id": 163,
+        "sku": "5100301001014",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Aqua"
+        }
+      },
+      {
+        "id": 164,
+        "sku": "5100301001001",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Black"
+        }
+      },
+      {
+        "id": 165,
+        "sku": "5100301001013",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Slate"
+        }
+      },
+      {
+        "id": 166,
+        "sku": "5100301001004",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Dark Green"
+        }
+      },
+      {
+        "id": 167,
+        "sku": "5100301001011",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Dark Red"
+        }
+      },
+      {
+        "id": 168,
+        "sku": "5100301001003",
+        "price": 5.49,
+        "options": {
+          "pen_color": "Red"
+        }
+      }
+    ]
+  },
+  "editor": {
+    "mode": "imprint",
+    "fields": [
+      "text_1",
+      "text_2",
+      "logo"
+    ],
+    "layouts": "BigCommerce 'Select Layout' modifier (layout1 to layout8)",
+    "genie": true
+  },
+  "checks": null,
+  "previews": [
+    "flat",
+    "scene:product_model"
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 138,
+        "name": "Pen Color",
+        "role": "pen_color"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 623,
+        "name": "Select Layout",
+        "type": "swatch",
+        "required": true,
+        "role": "layout",
+        "values": [
+          {
+            "id": 890,
+            "label": "layout1"
+          },
+          {
+            "id": 909,
+            "label": "layout2"
+          },
+          {
+            "id": 910,
+            "label": "layout3"
+          },
+          {
+            "id": 912,
+            "label": "layout4"
+          },
+          {
+            "id": 911,
+            "label": "layout5"
+          },
+          {
+            "id": 1300,
+            "label": "layout6"
+          },
+          {
+            "id": 1301,
+            "label": "layout7"
+          },
+          {
+            "id": 1302,
+            "label": "layout8"
+          }
+        ]
+      },
+      {
+        "id": 624,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 626,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 627,
+        "name": "Alignment",
+        "type": "swatch",
+        "required": false,
+        "role": "alignment",
+        "values": [
+          {
+            "id": 903,
+            "label": "left"
+          },
+          {
+            "id": 904,
+            "label": "center"
+          },
+          {
+            "id": 905,
+            "label": "right"
+          }
+        ]
+      },
+      {
+        "id": 629,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 668,
+        "name": "Text Line 2",
+        "type": "text",
+        "required": false,
+        "role": "text_2"
+      },
+      {
+        "id": 669,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 670,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1126,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1127,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1128,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 1129,
+        "name": "Size",
+        "type": "text",
+        "required": false,
+        "role": "size_field"
+      },
+      {
+        "id": 1913,
+        "name": "Color",
+        "type": "text",
+        "required": false,
+        "role": "ink_color"
+      },
+      {
+        "id": 2137,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 2138,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 2139,
+        "name": "Font2size",
+        "type": "text",
+        "required": false,
+        "role": "font_2_size"
+      }
+    ],
+    "required_modifiers": [
+      "Select Layout",
+      "Review",
+      "Saved Print Output"
+    ]
+  },
+  "mcp": {
+    "product_id": "electra_soft_touch_ballpen",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Decoration (engraved or printed) comes from the BigCommerce custom field dp_engraved.",
+    "'scene:product_model' means a picture of the actual pen or notebook model in the chosen color; still to be built."
+  ],
+  "todo": [
+    "Imprint area (width x height) and position for every pen model and the notebook.",
+    "Ink colors allowed per model and method (printed vs engraved), and the color limit.",
+    "Production file format for imprints.",
+    "Imprint area for this model (see family todo)."
+  ]
+}

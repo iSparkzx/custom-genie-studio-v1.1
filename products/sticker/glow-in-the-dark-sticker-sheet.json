@@ -1,0 +1,1531 @@
+{
+  "$schema": "../schema/product-definition.schema.json",
+  "id": "glow_in_the_dark_sticker_sheet",
+  "name": "Custom Glow in the Dark Stickers",
+  "family": "sticker",
+  "type": "Sheets - Glow in the Dark",
+  "group": "sheets_glow_in_the_dark",
+  "status": "live",
+  "studio_status": "planned",
+  "bigcommerce": {
+    "product_id": 167,
+    "url": "/stickers/glow-in-the-dark-sticker-sheet/",
+    "sku": "57GDRGDRNOD",
+    "base_variant_id": null,
+    "template": "stickerprod"
+  },
+  "size": {
+    "mode": "free",
+    "unit": "in",
+    "width": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "height": {
+      "min": 0.5,
+      "max": 8.5
+    },
+    "price_steps": {
+      "width": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ],
+      "height": [
+        0.5,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        8.5
+      ]
+    },
+    "rounding": "up_to_next_step"
+  },
+  "shapes": [
+    {
+      "id": "rect",
+      "bigcommerce_label": "Rectangle"
+    },
+    {
+      "id": "circle",
+      "bigcommerce_label": "Circle"
+    },
+    {
+      "id": "stadium",
+      "bigcommerce_label": "Stadium"
+    },
+    {
+      "id": "custom",
+      "bigcommerce_label": "Custom Shape"
+    }
+  ],
+  "corners": {
+    "optional": true,
+    "rounded_radius_in": 0.12,
+    "bigcommerce_labels": [
+      "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions",
+      "No – Straight edges"
+    ]
+  },
+  "decoration": "printed",
+  "format": "sheet",
+  "text_fields": [
+    "text_1"
+  ],
+  "fonts": [
+    "Alegreya",
+    "Anton",
+    "Archivo Black",
+    "Bebas Neue",
+    "Homemade Apple",
+    "Josefin Sans",
+    "Lato",
+    "Libre Baskerville",
+    "Montserrat",
+    "Oswald"
+  ],
+  "personalization": null,
+  "quantity": {
+    "min": null,
+    "max": null
+  },
+  "pricing": {
+    "source": "bigcommerce_variants",
+    "pulled_at": "2026-10-11T01:00:26.076Z",
+    "base_price": 0.12,
+    "quantity_tiers": [
+      {
+        "min_qty": 100,
+        "max_qty": 199,
+        "type": "percent",
+        "amount": 20
+      },
+      {
+        "min_qty": 200,
+        "max_qty": 299,
+        "type": "percent",
+        "amount": 25
+      },
+      {
+        "min_qty": 300,
+        "max_qty": 499,
+        "type": "percent",
+        "amount": 30
+      },
+      {
+        "min_qty": 500,
+        "max_qty": 999,
+        "type": "percent",
+        "amount": 35
+      },
+      {
+        "min_qty": 1000,
+        "max_qty": null,
+        "type": "percent",
+        "amount": 40
+      }
+    ],
+    "variants": [
+      {
+        "id": 36548,
+        "sku": "57GDRGDRNOD-05-05",
+        "price": 0.12,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36555,
+        "sku": "57GDRGDRNOD-05-10",
+        "price": 0.25,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36559,
+        "sku": "57GDRGDRNOD-05-20",
+        "price": 0.49,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36561,
+        "sku": "57GDRGDRNOD-05-30",
+        "price": 0.74,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36563,
+        "sku": "57GDRGDRNOD-05-40",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36565,
+        "sku": "57GDRGDRNOD-05-50",
+        "price": 1.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36567,
+        "sku": "57GDRGDRNOD-05-60",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36569,
+        "sku": "57GDRGDRNOD-05-70",
+        "price": 1.73,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36571,
+        "sku": "57GDRGDRNOD-05-80",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36572,
+        "sku": "57GDRGDRNOD-05-85",
+        "price": 1.05,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "0.5",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36723,
+        "sku": "57GDRGDRNOD-10-05",
+        "price": 0.25,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36730,
+        "sku": "57GDRGDRNOD-10-10",
+        "price": 0.49,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36734,
+        "sku": "57GDRGDRNOD-10-20",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36736,
+        "sku": "57GDRGDRNOD-10-30",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36738,
+        "sku": "57GDRGDRNOD-10-40",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36740,
+        "sku": "57GDRGDRNOD-10-50",
+        "price": 1.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36742,
+        "sku": "57GDRGDRNOD-10-60",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36744,
+        "sku": "57GDRGDRNOD-10-70",
+        "price": 1.73,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36746,
+        "sku": "57GDRGDRNOD-10-80",
+        "price": 1.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36747,
+        "sku": "57GDRGDRNOD-10-85",
+        "price": 2.1,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "1.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36823,
+        "sku": "57GDRGDRNOD-20-05",
+        "price": 0.49,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36830,
+        "sku": "57GDRGDRNOD-20-10",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36834,
+        "sku": "57GDRGDRNOD-20-20",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36836,
+        "sku": "57GDRGDRNOD-20-30",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36838,
+        "sku": "57GDRGDRNOD-20-40",
+        "price": 1.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36840,
+        "sku": "57GDRGDRNOD-20-50",
+        "price": 2.56,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36842,
+        "sku": "57GDRGDRNOD-20-60",
+        "price": 3.07,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36844,
+        "sku": "57GDRGDRNOD-20-70",
+        "price": 3.58,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36846,
+        "sku": "57GDRGDRNOD-20-80",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36847,
+        "sku": "57GDRGDRNOD-20-85",
+        "price": 2.44,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "2.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36873,
+        "sku": "57GDRGDRNOD-30-05",
+        "price": 0.74,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36880,
+        "sku": "57GDRGDRNOD-30-10",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36884,
+        "sku": "57GDRGDRNOD-30-20",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36886,
+        "sku": "57GDRGDRNOD-30-30",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36888,
+        "sku": "57GDRGDRNOD-30-40",
+        "price": 3.07,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36890,
+        "sku": "57GDRGDRNOD-30-50",
+        "price": 3.84,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36892,
+        "sku": "57GDRGDRNOD-30-60",
+        "price": 2.59,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36894,
+        "sku": "57GDRGDRNOD-30-70",
+        "price": 3.02,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36896,
+        "sku": "57GDRGDRNOD-30-80",
+        "price": 3.45,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36897,
+        "sku": "57GDRGDRNOD-30-85",
+        "price": 7.85,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "3.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36923,
+        "sku": "57GDRGDRNOD-40-05",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36930,
+        "sku": "57GDRGDRNOD-40-10",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36934,
+        "sku": "57GDRGDRNOD-40-20",
+        "price": 1.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36936,
+        "sku": "57GDRGDRNOD-40-30",
+        "price": 3.07,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36938,
+        "sku": "57GDRGDRNOD-40-40",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36940,
+        "sku": "57GDRGDRNOD-40-50",
+        "price": 2.88,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36942,
+        "sku": "57GDRGDRNOD-40-60",
+        "price": 3.45,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36944,
+        "sku": "57GDRGDRNOD-40-70",
+        "price": 8.62,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36946,
+        "sku": "57GDRGDRNOD-40-80",
+        "price": 9.86,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36947,
+        "sku": "57GDRGDRNOD-40-85",
+        "price": 10.47,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "4.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 36973,
+        "sku": "57GDRGDRNOD-50-05",
+        "price": 1.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 36980,
+        "sku": "57GDRGDRNOD-50-10",
+        "price": 1.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 36984,
+        "sku": "57GDRGDRNOD-50-20",
+        "price": 2.56,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 36986,
+        "sku": "57GDRGDRNOD-50-30",
+        "price": 3.84,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 36988,
+        "sku": "57GDRGDRNOD-50-40",
+        "price": 2.88,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 36990,
+        "sku": "57GDRGDRNOD-50-50",
+        "price": 7.7,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 36992,
+        "sku": "57GDRGDRNOD-50-60",
+        "price": 9.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 36994,
+        "sku": "57GDRGDRNOD-50-70",
+        "price": 10.78,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 36996,
+        "sku": "57GDRGDRNOD-50-80",
+        "price": 8.56,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 36997,
+        "sku": "57GDRGDRNOD-50-85",
+        "price": 9.09,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "5.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37023,
+        "sku": "57GDRGDRNOD-60-05",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37030,
+        "sku": "57GDRGDRNOD-60-10",
+        "price": 1.48,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37034,
+        "sku": "57GDRGDRNOD-60-20",
+        "price": 3.07,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37036,
+        "sku": "57GDRGDRNOD-60-30",
+        "price": 2.59,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37038,
+        "sku": "57GDRGDRNOD-60-40",
+        "price": 3.45,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37040,
+        "sku": "57GDRGDRNOD-60-50",
+        "price": 9.24,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37042,
+        "sku": "57GDRGDRNOD-60-60",
+        "price": 7.7,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37044,
+        "sku": "57GDRGDRNOD-60-70",
+        "price": 8.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37046,
+        "sku": "57GDRGDRNOD-60-80",
+        "price": 10.27,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37047,
+        "sku": "57GDRGDRNOD-60-85",
+        "price": 8.01,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "6.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37073,
+        "sku": "57GDRGDRNOD-70-05",
+        "price": 1.73,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37080,
+        "sku": "57GDRGDRNOD-70-10",
+        "price": 1.73,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37084,
+        "sku": "57GDRGDRNOD-70-20",
+        "price": 3.58,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37086,
+        "sku": "57GDRGDRNOD-70-30",
+        "price": 3.02,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37088,
+        "sku": "57GDRGDRNOD-70-40",
+        "price": 8.62,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37090,
+        "sku": "57GDRGDRNOD-70-50",
+        "price": 10.78,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37092,
+        "sku": "57GDRGDRNOD-70-60",
+        "price": 8.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37094,
+        "sku": "57GDRGDRNOD-70-70",
+        "price": 7.7,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37096,
+        "sku": "57GDRGDRNOD-70-80",
+        "price": 8.8,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37097,
+        "sku": "57GDRGDRNOD-70-85",
+        "price": 9.35,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "7.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37098,
+        "sku": "57GDRGDRNOD-80-05",
+        "price": 0.99,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37105,
+        "sku": "57GDRGDRNOD-80-10",
+        "price": 1.98,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37109,
+        "sku": "57GDRGDRNOD-80-20",
+        "price": 2.3,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37111,
+        "sku": "57GDRGDRNOD-80-30",
+        "price": 3.45,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37113,
+        "sku": "57GDRGDRNOD-80-40",
+        "price": 9.86,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37115,
+        "sku": "57GDRGDRNOD-80-50",
+        "price": 8.56,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37117,
+        "sku": "57GDRGDRNOD-80-60",
+        "price": 10.27,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37119,
+        "sku": "57GDRGDRNOD-80-70",
+        "price": 8.8,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37121,
+        "sku": "57GDRGDRNOD-80-80",
+        "price": 7.7,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37122,
+        "sku": "57GDRGDRNOD-80-85",
+        "price": 8.18,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.0",
+          "width": "8.5"
+        }
+      },
+      {
+        "id": 37123,
+        "sku": "57GDRGDRNOD-85-05",
+        "price": 1.05,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "0.5"
+        }
+      },
+      {
+        "id": 37130,
+        "sku": "57GDRGDRNOD-85-10",
+        "price": 2.1,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "1.0"
+        }
+      },
+      {
+        "id": 37134,
+        "sku": "57GDRGDRNOD-85-20",
+        "price": 2.44,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "2.0"
+        }
+      },
+      {
+        "id": 37136,
+        "sku": "57GDRGDRNOD-85-30",
+        "price": 7.85,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "3.0"
+        }
+      },
+      {
+        "id": 37138,
+        "sku": "57GDRGDRNOD-85-40",
+        "price": 10.47,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "4.0"
+        }
+      },
+      {
+        "id": 37140,
+        "sku": "57GDRGDRNOD-85-50",
+        "price": 9.09,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "5.0"
+        }
+      },
+      {
+        "id": 37142,
+        "sku": "57GDRGDRNOD-85-60",
+        "price": 8.01,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "6.0"
+        }
+      },
+      {
+        "id": 37144,
+        "sku": "57GDRGDRNOD-85-70",
+        "price": 9.35,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "7.0"
+        }
+      },
+      {
+        "id": 37146,
+        "sku": "57GDRGDRNOD-85-80",
+        "price": 8.18,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "8.0"
+        }
+      },
+      {
+        "id": 37147,
+        "sku": "57GDRGDRNOD-85-85",
+        "price": 8.69,
+        "purchasing_disabled": true,
+        "options": {
+          "height": "8.5",
+          "width": "8.5"
+        }
+      }
+    ],
+    "price_grid": {
+      "0.5x0.5": 0.12,
+      "0.5x1": 0.25,
+      "0.5x2": 0.49,
+      "0.5x3": 0.74,
+      "0.5x4": 0.99,
+      "0.5x5": 1.24,
+      "0.5x6": 1.48,
+      "0.5x7": 1.73,
+      "0.5x8": 0.99,
+      "0.5x8.5": 1.05,
+      "1x0.5": 0.25,
+      "1x1": 0.49,
+      "1x2": 0.99,
+      "1x3": 1.48,
+      "1x4": 0.99,
+      "1x5": 1.24,
+      "1x6": 1.48,
+      "1x7": 1.73,
+      "1x8": 1.98,
+      "1x8.5": 2.1,
+      "2x0.5": 0.49,
+      "2x1": 0.99,
+      "2x2": 0.99,
+      "2x3": 1.48,
+      "2x4": 1.98,
+      "2x5": 2.56,
+      "2x6": 3.07,
+      "2x7": 3.58,
+      "2x8": 2.3,
+      "2x8.5": 2.44,
+      "3x0.5": 0.74,
+      "3x1": 1.48,
+      "3x2": 1.48,
+      "3x3": 2.3,
+      "3x4": 3.07,
+      "3x5": 3.84,
+      "3x6": 2.59,
+      "3x7": 3.02,
+      "3x8": 3.45,
+      "3x8.5": 7.85,
+      "4x0.5": 0.99,
+      "4x1": 0.99,
+      "4x2": 1.98,
+      "4x3": 3.07,
+      "4x4": 2.3,
+      "4x5": 2.88,
+      "4x6": 3.45,
+      "4x7": 8.62,
+      "4x8": 9.86,
+      "4x8.5": 10.47,
+      "5x0.5": 1.24,
+      "5x1": 1.24,
+      "5x2": 2.56,
+      "5x3": 3.84,
+      "5x4": 2.88,
+      "5x5": 7.7,
+      "5x6": 9.24,
+      "5x7": 10.78,
+      "5x8": 8.56,
+      "5x8.5": 9.09,
+      "6x0.5": 1.48,
+      "6x1": 1.48,
+      "6x2": 3.07,
+      "6x3": 2.59,
+      "6x4": 3.45,
+      "6x5": 9.24,
+      "6x6": 7.7,
+      "6x7": 8.98,
+      "6x8": 10.27,
+      "6x8.5": 8.01,
+      "7x0.5": 1.73,
+      "7x1": 1.73,
+      "7x2": 3.58,
+      "7x3": 3.02,
+      "7x4": 8.62,
+      "7x5": 10.78,
+      "7x6": 8.98,
+      "7x7": 7.7,
+      "7x8": 8.8,
+      "7x8.5": 9.35,
+      "8x0.5": 0.99,
+      "8x1": 1.98,
+      "8x2": 2.3,
+      "8x3": 3.45,
+      "8x4": 9.86,
+      "8x5": 8.56,
+      "8x6": 10.27,
+      "8x7": 8.8,
+      "8x8": 7.7,
+      "8x8.5": 8.18,
+      "8.5x0.5": 1.05,
+      "8.5x1": 2.1,
+      "8.5x2": 2.44,
+      "8.5x3": 7.85,
+      "8.5x4": 10.47,
+      "8.5x5": 9.09,
+      "8.5x6": 8.01,
+      "8.5x7": 9.35,
+      "8.5x8": 8.18,
+      "8.5x8.5": 8.69
+    }
+  },
+  "editor": {
+    "mode": "free_layout",
+    "layers": [
+      "text",
+      "image",
+      "shape",
+      "rect",
+      "ellipse",
+      "line",
+      "path"
+    ],
+    "genie": true
+  },
+  "checks": {
+    "safe_area_in": 0.08,
+    "min_text_pt": 8,
+    "min_dpi": 150,
+    "sharp_dpi": 300,
+    "min_line_pt": 0.5,
+    "source": "docs/print-mcp-spec-v0.2.md section 4.3 (domed-sticker values)"
+  },
+  "previews": [
+    "flat",
+    "scene:laptop",
+    "scene:notebook",
+    "scene:bottle",
+    "scene:flask"
+  ],
+  "cut_border_in_options": [
+    0.06,
+    0.12,
+    0.2,
+    0.3
+  ],
+  "cart": {
+    "note": "BigCommerce options pick the variant (price); modifiers carry the design. These are the fields the Doogma builder fills today.",
+    "options": [
+      {
+        "id": 1944,
+        "name": "SH Range (0.5-8.5)",
+        "role": "height"
+      },
+      {
+        "id": 1945,
+        "name": "SW Range (0.5-8.5)",
+        "role": "width"
+      }
+    ],
+    "modifiers": [
+      {
+        "id": 1400,
+        "name": "Image",
+        "type": "text",
+        "required": false,
+        "role": "image"
+      },
+      {
+        "id": 1401,
+        "name": "Text",
+        "type": "text",
+        "required": false,
+        "role": "text_1"
+      },
+      {
+        "id": 1402,
+        "name": "Special Design Instructions",
+        "type": "text",
+        "required": false,
+        "role": "special_instructions"
+      },
+      {
+        "id": 1403,
+        "name": "Uploaded Logo Size",
+        "type": "text",
+        "required": false,
+        "role": "logo_size"
+      },
+      {
+        "id": 1404,
+        "name": "Image Placement",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1405,
+        "name": "Saved Design",
+        "type": "text",
+        "required": false,
+        "role": "saved_design"
+      },
+      {
+        "id": 1406,
+        "name": "Saved Design Link",
+        "type": "text",
+        "required": false,
+        "role": "saved_design_link"
+      },
+      {
+        "id": 1408,
+        "name": "Font1",
+        "type": "swatch",
+        "required": false,
+        "role": "font_1",
+        "values": [
+          {
+            "id": 1316,
+            "label": "Alegreya"
+          },
+          {
+            "id": 1317,
+            "label": "Anton"
+          },
+          {
+            "id": 1318,
+            "label": "Archivo Black"
+          },
+          {
+            "id": 1319,
+            "label": "Bebas Neue"
+          },
+          {
+            "id": 1320,
+            "label": "Homemade Apple"
+          },
+          {
+            "id": 1321,
+            "label": "Josefin Sans"
+          },
+          {
+            "id": 1322,
+            "label": "Lato"
+          },
+          {
+            "id": 1323,
+            "label": "Libre Baskerville"
+          },
+          {
+            "id": 1324,
+            "label": "Montserrat"
+          },
+          {
+            "id": 1325,
+            "label": "Oswald"
+          }
+        ]
+      },
+      {
+        "id": 1411,
+        "name": "Font1size",
+        "type": "text",
+        "required": false,
+        "role": "font_1_size"
+      },
+      {
+        "id": 1413,
+        "name": "Customcolor1",
+        "type": "text",
+        "required": false,
+        "role": "color_1"
+      },
+      {
+        "id": 1416,
+        "name": "Review",
+        "type": "checkbox",
+        "required": true,
+        "role": "proof_approval",
+        "values": [
+          {
+            "id": 1336,
+            "label": "Yes"
+          },
+          {
+            "id": 1337,
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": 1418,
+        "name": "Shape",
+        "type": "swatch",
+        "required": true,
+        "role": "shape",
+        "values": [
+          {
+            "id": 1350,
+            "label": "Rectangle"
+          },
+          {
+            "id": 1351,
+            "label": "Circle"
+          },
+          {
+            "id": 1638,
+            "label": "Stadium"
+          },
+          {
+            "id": 1352,
+            "label": "Custom Shape"
+          }
+        ]
+      },
+      {
+        "id": 1420,
+        "name": "Text Placement H",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1422,
+        "name": "Image Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1424,
+        "name": "Text Placement V",
+        "type": "text",
+        "required": false,
+        "role": "layout_data"
+      },
+      {
+        "id": 1426,
+        "name": "Saved Print Output",
+        "type": "text",
+        "required": true,
+        "role": "saved_print_output"
+      },
+      {
+        "id": 2076,
+        "name": "Rounded Corners",
+        "type": "swatch",
+        "required": true,
+        "role": "rounded_corners",
+        "values": [
+          {
+            "id": 1619,
+            "label": "Yes – Standard 0.12\" radius, unless otherwise noted in Special Instructions"
+          },
+          {
+            "id": 1618,
+            "label": "No – Straight edges"
+          }
+        ]
+      },
+      {
+        "id": 2194,
+        "name": "Sticker Height",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_height"
+      },
+      {
+        "id": 2195,
+        "name": "Sticker Width",
+        "type": "numbers_only_text",
+        "required": true,
+        "role": "sticker_width"
+      }
+    ],
+    "required_modifiers": [
+      "Review",
+      "Shape",
+      "Saved Print Output",
+      "Rounded Corners",
+      "Sticker Height",
+      "Sticker Width"
+    ]
+  },
+  "mcp": {
+    "product_id": "glow_in_the_dark_sticker_sheet",
+    "studio_supported": false
+  },
+  "assumptions": [
+    "Check thresholds are the domed-sticker values from the Print MCP spec; other sticker types may need their own.",
+    "sheet_in (9.25 x 10 in) is confirmed only for domed sheets (current studio + spec).",
+    "white_prints_clear on Metallic and white_ink on Clear follow the product names; confirm with production.",
+    "Vinyl lettering is cut from solid-color vinyl (one color, text and vector only), based on the product name 'Cut Vinyl Logos'; confirm with production."
+  ],
+  "todo": [
+    "Production file format per type (cut file for sheets and die cut, roll layout for labels, weeding file for vinyl lettering).",
+    "Roll labels: core size and unwind direction options, if production needs them."
+  ]
+}
