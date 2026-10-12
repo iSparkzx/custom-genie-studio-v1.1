@@ -465,6 +465,13 @@ select.sel{appearance:none}
 .fin[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
 #cbSum{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cut.imprint{stroke-dasharray:6 4}
+/* start card: close it with the X (or Esc) and design on the canvas */
+.start-card{position:relative}
+.start-card h2{padding-right:44px}
+.start-x{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:none;color:var(--ink-3);cursor:pointer}
+.start-x:hover{background:var(--sunk);color:var(--ink)}
+.start-x:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.start-x .ico{width:20px;height:20px}
 /* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
 .tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
 .tool.tool-lbl .tool-t{white-space:nowrap}
@@ -1547,6 +1554,7 @@ body.hide-notes .note{display:none}
 
       <div class="start" id="start" hidden>
        <div class="start-card" role="region" aria-labelledby="startH">
+        <button type="button" class="start-x" id="startClose" aria-label="Close" data-tip="Close (Esc)"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
         <h2 id="startH"><svg class="gmark" aria-hidden="true"><use href="#g-mark"/></svg>What should we make?</h2>
         <p id="startSub">Describe your sticker and Genie designs four options. Everything stays editable, layer by layer.</p>
         <div class="prompt">
@@ -3197,9 +3205,14 @@ $('#startText').addEventListener('keydown',ev=>{if(ev.key==='Enter'&&!ev.shiftKe
 let startLogo=null;
 $('#startAttach').addEventListener('click',()=>$('#startFile').click());
 $('#startFile').addEventListener('change',ev=>{const f=ev.target.files[0];ev.target.value='';loadFile(f,k=>{startLogo=k;const b=$('#startAttach');b.classList.add('has');$('span',b).textContent=IM[k].name})});
-$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast('Describe your sticker, or add your logo.');return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
-$$('#start [data-ex]').forEach(b=>b.addEventListener('click',()=>{const t=$('#startText');t.value=b.dataset.ex;t.dispatchEvent(new Event('input'));t.focus()}));
-$('#start').addEventListener('click',ev=>{const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
+$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast(`Describe your ${NOUN()}, or add your logo.`);return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
+/* example prompts are re-drawn per product (startCopyUI), so listen on the card, not on each button */
+function closeStart(){startDismissed=true;req();svg.focus({preventScroll:true});track('builder_start_close');
+ toast(NARROW.matches?'Genie is still here: tap Genie at the bottom.':'Genie is still here: Generate with Genie in the toolbar.')}
+$('#startClose').addEventListener('click',closeStart);
+$('#start').addEventListener('keydown',ev=>{if(ev.key==='Escape'){ev.preventDefault();ev.stopPropagation();closeStart()}});
+$('#start').addEventListener('click',ev=>{const x=ev.target.closest('[data-ex]');if(x){const t=$('#startText');t.value=x.dataset.ex;t.dispatchEvent(new Event('input'));t.focus();return}
+ const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
  if(k==='upload'){$('#gfile').dataset.mode='analyze';$('#gfile').click()}
  if(k==='templates'){openSheet('assets');setLTab('assets');toast('Pick a template on the left. Everything in it stays editable.')}
  if(k==='blank'){startDismissed=true;req();svg.focus();toast('Blank canvas. Press T for text, R for a rectangle, or open Assets.')}});

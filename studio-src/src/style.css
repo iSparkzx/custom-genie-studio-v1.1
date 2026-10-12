@@ -453,6 +453,13 @@ select.sel{appearance:none}
 .fin[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
 #cbSum{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cut.imprint{stroke-dasharray:6 4}
+/* start card: close it with the X (or Esc) and design on the canvas */
+.start-card{position:relative}
+.start-card h2{padding-right:44px}
+.start-x{position:absolute;top:12px;right:12px;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:none;color:var(--ink-3);cursor:pointer}
+.start-x:hover{background:var(--sunk);color:var(--ink)}
+.start-x:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.start-x .ico{width:20px;height:20px}
 /* start over: toolbar button with a label on wide screens, link under the layers, confirm dialog */
 .tool.tool-lbl{display:inline-flex;align-items:center;width:auto;gap:6px;padding:0 10px 0 8px;font-size:13px;font-weight:600}
 .tool.tool-lbl .tool-t{white-space:nowrap}

@@ -615,9 +615,14 @@ $('#startText').addEventListener('keydown',ev=>{if(ev.key==='Enter'&&!ev.shiftKe
 let startLogo=null;
 $('#startAttach').addEventListener('click',()=>$('#startFile').click());
 $('#startFile').addEventListener('change',ev=>{const f=ev.target.files[0];ev.target.value='';loadFile(f,k=>{startLogo=k;const b=$('#startAttach');b.classList.add('has');$('span',b).textContent=IM[k].name})});
-$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast('Describe your sticker, or add your logo.');return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
-$$('#start [data-ex]').forEach(b=>b.addEventListener('click',()=>{const t=$('#startText');t.value=b.dataset.ex;t.dispatchEvent(new Event('input'));t.focus()}));
-$('#start').addEventListener('click',ev=>{const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
+$('#startGo').addEventListener('click',()=>{const p=$('#startText').value.trim();if(!p&&!startLogo){$('#startText').focus();toast(`Describe your ${NOUN()}, or add your logo.`);return}const k=startLogo;startLogo=null;const b=$('#startAttach');b.classList.remove('has');$('span',b).textContent='Add your logo';$('#startText').value='';genieSubmit(p,k)});
+/* example prompts are re-drawn per product (startCopyUI), so listen on the card, not on each button */
+function closeStart(){startDismissed=true;req();svg.focus({preventScroll:true});track('builder_start_close');
+ toast(NARROW.matches?'Genie is still here: tap Genie at the bottom.':'Genie is still here: Generate with Genie in the toolbar.')}
+$('#startClose').addEventListener('click',closeStart);
+$('#start').addEventListener('keydown',ev=>{if(ev.key==='Escape'){ev.preventDefault();ev.stopPropagation();closeStart()}});
+$('#start').addEventListener('click',ev=>{const x=ev.target.closest('[data-ex]');if(x){const t=$('#startText');t.value=x.dataset.ex;t.dispatchEvent(new Event('input'));t.focus();return}
+ const b=ev.target.closest('[data-start]');if(!b)return;const k=b.dataset.start;
  if(k==='upload'){$('#gfile').dataset.mode='analyze';$('#gfile').click()}
  if(k==='templates'){openSheet('assets');setLTab('assets');toast('Pick a template on the left. Everything in it stays editable.')}
  if(k==='blank'){startDismissed=true;req();svg.focus();toast('Blank canvas. Press T for text, R for a rectangle, or open Assets.')}});

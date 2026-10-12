@@ -87,6 +87,21 @@ if (!mobile) {
   await ev(`document.querySelector('#undoBtn').focus()`); const h0 = await ev(`document.querySelectorAll('#elsG > g').length`); await key("Enter", "Enter", 13);
   ok((await ev(`document.querySelectorAll('#elsG > g').length`)) !== h0, "keyboard: Enter on Undo undoes (it used to start text editing)");
 }
+/* the start card: X in the top-right corner (and Esc) closes it; example prompts fill the box on every product */
+for (const [pid, word] of [["domed_white_vinyl_sticker_sheet", "sticker"], ["derby_ballpoint_pen", "Pens"]]) {
+  await ev(`localStorage.clear()`); await send("Page.navigate", { url: base + "index.html?product=" + pid }); await sleep(2600);
+  const g = await ev(`(()=>{const c=document.querySelector('.start-card').getBoundingClientRect(),x=document.querySelector('#startClose').getBoundingClientRect();return {open:!document.querySelector('#start').hidden,dr:Math.round(c.right-x.right),dt:Math.round(x.top-c.top),w:Math.round(x.width),h:Math.round(x.height),name:document.querySelector('#startClose').getAttribute('aria-label')}})()`);
+  ok(g.open && g.dr >= 0 && g.dr <= 24 && g.dt >= 0 && g.dt <= 24 && g.w >= 24 && g.h >= 24 && g.name === "Close", `${pid}: X in the top-right corner, ${g.w}x${g.h} px (${JSON.stringify(g)})`);
+  await press('#startEx [data-ex]', 400);
+  const v = await ev(`document.querySelector('#startText').value`); ok(v.includes(word), `${pid}: example prompt fills the box ("${v.slice(0, 50)}")`);
+  await press('#startClose', 500);
+  const c = await ev(`({open:!document.querySelector('#start').hidden,focus:document.activeElement?.id,toast:document.querySelector('#toastTxt').textContent})`);
+  ok(!c.open && c.focus === "cv" && /Genie is still here/.test(c.toast), `${pid}: X closes the card ${JSON.stringify(c)}`);
+  ok(mobile ? /bottom/.test(c.toast) : /toolbar/.test(c.toast), `${pid}: the toast says where Genie is on this screen`);
+  await send("Page.reload"); await sleep(2600);
+  if (!mobile) { await press('#startText', 200); await send("Input.insertText", { text: "a logo" }); await key("Escape", "Escape", 27);
+    ok((await ev(`document.querySelector('#start').hidden`)) === true, `${pid}: Esc closes the card while typing`) }
+}
 /* Genie Studio Basic (name badges): the same Start over */
 {
   await send("Page.navigate", { url: base + "badges.html?product=regal_large_name_badge" }); await sleep(2200);
