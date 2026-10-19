@@ -1,5 +1,5 @@
-// One website: every page type has the same header and footer as Genie Studio Advanced, every link in them works,
-// and search, theme and the cart carry across pages.
+// One website: every page type (homepage, collections, product pages, both studios) has the same header and footer as
+// Genie Studio Advanced, every link in them works, and search, filters, theme and the cart carry across pages.
 // Usage: node server.mjs (in another terminal), then: node tests/site-check.mjs [baseUrl] [width] [height]
 //   Screenshots go to .cache/test-shots/site/ (gitignored). Exit code 1 on any failure.
 import { spawn } from "node:child_process"; import { mkdtempSync, writeFileSync, mkdirSync } from "node:fs"; import { tmpdir } from "node:os"; import { join, dirname } from "node:path"; import { fileURLToPath } from "node:url";
@@ -22,15 +22,16 @@ await send("Runtime.enable"); await send("Page.enable");
 await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile }); if (mobile) await send("Emulation.setTouchEmulationEnabled", { enabled: true });
 
 /* the header and footer, with only the per-page parts taken out: path prefix, current section, live labels */
-const CHROME = `const norm=s=>s.replace(/(href|src|data-src)="\\.\\.\\//g,'$1="').replace(/ aria-current="page"/g,'').replace(/class="nav-dd on"/g,'class="nav-dd"')
+const CHROME = `const norm=s=>s.replace(/(href|src|data-src)="\\.\\.\\//g,'$1="').replace(/href="\\.\\/"/g,'href=""').replace(/ aria-current="page"/g,'').replace(/class="nav-dd on"/g,'class="nav-dd"')
   .replace(/ (aria-label|title|aria-expanded|aria-haspopup|aria-controls)="[^"]*"/g,'').replace(/<span class="cart-count" id="cartCount">[^<]*<\\/span>/,'').replace(/ value="[^"]*"/g,'').replace(/ src="[^"]*" data-src/g,' data-src').replace(/\\s+/g,' ');
  const h=document.querySelector('.promo'),hd=document.querySelector('body > header, header.site'),f=document.querySelector('footer.foot, footer');
  const r=e=>e?Math.round(e.getBoundingClientRect().height):0,logo=document.querySelector('header .logo img');
  return {head:norm((h?h.outerHTML:'')+(hd?hd.outerHTML:'')),foot:norm(f?f.outerHTML:''),hh:r(h)+r(hd),logo:!!logo&&logo.complete&&logo.naturalWidth>0,
   cur:[...document.querySelectorAll('header .nav [aria-current="page"], header .nav .nav-dd.on')].map(a=>a.textContent.trim()),over:document.documentElement.scrollWidth-innerWidth,
   links:[...document.querySelectorAll('.promo a[href], header a[href], footer a[href]')].map(a=>({href:a.href,proto:a.hasAttribute('data-proto')}))}`;
-const PAGES = [["index.html", "Advanced, stickers", "Stickers"], ["index.html?product=derby_ballpoint_pen", "Advanced, pen", "Pens"], ["index.html?product=regal_large_name_badge", "Advanced, badge", "Name Badges"],
-  ["badges.html", "Basic badge studio", "Name Badges"], ["p/index.html", "All products", "All Products"], ["p/derby-ballpoint-pen.html", "Pen product page", "Pens"],
+const PAGES = [["index.html", "Advanced, stickers", "Stickers"], ["index.html?product=derby_ballpoint_pen", "Advanced, pen", "Pens & Notebooks"], ["index.html?product=regal_large_name_badge", "Advanced, badge", "Name Badges"],
+  ["badges.html", "Basic badge studio", "Name Badges"], ["", "Homepage", null], ["p/index.html", "All products", "All Products"], ["p/stickers.html", "Stickers collection", "Stickers"],
+  ["p/name-badges.html", "Name badges collection", "Name Badges"], ["p/pens.html", "Pens collection", "Pens & Notebooks"], ["p/derby-ballpoint-pen.html", "Pen product page", "Pens & Notebooks"],
   ["p/regal-large-name-badge.html", "Badge product page", "Name Badges"], ["p/domed-white-vinyl-sticker-sheet.html", "Sticker product page", "Stickers"]];
 let ref = null; const links = new Map();
 for (const [u, name, cur] of PAGES) {
@@ -40,10 +41,10 @@ for (const [u, name, cur] of PAGES) {
   ok(c.foot && c.foot === ref.foot, `${name}: footer differs from Genie Studio Advanced`);
   ok(Math.abs(c.hh - ref.hh) <= 1, `${name}: header height ${c.hh} vs ${ref.hh}`);
   ok(c.logo, `${name}: logo didn't load`);
-  ok(c.cur.length === 1 && c.cur[0].toLowerCase() === cur.toLowerCase(), `${name}: current section ${JSON.stringify(c.cur)}, expected ${cur}`);
+  ok(cur ? c.cur.length === 1 && c.cur[0].toLowerCase() === cur.toLowerCase() : c.cur.length === 0, `${name}: current section ${JSON.stringify(c.cur)}, expected ${cur || "none"}`);
   ok(c.over <= 0, `${name}: sideways scroll ${c.over}px`);
   for (const l of c.links) if (!l.proto) links.set(l.href.split("#")[0], name);
-  await shot(u.replace(/[^a-z0-9]+/gi, "_"));
+  await shot(u.replace(/[^a-z0-9]+/gi, "_") || "home");
   if (c.head !== ref.head && process.env.DIFF) { let i = 0; while (c.head[i] === ref.head[i]) i++; console.log("  differs at", i, "\n  ref:", ref.head.slice(i - 80, i + 120), "\n  got:", c.head.slice(i - 80, i + 120)) }
 }
 /* every real link in the header and footer opens a page */
@@ -55,13 +56,29 @@ for (const [href, from] of links) {
 await go("p/derby-ballpoint-pen.html");
 if (mobile) await ev(`document.querySelector('#q').scrollIntoView({block:'center'})`);
 await ev(`const q=document.querySelector('#q');q.value='gold';document.querySelector('#searchForm').requestSubmit()`); await sleep(1800);
-const sr = await ev(`return {url:location.pathname+location.search,res:document.querySelector('#qRes')?.innerText,cards:[...document.querySelectorAll('.fam li')].filter(li=>!li.hidden).map(li=>li.innerText.toLowerCase()),q:document.querySelector('#q').value,heads:[...document.querySelectorAll('.fam')].filter(s=>!s.hidden).map(s=>[+s.querySelector('h2 .muted').textContent.replace(/\\D/g,''),[...s.querySelectorAll('li')].filter(li=>!li.hidden).length])}`);
+const sr = await ev(`return {url:location.pathname+location.search,res:document.querySelector('#qRes')?.innerText,cards:[...document.querySelectorAll('#grid li.pc')].filter(li=>!li.hidden).map(li=>li.innerText.toLowerCase()),q:document.querySelector('#q').value,count:+document.querySelector('#count b').textContent}`);
 ok(sr.url === "/p/index.html?q=gold", `search went to ${sr.url}`);
 ok(sr.cards.length > 0 && sr.cards.every(c => c.includes("gold")), `search results: ${sr.cards.length} cards, not all gold`);
 ok(sr.res && sr.res.startsWith(sr.cards.length + " product"), `search count line: ${sr.res}`);
 ok(sr.q === "gold", "search box keeps the search term");
-ok(sr.heads.every(([k, n]) => k === n), `section counts don't match the results: ${JSON.stringify(sr.heads)}`);
+ok(sr.count === sr.cards.length, `result count ${sr.count} doesn't match the ${sr.cards.length} cards shown`);
 await shot("search");
+/* collection filters and sort: a type narrows the grid, the count, chips and URL agree, Clear all brings everything back */
+await go("p/name-badges.html");
+const fl = await ev(`const all=document.querySelectorAll('#grid li.pc').length,vis=()=>[...document.querySelectorAll('#grid li.pc')].filter(li=>!li.hidden);
+  document.querySelector('#filters input[name=type][value=engraved]').click();await w(200);const a=vis().map(li=>li.dataset.type);
+  document.querySelector('#sort').value='price-desc';document.querySelector('#sort').dispatchEvent(new Event('change',{bubbles:true}));await w(200);const prices=vis().map(li=>+li.dataset.cost);
+  const url=location.search,count=+document.querySelector('#count b').textContent,chips=document.querySelectorAll('#chips .chip').length;
+  document.querySelector('#filters [data-clear-all]').click();await w(200);
+  return {all,a,prices,url,count,chips,after:vis().length,pressed:document.querySelector('.subcat[data-type=engraved]').getAttribute('aria-pressed')}`);
+ok(fl.a.length === 2 && fl.a.every(t => t === "engraved") && fl.count === 2 && fl.chips === 1, `badge filter Engraved: ${JSON.stringify(fl.a)}, count ${fl.count}, chips ${fl.chips}`);
+ok(fl.prices.every((p, i) => i === 0 || fl.prices[i - 1] >= p), `price high to low: ${fl.prices}`);
+ok(fl.url === "?type=engraved&sort=price-desc", `filters in the URL: ${fl.url}`);
+ok(fl.after === fl.all && fl.all === 14, `Clear all shows ${fl.after} of ${fl.all} badges`);
+await go("p/stickers.html?type=domed");
+const fu = await ev(`return {n:[...document.querySelectorAll('#grid li.pc')].filter(li=>!li.hidden).length,pressed:document.querySelector('.subcat[data-type=domed]').getAttribute('aria-pressed'),checked:document.querySelector('#filters input[name=type][value=domed]').checked}`);
+ok(fu.n === 4 && fu.pressed === "true" && fu.checked, `stickers.html?type=domed opens on the 4 domed sheets (${JSON.stringify(fu)})`);
+await shot("filters");
 /* theme: chosen on one page, kept on the next */
 const th0 = await ev(`document.querySelector('#themeBtn').click();await w(200);return document.documentElement.dataset.theme`);
 await go("badges.html"); const th1 = await ev(`return document.documentElement.dataset.theme`);

@@ -1,5 +1,5 @@
 // tests/pdp-check.mjs : every prototype product page against its definition, and every live "Start designing" button
-// opened to confirm the studio loads that exact product and links back to the page.
+// opened to confirm the studio loads that exact product and links back to the page; the collections and the homepage.
 // Usage: node server.mjs (in another terminal), then: node tests/pdp-check.mjs [baseUrl]
 import { spawn } from "node:child_process"; import { mkdtempSync, readFileSync } from "node:fs"; import { tmpdir } from "node:os"; import { join, dirname } from "node:path"; import { fileURLToPath } from "node:url";
 const repo = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -45,6 +45,22 @@ for (const d of defs) {
 }
 await go(base + "p/index.html", 800);
 const cards = await ev(`document.querySelectorAll('.card').length`); ok(cards === defs.length, `index lists ${cards} of ${defs.length} products`);
+/* one collection per family: exactly that family's products, each card linking to its product page with its lowest price */
+for (const [fam, page] of [["sticker", "stickers"], ["badge", "name-badges"], ["pen", "pens"]]) {
+  await go(base + "p/" + page + ".html", 800);
+  const c = await ev(`[...document.querySelectorAll('#grid li.pc')].map(li=>({fam:li.dataset.fam,href:li.querySelector('a.card').getAttribute('href'),price:li.querySelector('.card-p b')?.textContent||null,hidden:li.hidden}))`);
+  const want = defs.filter(d => d.family === fam);
+  ok(c && c.length === want.length && c.every(x => x.fam === fam && !x.hidden), `${page}.html lists ${c && c.length} of ${want.length} ${fam} products`);
+  for (const d of want) {
+    const x = c && c.find(y => y.href === slug(d) + ".html"), buy = d.pricing.variants.filter(v => !v.purchasing_disabled);
+    ok(x && x.price === (buy.length ? "$" + Math.min(...buy.map(v => v.price)).toFixed(2) : null), `${page}.html: ${d.id} card price ${x && x.price}`);
+  }
+}
+/* homepage: every product and collection link opens a page */
+await go(base, 1200);
+const hl = await ev(`[...new Set([...document.querySelectorAll('main a[href]')].map(a=>a.href))]`);
+for (const h of hl || []) { const r = await fetch(h); ok(r.status === 200, `homepage link ${h} returned ${r.status}`) }
+ok(hl && hl.length > 15, `homepage has ${hl && hl.length} links`);
 ok(errors.length === 0, `script errors: ${errors.slice(0, 3).join(" | ")}`);
-console.log(`${defs.length} product pages, ${checks} checks, ${fail.length} failed`); fail.forEach(f => console.log("  FAIL " + f));
+console.log(`${defs.length} product pages, 4 collections, homepage, ${checks} checks, ${fail.length} failed`); fail.forEach(f => console.log("  FAIL " + f));
 ws.close(); proc.kill(); process.exit(fail.length ? 1 : 0);

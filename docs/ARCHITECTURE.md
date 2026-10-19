@@ -104,6 +104,7 @@ tests/                 browser tests (tests/price-check.mjs: studio prices vs Bi
 | 6 | Product pages (`/p/<product>.html`) with Start designing: Genie Studio Advanced and Genie Studio Basic | PR #7 |
 | 7 | Genie Studio Advanced designs every product: 30 stickers, 14 name badges, 13 pens, pencils and notebooks, with all their BigCommerce variants | PR #8 |
 | 8 | One website: the Genie Studio Advanced header, footer and cart on every page (studio-src/site/), working nav, search and mega menu; pens and notebooks edited up close with an overview | PR #9 |
+| 8b | Storefront redesign: homepage, a collection per family with filters and sort, new product pages, refreshed header, footer and Genie Studio Basic (Genie Studio Advanced unchanged) | |
 | 9 | Genie Studio Basic for stickers | |
 | 10 | Genie Studio Basic for pens | needs imprint sizes |
 
@@ -115,11 +116,13 @@ Every page uses the same header, footer and cart, from `studio-src/site/` throug
 |---|---|---|
 | Genie Studio Advanced, `/index.html?product=<id>` | `build.py` | the product's family (set before first paint) |
 | Genie Studio Basic, `/badges.html` | `build_badges.py` | Name Badges |
-| Product pages `/p/<slug>.html`, All products `/p/index.html` | `build_pdp.py` | the product's family / All Products |
+| Homepage `/` (`/home.html`) | `build_shop.py` | none |
+| All products `/p/index.html`, collections `/p/stickers.html`, `/p/name-badges.html`, `/p/pens.html` | `build_shop.py` | All Products / the family |
+| Product pages `/p/<slug>.html` | `build_shop.py` | the product's family |
 
-* **Header and footer CSS** are taken from `style.css` at build time (one source), so the header can't drift between pages.
+* **Header and footer CSS** live in `studio-src/site/site.css` (one source), so the header can't drift between pages.
 * **The cart** is one list in the browser (`localStorage cg-cart-v1`), with the BigCommerce cart line for each item. Every page shows the same count and mini cart. Checkout is BigCommerce's in production.
-* **Search** opens All products filtered by the words typed.
+* **Search** opens All products filtered by the words typed. Collections filter by type, decoration, price per piece, studio and availability, and sort by price or name; the choices are kept in the URL.
 * **Mega menu** shape and finish buttons set the design on the studio page and open the studio (`?shape=`) everywhere else.
 * **Links to pages the prototype doesn't have** (Genie's Picks, About Us, Contact, Account, Track Order) say so instead of going nowhere.
 

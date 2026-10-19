@@ -119,7 +119,8 @@ for (const [pid, word] of [["domed_white_vinyl_sticker_sheet", "sticker"], ["der
   await send("Page.navigate", { url: base + "badges.html?product=regal_large_name_badge" }); await sleep(2200);
   const B = () => ev(`(()=>({name:document.querySelector('#tName').value,bg:document.querySelector('#bgs input:checked')?.value||document.querySelector('#bgs [aria-checked="true"]')?.textContent,btn:document.querySelector('#startOver').disabled,dlg:document.querySelector('#resetDlg').open,toast:document.querySelector('#toastTxt').textContent,list:[...document.querySelectorAll('#resetList li')].map(l=>l.textContent)}))()`);
   const b0 = await B(); ok(b0.btn === true, `Basic: Start over off on a fresh badge (${JSON.stringify(b0)})`);
-  await press('#tName', 200); await send("Input.dispatchKeyEvent", { type: "keyDown", key: "a", code: "KeyA", windowsVirtualKeyCode: 65, modifiers: 2 }); await send("Input.dispatchKeyEvent", { type: "keyUp", key: "a", code: "KeyA", windowsVirtualKeyCode: 65, modifiers: 2 });
+  const selAll = process.platform === "darwin" ? 4 : 2;   // select all: Cmd+A on a Mac, Ctrl+A elsewhere
+  await press('#tName', 200); await send("Input.dispatchKeyEvent", { type: "keyDown", key: "a", code: "KeyA", windowsVirtualKeyCode: 65, modifiers: selAll, commands: selAll === 4 ? ["selectAll"] : [] }); await send("Input.dispatchKeyEvent", { type: "keyUp", key: "a", code: "KeyA", windowsVirtualKeyCode: 65, modifiers: selAll });
   await send("Input.insertText", { text: "Jordan Lee" }); await sleep(500);
   const sw = await ev(`(()=>{const l=[...document.querySelectorAll('#bgs label, #bgs button')];const x=l.find(e=>!(e.querySelector('input')||e).matches(':checked,[aria-checked="true"]'));if(!x)return null;x.id=x.id||'swPick';return '#'+x.id})()`);
   if (sw) await press(sw, 500);

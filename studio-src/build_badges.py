@@ -77,7 +77,7 @@ html = f'''<!doctype html>
 {tokens}
 {sitechrome.css(rd(os.path.join(S, 'style.css')))}
 {sitechrome.strip(rd(os.path.join(BD, 'badge.css')))}
-body{{font-family:"Poppins","Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif}}
+:root{{--wrap-max:1440px}}
 </style>
 </head>
 <body>

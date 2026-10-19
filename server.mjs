@@ -499,7 +499,8 @@ async function api(req, res, url, c) {
 
 function serveStatic(req, res, url) {
   let p = decodeURIComponent(url.pathname);
-  if (p === '/' || p === '/studio.html') p = '/index.html';
+  if (p === '/') p = '/home.html';                       // the storefront homepage; Genie Studio Advanced is /index.html
+  else if (p === '/studio.html') p = '/index.html';
   const f = path.normalize(path.join(PUBLIC, p));
   if (!f.startsWith(PUBLIC)) return send(res, 403, 'Forbidden', 'text/plain');
   fs.readFile(f, (err, buf) => {
