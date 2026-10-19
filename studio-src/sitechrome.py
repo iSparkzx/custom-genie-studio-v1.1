@@ -1,8 +1,9 @@
-"""Shared site chrome: the Genie Studio Advanced header and footer on every page of the prototype.
+"""Shared site chrome: one header and footer on every page of the prototype (homepage, collections, product pages and both studios).
 
-Used by build.py (Genie Studio Advanced), build_badges.py (Genie Studio Basic) and build_pdp.py (product pages):
-  sitechrome.chrome(root, active)  -> header and footer HTML for a page ('' at the site root, '../' under p/)
-  sitechrome.css(style_css)        -> the header and footer rules, taken from the studio's style.css (one source of truth)
+Used by build.py (Genie Studio Advanced), build_badges.py (Genie Studio Basic) and build_shop.py (homepage, collections, product pages):
+  sitechrome.chrome(root, active)  -> header and footer HTML for a page ('' at the site root, '../' under p/); the logo links home
+  sitechrome.css(style_css)        -> the base rules the chrome needs from the studio's style.css (.wrap, .ico, .skip, swatches)
+                                      plus studio-src/site/site.css, where every header, nav, mega menu and footer rule lives
   sitechrome.strip(css)            -> a page stylesheet without its own header/footer rules
   sitechrome.js()                  -> studio-src/site/site.js (theme, mega menu, search, one cart for the whole site)
   sitechrome.write_assets(public)  -> logo and menu pictures as files in public/assets/ (cached once for every page)
@@ -68,7 +69,7 @@ def _mega_stickers(root):
         if r['family'] == 'sticker' and r['status'] == 'live': d = json.loads(rd(os.path.join(P, r['file']))); defs[d['id']] = d
     pick = ['domed_white_vinyl_sticker_sheet', 'domed_silver_vinyl_sticker_sheet', 'domed_gold_vinyl_sticker_sheet', 'domed_color_vinyl_sticker_sheet', 'glossy_white_vinyl_sticker_sheet', 'die_cut_sticker']
     li = ''.join(f'<li><a href="{root}p/{_slug(defs[k])}.html">{defs[k]["name"].replace(" Sticker Sheet", "")}<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></a></li>' for k in pick if k in defs)
-    return li + f'<li><a href="{root}p/index.html#stickers">All stickers ({len(defs)})<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></a></li>'
+    return li + f'<li><a href="{root}p/stickers.html">All stickers ({len(defs)})<svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></a></li>'
 def _mega_art():
     return rd(os.path.join(A, 'mega_art.svg')).strip()
 def chrome(root, active):
@@ -78,11 +79,12 @@ def chrome(root, active):
     h = (h.replace('{{ON_ALL}}', cur if active == 'all' else '').replace('{{ON_BADGE}}', cur if active == 'badge' else '').replace('{{ON_PEN}}', cur if active == 'pen' else '')
           .replace('{{ON_STICKER_CLS}}', ' on' if active == 'sticker' else '').replace('{{MEGA_STICKERS}}', _mega_stickers(root)).replace('{{MEGA_ART}}', _mega_art()))
     f = rd(os.path.join(SITE, 'footer.html'))
-    h, f = h.replace('{{ROOT}}', root), f.replace('{{ROOT}}', root)
+    home = root or './'   # the homepage is the site root (server.mjs serves home.html there)
+    h, f = (x.replace('{{HOME}}', home).replace('{{ROOT}}', root) for x in (h, f))
     left = re.findall(r'\{\{[A-Z_]+\}\}', h + f)
     if left: raise SystemExit('site chrome placeholders left: %s' % left)
     return h, f
 def js():
     return rd(os.path.join(SITE, 'site.js'))
 THEME_INIT = "<script>try{const t=localStorage.getItem('cg-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>"
-ICONS = ['i-moon', 'i-sun', 'i-search', 'i-user', 'i-cart', 'i-caret', 'i-right', 'i-x']
+ICONS = ['i-moon', 'i-sun', 'i-search', 'i-user', 'i-cart', 'i-caret', 'i-right', 'i-x', 'i-truck']

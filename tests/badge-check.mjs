@@ -104,8 +104,8 @@ const engr = await ev(`({filter:!!document.querySelector('#badgeView svg image[f
 ok(engr.filter && engr.colorsHidden && engr.fill === "#C9A878", `engraved plate Black-Tan: logo and text in one engraving color (${engr.fill}), color pickers hidden`);
 // 7. phone: the preview stays in view while scrolling the options
 if (mobile) { await product("regal_large_name_badge"); await ev(`scrollTo(0,1400)`); await sleep(400);
-  const st = await ev(`(()=>{const r=document.querySelector('.stage').getBoundingClientRect();return{top:Math.round(r.top),bottom:Math.round(r.bottom),h:innerHeight}})()`);
-  ok(st.top <= 1 && st.bottom > 120 && st.bottom < st.h * .6, `phone: preview pinned at the top while scrolling (top ${st.top}, bottom ${st.bottom} of ${st.h})`); await shot("mobile_scrolled") }
+  const st = await ev(`(()=>{const r=document.querySelector('.stage').getBoundingClientRect();return{top:Math.round(r.top),bottom:Math.round(r.bottom),h:innerHeight,promo:Math.round(document.querySelector('.promo').getBoundingClientRect().bottom)}})()`);
+  ok(Math.abs(st.top - st.promo) <= 1 && st.bottom > 120 && st.bottom < st.h * .6, `phone: preview pinned right under the promo bar while scrolling (top ${st.top}, promo bar ends ${st.promo}, bottom ${st.bottom} of ${st.h})`); await shot("mobile_scrolled") }
 const overflow = await ev(`document.documentElement.scrollWidth-innerWidth`); ok(overflow <= 0, `no horizontal overflow (${overflow}px)`);
 ok(errors.length === 0, `no script errors (${errors.length}${errors.length ? ": " + errors.slice(0, 3).join(" | ") : ""})`);
 console.log(`PASS ${pass.length}`); pass.forEach(x => console.log("  ok   " + x)); console.log(`FAIL ${fail.length}`); fail.forEach(x => console.log("  FAIL " + x));

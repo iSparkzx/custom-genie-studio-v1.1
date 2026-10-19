@@ -8,9 +8,11 @@ World Emblem's Custom Genie sticker customizer:
 * **Print MCP spec v0.2**: `docs/print-mcp-spec-v0.2.md`, also viewable at `/spec.html`.
 
 ```
-public/index.html      the sticker studio page (one self-contained file, built from studio-src/)
+public/home.html       the storefront homepage, served at / (built from studio-src/shop/ + products/)
+public/index.html      Genie Studio Advanced, the full studio (one self-contained file, built from studio-src/)
 public/badges.html     Genie Studio Basic for name badges (built from studio-src/badge/ + products/)
-public/p/              prototype product pages, one per product, with the Start designing buttons (built from products/)
+public/p/              the storefront: All products (index.html), one collection per family (stickers.html,
+                       name-badges.html, pens.html) with filters and sort, and one product page per product
 public/spec.html       the Print MCP spec, readable in a browser
 server.mjs             small Node server: serves the page and holds the AI key (no npm install needed)
 render.yaml            one-click deploy settings for Render
@@ -48,7 +50,7 @@ GitHub stores the code. **Render** runs it and gives you the live link. GitHub P
 
 1. Install Node.js 18 or newer (https://nodejs.org).
 2. Copy `.env.example` to `.env` and paste your key after `OPENROUTER_API_KEY=`.
-3. Double-click `start-server.bat` (or run `node server.mjs`) and open http://localhost:8765/.
+3. Double-click `start-server.bat` (or run `node server.mjs`) and open http://localhost:8765/ (the homepage; the studio is http://localhost:8765/index.html).
 
 ## Settings
 
@@ -81,19 +83,25 @@ The page is built from the files in `studio-src/src/`:
 * `js5_3d.js`: 3D preview
 * `js6_banana.js`: Nano Banana Pro client
 
-The site header, footer and cart are shared by every page (Genie Studio Advanced, Genie Studio Basic and the product pages), so they're edited once in `studio-src/site/`:
+The site header, footer and cart are shared by every page (homepage, collections, product pages and both studios), so they're edited once in `studio-src/site/`:
 
-* `header.html`, `footer.html`: the Genie Studio Advanced header and footer, with `{{ROOT}}` for the path to the site root
+* `header.html`, `footer.html`: the header and footer, with `{{ROOT}}` for the path to the site root and `{{HOME}}` for the homepage
 * `site.js`: theme, mega menu, search (opens All products, filtered) and one cart for the whole site, kept in the browser
-* `site.css`: the mini cart; the rest of the header and footer styles come from `style.css`
-* `../sitechrome.py`: what the three builds call to add all of the above, plus the logo and menu pictures as files in `public/assets/`
+* `site.css`: every header, nav, mega menu, footer and mini cart style (brand tokens come from `style.css`)
+* `../sitechrome.py`: what the builds call to add all of the above, plus the logo and menu pictures as files in `public/assets/`
+
+The storefront (homepage, collections and product pages) is built by `studio-src/build_shop.py` from the product definitions:
+
+* `shop/shop.css`: the storefront design system. Poppins for headings, prices and buttons, Work Sans for reading text; the brand gradient is the one primary action per view
+* `shop/shop.js`: collection filters, sort and search kept in the URL (`p/stickers.html?type=domed&sort=price-asc`), the product gallery, and the buy bar on phones
+* Every claim on these pages is one the site already makes (promo bar, studio trust badges, product descriptions) or is computed from the definitions (prices, discounts, product counts)
 
 After editing, rebuild the page (Python 3):
 
 ```
 python studio-src/build.py public/index.html
 python studio-src/build_badges.py public/badges.html
-python studio-src/build_pdp.py public/p
+python studio-src/build_shop.py public
 ```
 
 Check both pages (with `node server.mjs` running):
@@ -104,8 +112,8 @@ node tests/advanced-check.mjs       # Genie Studio Advanced opens and works for 
 node tests/advanced-check.mjs http://127.0.0.1:8766/ 390 844
 node tests/badge-check.mjs
 node tests/badge-check.mjs http://127.0.0.1:8766/badges.html?debug 390 844
-node tests/pdp-check.mjs
-node tests/site-check.mjs           # one website: same header and footer everywhere, links, search, theme, one cart
+node tests/pdp-check.mjs            # every product page, its Start designing buttons, the collections and the homepage
+node tests/site-check.mjs           # one website: same header and footer everywhere, links, search, filters, theme, one cart
 node tests/site-check.mjs http://127.0.0.1:8766/ 390 844
 node tests/edit-check.mjs           # real mouse and keyboard: edit a pen, pencil, notebook, badge and sticker
 node tests/edit-check.mjs http://127.0.0.1:8766/ 390 844

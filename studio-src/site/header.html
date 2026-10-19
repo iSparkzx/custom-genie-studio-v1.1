@@ -1,5 +1,5 @@
   <div class="promo"><div class="wrap promo-row">
-    <p class="promo-msg"><span aria-hidden="true">🎉</span> Free shipping on orders over $75</p>
+    <p class="promo-msg"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg><span><b>Free shipping</b> on orders over $75</span></p>
     <div class="promo-end">
      <nav class="util" aria-label="Help links"><a href="#" data-proto="Contact Us page isn't connected.">Contact Us</a><a href="#" data-proto="Order tracking isn't connected.">Track Order</a><a href="#" data-proto="Help Center isn't connected.">Help Center</a></nav>
      <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="ico when-light" aria-hidden="true"><use href="#i-moon"/></svg><svg class="ico when-dark" aria-hidden="true"><use href="#i-sun"/></svg><span class="tb-l when-light" aria-hidden="true">Dark mode</span><span class="tb-l when-dark" aria-hidden="true">Light mode</span></button>
@@ -8,15 +8,16 @@
 <header>
   <div class="hdr">
     <div class="wrap hdr-row">
-      <a class="logo" href="{{ROOT}}p/index.html"><img src="{{ROOT}}assets/logo.png" alt="Custom Genie: all products" width="154" height="66"></a>
+      <a class="logo" href="{{HOME}}"><img src="{{ROOT}}assets/logo.png" alt="Custom Genie home" width="154" height="66"></a>
       <form class="search" role="search" id="searchForm">
-        <label class="sr-only" for="q">Search</label>
-        <input id="q" type="search" placeholder="Search for anything…" autocomplete="off">
-        <button type="submit" aria-label="Search"><svg class="ico"><use href="#i-search"/></svg></button>
+        <label class="sr-only" for="q">Search products</label>
+        <svg class="ico search-i" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="q" type="search" placeholder="Search stickers, name badges, pens…" autocomplete="off" enterkeyhint="search">
+        <button type="submit" aria-label="Search"><svg class="ico"><use href="#i-right"/></svg></button>
       </form>
       <div class="hdr-actions">
         <a class="hdr-link" href="#" aria-label="Account" data-proto="Account sign-in isn't in this prototype yet."><svg class="ico"><use href="#i-user"/></svg><span class="t">Account</span></a>
-        <button class="cart-btn" type="button" id="cartBtn" aria-label="Cart, 0 items"><svg class="ico"><use href="#i-cart"/></svg><span class="cart-count" id="cartCount" aria-hidden="true">0</span></button>
+        <button class="cart-btn" type="button" id="cartBtn" aria-label="Cart, 0 items"><svg class="ico"><use href="#i-cart"/></svg><span class="t">Cart</span><span class="cart-count" id="cartCount" aria-hidden="true">0</span></button>
       </div>
     </div>
   </div>
@@ -57,11 +58,11 @@
           {{MEGA_ART}}
          </div>
         </div>
-               </div>
+       </div>
       </li>
       <li><a href="#" data-proto="Ready-made sticker sheets aren't in this prototype yet.">Ready-Made Sticker Sheets</a></li>
-      <li><a href="{{ROOT}}p/index.html#badges" data-nav="badge"{{ON_BADGE}}>Name Badges</a></li>
-      <li><a href="{{ROOT}}p/index.html#pens" data-nav="pen"{{ON_PEN}}>Pens</a></li>
+      <li><a href="{{ROOT}}p/name-badges.html" data-nav="badge"{{ON_BADGE}}>Name Badges</a></li>
+      <li><a href="{{ROOT}}p/pens.html" data-nav="pen"{{ON_PEN}}>Pens &amp; Notebooks</a></li>
       <li><a href="#" data-proto="Genie's Picks isn't in this prototype yet.">Genie's Picks</a></li>
       <li><a href="#" data-proto="About Us isn't in this prototype yet.">About Us</a></li>
     </ul></div>
